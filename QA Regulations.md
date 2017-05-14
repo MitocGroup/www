@@ -62,8 +62,7 @@ for:
 
 - executability
 
-The aim is to analyze system architecture and technologies for
-discrepancies.
+The aim is to analyze system architecture and technologies for discrepancies.
 
 **Key benefits for the development process:**
 
@@ -103,15 +102,15 @@ single system.
 
 - **Performance testing** that includes:
 
-*Load testing* – check system behavior for normal and expected peak load
+- **Load testing** – check system behavior for normal and expected peak load
 
-*Stress testing* – determine critical load after which the system breaks
+- **Stress testing** – determine critical load after which the system breaks
 down
 
 - **Security testing** – ensure the solution has a sufficient protection
 level.
 
-- **Cross-browser testing**/cross-platform testing – check that the
+- **Cross-browser testing/cross-platform testing** – check that the
 software works smoothly on different browsers (Chrome, Mozilla, Safari)
 or platforms (Android, iOS, Windows Phone). This is especially important
 for web and hybrid apps.
@@ -164,12 +163,10 @@ A closed look on each time sequence:
 
 1)  New functionality -&gt; developers start their work (From A -&gt; C)
 
-2)  QA start writing test cases. Analysing scope of future changes,
-    > providing estimates (From B -&gt;)
+2)  QA start writing test cases. Analysing scope of future changes, providing estimates (From B -&gt;)
 
 3)  Kick off code for testing (final version of code is pushed to dev
-    > environments, could be download on local machine, etc…) (From
-    > C-&gt;)
+    environments, could be download on local machine, etc…) (From C-&gt;)
 
 4)  Cycle for C-&gt;D:
 
