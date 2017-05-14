@@ -208,8 +208,7 @@ document)
 
 4.7) Sign off. Can be provided with following conditions:
 
--   Not all defects are fixed, should be ok for businesses (conditional
-    > sing off, template to provide)
+-   Not all defects are fixed, should be ok for businesses (conditional sing off, template to provide)
 
 -   QA Findings - providing when not full cycle was performed
 
