@@ -44,6 +44,8 @@ scope of the work and the project aims.
 Let’s have a deeper look at QA processes and how they are connected with
 the development steps.
 
+----------------------------------------------------------------------------------------------------------------
+
 ### **STEP ONE: REVIEW REQUIREMENTS AND DOCUMENTATION.**
 
 QA engineers start their work on the project in parallel with
@@ -70,7 +72,9 @@ discrepancies.
 - Improved documentation means a higher quality project for lower labor
 input and more accurate estimates.
 
-**STEP TWO: PLAN AND PREPARE TEST CASES**
+----------------------------------------------------------------------------------------------------------------
+
+### **STEP TWO: PLAN AND PREPARE TEST CASES**
 
 When the requirements have been established, it is time to start
 planning test cases, i.e. - describe the actions QA engineers perform to
@@ -80,10 +84,6 @@ written in simple Excel file. Here is an example of test cases:
 ![Test Case Sample](https://github.com/MitocGroup/SDLC/blob/master/images/test%20case%20template.png)
 
 ----------------------------------------------------------------------------------------------------------------
-
-### 
-
-### 
 
 ### **STEP THREE: DESIGN TEST CASES**
 
@@ -124,6 +124,7 @@ Again, you can choose to automate the testing (e.g., unit testing,
 regression testing). The general rule: the longer a project lasts, the
 more it needs automated tests.
 
+----------------------------------------------------------------------------------------------------------------
 ### **STEP FOUR: REPORT AND MEASURE**
 
 When a QA engineer discovers a bug, he/she records it in a bug tracking
@@ -136,6 +137,8 @@ For more information please see *Issue Tracking process* document
 
 Each issue gets a priority level from urgent to low, which the
 development team then resolves based on time and people available.
+
+----------------------------------------------------------------------------------------------------------------
 
 ### **STEP FIVE: VERIFYING FIXES**
 
