@@ -1,7 +1,5 @@
-**QA Regulations**
+**QA Regulations Ver.1.0** 
 ------------------
-
-Ver.1.0
 
 Initially, QA helps design and control the development process in a way
 that prevents serious issues during the project. To make this happen, QA
@@ -41,8 +39,7 @@ scope of the work and the project aims.
 
 8)  Regression testing
 
-![](media/image4.png){width="5.880208880139983in"
-height="3.2133825459317586in"}
+![DEV-QA Process](images/dev-qa process.png)
 
 Let’s have a deeper look at QA processes and how they are connected with
 the development steps.
@@ -80,15 +77,9 @@ planning test cases, i.e. - describe the actions QA engineers perform to
 make sure the piece of software functions as planned. Test cases can be
 written in simple Excel file. Here is an example of test cases:
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Tier**   **Component**   **Test Case ID**   **Description**              **Designed Steps**                                     **Expected Result**                **Status**                                                     **Created By**     **Last Updated**
-  ---------- --------------- ------------------ ---------------------------- ------------------------------------------------------ ---------------------------------- -------------------------------------------------------------- ------------------ ------------------
-  1          Search          LB\_001            Verify Search output for …   1\. Navigate to www.google.com                         1\. Page is loaded                 \[Passed / Failed / Not Testable /Not Tested/ To be Tested\]   Name of Designer   \[Date\]
-                                                                                                                                                                                                                                                         
-                                                                             2\. Enter any request in the search field hit search   2\. Search results are displayed                                                                                     
-                                                                                                                                                                                                                                                         
-                                                                             …                                                      …                                                                                                                    
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![Test Case Sample](images/test case template.png)
+
+----------------------------------------------------------------------------------------------------------------
 
 ### 
 
@@ -139,10 +130,7 @@ When a QA engineer discovers a bug, he/she records it in a bug tracking
 system which is also a project management system. For this we can use
 one public excel sheet. Here is an example:
 
-  **Project name**
-  ------------------ ------------------ ------------ -------------- -------------------------------------------- ------------------
-  **Component**
-  Search
+![Report Sample](images/report template.png)
 
 For more information please see *Issue Tracking process* document
 
@@ -167,7 +155,7 @@ tasks.
 
 Time frames between start development and start testing
 
-![](media/image2.png){width="5.5625in" height="2.4270833333333335in"}
+![Process](images/step by step.png)
 
 A closed look on each time sequence:
 
