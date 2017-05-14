@@ -170,6 +170,8 @@ A closed look on each time sequence:
 
 4)  Cycle for C-&gt;D:
 
+
+
 **First iteration:**
 
 4.1) QA starts testing.
@@ -191,7 +193,7 @@ and time following testing should be performed:
 
 -   **Security testing**
 
--   **Cross-browser testing**/cross-platform testing
+-   **Cross-browser testing/cross-platform testing**
 
 -   **Regression testing** (Tier based)
 
