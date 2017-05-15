@@ -19,12 +19,9 @@ others not part of the team.
 
 1)  GitHub is used for Code Management, Storage and as a main Management Tool.
 2)  GitHub Organizations:
-
-> [*https://github.com/AdTechMedia*](https://github.com/AdTechMedia)
->
-> [*https://github.com/MitocGroup*](https://github.com/MitocGroup)
->
-> [*https://github.com/404md*](https://github.com/404md)
+- [AdTechMedia](https://github.com/AdTechMedia)
+- [MitocGroup](https://github.com/MitocGroup)
+- [404 Moldova](https://github.com/404md)
 
 3)  [ZenHub Plugin](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd) is required for GitHub to activate Issue Tracking tool for related projects.
 
