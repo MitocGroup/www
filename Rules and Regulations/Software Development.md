@@ -1,7 +1,5 @@
-**Software Development Regulations**
+**Software Development Regulations Ver.1.0**
 ------------------------------------
-
-Ver.1.0
 
 This document describes the general development workflow for MitocGroup
 and Adtechmedia projects. A custom Scrum approach is used as a base for
@@ -19,9 +17,7 @@ others not part of the team.
 
 ### **CODE & MANAGEMENT TOOLS**
 
-1)  GitHub is used for Code Management, Storage and as a main Management
-    > Tool.
-
+1)  GitHub is used for Code Management, Storage and as a main Management Tool.
 2)  GitHub Organizations:
 
 > [*https://github.com/AdTechMedia*](https://github.com/AdTechMedia)
@@ -30,8 +26,7 @@ others not part of the team.
 >
 > [*https://github.com/404md*](https://github.com/404md)
 
-1)  ZenHub Plugin is required for GitHub to activate Issue Tracking tool
-    > for related projects.
+3)  [ZenHub Plugin](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd) is required for GitHub to activate Issue Tracking tool for related projects.
 
 ### **PRODUCT BACKLOG**
 
@@ -42,20 +37,10 @@ Backlog, including its content, availability, and ordering.
 
 ### **REQUIREMENTS**
 
--   Requirements are delivered in form of Team goals by Product Owner
-    > every 2 months
-
-<!-- -->
-
--   Development & QA Team reviews proposed goals and address
-    > questions/concerns before scope confirmation
-
--   Team goals are added to GitHub as epic issues by Product Owner /
-    > Scrum Master / Development Team
-
--   Development Team breaks down the Epic issues into smaller task
-    > *(enhancements)*
-
+-   Requirements are delivered in form of Team goals by Product Owner every 2 months
+-   Development & QA Team reviews proposed goals and address questions/concerns before scope confirmation
+-   Team goals are added to GitHub as epic issues by Product Owner / Scrum Master / Development Team
+-   Development Team breaks down the Epic issues into smaller task *(enhancements)*
 -   Tasks are associated with a Milestone for a product increment
 
 ### 
@@ -71,15 +56,10 @@ after the conclusion of the previous Sprint.
 Sprints consist of:
 
 -   The Sprint Planning *(held every Monday)*
-
 -   Daily Scrums *(replaced by Daily Stand-up emails)*
-
 -   The Development work
-
 -   The Sprint Review *(held every Monday)*
-
--   The Sprint Retrospective *(held every 2nd Monday right after Sprint
-    > Review/Planning)*
+-   The Sprint Retrospective *(held every 2nd Monday right after Sprint Review/Planning)*
 
 ### **SPRINT BACKLOG**
 
@@ -93,80 +73,47 @@ Increment.
 ### **WORKING ENVIRONMENTS**
 
 1)  Local
-
 2)  Development
-
 3)  Stage/Demo
-
 4)  Production
 
 **Local Environment**
 
--   Development team works on assignments using local code, server or
-    > side deploys
-
--   Development team should keep the local environment up-to-date with
-    > production like configurations
-
--   Code from Local Environment should be pushed to Development
-    > environment at least once a day
+-   Development team works on assignments using local code, server or side deploys
+-   Development team should keep the local environment up-to-date with production like configurations
+-   Code from Local Environment should be pushed to Development environment at least once a day
 
 **Development Environment**
 
--   Development environment represents code integration from all Local
-    > Environments
-
--   Functional and Integration Testing is performed by QA in Dev
-    > Environment for all item delivered by Development team
-
--   Pushing the code to Dev Environment is a direct responsibility for a
-    > developer; it is up to Development Team to decide who will push
-    > the code
+-   Development environment represents code integration from all Local Environments
+-   Functional and Integration Testing is performed by QA in Dev Environment for all item delivered by Development team
+-   Pushing the code to Dev Environment is a direct responsibility for a developer; it is up to Development Team to decide who will push the code
 
 **Stage/Demo Environment**
 
 -   Stage/Demo Environment is a production like environment
-
--   Regression Testing is performed by QA in Stage environment before
-    > Production Release
-
--   Development team will push the code to Stage Environment at least 24
-    > hours before Production release or upon QA Request
-
--   Blocking/Critical issues or showstoppers found in Stage environment
-    > are Reported by QA as early as possible
+-   Regression Testing is performed by QA in Stage environment before Production Release
+-   Development team will push the code to Stage Environment at least 24 hours before Production release or upon QA Request
+-   Blocking/Critical issues or showstoppers found in Stage environment are Reported by QA as early as possible
 
 **Production Environment**
 
--   Production Environment is a end user environment accessible to
-    > public
-
--   Code is pushed to Production Environment from Stage
-    > environment/branch only
-
--   Health Check/ Smoke Testing is performed by QA in Production
-    > environment after Release
+-   Production Environment is a end user environment accessible to public
+-   Code is pushed to Production Environment from Stage environment/branch only
+-   Health Check/ Smoke Testing is performed by QA in Production environment after Release
 
 ### **RELEASES**
 
 1)  Production release
-
 2)  HotFix
 
 **Production Release**
 
--   Product increment should be released in Production every second
-    > Friday by 7 PM (Moldova Time)
+-   Product increment should be released in Production every second Friday by 7 PM (Moldova Time)
+-   Sign Off by Product/Project Manager is required for Production Release
+-   Critical and Blocking issues should be reported as earliest as possible or during Development Phase (when code is in Dev Environment)
 
--   Sign Off by Product/Project Manager is required for Production
-    > Release
-
--   Critical and Blocking issues should be reported as earliest as
-    > possible or during Development Phase (when code is in Dev
-    > Environment)
-
-![](media/image3.png){width="7.890625546806649in"
-height="3.4294247594050744in"}
+![PROD DEPLOY](https://github.com/MitocGroup/SDLC/blob/master/images/prod%20deploy.png)
 
 **HotFix**
 
@@ -175,11 +122,9 @@ problem in a software product (i.e. software critical issue). Typically,
 hotfixes are made to address a specific customer situation.
 
 -   HotFix is pushed directly to Stage Environment by Development Team
-
 -   Functional Testing is performed by QA Team
+-   Limited Regression Testing is performed by QA for HotFix Related areas
 
--   Limited Regression Testing is performed by QA for HotFix Related
-    > areas![](media/image4.png){width="6.5in"
-    > height="1.4583333333333333in"}
+![HOTFIX](https://github.com/MitocGroup/SDLC/blob/master/images/hotfix%20deploy.png)
 
 
