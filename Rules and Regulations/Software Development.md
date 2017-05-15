@@ -1,4 +1,4 @@
-**Software Development Regulations Ver.1.0**
+**Software Development Process Ver.1.0**
 ------------------------------------
 
 This document describes the general development workflow for MitocGroup
