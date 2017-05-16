@@ -1,7 +1,7 @@
-# Rules and Regulations 
+# Internal Processes
 
-- [Software Development Process](Rules%20and%20Regulations/Software%20Development.md)
-- [Quality Assurance Process](Rules%20and%20Regulations/Quality%20Assurance.md)
+- [Software Development](process/software-development.md)
+- [Quality Assurance](process/quality-assurance.md)
 - Issue Tracking
 - Agile
 - Daily Stand-ups
