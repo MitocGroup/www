@@ -7,3 +7,4 @@
 - Daily Stand-ups
 - [Days Off/ Vacations / Holidays](process/vacation.md)
 - [Remuneration](process/remuniration.md)
+- OnBoarding / OffBoarding 
