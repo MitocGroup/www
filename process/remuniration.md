@@ -1,7 +1,7 @@
-**Remunerations Ver 1.0. **
+**Remunerations Ver 1.0.**
 ---------------------------
 
-### **TEAM & PERSONAL GOALS ACHIEVEMENT BONUS **
+### **TEAM & PERSONAL GOALS ACHIEVEMENT BONUS**
 
 At the end of the Development Cycle (every 2 months) upon goals
 achievement - a remuneration is offered on team and personal level.
