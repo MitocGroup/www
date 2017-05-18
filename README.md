@@ -6,3 +6,4 @@
 - Agile
 - Daily Stand-ups
 - Vacations and Time-offs
+- [Remuneration](process/remuniration.md)
