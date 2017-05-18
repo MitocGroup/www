@@ -1,4 +1,4 @@
-**Day Offs / Vacation / Holidays Ver 1.0.**
+**Day Offs / Vacations / Holidays Ver 1.0.**
 ---------------------------
 
 ### **7 Things to Do Before Leaving the Office for Vacation**
