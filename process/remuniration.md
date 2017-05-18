@@ -29,5 +29,3 @@ rate vs the old one.
 We want to incentivize good behavior and positive results, but if we see
 negative change in behavior or results, we’ll have to revisit this
 approach and the bonus formula.
-
-[]{#_aqnayc7plszk .anchor}
