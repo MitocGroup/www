@@ -5,5 +5,5 @@
 - Issue Tracking
 - Agile
 - Daily Stand-ups
-- [Days Off/ Vacations /Holidays](process/vacation.md)
+- [Days Off/ Vacations / Holidays](process/vacation.md)
 - [Remuneration](process/remuniration.md)
