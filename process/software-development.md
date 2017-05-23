@@ -55,7 +55,7 @@ after the conclusion of the previous Sprint.
 Sprints consist of:
 
 -   The Sprint Planning *(held every Monday)*
--   Daily Scrums *(replaced by Daily Stand-up emails)*
+-   Daily Scrums *(replaced by Daily Standup emails)*
 -   The Development work
 -   The Sprint Review *(held every Monday)*
 -   The Sprint Retrospective *(held every 2nd Monday right after Sprint Review/Planning)*
