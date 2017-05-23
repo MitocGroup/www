@@ -11,3 +11,6 @@
 5. *Avoid the email avalanche upon reentry.* Spend time showing your Inbox to your back-up so that she/he can act on your behalf. Doing this will ensure that you will need to be interrupted only for true and unforeseen emergencies.
 6. *Leave a list of important passwords.* It’s crucial for someone to know how to get into your computer to manage ongoing to-do’s. If they are unable to open an email, or review a status update saved on your desktop, it becomes an issue for your client and the company, as well as a potential vacation disruption.
 7. *Clean your office before you go.* Not only will your colleagues thank you, you’ll also be returning to a more pleasant work space. Check desk drawers and cabinets for perishable foods and toss your leftovers from the office refrigerator. Clear off the top of your desk and discard clutter. Look at your office from the eyes of an associate, or a client passing by your cubicle or space. Save energy while you are out by unplugging your electronics, such as lamps, chargers, portable sound systems and anything else that pulls energy from an outlet. Thorough preparation before you leave is the best way to fully unwind on your much-needed break.
+
+### **Time-off request**
+### **Vacation request**
