@@ -110,7 +110,7 @@ Increment.
 -   Sign Off by Product/Project Manager is required for Production Release
 -   Critical and Blocking issues should be reported as earliest as possible or during Development Phase (when code is in Dev Environment)
 
-![PROD DEPLOY](https://github.com/MitocGroup/SDLC/blob/master/images/prod%20deploy.png)
+![PROD DEPLOY](https://github.com/MitocGroup/SDLC/blob/master/images/prod-deploy.png)
 
 **HotFix**
 
@@ -122,6 +122,6 @@ hotfixes are made to address a specific customer situation.
 -   Functional Testing is performed by QA Team
 -   Limited Regression Testing is performed by QA for HotFix Related areas
 
-![HOTFIX](https://github.com/MitocGroup/SDLC/blob/master/images/hotfix%20deploy.png)
+![HOTFIX](https://github.com/MitocGroup/SDLC/blob/master/images/hotfix-deploy.png)
 
 
