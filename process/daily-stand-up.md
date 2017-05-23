@@ -34,7 +34,7 @@ _______
 
 **Subject:** Daily Standup 23.05.2017
 
-**To:** devs-deep@mitocgroup.com
+**To:** daily-standup@mitocgroup.com
 
 **Text:**
 
