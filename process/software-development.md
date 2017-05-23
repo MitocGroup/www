@@ -24,6 +24,8 @@ others not part of the team.
 - [404 Moldova](https://github.com/404md)
 
 3)  [ZenHub Plugin](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd) is required for GitHub to activate Issue Tracking tool for related projects.
+OR/AND
+4) GitHub Projects
 
 ### **PRODUCT BACKLOG**
 
