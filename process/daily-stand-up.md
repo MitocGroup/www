@@ -41,7 +41,7 @@ _______
 
 Hi Team,
 
-On Friday:
+Yesterday:
 - Fixed https://github.com/MitocGroup/deep-package-manager/issues/481 - *100% Completed*
 - Worked on https://github.com/MitocGroup/deep-package-manager/issues/530 - *50% Completed*
 - Add all regions defined into deep-core to iterate through when listing aws resources - *Completed*
