@@ -1,4 +1,4 @@
-**QA Regulations Ver.1.0** 
+**Quality Assurance Process v.1.0** 
 ------------------
 
 Initially, QA helps design and control the development process in a way
