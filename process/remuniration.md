@@ -1,4 +1,4 @@
-**Remunerations Ver 1.0.**
+**Remunerations v.1.0.**
 ---------------------------
 
 ### **TEAM & PERSONAL GOALS ACHIEVEMENT BONUS**
@@ -29,3 +29,6 @@ rate vs the old one.
 We want to incentivize good behavior and positive results, but if we see
 negative change in behavior or results, we’ll have to revisit this
 approach and the bonus formula.
+
+
+[Bonus Calculator](http://bonus-calculator.s3-website.eu-central-1.amazonaws.com/)
