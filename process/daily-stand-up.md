@@ -17,22 +17,21 @@ Sprint Goal?
 
 In order to reduce complexity and physical presence on the meeting the Daily Scrum was replaced with Daily Stand-up Emails.
 
-1. **When to Send the email?.** 
+1. **When to send the email?.** 
 
-The email should be sent on daily basis as working day starts.
+The email should be send on daily basis as working day starts.
 
-2. **Whom should I sent the email?.** 
+2. **Whom should I send the email?.** 
 
 The email is sent to Devs Deep <devs-deep@mitocgroup.com>
 
 3. **What should be included in the email?**
 - What did I do yesterday that helped the Development Team meet the Sprint Goal?
 - What will I do today to help the Development Team meet the Sprint Goal?
-- Do I see any impediment that prevents me or the Development Team from meeting the
-Sprint Goal?
+- Do I see any impediment that prevents me or the Development Team from meeting the Sprint Goal?
 
 _______
-**Email Template:**
+**EMAIL TEMPLATE:**
 
 **Subject:** Daily Standup 23.05.2017
 
