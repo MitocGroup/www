@@ -1,4 +1,4 @@
-**Daily Scrum / Stand-up 1.0.**
+**Daily Scrum / Stand-up**
 ---------------------------
 
 ### **What is a Daily Scrum/Stand-up?**
@@ -13,30 +13,39 @@ the Development Team members explain:
 - Do I see any impediment that prevents me or the Development Team from meeting the
 Sprint Goal?
 
-### **Hot it is done?**
+### **How we do it?**
 
 In order to reduce complexity and physical presence on the meeting the Daily Scrum was replaced with Daily Stand-up Emails.
 
-1. *When to Send the email?.* The email should be sent on daily basis as working day starts.
-2. *Whom should I sent the email?.* The email is sent to Devs Deep <devs-deep@mitocgroup.com>
-3. *What should be included in the email?*
+1. **When to Send the email?.** 
+
+The email should be sent on daily basis as working day starts.
+
+2. **Whom should I sent the email?.** 
+
+The email is sent to Devs Deep <devs-deep@mitocgroup.com>
+
+3. **What should be included in the email?**
 - What did I do yesterday that helped the Development Team meet the Sprint Goal?
 - What will I do today to help the Development Team meet the Sprint Goal?
 - Do I see any impediment that prevents me or the Development Team from meeting the
 Sprint Goal?
 
-Email Template:
+_______
+**Email Template:**
 
-*Subject:* Daily Standup 23.05.2017
-*To:* devs-deep@mitocgroup.com
-*Text:*
+**Subject:** Daily Standup 23.05.2017
+
+**To:** devs-deep@mitocgroup.com
+
+**Text:**
 
 Hi Team,
 
 On Friday:
-- Fixed https://github.com/MitocGroup/deep-package-manager/issues/481 - 100% Completed
-- Worked on https://github.com/MitocGroup/deep-package-manager/issues/530 - 50% Completed
-- Add all regions defined into deep-core to iterate through when listing aws resources - Completed
+- Fixed https://github.com/MitocGroup/deep-package-manager/issues/481 - *100% Completed*
+- Worked on https://github.com/MitocGroup/deep-package-manager/issues/530 - *50% Completed*
+- Add all regions defined into deep-core to iterate through when listing aws resources - *Completed*
 - Reviewed and merged PRs - Completed
 
 Today:
@@ -49,12 +58,15 @@ Today:
  https://github.com/MitocGroup/deepify/issues/369
 
 Thank you,
-[Full Name / Signature]
 
-4. *Why do we need this stand-up mails, they are time consuming?*
+[Full Name / Signature]
+____
+
+4. **Why do we need this stand-up mails, they are time consuming?**
+
 The Team uses the Daily Scrum to inspect progress toward the Sprint Goal and to inspect how progress is trending toward completing the work. The Daily Scrum optimizes the probability that the Team will meet the Sprint Goal. Every day, the Team should understand how it intends to work together as a selforganizing team to accomplish the Sprint Goal and create the anticipated Increment by the end of the Sprint.
 
-5. *What are the benefits?*
+5. **What are the benefits?**
 - The Team is in sync on how things are going
 - Task correction
 - Building trust between team members
