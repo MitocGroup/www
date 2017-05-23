@@ -65,7 +65,7 @@ ____
 
 The Team uses the Daily Scrum to inspect progress toward the Sprint Goal and to inspect how progress is trending toward completing the work. The Daily Scrum optimizes the probability that the Team will meet the Sprint Goal. Every day, the Team should understand how it intends to work together as a selforganizing team to accomplish the Sprint Goal and create the anticipated Increment by the end of the Sprint.
 
-5. **What are the benefits? or Why Should I read Team's Stand-up mails? **
+5. **What are the benefits? or Why Should I read Team's Stand-up mails?**
 - The Team is in sync on how things are going
 - Task correction
 - Building trust between team members
