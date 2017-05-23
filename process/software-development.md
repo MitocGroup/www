@@ -1,4 +1,4 @@
-**Software Development Process Ver.1.0**
+**Software Development Process v.1.0**
 ------------------------------------
 
 This document describes the general development workflow for MitocGroup
@@ -21,11 +21,8 @@ others not part of the team.
 2)  GitHub Organizations:
 - [AdTechMedia](https://github.com/AdTechMedia)
 - [MitocGroup](https://github.com/MitocGroup)
-- [404 Moldova](https://github.com/404md)
 
-3)  [ZenHub Plugin](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd) is required for GitHub to activate Issue Tracking tool for related projects.
-OR/AND
-4) GitHub Projects
+3) GitHub Projects AND/OR [ZenHub Plugin](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd) is required for GitHub to activate Issue Tracking tool for related projects.
 
 ### **PRODUCT BACKLOG**
 
