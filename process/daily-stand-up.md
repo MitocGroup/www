@@ -17,15 +17,15 @@ Sprint Goal?
 
 In order to reduce complexity and physical presence on the meeting the Daily Scrum was replaced with Daily Stand-up Emails.
 
-1. **When to send the email?.** 
+**1. When to send the email?.** 
 
 The email should be send on daily basis as working day starts.
 
-2. **Whom should I send the email?.** 
+**2. Whom should I send the email?.** 
 
 The email is sent to Devs Deep <devs-deep@mitocgroup.com>
 
-3. **What should be included in the email?**
+**3. What should be included in the email?**
 - What did I do yesterday that helped the Development Team meet the Sprint Goal?
 - What will I do today to help the Development Team meet the Sprint Goal?
 - Do I see any impediment that prevents me or the Development Team from meeting the Sprint Goal?
@@ -61,11 +61,11 @@ Thank you,
 [Full Name / Signature]
 ____
 
-4. **Why do we need this stand-up mails, they are time consuming?**
+**4. Why do we need this stand-up mails, they are time consuming?**
 
 The Team uses the Daily Scrum to inspect progress toward the Sprint Goal and to inspect how progress is trending toward completing the work. The Daily Scrum optimizes the probability that the Team will meet the Sprint Goal. Every day, the Team should understand how it intends to work together as a selforganizing team to accomplish the Sprint Goal and create the anticipated Increment by the end of the Sprint.
 
-5. **What are the benefits? or Why Should I read Team's Stand-up mails?**
+**5. What are the benefits? or Why Should I read Team's Stand-up mails?**
 - The Team is in sync on how things are going
 - Task correction
 - Building trust between team members
@@ -73,6 +73,6 @@ The Team uses the Daily Scrum to inspect progress toward the Sprint Goal and to 
 - High visibility of progress
 - Self-organization in Team
 
-6. **I don't recieve Stand-up mails from Team Members** 
+**6. I don't recieve Stand-up mails from Team Members** 
 
 Please contact eugene@mitocgroup.com or vlad@mitocgroup.com in order to be included into devs-deep@mitocgroup.com distribution  list.
