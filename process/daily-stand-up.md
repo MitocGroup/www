@@ -61,7 +61,7 @@ Thank you,
 [Full Name / Signature]
 ____
 
-**4. Why do we need this stand-up mails, they are time consuming?**
+**4. Why do we need the stand-up mails, they are time consuming!?**
 
 The Team uses the Daily Scrum to inspect progress toward the Sprint Goal and to inspect how progress is trending toward completing the work. The Daily Scrum optimizes the probability that the Team will meet the Sprint Goal. Every day, the Team should understand how it intends to work together as a selforganizing team to accomplish the Sprint Goal and create the anticipated Increment by the end of the Sprint.
 
