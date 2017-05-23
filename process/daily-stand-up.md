@@ -51,8 +51,11 @@ Today:
 - Weekly Team Catch-up Meeting
 - Meeting with [Person Name] or [ Meeting Title/Purpose]
 - Fix the following issues:
+
  https://github.com/MitocGroup/deep-package-manager/issues/530
+ 
  https://github.com/MitocGroup/deepify/issues/372
+ 
  https://github.com/MitocGroup/deepify/issues/369
 
 Thank you,
