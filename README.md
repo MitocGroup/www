@@ -4,7 +4,7 @@
 - [Quality Assurance](process/quality-assurance.md)
 - Issue Tracking
 - Agile
-- Daily Stand-ups
+- [Daily Scrum / Stand-up](process/daily-stand-up.md)
 - [Days Off/ Vacations / Holidays](process/vacation.md)
 - [Remuneration](process/remuniration.md)
 - OnBoarding / OffBoarding 
