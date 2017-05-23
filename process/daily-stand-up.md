@@ -22,7 +22,7 @@ The email should be send on daily basis as working day starts.
 
 **2. Whom should I send the email?.** 
 
-The email is sent to Devs Deep <devs-deep@mitocgroup.com>
+The email is sent to daily-standup@mitocgroup.com
 
 **3. What should be included in the email?**
 - What did I do yesterday that helped the Team meet the Goal?
@@ -74,4 +74,4 @@ The Team uses the Daily Scrum to inspect progress toward the Goal and to inspect
 
 **6. I don't recieve Stand-up mails from Team Members** 
 
-Please contact eugene@mitocgroup.com or vlad@mitocgroup.com in order to be included into devs-deep@mitocgroup.com distribution  list.
+Please contact eugene@mitocgroup.com or vlad@mitocgroup.com in order to be included into daily-standup@mitocgroup.com distribution  list.
