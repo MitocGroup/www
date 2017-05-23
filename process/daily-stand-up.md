@@ -8,9 +8,9 @@ activities and create a plan for the next 24 hours. This is done by inspecting t
 last Daily Scrum and forecasting the work that could be done before the next one. The Daily
 Scrum is held at the same time and place each day to reduce complexity. During the meeting,
 the Team members explain:
-- What did I do yesterday that helped the Team meet the Sprint Goal?
-- What will I do today to help the  Team meet the Sprint Goal?
-- Do I see any impediment that prevents me or the Team from meeting the Sprint Goal?
+- What did I do yesterday that helped the Team meet the Goal?
+- What will I do today to help the  Team meet the Goal?
+- Do I see any impediment that prevents me or the Team from meeting the Goal?
 
 ### **How we do it?**
 
@@ -25,9 +25,9 @@ The email should be send on daily basis as working day starts.
 The email is sent to Devs Deep <devs-deep@mitocgroup.com>
 
 **3. What should be included in the email?**
-- What did I do yesterday that helped the Team meet the Sprint Goal?
-- What will I do today to help the Team meet the Sprint Goal?
-- Do I see any impediment that prevents me or the Team from meeting the Sprint Goal?
+- What did I do yesterday that helped the Team meet the Goal?
+- What will I do today to help the Team meet the Goal?
+- Do I see any impediment that prevents me or the Team from meeting the Goal?
 
 _______
 **EMAIL TEMPLATE:**
@@ -62,7 +62,7 @@ ____
 
 **4. Why do we need the stand-up mails, they are time consuming!?**
 
-The Team uses the Daily Scrum to inspect progress toward the Sprint Goal and to inspect how progress is trending toward completing the work. The Daily Scrum optimizes the probability that the Team will meet the Sprint Goal. Every day, the Team should understand how it intends to work together as a selforganizing team to accomplish the Sprint Goal and create the anticipated Increment by the end of the Sprint.
+The Team uses the Daily Scrum to inspect progress toward the Goal and to inspect how progress is trending toward completing the work. The Daily Scrum optimizes the probability that the Team will meet the Goal. Every day, the Team should understand how it intends to work together as a selforganizing team to accomplish the Goal and create the anticipated Increment by the end of the Sprint.
 
 **5. What are the benefits? or Why Should I read Team's Stand-up mails?**
 - The Team is in sync on how things are going
