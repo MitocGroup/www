@@ -1,7 +1,7 @@
-**Daily Scrum / Stand-up**
+**Daily Scrum / Standup**
 ---------------------------
 
-### **What is a Daily Scrum/Stand-up?**
+### **What is a Daily Scrum/Standup?**
 
 The Daily Scrum is a 15-minute time-boxed event for the Team to synchronize
 activities and create a plan for the next 24 hours. This is done by inspecting the work since the
@@ -60,11 +60,11 @@ Thank you,
 [Full Name / Signature]
 ____
 
-**4. Why do we need the stand-up mails, they are time consuming!?**
+**4. Why do we need the standup mails, they are time consuming!?**
 
 The Team uses the Daily Scrum to inspect progress toward the Goal and to inspect how progress is trending toward completing the work. The Daily Scrum optimizes the probability that the Team will meet the Goal. Every day, the Team should understand how it intends to work together as a selforganizing team to accomplish the Goal and create the anticipated Increment by the end of the Sprint.
 
-**5. What are the benefits? or Why Should I read Team's Stand-up mails?**
+**5. What are the benefits? or Why Should I read Team's Standup mails?**
 - The Team is in sync on how things are going
 - Task correction
 - Building trust between team members
