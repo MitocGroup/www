@@ -3,15 +3,14 @@
 
 ### **What is a Daily Scrum/Stand-up?**
 
-The Daily Scrum is a 15-minute time-boxed event for the Development Team to synchronize
+The Daily Scrum is a 15-minute time-boxed event for the Team to synchronize
 activities and create a plan for the next 24 hours. This is done by inspecting the work since the
 last Daily Scrum and forecasting the work that could be done before the next one. The Daily
 Scrum is held at the same time and place each day to reduce complexity. During the meeting,
-the Development Team members explain:
-- What did I do yesterday that helped the Development Team meet the Sprint Goal?
-- What will I do today to help the Development Team meet the Sprint Goal?
-- Do I see any impediment that prevents me or the Development Team from meeting the
-Sprint Goal?
+the Team members explain:
+- What did I do yesterday that helped the Team meet the Sprint Goal?
+- What will I do today to help the  Team meet the Sprint Goal?
+- Do I see any impediment that prevents me or the Team from meeting the Sprint Goal?
 
 ### **How we do it?**
 
