@@ -23,6 +23,10 @@ others not part of the team.
 - [MitocGroup](https://github.com/MitocGroup)
 
 3) GitHub Projects AND/OR [ZenHub Plugin](https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd) is required for GitHub to activate Issue Tracking tool for related projects.
+4) Travis
+5) CodeClimate (Code Analysis & Code Coverage)
+6) snyk.io (Code Security)
+
 
 ### **PRODUCT BACKLOG**
 
