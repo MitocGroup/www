@@ -6,4 +6,4 @@
 - [Daily Scrum / Standup](process/daily-standup.md)
 - [Days Off/ Vacations / Holidays](process/vacation.md)
 - [Remuneration](process/remuniration.md)
-- OnBoarding / OffBoarding 
+- [OnBoarding / OffBoarding](process/onboarding.md)
