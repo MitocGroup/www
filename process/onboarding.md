@@ -63,7 +63,7 @@ These are the steps you will need to proceed to complete the "Onboarding Process
 - You can use slack from web browser or you can Download and Install `Slack` application
 - Go to the link [www.slack.com](https://slack.com) if you would like to use Slack in your browser
 - Download and Run the application if you would like to use Slack as application on your OS
-- Sign In by introducing `pycoding` in the `Enter your team's Slack domain.` field and Click on `Continue`
+- Sign In by introducing `mitocgroup` in the `Enter your team's Slack domain.` field and Click on `Continue`
 - Enter your email address and password (please use `yourname@mitocgroup.com` email account)
 - Please accept the invitation to the groups you have been added
 - Please be sure to add additional information to your Slack profile (`Contact Number`, `Alternative Email` and `What You Do` to the required fields)
