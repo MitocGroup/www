@@ -33,7 +33,7 @@ approach and the bonus formula.
 
 [Bonus Calculator](http://bonus-calculator.s3-website.eu-central-1.amazonaws.com/)
 
-### **SUCCESSFUL DELIVERY BONUS FOR MITOCGROUP CONSULTING PROJECTS**
+### **SUCCESSFUL DELIVERY BONUS**
 
 A Successful Delivery Bonus which will consist of +50% rate increase is offered for MitocGroup Consulting Projects.
 Bonus is payed at the end of the project, if delivery is successful.
