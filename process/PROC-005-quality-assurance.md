@@ -1,65 +1,60 @@
-**Quality Assurance Process v.1.0** 
-------------------
+# PROC-005 - Quality Assurance
+------------------------------
+
+
+Revision | Revision Date | Author | Description of changes
+-------- | ------------- | ------ | ----------------------
+v0.0.1 | 2017-05-14 | Igor Vignan | Initial Document
+v0.0.2 | 2017-05-14 | Eugene Istrati | Approved
+v0.0.3 | 2017-06-23 | Eugene Istrati | Process Refactoring
+
+
+## General
 
 Initially, QA helps design and control the development process in a way
-that prevents serious issues during the project. To make this happen, QA
-engineers work on the project together with other team members (product
-owner, project manager, business analyst, and dev lead) throughout the
-complete software development cycle. The number and the order of QA
-activities may vary from project to project, depending heavily on the
-scope of the work and the project aims.
+that prevents serious issues during the project. To make this happen,
+QA engineers work on the project together with other team members
+(product owner, project manager, business analyst, and dev lead) throughout
+the complete software development cycle. The number and the order of QA
+activities may vary from project to project, depending heavily on the scope
+of the work and the project aims.
 
-**Development process**
+## Development Process
 
 1)  Analysis of requirements
-
 2)  Design
-
 3)  Implementation
-
 4)  Verification or testing
-
 5)  Maintenance
 
-**QA process**
+## Quality Assurance Process
 
 1)  Review of requirements
-
 2)  Test planning / writing test cases
-
 3)  Integration testing
-
 4)  System testing
-
 5)  Security testing
-
 6)  Cross-browser testing / cross-platform testing
-
 7)  Updating test cases
-
 8)  Regression testing
 
 ![DEV-QA Process](https://github.com/MitocGroup/SDLC/blob/master/images/dev-qa-process.png)
 
-Let’s have a deeper look at QA processes and how they are connected with
+Let's have a deeper look at QA processes and how they are connected with
 the development steps.
 
 ----------------------------------------------------------------------------------------------------------------
 
-### **STEP ONE: REVIEW REQUIREMENTS AND DOCUMENTATION.**
+### STEP ONE: REVIEW REQUIREMENTS AND DOCUMENTATION.
 
 QA engineers start their work on the project in parallel with
 documentation generation. They review the requirements and documentation
 for:
 
 - completeness
-
 - redundancies
-
 - clarity
-
 - consistency
-
 - executability
 
 The aim is to analyze system architecture and technologies for discrepancies.
@@ -67,13 +62,12 @@ The aim is to analyze system architecture and technologies for discrepancies.
 **Key benefits for the development process:**
 
 - Errors cost less when detected at an early stage
-
 - Improved documentation means a higher quality project for lower labor
 input and more accurate estimates.
 
 ----------------------------------------------------------------------------------------------------------------
 
-### **STEP TWO: PLAN AND PREPARE TEST CASES**
+### STEP TWO: PLAN AND PREPARE TEST CASES
 
 When the requirements have been established, it is time to start
 planning test cases, i.e. - describe the actions QA engineers perform to
@@ -84,12 +78,12 @@ written in simple Excel file. Here is an example of test cases:
 
 ----------------------------------------------------------------------------------------------------------------
 
-### **STEP THREE: DESIGN TEST CASES**
+### STEP THREE: DESIGN TEST CASES
 
 When the development stage is finished, the QA team starts running the
 test cases. The main goal of this stage is to check whether the solution
 is developed properly from the technical perspective and meets the
-initial product owner’s requirements.
+initial product owner's requirements.
 
 Below are the main QA activities and their aims:
 
@@ -124,7 +118,7 @@ regression testing). The general rule: the longer a project lasts, the
 more it needs automated tests.
 
 ----------------------------------------------------------------------------------------------------------------
-### **STEP FOUR: REPORT AND MEASURE**
+### STEP FOUR: REPORT AND MEASURE
 
 When a QA engineer discovers a bug, he/she records it in a bug tracking
 system which is also a project management system. For this we can use
@@ -139,7 +133,7 @@ development team then resolves based on time and people available.
 
 ----------------------------------------------------------------------------------------------------------------
 
-### **STEP FIVE: VERIFYING FIXES**
+### STEP FIVE: VERIFYING FIXES
 
 When a developer fixes an issue he/she informs the responsible QA
 engineers, who verifies it. The ticket in the bug tracking system is
@@ -162,12 +156,9 @@ Time frames between start development and start testing
 A closed look on each time sequence:
 
 1)  New functionality -&gt; developers start their work (From A -&gt; C)
-
 2)  QA start writing test cases. Analysing scope of future changes, providing estimates (From B -&gt;)
-
 3)  Kick off code for testing (final version of code is pushed to dev
     environments, could be download on local machine, etc…) (From C-&gt;)
-
 4)  Cycle for C-&gt;D:
 
 
