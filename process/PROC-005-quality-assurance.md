@@ -1,5 +1,5 @@
-# PROC-005 - Quality Assurance
-------------------------------
+# PROC-005 - Quality Assurance Process
+--------------------------------------
 
 
 Revision | Revision Date | Author | Description of changes
