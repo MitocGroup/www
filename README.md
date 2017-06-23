@@ -7,3 +7,8 @@
 - [Days Off/ Vacations / Holidays](process/vacation.md)
 - [Remuneration](process/remuniration.md)
 - [OnBoarding / OffBoarding](process/onboarding.md)
+
+
+# Policy
+
+- [Pol-001 - Employee Background Check Policy](POL-001-employee-background-check.md)
