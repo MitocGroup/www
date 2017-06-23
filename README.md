@@ -11,4 +11,4 @@
 
 # Policy
 
-- [Pol-001 - Employee Background Check Policy](POL-001-employee-background-check.md)
+- [POL-001 - Employee Background Check Policy](policy/POL-001-employee-background-check.md)
