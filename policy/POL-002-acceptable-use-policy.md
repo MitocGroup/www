@@ -125,7 +125,7 @@ while utilizing Company-owned resources.
 The lists below are by no means exhaustive, but attempt to provide a framework
 for activities which fall into the category of unacceptable use.
 
-4.3.1	System and Network Activities
+### 4.3.1	System and Network Activities
 
 The following activities are strictly prohibited, with no exceptions: 
 
@@ -199,7 +199,7 @@ means, locally or via the Internet/Intranet/Extranet.
 17.	Providing information about, or lists of, Company's employees to parties
 outside the Company.
 
-4.3.2	Email and Communication Activities
+### 4.3.2	Email and Communication Activities
 
 When using company resources to access and use the Internet, users must realize
 they represent the company. Whenever employees state an affiliation to the
@@ -230,7 +230,7 @@ network.
 7.	Posting the same or similar non-business-related messages to large numbers
 of Usenet newsgroups (newsgroup spam).
 
-4.3.3	Blogging and Social Media
+### 4.3.3	Blogging and Social Media
 
 1.	Blogging by employees, whether using Company's property and systems or
 personal computer systems, is also subject to the terms and restrictions set
