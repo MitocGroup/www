@@ -3,36 +3,36 @@
 
 ## General
 
-While test execution QA may face some unexpected behavior or product malfunction. 
-In those situation it is a QA responsibility to inform and escalate found issues to the team. 
+While test execution, QA may face some unexpected behavior or product malfunction. 
+In this situations it is a direct QA responsibility to inform and escalate found issues to the team. 
 
 Below are the steps of how to open, track and escalate defects.
 
 
 ## How to Open a Defect?
 
-1) Click [New Issue] button - On [Issues] tab in GitHub Repo
-2) Add a Issue Title - short summary describing the defect
-3) Add Issue Description, detailed steps to reproduce with as much details as possible, including a screenshot or video.
-4) Define the Importance of the issue by setting the corresponding label:
+1) Click [New Issue] button - On [Issues] tab in GitHub Repository
+2) Add a *Issue Title* - short summary describing the defect
+3) Add *Issue Description*, detailed steps to reproduce with as much details as possible, including a screenshot or video.
+4) Define the *Importance* of the issue by setting the corresponding label:
 - Blocking 
 - Critical 
 - Major
 - Minor
-5) Define issue type by setting the corresponding label:
+5) Define issue *type* by setting the corresponding label:
 - Bug
 - Enchancment
 - Epic
-6) Assign the issue to the corresponding Project if applicable
-7) Assign the issue to a corresponding Team member
-8) Link issue to a Milestone
-9) Move the issue to Backlog Pipeline
-10) Click [Submit new issue] 
+6) Assign the issue to the corresponding *Project* if applicable
+7) *Assign* the issue to a corresponding Team Member
+8) Link issue to a *Milestone*
+9) Move the issue to *Backlog* Pipeline
+10) Click [Submit new issue] button 
 
 
 
-## What happens with the defects after it was opened?
+## What happens with the defect after it was opened?
 ## Who tracks and validates the defects?
-## Type of issues
-## Closing the defect
+## Issue types 
+## Closing the defect process
 
