@@ -32,7 +32,7 @@ Below are the steps of how to open, track and escalate defects.
 
 
 ## What happens with the defect after it was opened?
-1) Development Team tracks the issues on the GitHub Board/Projects, as the work on the issue has start the issues is moved by Dev Team to *In Progress* state.
+1) Development Team tracks the issues on the GitHub Board/Projects, as the work on the issue has start the issue is moved by Dev Team to *In Progress* state.
 2) As the work is completed, a code change is pushed to Dev Environment for QA Validation. The issue is moved by Dev Team to *In Test* state
 3) QA tracks all the issues in *In Test* state and validates them within 2 business days.
 4) If defect checking is completed the issue is moved to either *Done* state or *In Progress* state.
