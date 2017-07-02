@@ -4,7 +4,7 @@
 ## General
 
 While test execution QA may face some unexpected behavior or product malfunction. 
-In those situation it is a QA responsibility to inform and escalate of the found issues to the team. 
+In those situation it is a QA responsibility to inform and escalate found issues to the team. 
 
 Below are the steps of how to open, track and escalate defects.
 
