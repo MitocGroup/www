@@ -1,5 +1,4 @@
 # PROC-003 - Daily Scrum / Standup Process
-------------------------------------------
 
 
 Revision | Revision Date | Author | Description of changes

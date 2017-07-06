@@ -1,5 +1,4 @@
 # POL-002 - Acceptable Use Policy
----------------------------------
 
 
 Revision | Revision Date | Author | Description of changes

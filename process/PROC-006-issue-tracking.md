@@ -1,5 +1,11 @@
-# PROC-006 - Issue Tracking
---------------------------------------
+# PROC-006 - Issue Tracking Process
+
+
+Revision | Revision Date | Author | Description of changes
+-------- | ------------- | ------ | ----------------------
+v0.0.1 | 2017-07-06 | Igor Vignan | Initial Document
+v0.0.2 | 2017-07-07 | Eugene Istrati | Approved
+
 
 ## General
 

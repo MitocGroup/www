@@ -1,5 +1,4 @@
 # POL-008 - Antivirus Policy
-----------------------------
 
 
 Revision | Revision Date | Author | Description of changes

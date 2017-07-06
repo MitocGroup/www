@@ -1,5 +1,4 @@
 # POL-014 - Availability Policy
--------------------------------
 
 
 Revision | Revision Date | Author | Description of changes

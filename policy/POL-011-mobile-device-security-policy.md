@@ -1,5 +1,4 @@
 # POL-011 - Mobile Device Security Policy
------------------------------------------
 
 
 Revision | Revision Date | Author | Description of changes

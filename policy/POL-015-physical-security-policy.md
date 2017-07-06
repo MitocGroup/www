@@ -1,5 +1,4 @@
 # POL-015 - Physical Security Policy
-------------------------------------
 
 
 Revision | Revision Date | Author | Description of changes
