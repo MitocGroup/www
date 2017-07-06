@@ -1,5 +1,5 @@
-# POL-013 - Confidentiality Policy
-==================================
+# POL-015 - Physical Security Policy
+====================================
 
 
 Revision | Revision Date | Author | Description of changes
