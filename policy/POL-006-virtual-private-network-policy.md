@@ -1,5 +1,5 @@
 # POL-006 - Virtual Private Network (VPN) Policy
-================================================
+------------------------------------------------
 
 
 Revision | Revision Date | Author | Description of changes

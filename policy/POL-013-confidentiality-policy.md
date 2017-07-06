@@ -1,5 +1,5 @@
 # POL-013 - Confidentiality Policy
-==================================
+----------------------------------
 
 
 Revision | Revision Date | Author | Description of changes

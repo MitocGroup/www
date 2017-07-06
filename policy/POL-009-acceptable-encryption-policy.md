@@ -1,5 +1,5 @@
 # POL-009 - Acceptable Encryption Policy
-========================================
+----------------------------------------
 
 
 Revision | Revision Date | Author | Description of changes

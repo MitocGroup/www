@@ -1,5 +1,5 @@
 # POL-012 - Third-Party Access Policy
-=====================================
+-------------------------------------
 
 
 Revision | Revision Date | Author | Description of changes
