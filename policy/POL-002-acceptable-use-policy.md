@@ -7,8 +7,6 @@ v0.0.1 | 2017-06-26 | Vladimir Ursu | Initial Document
 v0.0.2 | 2017-06-27 | Eugene Istrati | Approved
 
 
-
-
 # 1. OVERVIEW
 
 Mitoc Group Inc (the "Company") intentions for publishing an Acceptable Use
