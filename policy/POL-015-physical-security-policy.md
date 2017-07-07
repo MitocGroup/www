@@ -11,22 +11,26 @@ v0.0.2 | 2017-07-07 | Eugene Istrati | Approved
 
 See pupose.
 
+
 # 2. PURPOSE
 
 The purpose of this policy is to protect Mitoc Group (the "Company") information systems and assets through limiting and controlling physical access and implementing controls to protect the environment in which Company information systems and assets are housed.
 
+
 # 3. SCOPE
+To be updated
 
 
 # 4. POLICY
 
-## 4.1. Secure Areas:
+## 4.1. Secure Areas
 
-4.1.1 Entry Controls
+### 4.1.1. Entry Controls
 
 Information Security Team must establish the appropriate type and number of restricted zones to achieve the necessary conditions for employee safety, and for the protection of sensitive or valuable information and assets. Establishment of restricted zones must be supported by a Security Threat and Risk Assessment.
 
 Access to any information processing facility or areas where sensitive information is kept must be restricted. Access to restricted zones must be controlled, authorized and monitored as required by the applicable zone. Entry controls must identify, authenticate and log all access attempts to a Restricted Access Operations Zone or a Restricted Access Security Zone as follows:
+
 * Restricted Access Operation Zone access is limited to company employees and their escorted visitors (i.e., standard working areas, conference rooms, offices); 
 
 * Restricted Access Security Zone access is limited to authorized employees and their escorted visitors (i.e., communication closets, server rooms).
@@ -46,7 +50,7 @@ contains identifying information (such as name and photograph) and their level o
 
 When physical security is outsourced (i.e., the use of security guards) the contract must require that contracted employees are security screened and bonded.
 
-4.1.2  Physical security requirements
+### 4.1.2. Physical security requirements
 
 Information Security Team must design, document and approve security controls for information processing facilities based on a Security Threat and Risk Assessment. Considerations must include:
 
@@ -68,7 +72,7 @@ internally available directories, to the minimum required;
 * Selecting sites so that public access to highly sensitive or critical locations can be strictly
 controlled or avoided.
 
-4.1.3 Physical protection against natural disasters, malicious attacks or accidents
+### 4.1.3. Physical protection against natural disasters, malicious attacks or accidents
 
 Information Security Team, site planners and architects must incorporate physical security controls that protect against damage from fire, flood, earthquake, explosion, civil unrest and other forms of natural disasters, malicious attacks and accidents. Consideration must be given to any security threats presented by neighbouring premises or streets. In addition to meeting building code specifications and fire regulations, the following must be considered:
 
@@ -79,7 +83,7 @@ appropriate containers;
 
 * Fallback equipment (e.g., for Disaster Recovery Plan) and backup media must be sited at a safe distance to avoid damage from a disaster affecting the main site.
 
-4.1.4 Secure area requirements for employees
+### 4.1.4. Secure area requirements for employees
 
 Information Security Team must identify and document requirements that apply to employees authorized to work in secure areas. Information Owners must ensure that background checks including criminal records reviews are conducted for employees working in secure areas.
 
@@ -91,7 +95,7 @@ Information Security Team are responsible for informing employees working within
 
 * Information security incidents must be reported immediately.
 
-4.1.5 Other secure area requirements
+### 4.1.5. Other secure area requirements
 
 Information Security Team must identify and document requirements for other individuals who may need access to a secure area. Information Security Team are responsible for ensuring that:
 
@@ -105,9 +109,9 @@ Information Security Team must identify and document requirements for other indi
 
 * Physical intrusion alarms and detection devices must be installed to automatically alert monitoring employees of a breach.
 
-## 4.2 Equipment Security
+## 4.2. Equipment Security
 
-4.2.1 Security controls
+### 4.2.1. Security controls
 
 The Information Security Team must ensure that equipment being used off-site to access confidential information is protected commensurate with the sensitivity and the value of the information it contains. The Information Security Team must ensure that:
 
@@ -131,7 +135,7 @@ To provide further protection employees must:
 
 * Report loss of equipment immediately to the Information Security Team (security@mitocgroup.com) 
 
-4.2.2  Reassignment of hardware and media
+### 4.2.2. Reassignment of hardware and media
 
 Information Security Team must consider the value and sensitivity of the information stored on hardware or media when determining whether it will be reassigned within Company or destroyed. Reassignment must only occur within or between Company. Prior to reassignment of hardware or media, Information Security Team must ensure:
 
@@ -151,7 +155,7 @@ Information Security Team must consider the value and sensitivity of the informa
     
 Where information is erased by third parties there must be contractual and audit procedures to ensure complete destruction of the media. Third parties must certify that destruction has occurred.
 
-4.2.3 Protection of unattended equipment
+### 4.2.3. Protection of unattended equipment
 
 Information Security Team must ensure that employees are aware of their responsibilities to secure unattended equipment to prevent unauthorized access to information systems by:
 
@@ -167,7 +171,7 @@ Information Security Team must ensure that employees are aware of their responsi
 
 Company's workstations and other devices used for information system access must automatically activate screen savers or equivalent locking systems after 15 or less minutes of inactivity.
 
-4.2.4 Securing the work space
+### 4.2.4. Securing the work space
 
 Employees must secure their work space whenever it is not supervised by an authorized person, including during short breaks, attendance at meetings, and at the end of the work day.
 
@@ -187,7 +191,7 @@ Securing the work space includes:
 
 * Checking fax machines and printers to ensure that no sensitive information is waiting to be picked up.
 
-4.2.5 Secure work habits
+### 4.2.5. Secure work habits
 
 Employees must develop and implement security conscious work habits to reduce the likelihood of unauthorized viewing, access or disclosure of sensitive information.
 
@@ -209,19 +213,19 @@ viewing audience cannot be defined;
 
 # 5. POLICY COMPLIANCE 
 
-## 5.1	Compliance Measurement
+## 5.1. Compliance Measurement
 
 The Information Security Team will verify compliance to this policy through
 various methods, including but not limited to, periodic walk-thrus, video
 monitoring, business tool reports, internal and external audits, and feedback
 to the policy owner. 
 
-##  5.2	Exceptions
+## 5.2. Exceptions
 
 Any exception to the policy must be approved by the Information Security Team
 (security@mitocgroup.com) in advance.
 
-##  5.3	Non-Compliance
+## 5.3. Non-Compliance
 
 An employee found to have violated this policy may be subject to disciplinary
 action, up to and including termination of employment. 

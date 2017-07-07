@@ -1,5 +1,4 @@
 # PROC-001 - Onboarding Process
--------------------------------
 
 
 Revision | Revision Date | Author | Description of changes
