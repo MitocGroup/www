@@ -5,7 +5,7 @@
 - [PROC-003 - Daily Scrum / Standup](process/PROC-003-daily-standup.md)
 - [PROC-004 - Software Development](process/PROC-004-software-development.md)
 - [PROC-005 - Quality Assurance](process/PROC-005-quality-assurance.md)
-- Issue Tracking
+- [PROC-006 - Issue Tracking](process/PROD-006-issue-tracking.md)
 
 
 # Policies
@@ -22,3 +22,7 @@
 - [POL-010 - End User Encryption Key Protection](policy/POL-010-end-user-encryption-key-protection-policy.md)
 - [POL-011 - Mobile Device Security](policy/POL-011-mobile-device-security-policy.md)
 - [POL-012 - Third Party Access](policy/POL-012-third-party-access-policy.md)
+- [POL-013 - Confidentiality](policy/POL-013-confidentiality-policy.md)
+- [POL-014 - Availability](policy/POL-014-availability-policy.md)
+- [POL-015 - Physical Security](policy/POL-015-physical-security-policy.md)
+- [POL-016 - Social Media](policy/POL-016-social-media-policy.md)
