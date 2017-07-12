@@ -1,5 +1,4 @@
 # POL-001 - Employee Background Check Policy
---------------------------------------------
 
 
 Revision | Revision Date | Author | Description of changes

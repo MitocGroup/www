@@ -1,5 +1,4 @@
 # POL-003 - Electronic Mail Policy
-----------------------------------
 
 
 Revision | Revision Date | Author | Description of changes
