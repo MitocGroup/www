@@ -96,9 +96,3 @@ Any exception to the policy must be approved by the Information Security Team
 
 An employee found to have violated this policy may be subject to disciplinary
 action, up to and including termination of employment.
-
-
-# 6. RELATED, STANDARDS, POLICIES and PROCESSES 
-
-* Remote Access Policy
-* Anti-Virus Policy
