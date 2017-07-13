@@ -80,3 +80,23 @@ they store, send or receive on the Company's email system.
 
 4.11    The Company may monitor messages without prior notice. The Company is
 not obliged to monitor email messages.
+
+
+# 5. POLICY COMPLIANCE 
+
+## 5.1 Compliance Measurement
+
+The Information Security team will verify compliance to this policy through
+various methods, including but not limited to, periodic walk-thrus, video
+monitoring, business tool reports, internal and external audits, and feedback
+to the policy owner.
+
+## 5.2 Exceptions
+
+Any exception to the policy must be approved by the Information Security Team
+(security@mitocgroup.com) in advance.
+
+## 5.3 Non-Compliance
+
+An employee found to have violated this policy may be subject to disciplinary
+action, up to and including termination of employment.
