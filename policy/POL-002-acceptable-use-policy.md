@@ -277,16 +277,7 @@ An employee found to have violated this policy may be subject to disciplinary
 action, up to and including termination of employment.
 
 
-# 6. RELATED STANDARTS, POLICIES AND PROCESSES
-
-*	Data Classification Policy
-*	Data Protection Standard
-*	Social Media Policy
-*	Minimum Access Policy
-*	Password Policy
-
-
-# 7. DEFINITIONS AND TERMS
+# 6. DEFINITIONS AND TERMS
 
 **Honey pot** - Programs that simulate one or more network services that you
 designate on your computer's ports. An attacker assumes you're running
