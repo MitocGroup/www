@@ -88,7 +88,7 @@ periodic basis to ensure compliance with this policy.
 ## 4.2	Security and Proprietary Information
 
 4.2.1	All mobile and computing devices that connect to the internal network
-must comply with the Minimum Access Policy.
+must comply with the POL-017 - Access Control Policy.
 
 4.2.2	System level and user level passwords must comply with the Password
 Policy. Providing access to another individual, either deliberately or through
