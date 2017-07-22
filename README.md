@@ -29,3 +29,4 @@
 - [POL-017 - Access Control](policy/POL-017-access-control-policy.md)
 - [POL-018 - Data Protection Standard](policy/POL-018-data-protection-standard-policy.md)
 - [POL-019 - Data Classification](policy/POL-019-data-classification-policy.md)
+- [POL-020 - Equal Opportunity Employer](policy/POL-020-equal-opportunity-employer-policy.md)
