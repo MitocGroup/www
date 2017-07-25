@@ -7,20 +7,18 @@ v0.0.1 | 2017-07-21 | Vladimir Ursu | Initial Document
 v0.0.2 | 2017-07-22 | Eugene Istrati | Approved
 
 
+
 # 1. OVERVIEW
 
 See Purpose.
-
 
 # 2. PURPOSE
 
 Our Equal Opportunity Employer Policy expresses commitment of Mitoc Group (the "Company") to promote equality and conduct its business according to principles of social justice, respect and freedom of expression when dealing with diversity in the workplace.
 
-
 # 3. SCOPE
 
 This Equal Opportunity Employer Policy applies to all prospective or current employees of the company, as well as contractors and visitors, who are vulnerable to discriminatory treatment due to certain individual characteristics.
-
 
 # 4. POLICY 
 
@@ -44,6 +42,7 @@ Discrimination can refer to different forms of diversity including but not limit
 Areas where the company will engage in preventive as well as affirmative action to ensure equal opportunity include hiring, training, performance evaluation, promotions, compensation, benefits and termination. The list is by no means exhaustive and any other process or function will also be subject to dictations by law and company policy.
 
 The company will strictly refrain from demonstrating bias or prejudice towards individual differences which will be valued and protected. People will be given the chance to work in a discrimination-free environment which will help everyone feel that their worth and rights are respected.
+
 Actions
 
 Actions aiming towards equal opportunity include the following:
@@ -63,7 +62,6 @@ Actions aiming towards equal opportunity include the following:
 All supervisors and managers are responsible to ensure that policies of equal opportunity are applied at all times and that all procedures and practices are free of discrimination. All staff are obliged to follow legal guidelines and equal opportunity employer principles.
 
 In cases when these rules are violated, employees can address the offender directly. If the issue is not resolved they can report to Human Resources department or their immediate supervisor. The report will be investigated as soon as possible and all parties will be listened to. The employee that suffered the offence will be protected against harassment and victimization.
-
 
 # 5. POLICY COMPLIANCE 
 
