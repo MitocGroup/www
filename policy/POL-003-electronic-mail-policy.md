@@ -81,6 +81,8 @@ they store, send or receive on the Company's email system.
 4.11    The Company may monitor messages without prior notice. The Company is
 not obliged to monitor email messages.
 
+4.12 Company's employees shall use a disclaimer ("This email and any attachments thereto may contain private, confidential, and privileged material for the sole use of the intended recipient. Any review, copying, or distribution of this email (or any attachments thereto) by others is strictly prohibited. If you are not the intended recipient, please contact the sender immediately and permanently delete the original and any copies of this email and any attachments thereto.") for all business emails.
+
 
 # 5. POLICY COMPLIANCE 
 
