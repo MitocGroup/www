@@ -117,7 +117,7 @@ Increment.
 
 ### Production Release
 
--   Product increment should be released in Production every second Friday by 7 PM (Moldova Time)
+-   Product increment should be released in Production every second Monday by 9 AM (EST)
 -   Sign Off by Product/Project Manager is required for Production Release
 -   Critical and Blocking issues should be reported as earliest as possible or during Development Phase (when code is in Dev Environment)
 
