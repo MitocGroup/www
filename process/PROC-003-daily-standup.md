@@ -46,6 +46,11 @@ _______
 
 Hi Team,
 
+Blocking/Pending issues:
+- Pending VPN Access - *Action on Security Team / Last follow up Aug 23th*
+- Blocking issue https://github.com/MitocGroup/deep-package-manager/issues/401 - *Action on Alex C.*
+
+
 Yesterday:
 - Fixed https://github.com/MitocGroup/deep-package-manager/issues/481 - *100% Completed*
 - Worked on https://github.com/MitocGroup/deep-package-manager/issues/530 - *50% Completed*
