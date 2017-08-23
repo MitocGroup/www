@@ -113,7 +113,7 @@ Increment.
 1)  Production release
 2)  HotFix
 
-![PROD DEPLOY](https://github.com/MitocGroup/www/blob/master/images/deploy-workflow.png)
+![PROD DEPLOY](https://github.com/MitocGroup/www/blob/master/images/workflow.png)
 
 ### Production Release
 
