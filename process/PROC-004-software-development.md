@@ -119,7 +119,18 @@ Increment.
 
 -   Product increment should be released in Production every second Monday by 9 AM (EST)
 -   Sign Off by Product/Project Manager is required for Production Release
--   Critical and Blocking issues should be reported as earliest as possible or during Development Phase (when code is in Dev Environment)
+-   Critical and Blocking issues should be reported as earliest as possible or during Development Phase (when code is in Dev/Test Environment)
+-   Build Branch is used to isolate changes for testing, unit tests are being completed at this phase.
+-   On opening a Pull Request from build to test, a deploy process is automatically triggered to Test Environment.
+-   If E2E tests are executed successfully, PR from build to test can be merged.
+-   Test Environment is a Sandbox for QA Team to validated functional changes
+-   On opening a Pull Request from test to stage, a deploy process is automatically triggered to Stage Environment.
+-   If Functional Testing + E2E tests are executed successfully, PR from test to stage can be merged.
+-   Stage Environment is a Stable Regression Environment for QA Team
+-   If Regression Testing + E2E tests are executed successfully, PR from stage to prod can be merged.
+-   On opening a Pull Request from stage to prod, a deploy process is automatically triggered to PROD Environment.
+-   Healthcheck is required after PROD deployment.
+
 
 
 ### HotFix
@@ -128,7 +139,14 @@ A hotfix is a single, cumulative package that is used to address a
 problem in a software product (i.e. software critical issue). Typically,
 hotfixes are made to address a specific customer situation.
 
--   HotFix is pushed directly to Stage Environment by Development Team
--   Functional Testing is performed by QA Team
--   Limited Regression Testing is performed by QA for HotFix Related areas
+-   HotFix branch is created from Master branch (PROD)
+    Note: HotFix branch can be created from any other branch ex. STAGE
+-   Required fix is applied in HotFix branch
+-   On opening a Pull Request from hotfix to stage, a deploy process is automatically triggered to Stage Environment.
+-   Pull requests is closed after testing. Important: Pull requests from hotfix to stage should not be merged
+-   If Regression Testing + E2E tests are executed successfully, PR from hotfix to prod can be opened.
+-   On opening a Pull Request from hotfix to prod, a deploy process is automatically triggered to PROD Environment.
+-   Pull requests is closed after testing. Important: Pull Requests from hotfix to prod should not be merged.
+-   git cherry-pick or git format-patch commands are used to include hotfix changes into dev branch.
+
 
