@@ -26,11 +26,11 @@ This policy applies to all employees of the company that have a permanent or lon
 
 # 4. POLICY 
 
-The company may adjust its time off policy according to business needs and corporate objectives. At any case however, the company will not grant less paid leave than is dictated by law.
+The company may adjust its time off policy according to business needs and corporate objectives. At any case however, the company will not grant less paid leave than is dictated by law. 
 
 Paid time off refers to the amount of days off that an employee can take throughout a month or year and for which they will be compensated. Those include:
 
- - Vacation Leave
+ - Vacation Leave 
 
  - Personal Leave
 

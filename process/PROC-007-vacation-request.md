@@ -60,17 +60,18 @@ All Employees when planning to have a vacation should send a vacation request at
 
 ## 4. Policy
 
-4.1 The total amound of Paid Vacation days is 28 days per year.   
+4.1 The total amound of Paid Vacation days is 28 days per year except legal holidays.
 
-4.2 A PTO is considered only from 5 days in a row. All the payment details the employee will receive in the payment calculations for each month.
+4.2 A PTO can be splitted in any amounts the employee desire, however once a year one vacation should be at least 14 day's in a row. All the payment details the employee will receive in the payment calculations for each month.
 
 4.3 The cost per day formula depends on the month. Accountant will refer to the following document to calculate the cost per day - http://lex.justice.md/viewdoc.php?action=view&view=doc&id=368009&lang=1
     The formula to calculate the cost per vacation is ((Net Salary / working days) * Nr. Day offs)
+
     **Example:** Bruto salary - 2500    MDL
                  Netto salary - 2142.84 MDL
                  Month July   - 21 working days
                  Nr. of Day offs - 10
-    (2142.84/21) * 10 = 1020.4 MDL. Employee should receive an increase of 1020.4 for 10 days off vacation.  
+    (2142.84/21) * 10 = 1020.4 MDL. Employee should receive an increase of 1020.4 MDL for 10 days off vacation.  
  
 
 
