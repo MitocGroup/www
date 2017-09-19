@@ -12,7 +12,7 @@ v0.0.2 | 2017-08-25 | Eugene Istrati | Approved
 All Employees when planning to have a vacation should send a vacation request at least 2 weeks before the start of vacation, in order to get an approval.
 
 
-## 2. 7 Things to Do Before Leaving the Office for Vacation
+## 2. Seven Things to Do Before Leaving the Office for Vacation
 
 2.1 Let people know when you will be gone. Remind your regular contacts of your vacation schedule a few weeks ahead of time so they can plan projects accordingly. Prior to leaving, create an auto-reply for your email that gives the dates you will be out of the office and also lets others know if (or how often) you will be checking emails. Include the name, phone number and email of an alternate point of contact for those who require immediate assistance.
 
@@ -33,63 +33,37 @@ All Employees when planning to have a vacation should send a vacation request at
 
 3.1 **Request to your Manager/Superviser:** The requester send an email to the Manager for an approval. The request email should contain the following information:
 
-    - Vacation Start and End Date
-    - Reason (Annual Vacation, surgery etc)
-    - Backup Person
-    - Backup Plan (if applicable)
+- Vacation Start and End Date
+- Reason (Annual Vacation, surgery etc)
+- Backup Person
+- Backup Plan (if applicable)
 
 3.2 **Request Approved:** When the request is approved by the Manager, requester must follow the following steps:
     
-    - Send an "all day" meeting invite to team@mitocgroup.com for the vacation period.
-    - Use as a meeting Name your Name (e.g. Employee Name Vacation)
-    - Follow the **## 7 Things to Do Before Leaving the Office for Vacation** steps
+- Send an "all day" meeting invite to team@mitocgroup.com for the vacation period.
+- Use as a meeting Name your Name (e.g. Employee Name Vacation)
+- Follow the **## Seven Things to Do Before Leaving the Office for Vacation** steps
 
 3.3 **Request Denied:** Reschedule your Vacation
 
 
-4. Process for Manager
+## 4. Process for Manager
 
 4.1 **Approve Request:** When receiving an Vacation request, before approving the request Managers should:
 
-     - Review the Vacation request for correct dates
-     - Ensure that dates are not conflicting with the project dates
-     - Ensure there is a Backup person and a Backup Plan (if applicable)
-     - Ensure with Operations Manager that there are available day offs from the prorated day offs
+- Review the Vacation request for correct dates
+- Ensure that dates are not conflicting with the project dates
+- Ensure there is a Backup person and a Backup Plan (if applicable)
+- Ensure with Operations Manager that there are available day offs from the prorated day offs
 
 4.2 **Decline Request:** Manager is in right to Decline the Vacation request or to request some adjustments if any of the 4.1 points are not met.
 
-## 4. Policy
 
-4.1 The total amound of Paid Vacation days is 28 days per year except legal holidays.
+## 5. Policy
 
-4.2 A PTO can be splitted in any amounts the employee desire, however once a year one vacation should be at least 14 day's in a row. All the payment details the employee will receive in the payment calculations for each month.
+5.1 The total amound of Paid Vacation days is 28 days per year except legal holidays.
 
-4.3 The cost per day formula depends on the month. Accountant will refer to the following document to calculate the cost per day - http://lex.justice.md/viewdoc.php?action=view&view=doc&id=368009&lang=1
-    The formula to calculate the cost per vacation is ((Net Salary / working days) * Nr. Day offs)
+5.2 A PTO can be splitted in any amounts the employee desire, however once a year one vacation should be at least 14 day's in a row. All the payment details the employee will receive in the payment calculations for each month.
 
-    **Example:** Bruto salary - 2500    MDL
-                 Netto salary - 2142.84 MDL
-                 Month July   - 21 working days
-                 Nr. of Day offs - 10
-    (2142.84/21) * 10 = 1020.4 MDL. Employee should receive an increase of 1020.4 MDL for 10 days off vacation.  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+5.3 The cost per day formula depends on the month. Accountant will refer to the following document to calculate the cost per day - http://lex.justice.md/viewdoc.php?action=view&view=doc&id=368009&lang=1
+The formula to calculate the cost per vacation is ((Net Salary / working days) * Nr. Day offs)
