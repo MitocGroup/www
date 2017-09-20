@@ -20,11 +20,6 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/services/cloud-computing/</loc>
-  <priority>0.80</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
   <loc>https://www.mitocgroup.com/services/automation-infrastructure/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
@@ -40,7 +35,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com//services/start-project/</loc>
+  <loc>https://www.mitocgroup.com/services/start-project/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>
@@ -67,11 +62,6 @@
 <url>
   <loc>https://www.mitocgroup.com/partners/become-partner/</loc>
   <priority>0.80</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.mitocgroup.com/customers/</loc>
-  <priority>0.90</priority>
   <changefreq>weekly</changefreq>
 </url>
 <url>
