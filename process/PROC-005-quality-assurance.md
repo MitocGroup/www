@@ -37,7 +37,7 @@ of the work and the project aims.
 7)  Updating test cases
 8)  Regression testing
 
-![DEV-QA Process](https://github.com/MitocGroup/SDLC/blob/master/images/dev-qa-process.png)
+![DEV-QA Process](https://github.com/MitocGroup/www/blob/master/images/dev-qa-process.png)
 
 Let's have a deeper look at QA processes and how they are connected with
 the development steps.
@@ -73,7 +73,7 @@ planning test cases, i.e. - describe the actions QA engineers perform to
 make sure the piece of software functions as planned. Test cases can be
 written in simple Excel file. Here is an example of test cases:
 
-![Test Case Sample](https://github.com/MitocGroup/SDLC/blob/master/images/test-case-template.png)
+![Test Case Sample](https://github.com/MitocGroup/www/blob/master/images/test-case-template.png)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -123,7 +123,7 @@ When a QA engineer discovers a bug, he/she records it in a bug tracking
 system which is also a project management system. For this we can use
 one public excel sheet. Here is an example:
 
-![Report Sample](https://github.com/MitocGroup/SDLC/blob/master/images/report-template.png)
+![Report Sample](https://github.com/MitocGroup/www/blob/master/images/report-template.png)
 
 For more information please see *Issue Tracking process* document
 
@@ -150,7 +150,7 @@ tasks.
 
 Time frames between start development and start testing
 
-![Process](https://github.com/MitocGroup/SDLC/blob/master/images/step-by-step.png)
+![Process](https://github.com/MitocGroup/www/blob/master/images/step-by-step.png)
 
 A closed look on each time sequence:
 
