@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 BUILD_FOLDER='./build/Release'
-ENV=$([ -n "$1" ] && echo "$1" || echo 'dev')
+ENV=$([ -n "$1" ] && echo "$1" || echo 'test')
 
 echo "Minifying css code"
 cssnano < ./css/style.css > ./css/style.min.css
@@ -14,14 +14,14 @@ echo "Copying resources into '${BUILD_FOLDER}' folder"
 rm -rf ${BUILD_FOLDER}/*
 mkdir -p ${BUILD_FOLDER}/
 
-if [ ${env} != 'prod' ]; then
+if [ ${ENV} != 'prod' ]; then
     cp robots-test.txt ${BUILD_FOLDER}/robots.txt
 else
     cp robots.txt ${BUILD_FOLDER}/robots.txt
     cp sitemap.xml ${BUILD_FOLDER}/sitemap.xml
 fi
 
-cp -R favicon.png css fonts images js \
+cp -R favicon.ico css fonts images js \
 	${BUILD_FOLDER}/
 
 echo "Minifying html code"
