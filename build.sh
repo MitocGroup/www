@@ -4,7 +4,7 @@ BUILD_FOLDER='./build/Release'
 ENV=$([ -n "$1" ] && echo "$1" || echo 'dev')
 
 echo "Minifying css code"
-cssnano < ./css/index.css > ./css/index.min.css
+cssnano < ./css/style.css > ./css/style.min.css
 
 echo "Minifying js code"
 uglifyjs ./js/blog.js -c -m -o ./js/blog.min.js
