@@ -2,7 +2,7 @@ jQuery(function($) {
     'use strict';
 
     $('.carousel-mission').slick({
-        infinite: true,
+        infinite: false,
         arrows: true,
         dots: false
     });
