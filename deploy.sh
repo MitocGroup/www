@@ -6,7 +6,7 @@ if [ -z $(which aws) ]; then
 fi
 
 ENV=$([ -n "$1" ] && echo "$1" || echo 'test')
-REGION=$([ -n "$2" ] && echo "$2" || echo 'eu-central-1')
+REGION=$([ -n "$2" ] && echo "$2" || echo 'us-west-2')
 PROFILE=$([ -n "$3" ] && echo "$3" || echo 'default')
 
 message() {
