@@ -1,0 +1,107 @@
+.wrapper {
+  height: 100vh;
+  .main-page {
+    background-image: url(../images/hp-background-min.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    //.navbar-fix {
+    //  position: fixed;
+    //  width: 100%;
+    //}
+    .logo {
+      float: left;
+      line-height: 84px;
+      a {
+        display: block;
+        .img-logo {
+          height: 40px;
+        }
+      }
+    }
+    .nav-bar {
+      float: right;
+      line-height: 84px;
+      ul {
+        list-style-type: none;
+        li {
+          display: inline;
+          font-family: 'Avenir', sans-serif;
+          font-weight: bold;
+          font-size: 18px;
+          &:not(:last-child) {
+            padding-right: 24px;
+          }
+        }
+      }
+    }
+    .main-text {
+      text-align: center;
+      width: 65%;
+      margin: 0 auto;
+      h1 {
+        font-size: 45px;
+        color: $accent-green;
+        line-height: 61px;
+        padding-top: 100px;
+      }
+      .btn-green {
+        margin-top: 25%;
+      }
+    }
+  }
+  .pictures-block {
+    margin-bottom: 90px;
+    .flex-item-3 {
+      text-align: center;
+      padding: 0 20px;
+      &:not(:last-child) {
+        border-right: 2px solid #ddd;
+      }
+      img {
+        height: 128px;
+      }
+      h3 {
+        padding: 40px 0;
+      }
+    }
+  }
+  .green-block {
+    background-color: $main-color;
+    .container {
+      .flex-row {
+        margin: 0 -20px;
+        .flex-item-4 {
+
+        }
+      }
+    }
+    .info-block {
+      background: $white-color;
+      margin: 0 20px;
+      padding: 0 20px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      img {
+        width: 100%;
+      }
+      .info {
+        min-height: 275px;
+
+        h4 {
+          font-size: 21px;
+          margin: 24px 0;
+        }
+        p {
+          padding-bottom: 20px;
+        }
+      }
+    }
+    &.small-block {
+      .top_button {
+        padding-top: 0;
+      }
+    }
+  }
+}
