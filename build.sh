@@ -4,11 +4,14 @@ BUILD_FOLDER='./build/Release'
 ENV=$([ -n "$1" ] && echo "$1" || echo 'test')
 
 echo "Minifying css code"
-cssnano < ./css/style.css > ./css/style.min.css
+cssnano < ./css/index.css > ./css/index.min.css
+cssnano < ./css/slick.css > ./css/slick.min.css
+cssnano < ./css/slick-theme.css > ./css/slick-theme.min.css
 
 echo "Minifying js code"
 uglifyjs ./js/blog.js -c -m -o ./js/blog.min.js
 uglifyjs ./js/classie.js -c -m -o ./js/classie.min.js
+uglifyjs ./js/main.js -c -m -o ./js/main.min.js
 
 echo "Copying resources into '${BUILD_FOLDER}' folder"
 rm -rf ${BUILD_FOLDER}/*
