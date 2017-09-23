@@ -48,9 +48,9 @@ a {
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'mitoc-group';
-  src: url("../fonts/mitoc-group.eot?ko5y6l");
-  src: url("../fonts/mitoc-group.eot?ko5y6l#iefix") format("embedded-opentype"), url("../fonts/mitoc-group.ttf?ko5y6l") format("truetype"), url("../fonts/mitoc-group.woff?ko5y6l") format("woff"), url("../fonts/mitoc-group.svg?ko5y6l#mitoc-group") format("svg");
+  font-family: 'Avenir-Mitoc';
+  src: url("../fonts/Avenir-Mitoc.eot?ko5y6l");
+  src: url("../fonts/Avenir-Mitoc.eot?ko5y6l#iefix") format("embedded-opentype"), url("../fonts/Avenir-Mitoc.ttf?ko5y6l") format("truetype"), url("../fonts/Avenir-Mitoc.woff?ko5y6l") format("woff"), url("../fonts/Avenir-Mitoc.svg?ko5y6l#Avenir-Mitoc") format("svg");
   font-weight: normal;
   font-style: normal; }
 h1, h2, h3, h4, h6, h6 {
@@ -305,7 +305,7 @@ footer .map-background {
       padding-left: 40px; }
 
 i {
-  font-family: 'mitoc-group';
+  font-family: 'Avenir-Mitoc';
   speak: none;
   font-style: normal;
   font-weight: normal;
