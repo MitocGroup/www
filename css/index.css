@@ -412,11 +412,7 @@ i {
         font-size: 20px;
         text-transform: uppercase;
         font-family: 'Avenir-Black', sans-serif;
-        font-weight: bold;
-        transition: 0.4s ease-in-out;
-        -webkit-transition: 0.4s ease-in-out;
-        -moz-transition: 0.4s ease-in-out;
-        -o-transition: 0.4s ease-in-out; }
+        font-weight: bold; }
       .carousel-block .carousel-mission .slick-prev.slick-disabled:before {
         border-bottom: 2px solid #7ED257; }
     .carousel-block .carousel-mission .slick-next {
