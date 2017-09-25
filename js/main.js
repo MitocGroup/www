@@ -9,6 +9,7 @@ jQuery(function($) {
 
 });
 
+
 $(function () {
     var $content = $('#jsonContent');
     var data = {
@@ -25,28 +26,36 @@ $(function () {
 
                 count++;
                 var visibleSm;
-                var visibleSm1;
 
                 if (count < 3){
 
                     visibleSm = '';
-                    visibleSm1 = '';
                 } else {
                     visibleSm = ' visible-sm';
                 }
-                output += '<div class="flex-item-4' + visibleSm + '">';
+                console.log(k);
+                var flexN = '';
+                var leftPostItem = '';
+                var rightPostItem = '';
+                if (k == 0) flexN = 12;
+                else flexN = 6;
+
+                if (k == 1) leftPostItem = ' leftPostItem';
+                if (k == 2) rightPostItem = ' rightPostItem';
+
+                output += '<div class="flex-item-'+ flexN + visibleSm + rightPostItem + leftPostItem + '">';
                 // output += '<span class="post-date">' + $.format.date(item.pubDate, 'MMM dd') + '</span>';
-                output += '<div class="blog-post"><header>';
+                output += '<div class="blog-post flex-row">';
                 var tagIndex = item.description.indexOf('<img');
                 var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex;
                 var srcStart = srcIndex + 5;
                 var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart;
                 var src = item.description.substring(srcStart, srcEnd);
-                output += '<a href="' + item.link + '" class="blog-element" target="_blank"><img class="img-responsive" src="' + src + '" height="208px"></a></header>';
-                output += '<div class="blog-content"><h4><a href="' + item.link + '" target="_blank">' + item.title + '</a></h4>';
+                output += '<div class="blog-content flex-item-6"><h4><a href="' + item.link + '" target="_blank">' + item.title + '</a></h4><a href="https://blog.mitocgroup.com/" class="button" target="_blank">Read More </a></div>';
+                output += '<div class="flex-item-6 img-block"><a href="' + item.link + '" class="blog-element" target="_blank"><img class="img-responsive" src="' + src + '"></a></div>';
                 var yourString = item.description.replace(/<img[^>]*>/g, "");
                 var maxLength = 120;
-                output += '</div></div> <a href="https://blog.mitocgroup.com/" class="button" target="_blank">Read More </a></div>';
+                output += '</div></div>';
                 return count < 3;
             });
             $content.html(output);

@@ -9,7 +9,7 @@ var n = {
         "image": "https:\/\/cdn-images-1.medium.com\/proxy\/1*MXL-j6S8fTEd8UFP_foEEw.png"
     },
     "items": [{
-        "title": "Mitoc Group Inc. Granted AWS Advanced Technology Partner Status",
+        "title": "Mitoc Group Inc. Granted AWS Advanced Technology Partner Status 1",
         "pubDate": "2017-07-22 13:46:33",
         "link": "https:\/\/blog.mitocgroup.com\/mitoc-group-inc-granted-aws-advanced-technology-partner-status-6550e452ed1b?source=rss----d770bafd0445---4",
         "guid": "https:\/\/medium.com\/p\/6550e452ed1b",
