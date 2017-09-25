@@ -4,39 +4,9 @@
     background-position: center;
     background-size: cover;
     height: 700px;
-    //.navbar-fix {
-    //  position: fixed;
-    //  width: 100%;
-    //}
-    .logo {
-      float: left;
-      line-height: 84px;
-      a {
-        display: block;
-        .mitoc-logo {
-          height: 40px;
-        }
-      }
-    }
-    .nav-bar {
-      float: right;
-      line-height: 84px;
-      ul {
-        list-style-type: none;
-        li {
-          display: inline;
-          font-family: 'Avenir-Black', sans-serif;
-          font-weight: bold;
-          font-size: 18px;
-          &:not(:last-child) {
-            padding-right: 24px;
-          }
-        }
-      }
-    }
     .main-text {
       text-align: center;
-      width: 54%;
+      width: 68%;
       margin: 0 auto;
       h1 {
         font-size: 45px;
@@ -188,104 +158,6 @@ footer {
   }
 }
 
-i {
-  font-family: 'Avenir-Mitoc';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-}
-
-.icon-linkedin {
-  &:before {
-    content: "\e905";
-    color: rgb(36, 36, 36);
-    font-size: 375%;
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-  }
-  &:hover:before {
-    color: $accent-green;
-  }
-}
-
-.icon-youtube {
-  &:before {
-    content: "\e900";
-    color: rgb(36, 36, 36);
-    font-size: 375%;
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-  }
-  &:hover:before {
-    color: $accent-green;
-  }
-}
-
-.icon-github {
-  &:before {
-    content: "\e903";
-    color: rgb(36, 36, 36);
-    font-size: 375%;
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-  }
-  &:hover:before {
-    color: $accent-green;
-  }
-}
-
-.icon-google {
-  &:before {
-    content: "\e904";
-    color: rgb(36, 36, 36);
-    font-size: 375%;
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-  }
-  &:hover:before {
-    color: $accent-green;
-  }
-}
-
-.icon-twitter {
-  &:before {
-    content: "\e906";
-    color: rgb(36, 36, 36);
-    font-size: 375%;
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-  }
-  &:hover:before {
-    color: $accent-green;
-  }
-}
-
-.icon-facebook {
-  &:before {
-    content: "\e907";
-    color: rgb(36, 36, 36);
-    font-size: 375%;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-  }
-  &:hover:before {
-    color: $accent-green;
-  }
-}
-
 .block-effect {
   &:hover {
     margin-top: -4%;
@@ -353,6 +225,176 @@ i {
       &.slick-disabled {
         &:before {
           border-bottom: 2px solid $main-color;
+        }
+      }
+    }
+  }
+}
+
+/* Popup*/
+
+.popup {
+  background: $white-color;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  text-align: center;
+  h3 {
+    text-transform: uppercase;
+    line-height: 120px;
+    background-color: $main-color;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    font-size: 25px;
+  }
+  .form-styles {
+    padding: 23px;
+    input {
+      text-align: center;
+      color: $black-color;
+      border-top: transparent;
+      border-right: transparent;
+      border-left: transparent;
+      border-bottom: 1px solid $black-color;
+      width: 100%;
+      font-family: "Avenir-Black", sans-serif;
+      font-size: 20px;
+
+    }
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    input:focus:-moz-placeholder {
+      color: transparent;
+    }
+    /* FF 4-18 */
+    input:focus::-moz-placeholder {
+      color: transparent;
+    }
+    /* FF 19+ */
+    input:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+    /* IE 10+ */
+    ::-webkit-input-placeholder {
+      color: $black-color;
+
+    }
+    ::-moz-placeholder {
+      color: $black-color;
+
+    }
+    :-ms-input-placeholder {
+      color: $black-color;
+
+    }
+    :-moz-placeholder {
+      color: $black-color;
+
+    }
+    .input-styles {
+      padding: 25px 0 40px 0;
+    }
+    .flex-row {
+      margin-top: 35px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.blog-block {
+  .container {
+    .section-content {
+      .flex-row {
+        .flex-item-12, .flex-item-6 {
+          .blog-post {
+            border: 1px solid $black-color;
+            border-radius: 1px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            margin: 0 20px;
+            overflow: hidden;
+          }
+        }
+        .flex-item-12 {
+          .blog-post {
+            margin-bottom: 40px;
+            max-height: 448px;
+            transition: 400ms;
+            .blog-content {
+              padding: 20px;
+              display: flex;
+              flex-direction: column;
+              h4 {
+                font-size: 30px;
+              }
+              .button {
+                margin-top: auto;
+                font-size: 12px;
+                font-family: "Avenir-Black", sans-serif;
+              }
+            }
+            .img-block {
+              a {
+                display: inline;
+                img {
+                  object-fit: cover;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+            &:hover {
+              margin: -10px 0 50px;
+            }
+          }
+        }
+        .flex-item-6 {
+          &.rightPostItem {
+            .blog-post {
+              &:hover {
+                margin-right: -10px;
+                height: 110%;
+              }
+            }
+          }
+          &.leftPostItem {
+            .blog-post {
+              &:hover {
+                margin-left: -10px;
+                //height: calc(100% + 10px);
+                height: 110%;
+              }
+            }
+          }
+          .blog-post {
+            height: 100%;
+            transition: 400ms;
+            .blog-content {
+              padding: 20px;
+              display: flex;
+              flex-direction: column;
+              h4 {
+                font-size: 20px;
+              }
+              .button {
+                margin-top: auto;
+                font-size: 12px;
+                font-family: "Avenir-Black", sans-serif;
+              }
+            }
+            .img-block {
+              a {
+                display: inline;
+                img {
+                  object-fit: cover;
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+            }
+          }
         }
       }
     }

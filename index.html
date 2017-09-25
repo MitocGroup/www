@@ -2,228 +2,278 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mitoc Group Inc</title>
-    <meta name="description" content="Mitoc Group is a technology company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world." />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
-    <link rel="stylesheet" href="css/index.min.css" />
-    <link rel="stylesheet" href="css/slick.min.css" />
-    <link rel="stylesheet" href="css/slick-theme.min.css" />
+    <meta name="description"
+          content="Mitoc Group is a technology company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world."/>
+    <link rel="icon" type="image/ico" href="/favicon.ico"/>
+    <link rel="stylesheet" href="css/index.min.css"/>
+    <link rel="stylesheet" href="css/slick.min.css"/>
+    <link rel="stylesheet" href="css/slick-theme.min.css"/>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="main-page">
-            <div class="navbar-fix">
-                <div class="container">
-                    <div class="logo">
-                        <a href="/">
-                            <img class="mitoc-logo" src="images/mitoc-logo.svg" alt="Mitoc Group Logo" />
-                        </a>
-                    </div>
-                    <div class="nav-bar">
-                        <ul>
-                            <li><a href="/services">Services</a></li>
-                            <li><a href="/partners">Partners</a></li>
-                            <li><a href="/customers">Customers</a></li>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="https://blog.mitocgroup.com">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="clear"></div>
+<div class="md-modal md-effect-1" id="modal-1">
+    <div class="md-content popup">
+        <h3>Start a Project</h3>
+        <form class="form-styles">
+            <div id="full-name" class="input-styles">
+                <input type="text" id="name" name="user_name" placeholder="Full Name">
+            </div>
+
+            <div id="user-email" class="input-styles">
+                <input type="email" id="mail" name="user_email" placeholder="Email">
+            </div>
+
+            <div class="flex-row">
+                <div class="flex-item-6 ">
+                    <button class="md-close btn-popup">Cancel</button>
+                </div>
+                <div class="flex-item-6">
+                    <button class="btn-popup" type="submit">Submit</button>
                 </div>
             </div>
-            <div class="main-text">
-                <h1>Technology company working on innovative enterprise solutions</h1>
-            </div>
-            <div class="top_button">
-                <a class="btn btn-green" href="#">Start a Project</a>
+        </form>
+    </div>
+</div>
+
+<div class="md-overlay"></div>
+
+<div class="wrapper">
+    <div class="main-page">
+        <div class="navbar-fix">
+            <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img class="mitoc-logo" src="images/mitoc-logo.svg" alt="Mitoc Group Logo"/>
+                    </a>
+                </div>
+                <div class="nav-bar">
+                    <ul>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/partners">Partners</a></li>
+                        <li><a href="/customers">Customers</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="https://blog.mitocgroup.com">Blog</a></li>
+                    </ul>
+                    <!--<i class="icon-burger"></i>-->
+
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
+        <div class="main-text">
+            <h1>Technology company working on innovative enterprise solutions</h1>
+        </div>
+        <div class="top_button">
+            <a class="btn btn-green md-trigger" data-modal="modal-1" href="#">Start a Project</a>
+        </div>
+    </div>
+    <div class="center">
+        <h2 class="header-text">What We Can Do for You</h2>
+    </div>
+    <div class="container">
+        <div class="flex-row pictures-block">
+            <div class="flex-item-3">
+                <div class="hover-effect">
+                    <img class="pictures" src="images/cloud-computing.svg" alt="Cloud Computing"/>
+                </div>
+                <h3>Cloud Computing</h3>
+                <p>A simple way to access servers, storage, databases and a broad set of application services over the
+                    internet.</p>
+            </div>
+            <div class="flex-item-3">
+                <div class="hover-effect">
+                    <img class="pictures" src="images/automation-infrastructure.svg"
+                         alt="Automation of Infrastructure"/>
+                </div>
+                <h3>Automation of Infrastructure</h3>
+                <p>We help customers automate infrastructure build, deployment and management.</p>
+            </div>
+            <div class="flex-item-3">
+                <div class="hover-effect">
+                    <img class="pictures" src="images/automation-data.svg" alt="Automation of Data"/>
+                </div>
+                <h3>Automation of Data</h3>
+                <p>We help customers automate data governance, data pipelines, data storage and compute.</p>
+            </div>
+            <div class="flex-item-3">
+                <div class="hover-effect">
+                    <img class="pictures" src="images/automation-application.svg"
+                         alt="Automation of Application Layer"/>
+                </div>
+                <h3>Automation of App Layer</h3>
+                <p>We help customers automate application management through continuous integration and continuous
+                    deployment.</p>
+            </div>
+        </div>
+    </div>
+    <div class="green-block">
         <div class="center">
-            <h2 class="header-text">What We Can Do for You</h2>
+            <h2 class="header-text">Our Partners</h2>
         </div>
         <div class="container">
-            <div class="flex-row pictures-block">
-                <div class="flex-item-3">
-                    <div class="hover-effect">
-                        <img class="pictures" src="images/cloud-computing.svg" alt="Cloud Computing" />
+            <div class="flex-row">
+                <div class="flex-item-4">
+                    <div class="info-block block-effect">
+                        <img src="images/404.png" alt="Logo 404 Not found Local Community"/>
+                        <div class="info">
+                            <h4>404 Moldova</h4>
+                            <p>404 Moldova is a coworking space for IT businesses and IT people from Moldova. We want to
+                                empower local IT community of small companies and skilled individuals to be competitive
+                                globally. Members of our community are proud to be working with Fortune 500 customers
+                                from Europe and USA.
+                            </p>
+                        </div>
                     </div>
-                    <h3>Cloud Computing</h3>
-                    <p>A simple way to access servers, storage, databases and a broad set of application services over the internet.</p>
                 </div>
-                <div class="flex-item-3">
-                    <div class="hover-effect">
-                        <img class="pictures" src="images/automation-infrastructure.svg" alt="Automation of Infrastructure" />
+                <div class="flex-item-4">
+                    <div class="info-block block-effect">
+                        <img src="images/AWS.png" alt="Amasone Web Services"/>
+                        <div class="info">
+                            <h4>Amazon Web Services</h4>
+                            <p>In 2006, Amazon Web Services (AWS) began offering IT infrastructure services to
+                                businesses in the form of web services -- now commonly known as cloud computing. One of
+                                the key benefits of cloud computing is the opportunity to replace up-front capital
+                                infrastructure expenses with low variable costs that scale with your business.
+                            </p>
+                        </div>
                     </div>
-                    <h3>Automation of Infrastructure</h3>
-                    <p>We help customers automate infrastructure build, deployment and management.</p>
                 </div>
-                <div class="flex-item-3">
-                    <div class="hover-effect">
-                        <img class="pictures" src="images/automation-data.svg" alt="Automation of Data" />
+                <div class="flex-item-4">
+                    <div class="info-block block-effect">
+                        <img src="images/2ndwatch.png" alt="2nd Watch"/>
+                        <div class="info">
+                            <h4>2nd Watch</h4>
+                            <p>2nd Watch, an AWS Premier Partner, was founded in 2010 with a fundamental belief that
+                                business and IT could come together and achieve great things for their customers! Simply
+                                put, we design, build and manage public clouds for Big Data Analytics, Cloud Native
+                                Applications, Business Applications and Digital Marketing.
+                            </p>
+                        </div>
                     </div>
-                    <h3>Automation of Data</h3>
-                    <p>We help customers automate data governance, data pipelines, data storage and compute.</p>
-                </div>
-                <div class="flex-item-3">
-                    <div class="hover-effect">
-                        <img class="pictures" src="images/automation-application.svg" alt="Automation of Application Layer" />
-                    </div>
-                    <h3>Automation of App Layer</h3>
-                    <p>We help customers automate application management through continuous integration and continuous deployment.</p>
                 </div>
             </div>
         </div>
-        <div class="green-block">
-            <div class="center">
-                <h2 class="header-text">Our Partners</h2>
-            </div>
-            <div class="container">
-                <div class="flex-row">
-                    <div class="flex-item-4">
-                        <div class="info-block block-effect">
-                            <img src="images/404.png" alt="Logo 404 Not found Local Community" />
-                            <div class="info">
-                                <h4>404 Moldova</h4>
-                                <p>404 Moldova is a coworking space for IT businesses and IT people from Moldova. We want to empower local IT community of small companies and skilled individuals to be competitive globally. Members of our community are proud to be working with Fortune 500 customers from Europe and USA.
-                                </p>
-                            </div>
+        <div class="top_button center">
+            <a class="btn btn-white" href="#">Become a Partner</a>
+        </div>
+    </div>
+    <div class="carousel-block">
+        <div class="container">
+            <div class="carousel-mission">
+                <div>
+                    <div class="flex-row">
+                        <div class="flex-item-6 slide-img">
+                            <img src="images/mitoc-mission.svg" alt="Mitoc Group Mission"/>
                         </div>
-                    </div>
-                    <div class="flex-item-4">
-                        <div class="info-block block-effect">
-                            <img src="images/AWS.png" alt="Amasone Web Services" />
-                            <div class="info">
-                                <h4>Amazon Web Services</h4>
-                                <p>In 2006, Amazon Web Services (AWS) began offering IT infrastructure services to businesses in the form of web services -- now commonly known as cloud computing. One of the key benefits of cloud computing is the opportunity to replace up-front capital infrastructure expenses with low variable costs that scale with your business.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-item-4">
-                        <div class="info-block block-effect">
-                            <img src="images/2ndwatch.png" alt="2nd Watch" />
-                            <div class="info">
-                                <h4>2nd Watch</h4>
-                                <p>2nd Watch, an AWS Premier Partner, was founded in 2010 with a fundamental belief that business and IT could come together and achieve great things for their customers! Simply put, we design, build and manage public clouds for Big Data Analytics, Cloud Native Applications, Business Applications and Digital Marketing.
-                                </p>
-                            </div>
+                        <div class="flex-item-6 slide-text-right">
+                            <h3>Our Mission</h3>
+                            <p>Enable businesses and developers to provide high value products and
+                                <br> services in a constantly changing digital world</p>
                         </div>
                     </div>
                 </div>
+                <div>
+                    <div class="flex-row">
+                        <div class="flex-item-6 slide-text-left">
+                            <h3>Our Strategy</h3>
+                            <p>Build technology partnerships and provide white labeled solutions to technology and
+                                consulting partners</p>
+                        </div>
+                        <div class="flex-item-6 slide-img">
+                            <img src="images/mitoc-strategy.svg" alt="Mitoc Group Strategy"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="blog" class="blog-block">
+        <div class="container">
+            <div class="center">
+                <h2 class="header-text">Recent from Our Blog</h2>
+            </div>
+            <header class="section-heading">
+            </header>
+            <div id="blogContent" class="section-content">
+                <div id="jsonContent" class="flex-row"></div>
+            </div>
+            <div class="text-center">
+                <a id="loadBlogPosts" class="btn btn-dark" href="//blog.mitocgroup.com"></a>
             </div>
             <div class="top_button center">
-                <a class="btn btn-white" href="#">Become a Partner</a>
+                <a class="btn btn-green" href="https://blog.mitocgroup.com">Find Out More Articles</a>
             </div>
         </div>
-        <div class="carousel-block">
-            <div class="container">
-                <div class="carousel-mission">
-                    <div>
-                        <div class="flex-row">
-                            <div class="flex-item-6 slide-img">
-                                <img src="images/mitoc-mission.svg" alt="Mitoc Group Mission" />
-                            </div>
-                            <div class="flex-item-6 slide-text-right">
-                                <h3>Our Mission</h3>
-                                <p>Enable businesses and developers to provide high value products and
-                                    <br> services in a constantly changing digital world</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex-row">
-                            <div class="flex-item-6 slide-text-left">
-                                <h3>Our Strategy</h3>
-                                <p>Build technology partnerships and provide white labeled solutions to technology and consulting partners</p>
-                            </div>
-                            <div class="flex-item-6 slide-img">
-                                <img src="images/mitoc-strategy.svg" alt="Mitoc Group Strategy" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </section>
+    <section class="green-block small-block">
+        <div class="center">
+            <h2 class="header-text transform-text">Let's Build Something Great</h2>
+            <div class="top_button">
+                <a class="btn btn-white md-trigger" data-modal="modal-1">Start a Project</a>
             </div>
         </div>
-        <section id="blog" class="Blog-block">
-            <div class="container">
-                <div class="center">
-                    <h2 class="header-text">Recent from Our Blog</h2>
-                </div>
-                <header class="section-heading">
-                </header>
-                <div id="blogContent" class="section-content">
-                    <div id="jsonContent" class="flex-row"></div>
-                </div>
-                <div class="text-center">
-                    <a id="loadBlogPosts" class="btn btn-dark" href="//blog.mitocgroup.com"></a>
-                </div>
-                <div class="top_button center">
-                    <a class="btn btn-green" href="https://blog.mitocgroup.com">Find Out More Articles</a>
-                </div>
-            </div>
-        </section>
-        <section class="green-block small-block">
-            <div class="center">
-                <h2 class="header-text transform-text">Let's Build Something Great</h2>
-                <div class="top_button">
-                    <a class="btn btn-white" href="#">Start a Project</a>
-                </div>
-            </div>
-        </section>
-        <div>
+    </section>
+    <div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="media">
+            <a href="https://www.linkedin.com/company/mitoc-group"><i class="icon-linkedin"></i></a>
+            <a href="https://twitter.com/MitocGroup"><i class="icon-twitter"></i></a>
+            <a href="https://facebook.com/MitocGroup"><i class="icon-facebook"></i></a>
+            <a href="https://github.com/MitocGroup"><i class="icon-github"></i></a>
+            <a href="https://plus.google.com/+MitocGroup"><i class="icon-google"></i></a>
+            <a href="https://www.youtube.com/channel/UCyLr_SKBBsA9pNxouO9VB0Q"><i class="icon-youtube"></i></a>
         </div>
     </div>
-    <footer>
+    <div class="map-background">
         <div class="container">
-            <div class="media">
-                <a href="https://www.linkedin.com/company/mitoc-group"><i class="icon-linkedin"></i></a>
-                <a href="https://twitter.com/MitocGroup"><i class="icon-twitter"></i></a>
-                <a href="https://facebook.com/MitocGroup"><i class="icon-facebook"></i></a>
-                <a href="https://github.com/MitocGroup"><i class="icon-github"></i></a>
-                <a href="https://plus.google.com/+MitocGroup"><i class="icon-google"></i></a>
-                <a href="https://www.youtube.com/channel/UCyLr_SKBBsA9pNxouO9VB0Q"><i class="icon-youtube"></i></a>
-            </div>
-        </div>
-        <div class="map-background">
-            <div class="container">
-                <div class="flex-row">
-                    <div class="flex-item-3">
-                        <div class="logo">
-                            <a href="/"><img class="mitoc-logo" src="images/mitoc-logo.svg" alt="Mitoc Group Logo" /></a>
-                            <p>Copyright &copy; 2014-2017 Mitoc Group.</p>
-                            <p>All rights reserved.</p>
-                        </div>
-                    </div>
-                    <div class="flex-item-3 block-info">
-                        <h4>Get in touch</h4>
-                        <p><a href="https://goo.gl/RMltf5">50 Tice Blvd<br/>Woodcliff Lake NJ 07677</a></p>
-                        <p><a href="tel:+18018108186">+1.801.810.8186</a></p>
-                        <p><a href="mailto:hello@mitocgroup.com">hello@mitocgroup.com</a></p>
-                    </div>
-                    <div class="flex-item-3 block-info">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="/services">Services</a></li>
-                            <li><a href="/partners">Partners</a></li>
-                            <li><a href="/customers">Customers</a></li>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="https://blog.mitocgroup.com">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="flex-item-3">
-                        <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0"><img class="aws-logo" src="images/APN_Advanced-Technology-Partner1.png" alt="Amasone Web Services" /></a>
+            <div class="flex-row">
+                <div class="flex-item-3">
+                    <div class="logo">
+                        <a href="/"><img class="mitoc-logo" src="images/mitoc-logo.svg" alt="Mitoc Group Logo"/></a>
+                        <p>Copyright &copy; 2014-2017 Mitoc Group.</p>
+                        <p>All rights reserved.</p>
                     </div>
                 </div>
-    </footer>
-    </div>
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/main.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
+                <div class="flex-item-3 block-info">
+                    <h4>Get in touch</h4>
+                    <p><a href="https://goo.gl/RMltf5">50 Tice Blvd<br/>Woodcliff Lake NJ 07677</a></p>
+                    <p><a href="tel:+18018108186">+1.801.810.8186</a></p>
+                    <p><a href="mailto:hello@mitocgroup.com">hello@mitocgroup.com</a></p>
+                </div>
+                <div class="flex-item-3 block-info">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/partners">Partners</a></li>
+                        <li><a href="/customers">Customers</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="https://blog.mitocgroup.com">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="flex-item-3">
+                    <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0"><img
+                            class="aws-logo" src="images/APN_Advanced-Technology-Partner1.png"
+                            alt="Amasone Web Services"/></a>
+                </div>
+            </div>
+</footer>
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/main.min.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/modalEffects.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+
+
 </body>
 
 </html>
