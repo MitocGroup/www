@@ -158,7 +158,7 @@ p {
 }
 
 .top_button {
-  padding: 90px 0;
+  padding: 100px 0;
 }
 
 .header-text {
@@ -249,7 +249,7 @@ i {
   &:before {
     content: "\e905";
     color: rgb(36, 36, 36);
-    font-size: 375%;
+    font-size: 250%;
     transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
@@ -264,7 +264,7 @@ i {
   &:before {
     content: "\e900";
     color: rgb(36, 36, 36);
-    font-size: 375%;
+    font-size: 250%;
     transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
@@ -279,7 +279,7 @@ i {
   &:before {
     content: "\e903";
     color: rgb(36, 36, 36);
-    font-size: 375%;
+    font-size: 250%;
     transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
@@ -294,7 +294,7 @@ i {
   &:before {
     content: "\e904";
     color: rgb(36, 36, 36);
-    font-size: 375%;
+    font-size: 250%;
     transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
@@ -309,7 +309,7 @@ i {
   &:before {
     content: "\e906";
     color: rgb(36, 36, 36);
-    font-size: 375%;
+    font-size: 250%;
     transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
@@ -324,7 +324,7 @@ i {
   &:before {
     content: "\e907";
     color: rgb(36, 36, 36);
-    font-size: 375%;
+    font-size: 250%;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
@@ -352,9 +352,31 @@ i {
 
 /* Navigation */
 
+.color-nav-responsive {
+  background-color: $white-color;
+}
+
 .navbar-fix {
-  //position: fixed;
-  //width: 100%;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  &.color-nav {
+    background-color: $white-color;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    box-shadow: 0 4px 9px -7px $black-color;
+    -webkit-box-shadow: 0 4px 9px -7px $black-color;
+    -moz-box-shadow: 0 4px 9px -7px $black-color;
+    -o-box-shadow: 0 4px 9px -7px $black-color;
+  }
+
   .logo {
     float: left;
     line-height: 84px;
@@ -380,6 +402,14 @@ i {
       }
     }
   }
+}
+
+.nav-up {
+  top: -94px;
+}
+
+.icon-burger, .icon-arrow {
+  display: none;
 }
 
 /* Modal*/
