@@ -1,23 +1,17 @@
 jQuery(function($) {
     'use strict';
 
-    $('.carousel-mission').slick({
-        infinite: false,
-        arrows: true,
-        dots: false
-    });
-
 });
 
 // Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('.navbar-fix').outerHeight();
+// var didScroll;
+// var lastScrollTop = 0;
+// var delta = 5;
+// var navbarHeight = $('.navbar-fix').outerHeight();
 
 $(window).scroll(function(event){
     didScroll = true;
-    if ($(window).scrollTop() > 50) {
+    if ($(window).scrollTop() > 40) {
         $('.navbar-fix').addClass('color-nav');
     }
     else {
@@ -25,33 +19,31 @@ $(window).scroll(function(event){
     }
 });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+// setInterval(function() {
+//     if (didScroll) {
+//         hasScrolled();
+//         didScroll = false;
+//     }
+// }, 250);
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
-    
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    
-    if (st > lastScrollTop && st > navbarHeight){
-        
-        $('.navbar-fix').removeClass('nav-down').addClass('nav-up');
-    } else {
-        
-        if(st + $(window).height() < $(document).height()) {
-            $('.navbar-fix').removeClass('nav-up').addClass('nav-down');
-        }
-    }
-
-    lastScrollTop = st;
-}
-
-
+// function hasScrolled() {
+//     var st = $(this).scrollTop();
+//    
+//     if(Math.abs(lastScrollTop - st) <= delta)
+//         return;
+//    
+//     if (st > lastScrollTop && st > navbarHeight){
+//        
+//         $('.navbar-fix').removeClass('nav-down').addClass('nav-up');
+//     } else {
+//        
+//         if(st + $(window).height() < $(document).height()) {
+//             $('.navbar-fix').removeClass('nav-up').addClass('nav-down');
+//         }
+//     }
+//
+//     lastScrollTop = st;
+// }
 
 $('.icon-burger').click(function () {
     $(this).toggleClass('open').toggleClass('icon-burger').toggleClass('icon-arrow');
