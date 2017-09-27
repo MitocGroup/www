@@ -2,6 +2,7 @@ $black-color: #000000;
 $main-color: #7ED257;
 $accent-green: #28b655;
 $white-color: #ffffff;
+$gray-dark-color: #EFEFEF;
 $gray-color: #fbfbfb;
 
 * {
@@ -74,7 +75,7 @@ h1, h2, h3, h4, h6, h6 {
   font-family: 'Avenir-Black', sans-serif;
 }
 
-p {
+p, ul {
   font-family: 'OpenSans-Regular', sans-serif;
 }
 
@@ -170,6 +171,11 @@ p {
   }
 }
 
+.text-uppercase {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
 .pull-center {
   position: relative;
   top: 50%;
@@ -232,6 +238,35 @@ p {
   &:hover {
     color: $accent-green;
   }
+}
+
+.link-text {
+  color: $accent-green;
+  font-weight: 900;
+  &:hover {
+    color: $black-color;
+  }
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.green-block {
+  background-color: $main-color;
+  &.small-block {
+    .top_button {
+      padding-top: 0;
+    }
+  }
+}
+
+.gray-block {
+  background-color: $gray-dark-color;
 }
 
 /* Icons*/
@@ -360,6 +395,7 @@ i {
   z-index: 5;
   position: fixed;
   top: 0;
+  height: 84px;
   width: 100%;
   transition: .2s;
   -webkit-transition: .2s;
@@ -375,6 +411,24 @@ i {
     -webkit-box-shadow: 0 4px 9px -7px $black-color;
     -moz-box-shadow: 0 4px 9px -7px $black-color;
     -o-box-shadow: 0 4px 9px -7px $black-color;
+    height: 54px;
+    .logo, .nav-bar {
+      line-height: 54px;
+    }
+    .logo {
+      a {
+        .mitoc-logo {
+          height: 32px;
+        }
+      }
+    }
+    .nav-bar {
+      ul {
+        li {
+          font-size: 16px;
+        }
+      }
+    }
   }
 
   .logo {

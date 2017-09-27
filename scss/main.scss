@@ -8,8 +8,9 @@
     flex-direction: column;
     .main-text {
       text-align: center;
-      width: 68%;
+      max-width: 70%;
       margin: 0 auto;
+      width: 700px;
       h1 {
         font-size: 45px;
         color: $accent-green;
@@ -30,7 +31,7 @@
       text-align: center;
       padding: 0 20px;
       &:not(:last-child) {
-        border-right: 2px solid #ddd;
+        border-right: 2px solid $gray-dark-color;
       }
       img {
         height: 128px;
@@ -50,7 +51,6 @@
     }
   }
   .green-block {
-    background-color: $main-color;
     .container {
       .flex-row {
         margin: 0 -20px;
@@ -86,11 +86,6 @@
         p {
           padding-bottom: 20px;
         }
-      }
-    }
-    &.small-block {
-      .top_button {
-        padding-top: 0;
       }
     }
   }
@@ -331,7 +326,7 @@ footer {
         .flex-item-12 {
           .blog-post {
             margin-bottom: 40px;
-            max-height: 448px;
+            max-height: 300px;
             transition: 300ms;
             -webkit-transition: 300ms ease;
             -moz-transition: 300ms ease;
@@ -410,7 +405,7 @@ footer {
                   object-fit: cover;
                   height: 100%;
                   width: 100%;
-                  min-height: 336px;
+                  min-height: 250px;
                 }
               }
             }
@@ -419,4 +414,83 @@ footer {
       }
     }
   }
+}
+
+/* Animation*/
+
+
+@-webkit-keyframes glowing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1
+  }
+  51% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes glowing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1
+  }
+  51% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes glowing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1
+  }
+  51% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1
+  }
+  51% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.nav_anim {
+  -webkit-animation: glowing 1000ms infinite;
+  -moz-animation: glowing 1000ms infinite;
+  -o-animation: glowing 1000ms infinite;
+  animation: glowing 1000ms infinite;
+  display: inline;
+}
+
+.line-animation {
+  -webkit-animation: glowing 1000ms infinite;
+  -moz-animation: glowing 1000ms infinite;
+  -o-animation: glowing 1000ms infinite;
+  animation: glowing 1000ms infinite;
+  display: inline;
 }

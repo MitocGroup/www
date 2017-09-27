@@ -1,0 +1,61 @@
+.aws-block {
+  margin-top: 84px;
+  .gray-block {
+    height: 296px;
+    .logo-block {
+      line-height: 296px;
+      float: left;
+      a {
+        img {
+          height: 138px;
+        }
+      }
+    }
+    .text-block {
+      float: right;
+      line-height: 296px;
+    }
+  }
+  .aws-info {
+    margin-top: 90px;
+    p {
+      margin-bottom: 20px;
+      &:last-child {
+        margin: 70px 0;
+      }
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+    .image-aws {
+      width: 50%;
+      margin: 90px auto;
+      .aws-logo {
+        max-height: 228px;
+        width: 100%;
+      }
+    }
+    .block-text_img {
+      .aws-img {
+        height: 72px;
+        margin-right: 20px;
+      }
+    }
+    ul {
+      list-style-position: inside;
+      margin-left: 20px;
+      color: $accent-green;
+      span {
+        color: $black-color;
+      }
+    }
+    .image-block {
+      margin-top: 40px;
+      .ahtech-img {
+        max-height: 722px;
+        width: 100%;
+      }
+    }
+  }
+}
+

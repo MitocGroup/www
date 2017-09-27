@@ -40,7 +40,32 @@
         </form>
     </div>
 </div>
+<div class="md-overlay"></div>
 
+
+<div class="md-modal md-effect-1" id="modal-2">
+    <div class="md-content popup">
+        <h3>Become a Partner</h3>
+        <form class="form-styles">
+            <div id="full_name" class="input-styles">
+                <input type="text" id="partner-name" name="user_name" placeholder="Full Name">
+            </div>
+
+            <div id="email" class="input-styles">
+                <input type="email" id="partnet-email" name="user_email" placeholder="Email">
+            </div>
+
+            <div class="flex-row">
+                <div class="flex-item-6 ">
+                    <button class="md-close btn-popup">Cancel</button>
+                </div>
+                <div class="flex-item-6">
+                    <button class="btn-popup" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <div class="md-overlay"></div>
 
 <div class="wrapper">
@@ -67,7 +92,7 @@
             </div>
         </div>
         <div class="main-text">
-            <h1>Technology company working on innovative enterprise solutions</h1>
+            <h1>Technology company working on innovative enterprise solutions<span class="line-animation">|</span></h1>
         </div>
         <div class="top_button">
             <a class="btn btn-green md-trigger" data-modal="modal-1" href="#">Start a Project</a>
@@ -158,10 +183,11 @@
                     </div>
                 </div>
             </div>
+            <div class="top_button center">
+                <a class="btn btn-white md-trigger" data-modal="modal-2" href="#">Become a Partner</a>
+            </div>
         </div>
-        <div class="top_button center">
-            <a class="btn btn-white" href="#">Become a Partner</a>
-        </div>
+
     </div>
     <div class="carousel-block">
         <div class="container">
@@ -270,6 +296,7 @@
 </div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/main.min.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
 <script type="text/javascript" src="js/classie.min.js"></script>
 <script type="text/javascript" src="js/modalEffects.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
