@@ -10,6 +10,7 @@ cssnano < ./css/slick-theme.css > ./css/slick-theme.min.css
 
 echo "Minifying js code"
 uglifyjs ./js/blog.js -c -m -o ./js/blog.min.js
+uglifyjs ./js/carousel.js -c -m -o ./js/carousel.min.js
 uglifyjs ./js/classie.js -c -m -o ./js/classie.min.js
 uglifyjs ./js/main.js -c -m -o ./js/main.min.js
 uglifyjs ./js/modalEffects.js -c -m -o ./js/modalEffects.min.js
