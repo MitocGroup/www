@@ -64,9 +64,9 @@ a {
 }
 
 @font-face {
-  font-family: 'Avenir-Mitoc';
-  src: url('../fonts/Avenir-Mitoc.eot?ko5y6l');
-  src: url('../fonts/Avenir-Mitoc.eot?ko5y6l#iefix') format('embedded-opentype'), url('../fonts/Avenir-Mitoc.ttf?ko5y6l') format('truetype'), url('../fonts/Avenir-Mitoc.woff?ko5y6l') format('woff'), url('../fonts/Avenir-Mitoc.svg?ko5y6l#Avenir-Mitoc') format('svg');
+  font-family: 'MitocGroup';
+  src: url('../fonts/MitocGroup.eot?ko5y6l');
+  src: url('../fonts/MitocGroup.eot?ko5y6l#iefix') format('embedded-opentype'), url('../fonts/MitocGroup.ttf?ko5y6l') format('truetype'), url('../fonts/MitocGroup.woff?ko5y6l') format('woff'), url('../fonts/MitocGroup.svg?ko5y6l#MitocGroup') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h6, h6 {
   font-family: 'Avenir-Black', sans-serif;
 }
 
-p, ul {
+p, ul, span {
   font-family: 'OpenSans-Regular', sans-serif;
 }
 
@@ -163,7 +163,7 @@ p, ul {
 }
 
 .header-text {
-  font-size: 40px;
+  font-size: 30px;
   text-transform: uppercase;
   line-height: 180px;
   &.transform-text {
@@ -256,6 +256,11 @@ p, ul {
   float: right;
 }
 
+.page-name {
+  height: 296px;
+  line-height: 296px;
+}
+
 .green-block {
   background-color: $main-color;
   &.small-block {
@@ -269,10 +274,64 @@ p, ul {
   background-color: $gray-dark-color;
 }
 
+.form-styles {
+  padding: 23px;
+  input {
+    text-align: center;
+    color: $black-color;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: 1px solid $black-color;
+    width: 100%;
+    font-family: "Avenir-Black", sans-serif;
+    font-size: 20px;
+
+  }
+  input:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  input:focus:-moz-placeholder {
+    color: transparent;
+  }
+  /* FF 4-18 */
+  input:focus::-moz-placeholder {
+    color: transparent;
+  }
+  /* FF 19+ */
+  input:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+  /* IE 10+ */
+  ::-webkit-input-placeholder {
+    color: $black-color;
+
+  }
+  ::-moz-placeholder {
+    color: $black-color;
+
+  }
+  :-ms-input-placeholder {
+    color: $black-color;
+
+  }
+  :-moz-placeholder {
+    color: $black-color;
+
+  }
+  .input-styles {
+    padding: 25px 0 40px 0;
+  }
+  .flex-row {
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+}
+
 /* Icons*/
 
 i {
-  font-family: 'Avenir-Mitoc';
+  font-family: 'MitocGroup';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -282,7 +341,7 @@ i {
 
 .icon-linkedin {
   &:before {
-    content: "\e905";
+    content: "\e90b";
     color: rgb(36, 36, 36);
     font-size: 250%;
     transition: 0.4s ease-in-out;
@@ -297,7 +356,7 @@ i {
 
 .icon-youtube {
   &:before {
-    content: "\e900";
+    content: "\e90d";
     color: rgb(36, 36, 36);
     font-size: 250%;
     transition: 0.4s ease-in-out;
@@ -312,7 +371,7 @@ i {
 
 .icon-github {
   &:before {
-    content: "\e903";
+    content: "\e909";
     color: rgb(36, 36, 36);
     font-size: 250%;
     transition: 0.4s ease-in-out;
@@ -327,7 +386,7 @@ i {
 
 .icon-google {
   &:before {
-    content: "\e904";
+    content: "\e90a";
     color: rgb(36, 36, 36);
     font-size: 250%;
     transition: 0.4s ease-in-out;
@@ -342,7 +401,7 @@ i {
 
 .icon-twitter {
   &:before {
-    content: "\e906";
+    content: "\e90c";
     color: rgb(36, 36, 36);
     font-size: 250%;
     transition: 0.4s ease-in-out;
@@ -357,7 +416,7 @@ i {
 
 .icon-facebook {
   &:before {
-    content: "\e907";
+    content: "\e908";
     color: rgb(36, 36, 36);
     font-size: 250%;
     -webkit-transition: 0.4s ease-in-out;
@@ -374,14 +433,29 @@ i {
 }
 
 .icon-burger:before {
-  content: "\e908";
-  font-size: 36px;
+  content: "\e904";
+  font-size: 32px;
   background-color: rgba(0, 0, 0, 0);
 }
 
 .icon-arrow:before {
-  content: "\e909";
-  font-size: 36px;
+  content: "\e900";
+  font-size: 32px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.icon-email:before {
+  content: "\e907";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.icon-phone:before {
+  content: "\e906";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.icon-map-marker:before {
+  content: "\e905";
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -486,7 +560,7 @@ i {
   visibility: visible;
 }
 
-.md-overlay {
+.md-overlay, .md-overlay-2 {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -500,6 +574,11 @@ i {
 }
 
 .md-show ~ .md-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.md-show ~ .md-overlay-2 {
   opacity: 1;
   visibility: visible;
 }

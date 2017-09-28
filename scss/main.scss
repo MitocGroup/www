@@ -196,9 +196,9 @@ footer {
       left: auto;
       top: 15%;
       right: 50%;
-      width: 150px;
+      width: 200px;
       &:before {
-        content: "Our mission";
+        content: "Our Strategy";
         color: $black-color;
         opacity: 1;
         font-size: 20px;
@@ -215,9 +215,9 @@ footer {
     .slick-next {
       top: 15%;
       left: 50%;
-      width: 200px;
+      width: 150px;
       &:before {
-        content: "Our Strategy";
+        content: "Our mission";
         color: $black-color;
         opacity: 1;
         font-size: 20px;
@@ -250,59 +250,6 @@ footer {
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     font-size: 25px;
-  }
-  .form-styles {
-    padding: 23px;
-    input {
-      text-align: center;
-      color: $black-color;
-      border-top: transparent;
-      border-right: transparent;
-      border-left: transparent;
-      border-bottom: 1px solid $black-color;
-      width: 100%;
-      font-family: "Avenir-Black", sans-serif;
-      font-size: 20px;
-
-    }
-    input:focus::-webkit-input-placeholder {
-      color: transparent;
-    }
-    input:focus:-moz-placeholder {
-      color: transparent;
-    }
-    /* FF 4-18 */
-    input:focus::-moz-placeholder {
-      color: transparent;
-    }
-    /* FF 19+ */
-    input:focus:-ms-input-placeholder {
-      color: transparent;
-    }
-    /* IE 10+ */
-    ::-webkit-input-placeholder {
-      color: $black-color;
-
-    }
-    ::-moz-placeholder {
-      color: $black-color;
-
-    }
-    :-ms-input-placeholder {
-      color: $black-color;
-
-    }
-    :-moz-placeholder {
-      color: $black-color;
-
-    }
-    .input-styles {
-      padding: 25px 0 40px 0;
-    }
-    .flex-row {
-      margin-top: 35px;
-      margin-bottom: 20px;
-    }
   }
 }
 

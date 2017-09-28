@@ -121,6 +121,24 @@
     display: block;
   }
   .navbar-fix {
+    height: 54px;
+    .logo {
+      line-height: 54px;
+      a {
+        .mitoc-logo {
+          height: 32px;
+        }
+      }
+    }
+    &.color-nav {
+      .nav-bar {
+        ul {
+          li {
+            font-size: 24px;
+          }
+        }
+      }
+    }
     .nav-bar {
       float: none;
       ul {
