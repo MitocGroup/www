@@ -74,7 +74,6 @@
         width: 100%;
       }
       .info {
-        min-height: 275px;
         transition: 0.4s ease-in-out;
         -webkit-transition: 0.4s ease-in-out;
         -moz-transition: 0.4s ease-in-out;
@@ -265,6 +264,23 @@ footer {
             -moz-border-radius: 5px;
             margin: 0 20px;
             overflow: hidden;
+            .blog-content {
+              .post-date {
+                font-family: Avenir-Black, sans-serif;
+                color: $accent-green;
+                padding-bottom: 10px;
+              }
+              //overflow: hidden;
+              //text-overflow: ellipsis;
+              //display: -webkit-box;
+              //display: -moz-inline-box;
+              //line-height: 22px;
+              //-webkit-line-clamp: 3;
+              //-moz-line-clamp: 3;
+              //-webkit-box-orient: vertical;
+              //-moz-box-orient: vertical;
+              //white-space: normal;
+            }
             &:hover a {
               color: $accent-green;
             }
