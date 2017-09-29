@@ -16,7 +16,102 @@
   }
 }
 
+@media (max-width: 1270px) {
+  .blog-block {
+    .container {
+      .section-content {
+        .flex-row {
+          .flex-item-12 {
+            .blog-post {
+              .blog-content {
+                h4 {
+                  font-size: 30px;
+                  margin-top: 10px;
+                }
+              }
+            }
+          }
+          .flex-item-6 {
+            &.rightPostItem {
+              .blog-post {
+
+              }
+            }
+            &.leftPostItem {
+              .blog-post {
+
+
+              }
+            }
+            .blog-post {
+              .blog-content {
+                display: inline;
+                position: relative;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-inline-box;
+                display: -moz-inline-box;
+                line-height: 24px;
+                -webkit-line-clamp: 4;
+                -moz-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                -moz-box-orient: vertical;
+                white-space: normal;
+                &:hover {
+                  color: $accent-green;
+                }
+                h4 {
+                  margin-top: 10px;
+                  overflow: hidden;
+                }
+                .button {
+                  position: absolute;
+                  bottom: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
+.contact-page {
+  .container {
+    .flex-row {
+      margin: 0 -10px;
+      .flex-item-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        &.map-block {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+          .contact-info {
+            margin-right: 10px;
+            margin-left: 10px;
+            iframe {
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .form-styles {
+    .flex-row {
+      margin: 0 -10px;
+      .flex-item-6, .flex-item-12 {
+        .input-styles {
+          margin-right: 10px;
+          margin-left:  10px;
+        }
+      }
+    }
+  }
+}
   .aws-block {
     .gray-block {
       text-align: center;
@@ -95,6 +190,33 @@
               .blog-post {
                 &:hover {
                   transform: none;
+                }
+              }
+            }
+            .flex-item-12 {
+              .blog-post {
+                .blog-content {
+                  display: inline;
+                  position: relative;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-inline-box;
+                  display: -moz-inline-box;
+                  line-height: 24px;
+                  -webkit-line-clamp: 4;
+                  -moz-line-clamp: 4;
+                  -webkit-box-orient: vertical;
+                  -moz-box-orient: vertical;
+                  white-space: normal;
+                  h4 {
+                    overflow: hidden;
+                    margin-top: 10px;
+                    font-size: 20px;
+                  }
+                  .button {
+                    position: absolute;
+                    bottom: 10px;
+                  }
                 }
               }
             }
@@ -239,6 +361,22 @@
 }
 
 @media (max-width: 680px) {
+    .contact-form {
+      .form-styles {
+        .flex-row {
+          margin-bottom: 0;
+          margin-top: 0;
+          #name-contact, #phone {
+            padding-right: 0;
+          }
+          .flex-item-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
   body {
     .aws-block {
       .aws-info {

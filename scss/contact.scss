@@ -10,13 +10,16 @@
     margin: 0 -20px;
     padding-bottom: 70px;
     .map-block {
-      padding: 0 20px;
       .contact-info {
         background: $white-color;
         border-radius: 5px;
+        height: 100%;
+        margin-right: 20px;
+        margin-left: 20px;
         iframe {
           width: 100%;
-          border-radius: 5px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
         }
         .wrapper-info {
           padding: 0 24px;
@@ -34,16 +37,16 @@
               height: 1px;
               background-color: $gray-dark-color;
               top: 0;
-              left: 42px;
+              left: 0;
             }
-
             .icon-phone, .icon-map-marker, .icon-email {
-              display: inline-block;
+              float: left;
               vertical-align: top;
               margin-right: 24px;
             }
             span {
               display: inline-block;
+              width: calc(100% - 40px);
             }
           }
         }
@@ -60,12 +63,8 @@
     }
     padding: 0;
     .flex-row {
-      margin: 0 -20px;
-      .flex-item-6 {
-        padding: 0 20px;
-      }
-      .flex-item-12 {
-        padding: 0 20px;
+      #name-contact, #phone {
+        padding: 25px 20px 40px 0;
       }
     }
   }
