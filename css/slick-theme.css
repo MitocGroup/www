@@ -3,7 +3,7 @@
 /* Slider */
 
 .slick-loading .slick-list {
-    background: #fff url('../../../Desktop/slick-1.8.0/slick/ajax-loader.gif') center center no-repeat;
+    background: #fff url('../images/ajax-loader.gif') center center no-repeat;
 }
 
 
@@ -13,8 +13,8 @@
     font-family: 'slick';
     font-weight: normal;
     font-style: normal;
-    src: url('../../../Desktop/slick-1.8.0/slick/fonts/slick.eot');
-    src: url('../../../Desktop/slick-1.8.0/slick/fonts/slick.eot?#iefix') format('embedded-opentype'), url('../../../Desktop/slick-1.8.0/slick/fonts/slick.woff') format('woff'), url('../../../Desktop/slick-1.8.0/slick/fonts/slick.ttf') format('truetype'), url('../../../Desktop/slick-1.8.0/slick/fonts/slick.svg#slick') format('svg');
+    src: url('../fonts/slick.eot');
+    src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svg#slick') format('svg');
 }
 
 
