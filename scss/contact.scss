@@ -62,9 +62,9 @@
       text-align: left;
     }
     padding: 0;
-    .flex-row {
-      #name-contact, #phone {
-        padding: 25px 20px 40px 0;
+    .input-styles {
+      &.space-input {
+        padding-right: 20px;
       }
     }
   }
