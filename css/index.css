@@ -249,9 +249,6 @@ p, ul, span {
     color: #000000; }
   .form-styles .input-styles {
     padding: 25px 0 40px 0; }
-  .form-styles .flex-row {
-    margin-top: 35px;
-    margin-bottom: 20px; }
 
 /* Icons*/
 i {
@@ -475,6 +472,15 @@ i {
   transform: scale(1);
   opacity: 1; }
 
+/* MailChimp*/
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  position: absolute;
+  background-color: #ffffff;
+  color: red;
+  padding: 0 0 5px 0;
+  font-size: 14px;
+  font-family: OpenSans-Regular, sans-serif; }
+
 .contact-page {
   background-image: url(/images/map.png);
   background-size: contain;
@@ -526,8 +532,8 @@ i {
     padding: 0; }
     .contact-form .form-styles input {
       text-align: left; }
-    .contact-form .form-styles .flex-row #name-contact, .contact-form .form-styles .flex-row #phone {
-      padding: 25px 20px 40px 0; }
+    .contact-form .form-styles .input-styles.space-input {
+      padding-right: 20px; }
 
 .wrapper .main-page {
   background-image: url(../images/hp-background-min.jpg);
@@ -977,7 +983,7 @@ footer .map-background {
       line-height: 54px; }
       .navbar-fix .logo a .mitoc-logo {
         height: 32px; }
-    .navbar-fix.color-nav .nav-bar ul li {
+    .navbar-fix.color-nav-responsive .nav-bar ul li {
       font-size: 24px; }
     .navbar-fix .nav-bar {
       float: none; }

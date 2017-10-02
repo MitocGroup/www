@@ -32,6 +32,8 @@ cp -R favicon.ico css fonts images js \
 
 echo "Minifying html code"
 for html_file in $(find . -type f -name "*.html"); do
+    echo ${html_file}
+
     html_file_build_path=$(dirname ${html_file})
     mkdir -p ${BUILD_FOLDER}/${html_file_build_path}
     html-minifier --collapse-whitespace --remove-comments ${html_file} -o ${BUILD_FOLDER}/${html_file}

@@ -6,5 +6,5 @@ jQuery(function($) {
         arrows: true,
         dots: false
     });
-
+    
 });
