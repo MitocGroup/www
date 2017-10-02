@@ -13,14 +13,6 @@ message() {
     echo -e "\033[38;5;148m"$1"\033[39m"
 }
 
-message "You are going to deploy to '${ENV}' environment (region: ${REGION}), continue? [y|n]: "
-read CONFIRM
-
-if [ ${CONFIRM} != 'y' ]; then
-    echo 'Exiting without deploy'
-    exit 1
-fi
-
 message "Would like to install npm dependencies? [y|n]: "
 read CONFIRM
 
@@ -28,6 +20,14 @@ if [ ${CONFIRM} == 'y' ]; then
     npm install html-minifier -g
     npm install cssnano-cli -g
     npm install uglify-js -g
+fi
+
+message "You are going to deploy to '${ENV}' environment (region: ${REGION}), continue? [y|n]: "
+read CONFIRM
+
+if [ ${CONFIRM} != 'y' ]; then
+    echo 'Exiting without deploy'
+    exit 1
 fi
 
 if [ ${ENV} != 'prod' ]; then
