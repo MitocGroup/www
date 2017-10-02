@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BUILD_FOLDER='./build/Release'
+BUILD_FOLDER='./build'
 ENV=$([ -n "$1" ] && echo "$1" || echo 'test')
 
 echo "Minifying css code"
