@@ -20,6 +20,7 @@ if [ ${CONFIRM} == 'y' ]; then
     npm install html-minifier -g
     npm install cssnano-cli -g
     npm install uglify-js -g
+    npm install uglify-es -g
 fi
 
 message "You are going to deploy to '${ENV}' environment (region: ${REGION}), continue? [y|n]: "
