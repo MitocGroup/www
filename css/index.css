@@ -846,6 +846,12 @@ footer .map-background {
   animation: glowing 1000ms infinite;
   display: inline; }
 
+/*Confirn Page*/
+.thank-you {
+  height: 100vh;
+  background-color: #EFEFEF;
+  margin-top: 84px; }
+
 @media (min-width: 800px) {
   .container {
     width: 750px; } }
