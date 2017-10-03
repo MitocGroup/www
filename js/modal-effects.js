@@ -1,11 +1,11 @@
 $(function() {
-  'use strict';
+    'use strict';
 
-  let $body = $('body');
-  let startProject = new $.Popup();
-  let becomePartner = new $.Popup();
+    let $body = $('body');
+    let startProject = new $.Popup();
+    let becomePartner = new $.Popup();
 
-  let startProjectContent = `<div class="md-content popup">
+    let startProjectContent = `<div class="md-content popup">
       <h3>Start a Project</h3>
       <div id="mc_embed_signup contact-form">
           <form action="//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=f6629ecf38" 

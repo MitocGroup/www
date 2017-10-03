@@ -9,10 +9,9 @@ cssnano < ./css/slick.css > ./css/slick.min.css
 cssnano < ./css/slick-theme.css > ./css/slick-theme.min.css
 
 echo "Minifying js code"
-uglifyjs ./js/main.js -c -m -o ./js/main.min.js
 uglifyjs ./js/blog.js -c -m -o ./js/blog.min.js
 uglifyjs ./js/carousel.js -c -m -o ./js/carousel.min.js
-uglifyjs ./js/form-validate.js -c -m -o ./js/form-validate.min.js
+uglifyjs ./js/main.js -c -m -o ./js/main.min.js
 uglifyjs ./js/modal-effects.js -c -m -o ./js/modal-effects.min.js
 
 echo "Copying resources into '${BUILD_FOLDER}' folder"
@@ -35,5 +34,3 @@ for html_file in $(find . -type f -name "*.html"); do
     mkdir -p ${BUILD_FOLDER}/${html_file_build_path}
     html-minifier --collapse-whitespace --remove-comments ${html_file} -o ${BUILD_FOLDER}/${html_file}
 done
-
-echo "Build: Done"

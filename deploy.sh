@@ -41,10 +41,10 @@ else
     MAX_AGE='604800'
 fi
 
-message "### Build: Start ###"
+message "Build: Start"
 ./build.sh ${ENV}
+message "Build: Done"
 
-message "### Deploy: Start ###"
 message "Synchronizing build directory"
 aws s3 sync ./build/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
     --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
@@ -52,4 +52,4 @@ aws s3 sync ./build/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
 message "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*'
 
-message "Done"
+message "Deploy: Done"
