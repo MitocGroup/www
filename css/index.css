@@ -1100,6 +1100,10 @@ footer .map-background {
     .green-block .flex-row .flex-item-4:nth-child(1), .green-block .flex-row .flex-item-4:nth-child(2), .green-block .flex-row .flex-item-6:nth-child(1), .green-block .flex-row .flex-item-6:nth-child(2) {
       margin-bottom: 20px; }
 
+  .thank-you.popup-pages .text-block-confirm {
+    justify-content: space-around; }
+    .thank-you.popup-pages .text-block-confirm h2, .thank-you.popup-pages .text-block-confirm .img-thanks {
+      margin: 40px 0; }
   .thank-you .text-block-confirm {
     justify-content: space-around; }
     .thank-you .text-block-confirm h2, .thank-you .text-block-confirm .img-thanks {
@@ -1168,6 +1172,10 @@ footer .map-background {
   footer .media {
     padding: 40px 0; } }
 @media (max-height: 580px) {
+  .thank-you.popup-pages .text-block-confirm {
+    justify-content: space-around; }
+    .thank-you.popup-pages .text-block-confirm h2, .thank-you.popup-pages .text-block-confirm .img-thanks {
+      margin: 40px 0; }
   .thank-you .text-block-confirm {
     justify-content: space-around; }
     .thank-you .text-block-confirm h2, .thank-you .text-block-confirm .img-thanks {
