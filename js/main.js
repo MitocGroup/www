@@ -28,7 +28,7 @@ $(function() {
 
 $(window).scroll(function() {
   didScroll = true;
-  if ($(window).scrollTop() > 40) {
+  if ($(window).scrollTop() > 30) {
     $('.navbar-fix').addClass('color-nav');
   } else {
     $('.navbar-fix').removeClass("color-nav");

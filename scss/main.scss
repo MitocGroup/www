@@ -50,44 +50,6 @@
       }
     }
   }
-  .green-block {
-    .container {
-      .flex-row {
-        margin: 0 -20px;
-      }
-    }
-    .info-block {
-      background: $white-color;
-      margin-right: 20px;
-      margin-left: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
-      border-radius: 5px;
-      height: 100%;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      transition: 0.4s ease-in-out;
-      -webkit-transition: 0.4s ease-in-out;
-      -moz-transition: 0.4s ease-in-out;
-      -o-transition: 0.4s ease-in-out;
-      img {
-        width: 100%;
-      }
-      .info {
-        transition: 0.4s ease-in-out;
-        -webkit-transition: 0.4s ease-in-out;
-        -moz-transition: 0.4s ease-in-out;
-        -o-transition: 0.4s ease-in-out;
-        h4 {
-          font-size: 21px;
-          margin: 24px 0;
-        }
-        p {
-          padding-bottom: 20px;
-        }
-      }
-    }
-  }
 }
 
 footer {
@@ -163,6 +125,7 @@ footer {
 .block-effect {
   &:hover {
     margin-top: -4%;
+    margin-bottom: 4%;
     box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
     transition: 300ms;
     .info h4 {
@@ -456,4 +419,41 @@ footer {
   -o-animation: glowing 1000ms infinite;
   animation: glowing 1000ms infinite;
   display: inline;
+}
+
+/*Confirn Page*/
+
+.thank-you {
+  height: calc(100vh - 84px);
+  background-color: $gray-dark-color;
+  margin-top: 84px;
+  text-align: center;
+  &.popup-pages {
+    height: auto;
+    h2 {
+      margin-top: 90px;
+    }
+  }
+  .text-block-confirm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: $accent-green;
+  }
+  span {
+    font-family: "Avenir-Black", sans-serif;
+  }
+  .img-thanks {
+    height: 146px;
+    margin: 90px 0;
+  }
+  h3 {
+    font-family: Avenir-Black, sans-serif;
+    font-size: 21px;
+  }
 }
