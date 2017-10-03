@@ -351,6 +351,14 @@
     }
   }
   .thank-you {
+    &.popup-pages {
+      .text-block-confirm {
+        justify-content: space-around;
+        h2, .img-thanks {
+          margin: 40px 0;
+        }
+      }
+    }
     .text-block-confirm {
       justify-content: space-around;
       h2, .img-thanks {
@@ -481,6 +489,14 @@
 
 @media (max-height: 580px) {
   .thank-you {
+    &.popup-pages {
+      .text-block-confirm {
+        justify-content: space-around;
+        h2, .img-thanks {
+          margin: 40px 0;
+        }
+      }
+    }
     .text-block-confirm {
       justify-content: space-around;
       h2, .img-thanks {
