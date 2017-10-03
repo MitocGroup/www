@@ -12,10 +12,10 @@ echo "Minifying js code"
 uglifyjs ./js/blog.js -c -m -o ./js/blog.min.js
 uglifyjs ./js/carousel.js -c -m -o ./js/carousel.min.js
 uglifyjs ./js/classie.js -c -m -o ./js/classie.min.js
-uglifyjs ./js/form.contact.js -c -m -o ./js/form.contact.min.js
-uglifyjs ./js/form.validate.js -c -m -o ./js/form.validate.min.js
+uglifyjs ./js/form-contact.js -c -m -o ./js/form-contact.min.js
+uglifyjs ./js/form-validate.js -c -m -o ./js/form-validate.min.js
 uglifyjs ./js/main.js -c -m -o ./js/main.min.js
-uglifyjs ./js/modal.effects.js -c -m -o ./js/modal.effects.min.js
+uglifyjs ./js/modal-effects.js -c -m -o ./js/modal-effects.min.js
 
 echo "Copying resources into '${BUILD_FOLDER}' folder"
 rm -rf ${BUILD_FOLDER}/*
