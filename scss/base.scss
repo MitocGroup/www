@@ -261,6 +261,14 @@ p, ul, span {
   line-height: 296px;
 }
 
+.read-more {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: Avenir-Black, sans-serif;
+  padding-bottom: 20px;
+  margin-top: auto;
+}
+
 .green-block {
   background-color: $main-color;
   &.small-block {
@@ -272,6 +280,69 @@ p, ul, span {
 
 .gray-block {
   background-color: $gray-dark-color;
+}
+
+.green-block {
+  &.gray-block {
+    background-color: $gray-dark-color;
+    margin: 90px 0;
+    text-align: left;
+    &.atm-block {
+      .info-block {
+        padding-right: 0;
+        padding-left: 0;
+        .info, .read-more {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  .flex-row {
+      margin: 0 -20px;
+    }
+
+  .info-block {
+    background: $white-color;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    height: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+    }
+    .info {
+      transition: 0.4s ease-in-out;
+      -webkit-transition: 0.4s ease-in-out;
+      -moz-transition: 0.4s ease-in-out;
+      -o-transition: 0.4s ease-in-out;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      h4 {
+        transition: 0.4s ease-in-out;
+        -webkit-transition: 0.4s ease-in-out;
+        -moz-transition: 0.4s ease-in-out;
+        -o-transition: 0.4s ease-in-out;
+        font-size: 21px;
+        margin: 24px 0;
+      }
+      p {
+        padding-bottom: 40px;
+      }
+    }
+  }
 }
 
 .form-styles {
