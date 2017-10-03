@@ -20,6 +20,7 @@ if [ ${CONFIRM} == 'y' ]; then
     npm install html-minifier -g
     npm install cssnano-cli -g
     npm install uglify-js -g
+    npm install uglify-es -g
 fi
 
 message "You are going to deploy to '${ENV}' environment (region: ${REGION}), continue? [y|n]: "
@@ -44,10 +45,9 @@ message "### Build: Start ###"
 ./build.sh ${ENV}
 
 message "### Deploy: Start ###"
-message "Synchronizing build/Release/"
-aws s3 sync ./build/Release/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
-    --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=${MAX_AGE} \
-    --exclude 'backend/*' --exclude 'scss/*' --exclude 'build/*'
+message "Synchronizing build directory"
+aws s3 sync ./build/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
+    --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
 
 message "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*'

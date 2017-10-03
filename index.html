@@ -13,51 +13,6 @@
 </head>
 
 <body>
-    <!-- Modal -->
-    <div class="md-modal md-effect-1" id="modal-1">
-        <div class="md-content popup">
-            <h3>Start a Project</h3>
-            <form class="form-styles">
-                <div id="full-name" class="input-styles">
-                    <input type="text" id="name" name="user_name" placeholder="Full Name">
-                </div>
-                <div id="user-email" class="input-styles">
-                    <input type="email" id="mail" name="user_email" placeholder="Email">
-                </div>
-                <div class="flex-row">
-                    <div class="flex-item-6 ">
-                        <button class="md-close btn-popup">Cancel</button>
-                    </div>
-                    <div class="flex-item-6">
-                        <button class="btn-popup" type="submit">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="md-overlay"></div>
-    <div class="md-modal md-effect-1" id="modal-2">
-        <div class="md-content popup">
-            <h3>Become a Partner</h3>
-            <form class="form-styles">
-                <div id="full_name" class="input-styles">
-                    <input type="text" id="partner-name" name="user_name" placeholder="Full Name">
-                </div>
-                <div id="email" class="input-styles">
-                    <input type="email" id="partnet-email" name="user_email" placeholder="Email">
-                </div>
-                <div class="flex-row">
-                    <div class="flex-item-6 ">
-                        <button class="md-close btn-popup">Cancel</button>
-                    </div>
-                    <div class="flex-item-6">
-                        <button class="btn-popup" type="submit">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="md-overlay-2"></div>
     <div class="wrapper">
         <div class="main-page">
             <div class="navbar-fix nav-down">
@@ -70,10 +25,10 @@
                     <div class="nav-bar">
                         <i class="icon-burger"></i>
                         <ul class="navigation">
-                            <li><a href="/services/">Services</a></li>
-                            <li><a href="/partners/">Partners</a></li>
+                            <li><a class="anchor" href="/services/">Services</a></li>
+                            <li><a class="anchor" href="/partners/">Partners</a></li>
                             <li><a href="/customers/">Customers</a></li>
-                            <li><a href="/about/">About Us</a></li>
+                            <li><a class="anchor" href="/about/">About Us</a></li>
                             <li><a href="/contact/">Contact</a></li>
                             <li><a href="https://blog.mitocgroup.com">Blog</a></li>
                         </ul>
@@ -85,7 +40,7 @@
                 <h1>Technology company working on innovative enterprise solutions<span class="line-animation">|</span></h1>
             </div>
             <div class="top_button">
-                <a class="btn btn-green md-trigger" data-modal="modal-1" href="#">Start a Project</a>
+                <button class="btn btn-green start-project">Start a Project</button>
             </div>
         </div>
         <div class="center" id="services">
@@ -163,7 +118,7 @@
                     </div>
                 </div>
                 <div class="top_button center">
-                    <a class="btn btn-white md-trigger" data-modal="modal-2">Become a Partner</a>
+                    <button class="btn btn-white become-partner">Become a Partner</button>
                 </div>
             </div>
         </div>
@@ -216,13 +171,11 @@
                 <div class="center">
                     <h2 class="header-text transform-text">Let's Build Something Great</h2>
                     <div class="top_button">
-                        <a class="btn btn-white md-trigger" data-modal="modal-1">Start a Project</a>
+                        <button class="btn btn-white start-project">Start a Project</button>
                     </div>
                 </div>
             </div>
         </section>
-        <div>
-        </div>
     </div>
     <footer>
         <div class="container" id="contact">
@@ -266,17 +219,17 @@
                         <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0"><img class="aws-logo" src="images/apn-advanced-technology-partner.png" alt="Amazon Web Services" /></a>
                     </div>
                 </div>
-                </div>
             </div>
+        </div>
     </footer>
-
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-popup.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ajaxchimp.min.js"></script>
     <script type="text/javascript" src="js/main.min.js"></script>
     <script type="text/javascript" src="js/carousel.min.js"></script>
     <script type="text/javascript" src="js/blog.js"></script>
     <script type="text/javascript" src="js/jquery-dateformat.min.js"></script>
     <script type="text/javascript" src="js/modal-effects.min.js"></script>
-    <script type="text/javascript" src="js/classie.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
 </body>
 

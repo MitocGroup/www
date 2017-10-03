@@ -1,62 +1,132 @@
-/**
- * modalEffects.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Codrops
- * http://www.codrops.com
- */
-var ModalEffects = (function() {
+$(function() {
+  'use strict';
 
-	function init() {
+  let $body = $('body');
+  let startProject = new $.Popup();
+  let becomePartner = new $.Popup();
 
-		var overlay = document.querySelector( '.md-overlay' );
-		var overlay2 = document.querySelector( '.md-overlay-2' );
+  let startProjectContent = `<div class="md-content popup">
+      <h3>Start a Project</h3>
+      <div id="mc_embed_signup">
+          <form action="//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=f6629ecf38" 
+                method="post" 
+                id="mc-embedded-subscribe-form" 
+                name="mc-embedded-subscribe-form"
+                data-redirect-path="about"
+                class="validate" 
+                novalidate>
+              <div id="mc_embed_signup_scroll">
+                  <div class="flex-row">
+                      <div class="flex-item-6">
+                          <div class="mc-field-group input-styles space-input">
+                              <label for="mce-FNAME" class="mc-response-label"></label>
+                              <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Full Name" required>
+                          </div>
+                      </div>
+                      <div class="flex-item-6">
+                          <div class="mc-field-group input-styles">
+                              <label for="mce-EMAIL" class="mc-response-label"></label>
+                              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" required>
+                          </div>
+                      </div>
+                      <label class="mc-response-label"></label>
+                  </div>
+                  <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response"></div>
+                      <div class="response" id="mce-success-response"></div>
+                  </div>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                      <input type="text" name="b_13a7a5fca813b378c24ec9fe3_f6629ecf38" tabindex="-1" value="">
+                  </div>
+              </div>
+              <div class="flex-row">
+                  <div class="flex-item-6 ">
+                      <button class="btn-popup close-start-project-modal">Cancel</button>
+                  </div>
+                  <div class="flex-item-6">
+                      <button class="btn-popup" type="submit" name="subscribe" id="mc-embedded-subscribe">Submit</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>`;
 
-		[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
+  let becomePartnerContent = `<div class="md-content popup">
+      <h3>Become a Partner</h3>
+      <div id="mc_embed_signup">
+          <form action="//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=7257663d85" 
+                method="post" 
+                id="mc-embedded-subscribe-form" 
+                name="mc-embedded-subscribe-form" 
+                class="validate"
+                data-redirect-path="contact" 
+                novalidate>
+              <div id="mc_embed_signup_scroll">
+                  <div class="flex-row">
+                      <div class="flex-item-4">
+                          <div class="mc-field-group input-styles">
+                              <label for="mce-FNAME" class="mc-response-label"></label>
+                              <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Full Name">
+                          </div>
+                      </div>
+                      <div class="flex-item-4">
+                          <div class="mc-field-group input-styles">
+                              <label for="mce-COMPANY"></label>
+                              <input type="text" value="" name="COMPANY" class="required" id="mce-COMPANY">
+                          </div>
+                      </div>
+                      <div class="flex-item-4">
+                          <div class="mc-field-group input-styles">
+                              <label for="mce-EMAIL" class="mc-response-label"></label>
+                              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+                          </div>
+                      </div>
+                  </div>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                      <input type="text" name="b_13a7a5fca813b378c24ec9fe3_f6629ecf38" tabindex="-1" value="">
+                  </div>
+              </div>
+              <div class="flex-row">
+                  <div class="flex-item-6 ">
+                      <button class="btn-popup close-start-project-modal">Cancel</button>
+                  </div>
+                  <div class="flex-item-6">
+                      <button class="btn-popup" type="submit" name="subscribe" id="mc-embedded-subscribe">Submit</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>`;
 
+  $('.start-project').on('click', function () {
+    startProject.open(startProjectContent, 'html');
+  });
 
-			var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
-				close = modal.querySelector( '.md-close' );
+  $body.on('click', '.close-start-project-modal', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    startProject.close();
+    becomePartner.close();
+  });
 
-			function removeModal( hasPerspective ) {
-				classie.remove( modal, 'md-show' );
+  $body.on('click', '#mc-embedded-subscribe', function () {
+    let $form = $('#mc-embedded-subscribe-form');
 
-				if( hasPerspective ) {
-					classie.remove( document.documentElement, 'md-perspective' );
-				}
-			}
+    $(this).on('click', function () {
+      $form.submit();
+    });
 
-			function removeModalHandler() {
-				removeModal( classie.has( el, 'md-setperspective' ) ); 
-			}
+    $form.ajaxChimp({
+      callback: function (data) {
+        if (data.result === 'success') {
+          window.location = $form.data('redirect-path');
+        }
+      }
+    });
+  });
 
-			el.addEventListener( 'click', function( ev ) {
-				classie.add( modal, 'md-show' );
-				overlay.removeEventListener( 'click', removeModalHandler );
-				overlay.addEventListener( 'click', removeModalHandler );
+  $('.become-partner').on('click', function () {
+    becomePartner.open(becomePartnerContent, 'html');
+  });
 
-				overlay2.removeEventListener( 'click', removeModalHandler );
-				overlay2.addEventListener( 'click', removeModalHandler );
-
-				if( classie.has( el, 'md-setperspective' ) ) {
-					setTimeout( function() {
-						classie.add( document.documentElement, 'md-perspective' );
-					}, 25 );
-				}
-			});
-
-			close.addEventListener( 'click', function( ev ) {
-				ev.stopPropagation();
-				removeModalHandler();
-			});
-
-		} );
-
-	}
-
-	init();
-
-})();
+});

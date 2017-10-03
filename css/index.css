@@ -477,7 +477,9 @@ i {
 .md-show {
   visibility: visible; }
 
-.md-overlay, .md-overlay-2 {
+.md-overlay-1,
+.md-overlay-2,
+.md-overlay-3 {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -487,15 +489,18 @@ i {
   z-index: 1000;
   opacity: 0;
   background: rgba(40, 43, 46, 0.8);
-  transition: all 0.3s; }
+  transition: all 0.3s;
+}
 
-.md-show ~ .md-overlay {
+.md-show ~ .md-overlay-1,
+.md-show ~ .md-overlay-2,
+.md-show ~ .md-overlay-3 {
   opacity: 1;
   visibility: visible; }
 
-.md-show ~ .md-overlay-2 {
-  opacity: 1;
-  visibility: visible; }
+/*.md-show ~ .md-overlay-2 {*/
+  /*opacity: 1;*/
+  /*visibility: visible; }*/
 
 .md-perspective,
 .md-perspective body {
@@ -822,6 +827,52 @@ footer .map-background {
       height: 100%;
       width: 100%;
       min-height: 250px; }
+
+/*
+	@todo move to scss
+*/
+.popup_back {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.popup_cont {
+  position: fixed;
+  z-index: 102;
+}
+
+.preloader {
+  z-index: 101;
+}
+
+/*
+  @todo move to scss
+*/
+
+.popup_close {
+  display: none;
+}
+
+.popup_back {
+  cursor: pointer;
+  background-color: #222;
+}
+
+div.popup {
+  background: #fff;
+  box-shadow: 0 3px 10px #222;
+}
+
+.preloader {
+  left: 50%;
+  margin: -10px 0 0 -25px;
+  position: fixed;
+  top: 50%;
+}
 
 /* Animation*/
 @-webkit-keyframes glowing {
