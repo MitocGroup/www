@@ -195,6 +195,11 @@ p, ul, span {
   -moz-border-radius: 30px;
   color: $black-color;
   display: inline-block;
+  border-color: transparent;
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
 }
 
 .btn-green {
@@ -392,11 +397,10 @@ p, ul, span {
   }
   .input-styles {
     padding: 25px 0 40px 0;
+    label {
+      color: red;
+    }
   }
-  //.flex-row {
-  //  margin-top: 35px;
-  //  margin-bottom: 20px;
-  //}
 }
 
 /* Icons*/
