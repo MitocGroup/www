@@ -1,4 +1,4 @@
----
+--- 
 $:
   preprocess:
     '$.coverage.compare.storage.options.1.region': 'eval'
@@ -10,7 +10,6 @@ $:
     '$.codeclimate.token': 'eval'
     '$.snyk.token': 'eval'
     '$.e2e.wait.uri.0': 'eval'
-    '$.pagespeed.uri': 'eval'
   cache:
     driver: 's3'
     options:
@@ -19,15 +18,15 @@ $:
         region: 'process.env.AWS_DEFAULT_REGION'
         accessKeyId: 'process.env.AWS_ACCESS_KEY_ID'
         secretAccessKey: 'process.env.AWS_SECRET_ACCESS_KEY'
-  npm:
-    scripts: []
-      # - 'compile-travis'
+  npm: 
     dependencies:
-      # chai: 'latest'
+      chai: 'latest'
   emit:
     pattern:
       - /^src.es6\/lib\/.+\.js$/i
-      - /^tests?\/.+\.js$/i
+      - /^suite\//i
+      - /^test\/.+\.js$/i
+      - /.+\.spec\.js$/i
     ignore:
       - /^(.*\/)?node_modules(\/?$)?/i
       - /^(.*\/)?vendor(\/?$)?/i
@@ -44,30 +43,25 @@ $:
       - /.+\.e2e\.js$/i                                        # Files to include
     ignore: []
     browsers: 
-      - puppeteer
-      # - chrome                                               # Browsers to run the tests against
-      # - firefox
-      # - nightmare                                              
-      # - safari
+      - puppeteer                                              # Browsers to run the tests against
     wait:
       interval: 500                                            # Interval of running uri checks
       timeout: 60000                                           # Timeout to wait for uri's available
       uri:                                                     # uri's to wait before start running test cases
-        - 'process.env.DEPLOY_HOST'
+        - 'process.env.DEPLOY_HOST'  
   coverage:
     pattern:
       - /.+\.js$/i
     ignore:
-      - /.+\.cfg\.js$/i
-      - /.+\.po\.js$/i
-      - /.+\.e2e\.js$/i
       - /.+\.spec\.js$/i
       - /^(.*\/)?node_modules(\/?$)?/i
     reporters:
       text-summary: ~
+      lcovonly:
+        file: ./coverage.lcov
     compare:
       negative-delta: 1
-      storage:
+      storage:                                              
         driver: 's3'
         options:
           - 's3://travis-metadata/coverage/MitocGroup/www'
@@ -79,12 +73,9 @@ $:
     token: 'process.env.CODECLIMATE_REPO_TOKEN'
   snyk:
     token: 'process.env.SNYK_API_TOKEN'
-  pagespeed:
-    uri: |
-      ['services', 'customers', 'partners', 'about', 'contact'].map(item => `${process.env.DEPLOY_HOST}/${item}`)
 
 ### Add other modules here...
-website:
-  root: test/e2e
+mitocgroup-website:
+  root: 'test'
   dependencies:
     chance: 'latest'
