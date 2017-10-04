@@ -32,3 +32,4 @@
 - [POL-019 - Data Classification](policy/POL-019-data-classification-policy.md)
 - [POL-020 - Equal Opportunity Employer](policy/POL-020-equal-opportunity-employer-policy.md)
 - [POL-021 - Employee Paid Time Off](policy/POL-021-employee-paid-time-off-policy.md)
+- [POL-022 - Overtime](policy/POL-022-overtime-policy.md)
