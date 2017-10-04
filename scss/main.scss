@@ -250,6 +250,10 @@ div {
   }
 }
 
+.popup_close {
+  display: none;
+}
+
 .blog-block {
   .container {
     .section-content {
@@ -268,16 +272,6 @@ div {
                 color: $accent-green;
                 padding-bottom: 10px;
               }
-              //overflow: hidden;
-              //text-overflow: ellipsis;
-              //display: -webkit-box;
-              //display: -moz-inline-box;
-              //line-height: 22px;
-              //-webkit-line-clamp: 3;
-              //-moz-line-clamp: 3;
-              //-webkit-box-orient: vertical;
-              //-moz-box-orient: vertical;
-              //white-space: normal;
             }
             &:hover a {
               color: $accent-green;
@@ -456,7 +450,7 @@ div {
   display: inline;
 }
 
-/*Confirn Page*/
+/*Confirm Page*/
 
 .thank-you {
   height: calc(100vh - 84px);
