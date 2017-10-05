@@ -32,10 +32,12 @@ if [ ${CONFIRM} != 'y' ]; then
 fi
 
 if [ ${ENV} != 'prod' ]; then
+    DEPLOY_HOST='https://www-test.mitocgroup.com'
     BUCKET='s3://www-test.mitocgroup.com/'
     DIST_ID='E2MR6WOVYGNOM0'
     MAX_AGE='600'
 else
+    DEPLOY_HOST='https://www.mitocgroup.com'
     BUCKET='s3://www.mitocgroup.com/'
     DIST_ID='E17AX02BW6QRQO'
     MAX_AGE='604800'

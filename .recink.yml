@@ -24,15 +24,15 @@ $:
       - /^(.*\/)?node_modules(\/?$)?/i
   e2e:
     pattern:
-      - /.+\.e2e\.js$/i                                        # Files to include
+      - /.+\.e2e\.js$/i
     ignore: []
     browsers: 
-      - puppeteer                                              # Browsers to run the tests against
+      - puppeteer
     wait:
-      interval: 500                                            # Interval of running uri checks
-      timeout: 60000                                           # Timeout to wait for uri's available
-      uri:                                                     # uri's to wait before start running test cases
-        - 'https://www-test.mitocgroup.com'  
+      interval: 500
+      timeout: 60000
+      uri:
+        - 'process.env.DEPLOY_HOST'
   coverage:
     pattern:
       - /.+\.js$/i
@@ -59,7 +59,7 @@ $:
     token: 'process.env.SNYK_API_TOKEN'
 
 ### Add other modules here...
-mitocgroup-website:
+www:
   root: 'test'
   dependencies:
     chance: 'latest'
