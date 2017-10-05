@@ -54,7 +54,7 @@ $:
       interval: 200                                                         # Interval of running uri checks
       timeout: 15000                                                        # Timeout to wait for uri's available
       uri:                                                                  # uri's to wait before start running test cases
-        - https://www-test.mitocgroup.com/
+        - 'process.env.DEPLOY_HOST'
   coverage:
     pattern:                                                                # Files to include
       - /.+\.js$/i
