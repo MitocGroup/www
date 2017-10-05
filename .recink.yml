@@ -18,9 +18,6 @@ $:
         region: 'process.env.AWS_DEFAULT_REGION'
         accessKeyId: 'process.env.AWS_ACCESS_KEY_ID'
         secretAccessKey: 'process.env.AWS_SECRET_ACCESS_KEY'
-  npm: 
-    dependencies:
-      chai: 'latest'
   emit:
     pattern:
       - /^src.es6\/lib\/.+\.js$/i
@@ -30,14 +27,6 @@ $:
     ignore:
       - /^(.*\/)?node_modules(\/?$)?/i
       - /^(.*\/)?vendor(\/?$)?/i
-  test:
-    mocha:
-      options:
-        ui: 'bdd'
-        reporter: 'spec'
-    pattern:
-      - /.+\.spec\.js$/i
-    ignore: ~
   e2e:
     pattern:
       - /.+\.e2e\.js$/i                                        # Files to include
