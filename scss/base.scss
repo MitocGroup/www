@@ -200,6 +200,7 @@ p, ul, span {
   -webkit-transition: 0.4s ease-in-out;
   -moz-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .btn-green {
@@ -540,6 +541,10 @@ i {
 
 .color-nav-responsive {
   background-color: $white-color;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
 }
 
 .navbar-fix {
@@ -548,16 +553,19 @@ i {
   top: 0;
   height: 84px;
   width: 100%;
-  transition: .2s;
-  -webkit-transition: .2s;
-  -moz-transition: .2s;
-  -o-transition: .2s;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
+  &.white-color {
+    background-color: $white-color;
+  }
   &.color-nav {
     background-color: $white-color;
-    transition: .2s;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-    -o-transition: .2s;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
     box-shadow: 0 4px 9px -7px $black-color;
     -webkit-box-shadow: 0 4px 9px -7px $black-color;
     -moz-box-shadow: 0 4px 9px -7px $black-color;
