@@ -219,6 +219,14 @@
                     bottom: 10px;
                   }
                 }
+                .img-block {
+                  a {
+                    img {
+                      min-height: 250px;
+                      max-height: 250px;
+                    }
+                  }
+                }
               }
             }
             .flex-item-6 {
@@ -271,6 +279,7 @@
         display: none;
         position: absolute;
         width: 100%;
+        top: 84px;
         left: 0;
         background: white;
         z-index: 2;

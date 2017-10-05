@@ -35,5 +35,6 @@ $(window).scroll(function() {
         $('.navbar-fix').addClass('color-nav');
     } else {
         $('.navbar-fix').removeClass("color-nav");
+        
     }
 });
