@@ -25,8 +25,7 @@ else
     cp sitemap.xml ${BUILD_FOLDER}/sitemap.xml
 fi
 
-cp -R favicon.ico css fonts images js \
-	${BUILD_FOLDER}/
+cp -R favicon.ico css fonts images js ${BUILD_FOLDER}/
 
 echo "Minifying html code"
 for html_file in $(find . -type f -name "*.html"); do
