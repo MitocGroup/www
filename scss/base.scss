@@ -661,3 +661,16 @@ i {
   }
 }
 
+#mce-success-response {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+  background-color: #DFF2BF;
+  color: #4F8A10;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  z-index: 2;
+
+}
