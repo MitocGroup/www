@@ -495,6 +495,18 @@ i {
   font-size: 14px;
   font-family: OpenSans-Regular, sans-serif; }
 
+#mce-success-response {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+  background-color: #DFF2BF;
+  color: #4F8A10;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  z-index: 2; }
+
 .contact-page {
   background-image: url(/images/map.png);
   background-size: contain;
@@ -963,7 +975,8 @@ div.popup {
     .aws-block .gray-block .container {
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: center;
+      height: 100%; }
       .aws-block .gray-block .container .logo-block, .aws-block .gray-block .container .text-block {
         float: none;
         line-height: normal; }
@@ -1025,36 +1038,31 @@ div.popup {
     float: right;
     display: block; }
 
-  .navbar-fix {
-    height: 54px; }
-    .navbar-fix .logo {
-      line-height: 54px; }
-      .navbar-fix .logo a .mitoc-logo {
-        height: 32px; }
-    .navbar-fix.color-nav-responsive .nav-bar ul li {
-      font-size: 24px; }
-    .navbar-fix .nav-bar {
-      float: none; }
-      .navbar-fix .nav-bar ul li:not(:last-child) {
-        padding-right: 0; }
-      .navbar-fix .nav-bar .navigation {
-        display: none;
-        position: absolute;
-        top: 54px;
-        width: 100%;
-        left: 0;
-        background: white;
-        z-index: 2;
-        line-height: 70px; }
-      .navbar-fix .nav-bar .open + .navigation {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        text-align: center;
-        height: calc(100vh - 54px);
-        background: white; }
+  .navbar-fix .logo a .mitoc-logo {
+    height: 32px; }
+  .navbar-fix.color-nav-responsive .nav-bar ul li {
+    font-size: 24px; }
+  .navbar-fix .nav-bar {
+    float: none; }
+    .navbar-fix .nav-bar ul li:not(:last-child) {
+      padding-right: 0; }
+    .navbar-fix .nav-bar .navigation {
+      display: none;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      background: white;
+      z-index: 2;
+      line-height: 70px; }
+    .navbar-fix .nav-bar .open + .navigation {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      text-align: center;
+      height: calc(100vh - 84px);
+      background: white; }
 
   footer .map-background {
     background-image: none;
