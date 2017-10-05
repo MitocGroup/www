@@ -506,6 +506,12 @@ i {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   z-index: 2; }
+  .contact-form #mce-success-response:before {
+    position: absolute;
+    content: 'x';
+    right: 20px;
+    top: 10px;
+    color: #4F8A10; }
 .contact-form #mce-error-response {
   position: fixed;
   bottom: 0;
@@ -518,6 +524,12 @@ i {
   z-index: 2;
   color: #D8000C;
   background-color: #FFBABA; }
+  .contact-form #mce-error-response:before {
+    position: absolute;
+    content: 'x';
+    right: 20px;
+    top: 10px;
+    color: #D8000C; }
 
 .contact-page {
   background-image: url(/images/map.png);

@@ -675,6 +675,13 @@ i {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     z-index: 2;
+    &:before {
+      position: absolute;
+      content: 'x';
+      right: 20px;
+      top: 10px;
+      color: #4F8A10;
+    }
   }
 
   #mce-error-response {
@@ -689,6 +696,13 @@ i {
     z-index: 2;
     color: #D8000C;
     background-color: #FFBABA;
+    &:before {
+      position: absolute;
+      content: 'x';
+      right: 20px;
+      top: 10px;
+      color: #D8000C;
+    }
   }
 
 }
