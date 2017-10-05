@@ -397,8 +397,10 @@ p, ul, span {
   }
   .input-styles {
     padding: 25px 0 40px 0;
-    label {
-      color: red;
+    .mc-response-label{
+      &.error {
+        color: red;
+      }
     }
   }
 }
@@ -645,32 +647,63 @@ i {
 }
 
 /* MailChimp*/
-
-#mc_embed_signup {
-  #mc-embedded-subscribe-form {
-    div {
-      &.mce_inline_error {
-        position: absolute;
-        background-color: $white-color;
-        color: red;
-        padding: 0 0 5px 0;
-        font-size: 14px;
-        font-family: OpenSans-Regular, sans-serif;
+.contact-form {
+  #mc_embed_signup {
+    #mc-embedded-subscribe-form {
+      div {
+        &.mce_inline_error {
+          position: absolute;
+          background-color: $white-color;
+          color: red;
+          padding: 0 0 5px 0;
+          font-size: 14px;
+          font-family: OpenSans-Regular, sans-serif;
+        }
       }
     }
   }
+
+  #mce-success-response {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    padding: 25px;
+    background-color: #DFF2BF;
+    color: #4F8A10;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    z-index: 2;
+    &:before {
+      position: absolute;
+      content: 'x';
+      right: 20px;
+      top: 10px;
+      color: #4F8A10;
+    }
+  }
+
+  #mce-error-response {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    padding: 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    z-index: 2;
+    color: #D8000C;
+    background-color: #FFBABA;
+    &:before {
+      position: absolute;
+      content: 'x';
+      right: 20px;
+      top: 10px;
+      color: #D8000C;
+    }
+  }
+
 }
 
-#mce-success-response {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 30px;
-  background-color: #DFF2BF;
-  color: #4F8A10;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  z-index: 2;
-
-}

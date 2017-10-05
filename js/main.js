@@ -23,6 +23,10 @@ $(function() {
             return;
         }
     });
+
+    $('#mce-error-response, #mce-success-response').on('click',function() {
+        $('#mce-error-response, #mce-success-response').fadeOut('fast');
+    })
 });
 
 $(window).scroll(function() {

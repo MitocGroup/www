@@ -309,7 +309,7 @@ p, ul, span {
     color: #000000; }
   .form-styles .input-styles {
     padding: 25px 0 40px 0; }
-    .form-styles .input-styles label {
+    .form-styles .input-styles .mc-response-label.error {
       color: red; }
 
 /* Icons*/
@@ -487,25 +487,49 @@ i {
   opacity: 1; }
 
 /* MailChimp*/
-#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+.contact-form #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
   position: absolute;
   background-color: #ffffff;
   color: red;
   padding: 0 0 5px 0;
   font-size: 14px;
   font-family: OpenSans-Regular, sans-serif; }
-
-#mce-success-response {
+.contact-form #mce-success-response {
   position: fixed;
   bottom: 0;
   right: 0;
-  padding: 30px;
+  width: 30%;
+  padding: 25px;
   background-color: #DFF2BF;
   color: #4F8A10;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   z-index: 2; }
+  .contact-form #mce-success-response:before {
+    position: absolute;
+    content: 'x';
+    right: 20px;
+    top: 10px;
+    color: #4F8A10; }
+.contact-form #mce-error-response {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  padding: 25px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  z-index: 2;
+  color: #D8000C;
+  background-color: #FFBABA; }
+  .contact-form #mce-error-response:before {
+    position: absolute;
+    content: 'x';
+    right: 20px;
+    top: 10px;
+    color: #D8000C; }
 
 .contact-page {
   background-image: url(/images/map.png);
@@ -558,8 +582,10 @@ i {
     padding: 0; }
     .contact-form .form-styles input {
       text-align: left; }
-    .contact-form .form-styles .input-styles.space-input {
-      padding-right: 20px; }
+    .contact-form .form-styles .input-styles {
+      position: relative; }
+      .contact-form .form-styles .input-styles.space-input {
+        padding-right: 20px; }
 
 .wrapper .main-page {
   background-image: url(../images/hp-background-min.jpg);
