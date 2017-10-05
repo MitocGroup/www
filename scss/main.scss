@@ -158,9 +158,9 @@ footer {
       left: auto;
       top: 15%;
       right: 50%;
-      width: 200px;
+      width: 150px;
       &:before {
-        content: "Our Strategy";
+        content: "Our Mission";
         color: $black-color;
         opacity: 1;
         font-size: 20px;
@@ -177,9 +177,9 @@ footer {
     .slick-next {
       top: 15%;
       left: 50%;
-      width: 150px;
+      width: 200px;
       &:before {
-        content: "Our mission";
+        content: "Our Strategy";
         color: $black-color;
         opacity: 1;
         font-size: 20px;
