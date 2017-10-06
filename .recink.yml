@@ -44,16 +44,16 @@ $:
 #     enabled: false                  
 #     path: 'path/to/screenshots'
 #     take-on-fail: false
-    browsers:                                                               # Browsers to run the tests against
-      - puppeteer                                                           # The default one...
+    browsers:
+      - puppeteer
 #     - nightmare
 #     - safari
 #     - chrome
 #     - firefox
     wait:
-      interval: 200                                                         # Interval of running uri checks
-      timeout: 15000                                                        # Timeout to wait for uri's available
-      uri:                                                                  # uri's to wait before start running test cases
+      interval: 500
+      timeout: 60000
+      uri:
         - 'process.env.DEPLOY_HOST'
   coverage:
     pattern:                                                                # Files to include
@@ -80,3 +80,7 @@ main:                                                                       # Ma
 #  dependencies: []                                                         # Dependencies to add/overwrite (over $.npm.dependencies config)
 
 ### Add other modules here...
+www:
+  root: 'test'
+  dependencies:
+    chance: 'latest'

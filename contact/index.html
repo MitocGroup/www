@@ -8,26 +8,10 @@
     <meta name="description" content="Mitoc Group is a technology company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world." />
     <link rel="icon" type="image/ico" href="/favicon.ico" />
     <link rel="stylesheet" href="../css/index.min.css" />
-    <script type="text/javascript">
-    (function() {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[1] = "FNAME";
-        ftypes[1] = "text";
-        fnames[2] = "COMPANY";
-        ftypes[2] = "text";
-        fnames[0] = "EMAIL";
-        ftypes[0] = "email";
-        fnames[3] = "PHONE";
-        ftypes[3] = "phone";
-        fnames[4] = "MESSAGE";
-        ftypes[4] = "text";
-    }());
-    </script>
 </head>
 
 <body>
-    <div class="navbar-fix nav-down">
+    <div class="navbar-fix nav-down white-color">
         <div class="container">
             <div class="logo">
                 <a href="/">
@@ -48,7 +32,7 @@
             <div class="clear"></div>
         </div>
     </div>
-    <div class="contact-page">
+    <div class="contact-page space-top">
         <div class="container">
             <div class="page-name">
                 <h1 class="text-uppercase pull-right">Contact Us</h1>
@@ -99,7 +83,7 @@
                     <div class="contact-info">
                         <iframe src="https://snazzymaps.com/embed/15673" height="512px" style="border:none;"></iframe>
                         <div class="wrapper-info">
-                            <h3>Eastern Europa</h3>
+                            <h3>Eastern Europe</h3>
                             <div class="icons-links">
                                 <i class="icon-map-marker"></i>
                                 <span><a href="https://goo.gl/maps/7MArc7ukMhq">23 Dacia Blvd <br/> Chisinau MD-2038 <br/> Republic of Moldova</a></span>
@@ -123,58 +107,50 @@
     </div>
     <div class="container contact-form">
         <div class="form-styles">
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-                <form action="//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=daffe46160" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-styles" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-                        <div class="flex-row">
-                            <div class="flex-item-6">
-                                <div class="mc-field-group input-styles space-input">
-                                    <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Full Name">
-                                </div>
-                            </div>
-                            <div class="flex-item-6">
-                                <div class="mc-field-group input-styles">
-                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
-                                </div>
-                            </div>
+            <div class="contact-form">
+                <form id="contact-us-form">
+                    <div class="flex-row">
+                        <div class="flex-item-6 mc-form-group-FNAME input-styles space-input">
+                            <input type="text" name="FNAME" placeholder="Full name">
+                            <div class="mc-error"></div>
                         </div>
-                        <div class="flex-row">
-                            <div class="mc-field-group size1of2 input-styles flex-item-6 space-input">
-                                <input type="text" name="PHONE" class="required" value="" id="mce-PHONE" placeholder="Phone Number">
-                            </div>
-                            <div class="mc-field-group input-styles flex-item-6">
-                                <input type="text" value="" name="COMPANY" class="required" id="mce-COMPANY" placeholder="Company">
-                            </div>
+
+                        <div class="flex-item-6 mc-form-group-EMAIL input-styles space-input">
+                            <input type="email" name="EMAIL" placeholder="Email">
+                            <div class="mc-error"></div>
                         </div>
-                        <div class="flex-row">
-                            <div class="mc-field-group input-styles flex-item-12">
-                                <input type="text" value="" name="MESSAGE" class="required" id="mce-MESSAGE" placeholder="My Message">
-                            </div>
+                    </div>
+
+                    <div class="flex-row">
+                        <div class="flex-item-6 mc-form-group-PHONE input-styles space-input">
+                            <input type="email" name="PHONE" placeholder="Phone Number">
+                            <div class="mc-error"></div>
                         </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        <div class="flex-item-6 mc-form-group-COMPANY input-styles space-input">
+                            <input type="text" name="COMPANY" placeholder="Company">
+                            <div class="mc-error"></div>
                         </div>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                            <input type="text" name="b_13a7a5fca813b378c24ec9fe3_daffe46160" tabindex="-1" value="">
+
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-item-12 mc-form-group-MESSAGE input-styles space-input">
+                            <input type="text" name="MESSAGE" placeholder="My message">
+                            <div class="mc-error"></div>
                         </div>
-                        <div class="flex-row">
-                            <div class="flex-item-6">
-                            </div>
-                            <div class="flex-item-6">
-                                <div class="clear">
-                                    <button type="submit" value="Send a Message" name="subscribe" id="mc-embedded-subscribe" class="button btn-popup pull-right">Send a Message</button>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-item-12" id="mc-general-error"></div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-item-12">
+                            <button type="button" id="submit-contact-form" class="button btn-popup pull-right">Send a Message</button>
                         </div>
                     </div>
                 </form>
             </div>
-            <!--End mc_embed_signup-->
         </div>
     </div>
+
     <section class="green-block small-block">
         <div class="container">
             <div class="center">
@@ -232,10 +208,9 @@
     </footer>
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery-popup.min.js"></script>
-    <script type="text/javascript" src="../js/jquery-ajaxchimp.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-mailchimp.min.js"></script>
     <script type="text/javascript" src="../js/main.min.js"></script>
     <script type="text/javascript" src="../js/modal-effects.min.js"></script>
-    <script type="text/javascript" src="../js/form-validate.min.js"></script>
 </body>
 
 </html>

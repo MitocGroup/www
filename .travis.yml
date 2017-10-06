@@ -36,7 +36,6 @@ env:
 stage: "Run Unit Tests :clipboard:"
 node_js:
   - 6
-  - 8
 before_install:
   - source bin/deploy/init.sh
 script:
@@ -45,11 +44,9 @@ script:
 # jobs:
 #   include:
 #     - stage: "Deploy To :cloud:"
-#       node_js: 6
+#       node_js: 8
 #       script:
-#         - if [ ${ALLOW_DEPLOY} == 1 ]; then node bin/deploy; else echo "Skipping deploy"; fi
-#       after_failure:
-#         - deepify undeploy src --loglevel=debug
+#         - bash bin/deploy.sh ${TRAVIS_BRANCH}
 
 #     - stage: "Run e2e Tests :clipboard:"
 #       node_js: 8
