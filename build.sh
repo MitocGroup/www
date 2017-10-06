@@ -13,6 +13,7 @@ uglifyjs ./js/blog.js -c -m -o ./js/blog.min.js
 uglifyjs ./js/carousel.js -c -m -o ./js/carousel.min.js
 uglifyjs ./js/main.js -c -m -o ./js/main.min.js
 uglifyjs ./js/modal-effects.js -c -m -o ./js/modal-effects.min.js
+uglifyjs ./js/jquery-mailchimp.js -c -m -o ./js/jquery-mailchimp.min.js
 
 echo "Copying resources into '${BUILD_FOLDER}' folder"
 rm -rf ${BUILD_FOLDER}/*
