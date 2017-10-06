@@ -5,6 +5,7 @@ if [ -z $(which aws) ]; then
 	exit 1
 fi
 
+MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 ENV=$([ -n "$1" ] && echo "$1" || echo 'test')
 REGION=$([ -n "$2" ] && echo "$2" || echo 'us-west-2')
 PROFILE=$([ -n "$3" ] && echo "$3" || echo 'default')
@@ -34,12 +35,12 @@ else
 fi
 
 message "Build: Start"
-./build.sh ${ENV}
+${MY_DIR}/build.sh ${ENV}
 message "Build: Done"
 
 message "Synchronizing build directory"
-aws s3 sync ./build/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
-    --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
+aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
+    --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
 
 message "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*'
