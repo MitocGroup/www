@@ -154,9 +154,12 @@ footer {
         text-transform: uppercase;
       }
     }
+    .slick-next, .slick-prev {
+      top: 15%;
+      height: 40px;
+    }
     .slick-prev {
       left: auto;
-      top: 15%;
       right: 50%;
       width: 150px;
       &:before {
@@ -175,7 +178,6 @@ footer {
       }
     }
     .slick-next {
-      top: 15%;
       left: 50%;
       width: 200px;
       &:before {
