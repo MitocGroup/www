@@ -1290,41 +1290,39 @@ div.popup {
     flex-wrap: wrap; }
     footer .media a {
       margin: 0 25px; } }
-.aws-block {
-  margin-top: 84px; }
-  .aws-block .gray-block .logo-block {
-    float: left; }
-    .aws-block .gray-block .logo-block a img {
-      height: 138px; }
-  .aws-block .gray-block .text-block {
-    float: right; }
-  .aws-block .aws-info {
-    margin-top: 90px; }
-    .aws-block .aws-info p {
-      margin-bottom: 20px; }
-      .aws-block .aws-info p:last-child {
-        margin: 70px 0; }
-      .aws-block .aws-info p:first-child {
-        margin-bottom: 0; }
-    .aws-block .aws-info .image-aws {
-      width: 50%;
-      margin: 90px auto; }
-      .aws-block .aws-info .image-aws .aws-logo {
-        max-height: 228px;
-        width: 100%; }
-    .aws-block .aws-info .block-text_img .aws-img {
-      height: 72px;
-      margin-right: 20px; }
-    .aws-block .aws-info ul {
-      list-style-position: inside;
-      margin-left: 20px;
-      color: #28b655; }
-      .aws-block .aws-info ul span {
-        color: #000000; }
-    .aws-block .aws-info .image-block {
-      margin-top: 40px; }
-      .aws-block .aws-info .image-block .ahtech-img {
-        max-height: 722px;
-        width: 100%; }
+.aws-block .gray-block .logo-block {
+  float: left; }
+  .aws-block .gray-block .logo-block a img {
+    height: 138px; }
+.aws-block .gray-block .text-block {
+  float: right; }
+.aws-block .aws-info {
+  margin-top: 90px; }
+  .aws-block .aws-info p {
+    margin-bottom: 20px; }
+    .aws-block .aws-info p:last-child {
+      margin: 70px 0; }
+    .aws-block .aws-info p:first-child {
+      margin-bottom: 0; }
+  .aws-block .aws-info .image-aws {
+    width: 50%;
+    margin: 90px auto; }
+    .aws-block .aws-info .image-aws .aws-logo {
+      max-height: 228px;
+      width: 100%; }
+  .aws-block .aws-info .block-text_img .aws-img {
+    height: 72px;
+    margin-right: 20px; }
+  .aws-block .aws-info ul {
+    list-style-position: inside;
+    margin-left: 20px;
+    color: #28b655; }
+    .aws-block .aws-info ul span {
+      color: #000000; }
+  .aws-block .aws-info .image-block {
+    margin-top: 40px; }
+    .aws-block .aws-info .image-block .ahtech-img {
+      max-height: 722px;
+      width: 100%; }
 
 /*# sourceMappingURL=index.css.map */
