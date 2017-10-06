@@ -7,8 +7,8 @@ $(function() {
 
   let startProjectContent = `<div class="md-content popup">
         <h3>Start a Project</h3>
-        <div class="contact-form">
-            <form id="start-project-form">
+        <div>
+            <form id="start-project-form" class="form-styles">
                 <div class="flex-row">
                     <div class="flex-item-12 mc-form-group-FNAME input-styles space-input">
                         <input type="text" name="FNAME" placeholder="Full name">
@@ -22,7 +22,7 @@ $(function() {
                     </div>
                 </div>
                 <div class="flex-row">
-                    <div class="flex-item-12" id="mc-general-error"></div>
+                    <div class="flex-item-12" id="mc-general-error-project"></div>
                 </div>
                 <div class="flex-row">
                     <div class="flex-item-6">
@@ -38,8 +38,8 @@ $(function() {
 
   let becomePartnerContent = `<div class="md-content popup">
       <h3>Become a Partner</h3>
-      <div class="contact-form">
-          <form id="become-partner-form">
+      <div>
+          <form id="become-partner-form" class="form-styles">
               <div class="flex-row">
                   <div class="flex-item-12 mc-form-group-FNAME input-styles space-input">
                       <input type="text" name="FNAME" placeholder="Full name">
@@ -59,7 +59,7 @@ $(function() {
                   </div>
               </div>
               <div class="flex-row">
-                  <div class="flex-item-12" id="mc-general-error"></div>
+                  <div class="flex-item-12" id="mc-general-error-partner"></div>
               </div>
               <div class="flex-row">
                   <div class="flex-item-6">
@@ -79,7 +79,12 @@ $(function() {
       url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=f6629ecf38',
       fields: 'EMAIL,FNAME',
       submitSelector: '#submit-modal-form',
-      onFail: generalError,
+      onFail: function (errMsg) {
+        let $genErr = $('#mc-general-error-project');
+
+        $genErr.text(errMsg);
+        setTimeout(() => { $genErr.text(''); }, 5000);
+      },
       onOk: function (okMsg) {
         window.location = `/confirm/start-project?mc-massage=${okMsg}`
       }
@@ -93,7 +98,12 @@ $(function() {
       url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=7257663d85',
       fields: 'EMAIL,FNAME,COMPANY',
       submitSelector: '#submit-modal-form',
-      onFail: generalError,
+      onFail: function (errMsg) {
+        let $genErr = $('#mc-general-error-partner');
+
+        $genErr.text(errMsg);
+        setTimeout(() => { $genErr.text(''); }, 5000);
+      },
       onOk: function (okMsg) {
         window.location = `/confirm/become-partner?mc-massage=${okMsg}`
       }
@@ -104,7 +114,12 @@ $(function() {
     url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=daffe46160',
     fields: 'EMAIL,FNAME,COMPANY,PHONE,MESSAGE',
     submitSelector: '#submit-contact-form',
-    onFail: generalError,
+    onFail: function (errMsg) {
+      let $genErr = $('#mc-general-error');
+
+      $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+      setTimeout(() => { $genErr.html(''); }, 5000);
+    },
     onOk: function (okMsg) {
       window.location = `/confirm/contact-us?mc-massage=${okMsg}`
     }
@@ -119,16 +134,5 @@ $(function() {
     startProject.close();
     becomePartner.close();
   });
-
-  /**
-   * MailChimp general error handler
-   * @param errMsg
-   */
-  function generalError(errMsg) {
-    let $genErr = $('#mc-general-error');
-
-    $genErr.text(errMsg);
-    setTimeout(() => { $genErr.text(''); }, 5000);
-  }
-
+  
 });
