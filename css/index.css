@@ -446,7 +446,11 @@ i {
     .navbar-fix.color-nav .logo, .navbar-fix.color-nav .nav-bar {
       line-height: 54px; }
     .navbar-fix.color-nav .logo a .mitoc-logo {
-      height: 32px; }
+      height: 32px;
+      transition: .4s;
+      -webkit-transition: .4s;
+      -moz-transition: .4s;
+      -o-transition: .4s; }
     .navbar-fix.color-nav .nav-bar ul li {
       font-size: 16px; }
   .navbar-fix .logo {
@@ -455,7 +459,11 @@ i {
     .navbar-fix .logo a {
       display: block; }
       .navbar-fix .logo a .mitoc-logo {
-        height: 40px; }
+        height: 40px;
+        transition: .4s;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s; }
   .navbar-fix .nav-bar {
     float: right;
     line-height: 84px; }
@@ -1069,40 +1077,48 @@ div.popup {
   .wrapper .blog-block .container .section-content .flex-row .flex-item-6.leftPostItem {
     margin-bottom: 40px; }
 
-  .icon-burger {
+  .icon-burger, .icon-arrow {
     display: block;
-    float: right; }
-
-  .icon-arrow {
     float: right;
-    display: block; }
+    line-height: 54px; }
 
-  .navbar-fix .logo a .mitoc-logo {
-    height: 32px; }
-  .navbar-fix.color-nav-responsive .nav-bar ul li {
-    font-size: 24px; }
-  .navbar-fix .nav-bar {
-    float: none; }
-    .navbar-fix .nav-bar ul li:not(:last-child) {
-      padding-right: 0; }
-    .navbar-fix .nav-bar .navigation {
-      display: none;
-      position: absolute;
-      width: 100%;
-      top: 84px;
-      left: 0;
-      background: white;
-      z-index: 2;
-      line-height: 70px; }
-    .navbar-fix .nav-bar .open + .navigation {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: absolute;
-      text-align: center;
-      height: calc(100vh - 84px);
-      background: white; }
+  .space-top {
+    margin-top: 54px; }
+
+  .navbar-fix {
+    height: 54px; }
+    .navbar-fix .logo {
+      line-height: 54px; }
+      .navbar-fix .logo a .mitoc-logo {
+        height: 32px;
+        transition: .4s;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s; }
+    .navbar-fix.color-nav-responsive .nav-bar ul li {
+      font-size: 24px; }
+    .navbar-fix .nav-bar {
+      float: none; }
+      .navbar-fix .nav-bar ul li:not(:last-child) {
+        padding-right: 0; }
+      .navbar-fix .nav-bar .navigation {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 54px;
+        left: 0;
+        background: white;
+        z-index: 2;
+        line-height: 70px; }
+      .navbar-fix .nav-bar .open + .navigation {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        height: calc(100vh - 54px);
+        background: white; }
 
   footer .map-background {
     background-image: none;
@@ -1156,8 +1172,12 @@ div.popup {
       flex: 0 0 100%;
       max-width: 100%; }
 
+  body .aws-block .aws-info .block-text_img.pull-left {
+    float: none;
+    text-align: center;
+    margin-bottom: 40px; }
   body .aws-block .aws-info .image-aws {
-    width: 70%;
+    width: 100%;
     margin: 40px auto; }
 
   .top_button {

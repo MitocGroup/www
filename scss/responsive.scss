@@ -243,19 +243,26 @@
       }
     }
   }
-  .icon-burger {
+  .icon-burger, .icon-arrow {
     display: block;
     float: right;
+    line-height: 54px;
   }
-  .icon-arrow {
-    float: right;
-    display: block;
+  .space-top {
+    margin-top: 54px;
   }
+
   .navbar-fix {
+    height: 54px;
     .logo {
+      line-height: 54px;
       a {
         .mitoc-logo {
           height: 32px;
+          transition: .4s;
+          -webkit-transition: .4s;
+          -moz-transition: .4s;
+          -o-transition: .4s;
         }
       }
     }
@@ -279,7 +286,7 @@
         display: none;
         position: absolute;
         width: 100%;
-        top: 84px;
+        top: 54px;
         left: 0;
         background: white;
         z-index: 2;
@@ -292,9 +299,9 @@
         justify-content: center;
         position: absolute;
         text-align: center;
-        height: calc(100vh - 84px);
+        height: calc(100vh - 54px);
         background: white;
-
+        //top: 54px;
       }
     }
   }
@@ -392,8 +399,15 @@
   body {
     .aws-block {
       .aws-info {
+        .block-text_img {
+          &.pull-left {
+            float: none;
+            text-align: center;
+            margin-bottom: 40px;
+          }
+        }
         .image-aws {
-          width: 70%;
+          width: 100%;
           margin: 40px auto;
         }
       }

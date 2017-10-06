@@ -578,6 +578,10 @@ i {
       a {
         .mitoc-logo {
           height: 32px;
+          transition: .4s;
+          -webkit-transition: .4s;
+          -moz-transition: .4s;
+          -o-transition: .4s;
         }
       }
     }
@@ -597,6 +601,10 @@ i {
       display: block;
       .mitoc-logo {
         height: 40px;
+        transition: .4s;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s;
       }
     }
   }
