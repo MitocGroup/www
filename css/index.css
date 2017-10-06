@@ -716,9 +716,11 @@ footer .map-background {
       .carousel-block .carousel-mission .slide-text-left h3 {
         font-size: 30px;
         text-transform: uppercase; }
+    .carousel-block .carousel-mission .slick-next, .carousel-block .carousel-mission .slick-prev {
+      top: 15%;
+      height: 40px; }
     .carousel-block .carousel-mission .slick-prev {
       left: auto;
-      top: 15%;
       right: 50%;
       width: 150px; }
       .carousel-block .carousel-mission .slick-prev:before {
@@ -732,7 +734,6 @@ footer .map-background {
       .carousel-block .carousel-mission .slick-prev.slick-disabled:before {
         border-bottom: 2px solid #7ED257; }
     .carousel-block .carousel-mission .slick-next {
-      top: 15%;
       left: 50%;
       width: 200px; }
       .carousel-block .carousel-mission .slick-next:before {
