@@ -26,7 +26,19 @@ $(function() {
 
     $('#mce-error-response, #mce-success-response').on('click',function() {
         $('#mce-error-response, #mce-success-response').fadeOut('fast');
-    })
+    });
+
+  /**
+   * Parse confirmation message and append it to the page
+   */
+  (function confirmationMessage() {
+    let location = document.location.toString();
+    if (location.toString().indexOf('?mc-massage=') > 0) {
+      let message = (location.split('?mc-massage='))[1];
+
+      $('#mc-message').text(decodeURI(message || ''));
+    }
+  })();
 });
 
 $(window).scroll(function() {
