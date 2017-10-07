@@ -24,16 +24,20 @@ mkdir -p ${BUILD_DIR}/
 if [ ${BRANCH} != 'master' ]; then
     cp ${CODE_DIR}/robots-test.txt ${BUILD_DIR}/robots.txt
 else
+    cp ${CODE_DIR}/pgp-key.txt ${BUILD_DIR}/pgp-key.txt
     cp ${CODE_DIR}/robots.txt ${BUILD_DIR}/robots.txt
+    cp ${CODE_DIR}/security.txt ${BUILD_DIR}/security.txt
     cp ${CODE_DIR}/sitemap.xml ${BUILD_DIR}/sitemap.xml
 fi
 
-cp -R favicon.ico css fonts images js ${BUILD_DIR}/
+cp -R ${CODE_DIR}/css ${CODE_DIR}/fonts ${CODE_DIR}/images \
+    ${CODE_DIR}/js ${CODE_DIR}/favicon.ico ${BUILD_DIR}/
 
 echo "Minifying html code"
 for html_file in $(find ${CODE_DIR} -type f -name "*.html"); do
     html_file_build_path=$(dirname ${html_file})
     html_file_build_path="${html_file_build_path/$CODE_DIR/$BUILD_DIR}"
     mkdir -p ${html_file_build_path}
-    html-minifier --collapse-whitespace --remove-comments ${html_file} -o ${html_file_build_path}/$(basename ${html_file})
+    html-minifier --collapse-whitespace --remove-comments ${html_file} \
+        --output ${html_file_build_path}/$(basename ${html_file})
 done
