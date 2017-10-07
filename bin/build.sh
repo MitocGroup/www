@@ -3,7 +3,7 @@
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 CODE_DIR=$(dirname ${MY_DIR})
 BUILD_DIR=${MY_DIR}/build
-BRANCH=$([ -n "$1" ] && echo "$1" || echo 'test')
+BRANCH=$([ -n "$1" ] && echo "$1" || echo 'dev')
 
 echo "Minifying css code"
 cssnano < ${CODE_DIR}/css/index.css > ${CODE_DIR}/css/index.min.css

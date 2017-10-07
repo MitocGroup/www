@@ -6,7 +6,7 @@ if [ -z $(which aws) ]; then
 fi
 
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
-ENV=$([ -n "$1" ] && echo "$1" || echo 'test')
+BRANCH=$([ -n "$1" ] && echo "$1" || echo 'dev')
 REGION=$([ -n "$2" ] && echo "$2" || echo 'us-west-2')
 PROFILE=$([ -n "$3" ] && echo "$3" || echo 'default')
 
@@ -14,7 +14,7 @@ message() {
     echo -e "\033[38;5;148m"$1"\033[39m"
 }
 
-message "You are going to deploy to '${ENV}' environment (region: ${REGION}), continue? [y|n]: "
+message "You are going to deploy to '${BRANCH}' environment (region: ${REGION}), continue? [y|n]: "
 read CONFIRM
 
 if [ ${CONFIRM} != 'y' ]; then
@@ -22,7 +22,7 @@ if [ ${CONFIRM} != 'y' ]; then
     exit 1
 fi
 
-if [ ${ENV} != 'prod' ]; then
+if [ ${BRANCH} != 'master' ]; then
     DEPLOY_HOST='https://www-test.mitocgroup.com'
     BUCKET='s3://www-test.mitocgroup.com/'
     DIST_ID='E2MR6WOVYGNOM0'
@@ -35,7 +35,7 @@ else
 fi
 
 message "Build: Start"
-${MY_DIR}/build.sh ${ENV}
+${MY_DIR}/build.sh ${BRANCH}
 message "Build: Done"
 
 message "Synchronizing build directory"
