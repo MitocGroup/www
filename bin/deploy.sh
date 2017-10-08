@@ -14,7 +14,7 @@ message() {
     echo -e "\033[38;5;148m"$1"\033[39m"
 }
 
-message "You are going to deploy to '${BRANCH}' environment (region: ${REGION}), continue? [y|n]: "
+message "You are going to deploy from '${BRANCH}' branch (region: ${REGION}), continue? [y|n]: "
 read CONFIRM
 
 if [ ${CONFIRM} != 'y' ]; then
