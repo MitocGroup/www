@@ -982,19 +982,19 @@ div.popup {
       margin-right: 10px;
       margin-left: 10px; }
 
-  .aws-block .gray-block {
+  .partners .gray-block {
     text-align: center; }
-    .aws-block .gray-block .container {
+    .partners .gray-block .container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       height: 100%; }
-      .aws-block .gray-block .container .logo-block, .aws-block .gray-block .container .text-block {
+      .partners .gray-block .container .logo-block, .partners .gray-block .container .text-block {
         float: none;
         line-height: normal; }
-        .aws-block .gray-block .container .logo-block a img, .aws-block .gray-block .container .text-block a img {
+        .partners .gray-block .container .logo-block a img, .partners .gray-block .container .text-block a img {
           height: 80px; }
-      .aws-block .gray-block .container .text-block h1 {
+      .partners .gray-block .container .text-block h1 {
         margin-top: 20px;
         font-size: 24px; }
 
@@ -1140,11 +1140,11 @@ div.popup {
       flex: 0 0 100%;
       max-width: 100%; }
 
-  body .aws-block .aws-info .block-text_img.pull-left {
+  body .partners .aws-info .block-text_img.pull-left {
     float: none;
     text-align: center;
     margin-bottom: 40px; }
-  body .aws-block .aws-info .image-aws {
+  body .partners .aws-info .image-aws {
     width: 100%;
     margin: 40px auto; }
 
@@ -1271,38 +1271,38 @@ div.popup {
     flex-wrap: wrap; }
     footer .media a {
       margin: 0 25px; } }
-.aws-block .gray-block .logo-block {
+.partners .gray-block .logo-block {
   float: left; }
-  .aws-block .gray-block .logo-block a img {
+  .partners .gray-block .logo-block a img {
     height: 138px; }
-.aws-block .gray-block .text-block {
+.partners .gray-block .text-block {
   float: right; }
-.aws-block .aws-info {
+.partners .aws-info {
   margin-top: 90px; }
-  .aws-block .aws-info p {
+  .partners .aws-info p {
     margin-bottom: 20px; }
-    .aws-block .aws-info p:last-child {
+    .partners .aws-info p:last-child {
       margin: 70px 0; }
-    .aws-block .aws-info p:first-child {
+    .partners .aws-info p:first-child {
       margin-bottom: 0; }
-  .aws-block .aws-info .image-aws {
+  .partners .aws-info .image-aws {
     width: 50%;
     margin: 90px auto; }
-    .aws-block .aws-info .image-aws .aws-logo {
+    .partners .aws-info .image-aws .aws-logo {
       max-height: 228px;
       width: 100%; }
-  .aws-block .aws-info .block-text_img .aws-img {
+  .partners .aws-info .block-text_img .aws-img {
     height: 72px;
     margin-right: 20px; }
-  .aws-block .aws-info ul {
+  .partners .aws-info ul {
     list-style-position: inside;
     margin-left: 20px;
     color: #28b655; }
-    .aws-block .aws-info ul span {
+    .partners .aws-info ul span {
       color: #000000; }
-  .aws-block .aws-info .image-block {
+  .partners .aws-info .image-block {
     margin-top: 40px; }
-    .aws-block .aws-info .image-block .ahtech-img {
+    .partners .aws-info .image-block .ahtech-img {
       max-height: 722px;
       width: 100%; }
 
