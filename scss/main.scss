@@ -40,11 +40,12 @@
         padding: 40px 0;
       }
       .hover-effect {
-        transition: 0.4s ease;
         -webkit-transition: 0.4s ease;
         -moz-transition: 0.4s ease;
-        -o-transition: 0.4s ease;
+        transition: 0.4s ease;
         &:hover {
+          -webkit-transform: scale(1.2, 1.2);
+          -moz-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
         }
       }
@@ -62,10 +63,9 @@ footer {
       cursor: pointer;
       i {
         display: inline-block;
-        transition: 0.4s ease-in-out;
         -webkit-transition: 0.4s ease-in-out;
         -moz-transition: 0.4s ease-in-out;
-        -o-transition: 0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
       }
     }
   }
@@ -126,6 +126,8 @@ footer {
   &:hover {
     margin-top: -4%;
     margin-bottom: 4%;
+    -webkit-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
     transition: 300ms;
     .info h4 {
@@ -202,17 +204,17 @@ footer {
 
 .popup {
   background: $white-color;
-  border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  border-radius: 5px;
   text-align: center;
   h3 {
     text-transform: uppercase;
     line-height: 120px;
     background-color: $main-color;
-    border-radius: 4px 4px 0 0;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
+    border-radius: 4px 4px 0 0;
     font-size: 25px;
   }
 }
@@ -263,9 +265,9 @@ div {
         .flex-item-12, .flex-item-6 {
           .blog-post {
             border: 1px solid $black-color;
-            border-radius: 1px;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
+            border-radius: 1px;
             margin: 0 20px;
             overflow: hidden;
             .blog-content {
@@ -284,10 +286,9 @@ div {
           .blog-post {
             margin-bottom: 40px;
             max-height: 300px;
-            transition: 300ms;
             -webkit-transition: 300ms ease;
             -moz-transition: 300ms ease;
-            -o-transition: 300ms ease;
+            transition: 300ms;
             .blog-content {
               padding: 20px;
               display: flex;
@@ -314,6 +315,8 @@ div {
               }
             }
             &:hover {
+              -webkit-transform: scale(1.03, 1.03);
+              -moz-transform: scale(1.03, 1.03);
               transform: scale(1.03, 1.03);
             }
           }
@@ -321,28 +324,32 @@ div {
         .flex-item-6 {
           &.rightPostItem {
             .blog-post {
-              transition: 300ms;
               -webkit-transition: 300ms ease;
               -moz-transition: 300ms ease;
-              -o-transition: 300ms ease;
+              transition: 300ms;
               &:hover {
+                -webkit-transform: scale(1.03, 1.03);
+                -moz-transform: scale(1.03, 1.03);
                 transform: scale(1.03, 1.03);
               }
             }
           }
           &.leftPostItem {
             .blog-post {
-              transition: 300ms;
               -webkit-transition: 300ms ease;
               -moz-transition: 300ms ease;
-              -o-transition: 300ms ease;
+              transition: 300ms;
               &:hover {
+                -webkit-transform: scale(1.03, 1.03);
+                -moz-transform: scale(1.03, 1.03);
                 transform: scale(1.03, 1.03);
               }
             }
           }
           .blog-post {
             height: 100%;
+            -webkit-transition: 400ms;
+            -moz-transition: 400ms;
             transition: 400ms;
             .blog-content {
               padding: 20px;
