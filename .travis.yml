@@ -1,0 +1,68 @@
+language: node_js
+dist: trusty
+git:
+  depth: 1
+cache:
+  bundler: true
+  directories:
+    - node_modules
+    - "$(npm root -g)"
+    - "$(npm config get prefix)/bin"
+branches:
+  only:
+    - master
+    - stage
+    - test
+    - build
+    - dev
+env:
+  global:
+    - DEEP_NO_INTERACTION=1
+    # AWS_ACCOUNT_ID=[secure]
+    - secure: "ePbd6/WnEmnC7rorMaNxaMZT/qSvXOhg7qlyg0A9OFT2kw+0r8pObD7mdjBMqJKURMnghUiu2LkcFepyi48A/nJ6Axbx2JY1SpPQW2dh4O/jhWSJ8MCiJCRhw9c6L0wlUo45NG4ntv8vj3XBoUOu5mcdyZGfbXD8M5/q8R6+MwmgU9x59UMeIqessT37xOpxYRx7+bF3ZPUZQFcqJKmmbw7DMzq2zQIwEdTt/aP/KaiRp1h3QIw8jIpZqowKqpBXVxVpv368vHRtUFnDP6HRZxpagvt+SaC+rBtaIWHjtxDg74NiA62wDX0ZMnU5qLKWV7uv/zg/kyIPr9xhbiDZr1DI3ARvCuz72+XcbjI/L59tH9Y4+TbHQWUjVtoHYhb2BwyLlcxgS27osVR+nPTrBtjvAEpxiFv3kTk9uY6+QMTuMlbyqa813tyt1mMDVxpXqK11yKjnMDni+JxGtLiZT+HhVt/wSaghayrjoDw0DPJOvggjA1f7lmLTbMNvM1AFpYnpVaeUNQXjkY33aINEOKZqUTMvUcQahUK/2WS7YSxcQ+TM3xxVcmwqSN4JLDonwGgLMTyGOcvaNUhAgLHUCdJQGHnWrO224nelL7ZGARQtDY+YGT7BMJfIDzGvGqVS1MEaiPU7u/GmSnLvXvrqO02hu/BYdNQmSOvsUC7iyA8="
+    # AWS_ACCESS_KEY_ID=[secure]
+    - secure: "XBjrF6MoHuaRSAwBInuf9hqzNvuT5P7Ld8dfZkrPWYMTMY38IC1hO7K5bNpF3GBaDn8jNE3Q44sYxaOvB4xFJO+EQ0vWeahHxwbwjqbOef95pYNb2oWM65/k3opgRXrlDV1zvjH5XG2JUaA9GIFQpljRMEKA2AhvxAhGsUfL74gxZKADX9TcdU3RDqT/t3/7jD6rOpbcNsPKJaiAcff8AS9+hI2PJx61v5m8H4PsVoCIESaUoDeKnf3hxOeUvAQtJ52dEW+I7RtToqaVpC9skMYeNdcNTR48Em50smkISC7Z6vyAsELs33vJEVifYi6kt9dnu5CP/Bx2VudlmcIZ5r0zyLpozIN5lk/ENhBFUFpFunyRPsnMwVPylHLDWg4ILURnfWpJv57K0eJrs7jXwS7Zi/UrFuBcSJcYZ6ryqJUBaXaEACSlCUhgkDUlut3cbekLQeC1GQpyq9yPg+kTNSjrAgRShULiJkSWPWNyT8VH1uu501WpuuhF85iGlKVfzDLIYkyXcfKFrWG7zDBIENHofIVZMOairFuZIgLv7C+yYuEC2KWmZZvXKNXzk5gbsm200ZUG1WJWTG7SQ3RKk9343vM4jN1/QwfmERPqW0x/2fD8i5Qy56RGIBmu9r7sd3shxPstMXvlUCCnalsaHM5PuPBDGIkjfchpI6LjY3U="
+    # AWS_SECRET_ACCESS_KEY=[secure]
+    - secure: "hB/ylbZG6tWw9YyQoETU40UtbPuor02bAfxwXtpQ3K1dskziHfNRbYVD/lL2+HFLoJLWJT0auXA7JQjOPBeMY2h7nJxadtEYxNT0i35giWuwR2qsN6fqjP3Sdsm7UXmzlOpmu/yyHTnJtNXyyYjpvWpv3xpU5Sc3Nm5EIuq92nw9aOm4BtLZ3ELiJFRQKSIbzqpzJFPKaXllYUS9JkzTSZoqQSmfqMMonFmBEOe4L+8NN6IKxa8OWPWOnNEOH7/N3hW8lxqumBs+dJqFFYOrthWO3vw7T4IGi9v2iGVvODnDHq9Adio6nshWJEvz7jhheP33Q7CigNDMLP5UfyHXGiMiQpBWFB8NcnU+B1D7et71UN4VIMHG2tnD0SOg861YstBHa7QehqZqixS3s3SpntJ0FEKhRBrgafbIDX+oz0Rrm4iui8ih0DlLBFSPiE//2rGBQcQgfBLAHq+SFGYxBJiL/iIMtmHkVLf6TCOnahE7o2c/3KOuzBJGNBlJjTk6RTCqFIT4t/UTl9ukGoKY1aGHOGYe11pLf1HEN/1OknrjeVet5cBEOGeIiCvpKciH4HMDQ2HzJvelQ0mJvHpqyEBEq4r38RVJgv5xg+U1a3UoCqrVwohmce50YtykSUyhxg+ogg/Rh2YPqezLLO8TVQky2noz34063kATZl9s+yo="
+    # AWS_DEFAULT_REGION=[secure]
+    - secure: "FrRNT34hAzvwFh7nPZNEii9PPwLSx1+D+/rZODBwpX7YlsMYXSt7QtLiM6+FsrgMl26dROC+cZ+Cae/pCvtS1MPpO5sCPtjd5SgENKm1YeIM8DdNDvKyRqHgod67nvVkzLFYIFNT4PEtqgTbmcNE9I2g4mMn7UxgTzmSotWH1LV5NiWSMM5AMNcVfXZrNqwfbgWDMeulo8wisM434woB0adWcFGksRSpA6dO5ZmBe0DAeMqajMEDcWd+cTrOTaUbiQq78tA/qhcRzRBzlkk7jjTl+BXYOPUFwNfMw91Yf5//K2OczQ6QsG6W1w/oroD8Is0SkQBi2QIl+ikrmb3innR3BtbBxYT5KgcNiLPB24VGkbEbuZ+rSC+i8O31ce8JVoj2dy06iV1OUJ4dMQleeAM4xranh7QLRU5kpob6HQ1VV5dGduB/qL34Kd8q2bt0w59wdssfSWeGhqNxocU8FeshuB7TfNFx/i+J0yubZqPWdKbAdzMto+VirF3ud2a3RpvsO35t3xCWTBM2jRv/ZPqFBVR8crcogVOweaDnvdGRH5NKPDzA+qw3daT97zjeElvnb83PViin586WuMPuRz87PpxzI/IRtC8ZzoXjSD5g31/u490Ohr5EJyIQlTzJCdHIctL2q7Xue8PvntZ2jkuZJt0qJOW8pXHsxApCH6w="
+    # CODECLIMATE_REPO_TOKEN=[secure]
+    - secure: "ib004xwzoaqWyfrXqlHl5V2ugxoXBhnYWTudutAnfPZPi+JVexN3skBy+yx2gWV7pRQbhAMeTwtCfkpPsYfKgjjUpocu+4aTzPxfHnYbs1PuZk+VZhOfwfZvD2m1aQ/5xx0eASKVxSDel3kSfRW/fuKJxT4XhR+uzedOenrk1UFYZ21C/ZbPAHCcp2rqVoKvg8b/V63u/eC4ftBGOYePqYJBTJ3g7hyAkydFR8TVWC2U/LaoaCqQhyi3aKk0VNnqGZJDzYeuWDsh4avwAKLUUE1ozzFqtiGpvc3pYYBkWQ0kL0TfTsDXNB6mo6yopDby47R/+/dpx5zMA3rnUEhaBYCKXT4oTaVo10J+7sEQi65XQTUGsN5MP4/0vghAiM2MNwZCaI9BOf1Gz9fDm+91xAC4y0A2QyV45TRA6IDaTz9uI88C8ewtyCwDbNWAtf4YAXDkOqxbd8MPhuaLsQhhCYxlNjV+HvthDuVhwDhUnRigqtHvQix+aDptjHfEP8Do+JWUGioQI67bcHQqzECmbzp1oq26pj2YVaErZgda34Vf+AiGHtp4bsiwDf5/QJH+YDGGgeeA2x5YVUFKUXt6IshHZWK/o2E+3M50PL3kqry1z6w9JoGct/k7Ymnf1tkK/NnSlRgBwjXDnSaf3ybQav+wgA1m+IGOeEFNr6XdERE="
+    # GITHUB_ACCESS_TOKEN=[secure]
+    - secure: "XN31XAopwekA88cOHoEkaMbNR9UPX2NF0RqHHurf+71OI4A0ARxj3sZjp3a7RkxE0wL7b2J48EEMicsMBw+KB+Phe/25x/eZ+TtpZSBnjSgqEgtwLPsjrGJVy9lINinnnDwOveZfGmpA4kUOSPj7Dg3ybriIhmiB8j49em509llJRikOEGtQruIboEubUnztIYeTOvg2wfdBEl5mPbkUp4FjAkMm+8acFz2arwGCUCOTSD0eVpmGekYWmgdb1nlWrlV2lI2IZ7jYgAg0i/HwHlj5pfzrex/sl2csrUNwq2LX6LSdOqodSRV1TnV7ikqSIz2ylF6pXhcr/WvTJgOijB8l83w0SkjxAwdgZEOcOH8Cs0ppOJsl84xkUFjXSBeyURNWjPVHM8pc0kgBefok0AVFiRLSSIaUIjCLm3DxaAqbZlHi5D6N5CWv0AlpWBW0LdPJIgQqUbnuMVRYQMqVs5ocEqQrH2VWaTlzoJscP+r2PVyqWlttTPi56b6oG0Ilr5qE0vPkwgVkuWLq9xz7odbemJSvT2JuT62hQOXCUE4DODwkpZBo/Pi+7kDwXIm/6SuKMf/kxLNT4buy+Buxt6myQesfRoQlK1SBrlezb5MmtR763jWYGD+e53dmsp3kcPTsxqjFMAunM2pKdFZG83+0BKsxQM4TAvprfZERXQI="
+    # SNYK_API_TOKEN=[secure]
+    - secure: "CqRiQyc9wD0tdqZ3Yh39tDbg/br6ymgsQME6lL5PvAfqqQieX738L899FxQo0m0Yyn+vINa1JrOybd/JTwxBM0UsD7nIG1576tJv6pKCSRXMQqjP7yFO9fdVfFL/xDvl+7paaSpvv0mrFKLstqCVaQ63zUL2BZKjzPCwpmAgrrhd1sRKnvQGymb2roShCr+ksfJZNHf5qBjZIFk/R8mkn61S4tsKtXgCQBGbp7E/R5l7mj/lXPMTW644w+lZs9o5Q47lwJrTC24Efi6cjsJsNuFMzt9Eh2qmPGMeAGVXb8rkrtuzn2U2UhMovpz1qyNokg0ltQ7PjnQ3EHoZRI3EPCeSSHGuaXgMgpEuUHtdx9hP2zy90FlDPCPiYsrJa99ORsjjRZpxvoQwRSu3KN4p7x93yHu7/ba50IwQqJby/32DP9YK37AX0b3jeyKYakdRmw7BabjhoO7mDJYsizgxjZJsRRWlpW5DQDbaNUWvJiWVVDhoLtwcl7v+T+kKgad9zhkj/uRWWRjxUMumlKIQhLLw5IFBtnoydb17OzeIttV+XNk9wGqo+RCl1AOIiYeGmYMVb1fyZ+ryEhlAasw1qwquCYtsH3nmuzasB7CWS4eorp47MxLuelqpBLSnFzZFVQTv63mL1OovFdpO9/OT7grjYBtkiS+AHxOrRapkvbU="
+
+stage: "Run Unit Tests :clipboard:"
+node_js:
+  - 6
+before_install:
+  - source bin/deploy/init.sh
+script:
+  - recink run unit -c recink-codeclimate -c recink-snyk
+
+# jobs:
+#   include:
+#     - stage: "Deploy To :cloud:"
+#       node_js: 8
+#       script:
+#         - bash bin/deploy.sh ${TRAVIS_BRANCH}
+
+#     - stage: "Run e2e Tests :clipboard:"
+#       node_js: 8
+#       script:
+#         - if [ ${ALLOW_DEPLOY} == 1 ]; then recink run e2e; else echo "Skipping e2e tests"; fi
+#       # addons:
+#       #   firefox: 'latest'
+#       #   chrome: 'beta'
+#       #   apt:
+#       #     packages:
+#       #       - xvfb
+#       # install:
+#       #   - 'export DISPLAY='':99.0'''
+#       #   - 'Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &'
+
+#     - stage: "Page speed :rocket:"
+#       node_js: 6
+#       script:
+#         - if [ ${ALLOW_DEPLOY} == 1 ]; then recink run unit -s emit -c recink-pagespeed; else echo "Skipping pagespeed"; fi

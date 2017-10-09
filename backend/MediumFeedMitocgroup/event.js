@@ -1,0 +1,3 @@
+module.exports = {
+  hasError: true
+};

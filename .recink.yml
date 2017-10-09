@@ -1,0 +1,65 @@
+--- 
+$:
+  preprocess:
+    '$.coverage.compare.storage.options.1.region': 'eval'
+    '$.coverage.compare.storage.options.1.accessKeyId': 'eval'
+    '$.coverage.compare.storage.options.1.secretAccessKey': 'eval'
+    '$.cache.options.1.region': 'eval'
+    '$.cache.options.1.accessKeyId': 'eval'
+    '$.cache.options.1.secretAccessKey': 'eval'
+    '$.codeclimate.token': 'eval'
+    '$.snyk.token': 'eval'
+  cache:
+    driver: 's3'
+    options:
+      - 's3://travis-metadata/cache/MitocGroup/www'
+      -
+        region: 'process.env.AWS_DEFAULT_REGION'
+        accessKeyId: 'process.env.AWS_ACCESS_KEY_ID'
+        secretAccessKey: 'process.env.AWS_SECRET_ACCESS_KEY'
+  emit:
+    pattern:
+      - /^test\/.+\.js$/i
+    ignore:
+      - /^(.*\/)?node_modules(\/?$)?/i
+  e2e:
+    pattern:
+      - /.+\.e2e\.js$/i
+    ignore: []
+    browsers: 
+      - puppeteer
+    wait:
+      interval: 500
+      timeout: 60000
+      uri:
+        - 'process.env.DEPLOY_HOST'
+  coverage:
+    pattern:
+      - /.+\.js$/i
+    ignore:
+      - /.+\.spec\.js$/i
+      - /^(.*\/)?node_modules(\/?$)?/i
+    reporters:
+      text-summary: ~
+      lcovonly:
+        file: ./coverage.lcov
+    compare:
+      negative-delta: 1
+      storage:                                              
+        driver: 's3'
+        options:
+          - 's3://travis-metadata/coverage/MitocGroup/www'
+          -
+            region: 'process.env.AWS_DEFAULT_REGION'
+            accessKeyId: 'process.env.AWS_ACCESS_KEY_ID'
+            secretAccessKey: 'process.env.AWS_SECRET_ACCESS_KEY'
+  codeclimate:
+    token: 'process.env.CODECLIMATE_REPO_TOKEN'
+  snyk:
+    token: 'process.env.SNYK_API_TOKEN'
+
+### Add other modules here...
+www:
+  root: 'test'
+  dependencies:
+    chance: 'latest'
