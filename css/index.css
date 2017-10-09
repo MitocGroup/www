@@ -1198,6 +1198,12 @@ div.popup {
   footer .media {
     padding: 40px 0; } }
 @media (max-height: 580px) {
+  .body .popup_cont {
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important; }
+
   .thank-you.popup-pages .text-block-confirm {
     justify-content: space-around; }
     .thank-you.popup-pages .text-block-confirm h2, .thank-you.popup-pages .text-block-confirm .img-thanks {
