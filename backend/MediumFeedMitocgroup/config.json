@@ -1,0 +1,9 @@
+{
+  "lambdaName": "MediumFeedMitocgroup",
+  "lambda": "index.js",
+  "handler": "handler",
+  "event": "event.js",
+  "role": "arn:aws:iam::722084099005:role/MediumFeedLambdaPermissions",
+  "mediumToken": "2471968cbdc91b430aeaba20101c7ba61b9bb3bc8654630f9da73015edf58ad1c",
+  "feedItems": 3
+}

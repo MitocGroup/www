@@ -1,0 +1,3 @@
+Contact: security@mitocgroup.com 
+PGP-key: https://www.mitocgroup.com/pgp-key.txt
+Disclosure: Full

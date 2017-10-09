@@ -33,8 +33,8 @@ $(function() {
    */
   (function confirmationMessage() {
     let location = document.location.toString();
-    if (location.toString().indexOf('?mc-massage=') > 0) {
-      let message = (location.split('?mc-massage='))[1];
+    if (location.toString().indexOf('?mc-message=') > 0) {
+      let message = (location.split('?mc-message='))[1];
 
       $('#mc-message').text(decodeURI(message || ''));
     }
