@@ -32,17 +32,6 @@
             }
           }
           .flex-item-6 {
-            &.rightPostItem {
-              .blog-post {
-
-              }
-            }
-            &.leftPostItem {
-              .blog-post {
-
-
-              }
-            }
             .blog-post {
               .blog-content {
                 display: inline;
@@ -89,10 +78,9 @@
         &:hover {
           margin-top: 0;
           margin-bottom: 0;
-          box-shadow: none;
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
-          -o-box-shadow: none;
+          box-shadow: none;
         }
       }
     }
@@ -131,7 +119,7 @@
     }
   }
 }
-  .aws-block {
+  .partners{
     .gray-block {
       text-align: center;
       .container {
@@ -190,6 +178,8 @@
             .flex-item-12, .flex-item-6 {
               .blog-post {
                 &:hover {
+                  -webkit-transform: none;
+                  -moz-transform: none;
                   transform: none;
                 }
               }
@@ -259,10 +249,9 @@
       a {
         .mitoc-logo {
           height: 32px;
-          transition: .4s;
           -webkit-transition: .4s;
           -moz-transition: .4s;
-          -o-transition: .4s;
+          transition: .4s;
         }
       }
     }
@@ -301,7 +290,6 @@
         text-align: center;
         height: calc(100vh - 54px);
         background: white;
-        //top: 54px;
       }
     }
   }
@@ -397,7 +385,7 @@
     }
 
   body {
-    .aws-block {
+    .partners {
       .aws-info {
         .block-text_img {
           &.pull-left {
@@ -583,9 +571,9 @@
       height: 100vh;
       width: 100vw;
       max-width: 100vw;
-      transform: none;
       -webkit-transform: none;
-
+      -moz-transform: none;
+      transform: none;
       .md-content {
         height: 100%;
         overflow: auto;
