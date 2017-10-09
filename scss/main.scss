@@ -42,10 +42,12 @@
       .hover-effect {
         -webkit-transition: 0.4s ease;
         -moz-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
         transition: 0.4s ease;
         &:hover {
           -webkit-transform: scale(1.2, 1.2);
           -moz-transform: scale(1.2, 1.2);
+          -o-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
         }
       }
@@ -65,6 +67,7 @@ footer {
         display: inline-block;
         -webkit-transition: 0.4s ease-in-out;
         -moz-transition: 0.4s ease-in-out;
+        -o-transition: 0.4s ease-in-out;
         transition: 0.4s ease-in-out;
       }
     }
@@ -128,7 +131,11 @@ footer {
     margin-bottom: 4%;
     -webkit-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
     transition: 300ms;
     .info h4 {
       color: $accent-green;
@@ -288,6 +295,7 @@ div {
             max-height: 300px;
             -webkit-transition: 300ms ease;
             -moz-transition: 300ms ease;
+            -o-transition: 300ms ease;
             transition: 300ms;
             .blog-content {
               padding: 20px;
@@ -317,6 +325,7 @@ div {
             &:hover {
               -webkit-transform: scale(1.03, 1.03);
               -moz-transform: scale(1.03, 1.03);
+              -o-transform: scale(1.03, 1.03);
               transform: scale(1.03, 1.03);
             }
           }
@@ -326,10 +335,12 @@ div {
             .blog-post {
               -webkit-transition: 300ms ease;
               -moz-transition: 300ms ease;
+              -o-transition: 300ms ease;
               transition: 300ms;
               &:hover {
                 -webkit-transform: scale(1.03, 1.03);
                 -moz-transform: scale(1.03, 1.03);
+                -o-transform: scale(1.03, 1.03);
                 transform: scale(1.03, 1.03);
               }
             }
@@ -338,10 +349,12 @@ div {
             .blog-post {
               -webkit-transition: 300ms ease;
               -moz-transition: 300ms ease;
+              -o-transition: 300ms ease;
               transition: 300ms;
               &:hover {
                 -webkit-transform: scale(1.03, 1.03);
                 -moz-transform: scale(1.03, 1.03);
+                -o-transform: scale(1.03, 1.03);
                 transform: scale(1.03, 1.03);
               }
             }
@@ -350,6 +363,7 @@ div {
             height: 100%;
             -webkit-transition: 400ms;
             -moz-transition: 400ms;
+            -o-transition: 400ms;
             transition: 400ms;
             .blog-content {
               padding: 20px;

@@ -45,6 +45,7 @@
                 -moz-line-clamp: 4;
                 -webkit-box-orient: vertical;
                 -moz-box-orient: vertical;
+                -ms-box-orient: vertical;
                 white-space: normal;
                 &:hover {
                   color: $accent-green;
@@ -80,6 +81,7 @@
           margin-bottom: 0;
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
+          -o-box-shadow: none;
           box-shadow: none;
         }
       }
@@ -180,6 +182,7 @@
                 &:hover {
                   -webkit-transform: none;
                   -moz-transform: none;
+                  -o-transform: none;
                   transform: none;
                 }
               }
@@ -198,6 +201,7 @@
                   -moz-line-clamp: 4;
                   -webkit-box-orient: vertical;
                   -moz-box-orient: vertical;
+                  -ms-box-orient: vertical;
                   white-space: normal;
                   h4 {
                     overflow: hidden;
@@ -251,6 +255,7 @@
           height: 32px;
           -webkit-transition: .4s;
           -moz-transition: .4s;
+          -o-transition: .4s;
           transition: .4s;
         }
       }
