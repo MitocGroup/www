@@ -1198,6 +1198,17 @@ div.popup {
   footer .media {
     padding: 40px 0; } }
 @media (max-height: 580px) {
+  body .popup_cont {
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important; }
+    body .popup_cont div.popup {
+      min-width: 100vw;
+      max-width: 100vw;
+      height: 100vh;
+      overflow: auto; }
+
   .thank-you.popup-pages .text-block-confirm {
     justify-content: space-around; }
     .thank-you.popup-pages .text-block-confirm h2, .thank-you.popup-pages .text-block-confirm .img-thanks {
@@ -1207,6 +1218,17 @@ div.popup {
     .thank-you .text-block-confirm h2, .thank-you .text-block-confirm .img-thanks {
       margin: 0; } }
 @media (max-width: 568px) {
+  body .popup_cont {
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important; }
+    body .popup_cont div.popup {
+      min-width: 100vw;
+      max-width: 100vw;
+      height: 100vh;
+      overflow: auto; }
+
   .wrapper .pictures-block .flex-item-3 {
     flex: 0 0 100%;
     max-width: 100%; }

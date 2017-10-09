@@ -509,6 +509,20 @@
 }
 
 @media (max-height: 580px) {
+  body {
+    .popup_cont {
+      left: 0 !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      right: 0 !important;
+      div.popup {
+        min-width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        overflow: auto;
+      }
+    }
+  }
   .thank-you {
     &.popup-pages {
       .text-block-confirm {
@@ -528,6 +542,20 @@
 }
 
 @media (max-width: 568px) {
+  body {
+    .popup_cont {
+      left: 0 !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      right: 0 !important;
+      div.popup {
+        min-width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        overflow: auto;
+      }
+    }
+  }
   .wrapper {
     .pictures-block {
       .flex-item-3 {
