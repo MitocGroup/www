@@ -901,7 +901,8 @@ div.popup {
   .thank-you .text-block-confirm {
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    height: 100%; }
   .thank-you h2 {
     text-transform: uppercase;
     margin-bottom: 40px;
