@@ -51,10 +51,6 @@ else
 
 fi
 
-message "Synchronizing build directory"
-aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} --profile ${PROFILE}  \
-    --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
-
 message "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*'
 
