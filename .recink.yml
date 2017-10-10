@@ -3,20 +3,21 @@ $:
   preprocess:
     '$.e2e.wait.uri.0': 'eval'
   npm:
-    scripts: []                                                             # Scripts to run after installing dependencies
+    scripts: []
   emit:
-    pattern:                                                                # Files to include
-      - /.+\.e2e\.js$/i
-    ignore:                                                                 # Files to exclude
+    pattern:
+      - /.+\.js$/i
+    ignore:
+      - /^(.*\/)?bin(\/?$)?/i
       - /^(.*\/)?node_modules(\/?$)?/i
   test:
     mocha:
-      options:                                                              # Mocha options
+      options:
         ui: 'bdd'
         reporter: 'spec'
-    pattern:                                                                # Files to include
+    pattern:
       - /.+\.spec\.js$/i
-    ignore: ~                                                               # Files to exclude
+    ignore: ~
   e2e:
     pattern:
       - /.+\.e2e\.js$/i
@@ -28,8 +29,8 @@ $:
       timeout: 60000
       uri:
         - 'process.env.DEPLOY_HOST'
-www:
+
+test-suite:
   root: 'test/suite'
   dependencies:
     chance: 'latest'
-        

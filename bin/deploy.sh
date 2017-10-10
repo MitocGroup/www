@@ -14,7 +14,7 @@ message() {
     echo -e "\033[38;5;148m"$1"\033[39m"
 }
 
-if [ ${TRAVIS} = false ]; then
+if [ -z ${TRAVIS_BRANCH+x} ]; then
     message "You are going to deploy from '${BRANCH}' branch (region: ${REGION}), continue? [y|n]: "
     read CONFIRM
 
@@ -41,14 +41,12 @@ ${MY_DIR}/build.sh ${BRANCH}
 message "Build: Done"
 
 message "Synchronizing build directory"
-if [ ${TRAVIS} = true ]; then
-    aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION}  \
+if [ -z ${AWS_ACCESS_KEY_ID+x} ]; then
+    aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
         --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
-
 else 
-    aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} --profile ${PROFILE}  \
+    aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} \
         --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
-
 fi
 
 message "Invalidating CloudFront"
