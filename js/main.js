@@ -23,6 +23,22 @@ $(function() {
             return;
         }
     });
+
+    $('#mce-error-response, #mce-success-response').on('click',function() {
+        $('#mce-error-response, #mce-success-response').fadeOut('fast');
+    });
+
+  /**
+   * Parse confirmation message and append it to the page
+   */
+  (function confirmationMessage() {
+    let location = document.location.toString();
+    if (location.toString().indexOf('?mc-message=') > 0) {
+      let message = (location.split('?mc-message='))[1];
+
+      $('#mc-message').text(decodeURI(message || ''));
+    }
+  })();
 });
 
 $(window).scroll(function() {
@@ -31,5 +47,6 @@ $(window).scroll(function() {
         $('.navbar-fix').addClass('color-nav');
     } else {
         $('.navbar-fix').removeClass("color-nav");
+        
     }
 });

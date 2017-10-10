@@ -1,4 +1,5 @@
 $black-color: #000000;
+$red-color: #FF0000;
 $main-color: #7ED257;
 $accent-green: #28b655;
 $white-color: #ffffff;
@@ -36,10 +37,10 @@ body {
 
 a {
   cursor: pointer;
-  transition: 0.4s ease-in-out;
   -webkit-transition: 0.4s ease-in-out;
   -moz-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   text-decoration: none;
   color: $black-color;
   &:hover {
@@ -179,8 +180,9 @@ p, ul, span {
 .pull-center {
   position: relative;
   top: 50%;
-  -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -190,27 +192,28 @@ p, ul, span {
   font-weight: bold;
   font-family: 'Avenir-Black', sans-serif;
   padding: 15px 40px;
-  border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
+  border-radius: 30px;
   color: $black-color;
   display: inline-block;
   border-color: transparent;
-  transition: 0.4s ease-in-out;
   -webkit-transition: 0.4s ease-in-out;
   -moz-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .btn-green {
   background-color: $main-color;
-  box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
   -webkit-box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
   -moz-box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
+  box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
   &:hover {
-    box-shadow: 0 8px 20px rgba(40, 182, 85, 1);
     -webkit-box-shadow: 0 8px 20px rgba(40, 182, 85, 1);
     -moz-box-shadow: 0 8px 20px rgba(40, 182, 85, 1);
+    box-shadow: 0 8px 20px rgba(40, 182, 85, 1);
     color: $black-color;
     background-color: $accent-green;
   }
@@ -218,13 +221,15 @@ p, ul, span {
 
 .btn-white {
   background-color: $white-color;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+  -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
   &:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 16);
     -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+    -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 16);
     color: $black-color;
   }
 }
@@ -235,11 +240,12 @@ p, ul, span {
   border: 0;
   background-color: transparent;
   font-family: "Avenir-Black", sans-serif;
-  transition: 0.4s ease-in-out;
   -webkit-transition: 0.4s ease-in-out;
   -moz-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     color: $accent-green;
   }
@@ -305,6 +311,18 @@ p, ul, span {
   }
   .flex-row {
       margin: 0 -20px;
+    .flex-item-4 {
+      &:nth-child(2) {
+        .info-block {
+          padding-right: 0;
+          padding-left: 0;
+          .aws-img-block, .info, .read-more {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
     }
 
   .info-block {
@@ -313,25 +331,28 @@ p, ul, span {
     margin-left: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 5px;
-    height: 100%;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    transition: 0.4s ease-in-out;
+    border-radius: 5px;
+    height: 100%;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
+    .aws-img-block {
+      margin-top: 20px;
+    }
 
     img {
       width: 100%;
     }
     .info {
-      transition: 0.4s ease-in-out;
       -webkit-transition: 0.4s ease-in-out;
       -moz-transition: 0.4s ease-in-out;
       -o-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out;
       padding-bottom: 20px;
       display: flex;
       flex-direction: column;
@@ -397,8 +418,10 @@ p, ul, span {
   }
   .input-styles {
     padding: 25px 0 40px 0;
-    label {
-      color: red;
+    .mc-response-label{
+      &.error {
+        color: red;
+      }
     }
   }
 }
@@ -419,10 +442,10 @@ i {
     content: "\e90b";
     color: rgb(36, 36, 36);
     font-size: 250%;
-    transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   &:hover:before {
     color: $accent-green;
@@ -434,10 +457,10 @@ i {
     content: "\e90d";
     color: rgb(36, 36, 36);
     font-size: 250%;
-    transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   &:hover:before {
     color: $accent-green;
@@ -449,10 +472,10 @@ i {
     content: "\e909";
     color: rgb(36, 36, 36);
     font-size: 250%;
-    transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   &:hover:before {
     color: $accent-green;
@@ -464,10 +487,10 @@ i {
     content: "\e90a";
     color: rgb(36, 36, 36);
     font-size: 250%;
-    transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   &:hover:before {
     color: $accent-green;
@@ -479,10 +502,10 @@ i {
     content: "\e90c";
     color: rgb(36, 36, 36);
     font-size: 250%;
-    transition: 0.4s ease-in-out;
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   &:hover:before {
     color: $accent-green;
@@ -497,6 +520,7 @@ i {
     -webkit-transition: 0.4s ease-in-out;
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   &:hover:before {
     color: $accent-green;
@@ -538,6 +562,14 @@ i {
 
 .color-nav-responsive {
   background-color: $white-color;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.space-top {
+  margin-top: 84px;
 }
 
 .navbar-fix {
@@ -546,20 +578,23 @@ i {
   top: 0;
   height: 84px;
   width: 100%;
-  transition: .2s;
-  -webkit-transition: .2s;
-  -moz-transition: .2s;
-  -o-transition: .2s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  &.white-color {
+    background-color: $white-color;
+  }
   &.color-nav {
     background-color: $white-color;
-    transition: .2s;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-    -o-transition: .2s;
-    box-shadow: 0 4px 9px -7px $black-color;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
     -webkit-box-shadow: 0 4px 9px -7px $black-color;
     -moz-box-shadow: 0 4px 9px -7px $black-color;
     -o-box-shadow: 0 4px 9px -7px $black-color;
+    box-shadow: 0 4px 9px -7px $black-color;
     height: 54px;
     .logo, .nav-bar {
       line-height: 54px;
@@ -568,6 +603,10 @@ i {
       a {
         .mitoc-logo {
           height: 32px;
+          -webkit-transition: .4s;
+          -moz-transition: .4s;
+          -o-transition: .4s;
+          transition: .4s;
         }
       }
     }
@@ -587,6 +626,10 @@ i {
       display: block;
       .mitoc-logo {
         height: 40px;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
       }
     }
   }
@@ -615,62 +658,15 @@ i {
   display: none;
 }
 
-
-/* Individual modal styles with animations/transitions */
-
-/* Effect 1: Fade in and scale up */
-.md-effect-1 {
-  .md-content {
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    transform: scale(0.7);
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-}
-
-.md-show {
-  &.md-effect-1 {
-    .md-content {
-      -webkit-transform: scale(1);
-      -moz-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-}
-
 /* MailChimp*/
 
-#mc_embed_signup {
-  #mc-embedded-subscribe-form {
-    div {
-      &.mce_inline_error {
-        position: absolute;
-        background-color: $white-color;
-        color: red;
-        padding: 0 0 5px 0;
-        font-size: 14px;
-        font-family: OpenSans-Regular, sans-serif;
-      }
-    }
-  }
+.mc-error {
+  color: $red-color;
+  font-family: OpenSans-Regular, sans-serif;
 }
 
-#mce-success-response {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 30px;
-  background-color: #DFF2BF;
-  color: #4F8A10;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  z-index: 2;
-
+#mc-general-error-project, #mc-general-error-partner {
+  padding-bottom: 40px;
+  color: $accent-green;
+  font-family: OpenSans-Regular, sans-serif;
 }

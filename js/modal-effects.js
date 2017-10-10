@@ -1,138 +1,138 @@
 $(function() {
     'use strict';
 
-    let $body = $('body');
-    let startProject = new $.Popup();
-    let becomePartner = new $.Popup();
+  let $body = $('body');
+  let startProject = new $.Popup();
+  let becomePartner = new $.Popup();
 
-    let startProjectContent = `<div class="md-content popup">
-      <h3>Start a Project</h3>
-      <div id="mc_embed_signup contact-form">
-          <form action="//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=f6629ecf38" 
-                method="post" 
-                id="mc-embedded-subscribe-form-modal" 
-                name="mc-embedded-subscribe-form"
-                data-redirect-path="/confirm/start-project"
-                class="validate form-styles" 
-                novalidate>
-              <div id="mc_embed_signup_scroll">
-                  <div class="flex-row">
-                      <div class="flex-item-12">
-                          <div class="mc-field-group input-styles space-input">
-                              <label for="mce-FNAME" class="mc-response-label"></label>
-                              <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Full Name" required>
-                          </div>
-                      </div>
-                      </div>
-                      <div class="flex-row">
-                      <div class="flex-item-12">
-                          <div class="mc-field-group input-styles">
-                              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" required>
-                              <label for="mce-EMAIL" class="mc-response-label"></label>
-                          </div>
-                      </div>
-                      <label class="mc-response-label"></label>
-                  </div>
-                  <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response"></div>
-                      <div class="response" id="mce-success-response"></div>
-                  </div>
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                      <input type="text" name="b_13a7a5fca813b378c24ec9fe3_f6629ecf38" tabindex="-1" value="">
-                  </div>
-              </div>
-              <div class="flex-row">
-                  <div class="flex-item-6 ">
-                      <button class="btn-popup close-start-project-modal">Cancel</button>
-                  </div>
-                  <div class="flex-item-6">
-                      <button class="btn-popup submit-modal-form" type="submit" name="subscribe" id="mc-embedded-subscribe">Submit</button>
-                  </div>
-              </div>
-          </form>
-      </div>
-  </div>`;
+  let startProjectContent = `<div class="md-content popup">
+        <h3>Start a Project</h3>
+        <div>
+            <form id="start-project-form" class="form-styles">
+                <div class="flex-row">
+                    <div class="flex-item-12 mc-form-group-FNAME input-styles space-input">
+                        <input type="text" name="FNAME" placeholder="Full name">
+                        <div class="mc-error"></div>
+                    </div>    
+                </div>
+                <div class="flex-row">
+                    <div class="flex-item-12 mc-form-group-EMAIL input-styles space-input">
+                        <input type="email" name="EMAIL" placeholder="Email">
+                        <div class="mc-error"></div>
+                    </div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-item-12" id="mc-general-error-project"></div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-item-6">
+                        <button class="btn-popup cancel-modal-btn">Cancel</button>
+                    </div>
+                    <div class="flex-item-6">
+                        <button class="btn-popup" type="button" id="submit-modal-form">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>`;
 
   let becomePartnerContent = `<div class="md-content popup">
       <h3>Become a Partner</h3>
-      <div id="mc_embed_signup contact-form">
-          <form action="//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=7257663d85" 
-                method="post" 
-                id="mc-embedded-subscribe-form-modal" 
-                name="mc-embedded-subscribe-form" 
-                class="validate form-styles"
-                data-redirect-path="/confirm/become-partner" 
-                novalidate>
-              <div id="mc_embed_signup_scroll">
-                  <div class="flex-row">
-                      <div class="flex-item-12">
-                          <div class="mc-field-group input-styles">
-                              <label for="mce-FNAME" class="mc-response-label"></label>
-                              <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Full Name">
-                          </div>
-                      </div>
-                      </div>
-                      <div class="flex-row">
-                      <div class="flex-item-12">
-                          <div class="mc-field-group input-styles">
-                              <label for="mce-COMPANY"></label>
-                              <input type="text" value="" name="COMPANY" class="required" id="mce-COMPANY" placeholder="Company">
-                          </div>
-                      </div>
-                      </div>
-                      <div class="flex-row">
-                      <div class="flex-item-12">
-                          <div class="mc-field-group input-styles">
-                              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
-                              <label for="mce-EMAIL" class="mc-response-label"></label>
-                          </div>
-                      </div>
-                  </div>
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                      <input type="text" name="b_13a7a5fca813b378c24ec9fe3_f6629ecf38" tabindex="-1" value="">
+      <div>
+          <form id="become-partner-form" class="form-styles">
+              <div class="flex-row">
+                  <div class="flex-item-12 mc-form-group-FNAME input-styles space-input">
+                      <input type="text" name="FNAME" placeholder="Full name">
+                      <div class="mc-error"></div>
+                  </div>    
+              </div>
+              <div class="flex-row">
+                  <div class="flex-item-12 mc-form-group-COMPANY input-styles space-input">
+                      <input type="text" name="COMPANY" placeholder="Company">
+                      <div class="mc-error"></div>
+                  </div>    
+              </div>
+              <div class="flex-row">
+                  <div class="flex-item-12 mc-form-group-EMAIL input-styles space-input">
+                      <input type="email" name="EMAIL" placeholder="Email">
+                      <div class="mc-error"></div>
                   </div>
               </div>
               <div class="flex-row">
-                  <div class="flex-item-6 ">
-                      <button class="btn-popup close-start-project-modal">Cancel</button>
+                  <div class="flex-item-12" id="mc-general-error-partner"></div>
+              </div>
+              <div class="flex-row">
+                  <div class="flex-item-6">
+                      <button class="btn-popup cancel-modal-btn">Cancel</button>
                   </div>
                   <div class="flex-item-6">
-                      <button class="btn-popup submit-modal-form" type="submit" name="subscribe" id="mc-embedded-subscribe">Submit</button>
+                      <button class="btn-popup" type="button" id="submit-modal-form">Submit</button>
                   </div>
               </div>
           </form>
-      </div>
-  </div>`;
+      </div>`;
 
   $('.start-project').on('click', function () {
     startProject.open(startProjectContent, 'html');
-  });
 
-  $body.on('click', '.close-start-project-modal', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    startProject.close();
-    becomePartner.close();
-  });
+    $('#start-project-form').MailChimpForm({
+      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=f6629ecf38',
+      fields: 'EMAIL,FNAME',
+      submitSelector: '#submit-modal-form',
+      onFail: function (errMsg) {
+        let $genErr = $('#mc-general-error-project');
 
-  $body.on('click', '.submit-modal-form', function () {
-    let $form = $('#mc-embedded-subscribe-form-modal');
-
-    $(this).on('click', function () {
-      $form.submit();
-    });
-
-    $form.ajaxChimp({
-      callback: function (data) {
-        if (data.result === 'success') {
-          window.location = $form.data('redirect-path');
-        }
+        $genErr.text(errMsg);
+        setTimeout(() => { $genErr.text(''); }, 5000);
+      },
+      onOk: function (okMsg) {
+        window.location = `/confirm/start-project/?mc-message=${okMsg}`
       }
     });
   });
 
   $('.become-partner').on('click', function () {
     becomePartner.open(becomePartnerContent, 'html');
+
+    $('#become-partner-form').MailChimpForm({
+      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=7257663d85',
+      fields: 'EMAIL,FNAME,COMPANY',
+      submitSelector: '#submit-modal-form',
+      onFail: function (errMsg) {
+        let $genErr = $('#mc-general-error-partner');
+
+        $genErr.text(errMsg);
+        setTimeout(() => { $genErr.text(''); }, 5000);
+      },
+      onOk: function (okMsg) {
+        window.location = `/confirm/become-partner/?mc-message=${okMsg}`
+      }
+    });
+  });
+
+  $('#contact-us-form').MailChimpForm({
+    url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=daffe46160',
+    fields: 'EMAIL,FNAME,COMPANY,PHONE,MESSAGE',
+    submitSelector: '#submit-contact-form',
+    onFail: function (errMsg) {
+      let $genErr = $('#mc-general-error');
+
+      $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+      setTimeout(() => { $genErr.html(''); }, 5000);
+    },
+    onOk: function (okMsg) {
+      window.location = `/confirm/contact-us/?mc-message=${okMsg}`
+    }
+  });
+
+  /**
+   * Cancel modal event listener
+   */
+  $body.on('click', '.cancel-modal-btn', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    startProject.close();
+    becomePartner.close();
   });
 
 });

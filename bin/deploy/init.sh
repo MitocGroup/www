@@ -24,14 +24,18 @@ ensure_required_deps() {
     REQUIRED_DEPS=(
         deepify
         recink
+        recink-codeclimate
         recink-snyk
         recink-pagespeed
-        recink-codeclimate
         aws-sdk
         mitocgroup/npm_lazy
+        uglify-js
+        uglify-es
         uglifyjs-webpack-plugin
         mishoo/UglifyJS2#harmony-v2.8.22
         webpack
+        html-minifier
+        cssnano-cli
     );
 
     for DEP in ${REQUIRED_DEPS[@]}; do

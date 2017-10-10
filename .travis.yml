@@ -36,36 +36,33 @@ env:
 stage: "Run Unit Tests :clipboard:"
 node_js:
   - 6
-  - 8
 before_install:
   - source bin/deploy/init.sh
 script:
   - recink run unit -c recink-codeclimate -c recink-snyk
 
-# jobs:
-#   include:
-#     - stage: "Deploy To :cloud:"
-#       node_js: 6
-#       script:
-#         - if [ ${ALLOW_DEPLOY} == 1 ]; then node bin/deploy; else echo "Skipping deploy"; fi
-#       after_failure:
-#         - deepify undeploy src --loglevel=debug
+jobs:
+  include:
+    - stage: "Deploy To :cloud:"
+      node_js: 8
+      script:
+        - bash bin/deploy.sh ${TRAVIS_BRANCH}
 
-#     - stage: "Run e2e Tests :clipboard:"
-#       node_js: 8
-#       script:
-#         - if [ ${ALLOW_DEPLOY} == 1 ]; then recink run e2e; else echo "Skipping e2e tests"; fi
-#       # addons:
-#       #   firefox: 'latest'
-#       #   chrome: 'beta'
-#       #   apt:
-#       #     packages:
-#       #       - xvfb
-#       # install:
-#       #   - 'export DISPLAY='':99.0'''
-#       #   - 'Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &'
+    - stage: "Run e2e Tests :clipboard:"
+      node_js: 8
+      script:
+        - if [ ${ALLOW_DEPLOY} == 1 ]; then recink run e2e; else echo "Skipping e2e tests"; fi
+      # addons:
+      #   firefox: 'latest'
+      #   chrome: 'beta'
+      #   apt:
+      #     packages:
+      #       - xvfb
+      # install:
+      #   - 'export DISPLAY='':99.0'''
+      #   - 'Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &'
 
-#     - stage: "Page speed :rocket:"
-#       node_js: 6
-#       script:
-#         - if [ ${ALLOW_DEPLOY} == 1 ]; then recink run unit -s emit -c recink-pagespeed; else echo "Skipping pagespeed"; fi
+    - stage: "Page speed :rocket:"
+      node_js: 6
+      script:
+        - if [ ${ALLOW_DEPLOY} == 1 ]; then recink run unit -s emit -c recink-pagespeed; else echo "Skipping pagespeed"; fi
