@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+echo "## BUILD - MY_DIR: ${MY_DIR}"
 CODE_DIR=$(dirname ${MY_DIR})
+echo "## BUILD - CODE_DIR: ${CODE_DIR}"
 BUILD_DIR=${MY_DIR}/build
+echo "## BUILD - BUILD_DIR: ${BUILD_DIR}"
 BRANCH=$([ -n "$1" ] && echo "$1" || echo 'dev')
+echo "## BUILD - BRANCH: ${BRANCH}"
 
 echo "Minifying css code"
 cssnano < ${CODE_DIR}/css/index.css > ${CODE_DIR}/css/index.min.css

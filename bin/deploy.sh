@@ -6,15 +6,19 @@ if [ -z $(which aws) ]; then
 fi
 
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+echo "## DEPLOY - MY_DIR: ${MY_DIR}"
 BRANCH=$([ -n "$1" ] && echo "$1" || echo 'dev')
+echo "## DEPLOY - BRANCH: ${BRANCH}"
 REGION=$([ -n "$2" ] && echo "$2" || echo 'us-west-2')
+echo "## DEPLOY - REGION: ${REGION}"
 PROFILE=$([ -n "$3" ] && echo "$3" || echo 'default')
+echo "## DEPLOY - PROFILE: ${PROFILE}"
 
 message() {
     echo -e "\033[38;5;148m"$1"\033[39m"
 }
 
-if [ -z ${TRAVIS_BRANCH+x} ]; then
+if [ -z ${DEEP_NO_INTERACTION+x} ]; then
     message "You are going to deploy from '${BRANCH}' branch (region: ${REGION}), continue? [y|n]: "
     read CONFIRM
 
