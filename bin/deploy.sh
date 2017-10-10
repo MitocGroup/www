@@ -14,12 +14,14 @@ message() {
     echo -e "\033[38;5;148m"$1"\033[39m"
 }
 
-message "You are going to deploy from '${BRANCH}' branch (region: ${REGION}), continue? [y|n]: "
-read CONFIRM
+if [ ${TRAVIS} = false ]; then
+    message "You are going to deploy from '${BRANCH}' branch (region: ${REGION}), continue? [y|n]: "
+    read CONFIRM
 
-if [ ${CONFIRM} != 'y' ]; then
-    echo 'Exiting without deploy'
-    exit 1
+    if [ ${CONFIRM} != 'y' ]; then
+        echo 'Exiting without deploy'
+        exit 1
+    fi
 fi
 
 if [ ${BRANCH} != 'master' ]; then
