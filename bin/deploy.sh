@@ -41,7 +41,18 @@ ${MY_DIR}/build.sh ${BRANCH}
 message "Build: Done"
 
 message "Synchronizing build directory"
-aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
+if [ ${TRAVIS} = true ]; then
+    aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION}  \
+        --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
+
+else 
+    aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} --profile ${PROFILE}  \
+        --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
+
+fi
+
+message "Synchronizing build directory"
+aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} --profile ${PROFILE}  \
     --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
 
 message "Invalidating CloudFront"

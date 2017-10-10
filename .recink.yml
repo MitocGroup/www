@@ -32,3 +32,4 @@ www:
   root: 'test/suite'
   dependencies:
     chance: 'latest'
+        
