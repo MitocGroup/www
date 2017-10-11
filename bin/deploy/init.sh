@@ -2,16 +2,13 @@
 
 setup_variables() {
     export HOTFIX=0
-    export ALLOW_DEPLOY=0
     export DEPLOY_ENV=${TRAVIS_BRANCH}
     export DEPLOY_HOST="https://www.mitocgroup.com"
 
     case ${DEPLOY_ENV} in
-        test | stage )
-            ALLOW_DEPLOY=1
-            DEPLOY_HOST="https://www-${DEPLOY_ENV}.mitocgroup.com"
+        dev | test | stage )
+            DEPLOY_HOST="https://www-test.mitocgroup.com"
         ;;
-        master ) ALLOW_DEPLOY=1 ;;
     esac
 
     if [[ ${TRAVIS_PULL_REQUEST_BRANCH} =~ ^hotfix ]]; then HOTFIX=1; fi

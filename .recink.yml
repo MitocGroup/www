@@ -31,6 +31,6 @@ $:
         - 'process.env.DEPLOY_HOST'
 
 test-suite:
-  root: 'test/suite'
+  root: 'test'
   dependencies:
-    chance: 'latest'
+    chance: 'latest'  
