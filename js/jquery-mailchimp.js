@@ -87,7 +87,9 @@
               let errorMessage = res.msg;
 
               if (errorMessage.substr(1, 4).indexOf('-') >= 0) {
-                [inputIndex, errorMessage] = res.msg.split('-').map(item => item.trim());
+                let result = res.msg.split('-').map(item => item.trim());
+                inputIndex = result[0];
+                errorMessage = result[1];
               }
 
               onError(errorMessage, inputIndex);
