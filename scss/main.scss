@@ -13,7 +13,7 @@
       width: 700px;
       h1 {
         font-size: 45px;
-        color: red;
+        color: $accent-green;
         line-height: 61px;
         padding-top: 200px;
       }
@@ -170,9 +170,9 @@ footer {
     .slick-prev {
       left: auto;
       right: 50%;
-      width: 150px;
+      width: 200px;
       &:before {
-        content: "Our Mission";
+        content: "Our Strategy";
         color: $black-color;
         opacity: 1;
         font-size: 20px;
@@ -188,9 +188,9 @@ footer {
     }
     .slick-next {
       left: 50%;
-      width: 200px;
+      width: 150px;
       &:before {
-        content: "Our Strategy";
+        content: "Our Mission";
         color: $black-color;
         opacity: 1;
         font-size: 20px;
@@ -274,7 +274,7 @@ div {
             border: 1px solid $black-color;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
-            border-radius: 1px;
+            border-radius: 5px;
             margin: 0 20px;
             overflow: hidden;
             .blog-content {

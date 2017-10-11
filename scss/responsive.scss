@@ -605,11 +605,9 @@
   }
   .navbar-fix {
     .nav-bar {
-      .navigation {
-        line-height: normal;
-      }
       .open +.navigation {
         justify-content: space-around;
+        line-height: normal;
       }
     }
   }
