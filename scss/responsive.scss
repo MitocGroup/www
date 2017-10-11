@@ -346,6 +346,18 @@
 }
 
 @media (max-width: 680px) {
+  .wrapper {
+    .main-page {
+      .main-text {
+        h1 {
+          padding-top: 150px;
+        }
+      }
+      .top_button {
+        padding-bottom: 60px;
+      }
+    }
+  }
   .green-block {
     .flex-row {
       .flex-item-4, .flex-item-6 {
@@ -506,8 +518,6 @@
     .popup_cont {
       left: 0 !important;
       top: 0 !important;
-      bottom: 0 !important;
-      right: 0 !important;
       div.popup {
         min-width: 100vw;
         max-width: 100vw;
@@ -537,10 +547,9 @@
 @media (max-width: 568px) {
   body {
     .popup_cont {
+      position: absolute;
       left: 0 !important;
       top: 0 !important;
-      bottom: 0 !important;
-      right: 0 !important;
       div.popup {
         min-width: 100vw;
         max-width: 100vw;
@@ -596,11 +605,9 @@
   }
   .navbar-fix {
     .nav-bar {
-      .navigation {
-        line-height: normal;
-      }
       .open +.navigation {
         justify-content: space-around;
+        line-height: normal;
       }
     }
   }
@@ -623,7 +630,6 @@
 }
 
 @media (max-width: 320px) {
-
   footer {
     .media {
       flex-wrap: wrap;

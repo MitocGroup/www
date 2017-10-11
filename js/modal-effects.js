@@ -2,9 +2,7 @@ $(function() {
     'use strict';
 
   let $body = $('body');
-  let startProject = new $.Popup();
-  let becomePartner = new $.Popup();
-
+  
   let startProjectContent = `<div class="md-content popup">
         <h3>Start a Project</h3>
         <div>
@@ -72,42 +70,64 @@ $(function() {
           </form>
       </div>`;
 
-  $('.start-project').on('click', function () {
-    startProject.open(startProjectContent, 'html');
+  $('.become-partner').popup({
+    content: becomePartnerContent,
+    type: 'html',
+    preloaderContent: '',
+    beforeOpen: function(type) {
+      onPopupOpen();
+    },
+    afterOpen: function(){
+      $('html').css('overflow', 'hidden');
+      $('#become-partner-form').MailChimpForm({
+        url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=7257663d85',
+        fields: 'EMAIL,FNAME,COMPANY',
+        submitSelector: '#submit-modal-form',
+        onFail: function (errMsg) {
+          let $genErr = $('#mc-general-error-partner');
 
-    $('#start-project-form').MailChimpForm({
-      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=f6629ecf38',
-      fields: 'EMAIL,FNAME',
-      submitSelector: '#submit-modal-form',
-      onFail: function (errMsg) {
-        let $genErr = $('#mc-general-error-project');
-
-        $genErr.text(errMsg);
-        setTimeout(() => { $genErr.text(''); }, 5000);
-      },
-      onOk: function (okMsg) {
-        window.location = `/confirm/start-project/?mc-message=${okMsg}`
-      }
-    });
+          $genErr.text(errMsg);
+          setTimeout(() => { $genErr.text(''); }, 5000);
+        },
+        onOk: function (okMsg) {
+          window.location = `/confirm/become-partner/?mc-message=${okMsg}`
+        }
+      });
+    },
+    beforeClose: function() {
+      onPopupClose();
+      $('html').css('overflow', 'scroll');
+    }
   });
 
-  $('.become-partner').on('click', function () {
-    becomePartner.open(becomePartnerContent, 'html');
+  $('.start-project').popup({
+    content: startProjectContent,
+    type: 'html',
+    preloaderContent: '',
+    beforeOpen: function(type) {
+      onPopupOpen();
+    },
+    afterOpen: function () {
+      $('html').css('overflow', 'hidden');
+      $('#start-project-form').MailChimpForm({
+        url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=f6629ecf38',
+        fields: 'EMAIL,FNAME',
+        submitSelector: '#submit-modal-form',
+        onFail: function (errMsg) {
+          let $genErr = $('#mc-general-error-project');
 
-    $('#become-partner-form').MailChimpForm({
-      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=7257663d85',
-      fields: 'EMAIL,FNAME,COMPANY',
-      submitSelector: '#submit-modal-form',
-      onFail: function (errMsg) {
-        let $genErr = $('#mc-general-error-partner');
-
-        $genErr.text(errMsg);
-        setTimeout(() => { $genErr.text(''); }, 5000);
-      },
-      onOk: function (okMsg) {
-        window.location = `/confirm/become-partner/?mc-message=${okMsg}`
-      }
-    });
+          $genErr.text(errMsg);
+          setTimeout(() => { $genErr.text(''); }, 5000);
+        },
+        onOk: function (okMsg) {
+          window.location = `/confirm/start-project/?mc-message=${okMsg}`
+        }
+      });
+    },
+    beforeClose: function() {
+      onPopupClose();
+      $('html').css('overflow', 'scroll');
+    }
   });
 
   $('#contact-us-form').MailChimpForm({
@@ -131,8 +151,33 @@ $(function() {
   $body.on('click', '.cancel-modal-btn', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    startProject.close();
-    becomePartner.close();
+    $('.popup_back').trigger('click');
   });
+
+  /**
+   *Open Popup and hide body
+   */
+  function onPopupOpen() {
+    if ($(window).width() < 568) {
+      $('.wrapper').addClass('hidden');
+      $('footer').addClass('hidden');
+    } else {
+      $('.wrapper').show('');
+      $('footer').show('');
+    }
+  }
+
+  /**
+   *Close Popup and show body
+   */
+  function onPopupClose() {
+    if ($(window).width() < 568) {
+      $('.wrapper').removeClass('hidden');
+      $('footer').removeClass('hidden');
+    }else {
+      $('.wrapper').show('');
+      $('footer').show('');
+    }
+  }
 
 });
