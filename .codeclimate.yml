@@ -22,3 +22,4 @@ exclude_paths:
   - '**/.idea'
   - '**.min.js'
   - '**.min.css'
+  - '../jquery-mailchimp.js'
