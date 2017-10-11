@@ -4,14 +4,11 @@ import { config, isVisible, HomePage, StartProject, sharedFunctions } from '../.
 const homePage = new HomePage();
 const startProject = new StartProject();
 
-const fix = fixture`Check valid content is displayed on "Home" page`
+const fix = fixture`DEBUG`
   .page`${config.www_base_host}`;
 
-// sharedFunctions.windowResolution(fix);
-
-test('Check that user can submit "Start a Project" request', async t => {
+test('DEBUG', async t => {
   await t
-    .click(homePage.startProjectButton)
-    .expect(startProject.title.innerText).match(
-      sharedFunctions.anyCase('Start a Project'));
+    .wait(10000)
+    .expect(Selector('body > div > div.main-page > div.main-text > h1').innerText).eql('Technology company working on innovative enterprise solutions|');
 });
