@@ -23,8 +23,7 @@ $:
       - /.+\.e2e\.js$/i
     ignore: []
     browsers: 
-      # - puppeteer
-      - chrome
+      - puppeteer
     wait:
       interval: 500
       timeout: 60000
