@@ -39,25 +39,25 @@ function parseResponse(response, limitToShow) {
   let mitocGroupCollectionId = 'd770bafd0445';
   let rawPosts = response.payload.references.Post;
 
-  for (let postId in rawPosts) {
-    if (posts.length >= limitToShow) {
-      break;
-    }
-
-    if (rawPosts.hasOwnProperty(postId)) {
-      let post = rawPosts[postId];
-
-      if (post.homeCollectionId === mitocGroupCollectionId) {
-        posts.push({
-          id: postId,
-          title: post.title,
-          description: post.content.subtitle,
-          image: post.virtuals.previewImage.imageId,
-          publishedAt: dateFormat(post.latestPublishedAt, 'mmm dd, yyyy')
-        });
-      }
-    }
-  }
+  // for (let postId in rawPosts) {
+  //   if (posts.length >= limitToShow) {
+  //     break;
+  //   }
+  //
+  //   if (rawPosts.hasOwnProperty(postId)) {
+  //     let post = rawPosts[postId];
+  //
+  //     if (post.homeCollectionId === mitocGroupCollectionId) {
+  //       posts.push({
+  //         id: postId,
+  //         title: post.title,
+  //         description: post.content.subtitle,
+  //         image: post.virtuals.previewImage.imageId,
+  //         publishedAt: dateFormat(post.latestPublishedAt, 'mmm dd, yyyy')
+  //       });
+  //     }
+  //   }
+  // }
 
   return posts;
 }
