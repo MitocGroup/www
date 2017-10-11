@@ -23,7 +23,8 @@ $:
       - /.+\.e2e\.js$/i
     ignore: []
     browsers: 
-      - puppeteer
+      # - puppeteer
+      - chrome
     wait:
       interval: 500
       timeout: 60000
@@ -33,5 +34,4 @@ $:
 test-suite:
   root: 'test'
   dependencies:
-    chance: 'latest'
-        
+    chance: 'latest'  
