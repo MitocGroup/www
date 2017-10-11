@@ -7,9 +7,9 @@ setup_variables() {
     export DEPLOY_HOST="https://www.mitocgroup.com"
 
     case ${DEPLOY_ENV} in
-        test | stage )
+        dev | test | stage )
             ALLOW_DEPLOY=1
-            DEPLOY_HOST="https://www-${DEPLOY_ENV}.mitocgroup.com"
+            DEPLOY_HOST="https://www-test.mitocgroup.com"
         ;;
         master ) ALLOW_DEPLOY=1 ;;
     esac
