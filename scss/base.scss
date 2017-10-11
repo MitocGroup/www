@@ -209,10 +209,12 @@ p, ul, span {
   background-color: $main-color;
   -webkit-box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
   -moz-box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
+  -o-box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
   box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
   &:hover {
     -webkit-box-shadow: 0 8px 20px rgba(40, 182, 85, 1);
     -moz-box-shadow: 0 8px 20px rgba(40, 182, 85, 1);
+    -o-box-shadow: 0 4px 10px rgba(126, 210, 87, 1);
     box-shadow: 0 8px 20px rgba(40, 182, 85, 1);
     color: $black-color;
     background-color: $accent-green;
@@ -229,7 +231,7 @@ p, ul, span {
     -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
     -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 16);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
     color: $black-color;
   }
 }
@@ -257,6 +259,10 @@ p, ul, span {
   &:hover {
     color: $black-color;
   }
+}
+
+.position-fixed {
+  position: fixed;
 }
 
 .pull-left {
@@ -310,7 +316,7 @@ p, ul, span {
     }
   }
   .flex-row {
-      margin: 0 -20px;
+    margin: 0 -20px;
     .flex-item-4 {
       &:nth-child(2) {
         .info-block {
@@ -323,7 +329,7 @@ p, ul, span {
         }
       }
     }
-    }
+  }
 
   .info-block {
     background: $white-color;
@@ -376,14 +382,20 @@ p, ul, span {
   input {
     text-align: center;
     color: $black-color;
-    border-top: transparent;
-    border-right: transparent;
-    border-left: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
     border-bottom: 1px solid $black-color;
     width: 100%;
     font-family: "Avenir-Black", sans-serif;
     font-size: 20px;
-
+    line-height: 40px;
+    display: block;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    cursor: text;
+    -webkit-appearance: none;
   }
   input:focus::-webkit-input-placeholder {
     color: transparent;
@@ -644,6 +656,9 @@ i {
         font-size: 18px;
         &:not(:last-child) {
           padding-right: 24px;
+        }
+        a.active {
+          color: $accent-green;
         }
       }
     }
