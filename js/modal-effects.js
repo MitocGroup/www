@@ -78,6 +78,7 @@ $(function() {
       onPopupOpen();
     },
     afterOpen: function(){
+      $('html').css('overflow', 'hidden');
       $('#become-partner-form').MailChimpForm({
         url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=7257663d85',
         fields: 'EMAIL,FNAME,COMPANY',
@@ -95,6 +96,7 @@ $(function() {
     },
     beforeClose: function() {
       onPopupClose();
+      $('html').css('overflow', 'scroll');
     }
   });
 
@@ -106,6 +108,7 @@ $(function() {
       onPopupOpen();
     },
     afterOpen: function () {
+      $('html').css('overflow', 'hidden');
       $('#start-project-form').MailChimpForm({
         url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=f6629ecf38',
         fields: 'EMAIL,FNAME',
@@ -123,6 +126,7 @@ $(function() {
     },
     beforeClose: function() {
       onPopupClose();
+      $('html').css('overflow', 'scroll');
     }
   });
 

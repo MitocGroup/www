@@ -723,9 +723,9 @@ footer .map-background {
     .carousel-block .carousel-mission .slick-prev {
       left: auto;
       right: 50%;
-      width: 150px; }
+      width: 200px; }
       .carousel-block .carousel-mission .slick-prev:before {
-        content: "Our Mission";
+        content: "Our Strategy";
         color: #000000;
         opacity: 1;
         font-size: 20px;
@@ -736,9 +736,9 @@ footer .map-background {
         border-bottom: 2px solid #7ED257; }
     .carousel-block .carousel-mission .slick-next {
       left: 50%;
-      width: 200px; }
+      width: 150px; }
       .carousel-block .carousel-mission .slick-next:before {
-        content: "Our Strategy";
+        content: "Our Mission";
         color: #000000;
         opacity: 1;
         font-size: 20px;
@@ -799,7 +799,7 @@ div.popup {
   border: 1px solid #000000;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 1px;
+  border-radius: 5px;
   margin: 0 20px;
   overflow: hidden; }
   .blog-block .container .section-content .flex-row .flex-item-12 .blog-post .blog-content .post-date, .blog-block .container .section-content .flex-row .flex-item-6 .blog-post .blog-content .post-date {
@@ -1309,10 +1309,9 @@ div.popup {
   .wrapper .main-page .main-text h1 {
     padding-top: 130px; }
 
-  .navbar-fix .nav-bar .navigation {
-    line-height: normal; }
   .navbar-fix .nav-bar .open + .navigation {
-    justify-content: space-around; } }
+    justify-content: space-around;
+    line-height: normal; } }
 @media (max-width: 400px) {
   body .text-uppercase {
     font-size: 24px; }
