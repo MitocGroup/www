@@ -7,7 +7,7 @@ const startProject = new StartProject();
 const fix = fixture`Check valid content is displayed on "Home" page`
   .page`${config.www_base_host}`;
 
-sharedFunctions.windowResolution(fix);
+// sharedFunctions.windowResolution(fix);
 
 test('Check that user can submit "Start a Project" request', async t => {
   await t
