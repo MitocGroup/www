@@ -1,0 +1,24 @@
+engines:
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        javascript:
+          mass_threshold: 350
+  eslint:
+    enabled: true
+    channel: eslint-2
+  fixme:
+    enabled: true
+ratings:
+  paths:
+    - '**.scss'
+    - '**.js'
+    - '**.es6'
+exclude_paths:
+  - '**/bin'
+  - '**/.idea'
+  - '**.min.js'
+  - '**.min.css'
