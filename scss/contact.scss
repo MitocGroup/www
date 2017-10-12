@@ -57,6 +57,14 @@
 
 .contact-form {
   margin-bottom: 90px;
+  .flex-row {
+    margin-right: -20px;
+    .flex-item-12 {
+     .button {
+       padding-right: 20px;
+     }
+    }
+  }
   .form-styles {
     input {
       text-align: left;

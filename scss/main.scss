@@ -126,6 +126,15 @@ footer {
 }
 
 .block-effect {
+  &.blog-content {
+    &:hover {
+      margin-top: 0;
+      margin-bottom: 0;
+      a {
+        color: $black-color;
+      }
+    }
+  }
   &:hover {
     margin-top: -4%;
     margin-bottom: 4%;
@@ -133,11 +142,20 @@ footer {
     -moz-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
     -o-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
-    .info h4 {
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+    a {
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      transition: none;
+      color: $black-color;
+    }
+    .icon-arrow-more {
+      opacity: 1;
+      left: 10px;
       color: $accent-green;
     }
   }
@@ -166,11 +184,11 @@ footer {
     .slick-next, .slick-prev {
       top: 15%;
       height: 40px;
+      width: 200px;
     }
     .slick-prev {
       left: auto;
       right: 50%;
-      width: 200px;
       &:before {
         content: "Our Strategy";
         color: $black-color;
@@ -188,7 +206,6 @@ footer {
     }
     .slick-next {
       left: 50%;
-      width: 150px;
       &:before {
         content: "Our Mission";
         color: $black-color;
@@ -284,9 +301,6 @@ div {
                 padding-bottom: 10px;
               }
             }
-            &:hover a {
-              color: $accent-green;
-            }
           }
         }
         .flex-item-12 {
@@ -308,6 +322,9 @@ div {
                 margin-top: auto;
                 font-size: 12px;
                 font-family: "Avenir-Black", sans-serif;
+                &.read-more {
+                  padding-bottom: 0;
+                }
               }
             }
             .img-block {
@@ -376,6 +393,9 @@ div {
                 margin-top: auto;
                 font-size: 12px;
                 font-family: "Avenir-Black", sans-serif;
+                &.read-more {
+                  padding-bottom: 0;
+                }
               }
             }
             .img-block {
