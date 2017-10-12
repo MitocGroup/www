@@ -13,6 +13,6 @@ export default {
     mobileResolution : {
       width: 400, 
       height: 600
-    },
+    }
   }
 }
