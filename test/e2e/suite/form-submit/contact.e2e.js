@@ -1,11 +1,12 @@
 import { Selector } from 'testcafe';
+import url from 'url';
 import { config, sharedFunctions, libs, speed } from '../../helpers/config-import';
 import { HomePage, ContactUsForm } from '../../helpers/poms-import';
 
 const contactUsForm = new ContactUsForm(), homePage = new HomePage();
 
 const fix = fixture`Check "Contact" form request submit`
-  .page`${config.www_base_host}contact`;
+  .page`${url.resolve(config.www_base_host, 'contact')}`;
 
 sharedFunctions.windowResolution(fix);
 
