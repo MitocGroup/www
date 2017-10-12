@@ -284,6 +284,23 @@ p, ul, span {
   font-family: Avenir-Black, sans-serif;
   padding-bottom: 20px;
   margin-top: auto;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.icon-arrow {
+  &.icon-arrow-more {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    vertical-align: top;
+    left: 0;
+    margin-left: 5px;
+    position: relative;
+  }
 }
 
 .green-block {
@@ -311,6 +328,10 @@ p, ul, span {
         .info, .read-more {
           padding-right: 20px;
           padding-left: 20px;
+          -webkit-transition: 0.4s ease-in-out;
+          -moz-transition: 0.4s ease-in-out;
+          -o-transition: 0.4s ease-in-out;
+          transition: 0.4s ease-in-out;
         }
       }
     }
@@ -539,19 +560,21 @@ i {
   }
 }
 
-.icon-arrow, .icon-burger {
-  cursor: pointer;
+.navbar-fix {
+  .icon-arrow, .icon-burger {
+    cursor: pointer;
+    font-size: 32px;
+    display: none;
+  }
 }
 
 .icon-burger:before {
   content: "\e904";
-  font-size: 32px;
   background-color: rgba(0, 0, 0, 0);
 }
 
 .icon-arrow:before {
   content: "\e900";
-  font-size: 32px;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -667,10 +690,6 @@ i {
 
 .nav-up {
   top: -94px;
-}
-
-.icon-burger, .icon-arrow {
-  display: none;
 }
 
 /* MailChimp*/
