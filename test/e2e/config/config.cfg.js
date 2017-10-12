@@ -3,7 +3,7 @@ export default {
   speed : { speed: 0.7 },
   isVisible : {
     visibilityCheck: true,
-    timeout: 60000
+    timeout: 30000
   },
   resolution : {
     desktopResolution : {
