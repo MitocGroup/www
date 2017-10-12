@@ -1,5 +1,5 @@
 import { Selector } from 'testcafe';
-import { isVisible } from '../../config/config.cfg';
+import { isVisible } from '../../helpers/config-import';
 
 export class HomePage {
   constructor() {

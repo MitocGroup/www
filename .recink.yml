@@ -33,4 +33,6 @@ $:
 test-suite:
   root: 'test'
   dependencies:
-    chance: 'latest'  
+    chance: 'latest'
+    
+    

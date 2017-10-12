@@ -15,7 +15,7 @@ const sharedFunctions = {
       height = config.resolution.desktopResolution.height;
     }
 
-    fix.beforeEach(async t => {
+    fix.beforeEach(async (t) => {
       await t
         .resizeWindow(width, height);  
     }); 
