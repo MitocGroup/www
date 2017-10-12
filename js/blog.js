@@ -23,7 +23,7 @@ $(function() {
                 var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart;
                 var src = item.description.substring(srcStart, srcEnd);
 
-                output += '<div class="blog-content flex-item-6"><span class="post-date">' + $.format.date(item.pubDate, 'MMM dd, yyyy') + '</span><h4><a href="' + item.link + '" target="_blank">' + item.title + '</a></h4><a href="https://blog.mitocgroup.com/" class="button" target="_blank">Read More </a></div>';
+                output += '<div class="blog-content flex-item-6 block-effect"><span class="post-date">' + $.format.date(item.pubDate, 'MMM dd, yyyy') + '</span><h4><a href="' + item.link + '" target="_blank">' + item.title + '</a></h4><a href="https://blog.mitocgroup.com/" class="button read-more" target="_blank">Read More <i class="icon-arrow icon-arrow-more"></i></a></div>';
                 output += '<div class="flex-item-6 img-block"><a href="' + item.link + '" class="blog-element" target="_blank"><img class="img-responsive" src="' + src + '"></a></div>';
                 output += '</div></div>';
                 return count < 3;

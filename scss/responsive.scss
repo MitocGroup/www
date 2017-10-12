@@ -68,6 +68,25 @@
 }
 
 @media (max-width: 992px) {
+  .wrapper {
+    .contact-form {
+      .form-styles {
+        .input-styles {
+          &.space-input {
+            padding-right: 10px;
+          }
+        }
+      }
+      .flex-row {
+        margin-right: -10px;
+        .flex-item-12 {
+          .button {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
   .green-block {
       .flex-row {
         margin: -10px;
@@ -237,11 +256,7 @@
       }
     }
   }
-  .icon-burger, .icon-arrow {
-    display: block;
-    float: right;
-    line-height: 54px;
-  }
+
   .space-top {
     margin-top: 54px;
   }
@@ -296,6 +311,11 @@
         height: calc(100vh - 54px);
         background: white;
       }
+    }
+    .icon-burger, .icon-arrow {
+      display: block;
+      float: right;
+      line-height: 54px;
     }
   }
   footer {

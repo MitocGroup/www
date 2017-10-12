@@ -228,7 +228,21 @@ p, ul, span {
   font-size: 16px;
   font-family: Avenir-Black, sans-serif;
   padding-bottom: 20px;
-  margin-top: auto; }
+  margin-top: auto;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; }
+
+.icon-arrow.icon-arrow-more {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  vertical-align: middle;
+  left: 0;
+  margin-left: 5px;
+  position: relative; }
 
 .green-block {
   background-color: #7ED257; }
@@ -247,7 +261,11 @@ p, ul, span {
     padding-left: 0; }
     .green-block.gray-block.atm-block .info-block .info, .green-block.gray-block.atm-block .info-block .read-more {
       padding-right: 20px;
-      padding-left: 20px; }
+      padding-left: 20px;
+      -webkit-transition: 0.4s ease-in-out;
+      -moz-transition: 0.4s ease-in-out;
+      -o-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out; }
 .green-block .flex-row {
   margin: 0 -20px; }
   .green-block .flex-row .flex-item-4:nth-child(2) .info-block {
@@ -412,17 +430,17 @@ i {
 .icon-facebook:hover:before {
   color: #28b655; }
 
-.icon-arrow, .icon-burger {
-  cursor: pointer; }
+.navbar-fix .icon-arrow, .navbar-fix .icon-burger {
+  cursor: pointer;
+  font-size: 32px;
+  display: none; }
 
 .icon-burger:before {
   content: "\e904";
-  font-size: 32px;
   background-color: transparent; }
 
 .icon-arrow:before {
   content: "\e900";
-  font-size: 32px;
   background-color: transparent; }
 
 .icon-email:before {
@@ -509,9 +527,6 @@ i {
 .nav-up {
   top: -94px; }
 
-.icon-burger, .icon-arrow {
-  display: none; }
-
 /* MailChimp*/
 .mc-error {
   color: #FF0000;
@@ -569,6 +584,10 @@ i {
 
 .contact-form {
   margin-bottom: 90px; }
+  .contact-form .flex-row {
+    margin-right: -20px; }
+    .contact-form .flex-row .flex-item-12 .button {
+      padding-right: 20px; }
   .contact-form .form-styles {
     padding: 0; }
     .contact-form .form-styles input {
@@ -687,6 +706,11 @@ footer .map-background {
     footer .map-background .container .flex-row .flex-item-3.block-info {
       padding-left: 40px; }
 
+.block-effect.blog-content:hover {
+  margin-top: 0;
+  margin-bottom: 0; }
+  .block-effect.blog-content:hover a {
+    color: #000000; }
 .block-effect:hover {
   margin-top: -4%;
   margin-bottom: 4%;
@@ -694,11 +718,19 @@ footer .map-background {
   -moz-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 18px 20px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 300ms;
-  -moz-transition: 300ms;
-  -o-transition: 300ms;
-  transition: 300ms; }
-  .block-effect:hover .info h4 {
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms; }
+  .block-effect:hover a {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    color: #000000; }
+  .block-effect:hover .icon-arrow-more {
+    opacity: 1;
+    left: 10px;
     color: #28b655; }
 
 .carousel-block {
@@ -719,11 +751,11 @@ footer .map-background {
         text-transform: uppercase; }
     .carousel-block .carousel-mission .slick-next, .carousel-block .carousel-mission .slick-prev {
       top: 15%;
-      height: 40px; }
+      height: 40px;
+      width: 200px; }
     .carousel-block .carousel-mission .slick-prev {
       left: auto;
-      right: 50%;
-      width: 200px; }
+      right: 50%; }
       .carousel-block .carousel-mission .slick-prev:before {
         content: "Our Strategy";
         color: #000000;
@@ -735,8 +767,7 @@ footer .map-background {
       .carousel-block .carousel-mission .slick-prev.slick-disabled:before {
         border-bottom: 2px solid #7ED257; }
     .carousel-block .carousel-mission .slick-next {
-      left: 50%;
-      width: 150px; }
+      left: 50%; }
       .carousel-block .carousel-mission .slick-next:before {
         content: "Our Mission";
         color: #000000;
@@ -806,8 +837,6 @@ div.popup {
     font-family: Avenir-Black, sans-serif;
     color: #28b655;
     padding-bottom: 10px; }
-  .blog-block .container .section-content .flex-row .flex-item-12 .blog-post:hover a, .blog-block .container .section-content .flex-row .flex-item-6 .blog-post:hover a {
-    color: #28b655; }
 .blog-block .container .section-content .flex-row .flex-item-12 .blog-post {
   margin-bottom: 40px;
   max-height: 300px;
@@ -825,6 +854,8 @@ div.popup {
       margin-top: auto;
       font-size: 12px;
       font-family: "Avenir-Black", sans-serif; }
+      .blog-block .container .section-content .flex-row .flex-item-12 .blog-post .blog-content .button.read-more {
+        padding-bottom: 0; }
   .blog-block .container .section-content .flex-row .flex-item-12 .blog-post .img-block a {
     display: inline; }
     .blog-block .container .section-content .flex-row .flex-item-12 .blog-post .img-block a img {
@@ -874,6 +905,8 @@ div.popup {
       margin-top: auto;
       font-size: 12px;
       font-family: "Avenir-Black", sans-serif; }
+      .blog-block .container .section-content .flex-row .flex-item-6 .blog-post .blog-content .button.read-more {
+        padding-bottom: 0; }
   .blog-block .container .section-content .flex-row .flex-item-6 .blog-post .img-block a {
     display: inline; }
     .blog-block .container .section-content .flex-row .flex-item-6 .blog-post .img-block a img {
@@ -999,6 +1032,13 @@ div.popup {
       position: absolute;
       bottom: 10px; } }
 @media (max-width: 992px) {
+  .wrapper .contact-form .form-styles .input-styles.space-input {
+    padding-right: 10px; }
+  .wrapper .contact-form .flex-row {
+    margin-right: -10px; }
+    .wrapper .contact-form .flex-row .flex-item-12 .button {
+      padding-right: 10px; }
+
   .green-block .flex-row {
     margin: -10px; }
   .green-block .info-block {
@@ -1097,11 +1137,6 @@ div.popup {
   .wrapper .blog-block .container .section-content .flex-row .flex-item-6.leftPostItem {
     margin-bottom: 40px; }
 
-  .icon-burger, .icon-arrow {
-    display: block;
-    float: right;
-    line-height: 54px; }
-
   .space-top {
     margin-top: 54px; }
 
@@ -1139,6 +1174,10 @@ div.popup {
         text-align: center;
         height: calc(100vh - 54px);
         background: white; }
+    .navbar-fix .icon-burger, .navbar-fix .icon-arrow {
+      display: block;
+      float: right;
+      line-height: 54px; }
 
   footer .map-background {
     background-image: none;
