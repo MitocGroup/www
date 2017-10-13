@@ -14,12 +14,11 @@ engines:
     enabled: true
 ratings:
   paths:
+    - '**.css'
     - '**.scss'
-    - '**.js'
     - '**.es6'
 exclude_paths:
   - '**/bin'
   - '**/.idea'
   - '**.min.js'
   - '**.min.css'
-  - '**jquery-mailchimp.js'
