@@ -268,12 +268,6 @@ p, ul, span {
       transition: 0.4s ease-in-out; }
 .green-block .flex-row {
   margin: 0 -20px; }
-  .green-block .flex-row .flex-item-4:nth-child(2) .info-block {
-    padding-right: 0;
-    padding-left: 0; }
-    .green-block .flex-row .flex-item-4:nth-child(2) .info-block .aws-img-block, .green-block .flex-row .flex-item-4:nth-child(2) .info-block .info, .green-block .flex-row .flex-item-4:nth-child(2) .info-block .read-more {
-      padding-left: 20px;
-      padding-right: 20px; }
 .green-block .info-block {
   background: #ffffff;
   margin-right: 20px;
@@ -577,10 +571,16 @@ i {
           .contact-page .flex-row .map-block .contact-info .wrapper-info .icons-links .icon-phone, .contact-page .flex-row .map-block .contact-info .wrapper-info .icons-links .icon-map-marker, .contact-page .flex-row .map-block .contact-info .wrapper-info .icons-links .icon-email {
             float: left;
             vertical-align: top;
-            margin-right: 24px; }
+            margin-right: 24px;
+            -webkit-transition: .4s;
+            -moz-transition: .4s;
+            -o-transition: .4s;
+            transition: .4s; }
           .contact-page .flex-row .map-block .contact-info .wrapper-info .icons-links span {
             display: inline-block;
             width: calc(100% - 40px); }
+          .contact-page .flex-row .map-block .contact-info .wrapper-info .icons-links:hover a, .contact-page .flex-row .map-block .contact-info .wrapper-info .icons-links:hover i {
+            color: #28b655; }
 
 .contact-form {
   margin-bottom: 90px; }
@@ -1382,7 +1382,6 @@ div.popup {
     width: 50%;
     margin: 90px auto; }
     .partners .aws-info .image-aws .aws-logo {
-      max-height: 228px;
       width: 100%; }
   .partners .aws-info .block-text_img .aws-img {
     height: 72px;
