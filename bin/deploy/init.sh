@@ -19,7 +19,6 @@ ensure_required_deps() {
 
     NPM_BIN=`which npm`
     REQUIRED_DEPS=(
-        deepify
         recink
         recink-codeclimate
         recink-snyk
@@ -27,10 +26,9 @@ ensure_required_deps() {
         aws-sdk
         mitocgroup/npm_lazy
         uglify-js
-        uglify-es
-        uglifyjs-webpack-plugin
-        mishoo/UglifyJS2#harmony-v2.8.22
-        webpack
+        # uglify-es
+        # uglifyjs-webpack-plugin
+        # mishoo/UglifyJS2#harmony-v2.8.22
         html-minifier
         cssnano-cli
     );

@@ -35,7 +35,7 @@ env:
 
 stage: "Run Unit Tests :clipboard:"
 node_js:
-  - 6
+  - 8
 before_install:
   - source bin/deploy/init.sh
 script:
