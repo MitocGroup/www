@@ -7,9 +7,11 @@ $(function() {
         if ($('.icon-arrow').hasClass('open')) {
             $('html').css('overflow', 'hidden');
             $('.navbar-fix').addClass('color-nav-responsive');
+            $('.hide-mobile, footer').addClass('hidden');
         } else {
             $('html').css('overflow', 'scroll');
             $('.navbar-fix').removeClass('color-nav-responsive');
+            $('.hide-mobile, footer').removeClass('hidden');
         }
     });
 
