@@ -24,35 +24,35 @@ test('Check "Services" top-menu link is displayed on website header', async t =>
     )
 })
 
-test('Check "Services" top-menu link is displayed on website header', async t => {
+test('Check "Partners" top-menu link is displayed on website header', async t => {
   await t
     .expect(topMenu.partners.innerText).match(
     sharedFunctions.anyCase('Partners')
     )
 })
 
-test('Check "Services" top-menu link is displayed on website header', async t => {
+test('Check "Customers" top-menu link is displayed on website header', async t => {
   await t
     .expect(topMenu.customers.innerText).match(
     sharedFunctions.anyCase('Customers')
     )
 })
 
-test('Check "Services" top-menu link is displayed on website header', async t => {
+test('Check "About Us" top-menu link is displayed on website header', async t => {
   await t
     .expect(topMenu.about.innerText).match(
     sharedFunctions.anyCase('About Us')
     )
 })
 
-test('Check "Services" top-menu link is displayed on website header', async t => {
+test('Check "Contact" top-menu link is displayed on website header', async t => {
   await t
     .expect(topMenu.contact.innerText).match(
     sharedFunctions.anyCase('Contact')
     )
 })
 
-test('Check "Services" top-menu link is displayed on website header', async t => {
+test('Check "Blog" top-menu link is displayed on website header', async t => {
   await t
     .expect(topMenu.blog.innerText).match(
     sharedFunctions.anyCase('Blog')
