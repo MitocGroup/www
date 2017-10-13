@@ -1,0 +1,9 @@
+{
+  "lambdaName": "MediumFeedMitocgroup",
+  "lambda": "index.js",
+  "handler": "handler",
+  "event": "event.js",
+  "role": "arn:aws:iam::888888888888:role/XxxxxxxXxxxXxxxxxXxxxxxxxxxx",
+  "mediumToken": "8XxxXxxXXXXXXXxX8XXXx8xX8xXXxXXXxXXXxx88",
+  "feedItems": 30
+}
