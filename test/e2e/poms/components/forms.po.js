@@ -1,8 +1,8 @@
-import { Selector } from 'testcafe';
-import { config, speed, isVisible } from '../../helpers/config-import';
+import { Selector } from 'testcafe'
+import { isVisible } from '../../helpers/config-import'
 
 export class StartProject {
-  constructor() {
+  constructor () {
     this.title = Selector('body > div.popup_cont > div.popup > div > div > h3', isVisible)
     this.fullname = Selector('#start-project-form > div:nth-child(1) > div > input[type="text"]', isVisible)
     this.email = Selector('#start-project-form > div:nth-child(2) > div > input[type="email"]', isVisible)
@@ -12,7 +12,7 @@ export class StartProject {
 }
 
 export class BecomePartner {
-  constructor() {
+  constructor () {
     this.title = Selector('body > div.popup_cont > div.popup > div > div > h3', isVisible)
     this.fullname = Selector('#become-partner-form > div:nth-child(1) > div > input[type="text"]', isVisible)
     this.company = Selector('#become-partner-form > div:nth-child(2) > div > input[type="text"]', isVisible)
@@ -23,7 +23,7 @@ export class BecomePartner {
 }
 
 export class ContactUsForm {
-  constructor() {
+  constructor () {
     this.title = Selector('body > div.popup_cont > div.popup > div > div > h3', isVisible)
     this.fullname = Selector('#contact-us-form > div:nth-child(1) > div.flex-item-6.mc-form-group-FNAME.input-styles.space-input > input[type="text"]', isVisible)
     this.email = Selector('#contact-us-form > div:nth-child(1) > div.flex-item-6.mc-form-group-EMAIL.input-styles.space-input > input[type="email"]', isVisible)

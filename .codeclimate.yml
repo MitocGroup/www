@@ -9,7 +9,7 @@ engines:
           mass_threshold: 350
   eslint:
     enabled: true
-    channel: eslint-2
+    channel: stable
   fixme:
     enabled: true
 ratings:
