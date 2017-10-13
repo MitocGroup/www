@@ -8,6 +8,7 @@ export class StartProject {
     this.email = Selector('#start-project-form > div:nth-child(2) > div > input[type="email"]', isVisible)
     this.cancel = Selector('#start-project-form > div:nth-child(4) > div:nth-child(1) > button', isVisible)
     this.submit = Selector('#submit-modal-form', isVisible)
+    this.notification = Selector('#mc-message', isVisible)
   }
 }
 
@@ -19,6 +20,7 @@ export class BecomePartner {
     this.email = Selector('#become-partner-form > div:nth-child(3) > div > input[type="email"]', isVisible)
     this.cancel = Selector('#become-partner-form > div:nth-child(5) > div:nth-child(1) > button', isVisible)
     this.submit = Selector('#submit-modal-form', isVisible)
+    this.notification = Selector('#mc-message', isVisible)
   }
 }
 

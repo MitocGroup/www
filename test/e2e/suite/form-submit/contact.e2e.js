@@ -1,11 +1,10 @@
-import { test, fixture } from 'testcafe'
 import url from 'url'
 import { config, sharedFunctions, libs, speed } from '../../helpers/config-import'
 import { ContactUsForm } from '../../helpers/poms-import'
 
 const contactUsForm = new ContactUsForm()
 
-const fix = fixture`Check "Contact" form request submit`
+const fix = fixture`Check 'Contact' form request submit`
   .page`${url.resolve(config.www_base_host, 'contact')}`
 
 sharedFunctions.windowResolution(fix)
