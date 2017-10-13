@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="6620 -21 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #242424;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_425" data-name="Rectangle 425" class="cls-1" width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_62" data-name="Mask Group 62" class="cls-2" transform="translate(6620 -21)">
+    <g id="Twitter_bird_logo_2012" transform="translate(0 3.746)">
+      <path id="Path_6113" data-name="Path 6113" class="cls-3" d="M103.213,128.119c15.1,0,23.35-12.506,23.35-23.35q0-.533-.023-1.061a16.689,16.689,0,0,0,4.094-4.25,16.365,16.365,0,0,1-4.713,1.292,8.236,8.236,0,0,0,3.609-4.539,16.459,16.459,0,0,1-5.211,1.992,8.214,8.214,0,0,0-13.985,7.484,23.3,23.3,0,0,1-16.917-8.574,8.214,8.214,0,0,0,2.541,10.956,8.146,8.146,0,0,1-3.717-1.026c0,.034,0,.068,0,.1a8.209,8.209,0,0,0,6.584,8.045,8.193,8.193,0,0,1-3.706.141,8.215,8.215,0,0,0,7.666,5.7,16.464,16.464,0,0,1-10.193,3.513,16.669,16.669,0,0,1-1.958-.114,23.23,23.23,0,0,0,12.58,3.686" transform="translate(-90.633 -95.611)"/>
+    </g>
+  </g>
+</svg>

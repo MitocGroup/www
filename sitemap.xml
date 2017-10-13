@@ -65,6 +65,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://www.mitocgroup.com/customers/</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://www.mitocgroup.com/customers/adtechmedia/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
@@ -100,13 +105,8 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/about/locations/</loc>
-  <priority>0.80</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.mitocgroup.com/about/contact/</loc>
-  <priority>0.80</priority>
+  <loc>https://www.mitocgroup.com/contact/</loc>
+  <priority>0.90</priority>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>

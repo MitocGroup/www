@@ -1,0 +1,110 @@
+.contact-page {
+  background-image: url(/images/map.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 1000px;
+  background-position: top;
+  background-color: $gray-dark-color;
+  margin-top: 84px;
+  .flex-row {
+    margin: 0 -20px;
+    padding-bottom: 70px;
+    .map-block {
+      .contact-info {
+        background: $white-color;
+        border-radius: 5px;
+        height: 100%;
+        margin-right: 20px;
+        margin-left: 20px;
+        iframe {
+          width: 100%;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+        }
+        .wrapper-info {
+          padding: 0 24px;
+          h3 {
+            font-size: 21px;
+            line-height: 80px;
+          }
+          .icons-links {
+            padding: 21px 0;
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              background-color: $gray-dark-color;
+              top: 0;
+              left: 0;
+            }
+            .icon-phone, .icon-map-marker, .icon-email {
+              float: left;
+              vertical-align: top;
+              margin-right: 24px;
+              -webkit-transition: .4s;
+              -moz-transition: .4s;
+              -o-transition: .4s;
+              transition: .4s;
+            }
+            span {
+              display: inline-block;
+              width: calc(100% - 40px);
+            }
+            &:hover {
+              a, i {
+                color: $accent-green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-form {
+  margin-bottom: 90px;
+  .flex-row {
+    margin-right: -20px;
+    .flex-item-12 {
+     .button {
+       padding-right: 20px;
+     }
+    }
+  }
+  .form-styles {
+    input {
+      text-align: left;
+    }
+    padding: 0;
+    .input-styles {
+      position: relative;
+      &.space-input {
+        padding-right: 20px;
+      }
+    }
+  }
+  .mc-error {
+    position: absolute;
+
+  }
+  #mc-general-error {
+   .error-mc {
+     position: fixed;
+     right: 0;
+     padding: 20px;
+     color: #4F8A10;
+     background-color: #DFF2BF;
+     bottom: 0;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+     -webkit-transition: .4s;
+     -moz-transition: .4s;
+     -o-transition: .4s;
+     transition: .4s;
+   }
+  }
+}
