@@ -12,7 +12,7 @@
 
 @media (min-width: 1270px) {
   .container {
-    width: 1232px;
+    width: 1246px;
   }
 }
 
@@ -367,6 +367,9 @@
 
 @media (max-width: 680px) {
   .wrapper {
+    .contact-page {
+      background-size: 750px;
+    }
     .main-page {
       .main-text {
         h1 {
@@ -374,7 +377,7 @@
         }
       }
       .top_button {
-        padding-bottom: 60px;
+        padding-bottom: 75px;
       }
     }
   }
