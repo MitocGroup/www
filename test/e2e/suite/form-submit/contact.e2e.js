@@ -1,3 +1,5 @@
+/* global fixture, test */
+
 import url from 'url'
 import { config, sharedFunctions, libs, speed } from '../../helpers/config-import'
 import { ContactUsForm } from '../../helpers/poms-import'
