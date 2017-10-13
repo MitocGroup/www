@@ -43,10 +43,19 @@
               float: left;
               vertical-align: top;
               margin-right: 24px;
+              -webkit-transition: .4s;
+              -moz-transition: .4s;
+              -o-transition: .4s;
+              transition: .4s;
             }
             span {
               display: inline-block;
               width: calc(100% - 40px);
+            }
+            &:hover {
+              a, i {
+                color: $accent-green;
+              }
             }
           }
         }
