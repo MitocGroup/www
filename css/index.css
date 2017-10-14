@@ -790,7 +790,7 @@ footer .map-background {
       left: auto;
       right: 50%; }
       .carousel-block .carousel-mission .slick-prev:before {
-        content: "Our Strategy";
+        content: "Our Mission";
         color: #000000;
         opacity: 1;
         font-size: 20px;
@@ -802,7 +802,7 @@ footer .map-background {
     .carousel-block .carousel-mission .slick-next {
       left: 50%; }
       .carousel-block .carousel-mission .slick-next:before {
-        content: "Our Mission";
+        content: "Our Strategy";
         color: #000000;
         opacity: 1;
         font-size: 20px;
