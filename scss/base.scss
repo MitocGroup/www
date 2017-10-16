@@ -91,6 +91,13 @@ p, ul, span {
   -webkit-flex-wrap: wrap;
 }
 
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+}
+
 .flex-item-1 {
   flex: 0 0 8.33333333%;
   max-width: 8.33333333%;
@@ -163,6 +170,22 @@ p, ul, span {
   padding: 100px 0;
 }
 
+.container-space {
+  padding: 90px 0;
+}
+
+.container-top-bottom {
+  margin: 90px 0;
+}
+
+.container-top {
+  margin-top: 90px;
+}
+
+.container-bottom {
+  margin-bottom: 90px;
+}
+
 .header-text {
   font-size: 30px;
   text-transform: uppercase;
@@ -175,6 +198,26 @@ p, ul, span {
 .text-uppercase {
   font-size: 30px;
   text-transform: uppercase;
+}
+
+.text-header {
+  font-size: 30px;
+}
+
+.title-text {
+  font-size: 21px;
+  font-family: Avenir-Black, sans-serif;
+}
+
+.block-half {
+  width: 50%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
 }
 
 .pull-center {
@@ -273,9 +316,25 @@ p, ul, span {
   float: right;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .page-name {
   height: 296px;
   line-height: 296px;
+}
+
+.header {
+  background-color: $gray-dark-color;
+  height: 296px;
+  .container {
+    height: 100%;
+  }
 }
 
 .read-more {
@@ -314,6 +373,10 @@ p, ul, span {
 
 .gray-block {
   background-color: $gray-dark-color;
+}
+
+.gray-light-block {
+  background-color: $gray-color;
 }
 
 .green-block {

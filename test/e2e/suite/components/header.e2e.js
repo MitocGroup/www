@@ -13,8 +13,7 @@ const fix = fixture`Check top-menu links`
 sharedFunctions.windowResolution(fix)
 
 test('Check "Services" top-menu link redirects user to valid path', async t => {
-  await t
-    .click(topMenu.services)
+  await t.click(topMenu.services)
   const getLocation = ClientFunction(() => document.location.href)
   await t.expect(getLocation()).contains('')
 })
