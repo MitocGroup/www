@@ -55,6 +55,3 @@ message "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*'
 
 message "Deploy: Done"
-
-# only for debug
-echo ${TRAVIS_PULL_REQUEST_BRANCH}
