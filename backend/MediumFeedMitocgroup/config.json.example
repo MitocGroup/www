@@ -4,6 +4,8 @@
   "handler": "handler",
   "event": "event.js",
   "role": "arn:aws:iam::888888888888:role/XxxxxxxXxxxXxxxxxXxxxxxxxxxx",
-  "mediumToken": "8XxxXxxXXXXXXXxX8XXXx8xX8xXXxXXXxXXXxx88",
-  "feedItems": 30
+  "collectionId":"Xxxx8xxx88xxXxx",
+  "feedItemsToShow": 30,
+  "maxImageWidth": 590,
+  "destBucket": "www.mitocgroup.com"
 }
