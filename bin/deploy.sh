@@ -46,9 +46,17 @@ message "Synchronizing build directory"
 if [ -z ${AWS_ACCESS_KEY_ID+x} ]; then
     aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} --profile ${PROFILE} \
         --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
+
+    if [ "${BRANCH}" == "master" ]; then
+        aws lambda invoke --function-name MediumFeedMitocgroup out.txt --profile ${PROFILE}
+    fi
 else 
     aws s3 sync ${MY_DIR}/build/ ${BUCKET} --region ${REGION} \
         --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
+
+    if [ "${BRANCH}" == "master" ]; then
+        aws lambda invoke --function-name MediumFeedMitocgroup out.txt
+    fi
 fi
 
 message "Invalidating CloudFront"

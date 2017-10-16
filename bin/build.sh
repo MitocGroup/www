@@ -34,7 +34,7 @@ else
 fi
 
 cp -R ${CODE_DIR}/css ${CODE_DIR}/fonts ${CODE_DIR}/images \
-    ${CODE_DIR}/js ${CODE_DIR}/favicon.ico ${BUILD_DIR}/
+    ${CODE_DIR}/js ${CODE_DIR}/json ${CODE_DIR}/favicon.ico ${BUILD_DIR}/
 
 echo "Minifying html code"
 for html_file in $(find ${CODE_DIR} -type f -name "*.html"); do
