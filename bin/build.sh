@@ -15,7 +15,6 @@ cssnano < ${CODE_DIR}/css/slick.css > ${CODE_DIR}/css/slick.min.css
 cssnano < ${CODE_DIR}/css/slick-theme.css > ${CODE_DIR}/css/slick-theme.min.css
 
 echo "Minifying js code"
-uglifyjs ${CODE_DIR}/js/blog.js -c -m -o ${CODE_DIR}/js/blog.min.js
 uglifyjs ${CODE_DIR}/js/carousel.js -c -m -o ${CODE_DIR}/js/carousel.min.js
 uglifyjs ${CODE_DIR}/js/main.js -c -m -o ${CODE_DIR}/js/main.min.js
 uglifyjs ${CODE_DIR}/js/modal-effects.js -c -m -o ${CODE_DIR}/js/modal-effects.min.js

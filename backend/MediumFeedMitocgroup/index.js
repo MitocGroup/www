@@ -102,6 +102,7 @@ function handlePosts(rawPosts) {
         posts.push({
           id: postId,
           title: post.title,
+          url: `${config.blogDomain}/${post.uniqueSlug}`,
           description: post.content.subtitle,
           image: post.virtuals.previewImage.imageId,
           publishedAt: dateFormat(post.latestPublishedAt, 'mmm dd, yyyy')
