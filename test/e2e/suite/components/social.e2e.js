@@ -2,10 +2,10 @@
 
 import { ClientFunction } from 'testcafe'
 import url from 'url'
-import { config,sharedFunctions } from '../../helpers/config-import'
+import { config, sharedFunctions } from '../../helpers/config-import'
 import { SocialLinks } from '../../helpers/poms-import'
 
-const socialLinks = new SocialLinks();
+const socialLinks = new SocialLinks()
 
 const fix = fixture`Check social links`
   .page`${url.resolve(config.www_base_host, '')}`

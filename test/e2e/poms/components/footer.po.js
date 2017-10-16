@@ -1,8 +1,8 @@
 import { Selector } from 'testcafe'
 import { isVisible } from '../../config/config.cfg'
 
-export class SocialLinks{
-  constructor() {
+export class SocialLinks {
+  constructor () {
     this.linkedin = Selector('#contact > div > a:nth-child(1)', isVisible)
     this.twitter = Selector('#contact > div > a:nth-child(2)', isVisible)
     this.facebook = Selector('#contact > div > a:nth-child(3)', isVisible)
@@ -12,8 +12,8 @@ export class SocialLinks{
   }
 }
 
-export class Footer{
-  constructor() {
+export class Footer {
+  constructor () {
     this.address = Selector('body > footer > div.map-background > div > div > div:nth-child(2) > p:nth-child(2) > a', isVisible)
     this.phone = Selector('body > footer > div.map-background > div > div > div:nth-child(2) > p:nth-child(3) > a', isVisible)
     this.email = Selector('body > footer > div.map-background > div > div > div:nth-child(2) > p:nth-child(4) > a', isVisible)
