@@ -8,10 +8,10 @@
     padding-bottom: 20px;
   }
   .container-top {
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: -15px;
+    margin-left: -15px;
     .flex-item-6 {
-      padding: 0 20px;
+      padding: 0 15px;
     }
   }
 }
@@ -30,6 +30,57 @@
       .flex-column {
         padding: 0 20px;
       }
+    }
+  }
+}
+
+.quote {
+  .quote-block {
+    background-color: $main-color;
+    position: relative;
+    right: -16px;
+    bottom: -16px;
+    padding: 32px;
+    h4 {
+      font-size: 35px;
+      padding-bottom: 20px;
+    }
+    span {
+      display: block;
+      font-size: 90px;
+
+    }
+  }
+  .quote-image-block {
+    position: relative;
+    top: -16px;
+    z-index: -2;
+    right: 16px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.year {
+  position: relative;
+  font-weight: bold;
+  font-size: 21px;
+  font-family: Avenir-Black, sans-serif;
+  h3 {
+    display: inline;
+    padding: 0 5px;
+    background-color: $white-color;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: $gray-dark-color;
+      left: 0;
+      z-index: -1;
+      top: 50%;
+
     }
   }
 }
