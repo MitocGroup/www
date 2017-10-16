@@ -1144,6 +1144,9 @@ div.popup {
       position: absolute;
       bottom: 10px; } }
 @media (max-width: 992px) {
+  .text-uppercase {
+    font-size: 24px; }
+
   .about .title-text {
     width: 100%; }
   .about .container-top .flex-item-6 {
@@ -1166,6 +1169,9 @@ div.popup {
       grid-row: 1 / 1;
       font-size: 24px; }
 
+  .wrapper .contact-page .pull-right {
+    float: none;
+    text-align: center; }
   .wrapper .contact-form .form-styles .input-styles.space-input {
     padding-right: 10px; }
   .wrapper .contact-form .flex-row {
@@ -1375,9 +1381,6 @@ div.popup {
         font-size: 30px;
         line-height: 40px; } }
 @media (max-width: 680px) {
-  .text-uppercase {
-    font-size: 24px; }
-
   .container-space {
     padding: 45px 0; }
 
@@ -1399,9 +1402,6 @@ div.popup {
     height: 220px;
     line-height: 220px; }
 
-  .wrapper .contact-page .pull-right {
-    float: none;
-    text-align: center; }
   .wrapper .main-page .main-text h1 {
     padding-top: 150px; }
   .wrapper .main-page .top_button {

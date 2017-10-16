@@ -75,6 +75,9 @@
 }
 
 @media (max-width: 992px) {
+  .text-uppercase {
+    font-size: 24px;
+  }
   .about  {
     .title-text {
       width: 100%;
@@ -108,6 +111,12 @@
    }
  }
   .wrapper {
+    .contact-page {
+      .pull-right {
+        float: none;
+        text-align: center;
+      }
+    }
     .contact-form {
       .form-styles {
         .input-styles {
@@ -458,9 +467,6 @@
 }
 
 @media (max-width: 680px) {
-  .text-uppercase {
-    font-size: 24px;
-  }
   .container-space {
     padding: 45px 0;
   }
@@ -486,12 +492,6 @@
     line-height: 220px;
   }
   .wrapper {
-    .contact-page {
-      .pull-right {
-        float: none;
-        text-align: center;
-      }
-    }
     .main-page {
       .main-text {
         h1 {
