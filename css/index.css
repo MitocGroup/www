@@ -125,6 +125,15 @@ p, ul, span {
 .top_button {
   padding: 100px 0; }
 
+.container-space {
+  padding: 90px 0; }
+
+.container-top-bottom {
+  margin: 90px 0; }
+
+.container-top {
+  margin-top: 90px; }
+
 .header-text {
   font-size: 30px;
   text-transform: uppercase;
@@ -135,6 +144,22 @@ p, ul, span {
 .text-uppercase {
   font-size: 30px;
   text-transform: uppercase; }
+
+.text-header {
+  font-size: 30px; }
+
+.title-text {
+  font-size: 21px;
+  font-family: Avenir-Black, sans-serif; }
+
+.block-half {
+  width: 50%; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center; }
 
 .pull-center {
   position: relative;
@@ -223,6 +248,12 @@ p, ul, span {
   height: 296px;
   line-height: 296px; }
 
+.header {
+  background-color: #EFEFEF;
+  height: 296px; }
+  .header .container {
+    height: 100%; }
+
 .read-more {
   text-transform: uppercase;
   font-size: 16px;
@@ -251,6 +282,9 @@ p, ul, span {
 
 .gray-block {
   background-color: #EFEFEF; }
+
+.gray-light-block {
+  background-color: #fbfbfb; }
 
 .green-block.gray-block {
   background-color: #EFEFEF;
@@ -535,7 +569,6 @@ i {
   background-image: url(/images/map.png);
   background-size: contain;
   background-repeat: no-repeat;
-  min-height: 1000px;
   background-position: top;
   background-color: #EFEFEF;
   margin-top: 84px; }
@@ -757,7 +790,7 @@ footer .map-background {
       left: auto;
       right: 50%; }
       .carousel-block .carousel-mission .slick-prev:before {
-        content: "Our Strategy";
+        content: "Our Mission";
         color: #000000;
         opacity: 1;
         font-size: 20px;
@@ -769,7 +802,7 @@ footer .map-background {
     .carousel-block .carousel-mission .slick-next {
       left: 50%; }
       .carousel-block .carousel-mission .slick-next:before {
-        content: "Our Mission";
+        content: "Our Strategy";
         color: #000000;
         opacity: 1;
         font-size: 20px;
@@ -996,6 +1029,28 @@ div.popup {
     font-family: Avenir-Black, sans-serif;
     font-size: 21px; }
 
+.about .title-text {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center; }
+.about p {
+  padding-bottom: 20px; }
+.about .container-top {
+  margin-right: -20px;
+  margin-left: -20px; }
+  .about .container-top .flex-item-6 {
+    padding: 0 20px; }
+
+.gray-light-block.about img {
+  width: 100%; }
+.gray-light-block.about .flex-row {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .gray-light-block.about .flex-row .flex-item-4 {
+    padding: 0 15px; }
+  .gray-light-block.about .flex-row .flex-column {
+    padding: 0 20px; }
+
 @media (min-width: 800px) {
   .container {
     width: 750px; } }
@@ -1004,7 +1059,7 @@ div.popup {
     width: 950px; } }
 @media (min-width: 1270px) {
   .container {
-    width: 1232px; } }
+    width: 1246px; } }
 @media (max-width: 1270px) {
   .blog-block .container .section-content .flex-row .flex-item-12 .blog-post .blog-content h4 {
     font-size: 30px;
@@ -1207,10 +1262,12 @@ div.popup {
         font-size: 30px;
         line-height: 40px; } }
 @media (max-width: 680px) {
+  .wrapper .contact-page {
+    background-size: 750px; }
   .wrapper .main-page .main-text h1 {
     padding-top: 150px; }
   .wrapper .main-page .top_button {
-    padding-bottom: 60px; }
+    padding-bottom: 75px; }
 
   .green-block .flex-row .flex-item-4, .green-block .flex-row .flex-item-6 {
     flex: 0 0 100%;
