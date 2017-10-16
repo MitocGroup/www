@@ -13,8 +13,7 @@ const fix = fixture`Check 'Home' page content`
 sharedFunctions.windowResolution(fix)
 
 test('Check "Logo" image is displayed on website header', async t => {
-  await t
-    .expect(header.logo)
+  await t.expect(header.logo)
 })
 
 test('Check "Services" top-menu link is displayed on website header', async t => {

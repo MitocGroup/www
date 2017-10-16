@@ -25,10 +25,7 @@ ensure_required_deps() {
         recink-pagespeed
         aws-sdk
         mitocgroup/npm_lazy
-        uglify-js
-        # uglify-es
-        # uglifyjs-webpack-plugin
-        # mishoo/UglifyJS2#harmony-v2.8.22
+        uglify-es
         html-minifier
         cssnano-cli
     );
