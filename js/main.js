@@ -70,7 +70,7 @@ $(function() {
               <div class="blog-content flex-item-6 block-effect">
                   <span class="post-date">${post.publishedAt}</span>
                   <h4><a href="${post.url}" target="_blank">${post.title}</a></h4>
-                  <a href="https://blog.mitocgroup.com/" class="button read-more" target="_blank"> 
+                  <a href="${post.url}" class="button read-more" target="_blank">
                       Read More <i class="icon-arrow icon-arrow-more"></i>
                   </a>
               </div>
