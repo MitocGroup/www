@@ -91,6 +91,13 @@ p, ul, span {
   -webkit-flex-wrap: wrap;
 }
 
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+}
+
 .flex-item-1 {
   flex: 0 0 8.33333333%;
   max-width: 8.33333333%;
@@ -173,6 +180,10 @@ p, ul, span {
 
 .container-top {
   margin-top: 90px;
+}
+
+.container-bottom {
+  margin-bottom: 90px;
 }
 
 .header-text {
@@ -303,6 +314,14 @@ p, ul, span {
 
 .pull-right {
   float: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .page-name {

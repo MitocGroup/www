@@ -96,8 +96,9 @@ $(window).scroll(function() {
     didScroll = true;
     if ($(window).scrollTop() > 30) {
         $('.navbar-fix').addClass('color-nav');
+        $('.white-color').removeClass('gray-color');
     } else {
         $('.navbar-fix').removeClass("color-nav");
-        
+        $('.white-color').addClass('gray-color');
     }
 });
