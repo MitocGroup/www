@@ -75,6 +75,17 @@
 }
 
 @media (max-width: 992px) {
+  .gray-light-block {
+    &.about {
+      .flex-row {
+        .flex-column {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
   .text-uppercase {
     font-size: 24px;
   }
@@ -398,6 +409,41 @@
 }
 
 @media (max-width: 800px) {
+  .tab-wrap {
+    width: 100%;
+    flex-wrap: wrap;
+    label {
+      display: block;
+      &:hover {
+        img {
+          -webkit-transform: none;
+          -moz-transform: none;
+          -o-transform: none;
+          transform: none;
+        }
+      }
+    }
+    .tab-label-content {
+      .tab-content {
+        position: static;
+        display: block;
+      }
+    }
+    .slide {
+      display: none;
+    }
+  }
+
+  .events {
+    .flex-row {
+     &.full-screen {
+       margin: 0 -15px;
+       .year {
+         margin: 0 15px;
+       }
+     }
+    }
+  }
   .quote {
    .flex-item-6 {
      flex: 0 0 100%;
@@ -467,6 +513,34 @@
 }
 
 @media (max-width: 680px) {
+  .quote {
+    .quote-block {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+  .title-text {
+    font-size: 16px;
+  }
+  .events {
+    .flex-row {
+      .flex-item-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        &:first-child, &:nth-child(2) {
+         .year {
+           &:before {
+             display: none;
+           }
+         }
+        }
+      }
+    }
+  }
+  .container-top {
+    margin-top: 45px;
+  }
   .container-space {
     padding: 45px 0;
   }

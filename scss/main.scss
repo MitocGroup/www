@@ -271,7 +271,10 @@ footer {
 div {
   &.popup {
     background: #fff;
-    box-shadow: 0 3px 10px #222;
+    -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+    -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
     max-width: 500px;
     min-width: 400px;
     width: 50%;

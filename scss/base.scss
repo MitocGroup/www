@@ -334,6 +334,11 @@ p, ul, span {
   height: 296px;
   .container {
     height: 100%;
+    .display-flex {
+      .text-header {
+        font-family: Avenir-Black, sans-serif;
+      }
+    }
   }
 }
 
