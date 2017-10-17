@@ -1,6 +1,5 @@
 'use strict';
 
-const fs = require('fs');
 const url = require('url');
 const AWS = require('aws-sdk');
 const Jimp = require('jimp');
@@ -44,7 +43,6 @@ exports.handler = (event, context) => {
     }).catch(err => {
       context.fail(err);
     });
-
   }).catch(err => {
     context.fail(err);
   });
