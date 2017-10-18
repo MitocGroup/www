@@ -3,8 +3,8 @@ jQuery(function($) {
 
     $('.carousel-mission').slick({
         infinite: false,
-        arrows: true,
-        dots: false
+        arrows: false,
+        dots: true
     });
     
 });

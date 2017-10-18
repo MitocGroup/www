@@ -75,6 +75,22 @@
 }
 
 @media (max-width: 992px) {
+  .partner {
+    .pull-left {
+      float: none;
+      img {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 40px;
+      }
+    }
+  }
+  .page-name {
+    .pull-right {
+      float: none;
+      text-align: center;
+    }
+  }
   .gray-light-block {
     &.about {
       .flex-row {
@@ -104,30 +120,29 @@
     }
   }
  .header {
-   .display-flex {
-     display: grid;
-     text-align: center;
-     justify-content: unset;
-     -webkit-justify-content: unset;
-     .block-half {
-       width: 100%;
-       font-size: 16px;
-       margin-top: 20px;
-     }
-     .text-uppercase {
-       grid-column: 1 / 1;
-       grid-row: 1 / 1;
-       font-size: 24px;
+   .container {
+     .display-flex {
+       display: grid;
+       text-align: center;
+       justify-content: unset;
+       -webkit-justify-content: unset;
+       .block-half {
+         width: 100%;
+         font-size: 16px;
+         margin-top: 20px;
+         img {
+           max-width: 200px;
+         }
+       }
+       .text-uppercase {
+         grid-column: 1 / 1;
+         grid-row: 1 / 1;
+         font-size: 24px;
+       }
      }
    }
  }
   .wrapper {
-    .contact-page {
-      .pull-right {
-        float: none;
-        text-align: center;
-      }
-    }
     .contact-form {
       .form-styles {
         .input-styles {
@@ -692,16 +707,21 @@
   .carousel-block {
     .container {
       .carousel-mission {
-        padding-bottom: 70px;
+        padding-bottom: 45px;
         padding-top: 100px;
-        .slick-next {
-          width: 145px;
-        }
-        .slick-next, .slick-prev {
-          &:before {
-            font-size: 17px;
+        .slick-dots {
+          top: 45px;
+          li {
+            button {
+              &#slick-slide-control00, &#slick-slide-control01, &#slick-slide-control02 {
+                &:before {
+                  font-size: 16px;
+                }
+              }
+            }
           }
         }
+
         .flex-row {
           display: grid;
           .flex-item-6 {
