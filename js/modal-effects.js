@@ -146,6 +146,16 @@ $(function() {
   });
 
   /**
+   * MailChimp input error listener
+   */
+  $('.viewport-control').on('mc:input:error', function() {
+    let $this = $(this);
+    if ($this.offset().top <= window.pageYOffset) {
+      $this.goTo('-80');
+    }
+  });
+
+  /**
    * Cancel modal event listener
    */
   $body.on('click', '.cancel-modal-btn', function (e) {

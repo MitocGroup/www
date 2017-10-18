@@ -18,7 +18,6 @@ echo "Minifying js code"
 uglifyjs ${CODE_DIR}/js/carousel.js -c -m -o ${CODE_DIR}/js/carousel.min.js
 uglifyjs ${CODE_DIR}/js/main.js -c -m -o ${CODE_DIR}/js/main.min.js
 uglifyjs ${CODE_DIR}/js/modal-effects.js -c -m -o ${CODE_DIR}/js/modal-effects.min.js
-uglifyjs ${CODE_DIR}/js/jquery-mailchimp.js -c -m -o ${CODE_DIR}/js/jquery-mailchimp.min.js
 
 echo "Copying resources into '${BUILD_DIR}' folder"
 rm -rf ${BUILD_DIR}/*
