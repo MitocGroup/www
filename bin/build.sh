@@ -15,7 +15,6 @@ cssnano < ${CODE_DIR}/css/slick.css > ${CODE_DIR}/css/slick.min.css
 cssnano < ${CODE_DIR}/css/slick-theme.css > ${CODE_DIR}/css/slick-theme.min.css
 
 echo "Minifying js code"
-uglifyjs ${CODE_DIR}/js/blog.js -c -m -o ${CODE_DIR}/js/blog.min.js
 uglifyjs ${CODE_DIR}/js/carousel.js -c -m -o ${CODE_DIR}/js/carousel.min.js
 uglifyjs ${CODE_DIR}/js/main.js -c -m -o ${CODE_DIR}/js/main.min.js
 uglifyjs ${CODE_DIR}/js/modal-effects.js -c -m -o ${CODE_DIR}/js/modal-effects.min.js
@@ -35,7 +34,7 @@ else
 fi
 
 cp -R ${CODE_DIR}/css ${CODE_DIR}/fonts ${CODE_DIR}/images \
-    ${CODE_DIR}/js ${CODE_DIR}/favicon.ico ${BUILD_DIR}/
+    ${CODE_DIR}/js ${CODE_DIR}/json ${CODE_DIR}/favicon.ico ${BUILD_DIR}/
 
 echo "Minifying html code"
 for html_file in $(find ${CODE_DIR} -type f -name "*.html"); do

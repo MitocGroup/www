@@ -1,3 +1,1 @@
-module.exports = {
-  hasError: true
-};
+module.exports = {};

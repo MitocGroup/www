@@ -3,6 +3,7 @@
 
 # Lambda related
 **/dist/
+!**/dist/.gitignore
 **/config.json
 
 # npm cache directory
