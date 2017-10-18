@@ -80,6 +80,8 @@
         cancelEvent(e);
         resetErrors();
 
+        event.preventDefault();
+
         request(cfg.url.replace('/post?', '/post-json?').concat('&c=?'), getData(),
           function (res) {
             if (res.result === 'error') {
