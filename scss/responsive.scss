@@ -75,6 +75,26 @@
 }
 
 @media (max-width: 992px) {
+  .green-block {
+    &.white-block {
+      .info-block {
+        -webkit-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        -o-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      }
+    }
+  }
+  .block-effect {
+    &:hover {
+      margin-top: 0;
+      margin-bottom: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -o-box-shadow: none;
+      box-shadow: none;
+    }
+  }
   .partner {
     .pull-left {
       float: none;
@@ -168,16 +188,6 @@
     .info-block {
       margin-left: 10px;
       margin-right: 10px;
-      &.block-effect {
-        &:hover {
-          margin-top: 0;
-          margin-bottom: 0;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          -o-box-shadow: none;
-          box-shadow: none;
-        }
-      }
     }
   }
 .contact-page {
