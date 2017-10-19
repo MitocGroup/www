@@ -126,6 +126,10 @@ footer {
 }
 
 .block-effect {
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
   &.blog-content {
     &:hover {
       margin-top: 0;

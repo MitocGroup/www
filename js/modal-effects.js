@@ -2,6 +2,7 @@ $(function() {
     'use strict';
 
   let $body = $('body');
+  let $inputViewport =   $('.viewport-control');
   
   let startProjectContent = `<div class="md-content popup">
         <h3>Start a Project</h3>
@@ -136,6 +137,8 @@ $(function() {
     submitSelector: '#submit-contact-form',
     onFail: function (errMsg) {
       let $genErr = $('#mc-general-error');
+      $('#submit-contact-form').attr('disabled', 'disabled');
+      $('#submit-contact-form').css( 'cursor', 'not-allowed' );
 
       $genErr.html(`<div class="error-mc">${errMsg}</div>`);
       setTimeout(() => { $genErr.html(''); }, 5000);
@@ -145,10 +148,15 @@ $(function() {
     }
   });
 
+  $inputViewport.on('keyup', function() {
+    $('#submit-contact-form').removeAttr('disabled');
+    $('#submit-contact-form').css( 'cursor', 'default' );
+  });
+
   /**
    * MailChimp input error listener
    */
-  $('.viewport-control').on('mc:input:error', function() {
+  $inputViewport.on('mc:input:error', function() {
     let $this = $(this);
     if ($this.offset().top <= window.pageYOffset) {
       $this.goTo('-80');
