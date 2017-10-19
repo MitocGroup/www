@@ -110,7 +110,7 @@ $(function() {
 });
 
 $(window).scroll(function() {
-    didScroll = true;
+    // didScroll = true;
     if ($(window).scrollTop() > 30) {
         $('.navbar-fix').addClass('color-nav');
         $('.white-color').removeClass('gray-color');
