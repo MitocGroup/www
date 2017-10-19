@@ -268,6 +268,8 @@ p, ul, span {
   height: 296px; }
   .header .container {
     height: 100%; }
+    .header .container .display-flex .block-half img {
+      max-width: 337px; }
     .header .container .display-flex .text-header {
       font-family: Avenir-Black, sans-serif; }
 
@@ -788,6 +790,15 @@ footer .map-background {
   .carousel-block .carousel-mission {
     padding-top: 200px;
     padding-bottom: 90px; }
+    .carousel-block .carousel-mission.slick-dotted.slick-slider {
+      margin-bottom: 0; }
+    .carousel-block .carousel-mission a p {
+      text-transform: none;
+      margin-bottom: 10px; }
+    .carousel-block .carousel-mission a:hover {
+      color: #000000; }
+    .carousel-block .carousel-mission.slick-slider .slick-list {
+      z-index: 3; }
     .carousel-block .carousel-mission .slide-text-right {
       padding-left: 40px; }
       .carousel-block .carousel-mission .slide-text-right h3 {
@@ -799,35 +810,46 @@ footer .map-background {
       .carousel-block .carousel-mission .slide-text-left h3 {
         font-size: 30px;
         text-transform: uppercase; }
-    .carousel-block .carousel-mission .slick-next, .carousel-block .carousel-mission .slick-prev {
-      top: 15%;
-      height: 40px;
-      width: 200px; }
-    .carousel-block .carousel-mission .slick-prev {
-      left: auto;
-      right: 50%; }
-      .carousel-block .carousel-mission .slick-prev:before {
-        content: "Our Mission";
-        color: #000000;
-        opacity: 1;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-family: 'Avenir-Black', sans-serif;
-        font-weight: bold; }
-      .carousel-block .carousel-mission .slick-prev.slick-disabled:before {
-        border-bottom: 2px solid #7ED257; }
-    .carousel-block .carousel-mission .slick-next {
-      left: 50%; }
-      .carousel-block .carousel-mission .slick-next:before {
-        content: "Our Strategy";
-        color: #000000;
-        opacity: 1;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-family: 'Avenir-Black', sans-serif;
-        font-weight: bold; }
-      .carousel-block .carousel-mission .slick-next.slick-disabled:before {
-        border-bottom: 2px solid #7ED257; }
+    .carousel-block .carousel-mission .slick-dots {
+      top: 90px; }
+      .carousel-block .carousel-mission .slick-dots li {
+        width: auto;
+        height: auto; }
+        .carousel-block .carousel-mission .slick-dots li.slick-active button:before {
+          border-bottom: 2px solid #7ED257;
+          content: '';
+          opacity: 1; }
+        .carousel-block .carousel-mission .slick-dots li button {
+          height: auto;
+          width: auto; }
+          .carousel-block .carousel-mission .slick-dots li button:before {
+            content: '';
+            opacity: 1;
+            position: static; }
+          .carousel-block .carousel-mission .slick-dots li button#slick-slide-control00:before {
+            content: 'Our Mission';
+            height: 40px;
+            width: 200px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: Avenir-Black,sans-serif;
+            font-weight: 700; }
+          .carousel-block .carousel-mission .slick-dots li button#slick-slide-control01:before {
+            content: 'Our Strategy';
+            height: 40px;
+            width: 200px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: Avenir-Black,sans-serif;
+            font-weight: 700; }
+          .carousel-block .carousel-mission .slick-dots li button#slick-slide-control02:before {
+            content: 'Our Team';
+            height: 40px;
+            width: 200px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: Avenir-Black,sans-serif;
+            font-weight: 700; }
 
 /* Popup*/
 .popup {
@@ -968,6 +990,13 @@ div.popup {
       width: 100%;
       min-height: 250px;
       max-height: 250px; }
+
+.read-more-team:hover {
+  cursor: pointer; }
+  .read-more-team:hover .icon-arrow-more {
+    opacity: 1;
+    left: 10px;
+    color: #28b655; }
 
 /* Animation*/
 @-webkit-keyframes glowing {
@@ -1176,6 +1205,17 @@ div.popup {
       position: absolute;
       bottom: 10px; } }
 @media (max-width: 992px) {
+  .partner .pull-left {
+    float: none; }
+    .partner .pull-left img {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 40px; }
+
+  .page-name .pull-right {
+    float: none;
+    text-align: center; }
+
   .gray-light-block.about .flex-row .flex-column p {
     font-size: 16px; }
 
@@ -1190,23 +1230,22 @@ div.popup {
     .about .container-top .flex-item-6:first-child {
       margin-bottom: 20px; }
 
-  .header .display-flex {
+  .header .container .display-flex {
     display: grid;
     text-align: center;
     justify-content: unset;
     -webkit-justify-content: unset; }
-    .header .display-flex .block-half {
+    .header .container .display-flex .block-half {
       width: 100%;
       font-size: 16px;
       margin-top: 20px; }
-    .header .display-flex .text-uppercase {
+      .header .container .display-flex .block-half img {
+        max-width: 200px; }
+    .header .container .display-flex .text-uppercase {
       grid-column: 1 / 1;
       grid-row: 1 / 1;
       font-size: 24px; }
 
-  .wrapper .contact-page .pull-right {
-    float: none;
-    text-align: center; }
   .wrapper .contact-form .form-styles .input-styles.space-input {
     padding-right: 10px; }
   .wrapper .contact-form .flex-row {
@@ -1535,12 +1574,12 @@ div.popup {
     margin-bottom: 20px; }
 
   .carousel-block .container .carousel-mission {
-    padding-bottom: 70px;
+    padding-bottom: 45px;
     padding-top: 100px; }
-    .carousel-block .container .carousel-mission .slick-next {
-      width: 145px; }
-    .carousel-block .container .carousel-mission .slick-next:before, .carousel-block .container .carousel-mission .slick-prev:before {
-      font-size: 17px; }
+    .carousel-block .container .carousel-mission .slick-dots {
+      top: 45px; }
+      .carousel-block .container .carousel-mission .slick-dots li button#slick-slide-control00:before, .carousel-block .container .carousel-mission .slick-dots li button#slick-slide-control01:before, .carousel-block .container .carousel-mission .slick-dots li button#slick-slide-control02:before {
+        font-size: 16px; }
     .carousel-block .container .carousel-mission .flex-row {
       display: grid; }
       .carousel-block .container .carousel-mission .flex-row .flex-item-6 {
@@ -1664,6 +1703,18 @@ div.popup {
       max-height: 722px;
       width: 100%; }
 
+.partner img {
+  padding-right: 40px;
+  width: 100%; }
+.partner p {
+  padding-bottom: 20px; }
+.partner h3 {
+  display: inline-block; }
+.partner .icon-facebook:before, .partner .icon-twitter:before, .partner .icon-linkedin:before {
+  font-size: 16px; }
+.partner .icon-facebook, .partner .icon-linkedin {
+  margin-right: 10px; }
+
 .tab-wrap {
   position: relative;
   display: flex; }
@@ -1723,7 +1774,7 @@ label {
     position: absolute;
     display: none;
     left: 0; }
-    .tab-label-content .tab-content h3 {
+    .tab-label-content .tab-content h3, .tab-label-content .tab-content .partner {
       padding: 40px 0; }
     .tab-label-content .tab-content p {
       padding-bottom: 20px; }

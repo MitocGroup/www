@@ -335,6 +335,11 @@ p, ul, span {
   .container {
     height: 100%;
     .display-flex {
+      .block-half {
+        img {
+          max-width: 337px;
+        }
+      }
       .text-header {
         font-family: Avenir-Black, sans-serif;
       }
