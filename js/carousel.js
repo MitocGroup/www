@@ -1,10 +1,9 @@
 jQuery(function($) {
-    'use strict';
+  'use strict';
 
-    $('.carousel-mission').slick({
-        infinite: false,
-        arrows: false,
-        dots: true
-    });
-    
+  $('.carousel-mission').slick({
+    infinite: false,
+    arrows: false,
+    dots: true
+  });
 });
