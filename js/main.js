@@ -16,15 +16,14 @@ $(function() {
       $('.hide-mobile, footer').removeClass('hidden');
     }
   });
-
+  
   $('.anchor').on('click', function(e) {
     if ($(window).width() > 992) {
       e.preventDefault();
       e.stopPropagation();
-
+      
       let anchor = this.getAttribute('href').replace(new RegExp('\/', 'g'), '');
-      $('html, body').animate({ scrollTop: $('#' + anchor).offset().top - 50 }, 1000);
-      return;
+      $(`#${anchor}`).goTo('-50', 1000);
     }
   });
 
@@ -90,10 +89,28 @@ $(function() {
   }
 
   renderMediumFeed();
+
+  /**
+   * Scroll to the element
+   * @param {string} offsetAdj
+   * @param {int} time
+   * @returns {$}
+   */
+  $.fn.goTo = function(offsetAdj, time) {
+    let realOffset = $(this).offset().top;
+    let animationTime = time || 'fast';
+    let additionalOffset = offsetAdj || '+0';
+
+    $('html, body').animate({
+      scrollTop: eval(realOffset + additionalOffset) + 'px'
+    }, animationTime);
+
+    return this;
+  };
 });
 
-$(window).scroll(function() {
-    didScroll = true;
+$(window).on('scroll',function() {
+    // didScroll = true;
     if ($(window).scrollTop() > 30) {
         $('.navbar-fix').addClass('color-nav');
         $('.white-color').removeClass('gray-color');

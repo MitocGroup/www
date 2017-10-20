@@ -335,6 +335,11 @@ p, ul, span {
   .container {
     height: 100%;
     .display-flex {
+      .block-half {
+        img {
+          max-width: 337px;
+        }
+      }
       .text-header {
         font-family: Avenir-Black, sans-serif;
       }
@@ -385,6 +390,17 @@ p, ul, span {
 }
 
 .green-block {
+  &.white-block {
+    background-color: $white-color;
+    .block-effect {
+      &:hover {
+        -webkit-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        -o-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      }
+    }
+  }
   &.gray-block {
     background-color: $gray-dark-color;
     margin: 90px 0;

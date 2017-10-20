@@ -126,6 +126,10 @@ footer {
 }
 
 .block-effect {
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
   &.blog-content {
     &:hover {
       margin-top: 0;
@@ -162,10 +166,28 @@ footer {
 }
 
 .carousel-block {
-  background-color: $gray-color;
   .carousel-mission {
     padding-top: 200px;
     padding-bottom: 90px;
+    &.slick-dotted {
+      &.slick-slider {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      p {
+        text-transform: none;
+        margin-bottom: 10px;
+      }
+      &:hover {
+        color: $black-color;
+      }
+    }
+  &.slick-slider {
+    .slick-list {
+      z-index: 3;
+    }
+  }
     .slide-text-right {
       padding-left: 40px;
       h3 {
@@ -181,43 +203,62 @@ footer {
         text-transform: uppercase;
       }
     }
-    .slick-next, .slick-prev {
-      top: 15%;
-      height: 40px;
-      width: 200px;
-    }
-    .slick-prev {
-      left: auto;
-      right: 50%;
-      &:before {
-        content: "Our Mission";
-        color: $black-color;
-        opacity: 1;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-family: 'Avenir-Black', sans-serif;
-        font-weight: bold;
-      }
-      &.slick-disabled {
-        &:before {
-          border-bottom: 2px solid $main-color;
+
+    .slick-dots {
+      top: 90px;
+      li {
+        width: auto;
+        height: auto;
+        &.slick-active {
+          button {
+          &:before {
+            border-bottom: 2px solid $main-color;
+            content: '';
+            opacity: 1;
+          }
+          }
         }
-      }
-    }
-    .slick-next {
-      left: 50%;
-      &:before {
-        content: "Our Strategy";
-        color: $black-color;
-        opacity: 1;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-family: 'Avenir-Black', sans-serif;
-        font-weight: bold;
-      }
-      &.slick-disabled {
-        &:before {
-          border-bottom: 2px solid $main-color;
+        button {
+          height: auto;
+          width: auto;
+          &:before {
+           content: '';
+            opacity: 1;
+            position: static;
+          }
+          &#slick-slide-control00 {
+            &:before {
+             content: 'Our Mission';
+              height: 40px;
+              width: 200px;
+              font-size: 20px;
+              text-transform: uppercase;
+              font-family: Avenir-Black,sans-serif;
+              font-weight: 700;
+            }
+          }
+          &#slick-slide-control01 {
+            &:before {
+              content: 'Our Strategy';
+              height: 40px;
+              width: 200px;
+              font-size: 20px;
+              text-transform: uppercase;
+              font-family: Avenir-Black,sans-serif;
+              font-weight: 700;
+            }
+          }
+          &#slick-slide-control02 {
+            &:before {
+              content: 'Our Team';
+              height: 40px;
+              width: 200px;
+              font-size: 20px;
+              text-transform: uppercase;
+              font-family: Avenir-Black,sans-serif;
+              font-weight: 700;
+            }
+          }
         }
       }
     }
@@ -416,6 +457,17 @@ div {
           }
         }
       }
+    }
+  }
+}
+
+.read-more-team {
+  &:hover {
+    cursor: pointer;
+    .icon-arrow-more {
+      opacity: 1;
+      left: 10px;
+      color: #28b655;
     }
   }
 }

@@ -54,3 +54,25 @@
   }
 }
 
+.partner {
+  img {
+    padding-right: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  p {
+    padding-bottom: 20px;
+  }
+  h3 {
+    display: inline-block;
+  }
+  .icon-facebook, .icon-twitter, .icon-linkedin {
+    cursor: pointer;
+    &:before {
+      font-size: 16px;
+    }
+  }
+  .icon-facebook, .icon-linkedin {
+    margin-right: 10px;
+  }
+}
