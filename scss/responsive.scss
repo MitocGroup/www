@@ -149,9 +149,9 @@
        .block-half {
          width: 100%;
          font-size: 16px;
-         margin-top: 20px;
+         margin-top: 45px;
          img {
-           max-width: 200px;
+           max-width: 240px;
          }
        }
        .text-uppercase {
@@ -191,6 +191,7 @@
     }
   }
 .contact-page {
+  background-size: 1610px;
   .container {
     .flex-row {
       margin: 0 -10px;
@@ -347,6 +348,9 @@
 
   .navbar-fix {
     height: 54px;
+    &.gray-color {
+      background-color: #EFEFEF;
+    }
     .logo {
       line-height: 54px;
       a {
@@ -360,6 +364,7 @@
       }
     }
     &.color-nav-responsive {
+      background-color: $white-color;
       .nav-bar {
         ul {
           li {
@@ -538,6 +543,9 @@
 }
 
 @media (max-width: 680px) {
+  .contact-page {
+    background-size: 1400px;
+  }
   .quote {
     .quote-block {
       h4 {
@@ -577,14 +585,6 @@
   }
   .header {
     height: 220px;
-  }
-  .navbar-fix {
-    &.gray-color {
-      background-color: #EFEFEF;
-      &.color-nav-responsive {
-        background-color: $white-color;
-      }
-    }
   }
   .page-name {
     height: 220px;

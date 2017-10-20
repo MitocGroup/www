@@ -16,12 +16,12 @@ $(function() {
       $('.hide-mobile, footer').removeClass('hidden');
     }
   });
-
+  
   $('.anchor').on('click', function(e) {
     if ($(window).width() > 992) {
       e.preventDefault();
       e.stopPropagation();
-
+      
       let anchor = this.getAttribute('href').replace(new RegExp('\/', 'g'), '');
       $(`#${anchor}`).goTo('-50', 1000);
     }

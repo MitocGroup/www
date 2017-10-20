@@ -10,13 +10,13 @@ $(function() {
             <form id="start-project-form" class="form-styles">
                 <div class="flex-row">
                     <div class="flex-item-12 mc-form-group-FNAME input-styles space-input">
-                        <input type="text" name="FNAME" placeholder="Full name">
+                        <input type="text" name="FNAME" placeholder="Full name" class="input-popup">
                         <div class="mc-error"></div>
                     </div>    
                 </div>
                 <div class="flex-row">
                     <div class="flex-item-12 mc-form-group-EMAIL input-styles space-input">
-                        <input type="email" name="EMAIL" placeholder="Email">
+                        <input type="email" name="EMAIL" placeholder="Email" class="input-popup">
                         <div class="mc-error"></div>
                     </div>
                 </div>
@@ -41,19 +41,19 @@ $(function() {
           <form id="become-partner-form" class="form-styles">
               <div class="flex-row">
                   <div class="flex-item-12 mc-form-group-FNAME input-styles space-input">
-                      <input type="text" name="FNAME" placeholder="Full name">
+                      <input type="text" name="FNAME" placeholder="Full name" class="input-popup">
                       <div class="mc-error"></div>
                   </div>    
               </div>
               <div class="flex-row">
                   <div class="flex-item-12 mc-form-group-COMPANY input-styles space-input">
-                      <input type="text" name="COMPANY" placeholder="Company">
+                      <input type="text" name="COMPANY" placeholder="Company" class="input-popup">
                       <div class="mc-error"></div>
                   </div>    
               </div>
               <div class="flex-row">
                   <div class="flex-item-12 mc-form-group-EMAIL input-styles space-input">
-                      <input type="email" name="EMAIL" placeholder="Email">
+                      <input type="email" name="EMAIL" placeholder="Email" class="input-popup">
                       <div class="mc-error"></div>
                   </div>
               </div>
@@ -70,6 +70,16 @@ $(function() {
               </div>
           </form>
       </div>`;
+  
+  function lockButton(target) {
+    $(target).attr('disabled', 'disabled');
+    $(target).css( 'cursor', 'not-allowed' );
+  }
+  
+  function unlockButton(target) {
+    $(target).removeAttr('disabled');
+    $(target).css( 'cursor', 'default' );
+  }
 
   $('.become-partner').popup({
     content: becomePartnerContent,
@@ -86,7 +96,8 @@ $(function() {
         submitSelector: '#submit-modal-form',
         onFail: function (errMsg) {
           let $genErr = $('#mc-general-error-partner');
-
+          lockButton('#submit-modal-form');
+                    
           $genErr.text(errMsg);
           setTimeout(() => { $genErr.text(''); }, 5000);
         },
@@ -116,6 +127,7 @@ $(function() {
         submitSelector: '#submit-modal-form',
         onFail: function (errMsg) {
           let $genErr = $('#mc-general-error-project');
+        lockButton('#submit-modal-form');
 
           $genErr.text(errMsg);
           setTimeout(() => { $genErr.text(''); }, 5000);
@@ -137,9 +149,9 @@ $(function() {
     submitSelector: '#submit-contact-form',
     onFail: function (errMsg) {
       let $genErr = $('#mc-general-error');
-      $('#submit-contact-form').attr('disabled', 'disabled');
-      $('#submit-contact-form').css( 'cursor', 'not-allowed' );
-
+      
+      lockButton('#submit-contact-form');
+     
       $genErr.html(`<div class="error-mc">${errMsg}</div>`);
       setTimeout(() => { $genErr.html(''); }, 5000);
     },
@@ -148,12 +160,16 @@ $(function() {
     }
   });
 
-  $inputViewport.on('keyup', function() {
-    $('#submit-contact-form').removeAttr('disabled');
-    $('#submit-contact-form').css( 'cursor', 'default' );
+
+  $body.on('keyup', $inputViewport, function (e) {
+    unlockButton('#submit-contact-form');
   });
 
-  /**
+  $body.on('keyup', '.input-popup', function (e) {
+    unlockButton('#submit-modal-form');
+  });
+  
+    /**
    * MailChimp input error listener
    */
   $inputViewport.on('mc:input:error', function() {
