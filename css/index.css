@@ -797,71 +797,69 @@ footer .map-background {
       left: 10px;
       color: #28b655; }
 
-.carousel-block {
-  background-color: #fbfbfb; }
-  .carousel-block .carousel-mission {
-    padding-top: 200px;
-    padding-bottom: 90px; }
-    .carousel-block .carousel-mission.slick-dotted.slick-slider {
-      margin-bottom: 0; }
-    .carousel-block .carousel-mission a p {
-      text-transform: none;
-      margin-bottom: 10px; }
-    .carousel-block .carousel-mission a:hover {
-      color: #000000; }
-    .carousel-block .carousel-mission.slick-slider .slick-list {
-      z-index: 3; }
-    .carousel-block .carousel-mission .slide-text-right {
-      padding-left: 40px; }
-      .carousel-block .carousel-mission .slide-text-right h3 {
-        font-size: 30px;
-        text-transform: uppercase; }
-    .carousel-block .carousel-mission .slide-text-left {
-      padding-right: 40px;
-      text-align: right; }
-      .carousel-block .carousel-mission .slide-text-left h3 {
-        font-size: 30px;
-        text-transform: uppercase; }
-    .carousel-block .carousel-mission .slick-dots {
-      top: 90px; }
-      .carousel-block .carousel-mission .slick-dots li {
-        width: auto;
-        height: auto; }
-        .carousel-block .carousel-mission .slick-dots li.slick-active button:before {
-          border-bottom: 2px solid #7ED257;
+.carousel-block .carousel-mission {
+  padding-top: 200px;
+  padding-bottom: 90px; }
+  .carousel-block .carousel-mission.slick-dotted.slick-slider {
+    margin-bottom: 0; }
+  .carousel-block .carousel-mission a p {
+    text-transform: none;
+    margin-bottom: 10px; }
+  .carousel-block .carousel-mission a:hover {
+    color: #000000; }
+  .carousel-block .carousel-mission.slick-slider .slick-list {
+    z-index: 3; }
+  .carousel-block .carousel-mission .slide-text-right {
+    padding-left: 40px; }
+    .carousel-block .carousel-mission .slide-text-right h3 {
+      font-size: 30px;
+      text-transform: uppercase; }
+  .carousel-block .carousel-mission .slide-text-left {
+    padding-right: 40px;
+    text-align: right; }
+    .carousel-block .carousel-mission .slide-text-left h3 {
+      font-size: 30px;
+      text-transform: uppercase; }
+  .carousel-block .carousel-mission .slick-dots {
+    top: 90px; }
+    .carousel-block .carousel-mission .slick-dots li {
+      width: auto;
+      height: auto; }
+      .carousel-block .carousel-mission .slick-dots li.slick-active button:before {
+        border-bottom: 2px solid #7ED257;
+        content: '';
+        opacity: 1; }
+      .carousel-block .carousel-mission .slick-dots li button {
+        height: auto;
+        width: auto; }
+        .carousel-block .carousel-mission .slick-dots li button:before {
           content: '';
-          opacity: 1; }
-        .carousel-block .carousel-mission .slick-dots li button {
-          height: auto;
-          width: auto; }
-          .carousel-block .carousel-mission .slick-dots li button:before {
-            content: '';
-            opacity: 1;
-            position: static; }
-          .carousel-block .carousel-mission .slick-dots li button#slick-slide-control00:before {
-            content: 'Our Mission';
-            height: 40px;
-            width: 200px;
-            font-size: 20px;
-            text-transform: uppercase;
-            font-family: Avenir-Black,sans-serif;
-            font-weight: 700; }
-          .carousel-block .carousel-mission .slick-dots li button#slick-slide-control01:before {
-            content: 'Our Strategy';
-            height: 40px;
-            width: 200px;
-            font-size: 20px;
-            text-transform: uppercase;
-            font-family: Avenir-Black,sans-serif;
-            font-weight: 700; }
-          .carousel-block .carousel-mission .slick-dots li button#slick-slide-control02:before {
-            content: 'Our Team';
-            height: 40px;
-            width: 200px;
-            font-size: 20px;
-            text-transform: uppercase;
-            font-family: Avenir-Black,sans-serif;
-            font-weight: 700; }
+          opacity: 1;
+          position: static; }
+        .carousel-block .carousel-mission .slick-dots li button#slick-slide-control00:before {
+          content: 'Our Mission';
+          height: 40px;
+          width: 200px;
+          font-size: 20px;
+          text-transform: uppercase;
+          font-family: Avenir-Black,sans-serif;
+          font-weight: 700; }
+        .carousel-block .carousel-mission .slick-dots li button#slick-slide-control01:before {
+          content: 'Our Strategy';
+          height: 40px;
+          width: 200px;
+          font-size: 20px;
+          text-transform: uppercase;
+          font-family: Avenir-Black,sans-serif;
+          font-weight: 700; }
+        .carousel-block .carousel-mission .slick-dots li button#slick-slide-control02:before {
+          content: 'Our Team';
+          height: 40px;
+          width: 200px;
+          font-size: 20px;
+          text-transform: uppercase;
+          font-family: Avenir-Black,sans-serif;
+          font-weight: 700; }
 
 /* Popup*/
 .popup {
@@ -1264,9 +1262,9 @@ div.popup {
     .header .container .display-flex .block-half {
       width: 100%;
       font-size: 16px;
-      margin-top: 20px; }
+      margin-top: 45px; }
       .header .container .display-flex .block-half img {
-        max-width: 200px; }
+        max-width: 240px; }
     .header .container .display-flex .text-uppercase {
       grid-column: 1 / 1;
       grid-row: 1 / 1;
@@ -1285,23 +1283,25 @@ div.popup {
     margin-left: 10px;
     margin-right: 10px; }
 
-  .contact-page .container .flex-row {
-    margin: 0 -10px; }
-    .contact-page .container .flex-row .flex-item-4 {
-      flex: 0 0 100%;
-      max-width: 100%; }
-      .contact-page .container .flex-row .flex-item-4.map-block:not(:last-child) {
-        margin-bottom: 20px; }
-      .contact-page .container .flex-row .flex-item-4.map-block .contact-info {
+  .contact-page {
+    background-size: 1610px; }
+    .contact-page .container .flex-row {
+      margin: 0 -10px; }
+      .contact-page .container .flex-row .flex-item-4 {
+        flex: 0 0 100%;
+        max-width: 100%; }
+        .contact-page .container .flex-row .flex-item-4.map-block:not(:last-child) {
+          margin-bottom: 20px; }
+        .contact-page .container .flex-row .flex-item-4.map-block .contact-info {
+          margin-right: 10px;
+          margin-left: 10px; }
+          .contact-page .container .flex-row .flex-item-4.map-block .contact-info iframe {
+            height: 300px; }
+    .contact-page .form-styles .flex-row {
+      margin: 0 -10px; }
+      .contact-page .form-styles .flex-row .flex-item-6 .input-styles, .contact-page .form-styles .flex-row .flex-item-12 .input-styles {
         margin-right: 10px;
         margin-left: 10px; }
-        .contact-page .container .flex-row .flex-item-4.map-block .contact-info iframe {
-          height: 300px; }
-  .contact-page .form-styles .flex-row {
-    margin: 0 -10px; }
-    .contact-page .form-styles .flex-row .flex-item-6 .input-styles, .contact-page .form-styles .flex-row .flex-item-12 .input-styles {
-      margin-right: 10px;
-      margin-left: 10px; }
 
   .partners .gray-block {
     text-align: center; }
@@ -1375,6 +1375,8 @@ div.popup {
 
   .navbar-fix {
     height: 54px; }
+    .navbar-fix.gray-color {
+      background-color: #EFEFEF; }
     .navbar-fix .logo {
       line-height: 54px; }
       .navbar-fix .logo a .mitoc-logo {
@@ -1383,8 +1385,10 @@ div.popup {
         -moz-transition: .4s;
         -o-transition: .4s;
         transition: .4s; }
-    .navbar-fix.color-nav-responsive .nav-bar ul li {
-      font-size: 24px; }
+    .navbar-fix.color-nav-responsive {
+      background-color: #ffffff; }
+      .navbar-fix.color-nav-responsive .nav-bar ul li {
+        font-size: 24px; }
     .navbar-fix .nav-bar {
       float: none; }
       .navbar-fix .nav-bar ul li:not(:last-child) {
@@ -1495,6 +1499,9 @@ div.popup {
         font-size: 30px;
         line-height: 40px; } }
 @media (max-width: 680px) {
+  .contact-page {
+    background-size: 1400px; }
+
   .quote .quote-block h4 {
     font-size: 18px; }
 
@@ -1521,11 +1528,6 @@ div.popup {
 
   .header {
     height: 220px; }
-
-  .navbar-fix.gray-color {
-    background-color: #EFEFEF; }
-    .navbar-fix.gray-color.color-nav-responsive {
-      background-color: #ffffff; }
 
   .page-name {
     height: 220px;
@@ -1730,8 +1732,10 @@ div.popup {
   padding-bottom: 20px; }
 .partner h3 {
   display: inline-block; }
-.partner .icon-facebook:before, .partner .icon-twitter:before, .partner .icon-linkedin:before {
-  font-size: 16px; }
+.partner .icon-facebook, .partner .icon-twitter, .partner .icon-linkedin {
+  cursor: pointer; }
+  .partner .icon-facebook:before, .partner .icon-twitter:before, .partner .icon-linkedin:before {
+    font-size: 16px; }
 .partner .icon-facebook, .partner .icon-linkedin {
   margin-right: 10px; }
 

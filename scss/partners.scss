@@ -67,6 +67,7 @@
     display: inline-block;
   }
   .icon-facebook, .icon-twitter, .icon-linkedin {
+    cursor: pointer;
     &:before {
       font-size: 16px;
     }
