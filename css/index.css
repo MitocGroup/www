@@ -1207,6 +1207,10 @@ div.popup {
       z-index: -1;
       top: 50%; }
 
+.events .block-effect {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
 .events .flex-row.full-screen {
   margin: 0 -20px; }
 .events .flex-row .flex-item-4:first-child .year:before, .events .flex-row .flex-item-4:nth-child(2) .year:before {
