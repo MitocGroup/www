@@ -1,0 +1,23 @@
+.filter-btn {
+  padding: 13px 10px;
+  background-color: transparent;
+  border: 2px solid $black-color;
+  font-family: "Avenir-Black", sans-serif;
+  font-size: 18px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  i {
+    margin-right: 10px;
+    vertical-align: middle;
+    font-size: 24px;
+  }
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &:hover, &.active {
+    color: $accent-green;
+    border-color: $accent-green;
+  }
+}
