@@ -107,6 +107,23 @@ $(function() {
 
     return this;
   };
+
+  /* Filter for Customers page*/
+  
+  let $parent =  $('#parent > div');
+
+  var $btns = $('.filter-btn').click(function() {
+    if (this.id == 'all') {
+      $parent.fadeIn(450);
+    } else {
+      var $el = $('.' + this.id).fadeIn(450);
+      $parent.not($el).hide();
+    }
+    $btns.removeClass('active');
+    $(this).addClass('active');
+  })
+
+
 });
 
 $(window).on('scroll',function() {

@@ -92,6 +92,11 @@
 }
 
 .events {
+  .block-effect {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
   .flex-row {
     &.full-screen {
       margin: 0 -20px;

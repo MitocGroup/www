@@ -17,6 +17,14 @@
 }
 
 @media (max-width: 1270px) {
+  .block-half {
+    text-align: center;
+    .filter-btn {
+      &:last-child {
+        margin-top: 15px;
+      }
+    }
+  }
   .quote {
     .quote-block {
       h4 {
@@ -149,9 +157,9 @@
        .block-half {
          width: 100%;
          font-size: 16px;
-         margin-top: 45px;
+         margin-top: 25px;
          img {
-           max-width: 240px;
+           max-width: 200px;
          }
        }
        .text-uppercase {
@@ -225,7 +233,16 @@
     }
   }
 }
-  .partners{
+  .partners {
+    .container-top {
+      &.aws-info {
+        p {
+          &:last-child {
+            margin: 45px 0;
+          }
+        }
+      }
+    }
     .gray-block {
       text-align: center;
       .container {
@@ -543,6 +560,14 @@
 }
 
 @media (max-width: 680px) {
+  .block-half {
+    .filter-btn {
+      padding: 5px;
+      i {
+        font-size: 20px;
+      }
+    }
+  }
   .contact-page {
     background-size: 1400px;
   }
