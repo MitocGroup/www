@@ -49,5 +49,11 @@
   ul {
     list-style-position: inside;
     list-style: none;
+    li {
+      img {
+        height: 15px;
+        padding-right: 10px;
+      }
+    }
   }
 }

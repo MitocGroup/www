@@ -124,7 +124,6 @@ $(function() {
 });
 
 $(window).on('scroll',function() {
-    // didScroll = true;
     if ($(window).scrollTop() > 30) {
         $('.navbar-fix').addClass('color-nav');
         $('.white-color').removeClass('gray-color');
