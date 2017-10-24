@@ -45,7 +45,7 @@ jobs:
     - stage: "Deploy To :cloud:"
       node_js: 8
       script:
-        - pwd && bash bin/deploy.sh ${TRAVIS_BRANCH}
+        - bash bin/deploy.sh ${TRAVIS_BRANCH}
 
     - stage: "Run e2e Tests :clipboard:"
       node_js: 8
