@@ -33,7 +33,7 @@ else
 fi
 
 message "Build: Start"
-${MY_DIR}/travis/build.sh ${BRANCH}
+${MY_DIR}/travis/build.js ${BRANCH}
 
 message "Synchronizing build directory"
 aws s3 sync ${AWS_CLI} ${MY_DIR}/build/ ${BUCKET} --region ${REGION} \
