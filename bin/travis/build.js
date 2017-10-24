@@ -33,7 +33,7 @@ walkDir(appSrc, /index.html/, page => pages.push(page));
 
 fsExtra.ensureDirSync(`${buildPath}/js`);
 fsExtra.ensureDirSync(`${buildPath}/css`);
-
+console.log(pages);
 let promises = pages.map(pagePath => {
   let distDir = pagePath.replace(appSrc, buildPath);
   fsExtra.ensureDirSync(distDir.replace('index.html', ''));
