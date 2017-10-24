@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 const appPath = path.join(__dirname, '../../');
-const srcPath = path.join(appPath, 'src');
 
 /**
  * Run child shell command
@@ -46,22 +45,29 @@ function filterLog(str, regexp) {
 exports.runChildCmd = runChildCmd;
 
 /**
- * Find provisioning file path
+ * Find files recursively from directory
  * @returns {*}
  */
-function findProvisioningFile() {
-  let files = fs.readdirSync(srcPath).filter(file => {
-    return /^.([a-z0-9]+).([a-z]+).provisioning.json$/.test(file);
-  });
-
-  if (files.length <= 0) {
-    throw 'Provisioning file was not found';
+function walkDir(dir, filter, callback) {
+  if (!fs.existsSync(dir) || /node_modules/.test(dir) || /build/.test(dir)) {
+    return;
   }
 
-  return path.join(srcPath, files[0]);
+  let files = fs.readdirSync(dir);
+
+  for (let i = 0; i < files.length; i++) {
+    let filename = path.join(dir, files[i]);
+    let stat = fs.lstatSync(filename);
+
+    if (stat.isDirectory()) {
+      walkDir(filename, filter, callback);
+    } else if (filter.test(filename)) {
+      callback(filename);
+    }
+  }
 }
 
-exports.findProvisioningFile = findProvisioningFile;
+exports.walkDir = walkDir;
 
 /**
  * Timeout promise

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
+MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+
 setup_variables() {
-    export HOTFIX=0
     export DEPLOY_ENV=${TRAVIS_BRANCH}
     export DEPLOY_HOST="https://www.mitocgroup.com"
 
@@ -10,8 +11,6 @@ setup_variables() {
             DEPLOY_HOST="https://www-test.mitocgroup.com"
         ;;
     esac
-
-    if [[ ${TRAVIS_PULL_REQUEST_BRANCH} =~ ^hotfix ]]; then HOTFIX=1; fi
 }
 
 ensure_required_deps() {
@@ -23,11 +22,6 @@ ensure_required_deps() {
         recink-codeclimate
         recink-snyk
         recink-pagespeed
-        aws-sdk
-        mitocgroup/npm_lazy
-        uglify-es
-        html-minifier
-        cssnano-cli
     );
 
     for DEP in ${REQUIRED_DEPS[@]}; do
@@ -49,7 +43,7 @@ setup_git() {
 
 setup_npm() {
     npm config set depth 0
-    npm link aws-sdk
+    cd ${MY_DIR} && npm install && cd ../;
 }
 
 echo "Setting up travis variables"

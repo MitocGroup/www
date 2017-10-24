@@ -10,28 +10,16 @@ if [ -z $(which aws) ]; then
 fi
 
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
-echo "## DEPLOY - MY_DIR: ${MY_DIR}"
 BRANCH=$([ -n "$1" ] && echo "$1" || echo 'dev')
-echo "## DEPLOY - BRANCH: ${BRANCH}"
 REGION=$([ -n "$2" ] && echo "$2" || echo 'us-west-2')
-echo "## DEPLOY - REGION: ${REGION}"
 PROFILE=$([ -n "$3" ] && echo "$3" || echo 'default')
-echo "## DEPLOY - PROFILE: ${PROFILE}"
+
+message "## DEPLOY INFO: MY_DIR - ${MY_DIR} / BRANCH: ${BRANCH} / REGION: ${REGION} / PROFILE: ${PROFILE}"
 
 if [ -z ${AWS_ACCESS_KEY_ID+x} ]; then
     AWS_CLI="--profile ${PROFILE}"
 else
     AWS_CLI=""
-fi
-
-if [ -z ${DEEP_NO_INTERACTION+x} ]; then
-    message "You are going to deploy from '${BRANCH}' branch (region: ${REGION}), continue? [y|n]: "
-    read CONFIRM
-
-    if [ ${CONFIRM} != 'y' ]; then
-        echo 'Exiting without deploy'
-        exit 1
-    fi
 fi
 
 if [ ${BRANCH} != 'master' ]; then
@@ -45,8 +33,7 @@ else
 fi
 
 message "Build: Start"
-${MY_DIR}/build.sh ${BRANCH}
-message "Build: Done"
+${MY_DIR}/travis/build.sh ${BRANCH}
 
 message "Synchronizing build directory"
 aws s3 sync ${AWS_CLI} ${MY_DIR}/build/ ${BUCKET} --region ${REGION} \
