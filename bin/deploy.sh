@@ -40,6 +40,12 @@ message "Synchronizing build directory"
 aws s3 sync ${AWS_CLI} ${APP_DIR}/dist/ ${BUCKET} --region ${REGION} \
     --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
 
+aws s3 sync ${AWS_CLI} ${APP_DIR}/dist/css/ ${BUCKET}css/ --region ${REGION} \
+    --metadata-directive REPLACE --cache-control max-age=${MAX_AGE} --delete
+
+aws s3 sync ${AWS_CLI} ${APP_DIR}/dist/js/ ${BUCKET}js/ --region ${REGION} \
+    --metadata-directive REPLACE --cache-control max-age=${MAX_AGE} --delete
+
 if [ "${BRANCH}" == "master" ]; then
     message "Invoking MediumFeedMitocgroup function"
     aws lambda ${AWS_CLI} invoke --function-name MediumFeedMitocgroup medium-feed.log
