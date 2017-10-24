@@ -108,9 +108,9 @@ $(function() {
     return this;
   };
 
-  let $parent =  $('#parent').children('div');
+  let $parent = $('#parent').children('div');
 
-  var $btns = $('.filter-btn').on('click', function() {
+  let $btns = $('.filter-btn').on('click', function() {
     if (this.id === 'all') {
       $parent.fadeIn(450);
     } else {
@@ -119,7 +119,7 @@ $(function() {
     }
     $btns.removeClass('active');
     $(this).addClass('active');
-  })
+  });
 
 });
 
