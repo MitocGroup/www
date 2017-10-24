@@ -83,6 +83,14 @@
 }
 
 @media (max-width: 992px) {
+  .laptop {
+    #laptop-anim {
+      width: 71%;
+      height: 77%;
+      right: 15%;
+      top: 10%;
+    }
+  }
   .green-block {
     &.white-block {
       .info-block {
@@ -456,6 +464,28 @@
 }
 
 @media (max-width: 800px) {
+  .laptop {
+    height: 200px;
+  }
+  .adtechmedia-info {
+    .flex-item-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      img {
+        padding-bottom: 45px;
+      }
+    }
+    &.visa_versa {
+      display: grid;
+      .flex-item-6 {
+        &:last-child {
+          grid-column: 1 / 2;
+          grid-row: 1 / 3;
+        }
+      }
+    }
+  }
+
   .tab-wrap {
     width: 100%;
     flex-wrap: wrap;
