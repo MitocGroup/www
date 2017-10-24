@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-#MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
-#APP_PATH=$(dirname $(cd $(dirname $0); pwd -P))
-
 setup_variables() {
     export DEPLOY_ENV=${TRAVIS_BRANCH}
     export DEPLOY_HOST="https://www.mitocgroup.com"
@@ -44,7 +41,6 @@ setup_git() {
 
 setup_npm() {
     npm config set depth 0
-#    cd ${MY_DIR} && npm install && cd ${TRAVIS_BUILD_DIR};
 }
 
 echo "Setting up travis variables"

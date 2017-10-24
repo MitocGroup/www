@@ -35,16 +35,16 @@ fi
 message "Build: Start"
 ${MY_DIR}/travis/build.js ${BRANCH}
 
-#message "Synchronizing build directory"
-#aws s3 sync ${AWS_CLI} ${MY_DIR}/build/ ${BUCKET} --region ${REGION} \
-#    --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
-#
-#if [ "${BRANCH}" == "master" ]; then
-#    message "Invoking MediumFeedMitocgroup function"
-#    aws lambda ${AWS_CLI} invoke --function-name MediumFeedMitocgroup medium-feed.log
-#fi
-#
-#message "Invalidating CloudFront"
-#aws cloudfront ${AWS_CLI} create-invalidation --distribution-id ${DIST_ID} --paths '/*'
-#
-#message "Deploy: Done"
+message "Synchronizing build directory"
+aws s3 sync ${AWS_CLI} ${MY_DIR}/build/ ${BUCKET} --region ${REGION} \
+    --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
+
+if [ "${BRANCH}" == "master" ]; then
+    message "Invoking MediumFeedMitocgroup function"
+    aws lambda ${AWS_CLI} invoke --function-name MediumFeedMitocgroup medium-feed.log
+fi
+
+message "Invalidating CloudFront"
+aws cloudfront ${AWS_CLI} create-invalidation --distribution-id ${DIST_ID} --paths '/*'
+
+message "Deploy: Done"
