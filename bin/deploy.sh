@@ -10,6 +10,7 @@ if [ -z $(which aws) ]; then
 fi
 
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+APP_DIR=$(dirname ${MY_DIR})
 BRANCH=$([ -n "$1" ] && echo "$1" || echo 'dev')
 REGION=$([ -n "$2" ] && echo "$2" || echo 'us-west-2')
 PROFILE=$([ -n "$3" ] && echo "$3" || echo 'default')
@@ -36,7 +37,7 @@ message "Build: Start"
 ${MY_DIR}/travis/build.js ${BRANCH}
 
 message "Synchronizing build directory"
-aws s3 sync ${AWS_CLI} ${MY_DIR}/build/ ${BUCKET} --region ${REGION} \
+aws s3 sync ${AWS_CLI} ${APP_DIR}/build/ ${BUCKET} --region ${REGION} \
     --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
 
 if [ "${BRANCH}" == "master" ]; then
