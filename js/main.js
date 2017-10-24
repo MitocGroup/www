@@ -107,10 +107,22 @@ $(function() {
 
     return this;
   };
+
+  let $parent = $('#parent').children('div');
+
+  let $btns = $('.filter-btn').on('click', function() {
+    if (this.id === 'all') {
+      $parent.fadeIn(450);
+    } else {
+      var $el = $('.' + this.id).fadeIn(450);
+      $parent.not($el).hide();
+    }
+    $btns.removeClass('active');
+    $(this).addClass('active');
+  });
 });
 
 $(window).on('scroll',function() {
-    // didScroll = true;
     if ($(window).scrollTop() > 30) {
         $('.navbar-fix').addClass('color-nav');
         $('.white-color').removeClass('gray-color');

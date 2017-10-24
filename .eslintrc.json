@@ -2,5 +2,8 @@
   "extends": "standard",
   "parserOptions": {
     "ecmaVersion": 8
+  },
+  "globals": {
+    "bodymovin": true
   }
 }

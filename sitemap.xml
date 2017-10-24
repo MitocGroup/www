@@ -35,11 +35,6 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/services/start-project/</loc>
-  <priority>0.80</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
   <loc>https://www.mitocgroup.com/partners/</loc>
   <priority>0.90</priority>
   <changefreq>weekly</changefreq>
@@ -60,11 +55,6 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/partners/become-partner/</loc>
-  <priority>0.80</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
   <loc>https://www.mitocgroup.com/customers/</loc>
   <priority>0.90</priority>
   <changefreq>weekly</changefreq>
@@ -80,23 +70,8 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/customers/become-customer/</loc>
-  <priority>0.80</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
   <loc>https://www.mitocgroup.com/about/</loc>
   <priority>0.90</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.mitocgroup.com/about/mission/</loc>
-  <priority>0.80</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.mitocgroup.com/about/strategy/</loc>
-  <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>
 <url>

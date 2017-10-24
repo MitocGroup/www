@@ -73,7 +73,7 @@ footer {
     }
   }
   .map-background {
-    background-image: url(/images/map-footer.png);
+    background-image: url(/images/map-footer.svg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
@@ -554,7 +554,6 @@ div {
 /*Confirm Page*/
 
 .thank-you {
-  height: calc(100vh - 84px);
   background-color: $gray-dark-color;
   margin-top: 84px;
   text-align: center;
