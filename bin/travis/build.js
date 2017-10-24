@@ -194,8 +194,16 @@ function optimizePage(srcPagePath, destPagePath) {
         fs.writeFile(
           destPagePath,
           minify(html, {
-            removeComments: true,
             collapseWhitespace: true,
+            decodeEntities: true,
+            html5: true,
+            minifyCSS: true,
+            minifyJS: true,
+            removeComments: true,
+            removeEmptyAttributes: true,
+            removeOptionalTags: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
             removeStyleLinkTypeAttributes: true
           }),
           'utf8',
