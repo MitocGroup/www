@@ -29,15 +29,17 @@ exports.handler = (event, context) => {
         s3.upload({
           Bucket: config.destBucket,
           Key: `images/medium/${images[index]}`,
-          Body: imgBuffer}
-        ).promise()
+          Body: imgBuffer,
+          CacheControl: 'max-age=604800'
+        }).promise()
       ));
     }).then(() =>
       s3.putObject({
         Bucket: config.destBucket,
         Key: 'json/medium-feed.json',
-        Body: JSON.stringify(posts)}
-      ).promise()
+        Body: JSON.stringify(posts),
+        CacheControl: 'max-age=604800'
+      }).promise()
     ).then(() => {
       context.succeed('OK');
     }).catch(err => {
