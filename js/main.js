@@ -120,7 +120,6 @@ $(function() {
     $btns.removeClass('active');
     $(this).addClass('active');
   });
-
 });
 
 $(window).on('scroll',function() {
