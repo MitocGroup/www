@@ -3,6 +3,9 @@
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 APP_DIR=$(dirname $(dirname ${MY_DIR}))
 
+echo ${MY_DIR}
+echo ${APP_DIR}
+
 setup_variables() {
     export DEPLOY_ENV=${TRAVIS_BRANCH}
     export DEPLOY_HOST="https://www.mitocgroup.com"
