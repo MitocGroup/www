@@ -49,10 +49,13 @@ exports.runChildCmd = runChildCmd;
  * @returns {*}
  */
 function walkDir(dir, filter, callback) {
-  if (!fs.existsSync(dir) || /node_modules/.test(dir) || /build/.test(dir)) {
+  // if (!fs.existsSync(dir) || /node_modules/.test(dir) || /build/.test(dir)) {
+  if (!fs.existsSync(dir)) {
     return;
   }
-
+console.log('~~~');
+console.log(dir);
+console.log('~~~');
   let files = fs.readdirSync(dir);
 
   for (let i = 0; i < files.length; i++) {
