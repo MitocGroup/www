@@ -108,12 +108,10 @@ $(function() {
     return this;
   };
 
-  /* Filter for Customers page*/
-  
-  let $parent =  $('#parent > div');
+  let $parent =  $('#parent').children('div');
 
-  var $btns = $('.filter-btn').click(function() {
-    if (this.id == 'all') {
+  var $btns = $('.filter-btn').on('click', function() {
+    if (this.id === 'all') {
       $parent.fadeIn(450);
     } else {
       var $el = $('.' + this.id).fadeIn(450);
@@ -122,7 +120,6 @@ $(function() {
     $btns.removeClass('active');
     $(this).addClass('active');
   })
-
 
 });
 
