@@ -390,6 +390,24 @@ p, ul, span {
 }
 
 .green-block {
+  &.gray-light-block {
+    .info-block {
+      padding-right: 0;
+      padding-left: 0;
+      img {
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-right-radius: 5px;
+        -webkit-border-top-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        border-top-left-radius: 5px;
+      }
+      .info, .read-more {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
   &.white-block {
     background-color: $white-color;
     .block-effect {
@@ -409,6 +427,14 @@ p, ul, span {
       .info-block {
         padding-right: 0;
         padding-left: 0;
+        img {
+          -webkit-border-top-right-radius: 5px;
+          -moz-border-radius-topright: 5px;
+          border-top-right-radius: 5px;
+          -webkit-border-top-left-radius: 5px;
+          -moz-border-radius-topleft: 5px;
+          border-top-left-radius: 5px;
+        }
         .info, .read-more {
           padding-right: 20px;
           padding-left: 20px;
@@ -647,6 +673,21 @@ i {
 
 .icon-arrow:before {
   content: "\e900";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.icon-newspaper:before {
+  content: "\e901";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.icon-web:before {
+  content: "\e902";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.icon-advertising:before {
+  content: "\e903";
   background-color: rgba(0, 0, 0, 0);
 }
 
