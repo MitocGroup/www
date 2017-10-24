@@ -23,7 +23,7 @@ if (['dev', 'master'].indexOf(deployTo) < 0) {
 }
 
 const { walkDir } = require('../helpers/utils');
-const appSrc = path.resolve(__dirname, '../../');
+const appSrc = path.join(__dirname, '../../');
 const buildPath = `${appSrc}/build`;
 
 /* Start build script */
@@ -33,7 +33,10 @@ walkDir(appSrc, /index.html/, page => pages.push(page));
 
 fsExtra.ensureDirSync(`${buildPath}/js`);
 fsExtra.ensureDirSync(`${buildPath}/css`);
+console.log('~~~~~');
+console.log(appSrc);
 console.log(pages);
+console.log('~~~~~');
 let promises = pages.map(pagePath => {
   let distDir = pagePath.replace(appSrc, buildPath);
   fsExtra.ensureDirSync(distDir.replace('index.html', ''));
