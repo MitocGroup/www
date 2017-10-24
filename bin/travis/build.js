@@ -24,7 +24,7 @@ if (['dev', 'master'].indexOf(deployTo) < 0) {
 
 const { walkDir } = require('../helpers/utils');
 const appSrc = path.join(__dirname, '../../');
-const buildPath = `${appSrc}/build`;
+const buildPath = path.join(appSrc, 'dist');
 
 /* Start build script */
 
@@ -35,10 +35,10 @@ fsExtra.ensureDirSync(`${buildPath}/js`);
 fsExtra.ensureDirSync(`${buildPath}/css`);
 
 let promises = pages.map(pagePath => {
-  let distDir = pagePath.replace(appSrc, buildPath);
-  fsExtra.ensureDirSync(distDir.replace('index.html', ''));
+  let destPage = pagePath.replace(appSrc, `${buildPath}/`);
+  fsExtra.ensureDirSync(destPage.replace('index.html', ''));
 
-  return optimizePage(pagePath, distDir);
+  return optimizePage(pagePath, destPage);
 });
 
 moveAssets(['images', 'fonts', 'json', 'favicon.ico']);
@@ -103,7 +103,7 @@ function minifyJs(fileName) {
  * @returns {*}
  */
 function bundle(entryFiles, bundleFileName) {
-  let outputPath = path.resolve(buildPath, bundleFileName);
+  let outputPath = path.join(buildPath, bundleFileName);
   fs.writeFileSync(outputPath, `/* ${(new Date()).toISOString()} */`, 'utf8');
 
   if (!entryFiles.length) {

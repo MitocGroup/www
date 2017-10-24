@@ -36,11 +36,8 @@ fi
 message "Build: Start"
 ${MY_DIR}/travis/build.js ${BRANCH}
 
-ls -la ${APP_DIR}/build/
-ls -la ${APP_DIR}/build/css || 'No css folder'
-
 message "Synchronizing build directory"
-aws s3 sync ${AWS_CLI} ${APP_DIR}/build/ ${BUCKET} --region ${REGION} \
+aws s3 sync ${AWS_CLI} ${APP_DIR}/dist/ ${BUCKET} --region ${REGION} \
     --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
 
 if [ "${BRANCH}" == "master" ]; then

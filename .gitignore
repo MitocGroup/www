@@ -27,11 +27,10 @@ coverage
 .lock-wscript
 
 # Compiled assets
-build/
+dist/
 
 # Dependency directories
 node_modules
-jspm_packages
 
 # Optional npm cache directory
 .npm

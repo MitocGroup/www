@@ -40,7 +40,7 @@ setup_git() {
 }
 
 setup_npm() {
-    npm config set depth 0
+    npm config set depth 1
 }
 
 echo "Setting up travis variables"
