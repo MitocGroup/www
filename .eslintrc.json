@@ -4,6 +4,8 @@
     "ecmaVersion": 8
   },
   "globals": {
+    "$": true,
+    "jQuery": true,
     "bodymovin": true
   }
 }
