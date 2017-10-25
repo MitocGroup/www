@@ -1,6 +1,7 @@
-$(function() {
+(function($, win) {
   'use strict';
 
+  let $win = $(win);
   let $content = $('#jsonContent');
 
   $('.icon-burger').on('click', function() {
@@ -18,7 +19,7 @@ $(function() {
   });
   
   $('.anchor').on('click', function(e) {
-    if ($(window).width() > 992) {
+    if ($win.width() > 992) {
       e.preventDefault();
       e.stopPropagation();
       
@@ -65,21 +66,21 @@ $(function() {
         }
 
         html += `<div class="${flexClass} ${posClass}">
-          <div class="blog-post flex-row">
-              <div class="blog-content flex-item-6 block-effect">
-                  <span class="post-date">${post.publishedAt}</span>
-                  <h4><a href="${post.url}" target="_blank">${post.title}</a></h4>
-                  <a href="${post.url}" class="button read-more" target="_blank">
-                      Read More <i class="icon-arrow icon-arrow-more"></i>
-                  </a>
-              </div>
-              <div class="flex-item-6 img-block">
-                  <a href="${post.url}" class="blog-element" target="_blank">
-                      <img class="img-responsive" src="images/medium/${post.image}">
-                  </a>
-              </div>
-          </div>
-      </div>`;
+            <div class="blog-post flex-row">
+                <div class="blog-content flex-item-6 block-effect">
+                    <span class="post-date">${post.publishedAt}</span>
+                    <h4><a href="${post.url}" target="_blank">${post.title}</a></h4>
+                    <a href="${post.url}" class="button read-more" target="_blank">
+                        Read More <i class="icon-arrow icon-arrow-more"></i>
+                    </a>
+                </div>
+                <div class="flex-item-6 img-block">
+                    <a href="${post.url}" class="blog-element" target="_blank">
+                        <img class="img-responsive" src="images/medium/${post.image}">
+                    </a>
+                </div>
+            </div>
+        </div>`;
       });
 
       $content.html(html);
@@ -89,6 +90,34 @@ $(function() {
   }
 
   renderMediumFeed();
+
+  let $filterBtns = $('.filter-btn');
+  let $parent = $('#parent').children('div');
+
+  $filterBtns.on('click', function() {
+    if (this.id === 'all') {
+      $parent.fadeIn(450);
+    } else {
+      let $el = $(`.${this.id}`).fadeIn(450);
+      $parent.not($el).hide();
+    }
+
+    $filterBtns.removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $win.on('scroll', function() {
+    let $whiteCol = $('.white-color');
+    let $navBarFix = $('.navbar-fix');
+
+    if ($win.scrollTop() > 30) {
+      $navBarFix.addClass('color-nav');
+      $whiteCol.removeClass('gray-color');
+    } else {
+      $navBarFix.removeClass("color-nav");
+      $whiteCol.addClass('gray-color');
+    }
+  });
 
   /**
    * Scroll to the element
@@ -107,15 +136,4 @@ $(function() {
 
     return this;
   };
-});
-
-$(window).on('scroll',function() {
-    // didScroll = true;
-    if ($(window).scrollTop() > 30) {
-        $('.navbar-fix').addClass('color-nav');
-        $('.white-color').removeClass('gray-color');
-    } else {
-        $('.navbar-fix').removeClass("color-nav");
-        $('.white-color').addClass('gray-color');
-    }
-});
+})(jQuery, window);

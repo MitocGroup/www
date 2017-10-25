@@ -1,39 +1,39 @@
 $(function() {
-    'use strict';
+  'use strict';
 
   let $body = $('body');
   let $inputViewport =   $('.viewport-control');
   
   let startProjectContent = `<div class="md-content popup">
-        <h3>Start a Project</h3>
-        <div>
-            <form id="start-project-form" class="form-styles">
-                <div class="flex-row">
-                    <div class="flex-item-12 mc-form-group-FNAME input-styles space-input">
-                        <input type="text" name="FNAME" placeholder="Full name" class="input-popup">
-                        <div class="mc-error"></div>
-                    </div>    
-                </div>
-                <div class="flex-row">
-                    <div class="flex-item-12 mc-form-group-EMAIL input-styles space-input">
-                        <input type="email" name="EMAIL" placeholder="Email" class="input-popup">
-                        <div class="mc-error"></div>
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="flex-item-12" id="mc-general-error-project"></div>
-                </div>
-                <div class="flex-row">
-                    <div class="flex-item-6">
-                        <button class="btn-popup cancel-modal-btn">Cancel</button>
-                    </div>
-                    <div class="flex-item-6">
-                        <button class="btn-popup" type="button" id="submit-modal-form">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>`;
+      <h3>Start a Project</h3>
+      <div>
+          <form id="start-project-form" class="form-styles">
+              <div class="flex-row">
+                  <div class="flex-item-12 mc-form-group-FNAME input-styles space-input">
+                      <input type="text" name="FNAME" placeholder="Full name" class="input-popup">
+                      <div class="mc-error"></div>
+                  </div>    
+              </div>
+              <div class="flex-row">
+                  <div class="flex-item-12 mc-form-group-EMAIL input-styles space-input">
+                      <input type="email" name="EMAIL" placeholder="Email" class="input-popup">
+                      <div class="mc-error"></div>
+                  </div>
+              </div>
+              <div class="flex-row">
+                  <div class="flex-item-12" id="mc-general-error-project"></div>
+              </div>
+              <div class="flex-row">
+                  <div class="flex-item-6">
+                      <button class="btn-popup cancel-modal-btn">Cancel</button>
+                  </div>
+                  <div class="flex-item-6">
+                      <button class="btn-popup" type="button" id="submit-modal-form">Submit</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>`;
 
   let becomePartnerContent = `<div class="md-content popup">
       <h3>Become a Partner</h3>
@@ -69,7 +69,8 @@ $(function() {
                   </div>
               </div>
           </form>
-      </div>`;
+      </div>
+  </div>`;
   
   function lockButton(target) {
     $(target).attr('disabled', 'disabled');
@@ -102,7 +103,7 @@ $(function() {
           setTimeout(() => { $genErr.text(''); }, 5000);
         },
         onOk: function (okMsg) {
-          window.location = `/confirm/become-partner/?mc-message=${okMsg}`
+          window.location = `/confirm/become-partner/?mc-message=${okMsg}`;
         }
       });
     },
@@ -133,7 +134,7 @@ $(function() {
           setTimeout(() => { $genErr.text(''); }, 5000);
         },
         onOk: function (okMsg) {
-          window.location = `/confirm/start-project/?mc-message=${okMsg}`
+          window.location = `/confirm/start-project/?mc-message=${okMsg}`;
         }
       });
     },
@@ -156,10 +157,9 @@ $(function() {
       setTimeout(() => { $genErr.html(''); }, 5000);
     },
     onOk: function (okMsg) {
-      window.location = `/confirm/contact-us/?mc-message=${okMsg}`
+      window.location = `/confirm/contact-us/?mc-message=${okMsg}`;
     }
   });
-
 
   $body.on('keyup', $inputViewport, function (e) {
     unlockButton('#submit-contact-form');
@@ -168,8 +168,8 @@ $(function() {
   $body.on('keyup', '.input-popup', function (e) {
     unlockButton('#submit-modal-form');
   });
-  
-    /**
+
+  /**
    * MailChimp input error listener
    */
   $inputViewport.on('mc:input:error', function() {
