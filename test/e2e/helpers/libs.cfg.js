@@ -1,3 +1,5 @@
-import Chance from 'chance'
+import Chance from 'chance';
 
-export default { chance: new Chance() }
+export default {
+  chance: new Chance()
+};

@@ -103,7 +103,7 @@ $(function() {
           setTimeout(() => { $genErr.text(''); }, 5000);
         },
         onOk: function (okMsg) {
-          window.location = `/confirm/become-partner/?mc-message=${okMsg}`
+          window.location = `/confirm/become-partner/?mc-message=${okMsg}`;
         }
       });
     },
@@ -134,7 +134,7 @@ $(function() {
           setTimeout(() => { $genErr.text(''); }, 5000);
         },
         onOk: function (okMsg) {
-          window.location = `/confirm/start-project/?mc-message=${okMsg}`
+          window.location = `/confirm/start-project/?mc-message=${okMsg}`;
         }
       });
     },
@@ -157,7 +157,7 @@ $(function() {
       setTimeout(() => { $genErr.html(''); }, 5000);
     },
     onOk: function (okMsg) {
-      window.location = `/confirm/contact-us/?mc-message=${okMsg}`
+      window.location = `/confirm/contact-us/?mc-message=${okMsg}`;
     }
   });
 
