@@ -38,7 +38,8 @@ ${MY_DIR}/travis/build.js ${BRANCH}
 
 message "Synchronizing build directory"
 aws s3 sync ${AWS_CLI} ${APP_DIR}/dist/ ${BUCKET} --region ${REGION} \
-    --metadata-directive REPLACE --cache-control max-age=${MAX_AGE}
+    --metadata-directive REPLACE --cache-control max-age=${MAX_AGE} \
+    --exclude 'dist/css/*' --exclude 'dist/js/*'
 
 aws s3 sync ${AWS_CLI} ${APP_DIR}/dist/css/ ${BUCKET}css/ --region ${REGION} \
     --metadata-directive REPLACE --cache-control max-age=${MAX_AGE} --delete
