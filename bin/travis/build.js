@@ -31,8 +31,7 @@ const buildPath = path.join(appSrc, 'dist');
 let pages = [];
 walkDir(appSrc, /index.html/, page => pages.push(page));
 
-fsExtra.ensureDirSync(`${buildPath}/js`);
-fsExtra.ensureDirSync(`${buildPath}/css`);
+prepareDistFolder();
 
 let promises = pages.map(pagePath => {
   let destPage = pagePath.replace(appSrc, `${buildPath}/`);
@@ -104,7 +103,7 @@ function minifyJs(fileName) {
  */
 function bundle(entryFiles, bundleFileName) {
   let outputPath = path.join(buildPath, bundleFileName);
-  fs.writeFileSync(outputPath, `/* ${(new Date()).toISOString()} */`, 'utf8');
+  fs.writeFileSync(outputPath, '', 'utf8');
 
   if (!entryFiles.length) {
     return Promise.resolve(bundleFile);
@@ -128,7 +127,7 @@ function bundle(entryFiles, bundleFileName) {
 
     Promise.all(promises).then(results => {
       results.forEach((data, key) => {
-        fs.appendFileSync(outputPath, `\n ${data} \n`, 'utf8');
+        fs.appendFileSync(outputPath, `${data}\n`, 'utf8');
       });
 
       resolve(bundleFileName);
@@ -222,6 +221,14 @@ function moveAssets(assets) {
   assets.forEach(item => {
     fsExtra.copySync(`${appSrc}/${item}`, `${buildPath}/${item}`);
   });
+}
+
+/**
+ * Prepare dist folder
+ */
+function prepareDistFolder() {
+  fsExtra.emptyDirSync(`${buildPath}/js`);
+  fsExtra.emptyDirSync(`${buildPath}/css`);
 }
 
 /**

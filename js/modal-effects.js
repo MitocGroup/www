@@ -1,5 +1,5 @@
 $(function() {
-    'use strict';
+  'use strict';
 
   let $body = $('body');
   let $inputViewport =   $('.viewport-control');
@@ -169,7 +169,7 @@ $(function() {
     unlockButton('#submit-modal-form');
   });
 
-    /**
+  /**
    * MailChimp input error listener
    */
   $inputViewport.on('mc:input:error', function() {

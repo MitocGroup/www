@@ -1,4 +1,4 @@
-jQuery(function($) {
+$(function() {
   'use strict';
 
   $('.carousel-mission').slick({
