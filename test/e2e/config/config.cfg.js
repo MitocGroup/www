@@ -15,4 +15,4 @@ export default {
       height: 600
     }
   }
-}
+};

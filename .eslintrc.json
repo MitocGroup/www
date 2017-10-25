@@ -6,7 +6,9 @@
   "globals": {
     "$": true,
     "jQuery": true,
-    "bodymovin": true
+    "bodymovin": true,
+    "fixture": true,
+    "test": true
   },
   "rules": {
     "semi": [2, "always"]
