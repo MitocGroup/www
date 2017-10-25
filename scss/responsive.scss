@@ -18,7 +18,9 @@
 
 @media (max-width: 1270px) {
   .block-half {
-    text-align: center;
+    &.buttons-header {
+      text-align: center;
+    }
     .filter-btn {
       &:last-child {
         margin-top: 15px;
@@ -83,6 +85,29 @@
 }
 
 @media (max-width: 992px) {
+  .cloud-cumputing {
+    .flex-row {
+      &.cloud-block {
+        padding-bottom: 0;
+        &.display-grid {
+          display: grid;
+          .flex-item-6 {
+            &:last-child {
+              grid-row: 1;
+            }
+          }
+        }
+      }
+      .flex-item-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 90px;
+        img {
+          max-height: 200px;
+        }
+      }
+    }
+  }
   .laptop {
     #laptop-anim {
       width: 71%;
@@ -166,13 +191,15 @@
          width: 100%;
          font-size: 16px;
          margin-top: 25px;
+         .cloud-img {
+           max-width: 70px;
+         }
          img {
            max-width: 200px;
          }
        }
        .text-uppercase {
-         grid-column: 1 / 1;
-         grid-row: 1 / 1;
+         grid-row: 1;
          font-size: 24px;
        }
      }
@@ -454,7 +481,7 @@
               flex: 0 0 50%;
               max-width: 50%;
               margin: 0 auto;
-              margin-bottom: 20px;
+              margin-bottom: 45px;
             }
           }
         }
@@ -464,6 +491,16 @@
 }
 
 @media (max-width: 800px) {
+  .cloud-cumputing {
+    .cloud-block {
+     &.flex-row {
+       margin: 0 -15px;
+       .flex-item-6 {
+         padding: 0 15px;
+       }
+     }
+    }
+  }
   .laptop {
     height: 200px;
   }
@@ -471,16 +508,17 @@
     .flex-item-6 {
       flex: 0 0 100%;
       max-width: 100%;
-      img {
-        padding-bottom: 45px;
+      p {
+        &:first-child {
+          padding-top: 45px;
+        }
       }
     }
     &.visa_versa {
       display: grid;
       .flex-item-6 {
         &:last-child {
-          grid-column: 1 / 2;
-          grid-row: 1 / 3;
+          grid-row: 1
         }
       }
     }
@@ -590,6 +628,14 @@
 }
 
 @media (max-width: 680px) {
+
+  .cloud-cumputing {
+    .flex-row {
+      .flex-item-6 {
+        margin-bottom: 45px;
+      }
+    }
+  }
   .block-half {
     .filter-btn {
       padding: 5px;
@@ -802,8 +848,7 @@
             }
             &.slide-img {
               margin-bottom: 40px;
-              grid-column: 1/2;
-              grid-row: 1/3;
+              grid-row: 1;
             }
           }
         }

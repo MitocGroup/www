@@ -336,6 +336,9 @@ p, ul, span {
     height: 100%;
     .display-flex {
       .block-half {
+        .cloud-img {
+          max-width: 142px;
+        }
         img {
           max-width: 337px;
         }
