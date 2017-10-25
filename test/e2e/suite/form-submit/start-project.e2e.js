@@ -16,5 +16,5 @@ test(`Check 'Start a Project' form request can be submitted by user with valid d
     .typeText(startProject.fullname, libs.chance.name(), speed)
     .typeText(startProject.email, libs.chance.email(), speed)
     .click(startProject.submit, speed)
-    .expect(startProject.notification.innerText).eql('Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.', speed)
+    .expect(startProject.notification.innerText).eql('Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.', speed);
 });
