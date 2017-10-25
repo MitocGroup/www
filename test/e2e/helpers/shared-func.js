@@ -2,7 +2,7 @@ import config from '../config/config.cfg';
 
 const sharedFunctions = {
   anyCase: (value) => {
-    return new RegExp('^' + value + '$', 'ig')
+    return new RegExp('^' + value + '$', 'ig');
   },
   windowResolution: (fix, type = 'desktop') => {
     let width, height;
@@ -16,8 +16,8 @@ const sharedFunctions = {
     }
     fix.beforeEach(async t => {
       await t
-        .resizeWindow(width, height)
-    })
+        .resizeWindow(width, height);
+    });
   }
 };
 
