@@ -195,6 +195,10 @@ p, ul, span {
   }
 }
 
+.text-bottom-space {
+  padding-bottom: 20px;
+}
+
 .text-uppercase {
   font-size: 30px;
   text-transform: uppercase;
@@ -332,6 +336,11 @@ p, ul, span {
 .header {
   background-color: $gray-dark-color;
   height: 296px;
+  &.automation {
+    .text-uppercase{
+      text-align: right;
+    }
+  }
   .container {
     height: 100%;
     .display-flex {
