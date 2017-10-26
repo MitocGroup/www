@@ -27,9 +27,16 @@
   }
   .pictures-block {
     margin-bottom: 90px;
+    .read-more {
+      padding-bottom: 0;
+      padding-top: 10px;
+      text-align: left;
+      opacity: 0;
+    }
     .flex-item-3 {
       text-align: center;
-      padding: 0 20px;
+      padding: 40px 20px 0;
+      cursor: pointer;
       &:not(:last-child) {
         border-right: 2px solid $gray-dark-color;
       }
@@ -44,12 +51,24 @@
         -moz-transition: 0.4s ease;
         -o-transition: 0.4s ease;
         transition: 0.4s ease;
-        &:hover {
-          -webkit-transform: scale(1.2, 1.2);
-          -moz-transform: scale(1.2, 1.2);
-          -o-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
+      }
+      &:hover {
+        .read-more {
+          opacity: 1;
+          color: $black-color;
+          .icon-arrow {
+            left: 10px;
+            color: #28b655;
+          }
         }
+      }
+      &:hover {
+       .hover-effect {
+         -webkit-transform: scale(1.2, 1.2);
+         -moz-transform: scale(1.2, 1.2);
+         -o-transform: scale(1.2, 1.2);
+         transform: scale(1.2, 1.2);
+       }
       }
     }
   }

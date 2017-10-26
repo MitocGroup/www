@@ -102,6 +102,9 @@
         flex: 0 0 100%;
         max-width: 100%;
         margin-bottom: 90px;
+        .image-data {
+          max-height: 250px;
+        }
         img {
           max-height: 200px;
         }
@@ -181,6 +184,11 @@
     }
   }
  .header {
+   &.automation {
+     .text-uppercase {
+       text-align: center;
+     }
+   }
    .container {
      .display-flex {
        display: grid;
@@ -310,7 +318,6 @@
           padding: 30px;
         }
         &:not(:last-child) {
-          padding-bottom: 30px;
           position: relative;
           &:after {
             content: '';
@@ -628,7 +635,6 @@
 }
 
 @media (max-width: 680px) {
-
   .cloud-cumputing {
     .flex-row {
       .flex-item-6 {
@@ -920,6 +926,12 @@
         }
         &:not(:last-child) {
           border-bottom: 2px solid $gray-dark-color;
+          .read-more {
+            padding-bottom: 20px;
+          }
+        }
+        .read-more {
+          opacity: 1;
         }
       }
     }

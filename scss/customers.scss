@@ -49,11 +49,16 @@
   ul {
     list-style-position: inside;
     list-style: none;
-    li {
-      img {
-        height: 15px;
-        padding-right: 10px;
-      }
-    }
   }
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background: $accent-green;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-right: 10px;
 }
