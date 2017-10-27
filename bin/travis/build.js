@@ -29,13 +29,13 @@ const buildPath = path.join(appSrc, 'dist');
 /* Start build script */
 
 let pages = [];
-walkDir(appSrc, /index.html/, page => pages.push(page));
+walkDir(appSrc, /.*\.html/, page => pages.push(page));
 
 prepareDistFolder();
 
 let promises = pages.map(pagePath => {
   let destPage = pagePath.replace(appSrc, `${buildPath}/`);
-  fsExtra.ensureDirSync(destPage.replace('index.html', ''));
+  fsExtra.ensureDirSync(path.dirname(destPage));
 
   return optimizePage(pagePath, destPage);
 });
