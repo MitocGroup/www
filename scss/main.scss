@@ -27,6 +27,11 @@
   }
   .pictures-block {
     margin-bottom: 90px;
+    a {
+      &:hover {
+        color: $black-color;
+      }
+    }
     .read-more {
       padding-bottom: 0;
       padding-top: 10px;
@@ -571,6 +576,38 @@ div {
 }
 
 /*Confirm Page*/
+
+.gray-light-block {
+  &.not-found {
+    background-color: $gray-color;
+    h2 {
+      font-family: "Avenir-Black", sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      font-size: 30px;
+      color: $accent-green;
+    }
+    .link-back {
+      a, h3 {
+      padding: 0 20px;
+      }
+    }
+    h3 {
+      display: inline-block;
+      cursor: pointer;
+      -webkit-transition: 0.4s ease-in-out;
+      -moz-transition: 0.4s ease-in-out;
+      -o-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        color: $accent-green;
+      }
+    }
+    .not-found {
+      max-height: 146px;
+    }
+  }
+}
 
 .thank-you {
   background-color: $gray-dark-color;

@@ -85,6 +85,21 @@
 }
 
 @media (max-width: 992px) {
+  .manning-page {
+    .pull-left, .pull-right {
+      float: none;
+    }
+    .pull-left {
+      .image-full-size {
+        padding-right: 0;
+      }
+    }
+    .pull-right {
+      .image-full-size {
+        padding-left: 0;
+      }
+    }
+  }
   .cloud-cumputing {
     .flex-row {
       &.cloud-block {
@@ -498,6 +513,11 @@
 }
 
 @media (max-width: 800px) {
+  .if-image {
+    img {
+      padding-top: 45px;
+    }
+  }
   .cloud-cumputing {
     .cloud-block {
      &.flex-row {
@@ -511,7 +531,18 @@
   .laptop {
     height: 200px;
   }
+  .block-atm {
+    .flex-row {
+      .flex-item-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
   .adtechmedia-info {
+    .amazon-logo {
+      margin: 0 auto;
+    }
     .flex-item-6 {
       flex: 0 0 100%;
       max-width: 100%;
@@ -689,6 +720,9 @@
   }
   .container-top-bottom {
     margin: 45px 0;
+  }
+  .container-space-button {
+    padding-bottom: 45px;
   }
   .header {
     height: 220px;
