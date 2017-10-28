@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Customers | Mitoc Group</title>
+    <title>404 Page Not Found | Mitoc Group</title>
     <meta name="description" content="Mitoc Group is a technology company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world." />
     <link rel="icon" type="image/ico" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/index.min.css" />
@@ -20,10 +20,14 @@
             j = d.createElement(s),
             dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5PM5MG');
+
+
+    function goBack() {
+        window.history.back()
+    }
     </script>
     <!-- End Google Tag Manager -->
 </head>
@@ -39,7 +43,7 @@
             <div class="container">
                 <div class="logo">
                     <a href="/">
-                        <img class="mitoc-logo" src="../images/mitoc-logo.svg" alt="Mitoc Group Logo" />
+                        <img class="mitoc-logo" src="/images/mitoc-logo.svg" alt="Mitoc Group Logo" />
                     </a>
                 </div>
                 <div class="nav-bar">
@@ -47,7 +51,7 @@
                     <ul class="navigation">
                         <li><a href="/services/">Services</a></li>
                         <li><a href="/partners/">Partners</a></li>
-                        <li><a href="/customers/" class="active">Customers</a></li>
+                        <li><a href="/customers/">Customers</a></li>
                         <li><a href="/about/">About Us</a></li>
                         <li><a href="/contact/">Contact</a></li>
                         <li><a href="https://blog.mitocgroup.com">Blog</a></li>
@@ -57,55 +61,21 @@
             </div>
         </div>
         <div class="hide-mobile">
-            <div class="space-top header">
-                <div class="container">
-                    <div class="display-flex pull-center">
-                        <div class="block-half buttons-header">
-                            <button class="filter-btn" id="all">All projects</button>
-                            <button class="filter-btn" id="ad"><i class="icon-advertising"></i>Advertising</button>
-                            <button class="filter-btn" id="media"><i class="icon-web"></i>Media</button>
-                            <button class="filter-btn" id="publish"><i class="icon-newspaper"></i>Publishing</button>
-                        </div>
-                        <h1 class="text-uppercase">Customers</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="green-block gray-light-block container-space">
-                <div class="container">
-                    <div class="flex-row center-block">
-                        <div class="flex-item-4 box ad media">
-                            <div class="info-block block-effect">
-                                <img src="../images/atm.png" alt="AdtechMedia Logo" />
-                                <div class="info">
-                                    <h4>AdTechMedia</h4>
-                                    <p>AdTechMedia is on a mission to build the world’s most simple content monetization product. Imagine you are a publisher, a journalist or a blogger, and your core business is to create content that people love. Do you have extra time in your busy schedule to learn how to setup and manage Apple Pay or PayPal, Google Doubleclick For Publishers or Revive Ad Server, JavaScript or NodeJS? If the answer is strong NO, please continue reading…</p>
-                                </div>
-                                <a class="read-more" href="/customers/adtechmedia/">Read More <i class="icon-arrow icon-arrow-more"></i></a>
-                            </div>
-                        </div>
-                        <div class="flex-item-4 box publish">
-                            <div class="info-block block-effect">
-                                <img src="../images/maninng-logo.svg" alt="Manning Logo" />
-                                <div class="info">
-                                    <h4>Manning</h4>
-                                    <p>Manning is an independent publisher of computer books for software developers, engineers, architects, system administrators, managers and all who are professionally involved with the computer business. We also publish for students and young programmers, including occasionally for children. We are an entirely virtual organization based on Shelter Island, New York, with many staff working from far-flung places like Manila and Zagreb.</p>
-                                </div>
-                                <a class="read-more" href="/customers/manning/">Read More <i class="icon-arrow icon-arrow-more"></i></a>
+            <div class="space-top">
+                <div class="gray-light-block not-found">
+                    <div class="container">
+                        <div class="flex-column center container-space">
+                            <h2 class="">Sorry, This page Isn't Available</h2>
+                            <h3>The link you followed may be broken, or the page may have been removed.</h3>
+                            <img class="not-found container-top-bottom" src="/images/404-page.svg" alt="404 not found" />
+                            <div class="link-back">
+                                <h3 onclick="goBack()">Go back to the page</h3>
+                                <a href="/"><h3>Go to the Home page</h3></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <section class="green-block small-block">
-                <div class="container">
-                    <div class="center">
-                        <h2 class="header-text transform-text">Let's Build Something Great</h2>
-                        <div class="top_button">
-                            <button class="btn btn-white start-project">Start a Project</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     </div>
     <footer>
@@ -124,7 +94,7 @@
                 <div class="flex-row">
                     <div class="flex-item-3">
                         <div class="logo">
-                            <a href="/"><img class="mitoc-logo" src="../images/mitoc-logo.svg" alt="Mitoc Group Logo" /></a>
+                            <a href="/"><img class="mitoc-logo" src="/images/mitoc-logo.svg" alt="Mitoc Group Logo" /></a>
                             <p>Copyright &copy; 2014-2017 Mitoc Group.</p>
                             <p>All rights reserved.</p>
                         </div>
@@ -140,24 +110,21 @@
                         <ul>
                             <li><a href="/services/">Services</a></li>
                             <li><a href="/partners/">Partners</a></li>
-                            <li><a href="/customers/" class="active">Customers</a></li>
+                            <li><a href="/customers/">Customers</a></li>
                             <li><a href="/about/">About Us</a></li>
                             <li><a href="/contact/">Contact</a></li>
                             <li><a href="https://blog.mitocgroup.com">Blog</a></li>
                         </ul>
                     </div>
                     <div class="flex-item-3">
-                        <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0" target="_blank"><img class="aws-logo" src="../images/aws-1.svg" alt="Amazon Web Services" /></a>
+                        <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0" target="_blank"><img class="aws-logo" src="/images/aws-1.svg" alt="Amazon Web Services" /></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/jquery-popup.min.js"></script>
-    <script type="text/javascript" src="/js/jquery-mailchimp.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript" src="/js/modal-effects.js"></script>
 </body>
 
 </html>

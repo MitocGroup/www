@@ -49,11 +49,47 @@
   ul {
     list-style-position: inside;
     list-style: none;
-    li {
-      img {
-        height: 15px;
-        padding-right: 10px;
-      }
-    }
+  }
+
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background: $accent-green;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.image-size {
+  max-height: 178px;
+}
+
+.amazon-logo {
+  max-width: 300px;
+  width: 100%;
+}
+.image-full-size {
+  width: 100%;
+}
+.pull-right {
+  .image-full-size {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+}
+.pull-left {
+  .image-full-size {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.flex-row {
+  &.center-block {
+    justify-content: center;
   }
 }

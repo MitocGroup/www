@@ -18,7 +18,9 @@
 
 @media (max-width: 1270px) {
   .block-half {
-    text-align: center;
+    &.buttons-header {
+      text-align: center;
+    }
     .filter-btn {
       &:last-child {
         margin-top: 15px;
@@ -83,6 +85,47 @@
 }
 
 @media (max-width: 992px) {
+  .manning-page {
+    .pull-left, .pull-right {
+      float: none;
+    }
+    .pull-left {
+      .image-full-size {
+        padding-right: 0;
+      }
+    }
+    .pull-right {
+      .image-full-size {
+        padding-left: 0;
+      }
+    }
+  }
+  .cloud-cumputing {
+    .flex-row {
+      &.cloud-block {
+        padding-bottom: 0;
+        &.display-grid {
+          display: grid;
+          .flex-item-6 {
+            &:last-child {
+              grid-row: 1;
+            }
+          }
+        }
+      }
+      .flex-item-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 90px;
+        .image-data {
+          max-height: 250px;
+        }
+        img {
+          max-height: 200px;
+        }
+      }
+    }
+  }
   .laptop {
     #laptop-anim {
       width: 71%;
@@ -156,6 +199,11 @@
     }
   }
  .header {
+   &.automation {
+     .text-uppercase {
+       text-align: center;
+     }
+   }
    .container {
      .display-flex {
        display: grid;
@@ -166,13 +214,15 @@
          width: 100%;
          font-size: 16px;
          margin-top: 25px;
+         .cloud-img {
+           max-width: 70px;
+         }
          img {
            max-width: 200px;
          }
        }
        .text-uppercase {
-         grid-column: 1 / 1;
-         grid-row: 1 / 1;
+         grid-row: 1;
          font-size: 24px;
        }
      }
@@ -283,7 +333,6 @@
           padding: 30px;
         }
         &:not(:last-child) {
-          padding-bottom: 30px;
           position: relative;
           &:after {
             content: '';
@@ -454,7 +503,7 @@
               flex: 0 0 50%;
               max-width: 50%;
               margin: 0 auto;
-              margin-bottom: 20px;
+              margin-bottom: 45px;
             }
           }
         }
@@ -464,23 +513,50 @@
 }
 
 @media (max-width: 800px) {
+  .if-image {
+    img {
+      padding-top: 45px;
+    }
+  }
+  .cloud-cumputing {
+    .cloud-block {
+     &.flex-row {
+       margin: 0 -15px;
+       .flex-item-6 {
+         padding: 0 15px;
+       }
+     }
+    }
+  }
   .laptop {
     height: 200px;
   }
+  .block-atm {
+    .flex-row {
+      .flex-item-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
   .adtechmedia-info {
+    .amazon-logo {
+      margin: 0 auto;
+    }
     .flex-item-6 {
       flex: 0 0 100%;
       max-width: 100%;
-      img {
-        padding-bottom: 45px;
+      p {
+        &:first-child {
+          padding-top: 45px;
+        }
       }
     }
     &.visa_versa {
       display: grid;
       .flex-item-6 {
         &:last-child {
-          grid-column: 1 / 2;
-          grid-row: 1 / 3;
+          grid-row: 1
         }
       }
     }
@@ -590,6 +666,13 @@
 }
 
 @media (max-width: 680px) {
+  .cloud-cumputing {
+    .flex-row {
+      .flex-item-6 {
+        margin-bottom: 45px;
+      }
+    }
+  }
   .block-half {
     .filter-btn {
       padding: 5px;
@@ -637,6 +720,9 @@
   }
   .container-top-bottom {
     margin: 45px 0;
+  }
+  .container-space-button {
+    padding-bottom: 45px;
   }
   .header {
     height: 220px;
@@ -802,8 +888,7 @@
             }
             &.slide-img {
               margin-bottom: 40px;
-              grid-column: 1/2;
-              grid-row: 1/3;
+              grid-row: 1;
             }
           }
         }
@@ -875,6 +960,12 @@
         }
         &:not(:last-child) {
           border-bottom: 2px solid $gray-dark-color;
+          .read-more {
+            padding-bottom: 20px;
+          }
+        }
+        .read-more {
+          opacity: 1;
         }
       }
     }

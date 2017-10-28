@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Services | Mitoc Group</title>
+    <title>Automation of Infrastructure | Mitoc Group</title>
     <meta name="description" content="Mitoc Group is a technology company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world." />
     <link rel="icon" type="image/ico" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/index.min.css" />
@@ -39,7 +39,7 @@
             <div class="container">
                 <div class="logo">
                     <a href="/">
-                        <img class="mitoc-logo" src="../images/mitoc-logo.svg" alt="Mitoc Group Logo" />
+                        <img class="mitoc-logo" src="../../images/mitoc-logo.svg" alt="Mitoc Group Logo" />
                     </a>
                 </div>
                 <div class="nav-bar">
@@ -57,13 +57,13 @@
             </div>
         </div>
         <div class="hide-mobile">
-            <div class="space-top header">
+            <div class="space-top header automation">
                 <div class="container">
                     <div class="display-flex pull-center">
                         <div class="block-half">
-                            <img class="cloud-img" src="../images/cloud-computing.svg" alt="Cloud Computing" />
+                            <img class="cloud-img" src="../../images/automation-infrastructure.svg" alt="Automation of Infrastructure" />
                         </div>
-                        <h1 class="text-uppercase">Cloud Computing</h1>
+                        <h1 class="text-uppercase">Automation of Infrastructure</h1>
                     </div>
                 </div>
             </div>
@@ -72,64 +72,85 @@
                     <div class="flex-row cloud-block">
                         <div class="flex-item-6">
                             <p>
-                                Cloud Computing is an Information Technology (IT) paradigm, a model for enabling ubiquitous access to shared pools of configurable resources (such as computer networks, servers, storage, applications and services), which can be rapidly provisioned with minimal management effort, often over the Internet. Cloud computing allows users and enterprises with various computing capabilities to store and process data either in a privately-owned cloud, or on a third-party server located in a data center - thus making data-accessing mechanisms more efficient and reliable. Cloud computing relies on sharing of resources to achieve coherence and economy of scale, similar to a utility.
+                                Automation of Infrastructure, also known as Infrastructure as Code (IaC), is the process of managing and provisioning computer data centers through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools. The IT infrastructure meant by this comprises both physical equipment such as bare-metal servers as well as virtual machines and associated configuration resources. The definitions may be in a version control system. It can use either scripts or declarative definitions, rather than manual processes, but the term is more often used to promote declarative approaches.
                             </p>
                         </div>
                         <div class="flex-item-6 flex-column">
-                            <img src="../images/clouds_2.svg" alt="Cloud Computing" />
+                            <img src="../../images/iac.svg" alt="Automation of Infrastructure" />
                         </div>
                     </div>
                     <div class="flex-row cloud-block display-grid">
                         <div class="flex-item-6 flex-column">
-                            <img src="../images/expantion2.svg" alt="Cloud Computing" />
+                            <img src="../../images/iaas.svg" alt="Automation of Infrastructure" />
                         </div>
                         <div class="flex-item-6">
+                            <p class="text-bottom-space">
+                                Infrastructure as code approaches are promoted for cloud computing, which is sometimes marketed as Infrastructure as a Service (IaaS). IaC supports IaaS, but should not be confused with it.
+                            </p>
                             <p>
-                                Advocates note that cloud computing allows companies to avoid or minimize up-front IT infrastructure costs. As well, third-party clouds enable organizations to focus on their core businesses instead of expending resources on computer infrastructure and maintenance. Proponents also claim that cloud computing allows enterprises to get their applications up and running faster, with improved manageability and less maintenance, and that it enables IT teams to more rapidly adjust resources to meet fluctuating and unpredictable business demand. Cloud providers typically use a "pay-as-you-go" model. This could lead to unexpectedly high charges if administrators are not familiarized with cloud-pricing models.
+                                There are many tools that fulfill infrastructure automation capabilities and utilize Infrastructure as Code. Broadly speaking, any framework, or tool that performs changes or configures infrastructure declaratively or imperatively based on a programmatic approach can be considered IaC.
                             </p>
                         </div>
                     </div>
-                    <h4 class="title-text center container-bottom">According to National Institute of Standards and
-                        Technology, cloud computing exhibits the following essential characteristics:</h4>
+                    <h4 class="title-text center container-bottom">Notable tools include:</h4>
                     <div class="flex-row list-block cloud-block">
                         <div class="flex-item-6">
-                            <h4 class="title-text"><span class="number">1</span>On-demand self-service.</h4>
+                            <h4 class="title-text"><span class="number">1</span>Terraform</h4>
                             <p>
-                                A consumer can unilaterally provision computing capabilities, such as server time and network storage, as needed automatically without requiring human interaction with each service provider.
-                            </p>
-                        </div>
-                        <div class="flex-item-6">
-                            <h4 class="title-text"><span class="number">2</span>Broad network access.</h4>
-                            <p>
-                                Capabilities are available over the network and accessed through standard mechanisms that promote use by heterogeneous thin or thick client platforms (e.g., mobile phones, tablets, laptops, and workstations).
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex-row list-block cloud-block">
-                        <div class="flex-item-6">
-                            <h4 class="title-text"><span class="number">3</span>Resource pooling.</h4>
-                            <p>
-                                The provider's computing resources are pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to consumer demand.
-                            </p>
-                        </div>
-                        <div class="flex-item-6">
-                            <h4 class="title-text"><span class="number">4</span>Rapid elasticity.</h4>
-                            <p>
-                                Capabilities can be elastically provisioned and released, in some cases automatically, to scale rapidly outward and inward commensurate with demand. To the consumer, the capabilities available for provisioning often appear unlimited and can be appropriated in any quantity at any time.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex-row list-block cloud-block">
-                        <div class="flex-item-6">
-                            <h4 class="title-text"><span class="number">5</span>Measured service.</h4>
-                            <p>
-                                Cloud systems automatically control and optimize resource use by leveraging a metering capability at some level of abstraction appropriate to the type of service (e.g., storage, processing, bandwidth, and active user accounts). Resource usage can be monitored, controlled, and reported, providing transparency for both the provider and consumer of the utilized service.
+                                Terraform is an infrastructure as code software by HashiCorp. It allows users to define a datacenter infrastructure in a high-level configuration language, from which it can create an execution plan to build the infrastructure in a service provider such as AWS.
                             </p>
                         </div>
                         <div class="flex-item-6 flex-column">
-                            <img src="../images/expantion.svg" alt="Cloud Computing" />
+                            <img src="../../images/terraform-logo.svg" alt="Terraform Logo" />
                         </div>
                     </div>
+                    <div class="flex-row list-block cloud-block display-grid">
+                        <div class="flex-item-6 flex-column">
+                            <img src="../../images/aws-cloudformation.svg" alt="CloudFormation Logo" />
+                        </div>
+                        <div class="flex-item-6">
+                            <h4 class="title-text"><span class="number">2</span>CloudFormation</h4>
+                            <p>
+                                AWS CloudFormation gives developers and systems administrators an easy way to create and manage a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex-row list-block cloud-block">
+                        <div class="flex-item-6">
+                            <h4 class="title-text"><span class="number">3</span>Chef</h4>
+                            <p>
+                                Chef is both the name of a company and the name of a configuration management tool written in Ruby and Erlang. It uses a pure-Ruby, domain-specific language (DSL) for writing system configuration "recipes". Chef is used to streamline the task of configuring and maintaining a company's servers, and can integrate with cloud-based platforms such as AWS or GCP to automatically provision and configure new machines.
+                            </p>
+                        </div>
+                        <div class="flex-item-6 flex-column display-grid">
+                            <img class="logo-size" src="../../images/chef-logo.svg" alt="Chef Logo" />
+                        </div>
+                    </div>
+                    <div class="flex-row list-block cloud-block display-grid">
+                        <div class="flex-item-6 flex-column">
+                            <img src="../../images/ansible.svg" alt="Ansible Logo" />
+                        </div>
+                        <div class="flex-item-6">
+                            <h4 class="title-text"><span class="number">4</span>Ansible</h4>
+                            <p>
+                                Ansible is an open-source automation engine that automates software provisioning, configuration management, and application deployment.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex-row list-block cloud-block">
+                        <div class="flex-item-6">
+                            <h4 class="title-text"><span class="number">5</span>SaltStack</h4>
+                            <p>
+                                Salt (sometimes referred to as the SaltStack Platform) is a Python-based open-source configuration management software and remote execution engine. Supporting the "Infrastructure as Code" approach to deployment and cloud management, it competes primarily with Puppet, Chef, and Ansible.
+                            </p>
+                        </div>
+                        <div class="flex-item-6 flex-column">
+                            <img src="../../images/saltstack-logo.svg" alt="SaltStack Logo" />
+                        </div>
+                    </div>
+                    <p class="container-bottom">
+                        Infrastructure as code can be a key attribute of enabling best practices in DevOps – Developers become more involved in defining configuration and operation teams get involved earlier in the development process. Tools that utilize IaC bring visibility to the state and configuration of servers and ultimately provide the visibility to users within the enterprise, aiming to bring teams together to maximize their efforts. Automation in general aims to take the confusion and error-prone aspect of manual processes and make it more efficient, and productive. Allowing for better software and applications to be created with flexibility, less downtime, and an overall cost effective way for the company. IaC is intended to reduce the complexity that kills efficiency out of manual configuration. Automation and collaboration are considered central points in DevOps; Infrastructure automation tools are often included as components of a DevOps toolchain.
+                    </p>
                 </div>
             </section>
             <section class="green-block small-block">
@@ -160,7 +181,7 @@
                 <div class="flex-row">
                     <div class="flex-item-3">
                         <div class="logo">
-                            <a href="/"><img class="mitoc-logo" src="../images/mitoc-logo.svg" alt="Mitoc Group Logo" /></a>
+                            <a href="/"><img class="mitoc-logo" src="../../images/mitoc-logo.svg" alt="Mitoc Group Logo" /></a>
                             <p>Copyright &copy; 2014-2017 Mitoc Group.</p>
                             <p>All rights reserved.</p>
                         </div>
@@ -183,7 +204,7 @@
                         </ul>
                     </div>
                     <div class="flex-item-3">
-                        <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0" target="_blank"><img class="aws-logo" src="../images/aws-1.svg" alt="Amazon Web Services" /></a>
+                        <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0" target="_blank"><img class="aws-logo" src="../../images/aws-1.svg" alt="Amazon Web Services" /></a>
                     </div>
                 </div>
             </div>
