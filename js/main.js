@@ -76,7 +76,7 @@
                 </div>
                 <div class="flex-item-6 img-block">
                     <a href="${post.url}" class="blog-element" target="_blank">
-                        <img class="img-responsive" src="images/medium/${post.image}">
+                        <img class="img-responsive" src="/images/medium/${post.image}">
                     </a>
                 </div>
             </div>
