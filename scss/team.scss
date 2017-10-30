@@ -13,7 +13,7 @@ $num-of-tabs: 3;
 }
 
 
-$num-of-tab: 3;
+$num-of-tab: 1;
 
 @mixin tab {
   @for $i from 1 through $num-of-tab {
