@@ -277,9 +277,10 @@
           .contact-info {
             margin-right: 10px;
             margin-left: 10px;
-            iframe {
-              height: 300px;
-            }
+          img {
+            max-height: 200px;
+            object-fit: cover;
+          }
           }
         }
       }
