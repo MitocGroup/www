@@ -31,7 +31,7 @@ test('Check "Customers" top-menu link redirects user to valid path', async t => 
 test('Check "About Us" top-menu link redirects user to valid path', async t => {
   await t.click(topMenu.about);
   const getLocation = ClientFunction(() => document.location.href);
-  await t.expect(getLocation()).contains('about us');
+  await t.expect(getLocation()).contains('about');
 });
 
 test('Check "Contact" top-menu link redirects user to valid path', async t => {
