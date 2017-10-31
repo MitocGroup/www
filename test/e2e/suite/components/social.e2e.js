@@ -1,5 +1,3 @@
-// DEBUG
-
 import { ClientFunction } from 'testcafe';
 import url from 'url';
 import { config, sharedFunctions } from '../../helpers/config-import';

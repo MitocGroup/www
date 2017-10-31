@@ -13,25 +13,25 @@ sharedFunctions.windowResolution(fix);
 test('Check "Services" top-menu link redirects user to valid path', async t => {
   await t.click(topMenu.services);
   const getLocation = ClientFunction(() => document.location.href);
-  await t.expect(getLocation()).contains('');
+  await t.expect(getLocation()).contains('services');
 });
 
 test('Check "Partners" top-menu link redirects user to valid path', async t => {
   await t.click(topMenu.partners);
   const getLocation = ClientFunction(() => document.location.href);
-  await t.expect(getLocation()).contains('');
+  await t.expect(getLocation()).contains('partners');
 });
 
 test('Check "Customers" top-menu link redirects user to valid path', async t => {
   await t.click(topMenu.customers);
   const getLocation = ClientFunction(() => document.location.href);
-  await t.expect(getLocation()).contains('');
+  await t.expect(getLocation()).contains('customers');
 });
 
 test('Check "About Us" top-menu link redirects user to valid path', async t => {
   await t.click(topMenu.about);
   const getLocation = ClientFunction(() => document.location.href);
-  await t.expect(getLocation()).contains('');
+  await t.expect(getLocation()).contains('about us');
 });
 
 test('Check "Contact" top-menu link redirects user to valid path', async t => {
