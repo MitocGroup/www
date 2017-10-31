@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const request = require('request');
 const { spawn } = require('child_process');
 const appPath = path.join(__dirname, '../../');
 
@@ -70,14 +71,48 @@ function walkDir(dir, filter, callback) {
 exports.walkDir = walkDir;
 
 /**
- * Timeout promise
- * @param time
- * @returns {Promise}
+ * Get file contents
+ * @param {string} fileName
+ * @param encoding
+ * @returns {Promise<Buffer>}
  */
-function timeoutPromise(time) {
+function fileGetContents(fileName, encoding = null) {
   return new Promise((resolve, reject) => {
-    setTimeout(() => { resolve(); }, time);
+    if (!isRemoteSource(fileName)) {
+      return fs.readFile(fileName, encoding,(err, data) => {
+        if (err) {
+          return reject(err);
+        }
+
+        return resolve(data);
+      });
+    }
+
+    request({
+      url: /^\/\/.*/.test(fileName) ? `http:${fileName}` : fileName,
+      encoding: encoding,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+      }
+    }, (err, res, body) => {
+      if (err) {
+        return reject(err);
+      }
+
+      return resolve(body);
+    });
   });
 }
 
-exports.timeoutPromise = timeoutPromise;
+exports.fileGetContents = fileGetContents;
+
+/**
+ * Check if source is remote
+ * @param {string} path
+ * @returns {boolean}
+ */
+function isRemoteSource(path) {
+  return /^\/\/.*/.test(path) || /^https:.*/.test(path) || /^http:.*/.test(path);
+}
+
+exports.isRemoteSource = isRemoteSource;

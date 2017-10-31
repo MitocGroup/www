@@ -12,9 +12,60 @@ $num-of-tabs: 3;
   }
 }
 
+
+$num-of-tab: 1;
+
+@mixin tab {
+  @for $i from 1 through $num-of-tab {
+    &:nth-of-type(#{$i}) {
+      &:checked {
+        ~ .slide {
+          left: calc((100% / #{$num-of-tab}) * #{$i - 1});
+        }
+      }
+    }
+  }
+}
+
+input[type="radio"][name="tab"] {
+  position: absolute;
+  z-index: -1;
+  &:checked {
+    + .tab-label-content {
+      label {
+        color: white;
+      }
+      .tab-content {
+        display: block;
+      }
+    }
+  }
+  @include tab;
+  &:first-of-type {
+    &:checked {
+      ~ .slide {
+        left: 0;
+      }
+    }
+  }
+}
+
+.slide {
+  background: $accent-green;
+  width: calc(100% / #{$num-of-tab});
+  height: 8px;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 8px);
+  transition: left 0.3s ease-out;
+}
+
 .tab-wrap {
   position: relative;
   display: flex;
+  &.second-tab {
+    background-color: $gray-color;
+  }
 }
 
 input[type="radio"][name="tabs"] {
@@ -85,6 +136,9 @@ label {
     position: absolute;
     display: none;
     left: 0;
+    &.tab-content-second {
+      background: $gray-color;
+    }
     h3, .partner {
       padding: 40px 0;
     }
@@ -128,6 +182,9 @@ label {
 .tab-container {
   min-height: 780px;
   background: $white-color;
+  &.gray-light-block {
+    background-color: #fbfbfb;
+  }
 }
 
 .hide-mobile {
