@@ -430,12 +430,62 @@ p, ul, span {
   }
   &.white-block {
     background-color: $white-color;
+  }
+  &.white-block, &.gray-light-block {
     .block-effect {
       &:hover {
         -webkit-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         -moz-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         -o-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      }
+    }
+    .flex-row {
+      .flex-item-4 {
+        &.shadow-block {
+          .info-block {
+            -webkit-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            -o-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            height: auto;
+            display: inline-block;
+            flex-direction: inherit;
+            .info {
+              &.dots {
+                position: relative;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-inline-box;
+                display: -moz-inline-box;
+                line-height: 24px;
+                -webkit-line-clamp: 4;
+                -moz-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                -moz-box-orient: vertical;
+                -ms-box-orient: vertical;
+                white-space: normal;
+
+              }
+              p {
+                overflow: hidden;
+                padding-bottom: 0;
+              }
+              .hidden-block {
+                height: 100%;
+                p {
+                  padding-bottom: 20px;
+                }
+              }
+            }
+            .read-more {
+              margin-top: 0;
+              background: transparent;
+              border: 0;
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
   }

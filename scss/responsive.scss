@@ -85,6 +85,26 @@
 }
 
 @media (max-width: 992px) {
+  .green-block {
+    &.white-block, .gray-light-block {
+      .flex-row {
+        .flex-item-4 {
+          &.shadow-block {
+            flex: 0 0 100%;
+            max-width: 100%;
+            &:nth-child(1), &:nth-child(2) {
+              margin-bottom: 20px;
+            }
+            img {
+              max-height: 300px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .manning-page {
     .pull-left, .pull-right {
       float: none;
@@ -277,10 +297,10 @@
           .contact-info {
             margin-right: 10px;
             margin-left: 10px;
-          img {
-            max-height: 200px;
-            object-fit: cover;
-          }
+            img {
+              max-height: 300px;
+              object-fit: cover;
+            }
           }
         }
       }

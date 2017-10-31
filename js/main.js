@@ -136,4 +136,19 @@
 
     return this;
   };
+  
+  $('.team-read-more').on('click', function(e) {
+    e.preventDefault();
+    let $parentBlock = $(this).parents('.shadow-block');
+    let $hiddenBlock = $parentBlock.find('.hidden-block');
+
+    if (!$hiddenBlock.hasClass('hidden')) {
+      $parentBlock.goTo('-80', 500);
+    }
+    
+    $hiddenBlock.toggleClass('hidden');
+    $parentBlock.find('.info').toggleClass('dots');
+  });
+
+  
 })(jQuery, window);
