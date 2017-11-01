@@ -137,10 +137,13 @@
     return this;
   };
   
-  $('.team-read-more').on('click', function(e) {
+  $('.team-show-more, .team-less-more').on('click', function(e) {
     e.preventDefault();
     let $parentBlock = $(this).parents('.shadow-block');
     let $hiddenBlock = $parentBlock.find('.hidden-block');
+
+    $parentBlock.find('.team-less-more').toggleClass('hidden');
+    $parentBlock.find('.team-show-more').toggleClass('hidden');
 
     if (!$hiddenBlock.hasClass('hidden')) {
       $parentBlock.goTo('-80', 500);

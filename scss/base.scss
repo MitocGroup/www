@@ -389,6 +389,14 @@ p, ul, span {
     left: 0;
     margin-left: 5px;
     position: relative;
+    &.arrow-less {
+      transform: scaleX(-1);
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+      display: inline-block;
+      vertical-align: unset;
+    }
   }
 }
 
@@ -465,6 +473,7 @@ p, ul, span {
                 -moz-box-orient: vertical;
                 -ms-box-orient: vertical;
                 white-space: normal;
+                max-height: 172px;
 
               }
               p {
