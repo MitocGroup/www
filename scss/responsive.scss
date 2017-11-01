@@ -86,7 +86,7 @@
 
 @media (max-width: 992px) {
   .green-block {
-    &.white-block, .gray-light-block {
+    &.white-block, &.gray-light-block {
       .flex-row {
         .flex-item-4 {
           &.shadow-block {
@@ -993,9 +993,6 @@
           .read-more {
             padding-bottom: 20px;
           }
-        }
-        .read-more {
-          opacity: 1;
         }
       }
     }
