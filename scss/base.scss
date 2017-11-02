@@ -896,3 +896,52 @@ i {
   color: $accent-green;
   font-family: OpenSans-Regular, sans-serif;
 }
+
+
+/* Breadcrump */
+
+.breadcrumbs  {
+  margin-top: 45px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1em;
+  border-radius: 2px;
+  overflow: hidden;
+  &.contact-page {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+  .icon-arrow {
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+  ul {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      a {
+        display: inline-block;
+        font-family: OpenSans-Regular, sans-serif;
+        font-size: 0.9em;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      &.active {
+        a {
+          color: $accent-green;
+        }
+      }
+      &:hover {
+        .icon-arrow {
+          color: $accent-green;
+        }
+      }
+    }
+  }
+}
+
