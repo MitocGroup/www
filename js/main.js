@@ -153,5 +153,11 @@
     $parentBlock.find('.info').toggleClass('dots');
   });
 
-  
+  $(window).resize(function () {
+    if ($win.width() > 992) {
+      $('.hide-mobile, footer').removeClass('hidden');
+      $('html').css('overflow-y', 'scroll');
+    }
+  });
+
 })(jQuery, window);
