@@ -871,6 +871,12 @@
                   }
                 }
                 .blog-content {
+                  max-height: 200px;
+                  .button {
+                    background-color: $white-color;
+                    bottom: 4px;
+                    width: 100%;
+                  }
                   h4 {
                     font-size: 16px;
                   }
