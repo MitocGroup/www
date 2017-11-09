@@ -76,7 +76,7 @@
                 </div>
                 <div class="flex-item-6 img-block">
                     <a href="${post.url}" class="blog-element" target="_blank">
-                        <img class="img-responsive" src="images/medium/${post.image}">
+                        <img class="img-responsive" src="/images/medium/${post.image}">
                     </a>
                 </div>
             </div>
@@ -136,4 +136,27 @@
 
     return this;
   };
+  
+  $('.team-show-more, .team-less-more').on('click', function(e) {
+    e.preventDefault();
+    let $parentBlock = $(this).parents('.shadow-block');
+    let $hiddenBlock = $parentBlock.find('.hidden-block');
+
+    $parentBlock.find('.team-less-more').toggleClass('hidden');
+    $parentBlock.find('.team-show-more').toggleClass('hidden');
+
+    if (!$hiddenBlock.hasClass('hidden')) {
+      $parentBlock.goTo('-80', 500);
+    }
+    
+    $hiddenBlock.toggleClass('hidden');
+    $parentBlock.find('.info').toggleClass('dots');
+  });
+
+  $(window).resize(function () {
+    if ($win.width() > 992) {
+      $('.hide-mobile, footer').removeClass('hidden');
+      $('html').css('overflow-y', 'scroll');
+    }
+  });
 })(jQuery, window);

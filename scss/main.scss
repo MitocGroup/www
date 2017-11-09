@@ -35,8 +35,7 @@
     .read-more {
       padding-bottom: 0;
       padding-top: 10px;
-      text-align: left;
-      opacity: 0;
+      text-align: center;
     }
     .flex-item-3 {
       text-align: center;
@@ -59,7 +58,6 @@
       }
       &:hover {
         .read-more {
-          opacity: 1;
           color: $black-color;
           .icon-arrow {
             left: 10px;
@@ -97,7 +95,7 @@ footer {
     }
   }
   .map-background {
-    background-image: url(/images/map-footer.svg);
+    background-image: url(/images/maps/map-footer.svg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
