@@ -5,7 +5,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | Mitoc Group</title>
-    <meta name="description" content="Mitoc Group is a technology company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world." />
+    <meta name="description" content="Mitoc Group is a cloud native company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About Us | Mitoc Group" />
+    <meta property="og:description" content="Mitoc Group is a cloud native company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world." />
+    <meta property="og:url" content="https://www.mitocgroup.com/about/" />
+    <meta property="og:image" content="https://www.mitocgroup.com/images/cover-fb.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About Us | Mitoc Group" />
+    <meta name="twitter:description" content="Mitoc Group is a cloud native company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world." />
+    <meta name="twitter:image" content="https://www.mitocgroup.com/images/cover-tw.jpg" />
+    <meta name="twitter:url" content="https://www.mitocgroup.com/about/" />
     <link rel="icon" type="image/ico" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/index.min.css" />
     <!-- Google Tag Manager -->
@@ -28,7 +38,7 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PM5MG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -37,20 +47,20 @@
     <div class="wrapper">
         <div class="navbar-fix nav-down white-color gray-color">
             <div class="container">
-                <div class="logo">
-                    <a href="/">
-                        <img class="mitoc-logo" src="../images/mitoc-logo.svg" alt="Mitoc Group Logo" />
+                <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                    <a href="/" itemprop="url">
+                        <img class="mitoc-logo" src="/images/logos/mitoc.svg" alt="Mitoc Group Logo" itemprop="logo" />
                     </a>
                 </div>
-                <div class="nav-bar">
+                <div class="nav-bar" itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <i class="icon-burger"></i>
                     <ul class="navigation">
-                        <li><a href="/services/">Services</a></li>
-                        <li><a href="/partners/">Partners</a></li>
-                        <li><a href="/customers/">Customers</a></li>
-                        <li><a href="/about/" class="active">About Us</a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <li><a href="https://blog.mitocgroup.com">Blog</a></li>
+                        <li><a href="/services/" itemprop="url"><span itemprop="name">Services</span></a></li>
+                        <li><a href="/partners/" itemprop="url"><span itemprop="name">Partners</span></a></li>
+                        <li><a href="/customers/" itemprop="url"><span itemprop="name">Customers</span></a></li>
+                        <li><a href="/about/" class="active" itemprop="url"><span itemprop="name">About Us</span></a></li>
+                        <li><a href="/contact/" itemprop="url"><span itemprop="name">Contact</span></a></li>
+                        <li><a href="https://blog.mitocgroup.com" itemprop="url"><span itemprop="name">Blog</span></a></li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -61,22 +71,41 @@
                 <div class="container">
                     <div class="display-flex pull-center">
                         <div class="block-half">
-                            <img src="../images/about-us.svg" alt="Mitoc Group About Us" />
+                            <img src="/images/about/about-us.svg" alt="About Mitoc Group" />
                         </div>
                         <h1 class="text-uppercase">About Us</h1>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="breadcrumbs">
+                <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="/about/" itemprop="item">
+                            <span itemprop="name">About Us</span>
+                            <meta itemprop="position" content="2" />
+                        </a>
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="/" itemprop="item">
+                            <span itemprop="name">Home</span>
+                            <meta itemprop="position" content="1" />
+                        </a>
+                        <i class="icon-arrow icon-arrow-more"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="container-space about">
             <div class="container">
-                <h4 class="title-text"> Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world.</h4>
+                <h4 class="title-text">Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world.</h4>
                 <div class="flex-row container-top">
                     <div class="flex-item-6">
-                        <img src="../images/start.svg" alt="Image">
+                        <img src="/images/about/company.svg" alt="Mitoc Group Company" />
                     </div>
                     <div class="flex-item-6 flex-column">
-                        <p>Founded in 2014 by industry experts, Mitoc Group was positioned as a team of serverless believers from the beginning. Our journey started in the same moment with one of the most innovative and bold move from cloud computing leader Amazon Web Service to launch in beta a new service called AWS Lambda. Very few at that point were dreaming of a compute service that embeds the best of virtualization and containerization. We had the privilege to live it through from "oh wow, nice shiny toy" to "oh boy, everybody is using it".</p>
+                        <p>Founded in 2014 by industry experts, Mitoc Group emerged as <a href="/about/team" class="link-text">a team of serverless believers</a> from the beginning. Our journey started in the same moment with one of the most innovative and bold move from cloud computing leader Amazon Web Service to launch in beta a new service called AWS Lambda. Very few at that point were dreaming of a compute service that embeds the best of virtualization and containerization. We had the privilege to live it through from "oh wow, nice shiny toy" to "oh boy, everybody is using it".</p>
                         <p>The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!</p>
                     </div>
                 </div>
@@ -92,7 +121,7 @@
                     </div>
                 </div>
                 <div class="flex-item-6 quote-image-block">
-                    <img src="../images/andy-jassy.jpg" alt="Andy Jassy" />
+                    <img src="/images/about/andy-jassy.jpg" alt="Andy Jassy" />
                 </div>
             </div>
         </div>
@@ -103,13 +132,13 @@
                 <div class="container">
                     <div class="flex-row container-top-bottom">
                         <div class="flex-item-4">
-                            <a href="https://blog.mitocgroup.com/mitoc-group-inc-granted-aws-advanced-technology-partner-status-6550e452ed1b"><img src="../images/aws-1.svg" alt="Amazon Web Services"></a>
+                            <a href="https://blog.mitocgroup.com/mitoc-group-inc-granted-aws-advanced-technology-partner-status-6550e452ed1b"><img src="/images/aws-1.svg" alt="Amazon Web Services"></a>
                         </div>
                         <div class="flex-item-4">
-                            <a href="https://blog.mitocgroup.com/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda-19331fe3d4f0"><img src="../images/aws-2.svg" alt="Amazon Web Services"></a>
+                            <a href="https://blog.mitocgroup.com/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda-19331fe3d4f0"><img src="/images/aws-2.svg" alt="Amazon Web Services"></a>
                         </div>
                         <div class="flex-item-4">
-                            <a href="https://blog.mitocgroup.com/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team-a7d3d5632cf8"><img src="../images/aws-3.svg" alt="Amazon Web Services"></a>
+                            <a href="https://blog.mitocgroup.com/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team-a7d3d5632cf8"><img src="/images/aws-3.svg" alt="Amazon Web Services"></a>
                         </div>
                     </div>
                     <div class="flex-row">
@@ -117,7 +146,7 @@
                             <p>We are also proud of our contribution to the open source community through projects like <a href="https://github.com/MitocGroup/deep-framework" target="_blank" class="link-text">Digital Enterprise End-to-end Platform</a> and <a href="https://github.com/MitocGroup/recink" target="_blank" class="link-text">Rethink Continuous Integration for Serverless Applications.</a></p>
                         </div>
                         <div class="flex-item-4">
-                            <img src="../images/mt-awsl.svg" alt="Image">
+                            <img src="/images/mt-awsl.svg" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -134,7 +163,7 @@
                         <div class="flex-row">
                             <div class="container-top flex-item-12">
                                 <div class="block-effect">
-                                    <a href="https://blog.mitocgroup.com/very-exciting-and-looking-forward-to-aws-re-invent-2015-e063dca1e063"><img src="../images/invent-2015.jpg" alt="AWS re:Invent 2015" /></a>
+                                    <a href="https://blog.mitocgroup.com/very-exciting-and-looking-forward-to-aws-re-invent-2015-e063dca1e063"><img src="/images/events/aws-reinvent-2015.jpg" alt="AWS re:Invent 2015" /></a>
                                 </div>
                             </div>
                         </div>
@@ -146,17 +175,17 @@
                         <div class="flex-row">
                             <div class="container-top flex-item-12">
                                 <div class="block-effect">
-                                    <a href="https://unite.un.org/techevents/open-camps-un-2016"><img src="../images/open-camp2016.jpg" alt="UN Open Camps 2016" /></a>
+                                    <a href="https://unite.un.org/techevents/open-camps-un-2016"><img src="/images/events/open-camps-2016.jpg" alt="UN Open Camps 2016" /></a>
                                 </div>
                             </div>
                             <div class="flex-item-12">
                                 <div class="block-effect">
-                                    <a href="https://eventmobi.com/nieu16/agenda/176233/928560"><img src="../images/node-js.jpg" alt="Nodejs Interactive Europe 2016" /></a>
+                                    <a href="https://eventmobi.com/nieu16/agenda/176233/928560"><img src="/images/events/nodejs-interactive-europe-2016.jpg" alt="Nodejs Interactive Europe 2016" /></a>
                                 </div>
                             </div>
                             <div class="flex-item-12">
                                 <div class="block-effect">
-                                    <a href="http://london.serverlessconf.io/"><img src="../images/serverless-london.jpg" alt="ServerlessConf London 2016" /></a>
+                                    <a href="http://london.serverlessconf.io/"><img src="/images/events/serverlessconf-london-2016.jpg" alt="ServerlessConf London 2016" /></a>
                                 </div>
                             </div>
                         </div>
@@ -168,17 +197,17 @@
                         <div class="flex-row">
                             <div class="flex-item-12 container-top">
                                 <div class="block-effect">
-                                    <a href="https://austin.serverlessconf.io/"><img src="../images/serverlessconf.jpg" alt="Serverless Conf Austin 2017" /></a>
+                                    <a href="https://austin.serverlessconf.io/"><img src="/images/events/serverlessconf-austin-2017.jpg" alt="ServerlessConf Austin 2017" /></a>
                                 </div>
                             </div>
                             <div class="flex-item-12">
                                 <div class="block-effect">
-                                    <a href="https://tmt.knect365.com/cloud-devops-world/agenda/2#panel-discussion-the-business-case-for-becoming-serverless"><img src="../images/techxlr8.jpg" alt="TechXLR8 Tech Week London 2017" /></a>
+                                    <a href="https://tmt.knect365.com/cloud-devops-world/agenda/2#panel-discussion-the-business-case-for-becoming-serverless"><img src="/images/events/techxlr8-tech-week-london-2017.jpg" alt="TechXLR8 Tech Week London 2017" /></a>
                                 </div>
                             </div>
                             <div class="flex-item-12">
                                 <div class="block-effect">
-                                    <a href="https://reinvent.awsevents.com/"><img src="../images/maxresdefault.jpg" alt="AWS re:Invent 2017" /></a>
+                                    <a href="https://reinvent.awsevents.com/"><img src="/images/events/aws-reinvent-2017.jpg" alt="AWS re:Invent 2017" /></a>
                                 </div>
                             </div>
                         </div>
@@ -197,16 +226,15 @@
             </div>
         </section>
     </div>
-    </div>
     <footer>
         <div class="container">
             <div class="media">
-                <a href="https://www.linkedin.com/company/mitoc-group" target="_blank"><i class="icon-linkedin"></i></a>
-                <a href="https://twitter.com/MitocGroup" target="_blank"><i class="icon-twitter"></i></a>
-                <a href="https://facebook.com/MitocGroup" target="_blank"><i class="icon-facebook"></i></a>
-                <a href="https://github.com/MitocGroup" target="_blank"><i class="icon-github"></i></a>
-                <a href="https://plus.google.com/+MitocGroup" target="_blank"><i class="icon-google"></i></a>
-                <a href="https://www.youtube.com/channel/UCyLr_SKBBsA9pNxouO9VB0Q" target="_blank"><i class="icon-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/mitoc-group" target="_blank" itemprop="sameAs"><i class="icon-linkedin"></i></a>
+                <a href="https://twitter.com/MitocGroup" target="_blank" itemprop="sameAs"><i class="icon-twitter"></i></a>
+                <a href="https://facebook.com/MitocGroup" target="_blank" itemprop="sameAs"><i class="icon-facebook"></i></a>
+                <a href="https://github.com/MitocGroup" target="_blank" itemprop="sameAs"><i class="icon-github"></i></a>
+                <a href="https://plus.google.com/+MitocGroup" target="_blank" itemprop="sameAs"><i class="icon-google"></i></a>
+                <a href="https://www.youtube.com/channel/UCyLr_SKBBsA9pNxouO9VB0Q" target="_blank" itemprop="sameAs"><i class="icon-youtube"></i></a>
             </div>
         </div>
         <div class="map-background">
@@ -214,30 +242,30 @@
                 <div class="flex-row">
                     <div class="flex-item-3">
                         <div class="logo">
-                            <a href="/"><img class="mitoc-logo" src="../images/mitoc-logo.svg" alt="Mitoc Group Logo" /></a>
-                            <p>Copyright &copy; 2014-2017 Mitoc Group.</p>
+                            <a href="/"><img class="mitoc-logo" src="/images/logos/mitoc.svg" alt="Mitoc Group Logo" /></a>
+                            <p>Copyright &copy; <span itemprop="copyrightYear">2014-2017</span> <span itemprop="copyrightHolder">Mitoc Group</span>.</p>
                             <p>All rights reserved.</p>
                         </div>
                     </div>
-                    <div class="flex-item-3 block-info">
+                    <div class="flex-item-3 block-info" itemscope itemtype="http://schema.org/PostalAddress">
                         <h4>Get in touch</h4>
-                        <p><a href="https://goo.gl/RMltf5" target="_blank">50 Tice Blvd <br/> Woodcliff Lake NJ 07677</a></p>
-                        <p><a href="tel:+18018108186">(+1) 801 810 8186</a></p>
-                        <p><a href="mailto:hello@mitocgroup.com">hello@mitocgroup.com</a></p>
+                        <p><a href="https://goo.gl/RMltf5" target="_blank"><span itemprop="streetAddress">50 Tice Blvd</span><br/><span itemprop="addressLocality">Woodcliff Lake</span> <span itemprop="addressRegion">NJ</span> <span itemprop="postalCode">07677</span></a></p>
+                        <p><a href="tel:+18018108186" itemprop="telephone">(+1) 801 810 8186</a></p>
+                        <p><a href="mailto:hello@mitocgroup.com" itemprop="email">hello@mitocgroup.com</a></p>
                     </div>
-                    <div class="flex-item-3 block-info">
+                    <div class="flex-item-3 block-info" itemscope itemtype="http://schema.org/SiteNavigationElement">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="/services/">Services</a></li>
-                            <li><a href="/partners/">Partners</a></li>
-                            <li><a href="/customers/">Customers</a></li>
-                            <li><a href="/about/" class="active">About Us</a></li>
-                            <li><a href="/contact/">Contact</a></li>
-                            <li><a href="https://blog.mitocgroup.com">Blog</a></li>
+                            <li><a href="/services/" itemprop="url"><span itemprop="name">Services</span></a></li>
+                            <li><a href="/partners/" itemprop="url"><span itemprop="name">Partners</span></a></li>
+                            <li><a href="/customers/" itemprop="url"><span itemprop="name">Customers</span></a></li>
+                            <li><a href="/about/" class="active" itemprop="url"><span itemprop="name">About Us</span></a></li>
+                            <li><a href="/contact/" itemprop="url"><span itemprop="name">Contact</span></a></li>
+                            <li><a href="https://blog.mitocgroup.com" itemprop="url"><span itemprop="name">Blog</span></a></li>
                         </ul>
                     </div>
                     <div class="flex-item-3">
-                        <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0" target="_blank"><img class="aws-logo" src="../images/aws-1.svg" alt="Amazon Web Services" /></a>
+                        <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0" target="_blank"><img class="aws-logo" src="/images/aws-1.svg" alt="Amazon Web Services" /></a>
                     </div>
                 </div>
             </div>

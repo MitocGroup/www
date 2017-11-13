@@ -9,6 +9,7 @@ const cheerio = require('cheerio');
 const fsExtra = require('fs-extra');
 const UglifyJS = require('uglify-es');
 const { minify } = require('html-minifier');
+const CleanCSS = require('clean-css');
 
 const args = process.argv.slice(2);
 if (args.length < 1) {
@@ -22,7 +23,7 @@ if (['dev', 'master'].indexOf(deployTo) < 0) {
   exit(1);
 }
 
-const { walkDir } = require('../helpers/utils');
+const { walkDir, fileGetContents, isRemoteSource } = require('./utils');
 const appSrc = path.join(__dirname, '../../');
 const buildPath = path.join(appSrc, 'dist');
 
@@ -70,7 +71,10 @@ function parseLinks($links, type) {
     if ($links.hasOwnProperty($item)) {
       if ($links[$item].attribs) {
         let assetPath = $links[$item].attribs[(type === 'css') ? 'href' : 'src'];
-        links.push(path.join(appSrc, assetPath));
+        links.push({
+          type: type,
+          path: isRemoteSource(assetPath) ? assetPath : path.join(appSrc, assetPath)
+        });
       }
     }
   }
@@ -85,13 +89,34 @@ function parseLinks($links, type) {
  */
 function minifyJs(fileName) {
   return new Promise((resolve, reject) => {
-    let result = UglifyJS.minify(fs.readFileSync(fileName, 'utf8'), {});
+    fileGetContents(fileName).then(res => {
+      let result = UglifyJS.minify(res.toString(), {});
 
-    if (result.error) {
-      return reject(result.error);
-    }
+      if (result.error) {
+        return reject(result.error);
+      }
 
-    resolve(result.code);
+      resolve(result.code);
+    });
+  });
+}
+
+/**
+ * Minify css
+ * @param {string} fileName
+ * @returns {Promise}
+ */
+function minifyCss(fileName) {
+  return new Promise((resolve, reject) => {
+    fileGetContents(fileName).then(res => {
+      new CleanCSS({}).minify(res.toString(), (error, output) => {
+        if (error) {
+          return reject(error);
+        }
+
+        resolve(output.styles);
+      });
+    });
   });
 }
 
@@ -105,24 +130,18 @@ function bundle(entryFiles, bundleFileName) {
   let outputPath = path.join(buildPath, bundleFileName);
   fs.writeFileSync(outputPath, '', 'utf8');
 
-  if (!entryFiles.length) {
-    return Promise.resolve(bundleFile);
-  }
-
   return new Promise((resolve, reject) => {
     let promises = entryFiles.map(item => {
-      if (/\.min\./.test(item) || /\.css/.test(item)) {
-        return new Promise(resolve => {
-          fs.readFile(item, 'utf8', (err, data) => {
-            if (err) {
-              return reject(err);
-            }
-            resolve(data);
-          });
-        });
+      let fileName = item.path;
+      if (/\.min\./.test(fileName)) {
+        return fileGetContents(fileName, 'utf8');
       }
 
-      return minifyJs(item);
+      if (item.type === 'css') {
+        return minifyCss(fileName);
+      }
+
+      return minifyJs(fileName);
     });
 
     Promise.all(promises).then(results => {
