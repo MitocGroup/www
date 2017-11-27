@@ -5,7 +5,7 @@ import { CustomersPage } from '../../poms/pages/customers.po';
 
 const customersPage = new CustomersPage();
 
-const fix = fixture`Check 'Partners' page content`
+const fix = fixture`Check 'Customers' page content`
   .page`${url.resolve(config.www_base_host, '/customers')}`;
 
 sharedFunctions.windowResolution(fix);
