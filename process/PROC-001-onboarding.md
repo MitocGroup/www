@@ -7,6 +7,7 @@ v0.0.1 | 2017-05-24 | Igor Vignan | Initial Document
 v0.0.2 | 2017-05-24 | Eugene Istrati | Approved
 v0.0.3 | 2017-06-23 | Eugene Istrati | Process Refactoring
 v0.0.4 | 2017-06-24 | Eugene Istrati | Background Check
+v0.0.5 | 2018-01-12 | Igor Vignan | Added Description and AWS SSO
 
 
 ## Onboarding Process Details
