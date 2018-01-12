@@ -4,7 +4,7 @@ Revision | Revision Date | Author | Description of changes
 -------- | ------------- | ------ | ----------------------
 v0.0.1 | 2017-07-18 | Vladimir Ursu | Initial Document
 v0.0.2 | 2017-07-19 | Eugene Istrati | Approved
-v0.0.2 | 2018-01-12 | Igor Vignan | AWS SSO & Minor Changes
+v0.0.3 | 2018-01-12 | Igor Vignan | AWS SSO & Minor Changes
 
 ## Offboarding Process Details
 
