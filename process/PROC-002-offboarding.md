@@ -4,7 +4,7 @@ Revision | Revision Date | Author | Description of changes
 -------- | ------------- | ------ | ----------------------
 v0.0.1 | 2017-07-18 | Vladimir Ursu | Initial Document
 v0.0.2 | 2017-07-19 | Eugene Istrati | Approved
-
+v0.0.3 | 2018-01-12 | Igor Vignan | AWS SSO & Minor Changes
 
 ## Offboarding Process Details
 
@@ -30,27 +30,31 @@ Revoke jump server access from:
 
 ## 2. AWS Console
 
-Delete from:
+Revoke access and/or delete user credentials from:
 
-* Company's account
+* Company's AWS SSO directory
 
-* Send a request to client to delete emmployee accuount from their AWS Console
+* Company's AWS account
+
+* Send a request to client to delete employee account from their AWS Console
 
 
-## 3. Git Hub 
+## 3. GitHub 
 
-Delete from:
+Revoke access and/or delete user credentials from:
 
-* Company's repositiories account
+* Company's GitHub Organization/repositories
 
-* Send a request to client to delete emmployee accuount from their repositories
+* Send a request to client to delete employee account from their Organization/repositories
 
 
 ## 4. Business Email
 
+Revoke access and/or delete user credentials from:
+
 Company's account:
 
-* Delete business email and assing all data to Operations Manager
+* Delete business email and assign all data to Operations Manager
 
 * Ensure the email is deleted from all groups
 
@@ -58,9 +62,10 @@ Client's Account:
 
 * Send a request to the client HR to suspend/delete employees email 
 
+
 ## 5. ZenHub
 
-Delete account from:
+Revoke access and/or delete user credentials from:
 
 * Company's account
 
@@ -71,7 +76,7 @@ Delete account from:
 
 * Suspend account
 
-* Delete account 1 month afert payment
+* Delete account 1 month after payment
 
 
 ## 7. Slack
@@ -85,5 +90,5 @@ Operations Manager disable/delete employee access from:
 
 ## 8. Access to building (if applicable)
 
-Buidling Adminsitrator must - delete access from Building's database, imediatly after the employee is leaving the building
+Building Administrator must - delete access from Building's database, immediately after the employee is leaving the building
 
