@@ -17,7 +17,6 @@
         margin-left: 20px;
         img {
           width: 100%;
-          object-fit: none;
         }
         .wrapper-info {
           padding: 0 24px;
@@ -90,20 +89,20 @@
 
   }
   #mc-general-error {
-   .error-mc {
-     position: fixed;
-     right: 0;
-     padding: 20px;
-     color: #4F8A10;
-     background-color: #DFF2BF;
-     bottom: 0;
-     -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-     border-radius: 5px;
-     -webkit-transition: .4s;
-     -moz-transition: .4s;
-     -o-transition: .4s;
-     transition: .4s;
-   }
+    .error-mc {
+      position: fixed;
+      right: 0;
+      padding: 20px;
+      color: #4F8A10;
+      background-color: #DFF2BF;
+      bottom: 0;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-transition: .4s;
+      -moz-transition: .4s;
+      -o-transition: .4s;
+      transition: .4s;
+    }
   }
 }
