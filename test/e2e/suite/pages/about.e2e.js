@@ -58,11 +58,11 @@ test('Check "Node Interactive" link redirects user to valid path', async t => {
   await t.expect(getLocation()).contains('nieu16/agenda/176233/928560');
 });
 
-test('Check "Tech Week" link redirects user to valid path', async t => {
-  await t.click(aboutUsPage.techWeekBtn);
-  const getLocation = ClientFunction(() => document.location.href);
-  await t.expect(getLocation()).contains('panel-discussion-the-business-case-for-becoming-serverless');
-});
+// test('Check "Tech Week" link redirects user to valid path', async t => {
+//   await t.click(aboutUsPage.techWeekBtn);
+//   const getLocation = ClientFunction(() => document.location.href);
+//   await t.expect(getLocation()).contains('panel-discussion-the-business-case-for-becoming-serverless');
+// });
 
 test('Check "London Serverless" link redirects user to valid path', async t => {
   await t.click(aboutUsPage.serverlessLondonBtn);
