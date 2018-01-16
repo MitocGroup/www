@@ -61,7 +61,7 @@ test('Check "Node Interactive" link redirects user to valid path', async t => {
 test('Check "Tech Week" link redirects user to valid path', async t => {
   await t.click(aboutUsPage.techWeekBtn);
   const getLocation = ClientFunction(() => document.location.href);
-  await t.expect(getLocation()).contains('panel-discussion-the-business-case-for-becoming-serverless');
+  await t.expect(getLocation()).contains('session-grid.cfm?grid-eventsby=Day&grid-eventdate=2017-06-15&grid-groupby=Track&grid-trackEventType=29');
 });
 
 test('Check "London Serverless" link redirects user to valid path', async t => {
