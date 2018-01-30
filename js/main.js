@@ -137,7 +137,7 @@
     return this;
   };
   
-  $('.team-show-more, .team-less-more').on('click', function(e) {
+  $('.team-show-more, .team-less-more, .hidden-block').on('click', function(e) {
     e.preventDefault();
     let $parentBlock = $(this).parents('.shadow-block');
     let $hiddenBlock = $parentBlock.find('.hidden-block');
