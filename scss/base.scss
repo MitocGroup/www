@@ -451,7 +451,7 @@ p, ul {
       }
     }
     .flex-row {
-      .flex-item-4 {
+      .flex-item-4, .flex-item-3 {
         &.shadow-block {
           .info-block {
             -webkit-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -459,8 +459,8 @@ p, ul {
             -o-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             height: auto;
-            display: inline-block;
-            flex-direction: inherit;
+            display:flex;
+            flex-direction: column;
             .info {
               &.dots {
                 position: relative;
@@ -481,12 +481,12 @@ p, ul {
               p {
                 overflow: hidden;
                 padding-bottom: 0;
+                cursor: pointer;
               }
               .hidden-block {
                 height: 100%;
                 p {
                   padding-bottom: 20px;
-                  padding-top: 20px;
                 }
               }
             }
