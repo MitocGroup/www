@@ -25,11 +25,11 @@ fi
 
 if [ ${BRANCH} != 'master' ]; then
     BUCKET='s3://www-test.mitocgroup.com/'
-    DIST_ID='E2MR6WOVYGNOM0'
+    DIST_ID='E30CF181S1NEVV'
     MAX_AGE='600'
 else
     BUCKET='s3://www.mitocgroup.com/'
-    DIST_ID='E17AX02BW6QRQO'
+    DIST_ID='ESMJ305GA84SF'
     MAX_AGE='604800'
 fi
 
@@ -48,8 +48,8 @@ aws s3 sync ${AWS_CLI} ${APP_DIR}/dist/js/ ${BUCKET}js/ --region ${REGION} \
     --metadata-directive REPLACE --cache-control max-age=${MAX_AGE} --delete
 
 if [ "${BRANCH}" == "master" ]; then
-    message "Invoking MediumFeedMitocgroup function"
-    aws lambda ${AWS_CLI} invoke --function-name MediumFeedMitocgroup medium-feed.log
+    message "Invoking MediumFeedMitocGroup function"
+    aws lambda ${AWS_CLI} invoke --function-name MediumFeedMitocGroup medium-feed.log
 fi
 
 message "Invalidating CloudFront"
