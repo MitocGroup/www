@@ -25,11 +25,11 @@ fi
 
 if [ ${BRANCH} != 'master' ]; then
     BUCKET='s3://www-test.mitocgroup.com/'
-    DIST_ID='E2MR6WOVYGNOM0'
+    DIST_ID='E30CF181S1NEVV'
     MAX_AGE='600'
 else
     BUCKET='s3://www.mitocgroup.com/'
-    DIST_ID='E17AX02BW6QRQO'
+    DIST_ID='ESMJ305GA84SF'
     MAX_AGE='604800'
 fi
 
