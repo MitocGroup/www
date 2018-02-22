@@ -5,7 +5,7 @@ Revision | Revision Date | Author | Description of changes
 -------- | ------------- | ------ | ----------------------
 v0.0.1 | 2017-08-24 | Vladimir Ursu | Initial Document
 v0.0.2 | 2017-08-25 | Eugene Istrati | Approved
-
+v0.0.3 | 2017-02-22 | Vladimir Ursu | Changes in point 3.2 
 
 ## 1. General
 
