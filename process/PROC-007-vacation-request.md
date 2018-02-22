@@ -52,6 +52,7 @@ When the request is approved by the Manager, requester must follow the following
 - Send an "all day" meeting invite to team@mitocgroup.com for the vacation period.
 - Use as a meeting Name your Name (e.g. Employee Name Vacation)
 - Follow the **## Seven Things to Do Before Leaving the Office for Vacation** steps
+- Write an official request to Tatiana by hand.
 
 ### 3.3 Request denied:
 Reschedule your Vacation
