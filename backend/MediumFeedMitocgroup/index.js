@@ -5,9 +5,9 @@ const AWS = require('aws-sdk');
 const Jimp = require('jimp');
 const https = require('https');
 const dateFormat = require('dateformat');
-
+const path = require('path');
+const config = require('./.config.json');
 const s3 = new AWS.S3();
-const config = require('./config.json');
 
 /**
  * Medium feed retrieve and optimize images
@@ -17,12 +17,13 @@ const config = require('./config.json');
 exports.handler = (event, context) => {
   apiRequest().then(res => {
     let rawPosts = parseResponse(res);
+
     if (!rawPosts) {
       return context.fail('No items to handle');
     }
 
     let posts = handlePosts(rawPosts);
-    let images = posts.map(item => item.image);
+    let images = posts.map(item => item.image.replace(/^.*?(?=[0-9]+\*)/,""));
 
     Promise.all(images.map(image => optimizeImage(image))).then((buffers) => {
       return Promise.all(buffers.map((imgBuffer, index) =>
@@ -56,8 +57,8 @@ exports.handler = (event, context) => {
  * @returns {string}
  */
 function getImageUrl(imageName) {
-  const mediumImageCdn = 'https://cdn-images-1.medium.com';
-  return url.resolve(mediumImageCdn, `max/${config.maxImageWidth}/${imageName}`);
+   const mediumImageCdn = 'https://cdn-images-1.medium.com';
+   return url.resolve(mediumImageCdn,`max/${config.maxImageWidth}/${imageName}`);
 }
 
 /**
@@ -74,7 +75,6 @@ function optimizeImage(imageName) {
           if (err) {
             return reject(err);
           }
-
           resolve(buffer);
         });
     }).catch(function (err) {
@@ -90,27 +90,20 @@ function optimizeImage(imageName) {
  */
 function handlePosts(rawPosts) {
   let posts = [];
-  for (let postId in rawPosts) {
-    if (posts.length >= config.feedItemsToShow) {
-      break;
-    }
-
-    if (rawPosts.hasOwnProperty(postId)) {
-      let post = rawPosts[postId];
-
-      if (post.homeCollectionId === config.collectionId) {
-        posts.push({
-          id: postId,
-          title: post.title,
-          url: `${config.blogDomain}/${post.uniqueSlug}`,
-          description: post.content.subtitle,
-          image: post.virtuals.previewImage.imageId,
-          publishedAt: dateFormat(post.latestPublishedAt, 'mmm dd, yyyy')
-        });
-      }
-    }
+  let post = '';
+  for (let i = 0; i < config.feedItemsToShow; i++) {
+    for (let prop in rawPosts.items[i]) {
+      post = rawPosts.items[i];
   }
-
+  posts.push({
+     title: post.title,
+     url: post.link,
+     description: post.description,
+     image: post.thumbnail,
+     localimage: path.join('static', 'img', 'medium', post.thumbnail.replace(/^.*?(?=[0-9]+\*)/,"")),
+     publishedAt: dateFormat(post.pubDate, 'mmm dd, yyyy')
+   });
+  }
   return posts;
 }
 
@@ -120,11 +113,11 @@ function handlePosts(rawPosts) {
  * @returns {*}
  */
 function parseResponse(response) {
-  if (!response.success || !response.payload.references.hasOwnProperty('Post')) {
+  if (!response.status) {
     return false;
   }
 
-  return response.payload.references.Post;
+  return response;
 }
 
 /**
@@ -133,16 +126,8 @@ function parseResponse(response) {
  */
 function apiRequest() {
   return new Promise((resolve, reject) => {
-    let options = {
-      host: 'medium.com',
-      port: 443,
-      path: `/@mitocgroup/latest?limit=60`, // @todo: investigate and implement pagination
-      headers: {
-        'Accept': 'application/json'
-      }
-    };
 
-    https.get(options, res => {
+    https.get('https://api.rss2json.com/v1/api.json?rss_url=https://blog.mitocgroup.com/feed', res => {
       let rawData = '';
 
       res.on('data', data => {rawData += data;});
