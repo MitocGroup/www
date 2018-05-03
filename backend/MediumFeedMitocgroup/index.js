@@ -57,8 +57,8 @@ exports.handler = (event, context) => {
  * @returns {string}
  */
 function getImageUrl(imageName) {
-   const mediumImageCdn = 'https://cdn-images-1.medium.com';
-   return url.resolve(mediumImageCdn,`max/${config.maxImageWidth}/${imageName}`);
+  const mediumImageCdn = 'https://cdn-images-1.medium.com';
+  return url.resolve(mediumImageCdn, `max/${config.maxImageWidth}/${imageName}`);
 }
 
 /**
@@ -96,12 +96,12 @@ function handlePosts(rawPosts) {
       post = rawPosts.items[i];
   }
   posts.push({
-     title: post.title,
-     url: post.link,
-     description: post.description,
-     image: post.thumbnail,
-     localimage: path.join('static', 'img', 'medium', post.thumbnail.replace(/^.*?(?=[0-9]+\*)/,"")),
-     publishedAt: dateFormat(post.pubDate, 'mmm dd, yyyy')
+    title: post.title,
+    url: post.link,
+    description: post.description,
+    image: post.thumbnail,
+    localimage: path.join('static', 'img', 'medium', post.thumbnail.replace(/^.*?(?=[0-9]+\*)/,"")),
+    publishedAt: dateFormat(post.pubDate, 'mmm dd, yyyy')
    });
   }
   return posts;
