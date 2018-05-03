@@ -51,4 +51,4 @@ jobs:
     - stage: "Run e2e Tests :clipboard:"
       node_js: 8
       script:
-        - recink run e2e
+        - recink run e2e -s cache
