@@ -17,6 +17,7 @@ ensure_required_deps() {
     NPM_BIN=`which npm`
     REQUIRED_DEPS=(
         recink
+        recink-e2e
         recink-codeclimate
         recink-snyk
         recink-pagespeed
