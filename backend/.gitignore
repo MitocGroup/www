@@ -1,11 +1,13 @@
 # Dependency directories
 /node_modules/
+**/package-lock.json
 
 # Lambda related
 **/dist/
 !**/dist/.gitignore
-**/config.json
-
+**/.config.json
+**/.env
+**/.lambda/
 # npm cache directory
 .npm
 

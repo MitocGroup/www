@@ -1,10 +1,24 @@
 ---
 $:
   preprocess:
+    '$.cnci.token': 'eval'
+    '$.cnci.ci.options.user': 'eval'
+    '$.cnci.ci.options.token': 'eval'
+    '$.cnci.ci.options.jobName': 'eval'
+    '$.cnci.ci.options.buildNumber': 'eval'
     '$.e2e.wait.uri.0': 'eval'
     '$.cache.options.1.region': 'eval'
     '$.cache.options.1.accessKeyId': 'eval'
     '$.cache.options.1.secretAccessKey': 'eval'
+  cnci:
+    token: 'process.env.token'
+    ci:
+      provider: jenkins
+      options:
+        user: 'process.env.JENKINS_USER'
+        token: 'process.env.JENKINS_TOKEN'
+        jobName: 'process.env.JOB_NAME'
+        buildNumber: 'process.env.BUILD_NUMBER'  
   npm:
     scripts: []
   emit:
