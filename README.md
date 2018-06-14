@@ -5,7 +5,7 @@
 - [PROC-003 - Daily Scrum / Standup](process/PROC-003-daily-standup.md)
 - [PROC-004 - Software Development](process/PROC-004-software-development.md)
 - [PROC-005 - Quality Assurance](process/PROC-005-quality-assurance.md)
-- [PROC-006 - Issue Tracking](process/PROD-006-issue-tracking.md)
+- [PROC-006 - Issue Tracking](process/PROC-006-issue-tracking.md)
 - [PROC-007 - Vacation Request](process/PROC-007-vacation-request.md)
 
 
