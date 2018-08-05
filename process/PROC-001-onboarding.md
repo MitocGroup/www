@@ -80,14 +80,14 @@ Hubstaff is a time tracking application which helps effectively manage the workf
 - Once you are starting to work on your tasks Run the application, Choose the Project and Click on `Start timing`
 
 
-# 8. Payoneer account
+# 8. Payoneer
 Payoneer is a financial services company that provides online money transfer and digital payment services. Payoneer account holders can send and receive funds into their bank account, Payoneer e-wallet, or onto a re-loadable prepaid MasterCard debit card that can be used online or at points-of-sale.
 
 - Please refer to the link [www.payoneer.com](https://www.payoneer.com)
 - Reach out to hello@mitocgroup.com in order to receive invitation to sign up and instructions to become part of Mitoc Group
 
 
-# 9. Slack Application
+# 9. Slack
 Slack is a cloud-based messenger which brings team's communication together, giving everyone a shared workspace where conversations are organized and accessible.
 
 - Please refer to the link [www.slack.com](https://slack.com)
@@ -108,7 +108,7 @@ Mitoc Group is using Single Sign-On cloud service to access Amazon Web Services.
 - Login using provided corporate credentials
 - As logged in you will be able to access MitocGroup Services and Accounts
 
-# 11. Create a Personal AWS Account (optional)
+# 11. AWS Account with Business Email (optional)
 - Please refer to the link [aws.amazon.com](http://aws.amazon.com)
 - Click on `Create an AWS Account`
 - Follow the instructions and use your email for AWS account
