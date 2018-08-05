@@ -21,8 +21,9 @@ v0.0.5 | 2018-01-12 | Igor Vignan | Added Description and AWS SSO
 7. Hubstaff
 8. Payoneer
 9. Slack
-10. AWS with Business Email
-11. AWS Security Fundamentals course
+10. AWS Single Sign-On
+11. AWS Account with Business Email
+12. AWS Security Fundamentals course
 
 These are the steps you will need to proceed to complete the "Onboarding Process":
 
@@ -100,7 +101,7 @@ Slack is a cloud-based messenger which brings team's communication together, giv
 
 
 # 10. AWS Single Sign-On (SSO)
-Mitoc Group is using Single Sign-On Cloud Service to access Amazon Web Services. It enables users to sign in to a user portal with their existing corporate credentials and access all of their assigned accounts and applications from one place.
+Mitoc Group is using Single Sign-On cloud service to access Amazon Web Services. It enables users to sign in to a user portal with their existing corporate credentials and access all of their assigned accounts and applications from one place.
 
 - Reach out to hello@mitocgroup.com in order to request corporate credentials
 - Please refer to the link [mitoc.awsapps.com/start/](https://mitoc.awsapps.com/start/)
@@ -123,3 +124,5 @@ Mitoc Group is using Single Sign-On Cloud Service to access Amazon Web Services.
 - Scroll Down the page to the list of modules and Click on Activate all modules 
 - Important note : Be sure to disable “Block pop-up windows” in your browser 
 - Launch Course by order  
+
+NOTE: To learn more about AWS, check out this Open Guide - https://github.com/MitocGroup/og-aws
