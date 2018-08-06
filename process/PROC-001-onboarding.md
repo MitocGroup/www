@@ -21,8 +21,9 @@ v0.0.5 | 2018-01-12 | Igor Vignan | Added Description and AWS SSO
 7. Hubstaff
 8. Payoneer
 9. Slack
-10. AWS with Business Email
-11. AWS Security Fundamentals course
+10. AWS Single Sign-On
+11. AWS Account with Business Email
+12. AWS Security Fundamentals course
 
 These are the steps you will need to proceed to complete the "Onboarding Process":
 
@@ -79,14 +80,14 @@ Hubstaff is a time tracking application which helps effectively manage the workf
 - Once you are starting to work on your tasks Run the application, Choose the Project and Click on `Start timing`
 
 
-# 8. Payoneer account
+# 8. Payoneer
 Payoneer is a financial services company that provides online money transfer and digital payment services. Payoneer account holders can send and receive funds into their bank account, Payoneer e-wallet, or onto a re-loadable prepaid MasterCard debit card that can be used online or at points-of-sale.
 
 - Please refer to the link [www.payoneer.com](https://www.payoneer.com)
 - Reach out to hello@mitocgroup.com in order to receive invitation to sign up and instructions to become part of Mitoc Group
 
 
-# 9. Slack Application
+# 9. Slack
 Slack is a cloud-based messenger which brings team's communication together, giving everyone a shared workspace where conversations are organized and accessible.
 
 - Please refer to the link [www.slack.com](https://slack.com)
@@ -100,14 +101,14 @@ Slack is a cloud-based messenger which brings team's communication together, giv
 
 
 # 10. AWS Single Sign-On (SSO)
-Mitoc Group is using Single Sign-On Cloud Service to access Amazon Web Services. It enables users to sign in to a user portal with their existing corporate credentials and access all of their assigned accounts and applications from one place.
+Mitoc Group is using Single Sign-On cloud service to access Amazon Web Services. It enables users to sign in to a user portal with their existing corporate credentials and access all of their assigned accounts and applications from one place.
 
 - Reach out to hello@mitocgroup.com in order to request corporate credentials
 - Please refer to the link [mitoc.awsapps.com/start/](https://mitoc.awsapps.com/start/)
 - Login using provided corporate credentials
 - As logged in you will be able to access MitocGroup Services and Accounts
 
-# 11. Create a Personal AWS Account (optional)
+# 11. AWS Account with Business Email (optional)
 - Please refer to the link [aws.amazon.com](http://aws.amazon.com)
 - Click on `Create an AWS Account`
 - Follow the instructions and use your email for AWS account
@@ -123,3 +124,5 @@ Mitoc Group is using Single Sign-On Cloud Service to access Amazon Web Services.
 - Scroll Down the page to the list of modules and Click on Activate all modules 
 - Important note : Be sure to disable “Block pop-up windows” in your browser 
 - Launch Course by order  
+
+NOTE: To learn more about AWS, check out this Open Guide - https://github.com/MitocGroup/og-aws
