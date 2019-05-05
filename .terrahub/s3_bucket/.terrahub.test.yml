@@ -2,6 +2,7 @@ component:
   template:
     tfvars:
       s3_bucket_name: 'www-test.mitocgroup.com'
+      s3_bucket_region: 'us-west-2'
 
 build:
   env:

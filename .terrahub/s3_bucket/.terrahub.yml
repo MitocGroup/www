@@ -25,8 +25,8 @@ component:
       aws_s3_bucket:
         s3_bucket:
           bucket: '${var.s3_bucket_name}'
+          region: '${var.s3_bucket_region}'
           acl: 'public-read'
-          region: 'us-east-1'
           force_destroy: 'true'
           policy: '${data.aws_iam_policy_document.default_assume_s3_policy.json}'
           cors_rule:
@@ -48,6 +48,7 @@ component:
             ThubName: 's3_bucket'
     tfvars:
       s3_bucket_name: 'www-dev.mitocgroup.com'
+      s3_bucket_region: 'us-east-1'
     output:
       id:
         value: '${aws_s3_bucket.s3_bucket.id}'
