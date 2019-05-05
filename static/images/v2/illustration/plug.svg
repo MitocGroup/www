@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60.9 60.9" style="enable-background:new 0 0 60.9 60.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;filter:url(#filter-3);}
+	.st1{display:inline;}
+	.st2{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-opacity:0.4004;}
+	.st3{fill:url(#Path-17_1_);}
+	.st4{fill:url(#Path-17-Copy_1_);}
+	.st5{fill:url(#Combined-Shape_1_);}
+	.st6{fill:url(#Path-20_1_);}
+</style>
+<filter  filterUnits="objectBoundingBox" height="176.7%" id="filter-3" width="165.0%" x="-32.5%" y="-19.2%">
+	<feMorphology  in="SourceAlpha" operator="erode" radius="8" result="shadowSpreadOuter1"></feMorphology>
+	<feOffset  dx="0" dy="15" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="12"></feGaussianBlur>
+	<feComposite  in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+	
+		<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0.411764706   0 0 0 0 0.870588235  0 0 0 0.5 0">
+		</feColorMatrix>
+</filter>
+<title>Oval</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+</g>
+<g>
+	<g id="Google-Cloud-Partner" transform="translate(-378.000000, -1438.000000)">
+		<g id="Group-27" transform="translate(385.000000, 1438.000000)">
+			<g id="Group-15">
+				<g id="Oval">
+					<g class="st0">
+						<circle id="path-2_1_" class="st1" cx="23.5" cy="30.1" r="30"/>
+					</g>
+					
+						<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-322.7921" y1="382.598" x2="-321.7921" y2="382.584" gradientTransform="matrix(59 0 0 -59 19038.75 22603)">
+						<stop  offset="0" style="stop-color:#0069DE"/>
+						<stop  offset="1" style="stop-color:#008AFF"/>
+					</linearGradient>
+					<circle class="st2" cx="23.5" cy="30.1" r="29.5"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Page-1_1_">
+		<g id="Google-Cloud-Partner_1_" transform="translate(-812.000000, -1457.000000)">
+			<g id="Group-27_1_" transform="translate(385.000000, 1438.000000)">
+				<g id="Group-15-Copy-5" transform="translate(364.000000, 0.000000)">
+					<g id="Points-Icon" transform="translate(63.000000, 19.000000)">
+						
+							<linearGradient id="Path-17_1_" gradientUnits="userSpaceOnUse" x1="-92.1634" y1="333.1147" x2="-93.1634" y2="333.1147" gradientTransform="matrix(1.5172 0 0 -6.069 167.9957 2045.4094)">
+							<stop  offset="0" style="stop-color:#FFFFFF"/>
+							<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+						</linearGradient>
+						<path id="Path-17" class="st3" d="M26.6,26.8v-5.3c0-0.4,0.3-0.8,0.8-0.8s0.8,0.3,0.8,0.8v5.3H26.6z"/>
+						
+							<linearGradient id="Path-17-Copy_1_" gradientUnits="userSpaceOnUse" x1="-92.1634" y1="333.1147" x2="-93.1634" y2="333.1147" gradientTransform="matrix(1.5172 0 0 -6.069 174.0647 2045.4094)">
+							<stop  offset="0" style="stop-color:#FFFFFF"/>
+							<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+						</linearGradient>
+						<path id="Path-17-Copy" class="st4" d="M32.7,26.8v-5.3c0-0.4,0.3-0.8,0.8-0.8c0.4,0,0.8,0.3,0.8,0.8v5.3H32.7z"/>
+						
+							<linearGradient id="Combined-Shape_1_" gradientUnits="userSpaceOnUse" x1="-289.6994" y1="356.5834" x2="-290.6994" y2="356.5834" gradientTransform="matrix(11.3678 0 0 -10.6207 3329.3806 3819.2542)">
+							<stop  offset="0" style="stop-color:#FFFFFF"/>
+							<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+						</linearGradient>
+						<path id="Combined-Shape" class="st5" d="M32.3,36.3v1.1h-3.8v-1.1c-2.2-0.8-3.8-2.9-3.8-5.4v-1.9v0h11.4v0V31
+							C36.1,33.4,34.5,35.5,32.3,36.3z M36.1,28.3H24.8v-1.5h11.4V28.3z"/>
+						
+							<linearGradient id="Path-20_1_" gradientUnits="userSpaceOnUse" x1="-266.4294" y1="325.1886" x2="-267.4294" y2="325.1886" gradientTransform="matrix(6.4414 0 0 -5.3016 1747.3583 1764.072)">
+							<stop  offset="0" style="stop-color:#FFFFFF"/>
+							<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+						</linearGradient>
+						<path id="Path-20" class="st6" d="M29.7,37.4l1.5,0c0,0.7-0.2,1.7-0.8,2.7c-1,1.6-2.9,2.6-5.6,2.6v-1.5c2.2,0,3.6-0.7,4.3-1.9
+							c0.3-0.4,0.4-0.9,0.5-1.3C29.7,37.7,29.7,37.5,29.7,37.4z"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

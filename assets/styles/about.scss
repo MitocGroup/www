@@ -1,0 +1,20 @@
+@import './styles/variables';
+
+.events {
+  .block-space {
+    .blog-block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .read-more {
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-top: auto;
+  }
+}

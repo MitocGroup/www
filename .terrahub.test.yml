@@ -1,0 +1,2 @@
+terraform:
+  varFile: ['default.tfvars', 'workspace/test.tfvars']

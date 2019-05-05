@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="25px" viewBox="0 0 19 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 20</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5.5,17 C5.5,17 11,8.93815574 11,5.75806452 C11,2.5779733 8.53756612,0 5.5,0 C2.46243388,0 0,2.5779733 0,5.75806452 C0,8.93815574 5.5,17 5.5,17 Z" id="path-1"></path>
+        <filter x="-63.6%" y="-29.4%" width="227.3%" height="182.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.130632926 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Google-Cloud-Partner" transform="translate(-734.000000, -1388.000000)">
+            <g id="Group-26" transform="translate(314.000000, 896.000000)">
+                <g id="Group-11">
+                    <g id="Group-4-Copy" transform="translate(405.500000, 288.500000) scale(-1, 1) translate(-405.500000, -288.500000) ">
+                        <g id="Group-28" transform="translate(86.000000, 494.000000)">
+                            <g id="Group-24" transform="translate(191.000000, 0.000000)">
+                                <g id="Group-20" transform="translate(104.500000, 8.500000) scale(-1, 1) translate(-104.500000, -8.500000) translate(99.000000, 0.000000)">
+                                    <g id="Oval-Copy-8" fill-rule="nonzero">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                        <use fill="#4FACFD" xlink:href="#path-1"></use>
+                                    </g>
+                                    <text id="#" font-family="Exo2-SemiBold, Exo 2" font-size="8" font-weight="500" fill="#FFFFFF">
+                                        <tspan x="2.708" y="9">#</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

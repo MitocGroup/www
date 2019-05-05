@@ -1,0 +1,26 @@
+[
+  {
+    "id": "b40c6002082b",
+    "title": "AWS Lambda to Redshift Connection using IAM authentication and NAT gateway",
+    "url": "https://blog.mitocgroup.com/aws-lambda-to-redshift-connection-using-iam-authentication-and-nat-gateway-b40c6002082b",
+    "description": "Python Edition. This article walks through the steps taken and lessons learned, in order to connect AWS Lambda to Amazon Redshift running in Amazon VPC...",
+    "image": "1*5pl2zfGPXIQck79nhjp9sg.png",
+    "publishedAt": "Apr 23, 2018"
+  },
+  {
+    "id": "e12e0cdfb247",
+    "title": "You get what you get and you don’t get upset",
+    "url": "https://blog.mitocgroup.com/you-get-what-you-get-and-you-dont-get-upset-e12e0cdfb247",
+    "description": "Or how we as adults forget about basic principles we teach kids, but for some reason tend to think that we’ve grown up and it doesn’t apply to us anymore",
+    "image": "1*xWCyJLr5Nve-H8vCYxMqUg.png",
+    "publishedAt": "Mar 25, 2018"
+  },
+  {
+    "id": "92bd01ef8151",
+    "title": "AWS re:Invent 2017. Serverless Track. SRV326 Chalk Talk",
+    "url": "https://blog.mitocgroup.com/aws-re-invent-2017-serverless-track-srv326-chalk-talk-92bd01ef8151",
+    "description": "Mitoc Group was nominated again to deliver a serverless session at Amazon Web Services’ biggest event of the year, AWS re:Invent 2017.",
+    "image": "1*VegUcpPvxml4hXzem3ogMQ.png",
+    "publishedAt": "Nov 24, 2017"
+  }
+]

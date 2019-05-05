@@ -1,0 +1,15 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+  <link rel="stylesheet" href="{{ asset('@css/partners.min.css') }}"/>
+{% endblock %}
+
+{% block body %}
+  <div class="wrapper">
+    {% block content %}{% endblock %}
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script async src="{{ asset('@js/partners.min.js') }}"></script>
+{% endblock %}

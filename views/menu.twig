@@ -1,0 +1,197 @@
+{# Common menu #}
+<div class="navbar-fix nav-down">
+  <div class="container display-flex mobile-nav">
+    <div class="logo">
+      <a href="/">
+        <img class="mitoc-logo" src="{{ asset('@images/v2/logos/mitoc.svg') }}" alt="Mitoc Group Logo"/>
+      </a>
+    </div>
+    <div class="nav-bar" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+      <i class="mdi mdi-menu"></i>
+      <ul class="navigation">
+        <li  class="open-dropdown-click open-dropdown">
+          <a href="/services/" itemprop="url" {{ '/services/' in routeName ? 'class="active"' }}>
+            <span itemprop="name">Services</span>
+            <i class="mdi mdi-chevron-down"></i>
+          </a>
+          <div class="dropdown">
+            <div class="display-flex">
+              <div class="half">
+                <a href="/services/">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/services/cloud-computing.svg') }}" alt="Cloud Computing"/>
+                  <span>Cloud Computing</span>
+                  <p>A simple way to access servers, storage, databases and a broad set of app services over the internet.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/services/automation-data/">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/services/automation-data.svg') }}" alt="Automation of Data"/>
+                  <span>Automation of Data</span>
+                  <p>We help customers automate data governance, data pipelines, data storage and compute.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/services/automation-infrastructure/">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/services/automation-infrastructure.svg') }}" alt="Automation of Infrastructure"/>
+                  <span>Automation of Infrastructure</span>
+                  <p>We help customers automate infrastructure build, deployment and management.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/services/automation-serverless/">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/services/automation-serverless.svg') }}" alt="Automation of Serverless"/>
+                  <span>Automation of Serverless</span>
+                  <p>We help customers automate serverless applications management through continuous delivery.</p>
+                </a>
+              </div>
+            </div>
+            <div class="gray-block center">
+              <button class="btn btn-40 btn-green start-project">Start a Project</button>
+            </div>
+          </div>
+        </li>
+        <li class="open-dropdown-click open-dropdown">
+          <a href="/partners/" itemprop="url" {{ '/partners/' in routeName ? 'class="active"' }}>
+            <span itemprop="name">Partners</span>
+            <i class="mdi mdi-chevron-down"></i>
+          </a>
+          <div class="dropdown">
+            <div class="display-flex">
+              <div class="half">
+                <a href="/partners/">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/illustration/our-partners.svg') }}" alt="Partners Program"/>
+                  <span>Partners Program</span>
+                  <p>We work with partners who help bring businesses online, enable them deliver positive results, and empower them run more efficiently.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/partners/2ndwatch/">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/logos/2ndwatch.svg') }}" alt="2nd Watch"/>
+                  <span>2nd Watch</span>
+                  <p>An enterprise workload management provider that helps companies accelerate data center capacity growth through adoption of the AWS cloud.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/partners/aws/">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/logos/aws.svg') }}" alt="Amazon Web Services"/>
+                  <span>Amazon Web Service</span>
+                  <p>A secure cloud services platform, offering compute power, database storage, content delivery and other functionality to help businesses scale and grow.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/partners/google/">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/logos/google-cloud.svg') }}" alt="Google Cloud Platform"/>
+                  <span>Google Cloud Platform</span>
+                  <p>A suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Youtube and Search.</p>
+                </a>
+              </div>
+            </div>
+            <div class="gray-block center">
+              <button class="btn btn-40 btn-green become-partner">Become a Partner</button>
+            </div>
+          </div>
+        </li>
+        <li class="open-dropdown-click open-dropdown">
+          <a href="/case-studies/" itemprop="url" {{ '/case-studies/' in routeName ? 'class="active"' }}>
+            <span itemprop="name">Case Studies</span>
+            <i class="mdi mdi-chevron-down"></i>
+          </a>
+          <div class="dropdown">
+            <div class="display-flex">
+              <div class="half">
+                <a href="/case-studies/" class="flex-column">
+                  <div>
+                    <img class="lazyload" data-src="{{ asset('@images/v2/illustration/case-study-mini.svg') }}" alt="Case Studies"/>
+                    <span>Case Studies</span>
+                  </div>
+                  <p>These case studies focus on specific problems that we solved by using cloud products and services.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/case-studies/adtechmedia/" class="flex-column">
+                  <div>
+                    <img class="lazyload" data-src="{{ asset('@images/v2/logos/adtechmedia.png') }}" alt="AdTechMedia"/>
+                    <span>AdTechMedia</span>
+                  </div>
+                  <p>Mission driven project to build world's most simple content monetization product.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/case-studies/manning/">
+                  <div>
+                    <img class="lazyload" data-src="{{ asset('@images/v2/logos/manning.svg') }}" alt="Manning" />
+                    <span>Manning</span>
+                  </div>
+                  <p>Manning is an independent publisher of computer books for software developers, engineers and others.</p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/case-studies/terrahub/">
+                  <div>
+                    <img class="lazyload" data-src="{{ asset('@images/v2/logos/terrahub.svg') }}" alt="TerraHub" />
+                    <span>TerraHub</span>
+                  </div>
+                  <p>DevOps Hub for Terraform Automation — is a terraform centric user interface driven devops tool.</p>
+                </a>
+              </div>
+            </div>
+            <div class="gray-block center">
+              Let's Talk:
+              <a class="phone" href="tel:+18018108186">
+                <i class="icon-phone"></i>(+1) 801 810 8186</a>
+            </div>
+          </div>
+        </li>
+        <li class="open-dropdown-click open-dropdown">
+          <a href="/about/" itemprop="url" {{ '/about/' in routeName ? 'class="active"' }}>
+            <span itemprop="name">About Us</span>
+            <i class="mdi mdi-chevron-down"></i>
+          </a>
+          <div class="dropdown about">
+            <div class="display-flex">
+              <div class="half">
+                <a href="/about/" class="flex-column">
+                  <div>
+                    <img class="lazyload" data-src="{{ asset('@images/v2/illustration/about-us.svg') }}" alt="About Us"/>
+                    <span>About Us</span>
+                  </div>
+                  <p>
+                    Founded in 2014 by industry experts, Mitoc Group emerged as a team of serverless believers from
+                    the beginning.
+                  </p>
+                </a>
+              </div>
+              <div class="half">
+                <a href="/about/team/" class="flex-column">
+                  <div>
+                    <img class="lazyload" data-src="{{ asset('@images/v2/illustration/our-team-mini.svg') }}" alt="Our Team"/>
+                    <span>Our Team</span>
+                  </div>
+                  <p>Our mission is to enable businesses and developers to provide high-value products and services
+                    in a constantly changing digital world.
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="gray-block center">
+              Let's Talk:
+              <a class="phone" href="tel:+18018108186">
+                <i class="icon-phone"></i>(+1) 801 810 8186</a>
+            </div>
+          </div>
+        </li>
+        <li class="open-dropdown">
+          <a href="/contact/" itemprop="url" {{ '/contact/' in routeName ? 'class="active"' }}>
+            <span itemprop="name">Contact</span></a>
+        </li>
+        <li class="open-dropdown">
+          <a href="https://blog.mitocgroup.com" itemprop="url">
+            <span itemprop="name">Blog</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile">
+      <button class="btn btn-40 btn-green start-project">Start a Project</button>
+    </div>
+  </div>
+</div>

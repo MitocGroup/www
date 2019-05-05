@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 19 25" style="enable-background:new 0 0 19 25;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#filter-2);}
+	.st1{fill:#28B655;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'ArialMT';}
+	.st4{font-size:8px;}
+</style>
+<filter  filterUnits="objectBoundingBox" height="182.4%" id="filter-2" width="227.3%" x="-63.6%" y="-29.4%">
+	<feOffset  dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"></feGaussianBlur>
+	<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.130632926 0">
+		</feColorMatrix>
+</filter>
+<title>Group 20</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Google-Cloud-Partner" transform="translate(-734.000000, -1388.000000)">
+		<g id="Group-26" transform="translate(314.000000, 896.000000)">
+			<g id="Group-11">
+				<g id="Group-4-Copy" transform="translate(405.500000, 288.500000) scale(-1, 1) translate(-405.500000, -288.500000) ">
+					<g id="Group-28" transform="translate(86.000000, 494.000000)">
+						<g id="Group-24" transform="translate(191.000000, 0.000000)">
+							
+								<g id="Group-20" transform="translate(104.500000, 8.500000) scale(-1, 1) translate(-104.500000, -8.500000) translate(99.000000, 0.000000)">
+								<g id="Oval-Copy-8">
+									<g class="st0">
+										<path id="path-1_2_" class="st1" d="M5.5,18.2c0,0,5.5-8.1,5.5-11.2S8.5,1.2,5.5,1.2S0,3.8,0,7S5.5,18.2,5.5,18.2z"/>
+									</g>
+									<g>
+										<path id="path-1_1_" class="st1" d="M5.5,18.2c0,0,5.5-8.1,5.5-11.2S8.5,1.2,5.5,1.2S0,3.8,0,7S5.5,18.2,5.5,18.2z"/>
+									</g>
+								</g>
+								<text transform="matrix(1 0 0 1 2.708 10.25)" class="st2 st3 st4">#</text>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

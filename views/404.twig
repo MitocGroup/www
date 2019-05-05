@@ -1,0 +1,41 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+  <link rel="stylesheet" href="{{ asset('@css/contact.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+  <div class="wrapper">
+    <div class="hide-mobile">
+      <div class="container">
+        <div class="height-full error">
+          <div class="pull-center flex-row error display-grid">
+            <div class="main-text flex-item-8">
+              <div class="flex-column">
+                <h1>404 Not Found</h1>
+                <div class="text-24 left-green-line text-color-green">
+                  We are unable to find the page <br>you are looking for
+                </div>
+                <div class="flex">
+                  <button class="btn btn-green-border" onclick="goBack()">
+                    <i class="mdi mdi-chevron-left"></i> Previous Page
+                  </button>
+                  <a href="/">
+                    <button class="btn btn-green">Homepage</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex-item-4 text-right">
+              <img src="{{ asset('@images/v2/illustration/error.svg') }}" alt="404 Not Found Page"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script src="{{ asset('@js/404.min.js') }}"></script>
+{% endblock %}

@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: 
-
-Sitemap: https://www.mitocgroup.com/sitemap.xml
+Disallow: /

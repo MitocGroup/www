@@ -1,0 +1,165 @@
+{% extends '../case-studies.twig' %}
+
+{% block content %}
+
+    <div class="hide-mobile">
+        <div class="space-top header case-study flex-column">
+            <div class="header__bg green">
+                <div class="bg bg-green bg-pic entertainment-company flex-column">
+                    <div class="container text-styles">
+                        <div class="flex-row">
+                            <div class="flex-item-3">
+
+                            </div>
+                            <div class="flex-item-9 flex-column text-color-white">
+                                <p>Case Study</p>
+                                <h1>Major Media &amp; <br> Entertainment Company</h1>
+                                <h5 class="text-24 marginTop36">
+                                    A global platform for all things pop culture.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="widthBlock80 up80 paddingBottom61">
+                <div class="flex-row case-study-br">
+                    <div class="flex-item-3">
+                        <h2 class="text-36-SemiBold">
+                            About the Company
+                        </h2>
+                    </div>
+                    <div class="flex-item-9 padding-left43">
+                        <h4 class="text-20 text-color-dark paddingBottom20">
+                            This brand is currently available to millions of cable and satellite subscribers and is
+                            one of the leading multi-platform publisher delivering breaking entertainment news
+                            and pop culture coverage across all digital and social media.
+                        </h4>
+                        <p>
+                            Additionally, this company hosts signature events that keep fans connected to their
+                            favorite stars on pop culture's biggest nights.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="block-img marginBottom-94">
+                <div class="flex-row display-grid">
+                    <div class="flex-item-7 what-is flex-column gradient-left-right green">
+                        <div class="text-color-white text-italic text-left">
+                            In order to be successful, the company adopted Cloud First strategy across entire enterprise.
+                        </div>
+                        <div class="text-color-white paddingTop20 text-20">
+                            This strategy enabled businesses to shift from highly specialized and dedicated on-premises
+                            infrastructure to self-provisioned public and private cloud resources.
+                        </div>
+                    </div>
+                    <div class="flex-item-5">
+                        <img src="{{ asset('@images/v2/png/entertainment-company.png') }}" alt="Case Study"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gray-block">
+            <div class="container">
+                <div class="widthBlock80 paddingTop150 paddingBottom61">
+                    <div class="flex-row case-study-br">
+                        <div class="flex-item-3">
+                            <h2 class="text-36-SemiBold">
+                                The Challenge
+                            </h2>
+                        </div>
+                        <div class="flex-item-9 padding-left43">
+                            <h4 class="text-20 text-color-dark paddingBottom20">
+                                Major media and entertainment company is on an amazing journey to move their infrastructure footprint into AWS cloud.
+                            </h4>
+                            <p>
+                                Customer's cloud operation team was eager to leverage Chef to introduce orchestration
+                                tools into their AWS environment. The intent was to move into a recipe driven approach
+                                for both application server builds and updates to insure consistency,
+                                as well as cross company operational configuration for running instances / VMs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="footer-bg green-block flex-column">
+            <div class="container">
+                <div class="center text-styles text-color-white text-italic-regular text-20 widthBlock80">
+                    "The recipes requirements, creation and testing have been the key components of client's goal to run efficiently in the cloud."
+                </div>
+                <div class="marginTop36 uppercase center text-20 text-color-white">
+                    Executive @ Major Media &amp; Entertainment Company
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="gray-block block-left">
+                <div class="container">
+                   <div class="widthBlock80">
+                       <div class="up80 down80">
+                           <div class="center">
+                               <h3 class="text-36-SemiBold">Why Mitoc Group?</h3>
+                               <div class="mobile-img">
+                                   <img class="img-size lazyload" data-src="{{ asset('@images/v2/case-studies/why-mitocgroup.svg') }}" alt="Case Study">
+                               </div>
+                               <div class="paddingTop20 text-20 text-bold widthBlock70">
+                                   Proven track record and prior working experience with Chef software allowed
+                                   Mitoc Group team to engage with the client in full confidence that they will get high quality delivery.
+                               </div>
+                           </div>
+                           <div class="flex-row block-space">
+                               <div class="flex-item-6">
+                                   <ul class="square green marginTop36 text-20">
+                                       <li>
+                                           Our engineers are continuously looking for ways to improve and make it
+                                           more efficient to run in the cloud, which was literally one of the challenges and customer's requirements.
+                                       </li>
+                                       <li class="marginTop36">
+                                           With focus on automation, we helped cloud operations team to refine their
+                                           requirements to better fit their needs.
+                                       </li>
+                                   </ul>
+                               </div>
+                               <div class="flex-item-6 center flex-column space">
+                                   <img class="img-size web-img lazyload" data-src="{{ asset('@images/v2/case-studies/why-mitocgroup.svg') }}" alt="Case Study">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="widthBlock80">
+                    <div class="up80 down80">
+                        <div class="center">
+                            <h3 class="text-36-SemiBold">The Benefits</h3>
+                        </div>
+                        <div class="flex-row block-space case-study">
+                            <div class="flex-item-6 center flex-column space">
+                                <img class="img-size lazyload" data-src="{{ asset('@images/v2/case-studies/benefits-aws.svg') }}" alt="The Benefits">
+                            </div>
+                            <div class="flex-item-6">
+                                <div class="marginTop36 text-20">
+                                    Cloud operations team successfully reached their goal by reducing
+                                    implementation and on-going management time by at least 50%.
+                                    When a new server is provisioned, Chef agent is installed and
+                                    corresponding runbook configures all necessary packages based on the server's
+                                    role and permissions. All server updates and code modifications are performed via
+                                    Chef without no direct manual interventions.
+                                    Fun fact, the engagement was delivered ahead of schedule,
+                                    so the rest of the time was spent to harden and automate security operations.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

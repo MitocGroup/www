@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% if title %}<title>{{ title }}</title>{% endif %}
+    {% if description %}<meta name="description" content="{{ description }}" />{% endif %}
+
+    {% if author %}<link rel="author" href="{{ author }}" />{% endif %}
+    {% if author %}<meta property="author" content="{{ author }}" />{% endif %}
+    {% if author %}<meta property="article:author" content="{{ author }}" />{% endif %}
+    {% if publisher %}<meta property="article:publisher" content="{{ publisher }}" />{% endif %}
+
+    {% if title %}<meta property="og:title" content="{{ title }}" />{% endif %}
+    {% if description %}<meta property="og:description" content="{{ description }}" />{% endif %}
+    {% if href %}<meta property="og:url" content="{{ href }}" />{% endif %}
+    {% if image_fb %}<meta property="og:image" content="{{ image_fb }}" />{% endif %}
+    {% if image_fb %}<meta property="og:type" content="website" />{% endif %}
+
+    {% if title %}<meta name="twitter:title" content="{{ title }}" />{% endif %}
+    {% if description %}<meta name="twitter:description" content="{{ description }}" />{% endif %}
+    {% if image_tw %}<meta name="twitter:image" content="{{ image_tw }}" />{% endif %}
+    {% if image_tw %}<meta name="twitter:card" content="summary" />{% endif %}
+    {% if href %}<meta name="twitter:url" content="{{ href }}" />{% endif %}
+    <script type="application/ld+json">{"@context": "http://schema.org", "@type": "WebPage", "copyrightHolder": "Mitoc Group Inc.", "copyrightYear": "2014", "author": {"@type": "Organization", "name": "Mitoc Group", "description": "{{ description }}", "telephone": "+1 (801) 810-8186", "email": "hello@mitocgroup.com", "logo": "https://www.mitocgroup.com/images/logos/mitoc.svg", "image": "{{ image_fb }}", "url": "{{ href }}", "address": {"@type": "PostalAddress", "addressLocality": "Woodcliff Lake", "addressRegion": "NJ", "streetAddress": "50 Tice Blvd", "postalCode": "07677"}}}</script>
+    {% block css %}{% endblock %}
+    <!-- Google Tag Manager (script) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PM5MG');</script>
+    <!-- End Google Tag Manager (script) -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PM5MG" style="display:none;visibility:hidden" height="0" width="0"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {# Menu #}
+    {% include 'menu.twig' %}
+
+    {# Content #}
+    {% block body %}{% endblock %}
+
+    {# Prefooter #}
+    {% if routeName not in ['/partners/aws/', '/partners/google/', '/404/'] %}
+    {% include 'prefooter.twig' %}
+    {% endif %}
+
+    {# Footer #}
+    {% if routeName not in ['/404/'] %}
+    {% include 'footer.twig' %}
+    {% endif %}
+
+    {% block js %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,77 @@
+{% extends '../partners.twig' %}
+
+{% set partners = [
+  { 'class': 'block-half', 'href': '/partners/aws/', 'img': '@images/v2/logos/aws.svg', 'title': 'Amazon Web Service', 'description': 'In 2006, Amazon Web Services (AWS) began offering IT infrastructure services
+              to businesses in the form of web services -- now commonly known as cloud computing. One of the key benefits of cloud computing is the opportunity to
+              replace up-front capital infrastructure expenses with low variable costs that scale with your business.' },
+  { 'class': 'block-half', 'href': '/partners/google/', 'img': '@images/v2/logos/google-cloud.svg', 'title': 'Google Cloud Platform', 'description': 'Google Cloud Platform, offered by Google, is a suite of cloud computing
+              services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search and YouTube. Google Cloud
+              Platform provides Infrastructure as a service (IaaS), Platform as a service (PaaS), and Serverless computing environments.' },
+  { 'class': 'block-half hover-shadow', 'href': '/partners/2ndwatch/', 'img': '@images/v2/logos/2ndwatch.svg', 'title': '2nd Watch', 'description': '2nd Watch, an AWS Premier Partner, was founded in 2010 with a fundamental
+              belief that business and IT could come together and achieve great things for their customers! Simply put, we design, build and manage public clouds for
+              Big Data Analytics, Cloud Native Applications, Business Applications and Digital Marketing.' },
+  { 'class': 'block-half hover-shadow', 'href': '/partners/404moldova/', 'img': '@images/v2/logos/404moldova.svg', 'title': '404 Moldova', 'description': '404 Moldova is a coworking space for IT businesses and IT people from
+              Moldova. We want to empower local IT community of small companies and skilled individuals to be competitive globally. Members of our community are
+              proud to be working with Fortune 500 customers from Europe and USA.' }
+] %}
+
+{% block content %}
+  
+  <div class="hide-mobile">
+    <div class="space-top header flex-column gray-block">
+      <div class="header__bg green mobile-edge">
+        <div class="bg bg-green flex-column">
+          <div class="container text-styles">
+            <div class="flex-row img-down">
+              <div class="flex-item-9 flex-column text-color-white">
+                <p>Partners Program</p>
+                <h1>Let's Grow Together</h1>
+                <h5 class="text-24 marginTop36 paddingBottom20">
+                  Our partners build technology and software that bring more businesses online,
+                  enable new types of businesses, and help them work more effectively.
+                </h5>
+                <div>
+                  <button class="btn btn-white become-partner marginTop36">Become a Partner
+                  </button>
+                </div>
+              </div>
+              <div class="flex-item-3">
+                <img class="partner-img lazyload" data-src="{{ asset('@images/v2/illustration/become-partner.svg') }}"
+                    alt="Partner"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gray-block up80 down80">
+      <div class="paddingBottom20 min500">
+        <img class="lazyload" data-src="{{ asset('@images/v2/illustration/partners-green.svg') }}" alt="Partners">
+      </div>
+      <div class="container">
+        <div class="text-styles center">
+          <h3 class="text-color-green">it always seems impossible until it's done.</h3>
+          <h2>Our Partners Are The Backbone Of Our Business</h2>
+        </div>
+        <div class="partners white-block">
+          <div class="marginTop36 flex">
+            {% for partner in partners %}
+              <div class="{{ partner.class }}">
+                <a href={{ partner.href }}>
+                  <div class="info-block flex-column">
+                    <img class="lazyload" data-src="{{ asset( partner.img ) }}" alt={{ partner.title }}/>
+                    <h3 class="paddingBottom20">{{ partner.title }}</h3>
+                    <p class="paddingBottom20">{{ partner.description }}</p>
+                    <a class="read-more marginTop-auto" href={{ partner.href }}>Learn More <i
+                      class="mdi mdi-chevron-right"></i></a>
+                  </div>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
