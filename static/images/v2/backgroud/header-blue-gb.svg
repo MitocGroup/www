@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1440 472" style="enable-background:new 0 0 1440 472;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#path-2_2_);}
+</style>
+<title>Rectangle</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Google-Cloud-Partner" transform="translate(0.000000, -110.000000)">
+		<g id="Group-2" transform="translate(0.000000, 110.000000)">
+			<g id="Header-BG">
+				<g id="Rectangle" transform="translate(720.000000, 236.000000) scale(-1, 1) translate(-720.000000, -236.000000) ">
+					
+						<linearGradient id="path-2_2_" gradientUnits="userSpaceOnUse" x1="371.257" y1="586.2606" x2="370.257" y2="586.2606" gradientTransform="matrix(-1440 0 0 -472 534610 276951)">
+						<stop  offset="0" style="stop-color:#0069DE"/>
+						<stop  offset="1" style="stop-color:#008AFF"/>
+					</linearGradient>
+					<polygon id="path-2_1_" class="st0" points="1440,0 0,0 0,472 1440,402 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,164 @@
+{% extends '../case-studies.twig' %}
+
+{% block content %}
+
+    <div class="hide-mobile">
+        <div class="space-top header case-study flex-column">
+            <div class="header__bg green">
+                <div class="bg bg-green bg-pic terrahub flex-column">
+                    <div class="container text-styles">
+                        <div class="flex-row">
+                            <div class="flex-item-3">
+
+                            </div>
+                            <div class="flex-item-9 flex-column text-color-white">
+                                <p>Case Study</p>
+                                <h1>TerraHub</h1>
+                                <h5 class="text-24 marginTop36">
+                                    The DevOps Hub for Terraform Automation — is a terraform centric user interface driven devops tool.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="widthBlock80 up80 paddingBottom61">
+                <div class="flex-row case-study-br">
+                    <div class="flex-item-3">
+                        <h2 class="text-36-SemiBold">
+                            About the Company
+                        </h2>
+                    </div>
+                    <div class="flex-item-9 padding-left43">
+                        <h4 class="text-20 text-color-dark paddingBottom20">
+                            We are providing incremental value by automating the management at scale of
+                            large amount of cloud services and cloud resources that run in customers'
+                            private networks built on top of public clouds.
+                        </h4>
+                        <p>
+                            Our team engages a business model that consists of managed services (provide support
+                            and management of terraform) and professional services (build and deploy terraform automation).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="block-img marginBottom-94">
+                <div class="flex-row display-grid">
+                    <div class="flex-item-7 what-is flex-column gradient-left-right green">
+                        <div class="text-color-white text-italic text-left">
+                            Managing IT in the cloud is agruably NOT getting easier because of so many solutions to
+                            similar problems that get customers lost or overwhelmed.
+                        </div>
+                    </div>
+                    <div class="flex-item-5">
+                        <img src="{{ asset('@images/v2/png/terrahub.png') }}" alt="Case Study"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gray-block">
+            <div class="container">
+                <div class="widthBlock80 paddingTop150 paddingBottom61">
+                    <div class="flex-row case-study-br">
+                        <div class="flex-item-3">
+                            <h2 class="text-36-SemiBold">
+                                The Challenge
+                            </h2>
+                        </div>
+                        <div class="flex-item-9 padding-left43">
+                            <h4 class="text-20 text-color-dark paddingBottom20">
+                                Companies who have deployed cloud are said to be gaining competitive
+                                advantage over their rivals according to recent studies by IDC, Gartner and Forrester Research.
+                            </h4>
+                            <p>
+                                Customers are increasingly adopting cloud services from major providers
+                                like Amazon Web Services or Google Cloud Platform. Setting up infrastructure as
+                                code using open source projects quickly becomes preferred way to embrace cloud services.
+                                Terraform is one of the leading infrastructure as code open source software that can manage
+                                existing service providers as well as custom in-house solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="footer-bg green-block flex-column">
+            <div class="container">
+                <div class="center text-styles text-color-white text-italic-regular text-20 widthBlock80">
+                    "Unfortunately, setting up continuous delivery and automated workflows require extra effort and extra complexity that is not addressed out of the box by terraform."
+                </div>
+                <div class="marginTop36 uppercase center text-20 text-color-white">
+                    CoFounder @ TerraHub
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="gray-block block-left">
+                <div class="container">
+                   <div class="widthBlock80">
+                       <div class="up80 down80">
+                           <div class="center">
+                               <h3 class="text-36-SemiBold">Why Mitoc Group?</h3>
+                               <div class="mobile-img">
+                                   <img class="img-size lazyload" data-src="{{ asset('@images/v2/illustration/our-team.svg') }}" alt="Our Team">
+                               </div>
+                               <div class="paddingTop20 text-20 text-bold widthBlock70">
+                                   Mitoc Group worked on multiple infrastructure as code projects using open source software.
+                               </div>
+                           </div>
+                           <div class="flex-row block-space">
+                               <div class="flex-item-6">
+                                   <ul class="square green marginTop36 text-20">
+                                       <li>
+                                           We empowered customers to setup infrastructure as code and
+                                           automated workflows using a combination of these two open source projects: Terraform and TerraHub.
+                                       </li>
+                                       <li class="marginTop36">
+                                           When TerraHub token is valid and enabled, TerraHub CLI collects terraform
+                                           logs and operational data, and uploads them into TerraHub API.
+                                       </li>
+                                       <li class="marginTop36">
+                                           TerraHub Console provides data driven insights through real-time dashboards,
+                                           as well as enterprise grade reporting and auditing capabilities.
+                                       </li>
+                                   </ul>
+                               </div>
+                               <div class="flex-item-6 center flex-column space">
+                                   <img class="img-size web-img lazyload" data-src="{{ asset('@images/v2/illustration/our-team.svg') }}" alt="Our Team">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="widthBlock80">
+                    <div class="up80 down80">
+                        <div class="center">
+                            <h3 class="text-36-SemiBold">The Benefits</h3>
+                        </div>
+                        <div class="flex-row block-space case-study">
+                            <div class="flex-item-6 center flex-column space">
+                                <img class="img-size lazyload" data-src="{{ asset('@images/v2/case-studies/benefits-aws.svg') }}" alt="The Benefits">
+                            </div>
+                            <div class="flex-item-6">
+                                <div class="marginTop36 text-20">
+                                    Adopting infrastructure as code and using TerraHub on top of terraform
+                                    have increased our operational efficiency while reducing the time spent
+                                    on operations by more than 70%. To be clear, that is two thirds of our
+                                    time that we have been spending before on development operations
+                                    is now managed by TerraHub.io. Pretty cool, right?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

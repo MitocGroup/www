@@ -1,0 +1,7 @@
+## local config
+component:
+  name: 'cloudfront_distribution'
+  dependsOn:
+    - '../s3_bucket'
+  mapping:
+    - '.'

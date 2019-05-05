@@ -1,0 +1,7 @@
+build:
+  env:
+    variables:
+      THUB_ENV: "master"
+      THUB_S3_PATH: "s3://www.mitocgroup.com"
+      THUB_ROBOTS: "../../robots-prod.txt"
+      THUB_MAX_AGE: "31536000"

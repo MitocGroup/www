@@ -1,0 +1,10 @@
+## project config
+project:
+  name: 'MitocGroup_Website'
+  code: 'eee23249'
+  include: ['.']
+  exclude: ['**/.terraform/*','**/node_modules/*']
+
+## terraform config
+terraform:
+  varFile: ['default.tfvars']

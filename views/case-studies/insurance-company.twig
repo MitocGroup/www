@@ -1,0 +1,163 @@
+{% extends '../case-studies.twig' %}
+
+{% block content %}
+
+    <div class="hide-mobile">
+        <div class="space-top header case-study flex-column">
+            <div class="header__bg green">
+                <div class="bg bg-green bg-pic insurance-company flex-column">
+                    <div class="container text-styles">
+                        <div class="flex-row">
+                            <div class="flex-item-3">
+
+                            </div>
+                            <div class="flex-item-9 flex-column text-color-white">
+                                <p>Case Study</p>
+                                <h1>Major Insurance <br> Company</h1>
+                                <h5 class="text-24 marginTop36">
+                                    A secure cloud services platform, offering compute power, database storage, content
+                                    delivery.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="widthBlock80 up80 paddingBottom61">
+                <div class="flex-row case-study-br">
+                    <div class="flex-item-3">
+                        <h2 class="text-36-SemiBold">
+                            About the Company
+                        </h2>
+                    </div>
+                    <div class="flex-item-9 padding-left43">
+                        <h4 class="text-20 text-color-dark paddingBottom20">
+                            Major insurance company has been offering complex risks management and sustainable financial strength for decades.
+                        </h4>
+                        <p>
+                            Today, this organization is evolving to better serve customers needs around the world.
+                            They innovate and simplify, providing greater transparency,
+                            and delivering value faster and more efficiently.
+                            Customer is recognized for becoming leaner, more focused, and more profitable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="block-img marginBottom-94">
+                <div class="flex-row display-grid">
+                    <div class="flex-item-7 what-is flex-column gradient-left-right green">
+                        <div class="text-color-white text-italic text-left">
+                            The main goal was to decrease the timeline from weeks to hours or even minutes
+                            between when the data is created and when it becomes available in dashboards.
+                        </div>
+                    </div>
+                    <div class="flex-item-5">
+                        <img src="{{ asset('@images/v2/png/insurance-png.png') }}" alt="Case Study"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gray-block">
+            <div class="container">
+                <div class="widthBlock80 paddingTop150 paddingBottom61">
+                    <div class="flex-row case-study-br">
+                        <div class="flex-item-3">
+                            <h2 class="text-36-SemiBold">
+                                The Challenge
+                            </h2>
+                        </div>
+                        <div class="flex-item-9 padding-left43">
+                            <h4 class="text-20 text-color-dark paddingBottom20">
+                                Major insurance company is already using public cloud services to deliver agility
+                                and faster time to market
+                            </h4>
+                            <p>
+                                They have successfully migrated and are currently running production
+                                SAP workloads on top of AWS. Corporate finance teams wanted to
+                                continue the positive momentum on top of that successful delivery.
+                                They have decided to build out a data lake and import couple of dozen
+                                financial data sources that will be exposed in series of dashboards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="footer-bg green-block flex-column">
+            <div class="container">
+                <div class="center text-styles text-color-white text-italic-regular text-20 widthBlock80">
+                    "We are very thankful for working with Mitoc Group because their knowledge and experience
+                    saved us months of effort. They helped us navigate the complexity of data management and
+                    operations in the cloud. By doing less, we were able to achieve more, and that was an amazing
+                    experience."
+                </div>
+                <div class="marginTop36 uppercase center text-20 text-color-white">
+                    Executive @ Major Insurance Company
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="gray-block block-left">
+                <div class="container">
+                    <div class="widthBlock80">
+                        <div class="up80 down80">
+                            <div class="center">
+                                <h3 class="text-36-SemiBold">Why Mitoc Group?</h3>
+                                <div class="mobile-img">
+                                    <img class="img-size lazyload" data-src="{{ asset('@images/v2/services/cloud-computing.svg') }}">
+                                </div>
+                                <div class="paddingTop20 text-20 text-bold widthBlock70">
+                                    With extended experience in data operations and data transformations,
+                                    our team have worked with the customer to empower them to use cloud native
+                                    services from AWS like Lambda, Glue, S3 and Redshift.
+                                </div>
+                            </div>
+                            <div class="flex-row block-space">
+                                <div class="flex-item-6">
+                                    <ul class="square green marginTop36 text-20">
+                                        <li>
+                                            We implemented least privilege security model integrated with centralized
+                                            SSO and aligned with best practices in highly regulated insurance industry.
+                                        </li>
+                                        <li class="marginTop36">
+                                            Our team focused on data engineering aspects of the challenge,
+                                            while customer's teams were focusing on their core business activities and valuable financial insights.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="flex-item-6 center flex-column space">
+                                    <img class="img-size web-img lazyload" data-src="{{ asset('@images/v2/services/cloud-computing.svg') }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+               <div class="widthBlock80">
+                   <div class="up80 down80">
+                       <div class="center">
+                           <h3 class="text-36-SemiBold">The Benefits</h3>
+                       </div>
+                       <div class="flex-row block-space case-study">
+                           <div class="flex-item-6 center flex-column space">
+                               <img class="img-size lazyload" data-src="{{ asset('@images/v2/case-studies/benefits-aws.svg') }}">
+                           </div>
+                           <div class="flex-item-6">
+                               <div class="marginTop36 text-20">
+                                   By adopting serverless approach on top of AWS cloud, major insurance company's
+                                   teams were able to deliver this high complexity transformation project in couple of weeks instead of months.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

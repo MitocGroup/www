@@ -1,0 +1,4 @@
+terraform:
+  varFile:
+    - default.tfvars
+    - workspace/stage.tfvars

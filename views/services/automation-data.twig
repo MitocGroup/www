@@ -1,0 +1,160 @@
+{% extends '../services.twig' %}
+
+{% block content %}
+
+  <div class="hide-mobile">
+    <div class="space-top header flex-column gray-block">
+      <div class="header__bg green mobile-edge">
+        <div class="bg bg-green flex-column">
+          <div class="container text-styles">
+            <div class="flex-row">
+              <div class="flex-item-3">
+                  <img class="cloud-img" src="{{ asset('@images/v2/services/automation-data.svg') }}"
+                     alt="Automation of Data"/>
+              </div>
+              <div class="flex-item-9 flex-column text-color-white">
+                <p>Cloud Computing</p>
+                <h1>Automation of Data</h1>
+                <h5 class="text-24 marginTop36">
+                  We help customers automate data governance, data pipelines,
+                  data storage and compute.
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gray-block">
+      <div class="paddingBottom20 min500 services">
+        <img src="{{ asset('@images/v2/services/automation-data.svg') }}">
+      </div>
+      <div class="container center">
+        <div class="widthBlock80 up80 down80 text-light text28">
+          Automation of data refers to the <span class="text-color-green text-italic-semibold">process of accelerating</span>
+          and <span class="text-color-green text-italic-semibold">automating the data</span> associated development cycles,
+          while assuring quality and consistency.
+        </div>
+        <div class="block-img down80">
+          <div class="flex-row display-grid">
+            <div class="flex-item-5">
+              <img src="{{ asset('@images/v2/png/data-png.png') }}"/>
+            </div>
+            <div class="flex-item-7 what-is flex-column gradient-left-right green services">
+              <div class="text-color-dark text-italic text-left">
+                <span class="text-color-white">
+                  <span class="text-italic-semibold">Data automation</span> focuses on automation of every step in entire data lifecycle management,
+                  from data sources to data storages up to data visualization.
+                  It helps <span class="text-italic-semibold">improve productivity, reduce cost, and improve overall quality.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="green-block-bg data-green up80 paddingBottom250">
+      <div class="container">
+        <div class="flex-row">
+          <div class="flex-item-3">
+            <h2 class="text-36-SemiBold text-color-white">
+              Data automation works on the principles of design patterns
+            </h2>
+          </div>
+          <div class="flex-item-9 padding-left43 text-color-white">
+            <p class="paddingBottom20">
+              It comprises a central repository of design patterns, which encapsulate architectural
+              standards as well as best practices for data design, data management, data integration, and data usage.
+            </p>
+            <p>
+              Automation of data provides advantages like source data exploration, data models, data marts,
+              ETL/ELT optimization, test automation, metadata management, managed deployment, scheduling,
+              change impact analysis and easier maintenance and modification of the data pipelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="white-block-bg marginTop-200 width1320 paddingTop36 paddingBottom36">
+      <div class="container">
+        <div class="left-green-line text-24 text-color-green">
+          Modern data marts evolved into so called data lakes, a method of storing data within a system or repository,
+          in its natural format, that facilitates the collocation of data in various schema and structural forms,
+          usually object blobs or files.
+        </div>
+        <div class="column paddingTop36">
+          <p class="paddingBottpm20">
+            The idea of data lake is to have a single store of all data in the enterprise ranging from raw data
+            (which implies exact copy of source system data) to transformed data which is used for various
+            tasks including reporting, visualization, analytics and machine learning.
+          </p>
+          <p>
+            The data lake includes structured data from relational databases (rows and columns),
+            semi-structured data (CSV, LOGS, XML, JSON), unstructured data
+            (emails, documents, PDFs) and even binary data (images, audio, video),
+            thus creating a centralized data store accommodating all forms of data.
+          </p>
+        </div>
+        <img class="full-img paddingTop36" src="{{ asset('@images/v2/services/diagram-glue-event-01.svg') }}" alt="Diagram Glue Event"/>
+      </div>
+    </div>
+
+    <div class="gray-block up80 down80">
+      <div class="container">
+        <div class="text-styles center">
+          <h3 class="text-color-green">good, better, best. never let it rest.</h3>
+          <h2 class="block-half">Our Services Help Your Business Through Technology</h2>
+        </div>
+        <div class="flex-row pictures-block marginTop36 ">
+          <div class="flex-item-4 cols">
+            <div class="services flex-column">
+              <a href="../../services/">
+                <div class="hover-effect">
+                  <img src="{{ asset('@images/v2/services/cloud-computing.svg') }}" alt="Cloud Computing"/>
+                </div>
+                <h3>Cloud Computing</h3>
+                <p>A simple way to access servers, storage, databases and a broad set of application
+                  services over the internet.
+                </p>
+              </a>
+              <a class="read-more" href="../../services/">Learn More <i class="mdi mdi-chevron-right"></i></a>
+            </div>
+          </div>
+          <div class="flex-item-4 cols">
+            <div class="services flex-column">
+              <a href="/services/automation-infrastructure/">
+                <div class="hover-effect">
+                  <img class="pictures" src="{{ asset('@images/v2/services/automation-infrastructure.svg') }}" alt="Automation of Infrastructure"/>
+                </div>
+                <h3>Automation of Infrastructure</h3>
+                <p>We help customers automate infrastructure build, deployment and management.</p>
+              </a>
+              <a class="read-more" href="/services/automation-infrastructure/">Learn More
+                <i class="mdi mdi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex-item-4 cols">
+            <div class="services flex-column">
+              <a href="../../services/automation-serverless/">
+                <div class="hover-effect">
+                  <img class="pictures" src="{{ asset('@images/v2/services/automation-serverless.svg') }}"
+                       alt="Automation of Application Layer"/>
+                </div>
+                <h3>Automation of Serverless</h3>
+                <p>We help customers automate serverless applications management through continuous
+                  integration and continuous deployment.</p>
+              </a>
+              <a class="read-more" href="../../services/automation-serverless/">Learn More <i
+                    class="mdi mdi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
