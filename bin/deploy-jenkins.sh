@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set +x
+export NVM_DIR="/mnt/data/jenkins/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" > /dev/null
+
+nvm install 6.10.3
+nvm use 6.10.3
+
+aws --version > /dev/null 2>&1 || { echo >&2 "aws is missing. aborting..."; exit 1; }
+npm --version > /dev/null 2>&1 || { echo >&2 "npm is missing. aborting..."; exit 1; }
+export NODE_PATH=$(npm root -g)
+
+if [ -z "${BRANCH_FROM}" ]; then BRANCH_FROM = "dev"; fi
+if [ -z "${BRANCH_TO}" ]; then BRANCH_TO = "dev"; fi
+if [ "${BRANCH_TO}" != "dev" ]; then THUB_ENV="-e ${BRANCH_TO}"; fi
+if [ "${BRANCH_TO}" != "${BRANCH_FROM}" ]; then GIT_DIFF="-g ${BRANCH_TO}...${BRANCH_FROM}"; fi
+if [ "${THUB_STATE}" == "approved" ]; then THUB_APPLY="-a"; fi
+
+git --version > /dev/null 2>&1 || { echo >&2 "git is missing. aborting..."; exit 1; }
+git checkout ${BRANCH_TO}
+git checkout ${BRANCH_FROM}
+
+terrahub --version > /dev/null 2>&1 || { echo >&2 "terrahub is missing. aborting..."; exit 1; }
+AWS_ACCOUNT_ID="$(aws sts get-caller-identity --output=text --query='Account')"
+terrahub configure -c template.locals.account_id="${AWS_ACCOUNT_ID}"
+
+terrahub run -y -b ${GIT_DIFF} ${THUB_APPLY} ${THUB_ENV}
+echo "Execution successful: from ${BRANCH_FROM} into ${BRANCH_TO}"

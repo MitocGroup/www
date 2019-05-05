@@ -1,6 +1,11 @@
+component:
+  template:
+    tfvars:
+      s3_bucket_name: 'www-stage.mitocgroup.com'
+
 build:
   env:
     variables:
-      THUB_ENV: "stage"
-      THUB_S3_PATH: "s3://www-stage.mitocgroup.com"
-      THUB_MAX_AGE: "604800"
+      THUB_ENV: 'test'
+      THUB_S3_PATH: 's3://www-stage.mitocgroup.com'
+      THUB_MAX_AGE: '604800'
