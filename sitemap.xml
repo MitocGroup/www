@@ -45,6 +45,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://www.mitocgroup.com/partners/google/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://www.mitocgroup.com/partners/404moldova/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
@@ -55,17 +60,47 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/customers/</loc>
+  <loc>https://www.mitocgroup.com/case-studies/</loc>
   <priority>0.90</priority>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/customers/adtechmedia/</loc>
+  <loc>https://www.mitocgroup.com/case-studies/adtechmedia/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/customers/manning/</loc>
+  <loc>https://www.mitocgroup.com/case-studies/manning/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.mitocgroup.com/case-studies/terrahub/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.mitocgroup.com/case-studies/insurance-company/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.mitocgroup.com/case-studies/analytics-company/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.mitocgroup.com/case-studies/broadcasting-company/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.mitocgroup.com/case-studies/entertainment-company/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.mitocgroup.com/case-studies/publishing-conglomerate/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>
