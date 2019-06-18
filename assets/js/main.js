@@ -59,7 +59,7 @@
            <div class="blog-content flex-column">
            <div class="img-block">
              <a href="${post.url}" class="blog-element" alt="${post.title}" target="_blank" rel="noopener">
-               <img class="img-responsive lazyload" data-src="./images/v2/medium/${post.image}" alt="${post.title}" />
+               <img class="img-responsive lazyload" data-src="${post.image}" alt="${post.title}" />
              </a>
            </div>
               <span class="post-date">${post.publishedAt}</span>
