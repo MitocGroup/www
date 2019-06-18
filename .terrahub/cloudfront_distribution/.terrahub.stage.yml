@@ -4,5 +4,9 @@ component:
       remote_state_key: 'terraform_workspaces/stage/terraform/mitocgroup/www/s3_bucket/terraform.tfstate'
       aliases: ['www-stage.mitocgroup.com']
       comment: 'www-stage.mitocgroup.com'
-      origin_id: 'S3-Website-www-stage.mitocgroup.com.s3-website-us-east-1.amazonaws.com'
-      origin_name: 'www-stage.mitocgroup.com.s3-website-us-east-1.amazonaws.com'
+      origin_id: 'S3-Website-www-stage.mitocgroup.com.s3-website-us-west-1.amazonaws.com'
+      origin_name: 'www-stage.mitocgroup.com.s3-website-us-west-1.amazonaws.com'
+build:
+  env:
+    variables:
+      THUB_S3_BUCKET_NAME: www-stage.mitocgroup.com
