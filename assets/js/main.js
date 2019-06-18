@@ -55,6 +55,7 @@
       let html = '';
 
       data.forEach((post, index) => {
+        post.image.replace('images/medium/', '');
         html += `<div class="flex-item-4">
            <div class="blog-content flex-column">
            <div class="img-block">
