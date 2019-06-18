@@ -61,12 +61,13 @@ async function invalidateCloudfront(id) {
 
   try {
     const res = await cloudfront.createInvalidation(params).promise();
+    const data = res.$response.data.Invalidation;
     return {
       message: `Invalidation was created successfully for ${id}`,
       data: {
-        invalidationId: res.$response.data.Invalidation.Id,
-        status: res.$response.data.Invalidation.Status,
-        createTime: res.$response.data.Invalidation.CreateTime
+        invalidationId: data.Id,
+        status: data.Status,
+        createTime: data.CreateTime
       }
     };
   } catch (err) {
