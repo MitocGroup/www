@@ -31,6 +31,7 @@ exports.handler = (event, context) => {
           Bucket: config.destBucket,
           Key: `images/medium/${images[index]}`,
           Body: imgBuffer,
+          ContentType: 'image/png',
           CacheControl: 'max-age=604800'
         }).promise()
       ));
@@ -39,6 +40,7 @@ exports.handler = (event, context) => {
         Bucket: config.destBucket,
         Key: 'json/medium-feed.json',
         Body: JSON.stringify(posts),
+        ContentType: 'text/json',
         CacheControl: 'max-age=604800'
       }).promise()
     ).then(() => {
@@ -99,8 +101,8 @@ function handlePosts(rawPosts) {
     title: post.title,
     url: post.link,
     description: post.description,
-    image: post.thumbnail,
-    localimage: path.join('static', 'img', 'medium', post.thumbnail.replace(/^.*?(?=[0-9]+\*)/,"")),
+    image: post.thumbnail.replace(/^.*?(?=[0-9]+\*)/,""),
+    imageSource: post.thumbnail,
     publishedAt: dateFormat(post.pubDate, 'mmm dd, yyyy')
    });
   }
@@ -138,5 +140,6 @@ function apiRequest() {
     }).on('error', err => {
       reject(err);
     });
+
   });
 }
