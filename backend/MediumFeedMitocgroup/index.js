@@ -101,7 +101,7 @@ function handlePosts(rawPosts) {
     title: post.title,
     url: post.link,
     description: post.description,
-    image: path.join('images', 'medium', post.thumbnail.replace(/^.*?(?=[0-9]+\*)/,"")),
+    image: post.thumbnail.replace(/^.*?(?=[0-9]+\*)/,""),
     imageSource: post.thumbnail,
     publishedAt: dateFormat(post.pubDate, 'mmm dd, yyyy')
    });

@@ -1,4 +1,3 @@
-## local config
 component:
   name: 's3_bucket'
   template:
@@ -64,8 +63,6 @@ component:
         value: '${aws_s3_bucket.s3_bucket.website_endpoint}'
       website_domain:
         value: '${aws_s3_bucket.s3_bucket.website_domain}'
-
-## build config
 build:
   env:
     variables:

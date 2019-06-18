@@ -1,4 +1,3 @@
-## local config
 component:
   name: 'cloudfront_distribution'
   dependsOn: ['../s3_bucket']
@@ -98,8 +97,6 @@ component:
         value: '${aws_cloudfront_distribution.cloudfront_distribution.caller_reference}'
       active_trusted_signers:
         value: '${aws_cloudfront_distribution.cloudfront_distribution.active_trusted_signers}'
-
-## build config
 build:
   env:
     variables:
