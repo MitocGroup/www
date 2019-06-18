@@ -64,8 +64,6 @@ component:
         value: '${aws_s3_bucket.s3_bucket.website_endpoint}'
       website_domain:
         value: '${aws_s3_bucket.s3_bucket.website_domain}'
-      index_trigger:
-        value: '${data.aws_s3_bucket_object.s3_bucket_object.last_modified}'
 
 ## build config
 build:

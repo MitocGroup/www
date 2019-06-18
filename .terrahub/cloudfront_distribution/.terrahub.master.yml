@@ -6,3 +6,7 @@ component:
       comment: 'www.mitocgroup.com'
       origin_id: 'S3-Website-www.mitocgroup.com.s3-website-us-east-2.amazonaws.com'
       origin_name: 'www.mitocgroup.com.s3-website-us-east-2.amazonaws.com'
+build:
+  env:
+    variables:
+      THUB_S3_BUCKET_NAME: www.mitocgroup.com
