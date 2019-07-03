@@ -20,13 +20,13 @@ if [ "${THUB_STATE}" == "destroy" ]; then THUB_OPTS="${THUB_OPTS} -d"; fi
 if [ ! -z "${THUB_INCLUDE}" ]; then THUB_OPTS="${THUB_OPTS} -I \"^(${THUB_INCLUDE})\""; fi
 if [ ! -z "${THUB_EXCLUDE}" ]; then THUB_OPTS="${THUB_OPTS} -X \"^(${THUB_EXCLUDE})\""; fi
 
-echo "git checkout ${BRANCH_TO}"
+echo "EXEC: git checkout ${BRANCH_TO}"
 git checkout ${BRANCH_TO}
-echo "git checkout ${BRANCH_FROM}"
+echo "EXEC: git checkout ${BRANCH_FROM}"
 git checkout ${BRANCH_FROM}
 
 AWS_ACCOUNT_ID="$(aws sts get-caller-identity --output=text --query='Account')"
 terrahub configure -c template.locals.account_id="${AWS_ACCOUNT_ID}"
 
-echo "terrahub run -y ${THUB_OPTS}"
+echo "EXEC: terrahub run -y ${THUB_OPTS}"
 terrahub run -y ${THUB_OPTS}
