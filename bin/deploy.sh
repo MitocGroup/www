@@ -15,7 +15,10 @@ if [ -z "${BRANCH_TO}" ]; then BRANCH_TO="dev"; fi
 THUB_OPTS=""
 if [ "${BRANCH_TO}" != "dev" ]; then THUB_OPTS="${THUB_OPTS} -e ${BRANCH_TO}"; fi
 if [ "${BRANCH_TO}" != "${BRANCH_FROM}" ]; then THUB_OPTS="${THUB_OPTS} -g ${BRANCH_TO}..${BRANCH_FROM}"; fi
+if [ "${THUB_STATE}" == "build" ]; then THUB_OPTS="${THUB_OPTS} -b"; fi
+if [ "${THUB_STATE}" == "build&approve" ]; then THUB_OPTS="${THUB_OPTS} -b -a"; fi
 if [ "${THUB_STATE}" == "approve" ]; then THUB_OPTS="${THUB_OPTS} -a"; fi
+if [ "${THUB_STATE}" == "approve&destroy" ]; then THUB_OPTS="${THUB_OPTS} -a -d"; fi
 if [ "${THUB_STATE}" == "destroy" ]; then THUB_OPTS="${THUB_OPTS} -d"; fi
 if [ ! -z "${THUB_INCLUDE}" ]; then THUB_OPTS="${THUB_OPTS} -I \"^(${THUB_INCLUDE})\""; fi
 if [ ! -z "${THUB_EXCLUDE}" ]; then THUB_OPTS="${THUB_OPTS} -X \"^(${THUB_EXCLUDE})\""; fi
