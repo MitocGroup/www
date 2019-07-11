@@ -7,7 +7,6 @@ terrahub --version > /dev/null 2>&1 || { echo >&2 "terrahub is missing. aborting
 
 export NODE_PATH="$(npm root -g)"
 export npm_config_unsafe_perm="true"
-export DEBUG="debug"
 
 if [ -z "${BRANCH_FROM}" ]; then BRANCH_FROM="dev"; fi
 if [ -z "${BRANCH_TO}" ]; then BRANCH_TO="dev"; fi
