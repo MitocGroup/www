@@ -22,12 +22,16 @@ if [ "${THUB_BUILD_OK}" == "true" ]; then
   npm install node-sass -g --unsafe-perm=true || { echo 'ERROR: Failed to run npm install node-sass -g'; exit 1; }
   npm install || { echo 'ERROR: Failed to run npm install'; exit 1; }
   npm run compile || { echo 'ERROR: Failed to run npm run compile'; exit 1; }
-  npm run sitemap ${THUB_S3_PATH/s3/https} || { echo 'ERROR: Failed to run npm run sitemap'; exit 1; }
   mv ${THUB_BUILD_PATH}/404/index.html ${THUB_BUILD_PATH}/404.html
   if [ -z "${THUB_ROBOTS}" ]; then
     echo 'WARNING: THUB_ROBOTS variable is empty'
   else
     cp ${THUB_ROBOTS} ${THUB_BUILD_PATH}/robots.txt
+  fi
+  if [ -z "${THUB_SITEMAP}" ]; then
+    echo 'WARNING: THUB_SITEMAP variable is empty'
+  else
+    cp ${THUB_SITEMAP} ${THUB_BUILD_PATH}/sitemap.xml
   fi
   echo "THUB_BUILD_OK='${THUB_BUILD_OK}' ==> Finishing build process."
 else
