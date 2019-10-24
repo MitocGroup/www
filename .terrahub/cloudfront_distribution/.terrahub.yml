@@ -1,6 +1,6 @@
 component:
   name: 'cloudfront_distribution'
-  dependsOn: ['../s3_bucket']
+  dependsOn: ['s3_bucket']
   template:
     terraform:
       backend:
