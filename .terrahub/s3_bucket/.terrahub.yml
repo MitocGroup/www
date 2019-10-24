@@ -15,11 +15,6 @@ component:
                 identifiers: ['*']
               actions: ['s3:GetObject']
               resources: ['arn:aws:s3:::${var.s3_bucket_name}/*']
-      aws_s3_bucket_object:
-        s3_bucket_object:
-          depends_on: ['aws_s3_bucket.s3_bucket']
-          key: 'index.txt'
-          bucket: '${aws_s3_bucket.s3_bucket.id}'
     resource:
       aws_s3_bucket:
         s3_bucket:
