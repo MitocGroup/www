@@ -24,3 +24,4 @@ template:
 ## terraform config
 terraform:
   varFile: ['default.tfvars']
+  version: 0.11.13

@@ -10,11 +10,6 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://blog.mitocgroup.com/</loc>
-  <priority>1.00</priority>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
   <loc>https://www.mitocgroup.com/services/</loc>
   <priority>0.90</priority>
   <changefreq>weekly</changefreq>
@@ -30,7 +25,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.mitocgroup.com/services/automation-application/</loc>
+  <loc>https://www.mitocgroup.com/services/automation-serverless/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>
@@ -116,6 +111,171 @@
 </url>
 <url>
   <loc>https://www.mitocgroup.com/contact/</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.mitocgroup.com/terms/</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.mitocgroup.com/privacy/</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/terraform-module-components-for-aws-landing-zone-solution-c74267a0e70c</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/</loc>
+  <priority>1.00</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/my-architecture-private-equity-platform-on-aws-cloud-9c4430b339a5</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/my-architecture-private-equity-platform-on-aws-cloud-9c4430b339a5</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/aws-landing-zone-module-now-supports-terraform-v0-12-4e5264408e9b</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/my-architecture-apache-kafka-by-confluent-on-aws-cloud-ee5303c49f2f</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/three-success-stories-of-aws-landing-zone-technology-overview-609cb840a90</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/three-success-stories-of-aws-landing-zone-business-overview-9fe23d44714d</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/introducing-programmatic-aws-landing-zone-as-terraform-module-3e566ee6e73f</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/aws-lambda-to-redshift-connection-using-iam-authentication-and-nat-gateway-b40c6002082b</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/you-get-what-you-get-and-you-dont-get-upset-e12e0cdfb247</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/aws-re-invent-2017-serverless-track-srv326-chalk-talk-92bd01ef8151</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/mitoc-group-inc-granted-aws-advanced-technology-partner-status-6550e452ed1b</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda-19331fe3d4f0</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/blue-green-deployments-for-serverless-powered-applications-on-aws-22a08447aa72</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/scaleup-award-winner-stories-a913277d7de3</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/are-you-ready-for-stackworld-2016-e01734f95a93</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework-dd81719b0dff</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team-a7d3d5632cf8</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework-e04c912d08f0</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/interview-creators-of-the-deep-framework-8c2d42ecd243</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/best-re-invent-ever-448ac73f6a4e</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/press-release-digital-enterprise-end-to-end-platform-c3a4d151c39d</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/how-to-create-serverless-environments-on-aws-8485ae039765</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/how-do-you-get-invited-to-speak-at-aws-re-invent-711457a41fb8</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/very-exciting-and-looking-forward-to-aws-re-invent-2015-e063dca1e063</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/deep-management-s-continuous-integration-with-travis-ci-and-coveralls-1cfcfcb3c284</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/deep-management-is-pending-patent-at-us-patent-and-trademark-office-1b4282d6b4e5</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/welcome-to-deep-management-dam-as-a-service-and-dam-as-a-platform-a98d74aa75a7</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/mitoc-group-inc-accepted-as-aws-technology-partner-86b6f936db52</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/our-first-story-the-beginning-of-the-journey-25d5abe5804</loc>
   <priority>0.90</priority>
   <changefreq>weekly</changefreq>
 </url>
