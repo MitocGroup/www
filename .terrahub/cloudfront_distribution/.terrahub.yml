@@ -6,14 +6,6 @@ component:
       backend:
         s3:
           key: 'terraform/mitocgroup/www/cloudfront_distribution/terraform.tfstate'
-    data:
-      terraform_remote_state:
-        s3_bucket:
-          backend: 's3'
-          config:
-            bucket: 'data-lake-mitocgroup-us-east-1'
-            key: '${var.remote_state_key}'
-            region: 'us-east-1'
     resource:
       aws_cloudfront_distribution:
         cloudfront_distribution:
@@ -69,6 +61,11 @@ component:
             ThubCode: '${local.project["code"]}'
             ThubEnv: '${terraform.workspace}'
             ThubName: 'cloudfront_distribution'
+    dynamic:
+      data:
+        terraform_remote_state:
+          - component: s3_bucket
+            name: s3_bucket
     tfvars:
       remote_state_key: 'terraform/mitocgroup/www/s3_bucket/terraform.tfstate'
       aliases: ['www-dev.mitocgroup.com']
