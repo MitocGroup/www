@@ -144,14 +144,14 @@
   }
   h1, h2, h4 {
     font-family: 'Helvetica-Regular', sans-serif;
-    color: $dark-blue;
+    color: $dark-green;
     font-size: 24px;
     font-weight: 100;
   }
   h3 {
     font-family: 'Helvetica-Regular', sans-serif;
     font-weight: 100;
-    color: $dark-blue;
+    color: $dark-green;
     font-size: 19px;
     line-height: 28px;
     cursor: pointer;
@@ -299,7 +299,7 @@
       margin: 2px 2px 3px;
     }
     span {
-      color: $blue;
+      color: $blue-color;
       font-family: 'Helvetica-Light', sans-serif;
       font-size: 15px;
     }
