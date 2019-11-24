@@ -91,9 +91,7 @@ let routes = {
     vars: {
       ...defaultVariables,
       title: defaultVariables.title + ' | Cloud Native Automation in Private Equity',
-      href: defaultVariables.url,
-      // favorites: favorites['Home'],
-      // recently: recipes.slice(0, 3)
+      href: defaultVariables.url
     },
     assets: indexAssets
   },
@@ -284,7 +282,7 @@ let routes = {
       title: 'Blog Articles | ' + defaultVariables.title,
       href: defaultVariables.url + '/blog/'
     },
-    assets: aboutAssets
+    assets: blogAssets
   },
   '/contact/': {
     view: 'contact.twig',
