@@ -1,167 +1,23 @@
 {% extends '../services.twig' %}
 
 {% block content %}
-  <div class="hide-mobile">
-    <div class="space-top header flex-column gray-block">
-      <div class="header__bg green mobile-edge">
-        <div class="bg bg-green flex-column">
-          <div class="container text-styles">
-            <div class="flex-row">
-              <div class="flex-item-3">
-                <img class="cloud-img" src="{{ asset('@images/v2/services/automation-serverless.svg') }}"
-                     alt="Automation of Applications - Serverless"/>
-              </div>
-              <div class="flex-item-9 flex-column text-color-white">
-                <p>Cloud Services</p>
-                <h1>Automation of Applications - Serverless</h1>
-                <h5 class="text-24 marginTop36">
-                  We help customers automate serverless applications
-                  management through continuous integration and continuous deployment.
-                </h5>
-              </div>
+<div class="hide-mobile">
+  <div class="space-top header flex-column gray-block">
+    <div class="header__bg green mobile-edge">
+      <div class="bg bg-green flex-column">
+        <div class="container text-styles">
+          <div class="flex-row">
+            <div class="flex-item-3">
+              <img class="cloud-img" src="{{ asset('@images/v2/services/automation-serverless.svg') }}"
+                   alt="Automation of Applications - Serverless"/>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="gray-block">
-      <div class="paddingBottom20 min500 services">
-        <img src="{{ asset('@images/v2/services/automation-serverless.svg') }}">
-      </div>
-      <div class="container center">
-        <div class="widthBlock80 up80 down80 text-light text28">
-        <div class="center text-42">
-          Continuous Integration
-        </div>
-          <div class="text-italic">
-            Continuous Integration (CI) is the practice of merging all developer working copies
-            to a <span class="text-color-green text-italic-semibold">shared mainline several times a day.</span>
-          </div>
-        </div>
-        <div class="block-img pic-up">
-          <div class="flex-row display-grid">
-            <div class="flex-item-5">
-              <img src="{{ asset('@images/v2/png/serverless.png') }}"/>
-            </div>
-            <div class="flex-item-7 what-is flex-column gradient-left-right green">
-              <div class="text-color-dark text-italic text-left">
-                <span class="text-color-white">
-                  The practice of frequently integrating one's new or changed code with the existing code repository
-                  should occur frequently enough that <span class="text-italic-semibold">no intervening window remains between commit and build,</span>
-                  and such that no errors can arise without developers noticing them and correcting them immediately.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="widthBlock80 down80 text-left">
-          <div class="column paddingTop36">
-            Normal practice is to trigger these builds by every commit to a repository, rather than a periodically scheduled build.
-            The practicalities of doing this in a multi-developer environment of rapid commits are such that it is usual to trigger
-            a short time after each commit, then to start a build when either this timer expires, or after a rather longer interval
-            since the last build.
-          </div>
-        </div>
-        <img class="full-img down80" src="{{ asset('@images/v2/png/serverless-png.png') }}"/>
-      </div>
-    </div>
-
-    <div class="bg-gradient paddingTop61 paddingBottom61 center text-color-white">
-      <div class="container">
-        <div class="text-42 paddingBottom20">Continuous Deployment</div>
-        <div class="text-italic text-28">
-          Continuous Deployment is a software development practice in which <span class="text-italic-semibold">every code change goes through
-          the entire pipeline</span> and is put into production, automatically, resulting in many production deployments
-          every day.
-          In organizations like <span class="text-italic-semibold">Amazon</span> or <span class="text-italic-semibold">Google,</span>
-          software is deployed thousands of times each day.
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="up80 down80">
-        <div class="flex-row space">
-          <div class="flex-item-5">
-          <h5 class="text-42 paddingBottom20">Continuous Delivery</h5>
-            <p class="paddingBottom20 text28">
-              Continuous Delivery (CD) is a software engineering approach in which teams produce
-              software in short cycles, ensuring that the software can be reliably released at any time.
-            </p>
-            <p class="text28">
-              It aims at building, testing, and releasing software faster and more frequently.
-            </p>
-          </div>
-          <div class="flex-item-7 block-img pic-up small-img">
-            <div class="flex-row display-grid">
-              <div class="flex-item-5">
-                <img src="{{ asset('@images/v2/png/serverless_1.png') }}"/>
-              </div>
-              <div class="flex-item-7 what-is flex-column gradient-left-right green">
-                <div class="text-color-dark text-italic text-left">
-                <span class="text-color-white text-24">
-                 The approach helps reduce the <span class="text-italic-semibold">cost, time, and risk of delivering changes</span> by allowing for
-                  more incremental updates to applications in production. A straightforward and repeatable
-                  deployment process is important for continuous delivery.
-                </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="gray-block up80 down80">
-      <div class="container">
-        <div class="text-styles center">
-          <h3 class="text-color-green">good, better, best. never let it rest.</h3>
-          <h2 class="block-half">Private Equity Customers Find Better Business Results Through Cloud Services</h2>
-        </div>
-        <div class="flex-row pictures-block marginTop36 ">
-          <div class="flex-item-4 cols">
-            <div class="services flex-column">
-              <a href="../../services/">
-                <div class="hover-effect">
-                  <img src="{{ asset('@images/v2/services/cloud-computing.svg') }}" alt="Cloud Services"/>
-                </div>
-                <h3>Cloud Services</h3>
-                <p>A simple way to access servers, storage, databases and a broad set of application
-                  services over the internet.
-                </p>
-              </a>
-              <a class="read-more" href="../../services/">Learn More <i class="mdi mdi-chevron-right"></i></a>
-            </div>
-          </div>
-          <div class="flex-item-4 cols">
-            <div class="services flex-column">
-              <a href="/services/automation-infrastructure/">
-                <div class="hover-effect">
-                  <img class="pictures" src="{{ asset('@images/v2/services/automation-infrastructure.svg') }}" alt="Automation of Infrastructure"/>
-                </div>
-                <h3>Automation of Infrastructure</h3>
-                <p>We help customers automate infrastructure build, deployment and management.</p>
-              </a>
-              <a class="read-more" href="/services/automation-infrastructure/">Learn More
-                <i class="mdi mdi-chevron-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="flex-item-4 cols">
-            <div class="services flex-column">
-              <a href="/services/automation-data/">
-                <div class="hover-effect">
-                  <img class="pictures" src="{{ asset('@images/v2/services/automation-data.svg') }}" alt="Automation of Data"/>
-                </div>
-                <h3>Automation of Data</h3>
-                <p>We help customers automate data governance, data pipelines, data storage and compute.</p>
-              </a>
-              <a class="read-more" href="/services/automation-data/">Learn More
-                <i class="mdi mdi-chevron-right"></i>
-              </a>
+            <div class="flex-item-9 flex-column text-color-white">
+              <p>Cloud Services</p>
+              <h1>Automation of Applications - Serverless</h1>
+              <h5 class="text-24 marginTop36">
+                We help customers automate serverless applications
+                management through continuous integration and continuous deployment.
+              </h5>
             </div>
           </div>
         </div>
@@ -169,4 +25,147 @@
     </div>
   </div>
 
+  <div class="gray-block">
+    <div class="paddingBottom20 min500 services">
+      <img src="{{ asset('@images/v2/services/automation-serverless.svg') }}">
+    </div>
+    <div class="container center">
+      <div class="widthBlock80 up80 down80 text-light text28">
+      <div class="center text-42">
+        Continuous Integration
+      </div>
+        <div class="text-italic">
+          Continuous Integration (CI) is the practice of merging all developer working copies
+          to a <span class="text-color-green text-italic-semibold">shared mainline several times a day.</span>
+        </div>
+      </div>
+      <div class="block-img pic-up">
+        <div class="flex-row display-grid">
+          <div class="flex-item-5">
+            <img src="{{ asset('@images/v2/png/serverless.png') }}"/>
+          </div>
+          <div class="flex-item-7 what-is flex-column gradient-left-right green">
+            <div class="text-color-dark text-italic text-left">
+              <span class="text-color-white">
+                The practice of frequently integrating one's new or changed code with the existing code repository
+                should occur frequently enough that <span class="text-italic-semibold">no intervening window remains between commit and build,</span>
+                and such that no errors can arise without developers noticing them and correcting them immediately.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="widthBlock80 down80 text-left">
+        <div class="column paddingTop36">
+          Normal practice is to trigger these builds by every commit to a repository, rather than a periodically scheduled build.
+          The practicalities of doing this in a multi-developer environment of rapid commits are such that it is usual to trigger
+          a short time after each commit, then to start a build when either this timer expires, or after a rather longer interval
+          since the last build.
+        </div>
+      </div>
+      <img class="full-img down80" src="{{ asset('@images/v2/png/serverless-png.png') }}"/>
+    </div>
+  </div>
+
+  <div class="bg-gradient paddingTop61 paddingBottom61 center text-color-white">
+    <div class="container">
+      <div class="text-42 paddingBottom20">Continuous Deployment</div>
+      <div class="text-italic text-28">
+        Continuous Deployment is a software development practice in which <span class="text-italic-semibold">every code change goes through
+        the entire pipeline</span> and is put into production, automatically, resulting in many production deployments
+        every day.
+        In organizations like <span class="text-italic-semibold">Amazon</span> or <span class="text-italic-semibold">Google,</span>
+        software is deployed thousands of times each day.
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="up80 down80">
+      <div class="flex-row space">
+        <div class="flex-item-5">
+        <h5 class="text-42 paddingBottom20">Continuous Delivery</h5>
+          <p class="paddingBottom20 text28">
+            Continuous Delivery (CD) is a software engineering approach in which teams produce
+            software in short cycles, ensuring that the software can be reliably released at any time.
+          </p>
+          <p class="text28">
+            It aims at building, testing, and releasing software faster and more frequently.
+          </p>
+        </div>
+        <div class="flex-item-7 block-img pic-up small-img">
+          <div class="flex-row display-grid">
+            <div class="flex-item-5">
+              <img src="{{ asset('@images/v2/png/serverless_1.png') }}"/>
+            </div>
+            <div class="flex-item-7 what-is flex-column gradient-left-right green">
+              <div class="text-color-dark text-italic text-left">
+              <span class="text-color-white text-24">
+               The approach helps reduce the <span class="text-italic-semibold">cost, time, and risk of delivering changes</span> by allowing for
+                more incremental updates to applications in production. A straightforward and repeatable
+                deployment process is important for continuous delivery.
+              </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gray-block up80 down80">
+    <div class="container">
+      <div class="text-styles center">
+        <h3 class="text-color-green">good, better, best. never let it rest.</h3>
+        <h2 class="block-half">Private Equity Customers Find Better Business Results Through Cloud Services</h2>
+      </div>
+      <div class="flex-row pictures-block marginTop36 ">
+        <div class="flex-item-4 cols">
+          <div class="services flex-column">
+            <a href="../../services/">
+              <div class="hover-effect">
+                <img src="{{ asset('@images/v2/services/cloud-computing.svg') }}" alt="Cloud Services"/>
+              </div>
+              <h3>Cloud Services</h3>
+              <p>A simple way to access servers, storage, databases and a broad set of application
+                services over the internet.
+              </p>
+            </a>
+            <a class="read-more" href="../../services/">Learn More <i class="mdi mdi-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="flex-item-4 cols">
+          <div class="services flex-column">
+            <a href="/services/automation-infrastructure/">
+              <div class="hover-effect">
+                <img class="pictures" src="{{ asset('@images/v2/services/automation-infrastructure.svg') }}" alt="Automation of Infrastructure"/>
+              </div>
+              <h3>Automation of Infrastructure</h3>
+              <p>We help customers automate infrastructure build, deployment and management.</p>
+            </a>
+            <a class="read-more" href="/services/automation-infrastructure/">Learn More
+              <i class="mdi mdi-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="flex-item-4 cols">
+          <div class="services flex-column">
+            <a href="/services/automation-data/">
+              <div class="hover-effect">
+                <img class="pictures" src="{{ asset('@images/v2/services/automation-data.svg') }}" alt="Automation of Data"/>
+              </div>
+              <h3>Automation of Data</h3>
+              <p>We help customers automate data governance, data pipelines, data storage and compute.</p>
+            </a>
+            <a class="read-more" href="/services/automation-data/">Learn More
+              <i class="mdi mdi-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
