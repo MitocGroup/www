@@ -39,9 +39,9 @@ const commonStyles = [
   'styles/variables.scss',
   'styles/fonts.scss',
   'styles/base.scss',
-  'styles/main-page.scss',
+  'styles/main.scss',
   'styles/mixins.scss',
-  'styles/responsive-new.scss'
+  'styles/responsive.scss'
 ];
 
 const indexAssets = {
