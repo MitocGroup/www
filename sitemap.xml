@@ -125,6 +125,16 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://blog.mitocgroup.com/my-architecture-aws-control-tower-vs-aws-landing-zone-13c29332c499</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://blog.mitocgroup.com/stronger-security-with-terraform-module-for-aws-landing-zone-cbdb4e4df3d2</loc>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://blog.mitocgroup.com/terraform-module-components-for-aws-landing-zone-solution-c74267a0e70c</loc>
   <priority>0.90</priority>
   <changefreq>weekly</changefreq>
