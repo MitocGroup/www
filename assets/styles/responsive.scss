@@ -5,10 +5,16 @@
   .container {
     width: 750px;
   }
+  .blog-container {
+    width: 750px;
+  }
 }
 
 @media (min-width: 992px) {
   .container {
+    width: 950px;
+  }
+  .blog-container {
     width: 950px;
   }
 }
@@ -16,6 +22,9 @@
 @media (min-width: 1270px) {
   .container {
     width: 1246px;
+  }
+  .blog-container {
+    width: 1144px;
   }
 }
 
@@ -719,6 +728,35 @@
 }
 
 @media (max-width: 750px) {
+  .blogs {
+    a {
+      color: $main-color;
+      &:hover {
+        color: $dark-green !important;
+      }
+    }
+    .flex-item-6 {
+      max-width: 100%;
+      min-width: 100%;
+      padding-top: 20px;
+    }
+    .first-b {
+      padding: 0px 10px 20px;
+    }
+    .header-blog {
+      flex-direction: column;
+      .small-blogs {
+        padding-left: 0px !important;
+        .flex-row {
+          &:not(:last-child) {
+            &:before {
+              content: none !important;
+            }
+          }
+        }
+      }
+    } 
+  }
   .nav-scroll {
     width: 150px;
     padding: 0;

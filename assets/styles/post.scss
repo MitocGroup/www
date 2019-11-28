@@ -14,7 +14,7 @@
   padding: 30px 0;
   .initial-link {
     text-align: center;
-    color: rgba(0,0,0,0.7);
+    color: rgba(0, 0, 0, 0.7);
     font-family: 'CharterItalic', sans-serif;
     font-size: 20px;
     letter-spacing: 0.3px;
@@ -27,7 +27,7 @@
 }
 
 .u-maxWidth740 {
-  max-width: 740px!important;
+  max-width: 740px !important;
   margin-top: 20px;
   img {
     width: 100%;
@@ -51,14 +51,14 @@
     a {
       &:first-child {
         font-size: 16px;
-        color: rgba(0,0,0,.84);
+        color: rgba(0, 0, 0, 0.84);
         &:hover {
           text-decoration: underline;
         }
       }
     }
     p {
-      color: rgba(0,0,0,.54);
+      color: rgba(0, 0, 0, 0.54);
       font-family: 'Roboto-Regular', sans-serif;
       font-size: 14px;
       letter-spacing: 0.5px;
@@ -88,8 +88,8 @@
   height: 19px;
   line-height: 19px;
   padding: 0 10px;
-  border: 1px solid #02B875;
-  color: #1C9963;
+  border: 1px solid #02b875;
+  color: #1c9963;
   margin-left: 10px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -103,7 +103,7 @@
 .footer-post {
   margin-top: 20px;
   .line-up {
-    border-top: 1px solid rgba(0,0,0,.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
   .flex-row {
     margin-left: -20px;
@@ -122,15 +122,15 @@
     font-size: 21px;
     line-height: 24px;
     a {
-      color: rgba(0,0,0,.84);
+      color: rgba(0, 0, 0, 0.84);
       &:hover {
-        color: #1C9963;
+        color: #1c9963;
       }
     }
   }
   .p-footer {
     font-size: 16px;
-    color: rgba(0,0,0,.76);
+    color: rgba(0, 0, 0, 0.76);
   }
   .logo {
     img {
@@ -244,15 +244,15 @@
 .img-description {
   font-size: 16px;
   line-height: 1.4;
-  color: rgba(0,0,0,.68);
+  color: rgba(0, 0, 0, 0.68);
   padding-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
   a {
-    color: rgba(0,0,0,.68);
-    background-image: linear-gradient(to bottom,rgba(0,0,0,.68) 50%,rgba(0,0,0,0) 50%);
+    color: rgba(0, 0, 0, 0.68);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.68) 50%, rgba(0, 0, 0, 0) 50%);
     background-repeat: repeat-x;
-    background-size: 2px .1em;
+    background-size: 2px 0.1em;
     background-position: bottom;
     word-break: break-word;
   }
@@ -263,6 +263,7 @@
 }
 
 .post {
+  margin-bottom: 30px;
   h1 {
     --x-height-multiplier: 0.342;
     --baseline-multiplier: 0.22;
@@ -272,40 +273,40 @@
     line-height: 1.3;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" on;
+    -moz-font-feature-settings: 'liga' on;
   }
   .graf-gray {
-    color: rgba(0,0,0,0.54);
+    color: rgba(0, 0, 0, 0.54);
     padding-top: 5px;
   }
   .graf {
-    font-size: 21px;
-    line-height: 1.58;
-    letter-spacing: -.003em;
-    color: rgba(0,0,0,.84);
-    font-family: 'CharterRegular', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" on;
-    a {
-      font-family: 'CharterRegular', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -moz-font-feature-settings: "liga" on;
-      text-decoration: none;
-      color: rgba(0,0,0,.84);
-      background-image: linear-gradient(to bottom,rgba(0,0,0,.68) 50%,rgba(0,0,0,0) 50%);
-      background-repeat: repeat-x;
-      background-size: 2px .1em;
-      background-position: bottom;
-    }
-  }
+		font-size: 21px;
+		line-height: 1.58;
+		letter-spacing: -.003em;
+		color: rgba(0,0,0,.84);
+		font-family: '"Charter Regular", sans-serif';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-moz-font-feature-settings: "liga" on;
+		a {
+			font-family: '"Charter Regular", sans-serif';
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			-moz-font-feature-settings: "liga" on;
+			text-decoration: none;
+			color: rgba(0,0,0,.84);
+			background-image: linear-gradient(to bottom,rgba(0,0,0,.68) 50%,rgba(0,0,0,0) 50%);
+			background-repeat: repeat-x;
+			background-size: 2px .1em;
+			background-position: bottom;
+		}
+	}
   h3 {
     margin-top: 59px;
     font-size: 31px;
     margin-left: -2.13px;
     line-height: 1.15;
-    letter-spacing: -.015em;
+    letter-spacing: -0.015em;
     font-family: 'Roboto-Bold', sans-serif;
   }
   h4 {
@@ -313,7 +314,7 @@
     font-size: 26px;
     margin-left: -1.63px;
     line-height: 1.22;
-    letter-spacing: -.012em;
+    letter-spacing: -0.012em;
     font-family: 'Roboto-Bold', sans-serif;
   }
 }

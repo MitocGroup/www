@@ -1,0 +1,239 @@
+{% extends '../blog-post.twig' %}
+
+{% block content %}
+    <div class="small-container">
+        <p class="initial-link">
+        This article was initially published here:
+            <a href="https://medium.com/terrahub/terrahub-io-serverless-architecture-in-action-cc5f67cdb739" target="_blank" rel="noreferrer">https://medium.com/terrahub/terrahub-io-serverless-architecture-in-action-cc5f67cdb739</a>
+        </p>
+    </div>
+    <div class="container u-maxWidth740">
+        <h1>TerraHub.io Serverless Architecture in Action</h1>
+        <p class="graf-gray">August 27th, 2018 / 5 min read</p>
+        <p class="graf graf-up">
+            When we started working on <a href="https://github.com/TerraHubCorp/terrahub" alt="TerraHub on GitHub" target="_blank" rel="noreferrer">TerraHub CLI</a>,
+            our initial goal was to automate terraform execution
+            and allow customer to trigger runs in self-service mode, as part of their existing GitHub
+            and Jenkins pipelines. As any self respected engineering team working on automation,
+            we added relevant test cases to make the process reliable and sustainable.
+            Very proud of our accomplishment!
+        </p>
+        <p class="graf graf-grap">
+            But... Due to lack of knowledge or experience — and without casting any blame on anyone,
+            especially customer — our effort was fruitless and came kind of unnoticed,
+            which was a little bit of disappointment to our team. Nevertheless,
+            this experience helped us learn that visual representation of our work,
+            even though was almost nothing from our point of view, was highly regarded
+            and deeply appreciated by the customer. That was the starting point and the
+            real birth story of <a href="https://www.terrahub.io/">TerraHub.io</a>
+            — the DevOps Hub for Terraform Automation.
+        </p>
+
+        <h3>Introducing TerraHub.io</h3>
+        <p class="graf graf-up">
+            We have already made <a href="https://www.terrahub.io/blog/introducing-terrahub-io-devops-hub-for-terraform/">an introduction</a>
+            to TerraHub.io. In this article I would like to focus on under-the-hood aspects of this ecosystem, which consists of:
+        </p>
+        <ul class="graf graf--li graf-grap">
+            <li>
+                TerraHub CLI (hosted by <a href="https://github.com/TerraHubCorp/terrahub" alt="TerraHub on GitHub" target="_blank" rel="noreferrer">https://github.com/TerraHubCorp/terrahub</a>)
+            </li>
+            <li>
+                TerraHub API (hosted by <a href="https://www.terrahub.io">https://www.terrahub.io</a>)
+            </li>
+            <li>
+                TerraHub GUI (hosted by <a href="https://console.terrahub.io">https://console.terrahub.io</a>)
+            </li>
+        </ul>
+        <p class="graf graf-grap">
+            Learning from previous lessons, we wanted to make it easier for customers to understand and visualize our work.
+            Therefore we came up with below 3D architecture diagram in order to attempt showing each component in action:
+        </p>
+    </div>
+
+    <div class="u-maxWidth1000 sectionLayout">
+        <img src="{{ asset('@img/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png') }}" alt="TerraHub" />
+        <div class="center img-description">
+            TerraHub.io Serverless Architecture
+        </div>
+    </div>
+    <div class="container u-maxWidth740">
+        <h3>Deciding on Serverless Architecture</h3>
+        <p class="graf graf-up">
+            Our experience includes every major computing service on AWS: from VM-based EC2 and EB,
+            to container-based ECS and Fargate, and up to serverless-based Lambda and Glue.
+            And we always strive to go extra mile and do more with less.
+            Therefore, choosing serverless architecture for TerraHub.io wasn't even a debate,
+            but rather an unanimous agreement that we don't want to use something else.
+        </p>
+
+        <h4>TerraHub CLI</h4>
+        <p class="graf graf-grap">
+            Members of our team are constantly contributing to open source projects
+            (e.g. <a href="https://github.com/MitocGroup/deep-framework" target="_blank" rel="noreferrer">https://github.com/MitocGroup/deep-framework</a>).
+            We believe it helps us all to learn by solving real world problems and sharing solutions with others,
+            as well as being open to learn from others and become better.
+        </p>
+        <div class="layoutOutsetLeft">
+            <div class="floatleft">
+                <img src="{{ asset('@img/blog/2018-08-27/terrahub-cli.png') }}" alt="TerraHub CLI" />
+                <div class="center img-description">
+                    <a href="https://github.com/TerraHubCorp/terrahub" alt="TerraHub on GitHub" target="_blank" rel="noreferrer">https://github.com/TerraHubCorp/terrahub</a>
+                </div>
+            </div>
+            <p class="graf graf-up">
+                TerraHub CLI is one of those reusable solutions that we wanted to share with devops community.
+                The problem — Automated Workflow for Terraform — is surprisingly common and requires decent
+                effort to customize for specific needs. Fast forward, we ended up with a fully blown management tool that:
+            </p>
+
+            <ul class="graf graf--li graf-grap">
+                <li>
+                    Manages AWS, Google Cloud, Microsoft Azure and others in one place
+                </li>
+                <li>
+                    Manages VM-based, Containers, Serverless and others using one workflow
+                </li>
+                <li>
+                    Manages ALL cloud resources securely in customer's private networks
+                </li>
+                <li>
+                    Manages ALL terraform executions in one system using one CI &amp; CD process
+                </li>
+            </ul>
+            <p class="graf graf-grap">
+                TerraHub CLI is developed in Node.js and is published on npmjs.com.
+                The implementation of this tool can be broken down into 4 major components:
+            </p>
+            <ol class="graf graf-ol-li graf-grap">
+                <li>
+                    Core Source (reference: <a href="https://github.com/TerraHubCorp/terrahub/tree/master/src" target="_blank" rel="noreferrer">https://github.com/TerraHubCorp/terrahub/tree/master/src</a>)
+                </li>
+                <li>
+                    Commands (reference: <a href="https://github.com/TerraHubCorp/terrahub/tree/master/src/commands" target="_blank" rel="noreferrer">https://github.com/TerraHubCorp/terrahub/tree/master/src/commands</a>)
+                </li>
+                <li>
+                    Helpers (reference: <a href="https://github.com/TerraHubCorp/terrahub/tree/master/src/helpers" target="_blank" rel="noreferrer">https://github.com/TerraHubCorp/terrahub/tree/master/src/helpers</a>)
+                </li>
+                <li>
+                    Templates (reference: <a href="https://github.com/TerraHubCorp/terrahub/tree/master/src/templates" target="_blank" rel="noreferrer">https://github.com/TerraHubCorp/terrahub/tree/master/src/templates</a>)
+                </li>
+            </ol>
+            <p class="graf graf-grap">
+                Every script is logically interpreted and seamlessly executed under unified umbrella
+                of <a href="https://github.com/TerraHubCorp/terrahub/blob/master/bin/cli.js" target="_blank" rel="noreferrer">terrahub</a>
+                command line interface, or <a href="https://github.com/TerraHubCorp/terrahub/blob/master/bin/cli.js" target="_blank" rel="noreferrer">thub</a> alias.
+                All dependencies and associated metadata are defined in <a href="https://github.com/TerraHubCorp/terrahub/blob/master/package.json" target="_blank" rel="noreferrer">package.json</a>.
+            </p>
+
+            <h4>TerraHub API</h4>
+            <p class="graf graf-up">
+                Unfortunately, we were not able to solve all terraform limitations via solo TerraHub CLI.
+                Specifically, if I would like to share my terraform environment with <a href="https://www.linkedin.com/in/vursu" target="_blank" rel="noreferrer">Vlad</a>,
+                I would need to share with him all my credentials and replicate my security setup on his computer,
+                as well as consistently configure and deploy my cloud environment on his laptop.
+                To be clear, this is possible, but it's a lot of unnecessary work to fit into TerraHub CLI.
+            </p>
+            <p class="graf graf-grap">
+                In order to avoid this hassle, as well as save valuable time and big chunk of
+                computing resources on both my computer and Vlad's laptop, we engaged
+                the value and the beauty of the cloud. We have built a reusable collection
+                of TerraHub APIs (at the time of writing, API docs are still work in progress).
+            </p>
+        </div>
+    </div>
+    <div class="container u-maxWidth740">
+       <div class="width740Image">
+           <img src="{{ asset('@img/blog/2018-08-27/terrahub-api.png') }}" alt="TerraHub API" />
+           <div class="center img-description">
+               <a href="https://www.terrahub.io">https://www.terrahub.io</a>
+           </div>
+       </div>
+        <p class="graf graf-grap">
+            TerraHub API is using RESTful architecture to GET, POST, PUT and DELETE data via HTTP requests
+            (+TLS, obviously). We have built it using Node.js and have organized everything in several categories,
+            each category corresponding to associated provider of service (or services):
+        </p>
+        <ul class="graf graf--li graf-grap">
+            <li>
+                TerraHub Management (prefixed by <a href="https://www.terrahub.io/api/#/thub/">https://api.terrahub.io/v1/thub/</a>*)
+            </li>
+            <li>
+                GitHub Management (prefixed by <a href="https://www.terrahub.io/api/#/github/">https://api.terrahub.io/v1/github/</a>*)
+            </li>
+            <li>
+                AWS Management (prefixed by <a href="https://www.terrahub.io/api/#/aws/">https://api.terrahub.io/v1/aws/</a>*)
+            </li>
+        </ul>
+        <p class="graf graf-grap"><span class="uppercase">Very Important: </span>Although TerraHub Management APIs and AWS Management APIs are deployed in the same AWS account,
+           TerraHub API can provision and deploy AWS resources in the same AWS account (or multiple accounts),
+           as well as in different ones. This architecture allows us to use cloud native services and manage
+           AWS resources similar to managing Google Cloud resources or Microsoft Azure resources,
+           as well as GitHub or BitBucket, etc. If external service is available over HTTP,
+           TerraHub API will be able to integrate with it bidirectionally.
+        </p>
+        <p class="graf graf-grap"><span class="uppercase">Note: </span> I will intentionally skip describing TerraHub API architecture here
+            because I need TerraHub GUI context, which is described next.
+        </p>
+
+        <h4>TerraHub GUI</h4>
+        <p class="graf graf-up">
+            The most important value that we're adding to existing ecosystem is TerraHub GUI — also known as
+            TerraHub Console — the Graphical User Interface that simplifies and visualizes operations around
+            terraform management. This is the main reason why TerraHub.io is the DevOps Hub for Terraform Automation.
+        </p>
+        <div class="layoutOutsetLeft">
+            <div class="floatleft">
+                <img src="{{ asset('@img/blog/2018-08-27/terrahub-console.png') }}" alt="TerraHub Console" />
+                <div class="center img-description">
+                    <a href="https://console.terrahub.io">https://console.terrahub.io</a>
+                </div>
+            </div>
+            <p class="graf graf-up">
+                TerraHub Console is built using Vue.js and is packaged using Webpack.
+                The codebase and related assets are deployed as static hosting files on Amazon S3
+                and exposed to global CDN via Amazon CloudFront. Amazon Route53 works as global DNS
+                that routes <a href="https://www.terrahub.io/">www.terrahub.io</a> and <a href="https://console.terrahub.io/">console.terrahub.io</a>.
+            </p>
+            <p class="graf graf-grap">
+                Requests that are coming to TerraHub API on api.terrahub.io first hit Amazon API Gateway.
+                This service is integrated with Amazon Cognito and AWS Lambda authorizer
+                to protect unauthorized use of service.
+            </p>
+            <p class="graf graf-grap">
+                TerraHub Console authenticates with TerraHub API using JSON Web Token, also known as JWT.
+                Next, JWT is validated by AWS Lambda authorizer function and is checked against IAM policy
+                in Amazon Cognito if user is authorized to perform operation. On success,
+                validated request is further forwarded to integrated AWS Lambda function for computing.
+            </p>
+            <p class="graf graf-grap">
+                TerraHub CLI authenticated with TerraHub API using THUB token. Next, THUB is validated
+                by AWS Lambda authorizer function. On success, validated THUB is exchanged on valid JWT and,
+                similar to above process, is checked against IAM policy in Amazon Cognito. On success,
+                validated request is further forwarded to integrated AWS Lambda function for computing.
+            </p>
+        </div>
+    </div>
+    <div class="container u-maxWidth740">
+        <p class="graf graf-grap">
+            Does it work? Below picture says everything. See for yourself:
+        </p>
+    </div>
+    <div class="u-maxWidth1000 sectionLayout">
+        <img src="{{ asset('@img/blog/2018-08-27/terrahub-how-it-work.gif') }}" alt="How it work" />
+    </div>
+
+    <div class="container u-maxWidth740">
+        <h4>Final Thoughts</h4>
+        <p class="graf graf-up">
+            TerraHub.io is the DevOps Hub for Terraform Automation. We provide managed services
+            that simplify cloud resources management using terraform. If this is of your interest
+            and you'd like to learn more, please feel free to reach out over
+            <a href="mailto:hello@terrahub.io" target="_blank" rel="noopener">Email</a>,
+            <a href="https://twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer">Twitter</a> or
+            <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer">LinkedIn</a>.
+            We'd be happy to help!
+        </p>
+    </div>
+
+{% endblock %}

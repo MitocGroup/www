@@ -1,0 +1,114 @@
+{% extends '../blog-post.twig' %}
+
+{% block content %}
+    <div class="small-container">
+        <p class="initial-link">
+        This article was initially published here:
+            <a href="https://medium.com/terrahub/terrahub-io-serverless-computing-london-time-to-make-terraform-serverless-friendly-fc2a3ce5498" target="_blank" rel="noreferrer">https://medium.com/terrahub/terrahub-io-serverless-computing-london-time-to-make-terraform-serverless-friendly-fc2a3ce5498</a>
+        </p>
+    </div>
+    <div class="container u-maxWidth740">
+        <h1>TerraHub.io &#64; Serverless Computing London: Time To Make Terraform Serverless Friendly</h1>
+        <p class="graf-gray">September 10th, 2018 / 3 min read</p>
+        <p class="graf graf-up">
+            In two months, I will be joining my peers at <a href="https://serverlesscomputing.london/" target="_blank" rel="noreferrer">Serverless Computing London</a> conference and
+            discussing several topics dear to my engineering heart — Terraform and Serverless.
+            Terraform is highly descriptive, which makes its bigger codebase pretty difficult
+            to manage at scale when it comes to serverless architectures.
+            But the same goes for AWS CloudFormation and that didn't stop Amazon Web Services
+            to build <a href="https://github.com/awslabs/serverless-application-model" target="_blank" rel="noreferrer">Serverless Application Model</a> (aka AWS SAM) on top of it.
+            Despite the fact that <a href="https://www.terraform.io/docs/providers/aws/guides/serverless-with-aws-lambda-and-api-gateway.html" target="_blank" rel="noreferrer">terraform supports serverless</a>, it is almost never a choice among engineers.
+            In this article, I would like to discuss several opportunities where using terraform
+            for serverless applications could have been an option. And, in the same context,
+            I would argue that it is <span class="bold">Time to Make Terraform Serverless Friendly</span>.
+        </p>
+        <h3>New10 at AWS Summit</h3>
+    </div>
+    <div class="u-maxWidth1000 sectionLayout">
+        <img src="{{ asset('@img/blog/2018-09-10/aws-summit.png') }}" alt="AWS Summit" />
+        <div class="center img-description">
+            <a href="https://www.youtube.com/watch?v=ZjAmhKszMoM&t=23m25s" target="_blank" rel="noreferrer">https://www.youtube.com/watch?v=ZjAmhKszMoM&t=23m25s</a>
+        </div>
+    </div>
+    <div class="container u-maxWidth740">
+        <p class="graf graf-grap">
+            During the keynote with Dr. Vogels at AWS Summit Benelux 2018, the CTO of New10 and pretty sharp guy,
+            <a href="https://www.linkedin.com/in/jaap-boersma/" target="_blank" rel="noreferrer">Jaap Boersma</a>, presented their startup's architecture (see picture above).
+            It was interesting to observe a very clear separation between terraform managed resources and serverless ones. Unfortunately I have missed the opportunity to ask him directly why terraform wasn't considered for serverless use cases. Maybe because it takes much more extra work to get it up and running compared to other shiny tools that work well out of the box.
+        </p>
+        <p class="graf graf-grap">
+            The reality is both terraform and serverless framework provide similar developer experience
+            in terms of provisioning and deploying cloud resources to AWS. I get it, as engineers and code creators,
+            we usually choose reusable pieces and choose to worry later about complexity.
+            I wonder if New10 team would have used terraform for their serverless application
+            if there was some kind of existing reusable terraform code.
+        </p>
+        <h3>Accenture at ServerlessConf</h3>
+    </div>
+    <div class="u-maxWidth1000 sectionLayout">
+        <img src="{{ asset('@img/blog/2018-09-10/continuous_delivery.png') }}" alt="Accenture at ServerlessConf" />
+        <div class="center img-description">
+            <a href="https://www.youtube.com/watch?v=ZIpzS8dL4h4&t=12m10s" target="_blank" rel="noreferrer">https://www.youtube.com/watch?v=ZIpzS8dL4h4&t=12m10s</a>
+        </div>
+    </div>
+    <div class="container u-maxWidth740">
+        <p class="graf graf-grap">
+            Another smart individual and engineer at core,
+            <a href="https://www.linkedin.com/in/thomaswmyers/" target="_blank" rel="noreferrer">Tom Myers</a>
+            from Accenture Cloud Platform (see picture above),
+            addressed very well the challenges with DevOps Model in the Enterprise at ServerlessConf 2017 in Austin,
+            Texas. The simplicity and speed of serverless approach benefits primarily new and greenfield applications,
+            while in contrast the use of terraform creates a bridge between legacy and innovation. In my humble opinion,
+            there was a missed opportunity to discuss terraform's capability to manage serverless workloads
+            in the same way engineers manage servers or containers. I guess, since it's a serverless event,
+            nobody talks about servers unless his name is Tim Wagner :)
+        </p>
+        <p class="graf graf-grap">
+            Our humble experience with enterprise customers include incredible solutions that touch both worlds.
+            When we are talking about migration use cases where usually lift and shift from on-prem data centers
+            to the cloud, we usually think of terraform because of easy learning curve and wide variety of support.
+            On the other hand, when we are talking about building new capabilities that are cloud native,
+            we ignore terraform because it's harder to get you started and quickly becomes an operational
+            nightmare when key player (or players) leave the team. Enterprises are the most complex and most
+            interesting consumers of terraform and serverless, and I'm still surprised that they must decide
+            one versus the other.
+        </p>
+        <h3>TerraHub.io at Serverless Computing</h3>
+        <p class="graf graf-grap">
+            All these experiences with both terraform and serverless inspired our team to go above and beyond
+            existing capabilities. We helped several customers with several serverless use cases that just
+            adding extra tooling on top of existing terraform was not an easy choice. For example,
+            major insurance company built a process to deploy VM-based infrastructure on AWS using terraform.
+            When one of their developers introduced Lambda functions in that workflow,
+            they worked with us to reuse their existing highly regulated process and deploy it as
+            it would be an EC2 instance. At the end of the day, it's an API call to an API endpoint
+            that uses the same process across both use cases. More importantly,
+            this process was successfully audited and internally approved by security and compliance teams.
+        </p>
+        <p class="graf graf-grap">
+            I would like to invite you to argue with me (or against me) that it is
+            <span class="bold">time to make terraform serverless friendly</span>.
+            We are doing it! Care to join us?
+        </p>
+    </div>
+    <div class="u-maxWidth1000 sectionLayout">
+        <img src="{{ asset('@img/blog/2018-09-10/serverless_computing.png') }}" alt="Serverless Computing" />
+        <div class="center img-description">
+            <a href="https://serverlesscomputing.london/sessions/time-make-terraform-serverless-friendly/" target="_blank" rel="noreferrer">
+                https://serverlesscomputing.london/sessions/time-make-terraform-serverless-friendly/</a>
+        </div>
+    </div>
+    <div class="container u-maxWidth740">
+        <h4>Final Thoughts</h4>
+        <p class="graf graf-up">
+            TerraHub.io is the DevOps Hub for Terraform Automation. We provide managed services
+            that simplify cloud resources management using terraform. If this is of your interest
+            and you'd like to learn more, please feel free to reach out over
+            <a href="mailto:hello@terrahub.io" target="_blank" rel="noopener">Email</a>,
+            <a href="https://twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer">Twitter</a> or
+            <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer">LinkedIn</a>.
+            We'd be happy to help!
+        </p>
+    </div>
+
+{% endblock %}

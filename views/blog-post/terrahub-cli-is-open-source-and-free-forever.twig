@@ -1,0 +1,133 @@
+{% extends '../blog-post.twig' %}
+
+{% block content %}
+    <div class="small-container">
+        <p class="initial-link">
+        This article was initially published here:
+            <a href="https://medium.com/terrahub/terrahub-cli-is-open-source-and-free-forever-c866229ac0c9" target="_blank" rel="noreferrer">https://medium.com/terrahub/terrahub-cli-is-open-source-and-free-forever-c866229ac0c9</a>
+        </p>
+    </div>
+    <div class="container u-maxWidth740">
+        <h1>TerraHub CLI is Open Source and Free Forever</h1>
+        <p class="graf-gray">September 4th, 2018 / 3 min read </p>
+        <div class="layoutOutsetLeft">
+            <div class="floatleft">
+                <img src="{{ asset('@img/blog/2018-09-04/terrahub-cli.png') }}" alt="TerraHub CLI" />
+                <div class="center img-description">
+                    <a href="https://github.com/TerraHubCorp/terrahub" alt="TerraHub on GitHub" target="_blank" rel="noreferrer">https://github.com/TerraHubCorp/terrahub</a>
+                </div>
+            </div>
+            <p class="graf graf-up">
+                TerraHub is a terraform centric devops tool that simplifies provisioning and management
+                at scale of cloud resources and cloud services across multiple cloud accounts.
+                The core and fundamental component of
+                <a href="https://www.terrahub.io/blog/introducing-terrahub-io-devops-hub-for-terraform/">
+                    newly introduced</a> TerraHub.io ecosystem is TerraHub CLI.
+                Developed in Node.js and published on npmjs.com,
+                I thought this tool deserves a special treatment and in depth explanations.
+            </p>
+            <p class="graf graf-grap">
+                In this article, I'll try to explain what TerraHub CLI is and what it isn't,
+                how does it work with terraform and what kind of effort it requires to start using
+                it in existing environment(s). And, the most important, TerraHub CLI is Open Source and Free Forever!
+            </p>
+        </div>
+        <h3>What Is TerraHub CLI?</h3>
+        <p class="graf graf-up">
+            TerraHub CLI is the central piece that puts terraform automation in motion. The main goal
+            is to simplify and make it easier to create and execute terraform. Commands are group in three categories:
+        </p>
+        <ol class="graf graf-ol-li graf-grap">
+            <li>
+                TerraHub Management — manages all devops aspects related to terraform configurations like projects,
+                components, templates and
+            </li>
+            <li>
+                Terraform Execution — manages all devops aspects related to distributed execution of
+                terraform configurations like init, plan, apply or destroy
+            </li>
+            <li>
+                Cloud Automation — manages all devops aspects related to automation and testing,
+                as well as visualization of resources and automated processes
+            </li>
+        </ol>
+        <p class="graf graf-grap">
+            TerraHub CLI works overall as a management layer on top of terraform.
+            If existing terraform code is functional in manual mode,
+            TerraHub CLI will make it operational and functional in automated mode.
+            Current users of TerraHub CLI use it as part of their existing GitHub and Jenkins pipelines.
+        </p>
+        <h3>What TerraHub CLI Is NOT?</h3>
+        <p class="graf graf-up">TerraHub CLI is ...</p>
+        <ul class="graf graf--li graf-grap">
+            <li>NOT a replacement of terraform commands and terraform configurations</li>
+            <li>
+                NOT a development tool that helps create terraform modules and artifacts
+            </li>
+            <li>
+                NOT a testing framework that overwrites existing terraform testing capabilities
+            </li>
+            <li>
+                NOT altering existing terraform code for the benefit of automation
+            </li>
+            <li>
+                NOT sending any data to TerraHub API or any other APIs by default
+            </li>
+        </ul>
+        <p class="graf graf-grap">
+            If, sometimes in the future, terraform will provide native capabilities for distributed execution
+            and/or automation with built-in continuous delivery, simply remove <span class="italic">.terrahub.yml</span>
+            config files from your codebase and never worry about TerraHub CLI ever again.
+        </p>
+        <h3>How Does TerraHub CLI Work with Terraform?</h3>
+        <p class="graf graf-up">
+            Basically, TerraHub CLI generates <span class="italic">.terrahub.yml</span> configuration files across existing terraform
+            codebase that allows specific <span class="italic">terrahub</span> commands to properly form corresponding terraform
+            commands and execute them. For example, <span class="italic">terrahub init</span> will find all <span class="italic">.terrahub.yml</span> files,
+            create the list of components and for each component will execute <span class="italic">terraform init</span> with
+            corresponding options and variables defined in each config file.
+        </p>
+        <p class="graf graf-grap">
+            One of the challenges that kept us busy for a while is tfstate management, specifically local vs remote.
+            Another challenge worth mentioning is credentials injection for each component execution.
+            Last, but not the least, log streaming and consolidation can be improved,
+            but is fully functional and pretty useful when something goes wrong.
+        </p>
+        <h3>What Kind of Effort TerraHub CLI Requires?</h3>
+        <p class="graf graf-up">
+            I would argue that TerraHub CLI doesn't require ANY effort to get started. Below,
+            in three steps, you can see all basic capabilities:
+        </p>
+        <h4>Step 1: Define New Project</h4>
+        <p class="graf graf-up">
+            For the purpose of this article, I took my Security_Terraform repository
+            (which is private for obvious reasons) and kept only 3 terraform folders:
+        </p>
+        <script src="https://gist.github.com/eistrati/61d128bbeaad82aea5f9d7636ec4c214.js"></script>
+        <h4>Step 2: Map All Components</h4>
+        <p class="graf graf-up">
+            After mapping Security_Terraform folder as TerraHub project, next step is to map all terraform
+            configurations as TerraHub components:
+        </p>
+        <script src="https://gist.github.com/eistrati/6539ac455c752a347eefd81b8cfdc666.js"></script>
+        <h4>Step 3: Run Automation</h4>
+        <p class="graf graf-up">
+            Finally, when all <span class="italic">.terrahub.yml</span> files are in place, I can run my automation as simple as this:
+        </p>
+        <script src="https://gist.github.com/eistrati/9e197a76707b0752de818354cec6d50b.js"></script>
+        <p class="graf graf-grap">And that's pretty much it.</p>
+    </div>
+    <div class="container u-maxWidth740">
+        <h4>Final Thoughts</h4>
+        <p class="graf graf-up">
+            TerraHub.io is the DevOps Hub for Terraform Automation. We provide managed services
+            that simplify cloud resources management using terraform. If this is of your interest
+            and you'd like to learn more, please feel free to reach out over
+            <a href="mailto:hello@terrahub.io" target="_blank" rel="noopener">Email</a>,
+            <a href="https://twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer">Twitter</a> or
+            <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer">LinkedIn</a>.
+            We'd be happy to help!
+        </p>
+    </div>
+
+{% endblock %}

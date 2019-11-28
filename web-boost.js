@@ -1,8 +1,14 @@
-'use strict';
+'use strict'
+
+const path = require('path')
+const fs = require('fs')
+const postsContent = fs.readFileSync('static/json/posts.json')
+const postsListObject = JSON.parse(postsContent)
 
 const defaultVariables = {
   title: 'Mitoc Group',
-  description: 'Mitoc Group is a technology company focusing on automation using cloud native services. Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.',
+  description:
+    'Mitoc Group is a technology company focusing on automation using cloud native services. Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.',
   author: 'https://twitter.com/@eistrati',
   publisher: 'MitocGroup.com',
   company: 'Mitoc Group Inc.',
@@ -23,7 +29,7 @@ const defaultVariables = {
   tw_handle: '@MitocGroup',
   image_tw: 'https://www.mitocgroup.com/images/cover-tw.png',
   image_fb: 'https://www.mitocgroup.com/images/cover-fb.png'
-};
+}
 
 const commonScripts = [
   'js/libs/jquery.min.js',
@@ -32,7 +38,7 @@ const commonScripts = [
   'js/libs/lazysizes.min.js',
   'js/modal-effects.js',
   'js/main.js'
-];
+]
 
 const commonStyles = [
   'styles/libs/materialdesignicons.min.css',
@@ -42,48 +48,48 @@ const commonStyles = [
   'styles/main.scss',
   'styles/mixins.scss',
   'styles/responsive.scss'
-];
+]
 
 const indexAssets = {
   'js/index.min.js': [...commonScripts, 'js/libs/slick.min.js', 'js/carousel.js'],
   'css/index.min.css': [...commonStyles, 'styles/libs/slick.min.css', 'styles/libs/slick-theme.min.css']
-};
+}
 
 const commonAssets = {
   'js/common.min.js': [...commonScripts, 'js/scroll.js'],
   'css/common.min.css': commonStyles
-};
+}
 
 const servicesAssets = {
   'js/services.min.js': commonScripts,
   'css/services.min.css': [...commonStyles, 'styles/services.scss']
-};
+}
 
 const partnersAssets = {
   'js/partners.min.js': commonScripts,
   'css/partners.min.css': [...commonStyles, 'styles/partners.scss']
-};
+}
 
 const adtechmediaAssets = {
   'js/adtechmedia.min.js': ['js/libs/bodymovin.min.js', 'js/animation.js'],
   'js/common.min.js': commonScripts,
   'css/common.min.css': commonStyles
-};
+}
 
 const aboutAssets = {
   'js/about.min.js': commonScripts,
   'css/about.min.css': [...commonStyles, 'styles/about.scss']
-};
+}
 
 const blogAssets = {
   'js/blog.min.js': [...commonScripts, 'js/libs/highlight.pack.min.js', 'js/blog.js'],
   'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
-};
+}
 
 const contactAssets = {
   'js/contact.min.js': commonScripts,
   'css/contact.min.css': [...commonStyles, 'styles/contact.scss']
-};
+}
 
 let routes = {
   '/': {
@@ -279,8 +285,94 @@ let routes = {
     view: 'blog/index.twig',
     vars: {
       ...defaultVariables,
+      postsListObject,
       title: 'Blog Articles | ' + defaultVariables.title,
-      href: defaultVariables.url + '/blog/'
+      href: defaultVariables.url + '/blog/',
+      author: 'https://twitter.com/@eistrati',
+      href: '/blog/',
+      image: '/images/blog/2018-08-12/dashboard.png',
+      description:
+        'TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.',
+      publisher: 'https://www.facebook.com/TerraHubCorp',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      fb_brand: 'TerraHub',
+      fb_type: 'website',
+      tw_handle: '@TerraHubCorp',
+      tw_type: 'summary_large_image',
+      // blogs: [
+      //   {
+      //     featured: 1,
+      //     date: 'June 17th, 2019',
+      //     image: '/images/blog/2019-06-17/aws-landing-zone.png',
+      //     href: '/blog/introducing-programmatic-aws-landing-zone-as-terraform-module/',
+      //     title: 'Introducing Programmatic AWS Landing Zone as Terraform Module',
+      //     description:
+      //       'AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices.'
+      //   },
+      //   {
+      //     featured: 4,
+      //     date: 'October 19th, 2018',
+      //     image: '/images/blog/2018-10-19/build-code-containers-python.png',
+      //     href: '/blog/terraform-for-serverless-series-enhanced-management-of-aws-fargate-tasks/',
+      //     title: 'Terraform for Serverless Series: Enhanced Management of AWS Fargate Tasks',
+      //     description:
+      //       'According to official website AWS Fargate is a compute engine for Amazon ECS that allows you to run containers without having to manage servers or clusters. In this article I will provide some magic around how to build terraform configurations that provision and deploy serverless containers.'
+      //   },
+      //   {
+      //     featured: 0,
+      //     date: 'September 28th, 2018',
+      //     image: '/images/blog/2018-09-28/build-code-terraform-bash.png',
+      //     href: '/blog/terraform-for-serverless-series-enhanced-management-of-amazon-s3-websites/',
+      //     title: 'Terraform for Serverless Series: Enhanced Management of Amazon S3 Websites',
+      //     description:
+      //       'Last week I started working on a new series of stories focused on terraform for serverless. Today I would like to double down on this approach and describe in details how our team provisions and deploys Amazon S3 with website hosting feature for static web pages or single page applications.'
+      //   },
+      //   {
+      //     featured: 0,
+      //     date: 'September 19th, 2018',
+      //     image: '/images/blog/2018-09-19/build-code-nodejs-javascript.png',
+      //     href: '/blog/terraform-for-serverless-series-enhanced-management-of-aws-lambda-functions/',
+      //     title: 'Terraform for Serverless Series: Enhanced Management of AWS Lambda Functions',
+      //     description:
+      //       "I quickly became fascinated by terraform's simplicity and ease of use. As an engineer, you can tell when a tool just works"
+      //   },
+      //   {
+      //     featured: 0,
+      //     date: 'September 10th, 2018',
+      //     image: '/images/blog/2018-09-10/serverless_computing.png',
+      //     href: '/blog/terrahub-io-serverless-computing-london/',
+      //     title: 'TerraHub.io - Serverless Computing London: Time To Make Terraform Serverless Friendly',
+      //     description:
+      //       'I would like to invite you to argue with me (or against me) that it is time to make terraform serverless friendly'
+      //   },
+      //   {
+      //     featured: 0,
+      //     date: 'September 4th, 2018',
+      //     image: '/images/blog/2018-09-04/terrahub-cli.png',
+      //     href: '/blog/terrahub-cli-is-open-source-and-free-forever/',
+      //     title: 'TerraHub CLI is Open Source and Free Forever',
+      //     description:
+      //       'TerraHub is a terraform centric devops tool that simplifies provisioning and management at scale of cloud resources and cloud services across multiple cloud accounts'
+      //   },
+      //   {
+      //     featured: 3,
+      //     date: 'August 27th, 2018',
+      //     image: '/images/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png',
+      //     href: '/blog/terrahub-io-serverless-architecture-in-action/',
+      //     title: 'TerraHub.io Serverless Architecture in Action',
+      //     description:
+      //       'When we started working on TerraHub CLI, our initial goal was to automate terraform execution and allow customer to trigger runs in self-service mode, as part of their existing GitHub and Jenkins pipelines'
+      //   },
+      //   {
+      //     featured: 2,
+      //     date: 'August 12th, 2018',
+      //     image: '/images/blog/2018-08-12/dashboard.png',
+      //     href: '/blog/introducing-terrahub-io-devops-hub-for-terraform/',
+      //     title: 'Introducing TerraHub.io — DevOps Hub for Terraform',
+      //     description:
+      //       'Over the last couple of months we have been working with several customers to reduce the development burden of terraform configuration and simplify the operational complexity of terraform automated workflows'
+      //   }
+      // ]
     },
     assets: blogAssets
   },
@@ -319,7 +411,28 @@ let routes = {
     },
     assets: commonAssets
   }
-};
+}
+
+Object.keys(postsListObject).forEach(key => {
+  let postPath = `/blog/${key}/`
+  const { Featured, Author, AboutAuthor, PublicationDate, Title, Intro, htmlCode } = postsListObject[key]
+  const event = new Date(PublicationDate);
+  const options = { month: 'short', day: 'numeric', year: 'numeric' };
+
+  routes[postPath] = {
+    view: 'blog/post.twig',
+    vars: {
+      ...defaultVariables,
+      Featured,
+      Author,
+      AboutAuthor,
+      PublicationDate: event.toLocaleDateString('en-EN', options),
+      Title,
+      Intro,
+      htmlCode
+    }
+  }
+});
 
 module.exports = {
   server: {
@@ -327,4 +440,4 @@ module.exports = {
     ignorePatterns: ['.idea', '.git', 'bin', 'backend', 'build']
   },
   routes: routes
-};
+}

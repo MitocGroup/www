@@ -4,8 +4,15 @@
 .gray-blog {
   font-size: 14px;
   font-weight: 100;
-  font-family: 'Helvetica-Regular', sans-serif;
+  font-family: '"Helvetica-Regular", sans-serif';
   color: rgba(64, 74, 109, 0.5);
+}
+
+.blog-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .blogs {
@@ -33,7 +40,13 @@
   }
   .flex-column {
     .learn-more-b {
-      margin-top: auto;
+      margin-top: 10px;
+      a {
+        color: $main-color;
+        &:hover {
+          color: $dark-green;
+        }
+      }
     }
   }
   .header-blog {
@@ -63,6 +76,7 @@
     }
     .small-blogs {
       padding-left: 20px;
+
       img {
         &:hover {
           opacity: 0.7;
@@ -86,7 +100,11 @@
           .flex-column {
             height: 100%;
             .learn-more {
+              color: $main-color !important;
               margin-top: auto;
+              &:hover {
+                color: $dark-green !important;
+              }
             }
           }
         }
@@ -142,27 +160,29 @@
       }
     }
   }
-  h1, h2, h4 {
-    font-family: 'Helvetica-Regular', sans-serif;
+  h1,
+  h2,
+  h4 {
+    font-family: '"Helvetica-Regular", sans-serif';
     color: $dark-green;
     font-size: 24px;
     font-weight: 100;
   }
   h3 {
-    font-family: 'Helvetica-Regular', sans-serif;
+    font-family: '"Helvetica-Regular", sans-serif';
     font-weight: 100;
     color: $dark-green;
     font-size: 19px;
     line-height: 28px;
     cursor: pointer;
   }
-  h1, h4 {
+  h1,
+  h4 {
     margin-bottom: 30px;
   }
   .blog-post {
-    font-family: 'Helvetica-Regular', sans-serif;
+    font-family: '"Helvetica-Regular", sans-serif';
     font-size: 16px;
-    color: $main-color;
     line-height: 26px;
   }
   &.all-blocks {
@@ -188,7 +208,10 @@
           padding-top: 27px;
         }
         .learn-more-b {
-          margin-top: auto;
+          margin-top: 10px;
+          &:hover {
+            color: $dark-green !important;
+          }
         }
       }
     }
@@ -228,11 +251,11 @@
 }
 
 .subscribe {
-  background-color: #FBF9F9;
+  background-color: #fbf9f9;
   padding-left: 20px;
   padding-right: 20px;
   .blog-subscribe {
-    background-image: url(../img/background-blog.svg);
+    background-image: url(../images/background-blog.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -248,7 +271,7 @@
       p {
         padding-top: 28px;
         color: rgba(64, 74, 109, 0.5);
-        font-family: 'Helvetica-Regular', sans-serif;
+        font-family: '"Helvetica-Regular", sans-serif';
         font-size: 14px;
         font-weight: 100;
       }
@@ -256,27 +279,157 @@
   }
   .input_button {
     .btn-circle {
+      position: absolute;
+      display: inline-block;
+      right: 3px;
+      top: 3px;
+      height: 100%;
+      width: 111px;
+      border-radius: 100px;
+      text-align: center;
+      cursor: pointer;
       i {
+        display: inline-block;
         width: 111px;
+        height: calc(100% - 6px);
+        font-size: 12px;
+        color: $white-color;
+        background-color: $main-color;
+        font-weight: bold;
+        -webkit-transition: 0.4s ease-in-out;
+        -moz-transition: 0.4s ease-in-out;
+        -o-transition: 0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
         -webkit-border-radius: 100px;
         -moz-border-radius: 100px;
         border-radius: 100px;
         text-align: right;
         padding-right: 20px;
         position: relative;
+
+        &:hover {
+          background: $dark-green;
+        }
         &:after {
           content: 'Subscribe';
           position: absolute;
-          left: 20px;
-          font-family: 'Helvetica-Regular', sans-serif;
-          font-weight: 100;
-          font-size: 14px;
-          top: -3px;
+          left: 25px;
+          font-family: '"Helvetica-Regular", sans-serif';
+          font-weight: 50;
+          font-size: 15px;
+          top: 10px;
         }
       }
     }
     &:before {
       top: 10px;
+    }
+  }
+  .input {
+    &:hover {
+      border-color: $dark-green;
+    }
+  }
+}
+
+.input_button {
+  position: relative;
+  display: block;
+  &:focus-within {
+    &:before {
+      color: $main-color;
+    }
+  }
+  &.focus_input {
+    &:before {
+      color: $main-color;
+    }
+    &:before {
+      color: $main-color;
+    }
+  }
+  &:before {
+    content: '\f1d8';
+    position: absolute;
+    color: rgba(64, 74, 109, 0.4);
+    display: inline-block;
+    font-family: 'FontAwesome';
+    z-index: 5;
+    top: 17px;
+    left: 15px;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+  }
+}
+
+.input {
+  font-size: 14px;
+  -webkit-appearance: textfield;
+  height: 44px;
+  width: 100%;
+  border: 1px solid rgba(64, 74, 109, 0.1);
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  padding-left: 48px;
+  padding-right: 60px;
+  color: #1a2858;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.title-green {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  word-spacing: 5px;
+  color: $main-color;
+  font-family: 'RobotoMono-Medium', monospace;
+  padding-bottom: 19px;
+  letter-spacing: 1px;
+}
+
+.bullets {
+  text-align: center;
+  padding-bottom: 19px;
+  padding-top: 10px;
+  li {
+    &:before {
+      content: '•';
+      color: $main-color;
+    }
+    display: inline-block;
+    width: 1em;
+  }
+}
+
+.info-text {
+  font-size: 24px;
+  font-family: 'RobotoSlab-Regular', sans-serif;
+  color: $dark-color;
+  max-width: 599px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.input-hover {
+  &:hover {
+    &:before {
+      color: $main-color;
+    }
+  }
+  &.type {
+    &:before {
+      color: $main-color;
+    }
+    &:before {
+      color: $main-color;
     }
   }
 }
@@ -286,7 +439,7 @@
   margin-top: 23px;
   a {
     color: $main-color;
-    font-family: 'Helvetica-Light', sans-serif;
+    font-family: '"Helvetica-Regular", sans-serif';
     font-size: 16px;
     padding: 8px 13px;
     &:first-child {
@@ -300,7 +453,7 @@
     }
     span {
       color: $blue-color;
-      font-family: 'Helvetica-Light', sans-serif;
+      font-family: '"Helvetica-Regular", sans-serif';
       font-size: 15px;
     }
     &.active {
