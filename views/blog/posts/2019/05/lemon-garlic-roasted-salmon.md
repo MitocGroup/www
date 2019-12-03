@@ -1,58 +1,25 @@
-# Title
-Lemon Garlic Roasted Salmon
-
-# Images
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-roasted-salmon/SalmonR-22.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-roasted-salmon/SalmonR-1.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-roasted-salmon/SalmonR-3.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-roasted-salmon/SalmonR-10.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-roasted-salmon/SalmonR-12.jpg
-
-# Metadata
-- Diet:Gluten Free
-- Diet:Dairy Free
-- Diet:Grain Free
-- Diet:Nut Free
-- Diet:Refine Sugar-Free
-- Diet:Egg Free
-- Diet:Pescatarian
-- Dish:Lunch
-- Dish:Dinner
-- Dish:Entree
-- Season:Summer
-- Season:Fall
-- Season:Winter
-- Season:Spring
-- FastSimple:20 minutes
-- FastSimple:5 ingredients
-
-# About
-Salmon comes out juicy, flaky and absolutely delicious. The best part? it takes only 15 minutes to make!
-
-This is my absolute favorite dish, it is simple, has only 5 ingredients and is done in 15 minutes. Did I mention it is healthy too? 
-Wild Salmon is loaded with numerous health benefits, like improving cardiovascular health due to being rich in Omega-3 fatty acids and 
-potassium, it is a good source of vitamin B complex, promotes brain health and many more. I always recommend wild salmon over farmed one 
-as it has far less potentially harmful contaminants, however given the many health benefits, any type of salmon is still considered a 
-healthy food. 
-This recipe for Lemon Garlic Roasted Salmon comes out perfect every time, it is fail proof! The process is pretty simple, just assemble 
-the marinade, brush it on the salmon and roast then broil it.  Serve it alongside a green salad, roasted potatoes or other vegetables. 
-Enjoy!
+# Featured
+0
 
 # Author
-Blooming Aprons
+eistrati
 
-# PrepTime
-3 min
+# AboutAuthor
+Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp. 
 
-# CookTime
-12-15 min
+# PublicationDate
+Sun, 29 May 2019 12:12:55 -0400
 
-# TotalTime
-15 min
+# Thumbnail
+/images/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png
 
-# Servings
-4
+# Title
+Introducing Programmatic AWS Landing Zone as Terraform Module
 
+# Intro
+AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices.
+
+---
 # Ingredients
 - 4 Wild Salmon Fillets (about 1 lb)
 - 2 tbsp olive oil

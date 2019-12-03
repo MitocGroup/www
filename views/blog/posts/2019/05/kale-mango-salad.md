@@ -8,7 +8,7 @@ eistrati
 Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp. 
 
 # PublicationDate
-Sat, 28 May 2019 12:12:55 -0400
+Fri, 28 June 2019 12:12:55 -0400
 
 # Thumbnail
 /images/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png

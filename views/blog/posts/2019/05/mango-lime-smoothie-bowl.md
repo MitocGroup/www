@@ -1,28 +1,24 @@
+# Featured
+0
+
+# Author
+eistrati
+
+# AboutAuthor
+Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp. 
+
+# PublicationDate
+Mon, 28 January 2019 12:12:55 -0400
+
+# Thumbnail
+/images/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png
+
 # Title
-Mango Lime Smoothie Bowl
+Introducing Programmatic AWS Landing Zone as Terraform Module
 
-# Images
-<!-- raw image -->
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-lime-smoothie-bowl/MangoLime-1.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-lime-smoothie-bowl/MangoLime-4.jpg
-
-# Metadata
-- Diet:Gluten Free
-- Diet:Dairy Free
-- Diet:Vegan
-- Diet:Grain Free
-- Diet:Raw
-- Diet:Nut Free
-- Diet:Refine Sugar-Free
-- Diet:Egg Free
-- Dish:Breakfast
-- Dish:Smoothie
-- Season:Summer
-- Season:Fall
-- Season:Winter
-- Season:Spring
-- FastSimple:10 minutes
-- FastSimple:10 ingredients
+# Intro
+AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices.
+---
 
 # About
 This is our go to recipe for a quick and delicious breakfast.  It is full of nutrients, antioxidants and 
@@ -30,6 +26,12 @@ superfoods.
 
 All the greens and deliciousness in one bowl. Having Smoothies and Smoothie Bowls for breakfast is a great way to add more greens to your diet and boost your antioxidant and nutrient intake. It is also makes for a quick and easy breakfast and is good on the go as well! 
 The combination of mango with lime juice and coconut water makes this smoothie super fresh and tropical. Lime zest in this recipe adds a very nice touch as the taste lifts up to be similar to a Key Lime Pie.  
+<div class="floatleft">
+                <img src="/images/blog/2019-06-17/aws-landing-zone.png" alt="AWS Landing Zone Architecture" />
+                <!-- <div class="center img-description">
+                    AWS Landing Zone (source: <a href="https://aws.amazon.com/solutions/aws-landing-zone" rel="noreferrer">https://aws.amazon.com/solutions/aws-landing-zone</a>)
+                </div> -->
+            </div>
 Breakfast sets the tone for the day ahead and this is why it is important to include fat and fiber in your morning meals as they will help you satisfy your hunger and keep you full longer.  Avocado is a great addition here as it makes the smoothie more creamy and, of course, the flaxseed is for added fiber! Spirulina is one of the worlds best superfoods as it is loaded with nutrients and antioxidants that will benefit your body! We hope you will enjoy this smoothie as much as we do!
   
 # Author

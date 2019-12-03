@@ -38,9 +38,9 @@
                       <a href="{{ featured[1].href }}">
                       <img src="{{ asset( featured[1].Thumbnail ) }}" alt="Our Blog"/>
                       </a>
-                      <p class="gray-blog">{{ featured[1].publicationDate }}</p>
+                      <p class="gray-blog">{{ featured[1].PublicationDate }}</p>
                       <a href="{{ featured[1].href }}">
-                      <h2>{{ featured[1].Title }}</h2>
+                        <h2>{{ featured[1].Title }}</h2>
                       </a>
                       <p class="blog-post">{{ featured[1].Intro }}</p>
                       <div class="learn-more-b">
@@ -60,7 +60,7 @@
                           </div>
                           <div class="flex-item-6">
                               <div class="flex-column">
-                              <p class="gray-blog">{{ featured[i].publicationDate }}</p>
+                              <p class="gray-blog">{{ featured[i].PublicationDate }}</p>
                               <a href="/{{ featured[i].href }}">
                                   <h3>{{ featured[i].Title }}</h3>
                               </a>
@@ -111,6 +111,33 @@
               </div>
           </div>
 
+        <div class="blogs all-blocks firefox">
+                <h4>All Posts</h4>
+                <div class="display-flex">
+                    {% for key, item in postsListObject %}
+                        <div class="width-block">
+                            <div class="image-block-post">
+                                <a href="/blog/{{ key }}/">
+                                <img src="{{ asset( item.Thumbnail ) }}" alt="Our Blog"/>
+                                </a>
+                            </div>
+                            <p class="gray-blog">{{ item.PublicationDate }}</p>
+                            <a href="/blog/{{ key }}/">
+                            <h3>{{ item.Title }}</h3>
+                            </a>
+                            <p class="blog-post">{{ item.Intro }}</p>
+                            <div class="learn-more-b">
+                                <a href="/blog/{{ key }}/" class="learn-more">Learn more
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="center small-space disable-btn">
+                    <a href="#" class="btn-border-green btn">Show More</a>
+                </div>
+            </div>
 
       </div>
     </div>

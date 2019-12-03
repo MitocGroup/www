@@ -1,35 +1,25 @@
+# Featured
+0
+
+# Author
+eistrati
+
+# AboutAuthor
+Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp. 
+
+# PublicationDate
+Sat, 28 May 2019 12:12:55 -0400
+
+# Thumbnail
+/images/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png
+
 # Title
-Mango Raspberry Tart
+Introducing Programmatic AWS Landing Zone as Terraform Module
 
-# Images
-<!-- raw image -->
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-raspberry-tart/Tart-25.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-raspberry-tart/Tart-2.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-raspberry-tart/Tart-3.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-raspberry-tart/Tart-7.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-raspberry-tart/Tart-11.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-raspberry-tart/Tart-24.jpg
+# Intro
+AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices.
 
-# Metadata
-- Diet:Gluten Free
-- Diet:Dairy Free
-- Diet:Vegan
-- Diet:Refine Sugar-Free
-- Diet:Egg Free
-- Dish:Sweets
-- Season:Summer
-- Season:Spring
-
-# About
-Delicious and light, this Mango Raspberry Tart makes for a stunning dessert that is perfect for spring or summer.
- 
-Who’s bringing the dessert? It’s us! Gluten-Free, vegan, summery, fruity, naturally sweetened and delicious Mango Raspberry Tart.  
-Also, it is very light and packed with good ingredients like almond meal, oat flour, flaxseed, coconut oil and coconut sugar, 
-let’s not forget the hazelnut flour which actually, believe it or not, gives a nice touch to the overall taste of this tart. 
-The crust comes out delicious, crisp but not too crumbly, lightly sweetened and nutty.  We love combining sweet and tart flavors, 
-raspberries and mangoes do not disappoint. The tartness of raspberries combined with buttery sweet mango is what makes this tart’s 
-delectable flavor. We recommend using our Raspberry Chia Jam for this recipe as it is low in sugar  and has a rich raspberry flavor, 
-but if you don’t have it on hand or don’t have the time to prepare it, you can use store bought preserves, it will still taste incredible. 
+---
 
 # Author
 Blooming Aprons

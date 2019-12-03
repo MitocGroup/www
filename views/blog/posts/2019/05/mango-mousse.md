@@ -1,27 +1,24 @@
+# Featured
+0
+
+# Author
+eistrati
+
+# AboutAuthor
+Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp. 
+
+# PublicationDate
+Sat, 28 May 2019 14:12:55 -0400
+
+# Thumbnail
+/images/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png
+
 # Title
-Mango Mousse
+Introducing Programmatic AWS Landing Zone as Terraform Module
 
-# Images
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-mousse/MangoMousse-11.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-mousse/MangoMousse-1.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-mousse/MangoMousse-8.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-mango-mousse/MangoMousse-11.jpg
-
-# Metadata
-- Diet:Gluten Free
-- Diet:Dairy Free
-- Diet:Vegan
-- Diet:Grain Free
-- Diet:Nut Free
-- Diet:Raw
-- Diet:Refine Sugar-Free
-- Diet:Egg Free
-- Dish:Sweets
-- Season:Summer
-- Season:Spring
-- FastSimple:10 minutes
-- FastSimple:5 ingredients
-
+# Intro
+AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices.
+---
 # About
 Incredible fast and easy, this mango mousse is absolutely delicious, light and creamy.
 

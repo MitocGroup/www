@@ -1,28 +1,25 @@
+# Featured
+0
+
+# Author
+eistrati
+
+# AboutAuthor
+Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp. 
+
+# PublicationDate
+Sat, 28 May 2019 12:12:55 -0400
+
+# Thumbnail
+/images/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png
+
 # Title
-Papaya and Mango Salad
+Introducing Programmatic AWS Landing Zone as Terraform Module
 
-# Images
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-green-papaya-and-mango-salad/IMG_1234.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-green-papaya-and-mango-salad/IMG_1222.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-green-papaya-and-mango-salad/IMG_1229.jpg
-- https://s3.amazonaws.com/cdn.bloomingaprons.com/images/recipes/2019-05-green-papaya-and-mango-salad/IMG_1235.jpg
+# Intro
+AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices.
 
-# Metadata
-- Diet:Gluten Free
-- Diet:Dairy Free
-- Diet:Vegan
-- Diet:Grain Free
-- Diet:Raw
-- Diet:Refine Sugar-Free
-- Diet:Egg Free
-- Diet:Nut Free
-- Dish:Lunch
-- Dish:Dinner
-- Dish:Salad
-- Dish:Sides
-- Season:Summer
-- Season:Spring
-- FastSimple:30 minutes
+---
 
 # About
 This Papaya and Mango Salad is refreshing, packed with antioxidants, enzymes, fiber and is a great addition to your dinner table or barbecue party.
