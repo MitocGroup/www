@@ -300,8 +300,8 @@
       position: absolute;
       display: inline-block;
       right: 3px;
-      top: 3px;
-      height: 100%;
+      top: 0px;
+      height: 44px;
       width: 111px;
       border-radius: 100px;
       text-align: center;
@@ -323,8 +323,9 @@
         border-radius: 100px;
         text-align: right;
         padding-right: 20px;
-        position: relative;
-        top: -6px;
+        position: absolute;
+        top: 3px;
+        left: 0px;
         &:hover {
           background: $dark-green;
         }
@@ -468,13 +469,18 @@
   color: $dark-green;
   padding: 10px 30px;
   background: transparent;
-  -webkit-transition: 0.4s ease-in-out;
-  -moz-transition: 0.4s ease-in-out;
-  -o-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-  &:hover {
+  transition: background 0.2s ease-in-out;
+  // -webkit-transition: 0.4s ease-in-out;
+  // -moz-transition: 0.4s ease-in-out;
+  // -o-transition: 0.4s ease-in-out;
+  // transition: 0.4s ease-in-out;
+  &:hover:enabled {
     background: $light-green;
     color: $white-color;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
   }
 }
 
@@ -520,6 +526,21 @@
       border-color: $blue-color;
       border-width: 1px;
     }
+  }
+}
+
+.post-block {
+  animation: slide-up 0.4s ease;
+}
+
+@keyframes slide-up {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 

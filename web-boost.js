@@ -36,7 +36,8 @@ const commonScripts = [
   'js/libs/jquery-popup.min.js',
   'js/libs/lazysizes.min.js',
   'js/modal-effects.js',
-  'js/main.js'
+  'js/main.js',
+  'js/mailchimp.js'
 ]
 
 const commonStyles = [
@@ -299,6 +300,7 @@ let routes = {
     vars: {
       ...defaultVariables,
       postsListObject: posts,
+      nrVisiblePosts: 4,
       title: 'Blog Articles | ' + defaultVariables.title,
       href: defaultVariables.url + '/blog/',
       author: 'https://twitter.com/@eistrati',

@@ -90,21 +90,22 @@
                   </ul>
                   <div class="center input-s">
                   <span class="input_button input-hover">
-                      <form id="subscribe-form-blog" action="#" method="post">
+                      <form id="subscribe-form-blog" action="#" method="post" class="form-styles">
                           <div class="mc-form-group-EMAIL input_button input-hover">
                               <input id="e-mail" name="EMAIL" type="email" class="input"
                                      placeholder="Your Email"/>
                               <div class="mc-error"></div>
                           </div>
                           <div id="mc-general"></div>
+                          <div id="mc-message"></div>
                           <div>
-                              <span class="btn-circle"><i class="fa fa-angle-right" id="submit-blog-subscride" aria-hidden="true"></i></span>
+                              <span class="btn-circle"><i class="fa fa-angle-right" id="submit-blog-subscribe" aria-hidden="true"></i></span>
                           </div>
                       </form>
                   </span>
                       <p>
                           By subscribing you agree to the
-                          <a href="/terms-conditions/" class="link-text">terms &amp; conditions.</a>
+                          <a href="/terms/" class="link-text">terms &amp; conditions.</a>
                           Nothing nasty, no spam.
                       </p>
                   </div>
@@ -114,8 +115,12 @@
         <div class="blogs all-blocks firefox">
                 <h4>All Posts</h4>
                 <div class="display-flex">
+                    {% set i = 0 %}
                     {% for key, item in postsListObject %}
-                        <div class="width-block">
+                        {% if i >= nrVisiblePosts %}
+                            <div class="hidden post-block-hid">
+                        {% endif %}    
+                        <div class="width-block post-block">
                             <div class="image-block-post">
                                 <a href="/blog/{{ key }}/">
                                 <img src="{{ asset( item.Thumbnail ) }}" alt="Our Blog"/>
@@ -132,10 +137,14 @@
                                 </a>
                             </div>
                         </div>
+                        {% if i >= nrVisiblePosts %}
+                            </div>
+                        {% endif %}    
+                        {% set i = i + 1 %}
                     {% endfor %}
                 </div>
                 <div class="center small-space disable-btn">
-                    <a href="#" class="btn-border-green btn">Show More</a>
+                    <button id="show-more" class="btn-border-green btn">Show More</button>
                 </div>
             </div>
 
