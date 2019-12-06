@@ -99,6 +99,11 @@
       padding-right: 20px;
     }
   }
+  .btn-follow {
+		height: 32px;
+		line-height: 32px;
+		padding: 0 14px;
+	}
   .title-post {
     font-size: 21px;
     line-height: 24px;
@@ -299,6 +304,23 @@
     padding-top: 5px;
     font-size: inherit;
   }
+}
+
+
+.btn-follow {
+	height: 19px;
+	line-height: 19px;
+	padding: 0 10px;
+	border: 1px solid #02B875;
+	color: #1C9963;
+	margin-left: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	display: inherit;
+	span {
+		font-size: 15px;
+	}
 }
 
 .italic {

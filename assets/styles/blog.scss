@@ -544,6 +544,42 @@
   }
 }
 
+.external-article {
+  margin: 25px auto;
+  word-break: break-word;
+  width: 100%;
+  background: white;
+  padding: 5px 75px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-arround;
+  h5 {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: -1.63px;
+    line-height: 1.22;
+    letter-spacing: -0.012em;
+    font-family: 'Roboto-Bold', sans-serif;
+  }
+  span {    
+    color: rgba(0, 0, 0, 0.84);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  span:last-child {
+    -webkit-line-clamp: 1;
+  }
+  * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 @-moz-document url-prefix() {
   .blogs {
     &.firefox {

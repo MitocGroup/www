@@ -5,12 +5,12 @@
 <header class="container u-maxWidth740">
     <div class="header-post display-flex">
         <div class="avatar-blog">
-            <img src="{{ asset('@images/' ~ Author ~ '.png') }}" alt="{{ Author }}" />
+            <img src="{{ asset('@images/blog/written-by-avatar/' ~ Avatar) }}" alt="{{ Author }}" />
         </div>
         <div class="about">
             <div class="flex">
-                <a href="https://twitter.com/{{ Author }}">{{ Author }}</a>
-                <a href="https://twitter.com/intent/user?screen_name={{ Author }}" class="btn-follow">
+                <a href="https://twitter.com/{{ TwitterUsername }}">{{ Author }}</a>
+                <a href="https://twitter.com/intent/user?screen_name={{ TwitterUsername }}" class="btn-follow">
                     <span>Follow</span>
                 </a>
             </div>
@@ -35,20 +35,20 @@
                     <div class="flex-item-6">
                         <div class="displayTable">
                             <div class="avatar-blog">
-                                <img src="{{ asset('@images/' ~ Author ~ '.png') }}" alt="Eugene Istrati" />
+                                <img src="{{ asset('@images/blog/written-by-avatar/' ~ Avatar) }}" alt="{{ Author }}" />
                             </div>
                         </div>
 
                         <div class="displayTable u-verticalAlignMiddle u-paddingLeft-15 u-paddingTop-15">
                             <div class="title-post u-paddingBotton-4">
-                                <a href="https://twitter.com/eistrati">eistrati</a>
+                                <a href="https://twitter.com/{{ TwitterUsername }}">{{ Author }}</a>
                             </div>
                             <p class="p-footer u-paddingBotton-4">
-                                Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
+                                {{ AboutAuthor }}
                             </p>
                         </div>
                         <div class="displayTable u-verticalAlignTop">
-                            <a href="https://twitter.com/intent/user?screen_name=eistrati" class="btn-follow u-paddingLeft-15">
+                            <a href="https://twitter.com/intent/user?screen_name={{ TwitterUsername }}" class="btn-follow u-paddingLeft-15">
                                 <span>Follow</span>
                             </a>
                         </div>
@@ -71,7 +71,7 @@
                             </p>
                         </div>
                         <div class="displayTable u-verticalAlignTop">
-                            <a href="https://twitter.com/intent/user?screen_name=terrahubcorp" class="btn-follow displayTable u-verticalAlignTop u-paddingLeft-15">
+                            <a href="https://twitter.com/intent/user?screen_name=MitocGroup" class="btn-follow displayTable u-verticalAlignTop u-paddingLeft-15">
                                 <span>Follow</span>
                             </a>
                         </div>

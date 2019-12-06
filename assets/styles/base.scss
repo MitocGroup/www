@@ -191,6 +191,15 @@ a {
   margin: 0 auto;
 }
 
+.maxHeight500px {
+  img {
+    padding: 20px 0px;
+    max-height: 500px;
+    width: auto !important;
+    max-width: 100%;
+  }
+}
+
 .width1320 {
   max-width: 1320px;
   width: 100%;
