@@ -299,15 +299,17 @@ let routes = {
     view: 'blog/index.twig',
     vars: {
       ...defaultVariables,
-      postsListObject: posts,
-      nrVisiblePosts: 3,
       title: 'Blog Articles | ' + defaultVariables.title,
       description:
-        'Mitoc Group is a technology company focusing on automation using cloud native services. Our engineers are proudly sharing here our thoughts and our experience, therefore please enjoy them responsibly.',
+        'Mitoc Group is a technology company focusing on automation using cloud native services.'
+        + ' Our engineers are proudly sharing here our thoughts and our experience, therefore please'
+        + ' enjoy them responsibly.',
       href: defaultVariables.url + '/blog/',
       image: '/images/blog/2018-08-12/dashboard.png',
       publisher: 'https://www.facebook.com/MitocGroup',
-      timestamp: '2018-04-01T12:34:56.789Z'
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: posts,
+      nrVisiblePosts: 3
     },
     assets: blogAssets
   },
