@@ -2,16 +2,16 @@
 1
 
 # Author
-Mitoc Group
+Eugene Istrati
 
 # AboutAuthor
-technology company focusing on automation using cloud native services with proven track record helping clients migrate to the cloud, establish devops & dataops
+Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
 
 # Avatar
-mitoc-group.ico
+eistrati.png
 
 # TwitterUsername
-MitocGroup
+eistrati
 
 # PublicationDate
 Thu, 20 October 2016 12:20:55 -0400
