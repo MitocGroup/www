@@ -307,12 +307,12 @@ let routes = {
       href: '/blog/',
       image: '/images/blog/2018-08-12/dashboard.png',
       description:
-        'TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.',
-      publisher: 'https://www.facebook.com/TerraHubCorp',
+        'Mitoc Group is a technology company focusing on automation using cloud native services. Our engineers are proudly sharing here our thoughts and our experience, therefore please enjoy them responsibly.',
+      publisher: 'https://www.facebook.com/MitocGroup',
       timestamp: '2018-04-01T12:34:56.789Z',
-      fb_brand: 'TerraHub',
+      fb_brand: 'MitocGroup',
       fb_type: 'website',
-      tw_handle: '@TerraHubCorp',
+      tw_handle: '@MitocGroup',
       tw_type: 'summary_large_image'
     },
     assets: blogAssets
