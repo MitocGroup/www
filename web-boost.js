@@ -21,9 +21,9 @@ const defaultVariables = {
   url: 'https://www.mitocgroup.com',
   image: 'https://www.mitocgroup.com/images/head.png',
   logo: 'https://www.mitocgroup.com/images/v2/logos/mitoc.svg',
+  // fb_app_id: '',
   fb_type: 'website',
   fb_brand: 'MitocGroup',
-  // fb_app_id: '',
   tw_type: 'summary',
   tw_handle: '@MitocGroup',
   image_tw: 'https://www.mitocgroup.com/images/cover-tw.png',
@@ -300,20 +300,14 @@ let routes = {
     vars: {
       ...defaultVariables,
       postsListObject: posts,
-      nrVisiblePosts: 4,
+      nrVisiblePosts: 3,
       title: 'Blog Articles | ' + defaultVariables.title,
-      href: defaultVariables.url + '/blog/',
-      author: 'https://twitter.com/@eistrati',
-      href: '/blog/',
-      image: '/images/blog/2018-08-12/dashboard.png',
       description:
         'Mitoc Group is a technology company focusing on automation using cloud native services. Our engineers are proudly sharing here our thoughts and our experience, therefore please enjoy them responsibly.',
+      href: defaultVariables.url + '/blog/',
+      image: '/images/blog/2018-08-12/dashboard.png',
       publisher: 'https://www.facebook.com/MitocGroup',
-      timestamp: '2018-04-01T12:34:56.789Z',
-      fb_brand: 'MitocGroup',
-      fb_type: 'website',
-      tw_handle: '@MitocGroup',
-      tw_type: 'summary_large_image'
+      timestamp: '2018-04-01T12:34:56.789Z'
     },
     assets: blogAssets
   },
