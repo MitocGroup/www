@@ -11,7 +11,7 @@ jQuery(function($) {
   });
 
   $subscribeForm.MailChimpForm({
-    url: 'https://mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=e75049837b',
+    url: 'https://mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=243972cdb5',
     fields: '0:EMAIL',
     inputSelector: '.input',
     submitSelector: '#submit-blog-subscribe',

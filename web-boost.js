@@ -3,6 +3,7 @@
 const fs = require('fs')
 const postsContent = fs.readFileSync('static/json/posts.json')
 const postsListObject = JSON.parse(postsContent)
+const nrVisiblePosts = 6
 
 const defaultVariables = {
   title: 'Mitoc Group',
@@ -309,7 +310,7 @@ let routes = {
       publisher: 'https://www.facebook.com/MitocGroup',
       timestamp: '2018-04-01T12:34:56.789Z',
       postsListObject: posts,
-      nrVisiblePosts: 3
+      nrVisiblePosts
     },
     assets: blogAssets
   },

@@ -3,7 +3,7 @@ jQuery(function($) {
 
   const showMore = $('#show-more');
   const hiddenBlock = '.post-block-hid.hidden';
-  const toBeVisiblePosts = 2;
+  const toBeVisiblePosts = 3;
 
   hljs.initHighlightingOnLoad();
   $('pre code').each(function(i, block) {

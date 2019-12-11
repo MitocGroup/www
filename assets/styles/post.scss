@@ -5,6 +5,10 @@
   letter-spacing: 0.01em;
 }
 
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -398,4 +402,27 @@
       }
     }
   }
+}
+
+.table {
+  margin: 25px auto;
+  word-break: break-word;
+  width: 100%;
+  padding: 6px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  td, th {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+    font-size: 18px;
+  }
+  tr:nth-child(even){background-color: #f6f8fa;}
+}
+
+.img-post-left {
+  float: left;
+  margin: 25px 30px 25px -150px;
+  padding: 25px;
+  width: 75%;
 }

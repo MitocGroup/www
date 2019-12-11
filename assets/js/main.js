@@ -55,12 +55,12 @@
       let html = '';
 
       data.forEach((post, index) => {
-        post.image.replace('images/medium/', '');
+        post.image.replace('images/v2/medium/', '');
         html += `<div class="flex-item-4">
            <div class="blog-content flex-column">
            <div class="img-block">
              <a href="${post.url}" class="blog-element" alt="${post.title}" target="_blank" rel="noopener">
-               <img class="img-responsive lazyload" data-src="/images/medium/${post.image}" alt="${post.title}" />
+               <img class="img-responsive lazyload" data-src="/images/v2/medium/${post.image}" alt="${post.title}" />
              </a>
            </div>
               <span class="post-date">${post.publishedAt}</span>

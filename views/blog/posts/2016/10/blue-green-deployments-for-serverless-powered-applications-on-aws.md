@@ -1,5 +1,5 @@
 # Featured
-1
+0
 
 # Author
 Eugene Istrati
@@ -29,8 +29,8 @@ production environments called Blue and Green.
 
 ---
 
-<div class="floatleft">
-    <img src="/images/blog/2016-10-20/lambda-edge.png" alt="lambda edge" />
+<div class="img-post-left">
+    <img src="/images/blog/2016-11-29/partner-network.jpeg" alt="lambda edge" />
     <div class="center img-description">Source:
         <a href="https://devopscube.com/wp-content/uploads/2016/12/lamda@edge.png" rel="noreferrer">https://devopscube.com/wp-content/uploads/2016/12/lamda@edge.png</a>
     </div>
@@ -38,7 +38,7 @@ production environments called Blue and Green.
 
 Fast-forwarding to 2013, [Danilo Sato](https://github.com/dtsato) from ThoughtWorks published on their blog a very insightful article that describes [how to implement blue-green deployments using AWS.](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws) We, at Mitoc Group, are working primarily with serverless computing from AWS, and today we’d like to share our experience using blue-green deployment process for serverless powered applications.
 
-_```Note: This blogpost uses intentionally screenshots from AWS Management Console to outline a Do-It-Yourself point of view, but we’ll also provide (wherever possible) the equivalent devops command or tool, to make sure that more advanced audience is NOT bored to death :)```_
+>_Note: This blogpost uses intentionally screenshots from AWS Management Console to outline a Do-It-Yourself point of view, but we’ll also provide (wherever possible) the equivalent devops command or tool, to make sure that more advanced audience is NOT bored to death :)_
 
 The key points to keep in mind as we move forward:
 
@@ -50,7 +50,7 @@ The key points to keep in mind as we move forward:
 
 Before we dive into the details of the blue-green deployment process for serverless powered applications, it’s vital to point out the architecture of a typical web application that uses serverless computing from AWS (as shown in the picture below, as well as described in [this blogpost](https://blog.mitocgroup.com/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework-dd81719b0dff)).
 
-<div class="floatleft">
+<div class="img-post-left">
     <img src="https://miro.medium.com/max/3968/1*obn8oKjcqkJJUIZ2bB59xg.png" alt="lambda-deep-framework" />
     <div class="center img-description">
         <a href="https://blog.mitocgroup.com/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework-dd81719b0dff" rel="noreferrer">https://blog.mitocgroup.com/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework-dd81719b0dff</a>
@@ -75,14 +75,14 @@ The simplest and most straight-forward approach to blue-green deployments for se
 
 Managing DNS records can be sometimes very tricky, mainly because the propagation might take unpredictable time due to various caching layers on Internet. But our experience with Amazon Route53 is amazing, as long as we are using A alias records instead of CNAME records. Here below are 3 screenshots from AWS Management Console that shows how we’ve setup _www1.adtechmedia.io_ in Amazon Route53, Amazon CloudFront and Amazon S3:
 
-<div class="maxHeight500px center">
+<div class="maxHeight500px center padd25px">
     <img src="/images/blog/2016-10-20/edit-record-set.png" alt="edit-record-set" />
     <div class="center img-description">
         aws route53 list-resource-record-sets --hosted-zone-id [YOUR_HOSTED_ZONE_ID]
     </div>
 </div>
 
-<div class="">
+<div class="padd25px">
     <img src="/images/blog/2016-10-20/get-distribution.png" alt="get-distribution" />
     <div class="center img-description">
         aws cloudfront get-distribution --id [YOUR_DISTRIBUTION_ID]
@@ -90,7 +90,7 @@ Managing DNS records can be sometimes very tricky, mainly because the propagatio
 </div>
 
 <div class="">
-    <img src="/images/blog/2016-10-20/static-webhosting.png" alt="static-webhosting" />
+    <img src="/images/blog/2016-10-20/stati-webhosting.png" alt="static-webhosting" />
     <div class="center img-description">
         aws s3 website s3://www1.adtechmedia.io/ --index-document index.html --error-document error.html
     </div>
@@ -135,7 +135,7 @@ If, for some unexpected reason, your green environment starts generating high le
 2. Add CNAME to blue environment
 3. Update Amazon Route53 with blue environment Domain Name
 
-_```UPDATE on 11/03/2016: A friend pointed out that it’s not necessarily to add/remove CNAMEs (which could take up to 20 minutes to propagate). Instead, just leave blue environment as it is (e.g. www1.adtechmedia.io) and setup wild carded CNAME on green environment (e.g. *.adtechmedia.io). When both distributions are enabled, blue will take precedence over green, making sure you’re not stuck with new deploy in case of high level of failures.```_
+>_UPDATE on 11/03/2016: A friend pointed out that it’s not necessarily to add/remove CNAMEs (which could take up to 20 minutes to propagate). Instead, just leave blue environment as it is (e.g. www1.adtechmedia.io) and setup wild carded CNAME on green environment (e.g. *.adtechmedia.io). When both distributions are enabled, blue will take precedence over green, making sure you’re not stuck with new deploy in case of high level of failures._
 
 ### Blue/Green Deployments v2
 

@@ -1,5 +1,5 @@
 # Featured
-3
+0
 
 # Author
 Eugene Istrati
@@ -17,7 +17,7 @@ eistrati
 Tue, 29 Novembre 2016 12:20:55 -0400
 
 # Thumbnail
-/images/blog/2016-11-29/partner-network.png
+/images/blog/2016-11-29/partner-network.jpeg
 
 # Title
 Mitoc Group Inc. Achieves AWS Service Delivery Partner Status for AWS Lambda
@@ -26,8 +26,8 @@ Mitoc Group Inc. Achieves AWS Service Delivery Partner Status for AWS Lambda
 
 ---
 
-<div class="">
-    <img src="/images/blog/2016-11-29/partner-network.png" alt="partner aws" />
+<div class="padd25px">
+    <img src="/images/blog/2016-11-29/partner-network.jpeg" alt="partner aws" />
     <div class="center img-description">
        Mitoc Group Inc. achieves AWS Service Delivery Partner status for AWS Lambda
     </div>
@@ -45,6 +45,6 @@ Mitoc Group is helping customers like [Manning Publications](https://www.manning
 
 About Mitoc Group
 
-Mitoc Group is a technology company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world. To learn more, contact hello@mitocgroup.com or visit [www.mitocgroup.com](https://www.mitocgroup.com/).
+Mitoc Group is a technology company that focuses on innovative enterprise solutions. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world. To learn more, contact [hello@mitocgroup.com](mailto:hello@mitocgroup.com) or visit [www.mitocgroup.com](https://www.mitocgroup.com/).
 
-Media Contact: press@mitocgroup.com.
+Media Contact: [press@mitocgroup.com](mailto:press@mitocgroup.com).

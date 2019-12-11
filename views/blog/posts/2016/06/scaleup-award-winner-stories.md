@@ -1,5 +1,5 @@
 # Featured
-2
+0
 
 # Author
 Eugene Istrati
@@ -26,7 +26,7 @@ StackWorld ScaleUp Award Winner Stories
 
 ---
 
-<div class="">
+<div class="padd25px">
     <img src="/images/blog/2016-06-12/scaleup-award-winner-stories.png" alt="winner story" />
     <div class="center img-description">
         <a href="http://www.stackworld.com/awards/scaleup-winner-stories" rel="noreferrer">http://www.stackworld.com/awards/scaleup-winner-stories</a>)

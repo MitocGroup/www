@@ -17,17 +17,18 @@ eistrati
 Fri, 24 November 2017 12:20:55 -0400
 
 # Thumbnail
-/images/blog/2016-11-29/partner-network.png
+/images/blog/2017-11-24/awsReInvent.png
 
 # Title
-Mitoc Group Inc. Granted AWS Advanced Technology Partner Status
+AWS re:Invent 2017. Serverless Track. SRV326 Chalk Talk.
 
 # Intro
-Congratulations! Your Firm Has Been Accepted into the Advanced AWS Partner Network (APN) Tier.
+Mitoc Group was nominated again to deliver a serverless session at Amazon Web Services’ biggest event of the year, AWS re:Invent 2017.
+
 ---
 
-<div class="">
-    <img src="/images/blog/2016-11-29/partner-network.png" alt="partner aws" />
+<div class="padd25px">
+    <img src="/images/blog/2017-11-24/awsReInvent.png" alt="partner aws" />
     <div class="center img-description">
        <a href="https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=SRV326&searchType=session" target="_blank">https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=SRV326&searchType=session</a>
     </div>
@@ -39,8 +40,8 @@ Wait. What am I talking about?
 
 Oh, right. AWS re:Invent 2017. After [AWS re:Invent 2015](https://blog.mitocgroup.com/best-re-invent-ever-448ac73f6a4e), it is time for me to get back to writing (apologies for being quiet for most of the year or so) and share great news for our customers, our partners and our team:
 
-<div class="">
-    <img src="/images/blog/2016-11-29/email.png" alt="aws email" />
+<div class="padd25px">
+    <img src="/images/blog/2017-11-24/email.png" alt="aws email" />
     <div class="center img-description">
        Nomination email from AWS re:Invent team
     </div>

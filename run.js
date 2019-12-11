@@ -9,7 +9,11 @@ const md = new MarkdownIt();
 const classMap = {
   ol: 'graf graf-ol-li graf-grap',
   ul: 'graf graf--li graf-grap',
-  p: 'graf graf-up'
+  p: 'graf graf-up margin-bottom-25',
+  tr: 'graf graf--li graf-grap',
+  table: 'table',
+  td: 'center',
+  blockquote: 'green-blockquote'
 };
 
 const bindings = Object.keys(classMap).map((key) => ({
@@ -20,7 +24,10 @@ const bindings = Object.keys(classMap).map((key) => ({
 
 const converter = new showdown.Converter({
   extensions: [ ...bindings ],
-  noHeaderId: true
+  noHeaderId: true,
+  tasklists: true,
+  tables: true,
+  tasklists: true
 });
 
 const blogPostsFolder = 'views/blog/posts/';
@@ -43,8 +50,14 @@ posts.forEach((directory) => {
 
             mainData = markdowneyjr(dict, {});
 
+            let wordCount = (content + mainData.Intro).replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
+            // let countImg = (content.match(/<img>/g) || []).length; // TODO: more accurate reading time
+            let readingTimeInMinutes = Math.floor(wordCount / 250) + 1;
+            let result = `~ ${readingTimeInMinutes} min read`;
+            
             const object = {
               ...mainData,
+              minRead: result,
               htmlCode: converter.makeHtml(content)
             };
             const id = `${post}`.split('.md').find((it) => it !== null);
