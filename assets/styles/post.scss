@@ -422,6 +422,12 @@
   }
 }
 
+.horizontalScrollTable {
+    width: auto;
+    overflow-x: auto;
+    white-space: normal;
+}
+
 .img-post-left {
   float: left;
   margin: 25px 30px 25px -150px;

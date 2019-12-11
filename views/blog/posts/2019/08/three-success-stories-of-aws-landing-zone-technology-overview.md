@@ -14,7 +14,7 @@ eistrati.png
 eistrati
 
 # PublicationDate
-Sun, 4 August 2019 12:20:55 -0400
+Fri, 2 August 2019 12:20:55 -0400
 
 # Thumbnail
 /images/blog/2019-08-02/aws-lz-arch.png

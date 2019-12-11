@@ -14,7 +14,7 @@ eistrati.png
 eistrati
 
 # PublicationDate
-Wed, 18 Septembre 2019 12:20:55 -0400
+Tue, 10 Septembre 2019 12:20:55 -0400
 
 # Thumbnail
 /images/blog/2019-09-10/private-equity-platform.png

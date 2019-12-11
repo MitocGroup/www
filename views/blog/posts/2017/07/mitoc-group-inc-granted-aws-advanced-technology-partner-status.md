@@ -14,7 +14,7 @@ eistrati.png
 eistrati
 
 # PublicationDate
-Fri, 21 July 2017 12:20:55 -0400
+Sat, 22 July 2017 12:20:55 -0400
 
 # Thumbnail
 /images/blog/2016-11-29/partner-network.jpeg
