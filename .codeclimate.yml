@@ -17,7 +17,7 @@ ratings:
     - '**.css'
     - '**.scss'
     - '**.es6'
-exclude_paths:
+exclude_patterns:
   - '**/bin'
   - '**/.idea'
   - '**.min.js'
