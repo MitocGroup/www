@@ -3,8 +3,6 @@
 const fs = require('fs');
 const markdowneyjr = require('markdowneyjr');
 const showdown = require('showdown');
-const MarkdownIt = require('markdown-it');
-const md = new MarkdownIt();
 
 const classMap = {
   ol: 'graf graf-ol-li graf-grap',
@@ -25,15 +23,13 @@ const bindings = Object.keys(classMap).map((key) => ({
 const converter = new showdown.Converter({
   extensions: [ ...bindings ],
   noHeaderId: true,
-  tasklists: true,
   tables: true,
   tasklists: true
 });
 
 const blogPostsFolder = 'views/blog/posts/';
 const regex = /.md$/;
-let postsObj = {},
-  mainData = {};
+let postsObj, mainData;
 
 const posts = fs.readdirSync(blogPostsFolder);
 posts.forEach((directory) => {
@@ -50,11 +46,9 @@ posts.forEach((directory) => {
 
             mainData = markdowneyjr(dict, {});
 
-            let wordCount = (content + mainData.Intro).replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
-            // let countImg = (content.match(/<img>/g) || []).length; // TODO: more accurate reading time
+            let wordCount = (content + mainData.Intro).replace(/[^\w ]/g, '').split(/\s+/).length;
             let readingTimeInMinutes = Math.floor(wordCount / 250) + 1;
             let result = `~ ${readingTimeInMinutes} min read`;
-            
             const object = {
               ...mainData,
               minRead: result,

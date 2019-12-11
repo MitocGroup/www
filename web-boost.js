@@ -1,9 +1,9 @@
-'use strict'
+'use strict';
 
-const fs = require('fs')
-const postsContent = fs.readFileSync('static/json/posts.json')
-const postsListObject = JSON.parse(postsContent)
-const nrVisiblePosts = 6
+const fs = require('fs');
+const postsContent = fs.readFileSync('static/json/posts.json');
+const postsListObject = JSON.parse(postsContent);
+const nrVisiblePosts = 6;
 
 const defaultVariables = {
   title: 'Mitoc Group',
@@ -29,7 +29,7 @@ const defaultVariables = {
   tw_handle: '@MitocGroup',
   image_tw: 'https://www.mitocgroup.com/images/cover-tw.png',
   image_fb: 'https://www.mitocgroup.com/images/cover-fb.png'
-}
+};
 
 const commonScripts = [
   'js/libs/jquery.min.js',
@@ -39,7 +39,7 @@ const commonScripts = [
   'js/modal-effects.js',
   'js/main.js',
   'js/mailchimp.js'
-]
+];
 
 const commonStyles = [
   'styles/libs/font-awesome.min.css',
@@ -50,61 +50,61 @@ const commonStyles = [
   'styles/main.scss',
   'styles/mixins.scss',
   'styles/responsive.scss'
-]
+];
 
 const indexAssets = {
   'js/index.min.js': [...commonScripts, 'js/libs/slick.min.js', 'js/carousel.js'],
   'css/index.min.css': [...commonStyles, 'styles/libs/slick.min.css', 'styles/libs/slick-theme.min.css']
-}
+};
 
 const commonAssets = {
   'js/common.min.js': [...commonScripts, 'js/scroll.js'],
   'css/common.min.css': commonStyles
-}
+};
 
 const servicesAssets = {
   'js/services.min.js': commonScripts,
   'css/services.min.css': [...commonStyles, 'styles/services.scss']
-}
+};
 
 const partnersAssets = {
   'js/partners.min.js': commonScripts,
   'css/partners.min.css': [...commonStyles, 'styles/partners.scss']
-}
+};
 
 const adtechmediaAssets = {
   'js/adtechmedia.min.js': ['js/libs/bodymovin.min.js', 'js/animation.js'],
   'js/common.min.js': commonScripts,
   'css/common.min.css': commonStyles
-}
+};
 
 const aboutAssets = {
   'js/about.min.js': commonScripts,
   'css/about.min.css': [...commonStyles, 'styles/about.scss']
-}
+};
 
 const blogAssets = {
   'js/blog.min.js': [...commonScripts, 'js/libs/highlight.pack.min.js', 'js/blog.js'],
   'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
-}
+};
 
 const contactAssets = {
   'js/contact.min.js': commonScripts,
   'css/contact.min.css': [...commonStyles, 'styles/contact.scss']
-}
+};
 
-let posts = {}
+let posts = {};
 posts = Object.keys(postsListObject)
   .sort((a, b) => {
-    return -(new Date(postsListObject[a].PublicationDate) - new Date(postsListObject[b].PublicationDate))
+    return -(new Date(postsListObject[a].PublicationDate) - new Date(postsListObject[b].PublicationDate));
   })
   .reduce((prev, curr) => {
-    const event = new Date(postsListObject[curr].PublicationDate)
-    const options = { month: 'short', day: 'numeric', year: 'numeric' }
-    prev[curr] = postsListObject[curr]
-    prev[curr].PublicationDate = event.toLocaleDateString('en-EN', options)
-    return prev
-  }, {})
+    const event = new Date(postsListObject[curr].PublicationDate);
+    const options = { month: 'short', day: 'numeric', year: 'numeric' };
+    prev[curr] = postsListObject[curr];
+    prev[curr].PublicationDate = event.toLocaleDateString('en-EN', options);
+    return prev;
+  }, {});
 
 let routes = {
   '/': {
@@ -349,10 +349,10 @@ let routes = {
     },
     assets: commonAssets
   }
-}
+};
 
 Object.keys(posts).forEach(key => {
-  let postPath = `/blog/${key}/`
+  let postPath = `/blog/${key}/`;
 
   routes[postPath] = {
     view: 'blog/post.twig',
@@ -361,8 +361,8 @@ Object.keys(posts).forEach(key => {
       ...posts[key],
       posts
     }
-  }
-})
+  };
+});
 
 module.exports = {
   server: {
@@ -370,4 +370,4 @@ module.exports = {
     ignorePatterns: ['.idea', '.git', 'bin', 'backend', 'build']
   },
   routes: routes
-}
+};
