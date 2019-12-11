@@ -1,0 +1,115 @@
+{% extends '../blogs.twig' %}
+
+{% block content %}
+
+<header class="container u-maxWidth740">
+    <div class="header-post display-flex">
+        <div class="avatar-blog">
+            <img src="{{ asset('@images/blog/author/' ~ Avatar) }}" alt="{{ Author }}" />
+        </div>
+        <div class="about">
+            <div class="flex">
+                <a href="https://twitter.com/{{ TwitterUsername }}">{{ Author }}</a>
+                <a href="https://twitter.com/intent/user?screen_name={{ TwitterUsername }}" class="btn-follow">
+                    <span>Follow</span>
+                </a>
+            </div>
+            <p>{{ AboutAuthor }}</p>
+        </div>
+    </div>
+</header>
+<div class="post">
+
+    <div class="container u-maxWidth740">
+        <h1>{{ Title }}</h1>
+        <p class="graf-gray">{{ PublicationDate }} {{ minRead }}</p>
+        <p class="graf graf-up">{{ Intro }}</p>
+        {{ htmlCode }}
+      </div>
+
+    <footer class="footer-post container u-maxWidth740">
+        <div class="u-paddindBottom-20 u-paddindTop-20 line-up u-pagginfLeftRight-20">
+            <div class="subscribeAuthorsContainer">
+                <div class="flex-item-6">
+                    <div class="displayTable">
+                        <div class="avatar-blog">
+                            <img src="{{ asset('@images/blog/author/' ~ Avatar) }}" alt="{{ Author }}" />
+                        </div>
+                    </div>
+
+                    <div class="displayTable u-verticalAlignMiddle u-paddingLeft-15 u-paddingTop-15">
+                        <div class="title-post u-paddingBotton-4">
+                            <a href="https://twitter.com/{{ TwitterUsername }}">{{ Author }}</a>
+                        </div>
+                        <p class="p-footer u-paddingBotton-4">
+                            {{ AboutAuthor }}
+                        </p>
+                    </div>
+                    <!--
+                    <div class="displayTable u-verticalAlignTop">
+                        <a href="https://twitter.com/intent/user?screen_name={{ TwitterUsername }}" class="btn-follow u-paddingLeft-15">
+                            <span>Follow</span>
+                        </a>
+                    </div>
+                    -->
+                </div>
+                <div class="flex-item-6">
+                    <div class="displayTable">
+                        <div class="logo">
+                            <img src="{{ asset('@images/favicon.ico') }}" alt="Mitoc Group Logo" />
+                        </div>
+                    </div>
+                    <div class="displayTable u-verticalAlignMiddle u-paddingLeft-15 u-paddingTop-15">
+                        <div class="title-post u-paddingBotton-4">
+                            <a href="https://twitter.com/MitocGroup">Mitoc Group</a>
+                        </div>
+                        <p class="p-footer u-paddingBotton-4">
+                            technology company focusing on automation using cloud native services
+                            with proven track record helping clients migrate to the cloud, as well as
+                            establish devops and dataops processes
+                        </p>
+                    </div>
+                    <!--
+                    <div class="displayTable u-verticalAlignTop">
+                        <a href="https://twitter.com/intent/user?screen_name=MitocGroup" class="btn-follow displayTable u-verticalAlignTop u-paddingLeft-15">
+                            <span>Follow</span>
+                        </a>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--
+    <div class="last-blogs container">
+        <div class="flex-row">
+            <div class="flex-column">
+                <h3 class="center">Newest Posts</h3>
+                <a class="btn-border-green btn" href="/blog/">Read more</a>
+            </div>
+            {% set i = 0 %}
+            {% for key, value in posts if i < 3 %}
+                <div class="flex-item-3">
+                    <div class="blog-post">
+                        <a href="/blog/{{ key }}/">
+                            <h5>{{ value.Title }}</h5>
+                            <p class="description">{{ value.Intro }}</p>
+                        </a>
+                        <div class="learn-more-b">
+                            <p class="gray-blog">{{ value.PublicationDate }}</p>
+                            <a href="/blog/{{ key }}/" class="learn-more">Learn more
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% set i = i + 1 %}
+            {% endfor %}
+        </div>
+    </div>
+    -->
+</div>
+
+
+{% endblock %}

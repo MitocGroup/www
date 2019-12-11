@@ -1,0 +1,157 @@
+{% extends '../blogs.twig' %}
+
+{% block content %}
+  <div class="wrapper">
+    <div class="hide-mobile">
+      <div class="header flex-column gray-block">
+        <div class="header__bg green">
+          <div class="bg bg-green contact flex-column">
+            <div class="container text-styles">
+              <div class="flex-column text-color-white center">
+                <h1 class="paddingBottom20">Our Blog</h1>
+                <h5 class="text-24 marginTop36 widthBlock80">
+                  Mitoc Group is a technology company focusing on automation using cloud native services.
+                  Our engineers are proudly sharing here our thoughts and our experience, therefore please
+                  enjoy them responsibly.
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  {% set featured = {} %}
+  {% for key, item in postsListObject %}
+    {% if item.Featured > 0 %}
+        {% set temp = item|merge({href: key ~ '/'}) %}
+        {% set featured = featured|merge({(item.Featured):temp}) %}
+    {% endif %}
+  {% endfor %}
+  
+  <div class="mob-hidden">
+      <div class="blog-container">
+        {% if featured|length > 1 %}
+          <div class="blogs firefox">
+              <h1>Featured Post</h1>
+              <div class="flex-row header-blog">
+              {% if featured[1] %}
+                    <div class="flex-item-6 first-b flex-column">
+                        <a href="{{ featured[1].href }}">
+                        <img src="{{ asset( featured[1].Thumbnail ) }}" alt="Our Blog"/>
+                        </a>
+                        <p class="gray-blog">{{ featured[1].PublicationDate }} {{ featured[1].minRead }}</p>
+                        <a href="{{ featured[1].href }}">
+                            <h2>{{ featured[1].Title }}</h2>
+                        </a>
+                        <p class="blog-post">{{ featured[1].Intro }}</p>
+                        <div class="learn-more-b">
+                            <a href="{{ featured[1].href }}" class="learn-more">Learn more
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                  {% endif %}
+                  <div class="flex-item-6 small-blogs">
+                    {% for i in 2..4 %}
+                      {% if featured[i] %}
+                      <div class="flex-row">
+                          <div class="flex-item-6">
+                              <a href="{{ featured[i].href }}">
+                              <img src="{{ asset( featured[i].Thumbnail ) }}" alt="Our Blog"/>
+                              </a>
+                          </div>
+                          <div class="flex-item-6">
+                              <div class="flex-column">
+                              <p class="gray-blog">{{ featured[i].PublicationDate }} {{ featured[i].minRead }}</p>
+                              <a href="{{ featured[i].href }}">
+                                  <h3>{{ featured[i].Title }}</h3>
+                              </a>
+                              <p class="blog-post">{{ featured[i].Intro }}</p>
+                              <a href="{{ featured[i].href }}" class="learn-more">Learn more
+                                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </a>
+                              </div>
+                          </div>
+                      </div>
+                      {% endif %}
+                  {% endfor %}
+                  </div>
+              </div>
+          </div>
+        {% endif %}
+
+          <div class="subscribe">
+              <div class="blog-subscribe center flex-column">
+                  <h1 class="title-green center">Subscribe to our Blog</h1>
+                  <p class="info-text center-block">
+                      You will never miss the latest updates anymore!
+                  </p>
+                  <ul class="bullets">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                  </ul>
+                  <div class="center input-s">
+                  <span class="input_button input-hover">
+                      <form id="subscribe-form-blog" action="#" method="post" class="form-styles">
+                          <div class="mc-form-group-EMAIL input_button input-hover">
+                              <input id="e-mail" name="EMAIL" type="email" class="input"
+                                     placeholder="Your Email"/>
+                              <div class="mc-error"></div>
+                          </div>
+                          <div id="mc-general"></div>
+                          <div id="mc-message"></div>
+                          <div>
+                              <span class="btn-circle"><i class="fa fa-angle-right" id="submit-blog-subscribe" aria-hidden="true"></i></span>
+                          </div>
+                      </form>
+                  </span>
+                      <p>
+                          By subscribing you agree to the
+                          <a href="/terms/" class="link-text">terms &amp; conditions.</a>
+                          Nothing nasty, no spam.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+        <div class="blogs all-blocks firefox">
+                <h4>All Posts</h4>
+                <div class="display-flex">
+                    {% set i = 0 %}
+                    {% for key, item in postsListObject %}
+                        {% if i >= nrVisiblePosts %}
+                            <div class="hidden post-block-hid">
+                        {% endif %}    
+                        <div class="width-block post-block">
+                            <div class="image-block-post">
+                                <a href="/blog/{{ key }}/">
+                                <img src="{{ asset( item.Thumbnail ) }}" alt="Our Blog"/>
+                                </a>
+                            </div>
+                            <p class="gray-blog">{{ item.PublicationDate }} {{ item.minRead }}</p>
+                            <a href="/blog/{{ key }}/">
+                            <h3>{{ item.Title }}</h3>
+                            </a>
+                            <p class="blog-post">{{ item.Intro }}</p>
+                            <div class="learn-more-b">
+                                <a href="/blog/{{ key }}/" class="learn-more">Learn more
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        {% if i >= nrVisiblePosts %}
+                            </div>
+                        {% endif %}    
+                        {% set i = i + 1 %}
+                    {% endfor %}
+                </div>
+                <div class="center small-space disable-btn">
+                    <button id="show-more" class="btn-border-green btn">Show More</button>
+                </div>
+            </div>
+
+      </div>
+    </div>
+{% endblock %}

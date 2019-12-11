@@ -1,8 +1,14 @@
 'use strict';
 
+const fs = require('fs');
+const postsContent = fs.readFileSync('static/json/posts.json');
+const postsListObject = JSON.parse(postsContent);
+const nrVisiblePosts = 6;
+
 const defaultVariables = {
   title: 'Mitoc Group',
-  description: 'Mitoc Group is a technology company focusing on automation using cloud native services. Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.',
+  description:
+    'Mitoc Group is a technology company focusing on automation using cloud native services. Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.',
   author: 'https://twitter.com/@eistrati',
   publisher: 'MitocGroup.com',
   company: 'Mitoc Group Inc.',
@@ -16,9 +22,9 @@ const defaultVariables = {
   url: 'https://www.mitocgroup.com',
   image: 'https://www.mitocgroup.com/images/head.png',
   logo: 'https://www.mitocgroup.com/images/v2/logos/mitoc.svg',
+  // fb_app_id: '',
   fb_type: 'website',
   fb_brand: 'MitocGroup',
-  // fb_app_id: '',
   tw_type: 'summary',
   tw_handle: '@MitocGroup',
   image_tw: 'https://www.mitocgroup.com/images/cover-tw.png',
@@ -31,10 +37,12 @@ const commonScripts = [
   'js/libs/jquery-popup.min.js',
   'js/libs/lazysizes.min.js',
   'js/modal-effects.js',
-  'js/main.js'
+  'js/main.js',
+  'js/mailchimp.js'
 ];
 
 const commonStyles = [
+  'styles/libs/font-awesome.min.css',
   'styles/libs/materialdesignicons.min.css',
   'styles/variables.scss',
   'styles/fonts.scss',
@@ -84,6 +92,19 @@ const contactAssets = {
   'js/contact.min.js': commonScripts,
   'css/contact.min.css': [...commonStyles, 'styles/contact.scss']
 };
+
+let posts = {};
+posts = Object.keys(postsListObject)
+  .sort((a, b) => {
+    return -(new Date(postsListObject[a].PublicationDate) - new Date(postsListObject[b].PublicationDate));
+  })
+  .reduce((prev, curr) => {
+    const event = new Date(postsListObject[curr].PublicationDate);
+    const options = { month: 'short', day: 'numeric', year: 'numeric' };
+    prev[curr] = postsListObject[curr];
+    prev[curr].PublicationDate = event.toLocaleDateString('en-EN', options);
+    return prev;
+  }, {});
 
 let routes = {
   '/': {
@@ -280,7 +301,16 @@ let routes = {
     vars: {
       ...defaultVariables,
       title: 'Blog Articles | ' + defaultVariables.title,
-      href: defaultVariables.url + '/blog/'
+      description:
+        'Mitoc Group is a technology company focusing on automation using cloud native services.' +
+        ' Our engineers are proudly sharing here our thoughts and our experience, therefore please' +
+        ' enjoy them responsibly.',
+      href: defaultVariables.url + '/blog/',
+      image: '/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: posts,
+      nrVisiblePosts
     },
     assets: blogAssets
   },
@@ -320,6 +350,19 @@ let routes = {
     assets: commonAssets
   }
 };
+
+Object.keys(posts).forEach(key => {
+  let postPath = `/blog/${key}/`;
+
+  routes[postPath] = {
+    view: 'blog/post.twig',
+    vars: {
+      ...defaultVariables,
+      ...posts[key],
+      posts
+    }
+  };
+});
 
 module.exports = {
   server: {

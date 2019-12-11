@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "aws-sdk": "^2.316.0",
+    "markdowneyjr": "^3.1.0",
+    "showdown": "^1.9.1",
     "web-boost": "^1.4.0"
   }
 }
