@@ -17,7 +17,7 @@ jQuery(function ($) {
   });
 
   showMore.on('click', function () {
-    $(hiddenBlock).each(function(index) {
+    $(hiddenBlock).each(function (index) {
       if (index === toBeVisiblePosts) return false;
 
       $(this).removeClass('hidden');
