@@ -25,4 +25,5 @@ index.txt
 npm-debug.log
 
 **/.terraform
-**/terraform.**
+**/terraform.**.tfstate
+**/terraform.**.tfplan
