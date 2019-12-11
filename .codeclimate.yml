@@ -1,6 +1,9 @@
 engines:
   csslint:
     enabled: true
+    exclude_patterns:
+      - 'assets/js/libs/'
+      - 'assets/styles/libs/'
   duplication:
     enabled: true
     config:
