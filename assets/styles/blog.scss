@@ -6,7 +6,7 @@
 }
 
 .padd25px {
-  padding : 25px !important;
+  padding: 25px !important;
 }
 
 .blog-container {
@@ -540,12 +540,12 @@
 
 @keyframes slide-up {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -568,8 +568,8 @@
     letter-spacing: -0.012em;
     font-family: 'Roboto-Bold', sans-serif;
   }
-  span {    
-    color: rgba(0, 0, 0, 0.70) !important;
+  span {
+    color: rgba(0, 0, 0, 0.7) !important;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
