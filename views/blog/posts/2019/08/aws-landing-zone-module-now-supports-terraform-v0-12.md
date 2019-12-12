@@ -14,10 +14,10 @@ eistrati.png
 eistrati
 
 # PublicationDate
-Wed, 21 August 2019 12:20:55 -0400
+Tue, 20 August 2019 12:20:55 -0400
 
 # Thumbnail
-/images/blog/2019-08-21/terraform.png
+/images/blog/2019-08-20/terraform.png
 
 # Title
 AWS Landing Zone module now supports Terraform v0.12+
@@ -28,7 +28,7 @@ Couple of weeks ago we were excited to Introduce Programmatic AWS Landing Zone a
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2019-08-21/terraform.png" alt="partner aws" />
+    <img src="/images/blog/2019-08-20/terraform.png" alt="partner aws" />
     <div class="center img-description">
        <a href="https://registry.terraform.io/modules/TerraHubCorp/landing-zone" target="_blank">https://registry.terraform.io/modules/TerraHubCorp/landing-zone</a>
     </div>

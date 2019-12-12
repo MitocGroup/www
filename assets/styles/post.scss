@@ -308,6 +308,24 @@
     padding-top: 5px;
     font-size: inherit;
   }
+  .green-blockquote {
+    border-left: 1px solid $main-color;
+    display: inline-block;
+    padding-left: 10px;
+    margin-top: 10px;
+    p {
+      color: $main-color !important;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  .green-blockquote .graf {
+    a {
+      color: $main-color !important;
+      background-image: none;
+      text-decoration: underline $main-color;
+    }
+  }
 }
 
 .btn-follow {
@@ -422,9 +440,43 @@
   }
 }
 
+.horizontalScrollTable {
+  width: auto;
+  overflow-x: auto;
+  white-space: normal;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3 {
+  padding-top: 75%;
+}
+
 .img-post-left {
   float: left;
   margin: 25px 30px 25px -150px;
   padding: 25px;
   width: 75%;
+}
+
+.img-center {
+  width: auto !important;
+  margin: auto;
+  display: block;
 }

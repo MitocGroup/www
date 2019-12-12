@@ -17,7 +17,7 @@ eistrati
 Wed, 25 March 2018 12:20:55 -0400
 
 # Thumbnail
-/images/blog/2019-08-21/terraform.png
+/images/blog/2018-03-25/mitoc.png
 
 # Title
 You get what you get and you don’t get upset

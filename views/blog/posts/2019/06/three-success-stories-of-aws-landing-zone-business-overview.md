@@ -14,7 +14,7 @@ eistrati.png
 eistrati
 
 # PublicationDate
-Tue, 4 Jun 2019 12:20:55 -0400
+Fri, 19 Jun 2019 12:20:55 -0400
 
 # Thumbnail
 /images/blog/2019-06-19/aws-lz.png
