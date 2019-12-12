@@ -62,7 +62,7 @@ That is why terraform module for AWS Landing Zone is designed to be dynamic, the
 
 ### The Structure of Landing Zone Components
 
-When looking at each component defined in `landing_zone_components` map, the first issue that jumps into our sight is YAML format instead of HCL (Why? More on this later…) But what’s more important at this point is the emerging repeatable pattern. For example, [landing_zone_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) looks something like this:
+When looking at each component defined in `landing_zone_components` map, the first issue that jumps into our sight is YAML format instead of HCL (Why? More on this later…) But what’s more important at this point is the emerging repeatable pattern. For example, [landing\_zone\_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) looks something like this:
 
 ```
 component:
@@ -82,7 +82,7 @@ component:
       [...]
 ```
 
-And the corresponding [default.tfvars](https://terraform-aws-landing-zone.s3.amazonaws.com/mycompany/landing_zone_vpc/default.tfvars) (from _s3://terraform-aws-landing-zone/mycompany/landing_zone_vpc/default.tfvars_) looks like this:
+And the corresponding [default.tfvars](https://terraform-aws-landing-zone.s3.amazonaws.com/mycompany/landing_zone_vpc/default.tfvars) (from _s3://terraform-aws-landing-zone/mycompany/landing\_zone\_vpc/default.tfvars_) looks like this:
 
 ```
 landing_zone_providers = [
@@ -155,7 +155,7 @@ Consider the following: Our goal for this terraform module is to empower users t
 
 When executing `terraform init` and `terraform apply` on `landing_zone module`, the underlying code triggers `terrahub run` for entire list of `landing_zone_components`. Internally, landing zone components in YAML format are converted into HCL. This terrahub feature is called JIT (aka Just In Time) and, as the name suggests, YAML configs are converted into HCL in real-time during terraform workflow execution.
 
-For example, above mentioned component [landing_zone_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) defined as `.yml` file will be converted into the following set of `.tf` files:
+For example, above mentioned component [landing\_zone\_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) defined as `.yml` file will be converted into the following set of `.tf` files:
 
 ```
 $ ls ~/.terrahub/cache/jit/landing_zone_vpc_eef16dcf/

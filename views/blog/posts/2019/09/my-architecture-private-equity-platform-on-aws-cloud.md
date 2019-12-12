@@ -92,12 +92,6 @@ Security and Compliance on AWS is achieved using shared responsibility model. Th
 
 Reference architecture for leading private equity platform on AWS cloud makes it easier and faster to achieve a secure environment using industry’s best practices. Just to name a couple:
 
-### Security
-
-Security and Compliance on AWS is achieved using shared responsibility model. This means that cloud provider operates, manages and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates. Everything else is customer’s responsibility.
-
-Reference architecture for leading private equity platform on AWS cloud makes it easier and faster to achieve a secure environment using industry’s best practices. Just to name a couple:
-
 - Everything is encrypted in transit and at rest
 - Keys and other secrets are rotated on regular basis
 - Security groups and IAM roles are following least privilege principle
