@@ -17,7 +17,7 @@ eistrati
 Mon, 3 August 2015 12:20:55 -0400
 
 # Thumbnail
-/images/blog/2015-08-03/Welcome.png
+/images/blog/2015-08-03/welcome.png
 
 # Title
 Very exciting and looking forward to AWS re:Invent 2015!

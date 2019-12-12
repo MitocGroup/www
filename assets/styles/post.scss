@@ -326,6 +326,19 @@
       text-decoration: underline $main-color;
     }
   }
+  code:not([class]) {
+    font-size: 20px;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
+    color: $red-color;
+    font-family: '"Charter Regular", sans-serif';
+    background-color: $gray-dark-color;
+    padding-left: 6px;
+    padding-right: 6px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: 'liga' on;
+  }
 }
 
 .btn-follow {

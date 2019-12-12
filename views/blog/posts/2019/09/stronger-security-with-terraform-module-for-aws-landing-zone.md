@@ -53,13 +53,13 @@ The AWS Landing Zone solution includes an initial security baseline that can be 
 
 Last week we covered in great length of details [Terraform Module Components for AWS Landing Zone Solution](https://blog.mitocgroup.com/terraform-module-components-for-aws-landing-zone-solution-c74267a0e70c). We `used landing_zone_vpc` component as a reference to describe what a component is and how does it work. This week we would like to dive deeper into security focused components. Specifically:
 
-- landing_zone_vpc
-- landing_zone_subnet
-- landing_zone_security_group
-- landing_zone_cloudtrail
-- landing_zone_config
-- landing_zone_iam_role
-- landing_zone_sso
+- [landing\_zone\_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/tree/master/components/landing_zone_vpc)
+- [landing\_zone\_subnet](https://github.com/TerraHubCorp/terraform-aws-landing-zone/tree/master/components/landing_zone_subnet)
+- [landing\_zone\_security\_group](https://github.com/TerraHubCorp/terraform-aws-landing-zone/tree/master/components/landing_zone_security_group)
+- [landing\_zone\_cloudtrail](https://github.com/TerraHubCorp/terraform-aws-landing-zone/tree/master/components/landing_zone_cloudtrail)
+- [landing\_zone\_config](https://github.com/TerraHubCorp/terraform-aws-landing-zone/tree/master/components/landing_zone_config)
+- [landing\_zone\_iam\_role](https://github.com/TerraHubCorp/terraform-aws-landing-zone/tree/master/components/landing_zone_iam_role)
+- [landing\_zone\_sso](https://github.com/TerraHubCorp/terraform-aws-landing-zone/tree/master/components/landing_zone_sso)
 
 <div class="padd25px">
     <img src="/images/blog/2019-09-18/service-mapped.png" alt="partner aws" />
