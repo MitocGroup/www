@@ -14,10 +14,10 @@ eistrati.png
 eistrati
 
 # PublicationDate
-Fri, 2 August 2019 12:20:55 -0400
+Thu, 1 August 2019 12:20:55 -0400
 
 # Thumbnail
-/images/blog/2019-08-02/aws-lz-arch.png
+/images/blog/2019-08-01/aws-lz-arch.png
 
 # Title
 Three Success Stories of AWS Landing Zone (Technology Overview)
@@ -30,7 +30,7 @@ After introducing Terraform Module for AWS Landing Zone and providing Business O
 In this article, we will be covering the technical aspects of implementations and critical details that helped deploy and manage consistent multi-account strategy using AWS best practices. We will start with reference architecture (see picture below) for AWS Landing Zone solution and dive deeper into each customer’s customization that make their solutions both unique and reusable.
 
 <div class="padd25px">
-    <img src="/images/blog/2019-08-02/aws-lz-arch.png" alt="partner aws" />
+    <img src="/images/blog/2019-08-01/aws-lz-arch.png" alt="partner aws" />
     <div class="center img-description">
       AWS Landing Zone Architecture (source:
       <a href="https://aws.amazon.com/solutions/aws-landing-zone">https://aws.amazon.com/solutions/aws-landing-zone</a>)
@@ -106,7 +106,7 @@ Unfortunately we don’t have written permission to disclose customers names. Th
 #### Customer #1: $49B in revenue
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-08-02/customer1.png" alt="partner aws" />
+    <img src="/images/blog/2019-08-01/customer1.png" alt="partner aws" />
 </div>
 
 In this case, we worked with a customer who is using the following 3rd party services and tools that are not native to AWS:
@@ -121,7 +121,7 @@ As shown in the diagram on the left, terraform based implementation of AWS Landi
 #### Customer #2: $33B in revenue
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-08-02/customer2.png" alt="partner aws" />
+    <img src="/images/blog/2019-08-01/customer2.png" alt="partner aws" />
 </div>
 
 In this case, we worked with a customer who is using the following 3rd party services and tools that are not native to AWS:
@@ -138,7 +138,7 @@ Similar to previous customer, the diagram on the left reflects a sustainable cus
 #### Customer #3: $11B in revenue
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-08-02/customer3.png" alt="partner aws" />
+    <img src="/images/blog/2019-08-01/customer3.png" alt="partner aws" />
 </div>
 
 In this case, we worked with a customer who is using the following 3rd party services and tools that are not native to AWS:

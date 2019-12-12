@@ -14,10 +14,10 @@ eistrati.png
 eistrati
 
 # PublicationDate
-Tue, 18 Jun 2019 12:20:55 -0400
+Mon, 17 Jun 2019 12:20:55 -0400
 
 # Thumbnail
-/images/blog/2019-06-18/aws-arch.png
+/images/blog/2019-06-17/aws-arch.png
 
 # Title
 Introducing Programmatic AWS Landing Zone as Terraform Module
@@ -30,7 +30,7 @@ AWS Landing Zone is a solution that helps customers more quickly set up a secure
 In over 5 years of our corporate existence our team at Mitoc Group was relentlessly working to help large organizations transform themselves and build or migrate their IT footprint to AWS cloud. In other words — quoting our friends from AWS — our customers are reinventing themselves on AWS. It is a never ending effort to invent and simplify on behalf of customers, and AWS is doing a great job at solving complex problems with easy to digest solutions.
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-06-18/aws-arch.png" alt="AWS Landing Zone" />
+    <img src="/images/blog/2019-06-17/aws-arch.png" alt="AWS Landing Zone" />
     <div class="center img-description">AWS Landing Zone (source:
        <a href="https://aws.amazon.com/solutions/aws-landing-zone" target="_blank">https://aws.amazon.com/solutions/aws-landing-zone</a>)
     </div>

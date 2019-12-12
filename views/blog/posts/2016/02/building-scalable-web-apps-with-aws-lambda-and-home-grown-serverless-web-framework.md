@@ -435,7 +435,9 @@ _Note: The distribution takes up to 20 minutes to provision, therefore don’t w
 
 Below video playlist summarizes the steps that we’ve walked you through:
 
-<iframe width="680" height="383" src="https://www.youtube.com/embed/ghZNn5Gjv90?list=PLPGfD-tGOl7uNDXo_eMN1odMZflYVu2n9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container">
+  <iframe src="https://www.youtube.com/embed/ghZNn5Gjv90?list=PLPGfD-tGOl7uNDXo_eMN1odMZflYVu2n9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Scalability Benchmarking
 

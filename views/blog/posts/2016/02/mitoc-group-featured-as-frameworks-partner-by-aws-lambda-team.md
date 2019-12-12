@@ -27,7 +27,7 @@ Mitoc Group featured as Frameworks Partner by AWS Lambda team
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2016-04-18/speakers.png" alt="Speakers" />
+    <img src="/images/blog/2016-02-26/mitoc.png" alt="Speakers" />
     <div class="center img-description"><a href="https://aws.amazon.com/lambda/partners">https://aws.amazon.com/lambda/partners</a></div>
 </div>
 

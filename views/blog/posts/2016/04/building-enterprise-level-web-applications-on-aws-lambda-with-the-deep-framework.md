@@ -364,7 +364,9 @@ Next, you will deploy the todo app using _deepify_:
 
 _Note: When step 2 (deepify server) is finished, you can open in your browser [http://localhost:8000](http://localhost:8000/) and enjoy the todo app running locally._
 
-<iframe width="680" height="383" src="https://www.youtube.com/embed/ghZNn5Gjv90?list=PLPGfD-tGOl7uNDXo_eMN1odMZflYVu2n9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container">
+  <iframe width="680" height="383" src="https://www.youtube.com/embed/ghZNn5Gjv90?list=PLPGfD-tGOl7uNDXo_eMN1odMZflYVu2n9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Cleaning Up
 

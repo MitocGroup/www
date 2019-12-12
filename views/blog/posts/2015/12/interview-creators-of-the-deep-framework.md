@@ -17,7 +17,7 @@ eistrati
 Wed, 16 December 2015 12:20:55 -0400
 
 # Thumbnail
-static/images/blog/2015-12-16/interview.png
+/images/blog/2015-12-16/interview.png
 
 # Title
 Interview: Creators of The DEEP Framework
@@ -30,7 +30,7 @@ Learn About The DEEP Framework Right From Its Creators
 Original article was posted on [https://serverlesscode.com/post/deep-framework-developer-interview/](https://serverlesscode.com/post/deep-framework-developer-interview/)
 
 <div class="padd25px">
-    <img src="static/images/blog/2015-12-16/interview.png" alt="partner aws" />
+    <img src="/images/blog/2015-12-16/interview.png" alt="partner aws" />
 </div>
 
 If you want to write web applications in AWS Lambda, there are actually quite a few options out there. There’s the [DEEP Framework](https://github.com/MitocGroup/deep-framework), [Serverless](http://serverless.com/) (formerly JAWS), [PAWS](https://github.com/braahyan/PAWS), and [Sparta](https://github.com/mweagle/Sparta). There are likely more that I’m omitting — holler on Twitter [@ryan_sb](https://twitter.com/ryan_sb) if you know of one.
