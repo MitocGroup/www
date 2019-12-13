@@ -65,7 +65,7 @@ Here below is the summarized list of AWS products we use:
  - Data tier: 9) [Amazon DynamoDB](https://aws.amazon.com/dynamodb/), 10) [Amazon SQS](https://aws.amazon.com/sqs/), 11) [Amazon ElastiCache](https://aws.amazon.com/elasticache/) and 12) [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/)
  - Monitoring tier: 13) [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/), 14) [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) and 12) [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/)
 
-_```Note: As you can see above, a typical web application in our case uses 14 different services from AWS. Also, Amazon CloudSearch is a much better fit as a serverless option for full-text search capabilities, but we prefer Elasticsearch technology and Amazon Elasticsearch Service instead```_
+>_Note: As you can see above, a typical web application in our case uses 14 different services from AWS. Also, Amazon CloudSearch is a much better fit as a serverless option for full-text search capabilities, but we prefer Elasticsearch technology and Amazon Elasticsearch Service instead_
 
 ### Pre-requisites and Initial Considerations
 
