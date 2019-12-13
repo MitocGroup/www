@@ -28,7 +28,7 @@ Mitoc Group Inc accepted as AWS Technology Partner
 
 
 <div class="external-article">
-  <a href="http://www.aws-partner-directory.com/PartnerDirectory/PartnerDetail?Name=Mitoc%20Group%20Inc&source=post_page-----86b6f936db52----------------------">
+  <a href="https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0&n=Mitoc%20Group">
     <h5>Mitoc Group Inc</h5>
     <span>AWS Solution Provider: Mitoc Group Inc</span>
     <span>www.aws-partner-directory.com</span>
@@ -39,7 +39,7 @@ Mitoc Group Inc accepted as AWS Technology Partner
     <img src="/images/blog/2015-07-28/partnerAws.png" alt="Partner AWS" />
 </div>
 
-Although we’ve been quiet for almost 2 months, our team has been heads down and working hard to achieve difficult milestones. Today we can proudly talk about our first major achievement — accepted as Official AWS Technology Partner: [http://www.aws-partner-directory.com/PartnerDirectory/PartnerDetail?Name=Mitoc+Group+Inc](http://www.aws-partner-directory.com/PartnerDirectory/PartnerDetail?Name=Mitoc+Group+Inc).
+Although we’ve been quiet for almost 2 months, our team has been heads down and working hard to achieve difficult milestones. Today we can proudly talk about our first major achievement — accepted as Official AWS Technology Partner: [https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0](https://aws.amazon.com/partners/find/partnerdetails/?id=001E0000018XsYSIA0).
 
 To provide a little bit of insight why this is great for a small group like ours, I think it’s important to start from the vision and the mission that we’ve all committed when we’ve started this company. Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world. We’ve been using AWS at the core of our business for a while and it’s a huge privilege to be able to partner with such a great company, that inspires us to do great things!
 

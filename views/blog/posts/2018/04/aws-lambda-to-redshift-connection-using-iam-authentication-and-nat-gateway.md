@@ -91,7 +91,7 @@ No module named 'psycopg2._psycopg': ModuleNotFoundError
 This is an easy and quick fix. Either you’re compiling psycopg2 library on an Amazon Linux compatible operating system. Or, a much better alternative, use the following GitHub repository:
 
 <div class="external-article">
-  <a href="https://github.com/jkehler/awslambda-psycopg2?source=post_page-----b40c6002082b----------------------">
+  <a href="https://github.com/jkehler/awslambda-psycopg2">
   <h5>jkehler/awslambda-psycopg2</h5>
   <span>Contribute to awslambda-psycopg2 development by creating an account on GitHub.</span>
     <span>github.com</span>

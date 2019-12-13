@@ -61,17 +61,17 @@ This article will describe how we have transformed a self-managed task managemen
 The architecture of every web application we build or transform, including the one described above, is similar to the reference architecture of the realtime voting application published recently by AWS on Github:
 
 <div class="external-article">
-  <a href="https://registry.terraform.io/modules/TerraHubCorp/landing-zone/aws?source=post_page-----3e566ee6e73f----------------------">
+  <a href="https://registry.terraform.io/modules/TerraHubCorp/landing-zone/aws">
   <h5>awslabs/lambda-refarch-webapp</h5>
   <span>lambda-refarch-webapp — AWS Lambda Reference Architecture for creating a Web Application</span>
     <span>github.com</span>
   </a>
 </div>
 
-The todo app is written in AngularJS and deployed on Amazon S3, behind Amazon CloudFront (the front-end tier). The tasks management is processed by AWS Lambda, optionally behind Amazon API Gateway (the back-end tier). The tasks metadata is stored in Amazon DynamoDB (the data tier). The transformed todo app, along with instructions on how to install and deploy this web application, is described in [this blog post](https://blog.mitocgroup.com/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework-e04c912d08f0) and the code is available on Github:
+The todo app is written in AngularJS and deployed on Amazon S3, behind Amazon CloudFront (the front-end tier). The tasks management is processed by AWS Lambda, optionally behind Amazon API Gateway (the back-end tier). The tasks metadata is stored in Amazon DynamoDB (the data tier). The transformed todo app, along with instructions on how to install and deploy this web application, is described in [this blog post](https://www.mitocgroup.com/blog/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework) and the code is available on Github:
 
 <div class="external-article">
-  <a href="https://github.com/MitocGroup/deep-microservices-todo-app?source=post_page-----dd81719b0dff----------------------">
+  <a href="https://github.com/MitocGroup/deep-microservices-todo-app">
   <h5>MitocGroup/deep-microservices-todomvc</h5>
   <span>DEEP Todo App ( https://github.com/MitocGroup/deep-microservices-todomvc) is a web app inspired from AngularJS TodoMVC…</span>
     <span>github.com</span>
@@ -423,7 +423,7 @@ Here below are 2 security roles (1 for back-end and 1 for front-end) that have b
 We have been continuously benchmarking AWS Lambda for various use cases in our microapplications. After a couple of repetitive times doing similar analysis, we decided to build the benchmarking as another microapplication and reuse the ecosystem to automatically include where we needed it. The codebase is open sourced on Github:
 
 <div class="external-article">
-  <a href="https://github.com/MitocGroup/deep-microservices-benchmarking?source=post_page-----dd81719b0dff----------------------">
+  <a href="https://github.com/MitocGroup/deep-microservices-benchmarking">
   <h5>MitocGroup/deep-microservices-benchmarking</h5>
   <span>DEEP Benchmarking ( https://github.com/MitocGroup/deep-microservices-benchmarking) is a microservice that is built on…</span>
   <span>github.com</span>

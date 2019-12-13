@@ -48,12 +48,12 @@ The key points to keep in mind as we move forward:
 
 ### Serverless Architecture on AWS
 
-Before we dive into the details of the blue-green deployment process for serverless powered applications, it’s vital to point out the architecture of a typical web application that uses serverless computing from AWS (as shown in the picture below, as well as described in [this blogpost](https://blog.mitocgroup.com/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework-dd81719b0dff)).
+Before we dive into the details of the blue-green deployment process for serverless powered applications, it’s vital to point out the architecture of a typical web application that uses serverless computing from AWS (as shown in the picture below, as well as described in [this blogpost](https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework)).
 
 <div class="img-post-left">
     <img src="https://miro.medium.com/max/3968/1*obn8oKjcqkJJUIZ2bB59xg.png" alt="lambda-deep-framework" />
     <div class="center img-description">
-        <a href="https://blog.mitocgroup.com/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework-dd81719b0dff" rel="noreferrer">https://blog.mitocgroup.com/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework-dd81719b0dff</a>
+        <a href="https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework" rel="noreferrer">https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework</a>
     </div>
 </div>
 
@@ -172,8 +172,8 @@ What are the down sizes (pre-requisites) of the blue-green deployments v2?
 Unfortunately, there is no silver bullet that would work perfectly for any serverless powered applications on AWS. As with any software, it’s up to us (developers or devops engineers) to decide the right process that fits specific use case. We just wanted to share two different approaches that empowered us to provide high quality at scale without compromising on resources and costs (which, by the way, are ridiculously low, but that’s another blogpost).
 
 <div class="center img-description">
-        <a href="https://blog.mitocgroup.com/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team-a7d3d5632cf8">
-        https://blog.mitocgroup.com/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team-a7d3d5632cf8</a>
+        <a href="https://www.mitocgroup.com/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team">
+        https://www.mitocgroup.com/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team</a>
 </div>
 
 Last, but not the least, [Mitoc Group](https://www.mitocgroup.com/) is a technology company that focuses on innovative enterprise solutions. Share your thoughts and your experience on [LinkedIn](https://linkedin.com/company/mitoc-group), [Twitter](https://twitter.com/mitocgroup) or [Facebook](https://facebook.com/mitocgroup).

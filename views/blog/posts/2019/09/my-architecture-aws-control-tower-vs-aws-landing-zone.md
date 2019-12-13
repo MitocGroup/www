@@ -57,7 +57,7 @@ As of time of writing, AWS Control Tower doesn’t support existing setups for A
 
 Service or Feature                       | AWS Control Tower         |   AWS Landing Zone
 -----------------------------------------|---------------------------|----------------------------
-New AWS Organization account             | &#x2705; yes              | &#x274C; yes
+New AWS Organization account             | &#x2705; yes              | &#x2705; yes
 Existing AWS Organization account        | &#x274C; no               | &#x2705; yes
 New AWS SSO environment                  | &#x2705; yes              | &#x2705; yes
 Existing AWS SSO environment             | &#x274C; no               | &#x2705; yes

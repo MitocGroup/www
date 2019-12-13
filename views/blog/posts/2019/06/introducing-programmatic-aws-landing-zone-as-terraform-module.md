@@ -63,7 +63,7 @@ Once the strategy is in place, successful AWS Landing Zone customers have consid
 ### Introducing Terraform Module for AWS Landing Zone
 
 <div class="external-article">
-  <a href="https://registry.terraform.io/modules/TerraHubCorp/landing-zone/aws?source=post_page-----3e566ee6e73f----------------------">
+  <a href="https://registry.terraform.io/modules/TerraHubCorp/landing-zone/aws">
   <h5>Terraform Module Registry: AWS Landing Zone</h5>
   <span>
     AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices. This repository contains one terraform module that dynamically deploys components of AWS Landing Zone solution based on input list of .tfvars files.
