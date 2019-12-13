@@ -153,7 +153,7 @@ Similar to previous customers, the architecture diagram on the left is a customi
 
 #### Summary
 
-1. This terraform module accepts arguments `landing\_zone\_providers` and `landing\_zone\_components` among others
+1. This terraform module accepts arguments `landing_zone_providers` and `landing_zone_components` among others
 2. Providers and components can be as many as you want; Only the ones referenced in `.tfvars` files will be provisioned / deployed
 3. Ideally the code for landing zone components is immutable, while `.tfvars` files are adjustable over time
 4. Microservices architecture is highly recommended, aim for one terraform resource per one landing zone component

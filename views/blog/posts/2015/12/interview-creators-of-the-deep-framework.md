@@ -37,7 +37,7 @@ If you want to write web applications in AWS Lambda, there are actually quite a 
 
 Today, we'll hear from the creators of the DEEP Framework about its origins, what it's great at, and how to start using it. The big driver for the Mitoc Group behind going serverless was to reduce ongoing maintenance. What better way to maintain fewer servers by not having them?
 
-Not only is there the DEEP Framework itself, but there's also a “microapp” store at [www.deep.mg](www.deep.mg) where developers can buy and sell small pieces of functionality, like a shopping cart or recommendation engine. It's still early days for their marketplace, but in the future it could enable developers to build full applications with relatively little code.
+Not only is there the DEEP Framework itself, but there's also a "microapp" store at [www.deep.mg](www.deep.mg) where developers can buy and sell small pieces of functionality, like a shopping cart or recommendation engine. It's still early days for their marketplace, but in the future it could enable developers to build full applications with relatively little code.
 
 ### The Interview
 
@@ -72,7 +72,7 @@ The team that works on DEEP project is pretty small (less than 10 developers). E
 
 At the beginning, CloudWatch was our go-to monitoring tool, but it's very limited in showing the full picture, especially in realtime. We are using an [ELK](https://www.elastic.co/webinars/introduction-elk-stack)(Elasticsearch + Logstash + Kibana) stack hacked together to solve our measuring and monitoring needs. Now we're working to transform that solution into a component that any web application or web platform could use, if it's built with DEEP Framework.
 
-#### Q: How does the DEEP framework expect a production pipeline to look? Do you expect users to be developing on their “production” account and managing changes with versioning/aliases?
+#### Q: How does the DEEP framework expect a production pipeline to look? Do you expect users to be developing on their "production" account and managing changes with versioning/aliases?
 
 DEEP Framework, DEEP Marketplace, and DEEP CLI (aka deepify) are components of a bigger Platform-as-a-Service that we call [Digital Enterprise End-to-end Platform](https://github.com/MitocGroup/deep-framework#appendix-b-deep-ecosystem) (aka DEEP).
 
@@ -92,7 +92,7 @@ In both cases, DEEP ecosystem manages (and encourages, but doesn't enforce) envi
 
 #### Q: Was there anything that surprised you along the way? Were certain tasks easier or harder than you'd expected?
 
-Well, this is a tricky question. Since almost everything for us was new, we had lots of questions and misperceptions on certain things, but with help and support from the community and AWS, every task that was hard at the beginning turned up easy at the end. The biggest surprise was to be spotted by AWS Lambda team and invited to speak at AWS re:Invent 2015, the breakout session called “Microservices Architecture for Digital Platforms with AWS Lambda, Amazon CloudFront and Amazon DynamoDB”.
+Well, this is a tricky question. Since almost everything for us was new, we had lots of questions and misperceptions on certain things, but with help and support from the community and AWS, every task that was hard at the beginning turned up easy at the end. The biggest surprise was to be spotted by AWS Lambda team and invited to speak at AWS re:Invent 2015, the breakout session called "Microservices Architecture for Digital Platforms with AWS Lambda, Amazon CloudFront and Amazon DynamoDB".
 
 #### Q: Are there any tools or libraries you've used to build DEEP, or that you use alongside DEEP that you want people to know about?
 

@@ -62,7 +62,7 @@ DEEP Management is our take on Digital Asset Management systems, built on top of
 
 1. Managing images and videos without a need to import actual assets into the system (assets can be stored remotely as well)
 2. Managing microsites and static websites with full development capabilities like continuous integration and continuous deployment on top of multiple environments (development, testing, staging and production)
-3. Managing logs and data that handle out-of-the-box “close to realtime” processes and visualize insights of your own datasets
+3. Managing logs and data that handle out-of-the-box "close to realtime" processes and visualize insights of your own datasets
 
 Some other roadmap features include:
 

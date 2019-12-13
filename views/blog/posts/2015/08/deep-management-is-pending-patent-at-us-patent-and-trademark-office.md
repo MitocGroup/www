@@ -30,7 +30,7 @@ DEEP Management is pending patent at US Patent and Trademark Office
     <img src="/images/blog/2015-08-05/usPatent.jpeg" alt="Why CI?" />
 </div>
 
-For the last couple of weeks we have been working with [Steinberg Intellectual Property Law LLC](http://steinbergiplaw.com/) to file a patent with [United States Patent and Trademark Office](http://www.uspto.gov/) that protects the Intellectual Property developed by our group. We are proud and excited to report the acceptance of the application number 62/195,190 entitled “Digital Asset Management System and Method of Use”.
+For the last couple of weeks we have been working with [Steinberg Intellectual Property Law LLC](http://steinbergiplaw.com/) to file a patent with [United States Patent and Trademark Office](http://www.uspto.gov/) that protects the Intellectual Property developed by our group. We are proud and excited to report the acceptance of the application number 62/195,190 entitled "Digital Asset Management System and Method of Use".
 
 ### What does this mean for our customers?
 
@@ -46,7 +46,7 @@ The concepts behind serverless environments is pretty simple: no servers / infra
 
 2. Low cost and low maintenance — Forrester Research predicts that enterprise content volume is growing [at a rate of 200% annually](http://www.workforce.com/ext/resources/archive_mediafiles/Google_GSA_ROI_WP.pdf). Enterprises are managing large amount of digital goods with exponential growth rates. Serverless environments can sustainably help upgrade existing digital platforms without breaking the bank or cutting short on performance and security.
 
-3. Low barrier of entry — [McKinsey's global survey](http://www.mckinsey.com/insights/business_technology/minding_your_digital_business_mckinsey_global_survey_results) summarized that “Executives expect that new digital technologies will transform their businesses, but many admit their companies are far from prepared in developing capabilities and meeting challenges”. Serverless environments can sustainably help break through these challenges and attract the right talent to execute on this strategy.
+3. Low barrier of entry — [McKinsey's global survey](http://www.mckinsey.com/insights/business_technology/minding_your_digital_business_mckinsey_global_survey_results) summarized that "Executives expect that new digital technologies will transform their businesses, but many admit their companies are far from prepared in developing capabilities and meeting challenges". Serverless environments can sustainably help break through these challenges and attract the right talent to execute on this strategy.
 
 ### So what are you waiting for?
 

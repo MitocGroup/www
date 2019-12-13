@@ -57,7 +57,7 @@ We have been busy. Business as usual. Little to no time to write about our exper
   </a>
 </div>
 
-Last week, we get another email from AWS re:Invent team, saying that “your chalk talk SRV326 How to Approach Continuous Integration for Serverless Applications is 1,072.73% over-subscribed! Would you like to hold a repeat session?” And … there you go:
+Last week, we get another email from AWS re:Invent team, saying that "your chalk talk SRV326 How to Approach Continuous Integration for Serverless Applications is 1,072.73% over-subscribed! Would you like to hold a repeat session?" And … there you go:
 
 <div class="external-article">
   <a href="https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=18059">

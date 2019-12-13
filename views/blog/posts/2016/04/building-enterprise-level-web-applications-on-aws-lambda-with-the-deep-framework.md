@@ -41,11 +41,11 @@ In this post, we will dive deeper into how DEEP is leveraging AWS Lambda to empo
 
 Our approach to web development is full-stack and user-driven, focused on UI (aka User Interaction) and UX (aka User eXperience). But before going into the details, we'd like to emphasize the strategical (biased and opinionated) decisions we have made early:
 
-- We don't say “no” to customers; Every problem is seriously evaluated and sometimes we offer options that involve our direct competitors
+- We don't say "no" to customers; Every problem is seriously evaluated and sometimes we offer options that involve our direct competitors
 - We are developers and we focus only on the application level; Everything else (platform level and infrastructure level) must be managed by AWS
 - We focus our 20% of effort to solve 80% of work load; Everything must be automated and pushed on the services side rather than ours (clients)
 
-To be honest and fair, it doesn't work all the time as expected, but it does help us to learn fast and move quickly, sustainably and incrementally solving business problems through technical solutions that really matters. But the definition of “really matters” is different from customer to customer, quite unique in some cases. Nevertheless, what we learn from our customers is that enterprise-level web applications must provide the following 7 common expectations:
+To be honest and fair, it doesn't work all the time as expected, but it does help us to learn fast and move quickly, sustainably and incrementally solving business problems through technical solutions that really matters. But the definition of "really matters" is different from customer to customer, quite unique in some cases. Nevertheless, what we learn from our customers is that enterprise-level web applications must provide the following 7 common expectations:
 
 1. Be secure — security through obscurity (e.g. [Amazon IAM](https://aws.amazon.com/iam/), [Amazon Cognito](https://aws.amazon.com/cognito/));
 2. Be compliant — governance-focused, audit-friendly service features with [applicable compliance or audit standards](https://aws.amazon.com/compliance/);
@@ -354,7 +354,7 @@ First, you will need the following pre-requisites:
 5. Node.js v4+ (learn how to [Install nvm](https://github.com/creationix/nvm#install-script) and [Use latest node v4](https://github.com/creationix/nvm#usage))
 6. DEEP CLI (execute in command line: _npm install deepify -g_)
 
-Note: Don't use “sudo” in step 5. Otherwise you'll have to [fix npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
+Note: Don't use "sudo" in step 5. Otherwise you'll have to [fix npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
 
 Next, you will deploy the todo app using _deepify_:
 

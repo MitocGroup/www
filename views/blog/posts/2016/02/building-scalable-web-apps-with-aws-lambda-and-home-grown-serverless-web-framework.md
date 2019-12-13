@@ -232,7 +232,7 @@ When the UI and UX were defined, building the web services to support this front
 
 Each web service we use is very small, completely independent, highly decoupled, focused on context bounded one task, communicating through language-agnostic API. This is the very definition of a microservice, which we adopted by choice and by necessity. And this is where AWS Lambda excels!
 
-Next, we will describe the structure of the “Create Todo” microservice that we deploy on AWS Lambda (the other microservices in this todo app are structured pretty much the same): [bootstrap.es6](https://github.com/MitocGroup/deep-microservices-todo-app/blob/master/src/DeepNgToDo/Backend/src/Todo/Create/bootstrap.es6), [package.json](https://github.com/MitocGroup/deep-microservices-todo-app/blob/master/src/DeepNgToDo/Backend/src/Todo/Create/package.json) and [Handler.es6](https://github.com/MitocGroup/deep-microservices-todo-app/blob/master/src/DeepNgToDo/Backend/src/Todo/Create/Handler.es6).
+Next, we will describe the structure of the "Create Todo" microservice that we deploy on AWS Lambda (the other microservices in this todo app are structured pretty much the same): [bootstrap.es6](https://github.com/MitocGroup/deep-microservices-todo-app/blob/master/src/DeepNgToDo/Backend/src/Todo/Create/bootstrap.es6), [package.json](https://github.com/MitocGroup/deep-microservices-todo-app/blob/master/src/DeepNgToDo/Backend/src/Todo/Create/package.json) and [Handler.es6](https://github.com/MitocGroup/deep-microservices-todo-app/blob/master/src/DeepNgToDo/Backend/src/Todo/Create/Handler.es6).
 
 ```
 
@@ -441,7 +441,7 @@ Below video playlist summarizes the steps that we've walked you through:
 
 ### Scalability Benchmarking
 
-Even though SPAs (aka Single-Page Applications) are [challenging to monitor and benchmark](http://www.soasta.com/blog/angularjs-real-user-monitoring-single-page-applications), we have load tested the todo app in order to associate some numbers to how big it can scale using out-of-the-box configurations. We found that standard setup gives us acceptable response time (within 2 seconds) for up to 10,000 concurrent users per second, at “my Starbucks coffee costs more” price tag:
+Even though SPAs (aka Single-Page Applications) are [challenging to monitor and benchmark](http://www.soasta.com/blog/angularjs-real-user-monitoring-single-page-applications), we have load tested the todo app in order to associate some numbers to how big it can scale using out-of-the-box configurations. We found that standard setup gives us acceptable response time (within 2 seconds) for up to 10,000 concurrent users per second, at "my Starbucks coffee costs more" price tag:
 
 Concurrency (in users/sec) | Capacity Peak (in reads/sec) | Average Response (in ms) | Total Requests (in 1min) | Average Cost (in $/min)
 ---------------------------|------------------------------|--------------------------|--------------------------|------------------------

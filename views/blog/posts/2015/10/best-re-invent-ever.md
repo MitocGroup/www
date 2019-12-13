@@ -35,7 +35,7 @@ Best re:Invent Ever!
 
 We would like to share some thoughts while it's still hot on what this conference meant for us. It was the Best re:Invent Ever! We have met with a lot of technical folks and learned so much, that it would take months to process it and transform into added value for our customers.
 
-We have presented [“Microservices Architecture for Digital Platforms with AWS Lambda, Amazon CloudFront and Amazon DynamoDB”](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=1646&tclass=popup). The video will be loaded on Youtube ([Architecture Playlist](https://www.youtube.com/playlist?list=PLhr1KZpdzukdRxs_pGJm-qSy5LayL6W_Y)) and the slides will be loaded on Slideshare ([Latest Presentations](http://www.slideshare.net/AmazonWebServices/presentations)), therefore stay tuned and we'll repost them as soon as they will be available.
+We have presented ["Microservices Architecture for Digital Platforms with AWS Lambda, Amazon CloudFront and Amazon DynamoDB"](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=1646&tclass=popup). The video will be loaded on Youtube ([Architecture Playlist](https://www.youtube.com/playlist?list=PLhr1KZpdzukdRxs_pGJm-qSy5LayL6W_Y)) and the slides will be loaded on Slideshare ([Latest Presentations](http://www.slideshare.net/AmazonWebServices/presentations)), therefore stay tuned and we'll repost them as soon as they will be available.
 
 But don't take our word for granted and look at some customers tweets:
 

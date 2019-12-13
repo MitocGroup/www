@@ -37,11 +37,11 @@ Woodcliff Lake, NJ — Nov. 29, 2016 – [Mitoc Group Inc.](https://www.mitocgro
 
 The AWS Service Delivery Program was recently launched to help AWS customers find qualified APN Partners that provide expertise in a specific service or skill area. To qualify, partners must pass service-specific verification of customer references and a technical review, meaning customers can be confident they are working with partners that provide recent and relevant experience.
 
-“Mitoc Group is proud to be one of the first APN partners to participate in the AWS Service Delivery Program,” said [Eugene Istrati](https://linkedin.com/in/eistrati), Technology Partner at Mitoc Group. “Our team has built a base of applied experience around AWS Lambda, and we are dedicated to helping customers achieve their business goals by leveraging the agility of the AWS Cloud.”
+"Mitoc Group is proud to be one of the first APN partners to participate in the AWS Service Delivery Program," said [Eugene Istrati](https://linkedin.com/in/eistrati), Technology Partner at Mitoc Group. "Our team has built a base of applied experience around AWS Lambda, and we are dedicated to helping customers achieve their business goals by leveraging the agility of the AWS Cloud."
 
 APN Partners with AWS Service Delivery Partner Status for AWS Lambda provide services and tools that help customers build or migrate their solutions to a micro-services based serverless architecture, without the need to worry about provisioning or managing servers.
 
-Mitoc Group is helping customers like [Manning Publications](https://www.manning.com/) build a new product intended to give users better access to for-pay content. “ We haven't had the best experiences when developing new products in the past,” said Marjan Bace, Publisher at Manning. “With AWS Lambda, there's a noticeable difference in the speed of development. We're able to follow an agile process that includes quick feature redesign, which leads to a much better experience.”
+Mitoc Group is helping customers like [Manning Publications](https://www.manning.com/) build a new product intended to give users better access to for-pay content. " We haven't had the best experiences when developing new products in the past," said Marjan Bace, Publisher at Manning. "With AWS Lambda, there's a noticeable difference in the speed of development. We're able to follow an agile process that includes quick feature redesign, which leads to a much better experience."
 
 About Mitoc Group
 

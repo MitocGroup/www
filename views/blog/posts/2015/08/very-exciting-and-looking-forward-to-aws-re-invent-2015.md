@@ -34,7 +34,7 @@ When we're submitting our proposal for a breakout session at Amazon's biggest co
 
 ### Why it's such a big deal?
 
-Again, quoting our friend: “Last year couple of hundreds of proposals have been received by AWS re:Invent 2014 team and only twenty-ish of them have been accepted.” Therefore it's a very small (single digit) probability that young and tiny startup like [Mitoc Group](http://www.mitocgroup.com/) would be accepted to present. Combine that with the size of AWS (at the time of writing — [over 1M active customers](http://www.geekwire.com/2014/amazon-web-services-passes-milestone-1m-customers/) and [on course to become more than $6B business](http://techcrunch.com/2015/07/23/amazons-aws-unit-reports-q2-revenue-of-1-8b-391m-profit/)) and it's partners ecosystem (at the time of writing — [1287 Consulting Partners](http://www.aws-partner-directory.com/PartnerDirectory/PartnerSearch?type=SI) and [958 Technology Partners](http://www.aws-partner-directory.com/PartnerDirectory/PartnerSearch?type=ISV)), this is mission impossible!
+Again, quoting our friend: "Last year couple of hundreds of proposals have been received by AWS re:Invent 2014 team and only twenty-ish of them have been accepted." Therefore it's a very small (single digit) probability that young and tiny startup like [Mitoc Group](http://www.mitocgroup.com/) would be accepted to present. Combine that with the size of AWS (at the time of writing — [over 1M active customers](http://www.geekwire.com/2014/amazon-web-services-passes-milestone-1m-customers/) and [on course to become more than $6B business](http://techcrunch.com/2015/07/23/amazons-aws-unit-reports-q2-revenue-of-1-8b-391m-profit/)) and it's partners ecosystem (at the time of writing — [1287 Consulting Partners](http://www.aws-partner-directory.com/PartnerDirectory/PartnerSearch?type=SI) and [958 Technology Partners](http://www.aws-partner-directory.com/PartnerDirectory/PartnerSearch?type=ISV)), this is mission impossible!
 
 <div class="padd25px">
     <img src="/images/blog/2015-08-12/email.png" alt="aws reinvent email" />
@@ -42,7 +42,7 @@ Again, quoting our friend: “Last year couple of hundreds of proposals have bee
 
 _AWS re:Invent Portal Link: [https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=1646&tclass=popup](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=1646&tclass=popup)_
 
-Nevertheless, we've been selected. We are very humble and would like to thank AWS re:Invent 2015 team for trusting us to present such a hot topic like “Microservices Architecture for Digital Plaforms with Lambda, CloudFront and DynamoDB”. We believe that lots of technical people, regardless of software engineers or hardware engineers, solutions architects or dev-/sys-ops, management or decisions making, would benefit from a little bit of hands on experience with serverless digital platforms using managed services from AWS.
+Nevertheless, we've been selected. We are very humble and would like to thank AWS re:Invent 2015 team for trusting us to present such a hot topic like "Microservices Architecture for Digital Plaforms with Lambda, CloudFront and DynamoDB". We believe that lots of technical people, regardless of software engineers or hardware engineers, solutions architects or dev-/sys-ops, management or decisions making, would benefit from a little bit of hands on experience with serverless digital platforms using managed services from AWS.
 
 ### What is AWS re:Invent?
 
