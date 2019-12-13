@@ -33,7 +33,7 @@ StackWorld ScaleUp Award Winner Stories
     </div>
 </div>
 
-[StackWorld](http://www.stackworld.com/) is San Francisco’s Largest DevOps + Scalability Technology Conference where 1,200+ tech companies scale their technology stack from Clouds to DevOps Tools to Back-End Coding Languages. The goal of StackWorld is to connect the community and educate practitioners on scaling their applications and technology stacks. “DevOps” has emerged as an intersection between Developers and IT — where specialized DevOps professionals and DevOps technologies allow applications to scale and get delivered at faster speeds.
+[StackWorld](http://www.stackworld.com/) is San Francisco's Largest DevOps + Scalability Technology Conference where 1,200+ tech companies scale their technology stack from Clouds to DevOps Tools to Back-End Coding Languages. The goal of StackWorld is to connect the community and educate practitioners on scaling their applications and technology stacks. “DevOps” has emerged as an intersection between Developers and IT — where specialized DevOps professionals and DevOps technologies allow applications to scale and get delivered at faster speeds.
 
 Mitoc Group is humble and proud to be nominated among companies like New Relic or Sumo Logic, and voted for [Top 25 ScaleUp Award](http://www.stackworld.com/awards/scaleup-winner-stories). On behalf of our customers and our partners, as well as the entire team who works on [DEEP Framework](https://github.com/MitocGroup/deep-framework), [DEEP CLI](https://www.npmjs.com/packages/deepify) and [DEEP Marketplace](https://www.deep.mg/), we would like to thank everybody who believes in our capabilities and recognize our achievements.
 

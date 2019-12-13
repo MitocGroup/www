@@ -31,7 +31,7 @@ Mitoc Group featured as Frameworks Partner by AWS Lambda team
     <div class="center img-description"><a href="https://aws.amazon.com/lambda/partners">https://aws.amazon.com/lambda/partners</a></div>
 </div>
 
-We are very humble and honored to be featured by AWS Lambda as one of their Framework Partners. On behalf of our customers, we’d like to take this opportunity to thank AWS Lambda team for their continuous trust and support.
+We are very humble and honored to be featured by AWS Lambda as one of their Framework Partners. On behalf of our customers, we'd like to take this opportunity to thank AWS Lambda team for their continuous trust and support.
 
 When we started this journey almost a year ago, our hopes and dreams were to conquer the world with simplified web development process, where developers focus 20% of their time on 80% of the overall software development and related operations. We were tired of the opposite, spending 80% of our time on 20% of results. And AWS Lambda played fundamental role in making it happen.
 

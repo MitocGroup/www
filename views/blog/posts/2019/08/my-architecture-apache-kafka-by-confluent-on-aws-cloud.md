@@ -23,11 +23,11 @@ Sun, 4 August 2019 12:20:55 -0400
 My Architecture: Apache Kafka by Confluent on AWS Cloud
 
 # Intro
-Recent engagement with $4.5B customer produced very positive outcome with very surprising learning lesson: we had to create reference architecture for Apache Kafka by Confluent on AWS cloud from scratch because there wasn’t any available.
+Recent engagement with $4.5B customer produced very positive outcome with very surprising learning lesson: we had to create reference architecture for Apache Kafka by Confluent on AWS cloud from scratch because there wasn't any available.
 
 ---
 
-In this short article we would like to share what we were able to achieve in a very short period of time. Our intention is to help others if they come across something similar. Unfortunately, we can’t give proper credits to everybody who made this reference architecture possible. Nevertheless, when the time comes, we’ll gladly update this article with well deserved recognition.
+In this short article we would like to share what we were able to achieve in a very short period of time. Our intention is to help others if they come across something similar. Unfortunately, we can't give proper credits to everybody who made this reference architecture possible. Nevertheless, when the time comes, we'll gladly update this article with well deserved recognition.
 
 <div class="padd25px">
     <img src="/images/blog/2019-08-04/kafka-arch.png" alt="partner aws" />

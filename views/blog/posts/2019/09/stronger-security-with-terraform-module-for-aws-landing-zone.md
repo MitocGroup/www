@@ -23,7 +23,7 @@ Wed, 18 Septembre 2019 12:20:55 -0400
 Stronger Security with Terraform Module for AWS Landing Zone
 
 # Intro
-Terraform module for AWS Landing Zone solution is offering a stronger security promise. Let’s dive deeper into main security components and understand some practical implications.
+Terraform module for AWS Landing Zone solution is offering a stronger security promise. Let's dive deeper into main security components and understand some practical implications.
 
 ---
 

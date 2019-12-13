@@ -23,7 +23,7 @@ Fri, 24 November 2017 12:20:55 -0400
 AWS re:Invent 2017. Serverless Track. SRV326 Chalk Talk.
 
 # Intro
-Mitoc Group was nominated again to deliver a serverless session at Amazon Web Services’ biggest event of the year, AWS re:Invent 2017.
+Mitoc Group was nominated again to deliver a serverless session at Amazon Web Services' biggest event of the year, AWS re:Invent 2017.
 
 ---
 
@@ -34,7 +34,7 @@ Mitoc Group was nominated again to deliver a serverless session at Amazon Web Se
     </div>
 </div>
 
-If you are like me, you probably regret the amount of food and drinks from yesterday’s Thanksgiving dinner. At least I had lots of fun and an amazing time with family and friends. And, to feel better, this morning I woke up early and played two hours of soccer.
+If you are like me, you probably regret the amount of food and drinks from yesterday's Thanksgiving dinner. At least I had lots of fun and an amazing time with family and friends. And, to feel better, this morning I woke up early and played two hours of soccer.
 
 Wait. What am I talking about?
 
@@ -47,7 +47,7 @@ Oh, right. AWS re:Invent 2017. After [AWS re:Invent 2015](https://www.mitocgroup
     </div>
 </div>
 
-We have been busy. Business as usual. Little to no time to write about our experience and achievements. Nevertheless, back in July 2017, we have received above email that nominates Mitoc Group to present at Amazon Web Services’ biggest event of the year. It was very humbling and very exciting to be considered for a talk on serverless topic, our core business and focus, and it comes with huge responsibility. We have been working with AWS Serverless products since 2014, and [Continuous Integration](https://www.mitocgroup.com/blog/deep-management-s-continuous-integration-with-travis-ci-and-coveralls) is part of our culture. That’s why our proposal, [How to Approach Continuous Integration for Serverless Applications](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=18059), was a no-brainer and a natural choice:
+We have been busy. Business as usual. Little to no time to write about our experience and achievements. Nevertheless, back in July 2017, we have received above email that nominates Mitoc Group to present at Amazon Web Services' biggest event of the year. It was very humbling and very exciting to be considered for a talk on serverless topic, our core business and focus, and it comes with huge responsibility. We have been working with AWS Serverless products since 2014, and [Continuous Integration](https://www.mitocgroup.com/blog/deep-management-s-continuous-integration-with-travis-ci-and-coveralls) is part of our culture. That's why our proposal, [How to Approach Continuous Integration for Serverless Applications](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=18059), was a no-brainer and a natural choice:
 
 <div class="external-article">
   <a href="https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=18059">
@@ -67,4 +67,4 @@ Last week, we get another email from AWS re:Invent team, saying that “your cha
   </a>
 </div>
 
-What I’m trying to convey is that doing the right thing on behalf of the customers and partners won’t necessary get you on Forbes’ or Fortune’s cover, but will definitely get you noticed by your industry peers and promote you in sharing your experience with others. See you next week in Vegas and looking forward to [AWS re:Invent 2017](https://reinvent.awsevents.com/).
+What I'm trying to convey is that doing the right thing on behalf of the customers and partners won't necessary get you on Forbes' or Fortune's cover, but will definitely get you noticed by your industry peers and promote you in sharing your experience with others. See you next week in Vegas and looking forward to [AWS re:Invent 2017](https://reinvent.awsevents.com/).

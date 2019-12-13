@@ -23,7 +23,7 @@ Fri, 13 Septembre 2019 12:20:55 -0400
 Terraform Module Components for AWS Landing Zone Solution
 
 # Intro
-The core innovation in terraform module for AWS Landing Zone solution is the immutable nature of components. Let’s dive deeper into what a component is and how does it work.
+The core innovation in terraform module for AWS Landing Zone solution is the immutable nature of components. Let's dive deeper into what a component is and how does it work.
 
 ---
 
@@ -47,7 +47,7 @@ landing_zone_components = {
   landing_zone_vpc = "s3://terraform-aws-landing-zone/mycompany/landing_zone_vpc/default.tfvars"
   [...]
 }
-landing_zone_backend = {
+terraform_backend = {
   backend = "local"
   path    = "/tmp/.terrahub/landing_zone"
 }
@@ -56,13 +56,13 @@ landing_zone_backend = {
 ### Immutable Nature of Landing Zone Components
 AWS Landing Zone solution addresses the challenge of managing multiple accounts in a faster and more secure manner, following AWS best practices. AWS empowers customers to use immutable patterns for resource allocation, but the complexity of managing terraform or cloudformation scripts that manages those resources is still pretty big.
 
-That is why terraform module for AWS Landing Zone is designed to be dynamic, therefore reducing management complexity while still keeping high level of security. Each element of `landing_zone_components` variable is a pair where the key is component’s name (immutable and static) and the value is path to `.tfvars` file (mutable and dynamic). This setup allows customers to focus on dynamic aspects of their AWS environments, while terraform codebase almost never changes.
+That is why terraform module for AWS Landing Zone is designed to be dynamic, therefore reducing management complexity while still keeping high level of security. Each element of `landing_zone_components` variable is a pair where the key is component's name (immutable and static) and the value is path to `.tfvars` file (mutable and dynamic). This setup allows customers to focus on dynamic aspects of their AWS environments, while terraform codebase almost never changes.
 
 >_NOTE: In case some terraform config would need to change, instead of updating existing component, create a new one and update `landing_zone_components` list._
 
 ### The Structure of Landing Zone Components
 
-When looking at each component defined in `landing_zone_components` map, the first issue that jumps into our sight is YAML format instead of HCL (Why? More on this later…) But what’s more important at this point is the emerging repeatable pattern. For example, [landing\_zone\_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) looks something like this:
+When looking at each component defined in `landing_zone_components` map, the first issue that jumps into our sight is YAML format instead of HCL (Why? More on this later…) But what's more important at this point is the emerging repeatable pattern. For example, [landing\_zone\_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) looks something like this:
 
 ```
 component:
@@ -111,11 +111,11 @@ default_provider = {
 }
 ```
 
-Let’s connect these two pieces from above:
+Let's connect these two pieces from above:
 
 - [Line 10](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L10): this component will create terraform resource [aws_vpc](https://www.terraform.io/docs/providers/aws/r/vpc.html)
 - [Line 12](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L12): this component will create separate terraform provider [aws](https://www.terraform.io/docs/providers/aws/index.html) for each value from `landing_zone_providers` variable (which in practice how AWS accounts and AWS regions are separated in terraform)
-- [Line 14](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L14): this component will iterate through `landing_zone_providers`, expecting specific variable for each provider (e.g. `default_provider`); that is why it’s required to define all `[provider_name]_provider` variables (e.g. if `landing_zone_providers` has values `default`, `alpha` and `beta`, it’s expected .tfvars file(s) to define variables `default_provider`, `alpha_provider` and `beta_provider`)
+- [Line 14](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L14): this component will iterate through `landing_zone_providers`, expecting specific variable for each provider (e.g. `default_provider`); that is why it's required to define all `[provider_name]_provider` variables (e.g. if `landing_zone_providers` has values `default`, `alpha` and `beta`, it's expected .tfvars file(s) to define variables `default_provider`, `alpha_provider` and `beta_provider`)
 - [Line 16](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L16): this component uses `count` to iterate through resources defined by variable `landing_zone_vpc_resource`; to use native terraform capability, define `[component_name]_resource` values as iterate-able list of elements `config_[iterator]` (e.g. `config_0`, `config_1`, and so on)
 
 Ideal proposed structure for `.tfvars` file(s) should be the following:
@@ -151,7 +151,7 @@ default_provider = {
 
 ### Landing Zone Components Using YAML Instead of HCL
 
-Consider the following: Our goal for this terraform module is to empower users to do less by using native terraform capabilities, but we couldn’t do that primarily because HCL doesn’t allow usage of variables inside `.tfvars` files and doesn’t support iterations through providers. For these reasons (and a couple of more) we opted into using [terrahub cli](https://npmjs.com/package/terrahub) — terraform automation and orchestration tool.
+Consider the following: Our goal for this terraform module is to empower users to do less by using native terraform capabilities, but we couldn't do that primarily because HCL doesn't allow usage of variables inside `.tfvars` files and doesn't support iterations through providers. For these reasons (and a couple of more) we opted into using [terrahub cli](https://npmjs.com/package/terrahub) — terraform automation and orchestration tool.
 
 When executing `terraform init` and `terraform apply` on `landing_zone module`, the underlying code triggers `terrahub run` for entire list of `landing_zone_components`. Internally, landing zone components in YAML format are converted into HCL. This terrahub feature is called JIT (aka Just In Time) and, as the name suggests, YAML configs are converted into HCL in real-time during terraform workflow execution.
 
@@ -187,6 +187,6 @@ Resource actions are indicated with the following symbols:
 Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 ```
 
-And that’s it. We hope it helps.
+And that's it. We hope it helps.
 
 Share your thoughts and your experience on [LinkedIn](https://linkedin.com/company/mitoc-group), [Twitter](https://twitter.com/mitocgroup), [Facebook](https://facebook.com/mitocgroup) or in the comments section below.

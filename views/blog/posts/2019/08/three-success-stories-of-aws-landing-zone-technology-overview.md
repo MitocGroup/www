@@ -23,11 +23,11 @@ Thu, 1 August 2019 12:20:55 -0400
 Three Success Stories of AWS Landing Zone (Technology Overview)
 
 # Intro
-After introducing Terraform Module for AWS Landing Zone and providing Business Overview of Our Experience with AWS Landing Zone, let’s dive deeper into the technical overview.
+After introducing Terraform Module for AWS Landing Zone and providing Business Overview of Our Experience with AWS Landing Zone, let's dive deeper into the technical overview.
 
 ---
 
-In this article, we will be covering the technical aspects of implementations and critical details that helped deploy and manage consistent multi-account strategy using AWS best practices. We will start with reference architecture (see picture below) for AWS Landing Zone solution and dive deeper into each customer’s customization that make their solutions both unique and reusable.
+In this article, we will be covering the technical aspects of implementations and critical details that helped deploy and manage consistent multi-account strategy using AWS best practices. We will start with reference architecture (see picture below) for AWS Landing Zone solution and dive deeper into each customer's customization that make their solutions both unique and reusable.
 
 <div class="padd25px">
     <img src="/images/blog/2019-08-01/aws-lz-arch.png" alt="partner aws" />
@@ -101,7 +101,7 @@ Unique components are only unique on architecture diagram, while in reality all 
 
 And, to be clear, not all landing zone components were creating AWS resources from scratch. For example, some customers already had VPCs or IAMs. In these cases, we used `terraform import` to bring in existing AWS resources and avoid duplicated or colliding resources.
 
-Unfortunately we don’t have written permission to disclose customers names. That is why we will be referencing them below by their revenue from last year.
+Unfortunately we don't have written permission to disclose customers names. That is why we will be referencing them below by their revenue from last year.
 
 #### Customer #1: $49B in revenue
 

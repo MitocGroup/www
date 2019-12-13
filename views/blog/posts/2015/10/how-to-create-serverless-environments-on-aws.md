@@ -33,7 +33,7 @@ Mon, 5 October 2015 12:20:55 -0400
     </div>
 </div>
 
-[Amazon Web Services](https://aws.amazon.com/) is couple of days away from its fourth edition of [AWS re:Invent](https://reinvent.awsevents.com/). We are getting ready to fly to Las Vegas and present the breakout session A[RC201 — Microservices Architecture for Digital Platforms with AWS Lambda, Amazon CloudFront and Amazon DynamoDB](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=1646&tclass=popup). Minutes away from departure, we are working out the final improvements that have been turned into short videos. Next, we’d like to share with technical teams how to create serverless environments on AWS, in 7 simple steps that would take up to 10 minutes.
+[Amazon Web Services](https://aws.amazon.com/) is couple of days away from its fourth edition of [AWS re:Invent](https://reinvent.awsevents.com/). We are getting ready to fly to Las Vegas and present the breakout session A[RC201 — Microservices Architecture for Digital Platforms with AWS Lambda, Amazon CloudFront and Amazon DynamoDB](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=1646&tclass=popup). Minutes away from departure, we are working out the final improvements that have been turned into short videos. Next, we'd like to share with technical teams how to create serverless environments on AWS, in 7 simple steps that would take up to 10 minutes.
 
 First step is to create an AWS IAM role that will enable your account to make calls from AWS Lambda to Amazon DynamoDB:
 
@@ -77,4 +77,4 @@ Seventh step, and final one, is to create Amazon DynamoDB table that will store 
   <iframe width="680" height="510" src="https://www.youtube.com/embed/7ciIrFC_hP8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-I hope these 7 simple steps will make it easier to get started with serverless environments on AWS. If you’d like to learn more, take a look at this awesome blog post published recently by AWS Lambda team: [https://aws.amazon.com/blogs/compute/microservices-without-the-servers/](https://aws.amazon.com/blogs/compute/microservices-without-the-servers/)
+I hope these 7 simple steps will make it easier to get started with serverless environments on AWS. If you'd like to learn more, take a look at this awesome blog post published recently by AWS Lambda team: [https://aws.amazon.com/blogs/compute/microservices-without-the-servers/](https://aws.amazon.com/blogs/compute/microservices-without-the-servers/)

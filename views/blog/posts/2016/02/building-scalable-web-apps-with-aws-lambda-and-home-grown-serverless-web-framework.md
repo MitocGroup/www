@@ -31,7 +31,7 @@ Building Scalable Web Apps with AWS Lambda and Home-Grown Serverless Web Framewo
     <div class="center img-description">Development of Enterprise Software @ Mitoc Group</div>
 </div>
 
-There is a growing demand for enterprise software solutions that are easy to build and quick to deploy. Cloud Computing has emerged as one of the most viable routes for enterprise software delivery and, in our experience, Amazon Web Services is leading the charge. In this article, we will describe how we combined [1] Serverless Infrastructure from AWS with [2] Microservices Architecture to build and deploy a worry-free enterprise software marketplace we’re calling the [DEEP Marketplace](https://www.deep.mg/).
+There is a growing demand for enterprise software solutions that are easy to build and quick to deploy. Cloud Computing has emerged as one of the most viable routes for enterprise software delivery and, in our experience, Amazon Web Services is leading the charge. In this article, we will describe how we combined [1] Serverless Infrastructure from AWS with [2] Microservices Architecture to build and deploy a worry-free enterprise software marketplace we're calling the [DEEP Marketplace](https://www.deep.mg/).
 
 _Note: We will assume that you have general knowledge about below 2 concepts (or read suggested articles in parenthesis to learn more)_
 
@@ -40,7 +40,7 @@ _Note: We will assume that you have general knowledge about below 2 concepts (or
 
 ### The Problem
 
-Enterprise software is [not attractive](http://www.mycustomer.com/selling/crm/enterprise-software-sucks-says-ceo-of-enterprise-software-firm-infor) because traditionally it’s slow, architecturally monolithic and cumbersome to operate. Enterprise IT organizations are commonly overwhelmed by the technology they maintain and there aren’t enough hours in a day to address the backlog of work. That’s why the process of buying typical enterprise solution that solves a given business problem must include an evaluation of how easily it can be customized for specific use case along with a thorough understanding of the ongoing costs of day-to-day operations. That’s why savvy enterprise technology teams are constantly seeking software that empowers business users to be self-sufficient through self-service.
+Enterprise software is [not attractive](http://www.mycustomer.com/selling/crm/enterprise-software-sucks-says-ceo-of-enterprise-software-firm-infor) because traditionally it's slow, architecturally monolithic and cumbersome to operate. Enterprise IT organizations are commonly overwhelmed by the technology they maintain and there aren't enough hours in a day to address the backlog of work. That's why the process of buying typical enterprise solution that solves a given business problem must include an evaluation of how easily it can be customized for specific use case along with a thorough understanding of the ongoing costs of day-to-day operations. That's why savvy enterprise technology teams are constantly seeking software that empowers business users to be self-sufficient through self-service.
 
 ### The Solution
 
@@ -66,7 +66,7 @@ The architecture that we have been using for over six months now can be summariz
 
 The backbone of our approach is known as serverless microservices. We use AWS Lambda as our core computing service. Security by design is enforced by AWS IAM and we cache as much as possible, in every layer, to improve the performance and reduce the costs of running the web application.
 
-Amazon S3 is only capable of serving static assets so we must rely on browser-based JavaScript to provide dynamic functionality. Our team selected [AngularJS](https://angularjs.org/) as frontend framework, but you can use any other JavaScript framework that you’re most comfortable with.
+Amazon S3 is only capable of serving static assets so we must rely on browser-based JavaScript to provide dynamic functionality. Our team selected [AngularJS](https://angularjs.org/) as frontend framework, but you can use any other JavaScript framework that you're most comfortable with.
 
 We developed [DEEP Framework](https://github.com/MitocGroup/deep-framework) — a home-grown and open-source serverless web framework — and supporting [DEEP CLI](https://www.npmjs.com/package/deepify) — the development tool-chain — that has evolved through real-world use to increase our agility by:
 
@@ -75,7 +75,7 @@ We developed [DEEP Framework](https://github.com/MitocGroup/deep-framework) — 
 - Automated allocation of infrastructure resources
 - Zero devops and out-of-the-box scalability
 
-#### So, let’s get started…
+#### So, let's get started…
 
 You will need the following pre-requisites:
 
@@ -96,7 +96,7 @@ We use a [Services Oriented Architecture](https://en.wikipedia.org/wiki/Service-
 
 _Note: Docs and tests are very important components of every microapplication, but we decided to leave them out of scope for this article._
 
-Let’s dive into the details of every tier next…
+Let's dive into the details of every tier next…
 
 #### Building Frontend
 
@@ -113,7 +113,7 @@ export default function todo() {
 }
 ```
 <div class="padd25px">
-  <div class="center img-description">bootstrap.js — the bootstrap file used by frontend as execution’s entry point</div>
+  <div class="center img-description">bootstrap.js — the bootstrap file used by frontend as execution's entry point</div>
 </div>
 
 ```json
@@ -200,7 +200,7 @@ The structure of our backend is reduced to: [resources.json](https://github.com/
 }
 ```
 <div class="padd25px">
-  <div class="center img-description">resources.json — the resources file used by deepify to map and deploy each microservice’s codebase</div>
+  <div class="center img-description">resources.json — the resources file used by deepify to map and deploy each microservice's codebase</div>
 </div>
 
 ```js
@@ -244,7 +244,7 @@ import Handler from './Handler';
 export default DeepFramework.LambdaHandler(Handler);
 ```
 <div class="padd25px">
-  <div class="center img-description">bootstrap.es6 — the bootstrap file used by backend as execution’s entry point</div>
+  <div class="center img-description">bootstrap.es6 — the bootstrap file used by backend as execution's entry point</div>
 </div>
 
 ```json
@@ -308,11 +308,11 @@ The structure of our database model is trivial, just one file: [Todo.json](https
   <div class="center img-description">Todo.json — the schema file that defines the table name and the primary key / everything else is optional</div>
 </div>
 
-Since we’re using a NoSQL database like Amazon DynamoDB, the only piece of information that the database library from DEEP Framework cares about is the table name and the primary key. Everything else is handled by the library itself, as long as it’s in json format.
+Since we're using a NoSQL database like Amazon DynamoDB, the only piece of information that the database library from DEEP Framework cares about is the table name and the primary key. Everything else is handled by the library itself, as long as it's in json format.
 
 #### Enforcing Security
 
-The beauty of cloud-native approach is that security comes by design. When we deploy todo app, _deepify_ automatically identifies the web services involved in the process and creates corresponding security roles. On backend and database tiers these roles are transposed into AWS IAM roles, while on frontend tier we automatically compile them and expose in the UI as Access Control Lists (also known as ACLs). Let’s see some examples:
+The beauty of cloud-native approach is that security comes by design. When we deploy todo app, _deepify_ automatically identifies the web services involved in the process and creates corresponding security roles. On backend and database tiers these roles are transposed into AWS IAM roles, while on frontend tier we automatically compile them and expose in the UI as Access Control Lists (also known as ACLs). Let's see some examples:
 
 ```json
 {
@@ -348,7 +348,7 @@ The beauty of cloud-native approach is that security comes by design. When we de
 
 #### Putting Everything Together
 
-Now that we’re done with frontend, backend, database and security, it’s time to glue everything together and put all web components into action:
+Now that we're done with frontend, backend, database and security, it's time to glue everything together and put all web components into action:
 
 ```js
 DeepTodo/
@@ -429,11 +429,11 @@ var exports = module.exports = function(callback) {
   <div class="center img-description">hook.init.js — the hook file that executes at deploy init / copies learn.json file into root microapplication</div>
 </div>
 
-Hopefully the deployment execution that was described in _Getting Started_ section is done by now. If everything went well, you will see 2 URLs in the last rows of the terminal’s output window: S3 Website Endpoint and CloudFront Distribution. Open in the browser any of the URLs and you’ll see the todo app running in your own AWS account.
+Hopefully the deployment execution that was described in _Getting Started_ section is done by now. If everything went well, you will see 2 URLs in the last rows of the terminal's output window: S3 Website Endpoint and CloudFront Distribution. Open in the browser any of the URLs and you'll see the todo app running in your own AWS account.
 
-_Note: The distribution takes up to 20 minutes to provision, therefore don’t worry if it returns an HTTP error in the first couple of minutes._
+_Note: The distribution takes up to 20 minutes to provision, therefore don't worry if it returns an HTTP error in the first couple of minutes._
 
-Below video playlist summarizes the steps that we’ve walked you through:
+Below video playlist summarizes the steps that we've walked you through:
 
 <div class="iframe-container">
   <iframe src="https://www.youtube.com/embed/ghZNn5Gjv90?list=PLPGfD-tGOl7uNDXo_eMN1odMZflYVu2n9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -458,8 +458,8 @@ _Note: These numbers can be improved with additional complexity and features tha
 2. [DEEP Todo App](https://github.com/MitocGroup/deep-microservices-todo-app) is powered by DEEP Framework. It consists of 1 microapplication that interacts with 6 microservices and is resolving another microapplication as dependency
 3. [DEEP Marketplace](https://www.deep.mg/) is powered by DEEP Framework. It consists of 12 microapplications that interacts with 64 microservices and is resolving several layers of dependencies across multiple microapplications
 4. [DEEP Framework](https://github.com/MitocGroup/deep-framework) is a serverless web framework that abstracts web apps and web services from specific cloud services, enabling developers build cloud-native applications or platforms using microservices architecture
-5. Backend’s resources are implemented in Node.js. AWS Lambda supports also Java and Python, but our process is not able yet to use them streamlined because _deepify_ uses only _npm_, and doesn’t support _mvn_ or _pip_ yet
-6. Frontend’s structure is designed to allow developers write code using any JavaScript framework they are comfortable with. More than that, it is possible to have multiple implementations of the same UI and UX using different Javascript frameworks and storing in the same codebase. For example:
+5. Backend's resources are implemented in Node.js. AWS Lambda supports also Java and Python, but our process is not able yet to use them streamlined because _deepify_ uses only _npm_, and doesn't support _mvn_ or _pip_ yet
+6. Frontend's structure is designed to allow developers write code using any JavaScript framework they are comfortable with. More than that, it is possible to have multiple implementations of the same UI and UX using different Javascript frameworks and storing in the same codebase. For example:
 
 - _js/app/angular — implementation of todo app using AngularJS_
 - _js/app/react — implementation of todo app using React_
@@ -467,6 +467,6 @@ _Note: These numbers can be improved with additional complexity and features tha
 
 ### Closing Thoughts
 
-In this post, we’ve shown you how to build and deploy scalable web apps worry-free. We walked through the process of building and deploying frontend, backend, database and security of scalable web applications. You can fork the [sample code repository](https://github.com/MitocGroup/deep-microservices-todo-app) as a starting point for your own custom web application powered by serverless microservices.
+In this post, we've shown you how to build and deploy scalable web apps worry-free. We walked through the process of building and deploying frontend, backend, database and security of scalable web applications. You can fork the [sample code repository](https://github.com/MitocGroup/deep-microservices-todo-app) as a starting point for your own custom web application powered by serverless microservices.
 
 And if you have questions or suggestions, please don't hesitate to contact us.

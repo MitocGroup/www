@@ -23,7 +23,7 @@ Fri, 19 Jun 2019 12:20:55 -0400
 Three Success Stories of AWS Landing Zone (Business Overview)
 
 # Intro
-After Introducing Terraform Module for AWS Landing Zone couple of days ago, let’s dive deep into several use cases and see how this technical solution solves real business problems.
+After Introducing Terraform Module for AWS Landing Zone couple of days ago, let's dive deep into several use cases and see how this technical solution solves real business problems.
 
 ---
 
@@ -64,25 +64,25 @@ Large insurance company, with global presence in and highly regulated by almost 
 
 #### Common Denominators
 
-1. VCS —Overwhelming majority of enterprise organizations use some kind of Version Control System, either we are talking about github, bitbucket or others. Not in scope for now, so I’ll skip this part.
-2. CI/CD — Cloud providers empowered many large companies to adopt some kind of Continuous Integration and Continuous Delivery (or Deployment). Not in scope for now, so I’ll skip this as well.
-3. Terraform — It doesn’t come anymore as a surprise that lots of enterprise customers with large IT footprints are using terraform to provision cloud resources, therefore I’ll skip this part.
+1. VCS —Overwhelming majority of enterprise organizations use some kind of Version Control System, either we are talking about github, bitbucket or others. Not in scope for now, so I'll skip this part.
+2. CI/CD — Cloud providers empowered many large companies to adopt some kind of Continuous Integration and Continuous Delivery (or Deployment). Not in scope for now, so I'll skip this as well.
+3. Terraform — It doesn't come anymore as a surprise that lots of enterprise customers with large IT footprints are using terraform to provision cloud resources, therefore I'll skip this part.
 4. (Lots of) AWS accounts — No matter how many cloud accounts (to be read: several, dozens or even hundreds), customers want to follow best practices recommended by cloud providers that ideally are consistent with their existing policies / procedures and, why not, even improve their operations by making them better and more secure.
 
 ### Multi-Account Strategy
 
-Why are customers opting into multi-account strategy? First, although customers can clearly separate users / data / environments using IAM, VPC, SG and STS, single-account strategy requires a vast amount of management and cost allocation that is usually not feasible. Second, if you plan to acquire other companies, integrating into single-account strategy is very expensive. Therefore, it’s a non starter.
+Why are customers opting into multi-account strategy? First, although customers can clearly separate users / data / environments using IAM, VPC, SG and STS, single-account strategy requires a vast amount of management and cost allocation that is usually not feasible. Second, if you plan to acquire other companies, integrating into single-account strategy is very expensive. Therefore, it's a non starter.
 
 In this context, the allocation of AWS accounts are usually decided by:
 
 1. Business Unit (or some other kind of legal organizational breakdown)
 2. Geographical Location (or some other kind of territorial breakdown)
 3. Production vs Non-Production (or some other kind of environment / SDLC breakdown)
-4. Shared Services (use cases that are shared or can’t / shouldn’t be isolated)
+4. Shared Services (use cases that are shared or can't / shouldn't be isolated)
 
 >_NOTE: All of our customers, including Customer #1, Customer #2 and Customer #3 followed this best practice as part of their multi-account strategy._
 
-Multi-account strategy doesn’t stop just at multiple AWS accounts. The goal of AWS Landing Zone is to have a minimal baseline setup for security, operations and management functions. For example, Customer #1 decided to include in the baseline only Centralized Billing, 3rd party SSO and AWS Direct Connect. Customer #2 and Customer #3 decided to, additionally, add Centralized Logging solution and Centralized Security solution. Some solutions were cloud native services on AWS like Cloudtrail, Managed AD and SSO, others not so native — Splunk, SignalFX, CloudCheckr and PingIdentity.
+Multi-account strategy doesn't stop just at multiple AWS accounts. The goal of AWS Landing Zone is to have a minimal baseline setup for security, operations and management functions. For example, Customer #1 decided to include in the baseline only Centralized Billing, 3rd party SSO and AWS Direct Connect. Customer #2 and Customer #3 decided to, additionally, add Centralized Logging solution and Centralized Security solution. Some solutions were cloud native services on AWS like Cloudtrail, Managed AD and SSO, others not so native — Splunk, SignalFX, CloudCheckr and PingIdentity.
 
 To go one step further, some customers adopt AVM (Account Vending Machine) to provision new AWS accounts and deploy the baseline into those accounts as well. In our experience, neither Customer #1, Customer #2, nor Customer #3 opted into using this solution. Instead, they use Service Catalog to allow existing / predefined AWS accounts to use only AWS products vetted and whitelisted by their organizations.
 

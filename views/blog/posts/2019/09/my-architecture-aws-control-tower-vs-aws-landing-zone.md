@@ -23,7 +23,7 @@ Fri, 20 Septembre 2019 12:20:55 -0400
 My Architecture: AWS Control Tower vs AWS Landing Zone
 
 # Intro
-Both Control Tower and Landing Zone help set up and manage secure multi-account AWS environments. Which one should customers use? Let’s take a closer look and figure out together.
+Both Control Tower and Landing Zone help set up and manage secure multi-account AWS environments. Which one should customers use? Let's take a closer look and figure out together.
 
 ---
 
@@ -52,8 +52,8 @@ Both Control Tower and Landing Zone help set up and manage secure multi-account 
 ### AWS Control Tower vs AWS Landing Zone
 
 Although official documentation explains [the difference between AWS Control Tower and AWS Landing Zone](https://aws.amazon.com/controltower/faqs/#AWS_Solution_and_Service_Comparisons), we believe that customers should learn more details about these two offerings. And keep in mind, these solutions are not apples to apples comparable, more like apples to oranges.
-AWS Landing Zone solution was launched in [June 2018](https://aws.amazon.com/about-aws/whats-new/2018/06/introducing-aws-landing-zone/), while AWS Control Tower was announced in [November 2018](https://aws.amazon.com/blogs/enterprise-strategy/aws-control-tower-and-aws-security-hub-powerful-enterprise-twins/) and launched in [June 2019](https://aws.amazon.com/about-aws/whats-new/2019/06/aws-control-tower-is-now-generally-available/). It’s not very clear why in just a couple of months AWS introduced two competing products. Based on our limited experience, we would assume AWS Landing Zone solution was very well received by enterprise customers, but in the same time required fundamental changes which led to AWS Control Tower service.
-As of time of writing, AWS Control Tower doesn’t support existing setups for AWS Organization or AWS SSO, although official FAQ claims it will be added in the future, as well as ability to migrate from AWS Landing Zone solution to AWS Control Tower service.
+AWS Landing Zone solution was launched in [June 2018](https://aws.amazon.com/about-aws/whats-new/2018/06/introducing-aws-landing-zone/), while AWS Control Tower was announced in [November 2018](https://aws.amazon.com/blogs/enterprise-strategy/aws-control-tower-and-aws-security-hub-powerful-enterprise-twins/) and launched in [June 2019](https://aws.amazon.com/about-aws/whats-new/2019/06/aws-control-tower-is-now-generally-available/). It's not very clear why in just a couple of months AWS introduced two competing products. Based on our limited experience, we would assume AWS Landing Zone solution was very well received by enterprise customers, but in the same time required fundamental changes which led to AWS Control Tower service.
+As of time of writing, AWS Control Tower doesn't support existing setups for AWS Organization or AWS SSO, although official FAQ claims it will be added in the future, as well as ability to migrate from AWS Landing Zone solution to AWS Control Tower service.
 
 Service or Feature                       | AWS Control Tower         |   AWS Landing Zone
 -----------------------------------------|---------------------------|----------------------------

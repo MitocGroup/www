@@ -39,7 +39,7 @@ Mitoc Group is also part of the [AWS SaaS Partner Program](https://aws.amazon.co
 
 “We are thrilled to be named an Advanced Technology Partner in the AWS Partner Network,” said [Eugene Istrati](https://linkedin.com/in/eistrati), Technology Partner at Mitoc Group. “Our team has built a base of innovative products and simplified processes around AWS Lambda, and we are dedicated to helping customers achieve their business goals by leveraging the agility of DevOps and Serverless on the AWS Cloud.”
 
-Mitoc Group is helping customers like [Manning Publications](https://www.manning.com/) build a new product intended to give users better access to for-pay content. “ We haven’t had the best experiences when developing new products in the past,” said Marjan Bace, Publisher at Manning. “With AWS Lambda, there’s a noticeable difference in the speed of development. We’re able to follow an agile process that includes quick feature redesign, which leads to a much better experience.”
+Mitoc Group is helping customers like [Manning Publications](https://www.manning.com/) build a new product intended to give users better access to for-pay content. “ We haven't had the best experiences when developing new products in the past,” said Marjan Bace, Publisher at Manning. “With AWS Lambda, there's a noticeable difference in the speed of development. We're able to follow an agile process that includes quick feature redesign, which leads to a much better experience.”
 
 #### About Mitoc Group
 

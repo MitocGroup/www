@@ -41,7 +41,7 @@ The AWS Service Delivery Program was recently launched to help AWS customers fin
 
 APN Partners with AWS Service Delivery Partner Status for AWS Lambda provide services and tools that help customers build or migrate their solutions to a micro-services based serverless architecture, without the need to worry about provisioning or managing servers.
 
-Mitoc Group is helping customers like [Manning Publications](https://www.manning.com/) build a new product intended to give users better access to for-pay content. “ We haven’t had the best experiences when developing new products in the past,” said Marjan Bace, Publisher at Manning. “With AWS Lambda, there’s a noticeable difference in the speed of development. We’re able to follow an agile process that includes quick feature redesign, which leads to a much better experience.”
+Mitoc Group is helping customers like [Manning Publications](https://www.manning.com/) build a new product intended to give users better access to for-pay content. “ We haven't had the best experiences when developing new products in the past,” said Marjan Bace, Publisher at Manning. “With AWS Lambda, there's a noticeable difference in the speed of development. We're able to follow an agile process that includes quick feature redesign, which leads to a much better experience.”
 
 About Mitoc Group
 

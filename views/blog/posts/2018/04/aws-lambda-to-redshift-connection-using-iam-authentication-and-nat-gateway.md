@@ -31,19 +31,19 @@ Python Edition. This article walks through the steps taken and lessons learned, 
     <img src="/images/blog/2018-04-23/example.png" alt="partner aws" />
 </div>
 
-Although the use case I worked on is not exactly the one from the picture above, I wanted to share my story because I don’t want others waste their time with it. Recently I was required to implement a solution that involves connecting AWS Lambda to Amazon Redshift. If Amazon VPC is not in scope, feel free to stop reading here and ignore the rest of this article.
+Although the use case I worked on is not exactly the one from the picture above, I wanted to share my story because I don't want others waste their time with it. Recently I was required to implement a solution that involves connecting AWS Lambda to Amazon Redshift. If Amazon VPC is not in scope, feel free to stop reading here and ignore the rest of this article.
 
 ### Challenges
 
 During implementation, I had to overcome the following challenges:
 
-1. AWS Lambda’s python runtime doesn’t support natively libpq.so which is required by psycopg2 library to connect to Amazon Redshift;
-2. Securely storing and rotating Amazon Redshift’s credentials was becoming another full time project;
+1. AWS Lambda's python runtime doesn't support natively libpq.so which is required by psycopg2 library to connect to Amazon Redshift;
+2. Securely storing and rotating Amazon Redshift's credentials was becoming another full time project;
 3. IAM authentication for Amazon Redshift is amazing, but it took me a while to get it functional in Amazon VPC.
 
 ### Implementation
 
-For the sake of simplicity, I’ve reduced the python code used in AWS Lambda function to the minimum, as shown below:
+For the sake of simplicity, I've reduced the python code used in AWS Lambda function to the minimum, as shown below:
 
 ```py
 import os
@@ -88,7 +88,7 @@ If you develop on Mac OSX or Windows, the local version of psycopg2 library most
 No module named 'psycopg2._psycopg': ModuleNotFoundError
 ```
 
-This is an easy and quick fix. Either you’re compiling psycopg2 library on an Amazon Linux compatible operating system. Or, a much better alternative, use the following GitHub repository:
+This is an easy and quick fix. Either you're compiling psycopg2 library on an Amazon Linux compatible operating system. Or, a much better alternative, use the following GitHub repository:
 
 <div class="external-article">
   <a href="https://github.com/jkehler/awslambda-psycopg2">
@@ -134,7 +134,7 @@ resource "aws_lambda_function" "lambda_function" {
 Now, everything related to Amazon Redshift connection is concentrated in _redshift\_connection_ variable, which stores values in plain text. To overcome this security problem, we have to consider one of the following solutions:
 
 1. [AWS Key Management Service](https://aws.amazon.com/kms/)
-2. [AWS Systems Manager’s Parameter Store](https://aws.amazon.com/systems-manager/features/)
+2. [AWS Systems Manager's Parameter Store](https://aws.amazon.com/systems-manager/features/)
 3. [IAM Authentication for Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-authentication-access-control.html)
 
 Using KMS or Parameter Store is definitely a viable solution, but I opted to the most natural choice and less maintenance effort down the road: the native integration between Redshift and IAM. Shortly, with an API call, Redshift issues temporary credentials based on IAM permissions which can be used for Redshift connections. Now my Lambda function looks like this:

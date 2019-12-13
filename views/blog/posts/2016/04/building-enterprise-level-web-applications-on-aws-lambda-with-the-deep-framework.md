@@ -39,13 +39,13 @@ In this post, we will dive deeper into how DEEP is leveraging AWS Lambda to empo
 
 ### Enterprise-level Web Applications
 
-Our approach to web development is full-stack and user-driven, focused on UI (aka User Interaction) and UX (aka User eXperience). But before going into the details, we’d like to emphasize the strategical (biased and opinionated) decisions we have made early:
+Our approach to web development is full-stack and user-driven, focused on UI (aka User Interaction) and UX (aka User eXperience). But before going into the details, we'd like to emphasize the strategical (biased and opinionated) decisions we have made early:
 
-- We don’t say “no” to customers; Every problem is seriously evaluated and sometimes we offer options that involve our direct competitors
+- We don't say “no” to customers; Every problem is seriously evaluated and sometimes we offer options that involve our direct competitors
 - We are developers and we focus only on the application level; Everything else (platform level and infrastructure level) must be managed by AWS
 - We focus our 20% of effort to solve 80% of work load; Everything must be automated and pushed on the services side rather than ours (clients)
 
-To be honest and fair, it doesn’t work all the time as expected, but it does help us to learn fast and move quickly, sustainably and incrementally solving business problems through technical solutions that really matters. But the definition of “really matters” is different from customer to customer, quite unique in some cases. Nevertheless, what we learn from our customers is that enterprise-level web applications must provide the following 7 common expectations:
+To be honest and fair, it doesn't work all the time as expected, but it does help us to learn fast and move quickly, sustainably and incrementally solving business problems through technical solutions that really matters. But the definition of “really matters” is different from customer to customer, quite unique in some cases. Nevertheless, what we learn from our customers is that enterprise-level web applications must provide the following 7 common expectations:
 
 1. Be secure — security through obscurity (e.g. [Amazon IAM](https://aws.amazon.com/iam/), [Amazon Cognito](https://aws.amazon.com/cognito/));
 2. Be compliant — governance-focused, audit-friendly service features with [applicable compliance or audit standards](https://aws.amazon.com/compliance/);
@@ -82,7 +82,7 @@ In this article, we will focus on AWS Lambda functions and the value proposition
 
 ### AWS Lambda Functions
 
-Let’s get into the details of the thinking process and the AWS Lambda functions that we have written for this web app. The goal of the todo app is to manage tasks in a self-service mode. End users can view tasks, create new tasks, mark or unmark a task as done, and clear completed tasks. From UI and UX point of view, that leads us to 4 user interactions that will require 4 different back-end calls:
+Let's get into the details of the thinking process and the AWS Lambda functions that we have written for this web app. The goal of the todo app is to manage tasks in a self-service mode. End users can view tasks, create new tasks, mark or unmark a task as done, and clear completed tasks. From UI and UX point of view, that leads us to 4 user interactions that will require 4 different back-end calls:
 
 1. web service that retrieves task(s)
 2. web service that creates task(s)
@@ -285,9 +285,9 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
   </div>
 </div>
 
-Each above file with related dependencies is compressed into .zip file and uploaded to AWS Lambda. If you’re new to this process, we’d strongly recommend to follow [How to Create, Upload and Invoke an AWS Lambda function](https://docs.aws.amazon.com/AWSToolkitEclipse/latest/ug/lambda-tutorial.html) tutorial.
+Each above file with related dependencies is compressed into .zip file and uploaded to AWS Lambda. If you're new to this process, we'd strongly recommend to follow [How to Create, Upload and Invoke an AWS Lambda function](https://docs.aws.amazon.com/AWSToolkitEclipse/latest/ug/lambda-tutorial.html) tutorial.
 
-Back to our 4 small node.js functions, you can see that we have adopted ES6 (aka [ES2015](https://babeljs.io/docs/learn-es2015)) as our coding standard. And we are importing deep-framework in every function. What is this framework anyway and why we’re using it everywhere?
+Back to our 4 small node.js functions, you can see that we have adopted ES6 (aka [ES2015](https://babeljs.io/docs/learn-es2015)) as our coding standard. And we are importing deep-framework in every function. What is this framework anyway and why we're using it everywhere?
 
 ### Full-stack Web Framework
 
@@ -337,7 +337,7 @@ export default DeepFramework.LambdaHandler(Handler);
   </div>
 </div>
 
-Having these 3 files (Handler.es6, bootstrap.es6 and package.json) in each AWS Lambda function doesn’t mean your final .zip file will be that small. Actually, a lot of additional operations happen before the .zip file is created. To name few:
+Having these 3 files (Handler.es6, bootstrap.es6 and package.json) in each AWS Lambda function doesn't mean your final .zip file will be that small. Actually, a lot of additional operations happen before the .zip file is created. To name few:
 
 - AWS Lambda performs better when the uploaded codebase is smaller. Since we provide both local development capabilities and one-step push to production, our process optimizes resources before deploying to AWS.
 - ES6 is not supported by node.js v0.10.x that currently runs in AWS Lambda. We compile .es6 files into ES5 compliant .js files using babel.
@@ -354,7 +354,7 @@ First, you will need the following pre-requisites:
 5. Node.js v4+ (learn how to [Install nvm](https://github.com/creationix/nvm#install-script) and [Use latest node v4](https://github.com/creationix/nvm#usage))
 6. DEEP CLI (execute in command line: _npm install deepify -g_)
 
-Note: Don’t use “sudo” in step 5. Otherwise you’ll have to [fix npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
+Note: Don't use “sudo” in step 5. Otherwise you'll have to [fix npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
 
 Next, you will deploy the todo app using _deepify_:
 
@@ -370,7 +370,7 @@ _Note: When step 2 (deepify server) is finished, you can open in your browser [h
 
 ### Cleaning Up
 
-There are at least half a dozen services and several dozen of resources created during _deepify deploy_. If only there was a simple command that would clean up everything when we’re done. We thought of that and created _deepify undeploy_ to address this need. When you are done using todo app and want to remove web app related resources, simply execute step 4:
+There are at least half a dozen services and several dozen of resources created during _deepify deploy_. If only there was a simple command that would clean up everything when we're done. We thought of that and created _deepify undeploy_ to address this need. When you are done using todo app and want to remove web app related resources, simply execute step 4:
 
 4. _deepify undeploy ~/deep-microservices-todomvc_
 
@@ -378,9 +378,9 @@ As you can see, we empower developers to build hassle-free cloud-native applicat
 
 ### Security
 
-Well, one of the biggest value propositions on AWS is out-of-the-box [security](https://aws.amazon.com/security/) and [compliance](https://aws.amazon.com/compliance/). The beauty of cloud-native approach is that security comes by design (in other words, it won’t work otherwise). We take full advantage of shared responsibility model and enforce security in every layer.
+Well, one of the biggest value propositions on AWS is out-of-the-box [security](https://aws.amazon.com/security/) and [compliance](https://aws.amazon.com/compliance/). The beauty of cloud-native approach is that security comes by design (in other words, it won't work otherwise). We take full advantage of shared responsibility model and enforce security in every layer.
 
-Developers and applications’ end users benefit of [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) through streamlined implementations of [least privilege access](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege), [delegated roles instead of credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#delegate-using-roles) and [integration with logging and monitoring services](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#keep-a-log) (e.g. AWS CloudTrail, Amazon CloudWatch, Amazon Elasticsearch + Kibana). For example, developers and end users of todo app didn’t need to explicitly define any security roles (it was done by _deepify deploy_), but they can rest assured that only their instance of todo app will be using their infrastructure & platform & application resources.
+Developers and applications' end users benefit of [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) through streamlined implementations of [least privilege access](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege), [delegated roles instead of credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#delegate-using-roles) and [integration with logging and monitoring services](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#keep-a-log) (e.g. AWS CloudTrail, Amazon CloudWatch, Amazon Elasticsearch + Kibana). For example, developers and end users of todo app didn't need to explicitly define any security roles (it was done by _deepify deploy_), but they can rest assured that only their instance of todo app will be using their infrastructure & platform & application resources.
 
 Here below are 2 security roles (1 for back-end and 1 for front-end) that have been seamlessly generated and enforced in each layer:
 
@@ -398,7 +398,7 @@ Here below are 2 security roles (1 for back-end and 1 for front-end) that have b
 ```
 
 <div class="padd25px">
-  <div class="center img-description">AWS IAM role that allows back-end invocation of AWS Lambda function (e.g. DeepProdTodoCreate1234abcd) in web application’s AWS account (e.g. 123456789000)</div>
+  <div class="center img-description">AWS IAM role that allows back-end invocation of AWS Lambda function (e.g. DeepProdTodoCreate1234abcd) in web application's AWS account (e.g. 123456789000)</div>
 </div>
 
 ```js

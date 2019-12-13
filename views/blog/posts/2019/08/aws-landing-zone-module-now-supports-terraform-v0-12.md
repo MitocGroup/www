@@ -23,7 +23,7 @@ Tue, 20 August 2019 12:20:55 -0400
 AWS Landing Zone module now supports Terraform v0.12+
 
 # Intro
-Couple of weeks ago we were excited to Introduce Programmatic AWS Landing Zone as Terraform Module. Today we continue this exciting journey to extend module’s support for Terraform v0.12+
+Couple of weeks ago we were excited to Introduce Programmatic AWS Landing Zone as Terraform Module. Today we continue this exciting journey to extend module's support for Terraform v0.12+
 
 ---
 
@@ -34,7 +34,7 @@ Couple of weeks ago we were excited to Introduce Programmatic AWS Landing Zone a
     </div>
 </div>
 
-Back in May 2019, HashiCorp announced the release of Terraform 0.12, a major update that includes dozens of improvements and features spanning the breadth and depth of Terraform’s functionality. Unfortunately, this release breaks compatibility with previous version and requires extra effort to upgrade (see [Upgrade to Terraform v0.12](https://www.terraform.io/upgrade-guides/0-12.html)).
+Back in May 2019, HashiCorp announced the release of Terraform 0.12, a major update that includes dozens of improvements and features spanning the breadth and depth of Terraform's functionality. Unfortunately, this release breaks compatibility with previous version and requires extra effort to upgrade (see [Upgrade to Terraform v0.12](https://www.terraform.io/upgrade-guides/0-12.html)).
 
 When we initially started [Terraform Module for AWS Landing Zone](https://github.com/TerraHubCorp/terraform-aws-landing-zone), our components were developed using v0.11. We decided to release with older version and later address support for newer version. Today we are excited to announce that current implementation supports both v0.11 and below, as well as v0.12 and above.
 

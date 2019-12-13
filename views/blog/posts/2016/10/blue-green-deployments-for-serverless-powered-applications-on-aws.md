@@ -36,9 +36,9 @@ production environments called Blue and Green.
     </div>
 </div>
 
-Fast-forwarding to 2013, [Danilo Sato](https://github.com/dtsato) from ThoughtWorks published on their blog a very insightful article that describes [how to implement blue-green deployments using AWS.](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws) We, at Mitoc Group, are working primarily with serverless computing from AWS, and today we’d like to share our experience using blue-green deployment process for serverless powered applications.
+Fast-forwarding to 2013, [Danilo Sato](https://github.com/dtsato) from ThoughtWorks published on their blog a very insightful article that describes [how to implement blue-green deployments using AWS.](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws) We, at Mitoc Group, are working primarily with serverless computing from AWS, and today we'd like to share our experience using blue-green deployment process for serverless powered applications.
 
->_Note: This blogpost uses intentionally screenshots from AWS Management Console to outline a Do-It-Yourself point of view, but we’ll also provide (wherever possible) the equivalent devops command or tool, to make sure that more advanced audience is NOT bored to death :)_
+>_Note: This blogpost uses intentionally screenshots from AWS Management Console to outline a Do-It-Yourself point of view, but we'll also provide (wherever possible) the equivalent devops command or tool, to make sure that more advanced audience is NOT bored to death :)_
 
 The key points to keep in mind as we move forward:
 
@@ -48,7 +48,7 @@ The key points to keep in mind as we move forward:
 
 ### Serverless Architecture on AWS
 
-Before we dive into the details of the blue-green deployment process for serverless powered applications, it’s vital to point out the architecture of a typical web application that uses serverless computing from AWS (as shown in the picture below, as well as described in [this blogpost](https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework)).
+Before we dive into the details of the blue-green deployment process for serverless powered applications, it's vital to point out the architecture of a typical web application that uses serverless computing from AWS (as shown in the picture below, as well as described in [this blogpost](https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework)).
 
 <div class="img-post-left">
     <img src="https://miro.medium.com/max/3968/1*obn8oKjcqkJJUIZ2bB59xg.png" alt="lambda-deep-framework" />
@@ -69,11 +69,11 @@ _```Note: As you can see above, a typical web application in our case uses 14 di
 
 ### Pre-requisites and Initial Considerations
 
-The blue-green deployment for serverless powered applications is happening entirely on the front-end tier, mainly because all other resources from back-end, data, monitoring and security tiers are duplicated and therefore are NOT altered during this process. So, going forward, we’ll be describing only the changes that will be applied to Amazon Route53, Amazon CloudFront and Amazon S3 during any serverless blue-green deployment.
+The blue-green deployment for serverless powered applications is happening entirely on the front-end tier, mainly because all other resources from back-end, data, monitoring and security tiers are duplicated and therefore are NOT altered during this process. So, going forward, we'll be describing only the changes that will be applied to Amazon Route53, Amazon CloudFront and Amazon S3 during any serverless blue-green deployment.
 
 The simplest and most straight-forward approach to blue-green deployments for serverless powered applications is to switch all traffic from blue environment to green environment on DNS level (and in case of failures, rollback from green environment to blue environment).
 
-Managing DNS records can be sometimes very tricky, mainly because the propagation might take unpredictable time due to various caching layers on Internet. But our experience with Amazon Route53 is amazing, as long as we are using A alias records instead of CNAME records. Here below are 3 screenshots from AWS Management Console that shows how we’ve setup _www1.adtechmedia.io_ in Amazon Route53, Amazon CloudFront and Amazon S3:
+Managing DNS records can be sometimes very tricky, mainly because the propagation might take unpredictable time due to various caching layers on Internet. But our experience with Amazon Route53 is amazing, as long as we are using A alias records instead of CNAME records. Here below are 3 screenshots from AWS Management Console that shows how we've setup _www1.adtechmedia.io_ in Amazon Route53, Amazon CloudFront and Amazon S3:
 
 <div class="maxHeight500px center padd25px">
     <img src="/images/blog/2016-10-20/edit-record-set.png" alt="edit-record-set" />
@@ -135,17 +135,17 @@ If, for some unexpected reason, your green environment starts generating high le
 2. Add CNAME to blue environment
 3. Update Amazon Route53 with blue environment Domain Name
 
->_UPDATE on 11/03/2016: A friend pointed out that it’s not necessarily to add/remove CNAMEs (which could take up to 20 minutes to propagate). Instead, just leave blue environment as it is (e.g. www1.adtechmedia.io) and setup wild carded CNAME on green environment (e.g. *.adtechmedia.io). When both distributions are enabled, blue will take precedence over green, making sure you’re not stuck with new deploy in case of high level of failures._
+>_UPDATE on 11/03/2016: A friend pointed out that it's not necessarily to add/remove CNAMEs (which could take up to 20 minutes to propagate). Instead, just leave blue environment as it is (e.g. www1.adtechmedia.io) and setup wild carded CNAME on green environment (e.g. *.adtechmedia.io). When both distributions are enabled, blue will take precedence over green, making sure you're not stuck with new deploy in case of high level of failures._
 
 ### Blue/Green Deployments v2
 
 As you have seen in the previous blue-green deployments process the traffic between environments is switched suddenly, at 100% capacity. This is great for zero downtime, but if your application starts to fail, all of your users are affected. Some modern continuous deployment technics promote a more gradual switch of the traffic between environments. For example, we push only 5% of requests to green environment, while 95% still goes to blue environment. This allows to detect production problems early and on a much smaller audience of users, problems that have never surfaced in testing and staging phases. Is it possible to enable such an approach for serverless powered applications?
 
-Short answer, yes! We’re very excited and humble to be able to explain our serverless solution, but there are some additional pre-requisites that must happen before. Let’s describe the challenge first, and then jump into our implementation and pre-requisites.
+Short answer, yes! We're very excited and humble to be able to explain our serverless solution, but there are some additional pre-requisites that must happen before. Let's describe the challenge first, and then jump into our implementation and pre-requisites.
 
 #### The Challenge
 
-Amazon CloudFront, the way it is designed, doesn’t allow same CNAME on multiple distributions. That is also the reason why we’re removing it from the blue environment and adding it to the green environment in our previous implementation.
+Amazon CloudFront, the way it is designed, doesn't allow same CNAME on multiple distributions. That is also the reason why we're removing it from the blue environment and adding it to the green environment in our previous implementation.
 
 #### Our implementation
 
@@ -159,17 +159,17 @@ Amazon Route53 allows weighted routing of the traffic across multiple Amazon Clo
     </div>
 </div>
 
-All changes are made on Amazon Route53 level, without altering Amazon CloudFront or Amazon S3 resources. And compared to previous blue-green deployment, rollback process is even faster and easier. We remove A alias record of green environment and we’re done! Well, almost done... For consistency and cost saving purposes, we also revert back A alias record of blue environment from weighted routing to simple routing.
+All changes are made on Amazon Route53 level, without altering Amazon CloudFront or Amazon S3 resources. And compared to previous blue-green deployment, rollback process is even faster and easier. We remove A alias record of green environment and we're done! Well, almost done... For consistency and cost saving purposes, we also revert back A alias record of blue environment from weighted routing to simple routing.
 
 ### Final Thoughts and Conclusion
 
 What are the down sizes (pre-requisites) of the blue-green deployments v2?
 
-1. Amazon S3 static website hosting doesn’t support SSL, so we find ourselves temporarily enforcing HTTP-only during blue-green deployment
+1. Amazon S3 static website hosting doesn't support SSL, so we find ourselves temporarily enforcing HTTP-only during blue-green deployment
 2. Amazon S3 static endpoint can be used with Amazon Route53 A alias only if the bucket name is the same with the domain name (e.g. [www.adtechmedia.io](http://www.adtechmedia.io))
-3. Depends on the traffic size, specifically how much TPS you’re consuming, Amazon S3 might start throttling you (more details here: [Request Rate and Performance Considerations](https://docs.aws.amazon.com/AmazonS3/latest/dev/request-rate-perf-considerations.html))
+3. Depends on the traffic size, specifically how much TPS you're consuming, Amazon S3 might start throttling you (more details here: [Request Rate and Performance Considerations](https://docs.aws.amazon.com/AmazonS3/latest/dev/request-rate-perf-considerations.html))
 
-Unfortunately, there is no silver bullet that would work perfectly for any serverless powered applications on AWS. As with any software, it’s up to us (developers or devops engineers) to decide the right process that fits specific use case. We just wanted to share two different approaches that empowered us to provide high quality at scale without compromising on resources and costs (which, by the way, are ridiculously low, but that’s another blogpost).
+Unfortunately, there is no silver bullet that would work perfectly for any serverless powered applications on AWS. As with any software, it's up to us (developers or devops engineers) to decide the right process that fits specific use case. We just wanted to share two different approaches that empowered us to provide high quality at scale without compromising on resources and costs (which, by the way, are ridiculously low, but that's another blogpost).
 
 <div class="center img-description">
         <a href="https://www.mitocgroup.com/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team">
