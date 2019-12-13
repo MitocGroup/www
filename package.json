@@ -8,7 +8,7 @@
     "sitemap": "node node_modules/web-boost/bin/sitemap.js"
   },
   "devDependencies": {
-    "aws-sdk": "^2.316.0",
+    "aws-sdk": "^2.590.0",
     "markdowneyjr": "^3.1.0",
     "showdown": "^1.9.1",
     "web-boost": "^1.4.0"

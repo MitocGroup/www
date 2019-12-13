@@ -153,12 +153,14 @@ Similar to previous customers, the architecture diagram on the left is a customi
 
 #### Summary
 
-1. This terraform module accepts arguments landing\_zone\_providers and landing\_zone\_components among others
-2. Providers and components can be as many as you want; Only the ones referenced in .tfvars files will be provisioned / deployed
-3. Ideally the code for landing zone components is immutable, while .tfvars files are adjustable over time
+1. This terraform module accepts arguments `landing\_zone\_providers` and `landing\_zone\_components` among others
+2. Providers and components can be as many as you want; Only the ones referenced in `.tfvars` files will be provisioned / deployed
+3. Ideally the code for landing zone components is immutable, while `.tfvars` files are adjustable over time
 4. Microservices architecture is highly recommended, aim for one terraform resource per one landing zone component
-5. Use terraform import for existing AWS resources to avoid duplication or collisions with landing zone components
+5. Use `terraform import` for existing AWS resources to avoid duplication or collisions with landing zone components
 
 ### Conclusion
 
 In this article, we tried to describe relevant level of details associated with technical implementation of AWS Landing Zone solution using terraform module. We talked about 3 different customers without disclosing their names and any private information. Component based immutable terraform configurations with adjustable `.tfvars` files allowed advanced flexibility and reliable consistency across multiple AWS accounts using AWS best practices.
+
+Share your thoughts and your experience on [LinkedIn](https://linkedin.com/company/mitoc-group), [Twitter](https://twitter.com/mitocgroup), [Facebook](https://facebook.com/mitocgroup) or in the comments section below.
