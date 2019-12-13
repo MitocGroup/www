@@ -61,7 +61,7 @@ This article will describe how we have transformed a self-managed task managemen
 The architecture of every web application we build or transform, including the one described above, is similar to the reference architecture of the realtime voting application published recently by AWS on Github:
 
 <div class="external-article">
-  <a href="https://registry.terraform.io/modules/TerraHubCorp/landing-zone/aws">
+  <a href="https://github.com/awslabs/lambda-refarch-webapp">
   <h5>awslabs/lambda-refarch-webapp</h5>
   <span>lambda-refarch-webapp — AWS Lambda Reference Architecture for creating a Web Application</span>
     <span>github.com</span>

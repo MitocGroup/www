@@ -63,7 +63,7 @@ Once the strategy is in place, successful AWS Landing Zone customers have consid
 ### Introducing Terraform Module for AWS Landing Zone
 
 <div class="external-article">
-  <a href="https://registry.terraform.io/modules/TerraHubCorp/landing-zone/aws">
+  <a href="https://registry.terraform.io/modules/MitocGroup/landing-zone/aws">
   <h5>Terraform Module Registry: AWS Landing Zone</h5>
   <span>
     AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices. This repository contains one terraform module that dynamically deploys components of AWS Landing Zone solution based on input list of .tfvars files.
@@ -72,14 +72,13 @@ Once the strategy is in place, successful AWS Landing Zone customers have consid
   </a>
 </div>
 
-After a couple of months of hard work, it is my pleasure to introduce terraform module for AWS Landing Zone (see above link). [Source code](https://github.com/TerraHubCorp/terraform-aws-landing-zone) is managed using GitHub and [stable releases](https://registry.terraform.io/modules/TerraHubCorp/landing-zone) are published on Terraform Module Registry.
+After a couple of months of hard work, it is my pleasure to introduce terraform module for AWS Landing Zone (see above link). [Source code](https://github.com/MitocGroup/terraform-aws-landing-zone) is managed using GitHub and [stable releases](https://registry.terraform.io/modules/MitocGroup/landing-zone/aws) are published on Terraform Module Registry.
 
 To get started, simply include `main.tf` into your terraform codebase:
 
 ```
 module "landing_zone" {
-  source     = "TerraHubCorp/landing-zone/aws"
-  version    = "0.0.6"
+  source     = "MitocGroup/landing-zone/aws"
   root_path  = "${path.module}"
   account_id = "${var.account_id}"
   region     = "${var.region}"

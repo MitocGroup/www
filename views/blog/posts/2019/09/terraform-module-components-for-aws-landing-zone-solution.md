@@ -27,13 +27,13 @@ The core innovation in terraform module for AWS Landing Zone solution is the imm
 
 ---
 
-To make sure that everybody has the same understanding about [Terraform Module for AWS Landing Zone](https://github.com/TerraHubCorp/terraform-aws-landing-zone#how-does-this-module-work) solution, here below is how [this module](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/main.tf) looks like at the time of writing:
+To make sure that everybody has the same understanding about [Terraform Module for AWS Landing Zone](https://github.com/MitocGroup/terraform-aws-landing-zone#how-does-this-module-work) solution, here below is how [this module](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/main.tf) looks like at the time of writing:
 
 <div class="padd25px">
     <img src="/images/blog/2019-09-13/code.png" alt="partner aws" />
 </div>
 
-And if we take a look at [terraform.tfvars](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/terraform.tfvars), we should see something like this:
+And if we take a look at [terraform.tfvars](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/terraform.tfvars), we should see something like this:
 
 ```
 landing_zone_providers = {
@@ -62,7 +62,7 @@ That is why terraform module for AWS Landing Zone is designed to be dynamic, the
 
 ### The Structure of Landing Zone Components
 
-When looking at each component defined in `landing_zone_components` map, the first issue that jumps into our sight is YAML format instead of HCL (Why? More on this later…) But what's more important at this point is the emerging repeatable pattern. For example, [landing\_zone\_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) looks something like this:
+When looking at each component defined in `landing_zone_components` map, the first issue that jumps into our sight is YAML format instead of HCL (Why? More on this later…) But what's more important at this point is the emerging repeatable pattern. For example, [landing\_zone\_vpc](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) looks something like this:
 
 ```
 component:
@@ -113,10 +113,10 @@ default_provider = {
 
 Let's connect these two pieces from above:
 
-- [Line 10](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L10): this component will create terraform resource [aws_vpc](https://www.terraform.io/docs/providers/aws/r/vpc.html)
-- [Line 12](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L12): this component will create separate terraform provider [aws](https://www.terraform.io/docs/providers/aws/index.html) for each value from `landing_zone_providers` variable (which in practice how AWS accounts and AWS regions are separated in terraform)
-- [Line 14](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L14): this component will iterate through `landing_zone_providers`, expecting specific variable for each provider (e.g. `default_provider`); that is why it's required to define all `[provider_name]_provider` variables (e.g. if `landing_zone_providers` has values `default`, `alpha` and `beta`, it's expected .tfvars file(s) to define variables `default_provider`, `alpha_provider` and `beta_provider`)
-- [Line 16](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L16): this component uses `count` to iterate through resources defined by variable `landing_zone_vpc_resource`; to use native terraform capability, define `[component_name]_resource` values as iterate-able list of elements `config_[iterator]` (e.g. `config_0`, `config_1`, and so on)
+- [Line 10](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L10): this component will create terraform resource [aws_vpc](https://www.terraform.io/docs/providers/aws/r/vpc.html)
+- [Line 12](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L12): this component will create separate terraform provider [aws](https://www.terraform.io/docs/providers/aws/index.html) for each value from `landing_zone_providers` variable (which in practice how AWS accounts and AWS regions are separated in terraform)
+- [Line 14](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L14): this component will iterate through `landing_zone_providers`, expecting specific variable for each provider (e.g. `default_provider`); that is why it's required to define all `[provider_name]_provider` variables (e.g. if `landing_zone_providers` has values `default`, `alpha` and `beta`, it's expected .tfvars file(s) to define variables `default_provider`, `alpha_provider` and `beta_provider`)
+- [Line 16](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml#L16): this component uses `count` to iterate through resources defined by variable `landing_zone_vpc_resource`; to use native terraform capability, define `[component_name]_resource` values as iterate-able list of elements `config_[iterator]` (e.g. `config_0`, `config_1`, and so on)
 
 Ideal proposed structure for `.tfvars` file(s) should be the following:
 
@@ -155,7 +155,7 @@ Consider the following: Our goal for this terraform module is to empower users t
 
 When executing `terraform init` and `terraform apply` on `landing_zone module`, the underlying code triggers `terrahub run` for entire list of `landing_zone_components`. Internally, landing zone components in YAML format are converted into HCL. This terrahub feature is called JIT (aka Just In Time) and, as the name suggests, YAML configs are converted into HCL in real-time during terraform workflow execution.
 
-For example, above mentioned component [landing\_zone\_vpc](https://github.com/TerraHubCorp/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) defined as `.yml` file will be converted into the following set of `.tf` files:
+For example, above mentioned component [landing\_zone\_vpc](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) defined as `.yml` file will be converted into the following set of `.tf` files:
 
 ```
 $ ls ~/.terrahub/cache/jit/landing_zone_vpc_eef16dcf/
