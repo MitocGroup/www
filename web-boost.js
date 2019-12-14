@@ -384,7 +384,7 @@ Object.keys(posts).forEach(key => {
 module.exports = {
   server: {
     port: 8000,
-    ignorePatterns: ['.idea', '.git', 'bin', 'backend', 'build']
+    ignorePatterns: ['.idea', '.git', 'bin', 'backend', 'build', 'node_modules']
   },
   routes: routes
 };
