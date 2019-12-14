@@ -1,7 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block css %}
-  <link rel="stylesheet" href="{{ asset('@css/index.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('@css/index.min.css') }}"/>
 {% endblock %}
 
 {% set services = [
@@ -12,230 +12,226 @@
 ] %}
 
 {% set partners = [
-	{'href': '/partners/aws/', 'img': '@images/v2/logos/aws.svg', 'title': 'Amazon Web Service'},
-	{'href': '/partners/google/', 'img': '@images/v2/logos/google-cloud.svg', 'title': 'Google Cloud Platform'},
-	{'href': '/partners/2ndwatch/', 'img': '@images/v2/logos/2ndwatch.svg', 'title': '2nd Watch'},
-	{'href': '/partners/404moldova/', 'img': '@images/v2/logos/404moldova.svg', 'title': '404 Moldova'}
+  {'href': '/partners/aws/', 'img': '@images/v2/logos/aws.svg', 'title': 'Amazon Web Service'},
+  {'href': '/partners/google/', 'img': '@images/v2/logos/google-cloud.svg', 'title': 'Google Cloud Platform'},
+  {'href': '/partners/2ndwatch/', 'img': '@images/v2/logos/2ndwatch.svg', 'title': '2nd Watch'},
+  {'href': '/partners/404moldova/', 'img': '@images/v2/logos/404moldova.svg', 'title': '404 Moldova'}
 ] %}
 
 {% block body %}
-	<div class="wrapper" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-		<div class="hide-mobile">
-			<div class="main-page">
-				<div class="container">
-					<div class="main-text">
-						<h1>Technology Company Focusing on Cloud Adoption in Private Equity</h1>
-						<div class="text-24 left-green-line text-color-green">
-							Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.
-						</div>
+<div class="wrapper" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+  <div class="hide-mobile">
+    <div class="main-page">
+      <div class="container">
+      <div class="main-text">
+        <h1>Technology Company Focusing on Cloud Adoption in Private Equity</h1>
+        <div class="text-24 left-green-line text-color-green">
+          Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.
+        </div>
 
-						<div class="flex">
-							<button class="btn btn-green start-project">Start a Project</button>
-							<a href="#learnMore" class="anchor">
-								<button class="btn btn-green-border">
-									Learn More
-									<i class="mdi mdi-chevron-down"></i>
-								</button>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="mobile-bg"></div>
-			</div>
+        <div class="flex">
+          <button class="btn btn-green start-project">Start a Project</button>
+          <a href="#learnMore" class="anchor">
+            <button class="btn btn-green-border"> Learn More <i class="mdi mdi-chevron-down"></i></button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-bg"></div>
+  </div>
 
-			<div class="gray-block up80" id="learnMore">
-				<div class="center text-styles">
-					<h3 class="text-color-green">good, better, best. never let it rest.</h3>
-					<h2 class="widthBlock70">Private Equity Customers Find Better Business Results Through Cloud Services</h2>
-				</div>
-				<div class="container">
-					<div class="flex-row pictures-block paddingBottom250 marginTop36">
-						{% for service in services %}
-							<div class="flex-item-3 cols">
-								<div class="services flex-column">
-									<a href={{ service.href }}>
-										<div class="hover-effect">
-											<img class="pictures lazyload" data-src="{{ asset( service.img ) }}" alt={{ service.title }}/>
-										</div>
-										<h3>{{ service.title }}</h3>
-										<p>{{ service.description }}</p>
-									</a>
-									<a class="read-more" href={{ service.href }} >Learn More
-										<i class="mdi mdi-chevron-right"></i>
-									</a></div>
-							</div>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
-			<div class="partners marginTop-200 white-block width1320" id="partners">
-				<div class="green-block-bg transparent-up up80 down80">
-					<div class="container">
-					<div class="center text-styles text-color-white ">
-						<h3>it always seems impossible until it's done.</h3>
-						<h2 class="block-half">Partners Are The Core Elements of Our Business</h2>
-					</div>
-						<div class="flex-row marginTop36 marginBottom61">
-							{% for partner in partners %}
-								<div class="flex-item-3">
-									<a href={{ partner.href }}>
-										<div class="info-block hover-shadow flex-column">
-											<img class="lazyload" data-src="{{ asset( partner.img ) }}" alt={{ partner.title }}/>
-											<h3>{{ partner.title }}</h3>
-										</div>
-									</a>
-								</div>
-							{% endfor %}
-						</div>
-						<div class="top_button center">
-							<button class="btn btn-white become-partner">Become a Partner</button>
-						</div>
-					</div>
-				</div>
-			</div>
+  <div class="gray-block up80" id="learnMore">
+    <div class="center text-styles">
+      <h3 class="text-color-green">good, better, best. never let it rest.</h3>
+      <h2 class="widthBlock70">Private Equity Customers Find Better Business Results Through Cloud Services</h2>
+    </div>
+    <div class="container">
+      <div class="flex-row pictures-block paddingBottom250 marginTop36">
+        {% for service in services %}
+          <div class="flex-item-3 cols">
+            <div class="services flex-column">
+              <a href={{ service.href }}>
+                <div class="hover-effect">
+                  <img class="pictures lazyload" data-src="{{ asset( service.img ) }}" alt={{ service.title }}/>
+                </div>
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+              </a>
+              <a class="read-more" href={{ service.href }} >Learn More
+                <i class="mdi mdi-chevron-right"></i>
+              </a></div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="partners marginTop-200 white-block width1320" id="partners">
+    <div class="green-block-bg transparent-up up80 down80">
+      <div class="container">
+        <div class="center text-styles text-color-white ">
+          <h3>it always seems impossible until it's done.</h3>
+          <h2 class="block-half">Partners Are The Core Elements of Our Business</h2>
+        </div>
+        <div class="flex-row marginTop36 marginBottom61">
+          {% for partner in partners %}
+          <div class="flex-item-3">
+            <a href={{ partner.href }}>
+              <div class="info-block hover-shadow flex-column">
+                <img class="lazyload" data-src="{{ asset( partner.img ) }}" alt={{ partner.title }}/>
+                <h3>{{ partner.title }}</h3>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="top_button center">
+          <button class="btn btn-white become-partner">Become a Partner</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-			<div class="up80 aws-block">
-				<div class="container">
-					<div class="text-styles center">
-						<h3 class="text-color-green">The secret of getting ahead is getting started.</h3>
-						<h2>Success Stories: Private Equity Sector</h2>
-					</div>
-					<a href="/case-studies/terrahub/">
-					<div class="block-img marginTop36">
-						<div class="flex-row display-grid">
-							<div class="flex-item-7 what-is flex-column gradient-left-right green">
-								<div class="text-color-white text-italic text-left">
-									TerraHub.io — the DevOps Hub for Terraform Automation —
-									includes terraform automation and orchestration tool called
-									TerraHub CLI, data and logs management layer called TerraHub
-									API and enterprise friendly GUI to show realtime terraform
-									executions called TerraHub Console.
-								</div>
-							</div>
-							<div class="flex-item-5">
-								<img src="{{ asset('@images/v2/png/terrahub.png') }}" alt="Case Study"/>
-							</div>
-						</div>
-					</div>
-					</a>
-					<div class="marginTop36 center">
-						<a href="/case-studies/" class="btn btn-green">View Case Studies</a>
-					</div>
-				</div>
-			</div>
+  <div class="up80 aws-block">
+    <div class="container">
+      <div class="text-styles center">
+        <h3 class="text-color-green">The secret of getting ahead is getting started.</h3>
+        <h2>Success Stories: Private Equity Sector</h2>
+      </div>
+      <a href="/case-studies/terrahub/">
+      <div class="block-img marginTop36">
+        <div class="flex-row display-grid">
+          <div class="flex-item-7 what-is flex-column gradient-left-right green">
+            <div class="text-color-white text-italic text-left">
+              TerraHub.io — the DevOps Hub for Terraform Automation —
+              includes terraform automation and orchestration tool called
+              TerraHub CLI, data and logs management layer called TerraHub
+              API and enterprise friendly GUI to show realtime terraform
+              executions called TerraHub Console.
+            </div>
+          </div>
+          <div class="flex-item-5">
+            <img src="{{ asset('@images/v2/png/terrahub.png') }}" alt="Case Study"/>
+          </div>
+        </div>
+      </div>
+      </a>
+      <div class="marginTop36 center">
+        <a href="/case-studies/" class="btn btn-green">View Case Studies</a>
+      </div>
+    </div>
+  </div>
 
-			<div class="carousel-block" id="about">
-				<div class="text-styles up80 center">
-					<h3 class="text-color-green">if you can dream it, you can do it.</h3>
-					<h2 class="block-half">Contributing To a Stronger Cloud Services Ecosystem</h2>
-				</div>
-				<div class="container">
-					<div class="carousel-mission">
-						<div>
-							<div class="flex-row">
-								<div class="flex-item-6 slide-img">
-									<img class="lazyload" data-src="{{ asset('@images/v2/illustration/our-mission.svg') }}" alt="Mitoc Group Mission"/>
-								</div>
-								<div class="flex-item-6 slide-text-right">
-									<h3>Our Mission</h3>
-									<p>Enable businesses and developers to provide high value products and services in a constantly changing digital world</p>
-									<button class="btn btn-green-border start-project marginTop36">Start a Project</button>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="flex-row">
-								<div class="flex-item-6 slide-img">
-									<img class="lazyload" data-src="{{ asset('@images/v2/illustration/our-strategy.svg') }}" alt="Mitoc Group Strategy"/>
-								</div>
-								<div class="flex-item-6 slide-text-right">
-									<h3>Our Strategy</h3>
-									<p>Build long term partnerships with technology companies and provide white labeled solutions to consulting partners</p>
-									<button class="btn btn-green-border become-partner marginTop36">Become a Partner</button>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="flex-row">
-								<div class="flex-item-6 slide-img">
-									<img class="lazyload" data-src="{{ asset('@images/v2/illustration/our-team.svg') }}" alt="Mitoc Group Team"/>
-								</div>
-								<div class="flex-item-6 slide-text-right">
-									<a href="/about/team/" class="button">
-										<h3>Our Team</h3>
-										<p>We bring to the table amazing energy and intellectual curiosity, as well as working experience with solid set of technical skills</p>
-										<button class="btn btn-green-border meet-team marginTop36">Meet the Team
-										</button>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+  <div class="carousel-block" id="about">
+    <div class="text-styles up80 center">
+      <h3 class="text-color-green">if you can dream it, you can do it.</h3>
+      <h2 class="block-half">Contributing To a Stronger Cloud Services Ecosystem</h2>
+    </div>
+    <div class="container">
+      <div class="carousel-mission">
+        <div>
+          <div class="flex-row">
+            <div class="flex-item-6 slide-img">
+              <img class="lazyload" data-src="{{ asset('@images/v2/illustration/our-mission.svg') }}" alt="Mitoc Group Mission"/>
+            </div>
+            <div class="flex-item-6 slide-text-right">
+              <h3>Our Mission</h3>
+              <p>Enable businesses and developers to provide high value products and services in a constantly changing digital world</p>
+              <button class="btn btn-green-border start-project marginTop36">Start a Project</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex-row">
+            <div class="flex-item-6 slide-img">
+              <img class="lazyload" data-src="{{ asset('@images/v2/illustration/our-strategy.svg') }}" alt="Mitoc Group Strategy"/>
+            </div>
+            <div class="flex-item-6 slide-text-right">
+              <h3>Our Strategy</h3>
+              <p>Build long term partnerships with technology companies and provide white labeled solutions to consulting partners</p>
+              <button class="btn btn-green-border become-partner marginTop36">Become a Partner</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex-row">
+            <div class="flex-item-6 slide-img">
+              <img class="lazyload" data-src="{{ asset('@images/v2/illustration/our-team.svg') }}" alt="Mitoc Group Team"/>
+            </div>
+            <div class="flex-item-6 slide-text-right">
+              <a href="/about/team/" class="button">
+                <h3>Our Team</h3>
+                <p>We bring to the table amazing energy and intellectual curiosity, as well as working experience with solid set of technical skills</p>
+                <button class="btn btn-green-border meet-team marginTop36">Meet the Team</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-			<div class="gray-block up80 down80 white-block aws-block">
-				<div class="container">
-					<div class="text-styles center">
-						<h3 class="text-color-green">quality is not an act. it is a habit.</h3>
-						<h2 class="block-half">Team Achievements and Company Recognitions</h2>
-					</div>
+  <div class="gray-block up80 down80 white-block aws-block">
+    <div class="container">
+      <div class="text-styles center">
+        <h3 class="text-color-green">quality is not an act. it is a habit.</h3>
+        <h2 class="block-half">Team Achievements and Company Recognitions</h2>
+      </div>
 
-					<div class="flex-row marginTop36">
-						<div class="flex-item-4">
-							<a href="https://blog.mitocgroup.com/mitoc-group-inc-granted-aws-advanced-technology-partner-status-6550e452ed1b" rel="noopener">
-								<div class="block-effect">
-									<img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-advanced.svg') }}" alt="Amazon Web Services"/>
-								</div>
-							</a>
-						</div>
-						<div class="flex-item-4">
-							<a href="https://blog.mitocgroup.com/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda-19331fe3d4f0" rel="noopener">
-								<div class="block-effect">
-									<img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-service.svg') }}" alt="Amazon Web Services"/>
-								</div>
-							</a>
-						</div>
-						<div class="flex-item-4">
-							<a href="https://blog.mitocgroup.com/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team-a7d3d5632cf8" rel="noopener">
-								<div class="block-effect">
-									<img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-lambda.svg') }}" alt="Amazon Web Services"/>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="widthBlock80 marginTop36">
-						<div class="text-italic partner-network center text28">
-							We are very proud of our contributions to the open source community through projects like
-							<a href="https://github.com/TerraHubCorp/terrahub" class="link-text" target="_blank" rel="noreferrer">DevOps Hub for Terraform Automation</a>
-							and
-							<a href="https://github.com/TerraHubCorp/terraform-aws-landing-zone" class="link-text" target="_blank" rel="noreferrer">Terraform Module for AWS Landing Zone</a>.
-						</div>
-					</div>
-				</div>
-			</div>
+      <div class="flex-row marginTop36">
+        <div class="flex-item-4">
+          <a href="/blog/mitoc-group-inc-granted-aws-advanced-technology-partner-status" rel="noopener">
+            <div class="block-effect">
+              <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-advanced.svg') }}" alt="Amazon Web Services"/>
+            </div>
+          </a>
+        </div>
+        <div class="flex-item-4">
+          <a href="/blog/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda" rel="noopener">
+            <div class="block-effect">
+              <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-service.svg') }}" alt="Amazon Web Services"/>
+            </div>
+          </a>
+        </div>
+        <div class="flex-item-4">
+          <a href="/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team" rel="noopener">
+            <div class="block-effect">
+              <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-lambda.svg') }}" alt="Amazon Web Services"/>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="widthBlock80 marginTop36">
+        <div class="text-italic partner-network center text28">
+          We are very proud of our contributions to the open source community through projects like
+          <a href="https://github.com/TerraHubCorp/terrahub" class="link-text" target="_blank" rel="noreferrer">DevOps Hub for Terraform Automation</a>
+          and
+          <a href="https://github.com/MitocGroup/terraform-aws-landing-zone" class="link-text" target="_blank" rel="noreferrer">Terraform Module for AWS Landing Zone</a>.
+        </div>
+      </div>
+    </div>
+  </div>
 
-			<section id="blog" class="blog-block up80 down80">
-				<div class="container">
-					<div class="center text-styles">
-						<h3 class="text-color-green">aim for the moon. if you miss, you may hit a star.</h3>
-						<h2>Recent Articles From Our Blog</h2>
-					</div>
-					<header class="section-heading"></header>
-					<div id="blogContent" class="section-content marginTop36">
-						<div id="jsonContent" class="flex-row"></div>
-					</div>
-					<div class="top_button center marginTop36">
-						<a href="https://blog.mitocgroup.com" rel="noopener">
-							<button class="btn btn-green-border">Read More On The Blog</button>
-						</a>
-					</div>
-				</div>
-			</section>
-		</div>
-	</div>
+  <section id="blog" class="blog-block up80 down80">
+    <div class="container">
+      <div class="center text-styles">
+        <h3 class="text-color-green">aim for the moon. if you miss, you may hit a star.</h3>
+        <h2>Recent Articles From Our Blog</h2>
+      </div>
+      <header class="section-heading"></header>
+      <div id="blogContent" class="section-content marginTop36">
+        <div id="jsonContent" class="flex-row"></div>
+      </div>
+      <div class="top_button center marginTop36">
+        <a href="/blog/" rel="noopener">
+          <button class="btn btn-green-border">Read More On The Blog</button>
+        </a>
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
 {% endblock %}
 
 {% block js %}
-  <script async src="{{ asset('@js/index.min.js') }}"></script>
+<script async src="{{ asset('@js/index.min.js') }}"></script>
 {% endblock %}

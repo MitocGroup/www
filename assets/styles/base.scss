@@ -28,6 +28,7 @@ body {
 .container {
   padding-right: 15px;
   padding-left: 15px;
+  // margin: auto;
   margin-right: auto;
   margin-left: auto;
 }
@@ -190,6 +191,15 @@ a {
 .block-half {
   width: 50%;
   margin: 0 auto;
+}
+
+.maxHeight500px {
+  img {
+    padding: 20px 0px;
+    max-height: 500px;
+    width: auto !important;
+    max-width: 100%;
+  }
 }
 
 .width1320 {
@@ -1245,6 +1255,13 @@ footer {
     position: absolute;
     color: $red-color;
     font-size: 12px;
+  }
+  .error {
+    border: 1px solid $red-color;
+  }
+  .success {
+    padding-top: 5px;
+    color: $main-color;
   }
 }
 
