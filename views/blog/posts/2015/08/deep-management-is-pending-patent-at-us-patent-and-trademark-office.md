@@ -2,7 +2,7 @@
 DEEP Management is pending patent at US Patent and Trademark Office
 
 # description
-For the last couple of weeks we have been working with Steinberg Intellectual Property Law LLC to file a patent with United States Patent and Trademark Office that protects the Intellectual Property developed by our group. We are proud and excited to report the acceptance of the application number 62/195,190 entitled "Digital Asset Management System and Method of Use".
+For the last couple of weeks we have been working with Steinberg Intellectual Property Law LLC to file a patent with United States Patent and Trademark Office that protects the Intellectual Property developed by our group. We are proud and excited to report the acceptance of the application number 62/195,190 entitled 'Digital Asset Management System and Method of Use'.
 
 # image
 https://www.mitocgroup.com/images/blog/2015-08-05/usPatent.jpeg

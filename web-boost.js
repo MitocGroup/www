@@ -364,6 +364,9 @@ let routes = {
 Object.keys(posts).forEach(key => {
   let postPath = `/blog/${key}/`;
 
+  posts[key]['image_fb'] = posts[key]['image'];
+  posts[key]['image_tw'] = posts[key]['image'];
+
   routes[postPath] = {
     view: 'blog/post.twig',
     vars: {
