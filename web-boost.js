@@ -8,7 +8,8 @@ const postsListObject = JSON.parse(postsContent);
 const authors = {
   eistrati: {
     author: 'Eugene Istrati',
-    bio: 'Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.',
+    bio: 'Proud Father. Lucky Husband. Open Source Contributor.' +
+      ' DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.',
     avatar: 'https://www.mitocgroup.com/images/blog/author/eistrati.png',
     twitter: 'https://twitter.com/eistrati',
     twitterIntent: 'https://twitter.com/intent/user?screen_name=eistrati'
@@ -18,7 +19,10 @@ const authors = {
 const defaultVariables = {
   title: 'Mitoc Group',
   description:
-    'Mitoc Group is a technology company focusing on automation using cloud native services. Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.',
+    'Mitoc Group is a technology company focusing on automation using cloud native services.' +
+    ' Our track record includes helping private equity portfolio companies migrate to public clouds,' +
+    ' as well as establish devops and dataops processes using cloud native services and industry' +
+    ' best practices. We deliver automations and business results in weeks instead of months.',
   authors: authors,
   publisher: 'MitocGroup.com',
   company: 'Mitoc Group Inc.',
@@ -348,8 +352,8 @@ let routes = {
       title: 'Blog Articles | ' + defaultVariables.title,
       description:
         'Mitoc Group is a technology company focusing on automation using cloud native services.' +
-        ' Our engineers are proudly sharing here our thoughts and our experience, therefore please' +
-        ' enjoy them responsibly.',
+        ' Our engineers are proudly sharing here our thoughts and our experience, therefore' +
+        ' please enjoy them responsibly.',
       href: defaultVariables.url + '/blog/',
       image: '/images/blog/2018-08-12/dashboard.png',
       publisher: 'https://www.facebook.com/MitocGroup',
