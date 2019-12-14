@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/web-boost/bin/run.js",
-    "compile": "node run.js && node node_modules/web-boost/bin/compile.js",
+    "compile": "node blogposts.js && node node_modules/web-boost/bin/compile.js",
     "sitemap": "node node_modules/web-boost/bin/sitemap.js"
   },
   "devDependencies": {

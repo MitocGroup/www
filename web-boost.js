@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const nrVisiblePosts = 6;
-const postsContent = fs.readFileSync('static/json/posts.json');
+const postsContent = fs.readFileSync('./static/json/posts.json');
 const postsListObject = JSON.parse(postsContent);
 
 const authors = {

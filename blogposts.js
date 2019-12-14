@@ -27,7 +27,7 @@ const converter = new showdown.Converter({
   tasklists: true
 });
 
-const blogPostsFolder = 'views/blog/posts/';
+const blogPostsFolder = './views/blog/posts/';
 const regex = /.md$/;
 let postsObj, mainData;
 
@@ -64,4 +64,4 @@ posts.forEach((directory) => {
   }
 });
 
-fs.writeFileSync('static/json/posts.json', JSON.stringify(postsObj) + '\n');
+fs.writeFileSync('./static/json/posts.json', JSON.stringify(postsObj) + '\n');
