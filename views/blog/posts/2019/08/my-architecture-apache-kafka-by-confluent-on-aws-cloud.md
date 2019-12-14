@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Sun, 4 August 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-08-04/kafka-arch.png
-
-# Title
+# title
 My Architecture: Apache Kafka by Confluent on AWS Cloud
 
-# Intro
+# description
 Recent engagement with $4.5B customer produced very positive outcome with very surprising learning lesson: we had to create reference architecture for Apache Kafka by Confluent on AWS cloud from scratch because there wasn't any available.
+
+# image
+https://www.mitocgroup.com/images/blog/2019-08-04/kafka-arch.png
+
+# publicationDate
+Sun, 4 August 2019 12:20:55 -0400
 
 ---
 

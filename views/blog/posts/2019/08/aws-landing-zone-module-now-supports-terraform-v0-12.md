@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Tue, 20 August 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-08-20/terraform.png
-
-# Title
+# title
 AWS Landing Zone module now supports Terraform v0.12+
 
-# Intro
+# description
 Couple of weeks ago we were excited to Introduce Programmatic AWS Landing Zone as Terraform Module. Today we continue this exciting journey to extend module's support for Terraform v0.12+
+
+# image
+https://www.mitocgroup.com/images/blog/2019-08-20/terraform.png
+
+# publicationDate
+Tue, 20 August 2019 12:20:55 -0400
 
 ---
 

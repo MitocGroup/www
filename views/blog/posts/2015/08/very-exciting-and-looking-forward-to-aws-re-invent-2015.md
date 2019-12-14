@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Wed, 12 August 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-09-27/logo.png
-
-# Title
+# title
 Very exciting and looking forward to AWS re:Invent 2015!
 
-# Intro
+# description
+When we're submitting our proposal for a breakout session at Amazon's biggest conference AWS re:Invent 2015, a friend of ours (who is also a former Amazon employee) was telling there is no chance in the world it would be accepted.
+
+# image
+https://www.mitocgroup.com/images/blog/2015-09-27/logo.png
+
+# publicationDate
+Wed, 12 August 2015 12:20:55 -0400
 
 ---
 
@@ -54,7 +40,7 @@ My favorite question from the [AWS re:Invent's FAQ](https://reinvent.awsevents.c
 
 >_How can I convince my boss to let me attend?_
 
-Yeah, we all have been there and struggled with that… And here below is the answer:
+Yeah, we all have been there and struggled with that... And here below is the answer:
 
 >_There are a number of great benefits for attending AWS re:Invent. We have made it easy for you to convince your boss to attend AWS re:Invent! Use our [Justify Your Trip](https://reinvent.awsevents.com/justification.html) template._
 

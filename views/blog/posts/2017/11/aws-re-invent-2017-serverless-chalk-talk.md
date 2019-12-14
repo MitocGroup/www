@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Fri, 24 November 2017 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2017-11-24/awsReInvent.png
-
-# Title
+# title
 AWS re:Invent 2017. Serverless Track. SRV326 Chalk Talk.
 
-# Intro
+# description
 Mitoc Group was nominated again to deliver a serverless session at Amazon Web Services' biggest event of the year, AWS re:Invent 2017.
+
+# image
+https://www.mitocgroup.com/images/blog/2017-11-24/awsReInvent.png
+
+# publicationDate
+Fri, 24 November 2017 12:20:55 -0400
 
 ---
 
@@ -57,7 +42,7 @@ We have been busy. Business as usual. Little to no time to write about our exper
   </a>
 </div>
 
-Last week, we get another email from AWS re:Invent team, saying that "your chalk talk SRV326 How to Approach Continuous Integration for Serverless Applications is 1,072.73% over-subscribed! Would you like to hold a repeat session?" And … there you go:
+Last week, we get another email from AWS re:Invent team, saying that "your chalk talk SRV326 How to Approach Continuous Integration for Serverless Applications is 1,072.73% over-subscribed! Would you like to hold a repeat session?" And ... there you go:
 
 <div class="external-article">
   <a href="https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=18059">

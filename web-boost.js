@@ -1,15 +1,25 @@
 'use strict';
 
 const fs = require('fs');
+const nrVisiblePosts = 6;
 const postsContent = fs.readFileSync('static/json/posts.json');
 const postsListObject = JSON.parse(postsContent);
-const nrVisiblePosts = 6;
+
+const authors = {
+  eistrati: {
+    author: 'Eugene Istrati',
+    bio: 'Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.',
+    avatar: 'https://www.mitocgroup.com/images/blog/author/eistrati.png',
+    twitter: 'https://twitter.com/eistrati',
+    twitterIntent: 'https://twitter.com/intent/user?screen_name=eistrati'
+  }
+};
 
 const defaultVariables = {
   title: 'Mitoc Group',
   description:
     'Mitoc Group is a technology company focusing on automation using cloud native services. Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.',
-  author: 'https://twitter.com/@eistrati',
+  authors: authors,
   publisher: 'MitocGroup.com',
   company: 'Mitoc Group Inc.',
   address: '2 University Plaza Suite 100',
@@ -83,26 +93,26 @@ const aboutAssets = {
   'css/about.min.css': [...commonStyles, 'styles/about.scss']
 };
 
-const blogAssets = {
-  'js/blog.min.js': [...commonScripts, 'js/libs/highlight.pack.min.js', 'js/blog.js'],
-  'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
-};
-
 const contactAssets = {
   'js/contact.min.js': commonScripts,
   'css/contact.min.css': [...commonStyles, 'styles/contact.scss']
 };
 
+const blogAssets = {
+  'js/blog.min.js': [...commonScripts, 'js/libs/highlight.pack.min.js', 'js/blog.js'],
+  'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
+};
+
 let posts = {};
 posts = Object.keys(postsListObject)
   .sort((a, b) => {
-    return -(new Date(postsListObject[a].PublicationDate) - new Date(postsListObject[b].PublicationDate));
+    return -(new Date(postsListObject[a].publicationDate) - new Date(postsListObject[b].publicationDate));
   })
   .reduce((prev, curr) => {
-    const event = new Date(postsListObject[curr].PublicationDate);
+    const event = new Date(postsListObject[curr].publicationDate);
     const options = { month: 'short', day: 'numeric', year: 'numeric' };
     prev[curr] = postsListObject[curr];
-    prev[curr].PublicationDate = event.toLocaleDateString('en-EN', options);
+    prev[curr].publicationDate = event.toLocaleDateString('en-EN', options);
     return prev;
   }, {});
 
@@ -115,6 +125,32 @@ let routes = {
       href: defaultVariables.url
     },
     assets: indexAssets
+  },
+  '/404/': {
+    view: '404.twig',
+    vars: {
+      ...defaultVariables,
+      title: '404 Page Not Found | ' + defaultVariables.title
+    },
+    assets: commonAssets
+  },
+  '/terms/': {
+    view: 'terms.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Terms and Conditions | ' + defaultVariables.title,
+      href: defaultVariables.url + '/terms/'
+    },
+    assets: commonAssets
+  },
+  '/privacy/': {
+    view: 'privacy.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Privacy Policy | ' + defaultVariables.title,
+      href: defaultVariables.url + '/privacy/'
+    },
+    assets: commonAssets
   },
   '/services/': {
     view: 'services/index.twig',
@@ -296,6 +332,15 @@ let routes = {
     },
     assets: aboutAssets
   },
+  '/contact/': {
+    view: 'contact.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Contact Us | ' + defaultVariables.title,
+      href: defaultVariables.url + '/contact/'
+    },
+    assets: contactAssets
+  },
   '/blog/': {
     view: 'blog/index.twig',
     vars: {
@@ -313,41 +358,6 @@ let routes = {
       nrVisiblePosts
     },
     assets: blogAssets
-  },
-  '/contact/': {
-    view: 'contact.twig',
-    vars: {
-      ...defaultVariables,
-      title: 'Contact Us | ' + defaultVariables.title,
-      href: defaultVariables.url + '/contact/'
-    },
-    assets: contactAssets
-  },
-  '/terms/': {
-    view: 'terms.twig',
-    vars: {
-      ...defaultVariables,
-      title: 'Terms and Conditions | ' + defaultVariables.title,
-      href: defaultVariables.url + '/terms/'
-    },
-    assets: commonAssets
-  },
-  '/privacy/': {
-    view: 'privacy.twig',
-    vars: {
-      ...defaultVariables,
-      title: 'Privacy Policy | ' + defaultVariables.title,
-      href: defaultVariables.url + '/privacy/'
-    },
-    assets: commonAssets
-  },
-  '/404/': {
-    view: '404.twig',
-    vars: {
-      ...defaultVariables,
-      title: '404 Page Not Found | ' + defaultVariables.title
-    },
-    assets: commonAssets
   }
 };
 

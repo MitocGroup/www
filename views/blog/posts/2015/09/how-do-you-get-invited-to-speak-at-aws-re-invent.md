@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Sun, 27 September 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-09-27/logo.png
-
-# Title
+# title
 How do you get invited to speak at AWS re:Invent?
 
-# Intro
+# description
+AWS re:Invent is the Amazon Web Services annual user conference. The event features keynote announcements, training and certification opportunities, over 250 technical sessions, a partner expo, after hours activities, and more.
+
+# image
+https://www.mitocgroup.com/images/blog/2015-09-27/logo.png
+
+# publicationDate
+Sun, 27 September 2015 12:20:55 -0400
 
 ---
 

@@ -1,29 +1,17 @@
-# Featured
-2
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Wed, 18 Septembre 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-09-18/terraform-module.png
-
-# Title
+# title
 Stronger Security with Terraform Module for AWS Landing Zone
 
-# Intro
+# description
 Terraform module for AWS Landing Zone solution is offering a stronger security promise. Let's dive deeper into main security components and understand some practical implications.
+
+# image
+https://www.mitocgroup.com/images/blog/2019-09-18/terraform-module.png
+
+# publicationDate
+Wed, 18 September 2019 12:20:55 -0400
+
+# featured
+2
 
 ---
 

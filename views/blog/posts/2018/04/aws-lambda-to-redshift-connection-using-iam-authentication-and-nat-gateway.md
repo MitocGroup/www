@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Mon, 23 April 2018 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2018-04-23/example.png
-
-# Title
+# title
 AWS Lambda to Redshift Connection using IAM authentication and NAT gateway
 
-# Intro
+# description
 Python Edition. This article walks through the steps taken and lessons learned, in order to connect AWS Lambda to Amazon Redshift running in Amazon VPC. Described solution involves minimal maintenance effort while providing top notch security and reliability.
+
+# image
+https://www.mitocgroup.com/images/blog/2018-04-23/example.png
+
+# publicationDate
+Mon, 23 April 2018 12:20:55 -0400
 
 ---
 

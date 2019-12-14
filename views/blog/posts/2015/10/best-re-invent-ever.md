@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Mon, 12 October 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-10-12/reinvent.jpeg
-
-# Title
+# title
 Best re:Invent Ever!
 
-# Intro
+# description
+We would like to share some thoughts while it's still hot on what this conference meant for us. It was the Best re:Invent Ever! We have met with a lot of technical folks and learned so much, that it would take months to process it and transform into added value for our customers.
+
+# image
+https://www.mitocgroup.com/images/blog/2015-10-12/reinvent.jpeg
+
+# publicationDate
+Mon, 12 October 2015 12:20:55 -0400
 
 ---
 

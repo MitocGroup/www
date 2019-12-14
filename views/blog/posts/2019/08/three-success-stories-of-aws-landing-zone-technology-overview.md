@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Thu, 1 August 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-08-01/aws-lz-arch.png
-
-# Title
+# title
 Three Success Stories of AWS Landing Zone (Technology Overview)
 
-# Intro
+# description
 After introducing Terraform Module for AWS Landing Zone and providing Business Overview of Our Experience with AWS Landing Zone, let's dive deeper into the technical overview.
+
+# image
+https://www.mitocgroup.com/images/blog/2019-08-01/aws-lz-arch.png
+
+# publicationDate
+Thu, 1 August 2019 12:20:55 -0400
 
 ---
 
@@ -59,7 +44,7 @@ module "landing_zone" {
 }
 ```
 
->_NOTE: Placeholder […] from above is used to suggest that similar syntax can be added. Remove it or update in order to have valid HCL format._
+>_NOTE: Placeholder [...] from above is used to suggest that similar syntax can be added. Remove it or update in order to have valid HCL format._
 
 Definition of `landing_zone_providers` and `landing_zone_components` allow flexible and consistent provisioning of AWS resources across multiple AWS accounts and/or AWS regions. Similar to microservices architecture, customers of this terraform module are encouraged to define one terraform resource per one landing zone component.
 

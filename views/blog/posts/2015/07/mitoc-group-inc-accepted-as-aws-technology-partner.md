@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Tue, 28 July 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-07-28/partnerAws.png
-
-# Title
+# title
 Mitoc Group Inc accepted as AWS Technology Partner
 
-# Intro
+# description
+Although we've been quiet for almost 2 months, our team has been heads down and working hard to achieve difficult milestones. Today we can proudly talk about our first major achievement — accepted as Official AWS Technology Partner.
+
+# image
+https://www.mitocgroup.com/images/blog/2015-07-28/partnerAws.png
+
+# publicationDate
+Tue, 28 July 2015 12:20:55 -0400
 
 ---
 

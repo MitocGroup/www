@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Mon, 3 August 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-08-03/welcome.png
-
-# Title
+# title
 Very exciting and looking forward to AWS re:Invent 2015!
 
-# Intro
+# description
+Our journey started years ago when we've been crafting and inventing the wheels of Digital Asset Management (also known as DAM) for mobile platforms. Sounds like an eternity to talk about mobile-focused applications built before smartphones and tables, and to some degree it is.
+
+# image
+https://www.mitocgroup.com/images/blog/2015-08-03/welcome.png
+
+# publicationDate
+Mon, 3 August 2015 12:20:55 -0400
 
 ---
 

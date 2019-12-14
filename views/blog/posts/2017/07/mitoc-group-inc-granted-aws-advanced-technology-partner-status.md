@@ -1,29 +1,15 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Sat, 22 July 2017 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2016-11-29/partner-network.jpeg
-
-# Title
+# title
 Mitoc Group Inc. Granted AWS Advanced Technology Partner Status
 
-# Intro
+# description
 Congratulations! Your Firm Has Been Accepted into the Advanced AWS Partner Network (APN) Tier.
+
+# image
+https://www.mitocgroup.com/images/blog/2016-11-29/partner-network.jpeg
+
+# publicationDate
+Sat, 22 July 2017 12:20:55 -0400
+
 ---
 
 <div class="padd25px">

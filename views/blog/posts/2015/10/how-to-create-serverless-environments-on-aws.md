@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Mon, 5 October 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-10-05/without-servers.png
-
-# Title
+# title
 7 Steps to Create Serverless Environments on AWS
 
-# Intro
+# description
+Amazon Web Services is couple of days away from its fourth edition of AWS re:Invent. We are getting ready to fly to Las Vegas and present the breakout session A[RC201 — Microservices Architecture for Digital Platforms with AWS Lambda, Amazon CloudFront and Amazon DynamoDB.
+
+# image
+https://www.mitocgroup.com/images/blog/2015-10-05/without-servers.png
+
+# publicationDate
+Mon, 5 October 2015 12:20:55 -0400
 
 ---
 

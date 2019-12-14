@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Fri, 19 Jun 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-06-19/aws-lz.png
-
-# Title
+# title
 Three Success Stories of AWS Landing Zone (Business Overview)
 
-# Intro
+# description
 After Introducing Terraform Module for AWS Landing Zone couple of days ago, let's dive deep into several use cases and see how this technical solution solves real business problems.
+
+# image
+https://www.mitocgroup.com/images/blog/2019-06-19/aws-lz.png
+
+# publicationDate
+Fri, 19 June 2019 12:20:55 -0400
 
 ---
 

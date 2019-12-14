@@ -1,4 +1,4 @@
-{% extends '../blogs.twig' %}
+{% extends '../blog.twig' %}
 
 {% block content %}
   <div class="wrapper">
@@ -23,9 +23,9 @@
 
   {% set featured = {} %}
   {% for key, item in postsListObject %}
-    {% if item.Featured > 0 %}
+    {% if item.featured %}
         {% set temp = item|merge({href: key ~ '/'}) %}
-        {% set featured = featured|merge({(item.Featured):temp}) %}
+        {% set featured = featured|merge({(item.featured):temp}) %}
     {% endif %}
   {% endfor %}
   
@@ -33,18 +33,18 @@
       <div class="blog-container">
         {% if featured|length > 1 %}
           <div class="blogs firefox">
-              <h1>Featured Post</h1>
+              <h1>Featured Posts</h1>
               <div class="flex-row header-blog">
               {% if featured[1] %}
                     <div class="flex-item-6 first-b flex-column">
                         <a href="{{ featured[1].href }}">
-                        <img src="{{ asset( featured[1].Thumbnail ) }}" alt="Our Blog"/>
+                        <img src="{{ asset( featured[1].image ) }}" alt="Our Blog"/>
                         </a>
-                        <p class="gray-blog">{{ featured[1].PublicationDate }} {{ featured[1].minRead }}</p>
+                        <p class="gray-blog">{{ featured[1].publicationDate }} {{ featured[1].minRead }}</p>
                         <a href="{{ featured[1].href }}">
-                            <h2>{{ featured[1].Title }}</h2>
+                            <h2>{{ featured[1].title }}</h2>
                         </a>
-                        <p class="blog-post">{{ featured[1].Intro }}</p>
+                        <p class="blog-post">{{ featured[1].description }}</p>
                         <div class="learn-more-b">
                             <a href="{{ featured[1].href }}" class="learn-more">Learn more
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -58,16 +58,16 @@
                       <div class="flex-row">
                           <div class="flex-item-6">
                               <a href="{{ featured[i].href }}">
-                              <img src="{{ asset( featured[i].Thumbnail ) }}" alt="Our Blog"/>
+                              <img src="{{ asset( featured[i].image ) }}" alt="Our Blog"/>
                               </a>
                           </div>
                           <div class="flex-item-6">
                               <div class="flex-column">
-                              <p class="gray-blog">{{ featured[i].PublicationDate }} {{ featured[i].minRead }}</p>
+                              <p class="gray-blog">{{ featured[i].publicationDate }} {{ featured[i].minRead }}</p>
                               <a href="{{ featured[i].href }}">
-                                  <h3>{{ featured[i].Title }}</h3>
+                                  <h3>{{ featured[i].title }}</h3>
                               </a>
-                              <p class="blog-post">{{ featured[i].Intro }}</p>
+                              <p class="blog-post">{{ featured[i].description }}</p>
                               <a href="{{ featured[i].href }}" class="learn-more">Learn more
                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
                               </a>
@@ -127,14 +127,14 @@
                         <div class="width-block post-block">
                             <div class="image-block-post">
                                 <a href="/blog/{{ key }}/">
-                                <img src="{{ asset( item.Thumbnail ) }}" alt="Our Blog"/>
+                                <img src="{{ asset( item.image ) }}" alt="Our Blog"/>
                                 </a>
                             </div>
-                            <p class="gray-blog">{{ item.PublicationDate }} {{ item.minRead }}</p>
+                            <p class="gray-blog">{{ item.publicationDate }} {{ item.minRead }}</p>
                             <a href="/blog/{{ key }}/">
-                            <h3>{{ item.Title }}</h3>
+                            <h3>{{ item.title }}</h3>
                             </a>
-                            <p class="blog-post">{{ item.Intro }}</p>
+                            <p class="blog-post">{{ item.description }}</p>
                             <div class="learn-more-b">
                                 <a href="/blog/{{ key }}/" class="learn-more">Learn more
                                     <i class="fa fa-angle-right" aria-hidden="true"></i>

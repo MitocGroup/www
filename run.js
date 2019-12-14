@@ -46,7 +46,7 @@ posts.forEach((directory) => {
 
             mainData = markdowneyjr(dict, {});
 
-            let wordCount = (content + mainData.Intro).replace(/[^\w ]/g, '').split(/\s+/).length;
+            let wordCount = (content + mainData.description).replace(/[^\w ]/g, '').split(/\s+/).length;
             let readingTimeInMinutes = Math.floor(wordCount / 250) + 1;
             let result = `~ ${readingTimeInMinutes} min read`;
             const object = {

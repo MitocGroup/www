@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Fri, 12 February 2016 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2016-02-12/coder.png
-
-# Title
+# title
 Building Scalable Web Apps with AWS Lambda and Home-Grown Serverless Web Framework
 
-# Intro
+# description
+There is a growing demand for enterprise software solutions that are easy to build and quick to deploy. Cloud Computing has emerged as one of the most viable routes for enterprise software delivery and, in our experience, Amazon Web Services is leading the charge.
+
+# image
+https://www.mitocgroup.com/images/blog/2016-02-12/coder.png
+
+# publicationDate
+Fri, 12 February 2016 12:20:55 -0400
 
 ---
 
@@ -75,7 +61,7 @@ We developed [DEEP Framework](https://github.com/MitocGroup/deep-framework) — 
 - Automated allocation of infrastructure resources
 - Zero devops and out-of-the-box scalability
 
-#### So, let's get started…
+#### So, let's get started...
 
 You will need the following pre-requisites:
 
@@ -96,7 +82,7 @@ We use a [Services Oriented Architecture](https://en.wikipedia.org/wiki/Service-
 
 _Note: Docs and tests are very important components of every microapplication, but we decided to leave them out of scope for this article._
 
-Let's dive into the details of every tier next…
+Let's dive into the details of every tier next...
 
 #### Building Frontend
 

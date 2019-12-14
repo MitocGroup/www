@@ -8,9 +8,10 @@
 {% if title %}<title>{{ title }}</title>{% endif %}
 {% if description %}<meta name="description" content="{{ description }}" />{% endif %}
 
-{% if author %}<link rel="author" href="{{ author }}" />{% endif %}
-{% if author %}<meta property="author" content="{{ author }}" />{% endif %}
-{% if author %}<meta property="article:author" content="{{ author }}" />{% endif %}
+{% if author is empty %} {% set author = "eistrati" %} {% endif %}
+{% if authors %}<link rel="author" href="{{ authors[author]['twitter'] }}" />{% endif %}
+{% if authors %}<meta property="author" content="{{ authors[author]['twitter'] }}" />{% endif %}
+{% if authors %}<meta property="article:author" content="{{ authors[author]['twitter'] }}" />{% endif %}
 {% if publisher %}<meta property="article:publisher" content="{{ publisher }}" />{% endif %}
 
 {% if title %}<meta property="og:title" content="{{ title }}" />{% endif %}

@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Fri, 26 February 2016 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2016-02-26/mitoc.png
-
-# Title
+# title
 Mitoc Group featured as Frameworks Partner by AWS Lambda team
 
-# Intro
+# description
+We are very humble and honored to be featured by AWS Lambda as one of their Framework Partners. On behalf of our customers, we'd like to take this opportunity to thank AWS Lambda team for their continuous trust and support.
+
+# image
+https://www.mitocgroup.com/images/blog/2016-02-26/mitoc.png
+
+# publicationDate
+Fri, 26 February 2016 12:20:55 -0400
 
 ---
 

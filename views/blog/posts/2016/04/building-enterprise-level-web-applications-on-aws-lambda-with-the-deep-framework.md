@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Thu, 14 April 2016 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2016-04-14/code.png
-
-# Title
+# title
 Building Enterprise Level Web Applications on AWS Lambda with the DEEP Framework
 
-# Intro
-Original article was published at <a href="https://aws.amazon.com/blogs/compute/building-enterprise-level-web-applications-on-aws-lambda-with-deep/">https://aws.amazon.com/blogs/compute/building-enterprise-level-web-applications-on-aws-lambda-with-deep/</a>
+# description
+Since the beginning, Mitoc Group has been building web applications for enterprise customers. We are a small group of developers who are helping customers with their entire web development process, from conception through execution and down to maintenance.
+
+# image
+https://www.mitocgroup.com/images/blog/2016-04-14/code.png
+
+# publicationDate
+Thu, 14 April 2016 12:20:55 -0400
 
 ---
 
@@ -73,7 +58,7 @@ The todo app is written in AngularJS and deployed on Amazon S3, behind Amazon Cl
 <div class="external-article">
   <a href="https://github.com/MitocGroup/deep-microservices-todo-app">
   <h5>MitocGroup/deep-microservices-todomvc</h5>
-  <span>DEEP Todo App ( https://github.com/MitocGroup/deep-microservices-todomvc) is a web app inspired from AngularJS TodoMVC…</span>
+  <span>DEEP Todo App ( https://github.com/MitocGroup/deep-microservices-todomvc) is a web app inspired from AngularJS TodoMVC...</span>
     <span>github.com</span>
   </a>
 </div>
@@ -425,7 +410,7 @@ We have been continuously benchmarking AWS Lambda for various use cases in our m
 <div class="external-article">
   <a href="https://github.com/MitocGroup/deep-microservices-benchmarking">
   <h5>MitocGroup/deep-microservices-benchmarking</h5>
-  <span>DEEP Benchmarking ( https://github.com/MitocGroup/deep-microservices-benchmarking) is a microservice that is built on…</span>
+  <span>DEEP Benchmarking ( https://github.com/MitocGroup/deep-microservices-benchmarking) is a microservice that is built on...</span>
   <span>github.com</span>
   </a>
 </div>

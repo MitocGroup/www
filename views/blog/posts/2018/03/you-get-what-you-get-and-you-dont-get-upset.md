@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Wed, 25 March 2018 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2018-03-25/mitoc.png
-
-# Title
+# title
 You get what you get and you don't get upset
 
-# Intro
+# description
 Or how we as adults forget about basic principles we teach kids, but for some reason tend to think that we've grown up and it doesn't apply to us anymore
+
+# image
+https://www.mitocgroup.com/images/blog/2018-03-25/mitoc.png
+
+# publicationDate
+Wed, 25 March 2018 12:20:55 -0400
 
 ---
 

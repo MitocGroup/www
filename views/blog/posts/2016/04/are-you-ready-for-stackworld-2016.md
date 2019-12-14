@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Mon, 18 April 2016 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2016-04-18/speakers.png
-
-# Title
+# title
 Are you ready for StackWorld 2016?
 
-# Intro
+# description
+We are excited to announce that we'll be presenting Digital Enterprise End-to-end Platform at StackWorld Conference 2016. The session is listed in the track Choosing a Cloud, section Amazon Cloud and Ecosystem and is called Building Scalable Web Applications using Microservices Architecture and Serverless Computing from AWS.
+
+# image
+https://www.mitocgroup.com/images/blog/2016-04-18/speakers.png
+
+# publicationDate
+Mon, 18 April 2016 12:20:55 -0400
 
 ---
 

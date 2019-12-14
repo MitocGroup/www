@@ -1,28 +1,15 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Tue, 29 Novembre 2016 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2016-11-29/partner-network.jpeg
-
-# Title
+# title
 Mitoc Group Inc. Achieves AWS Service Delivery Partner Status for AWS Lambda
 
-# Intro
+# description
+Mitoc Group Inc, a technology company that focuses on innovative enterprise solutions, announced today that it has achieved AWS Service Delivery Partner status for AWS Lambda
+
+# image
+https://www.mitocgroup.com/images/blog/2016-11-29/partner-network.jpeg
+
+# publicationDate
+Tue, 29 November 2016 12:20:55 -0400
+
 
 ---
 

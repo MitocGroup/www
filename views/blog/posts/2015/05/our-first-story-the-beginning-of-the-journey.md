@@ -1,28 +1,14 @@
-# Featured
-0
+# title
+Our first story ... the beginning of the journey.
 
-# Author
-Eugene Istrati
+# description
+Every startup has a story. Most of these stories begin with a couple of folks getting together to solve a problem they have or see. It's not very encouraging to know that 9 out of 10 startups fail, according to their founders. Still, we have decided to take this path anyway. So the question is ... Why?
 
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
+# image
+https://www.mitocgroup.com/images/blog/2015-05-29/startup.jpeg
 
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
+# publicationDate
 Fri, 29 May 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-05-29/startup.jpeg
-
-# Title
-Our first story … the beginning of the journey.
-
-# Intro
 
 ---
 
@@ -31,7 +17,7 @@ Our first story … the beginning of the journey.
     <div class="center img-description">Source: gonature.es</div>
 </div>
 
-Every startup has a story. Most of these stories begin with a couple of folks getting together to solve a problem they have or see. It's not very encouraging to know that [9 out of 10 startups](https://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/) fail, according to their founders. Still, we have decided to take this path anyway. So the question is … Why?
+Every startup has a story. Most of these stories begin with a couple of folks getting together to solve a problem they have or see. It's not very encouraging to know that [9 out of 10 startups](https://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/) fail, according to their founders. Still, we have decided to take this path anyway. So the question is ... Why?
 
 To be honest, why not? We are working with a team of brilliant engineers that build great products and are constantly delivering cool stuff. We are indirectly engaging with a couple of enterprise customers that are using these products and are constantly asking for more. We are exposing both sides to latest and greatest piece of technology that neither of them thought about before. Sounds like [a perfect product/market](https://www.linkedin.com/pulse/marc-andreessen-product-market-fit-startups-marc-andreessen) fit that we have to explore, doesn't it?
 

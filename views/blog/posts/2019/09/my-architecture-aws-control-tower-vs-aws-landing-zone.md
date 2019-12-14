@@ -1,29 +1,17 @@
-# Featured
-1
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Fri, 20 Septembre 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-09-20/aws-reinforce.png
-
-# Title
+# title
 My Architecture: AWS Control Tower vs AWS Landing Zone
 
-# Intro
+# description
 Both Control Tower and Landing Zone help set up and manage secure multi-account AWS environments. Which one should customers use? Let's take a closer look and figure out together.
+
+# image
+https://www.mitocgroup.com/images/blog/2019-09-20/aws-reinforce.png
+
+# publicationDate
+Fri, 20 September 2019 12:20:55 -0400
+
+# featured
+1
 
 ---
 

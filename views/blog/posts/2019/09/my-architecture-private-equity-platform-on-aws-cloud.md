@@ -1,29 +1,17 @@
-# Featured
-4
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Tue, 10 Septembre 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-09-10/private-equity-platform.png
-
-# Title
+# title
 My Architecture: Private Equity Platform on AWS Cloud
 
-# Intro
+# description
 Over the last couple of years we have been working closely with several private equity companies to help them adopt public clouds. This article will describe the high level architecture of a leading private equity platform on AWS cloud.
+
+# image
+https://www.mitocgroup.com/images/blog/2019-09-10/private-equity-platform.png
+
+# publicationDate
+Tue, 10 September 2019 12:20:55 -0400
+
+# featured
+4
 
 ---
 

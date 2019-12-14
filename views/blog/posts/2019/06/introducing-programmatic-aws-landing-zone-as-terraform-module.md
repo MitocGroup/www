@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Mon, 17 Jun 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-06-17/aws-arch.png
-
-# Title
+# title
 Introducing Programmatic AWS Landing Zone as Terraform Module
 
-# Intro
+# description
 AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices
+
+# image
+https://www.mitocgroup.com/images/blog/2019-06-17/aws-arch.png
+
+# publicationDate
+Mon, 17 June 2019 12:20:55 -0400
 
 ---
 

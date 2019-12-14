@@ -1,31 +1,16 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Thu, 20 October 2016 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2016-10-20/lambda-edge.png
-
-# Title
+# title
 Blue-Green Deployments for Serverless Powered Applications on AWS
 
-# Intro
+# description
 First described by Martin Fowler back in 2010, blue-green deployment is 
 a release technique that reduces downtime and risk by running two identical 
 production environments called Blue and Green.
+
+# image
+https://www.mitocgroup.com/images/blog/2016-10-20/lambda-edge.png
+
+# publicationDate
+Thu, 20 October 2016 12:20:55 -0400
 
 ---
 

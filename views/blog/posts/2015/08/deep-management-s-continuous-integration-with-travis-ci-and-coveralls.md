@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Tue, 11 August 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-08-11/whyCI.png
-
-# Title
+# title
 DEEP Management's Continuous Integration with Travis CI and Coveralls
 
-# Intro
+# description
+DEEP Management offers functionality to help automate and streamline the management of digital assets. This process in software development vertical is known as Continuous Integration.
+
+# image
+https://www.mitocgroup.com/images/blog/2015-08-11/whyCI.png
+
+# publicationDate
+Tue, 11 August 2015 12:20:55 -0400
 
 ---
 

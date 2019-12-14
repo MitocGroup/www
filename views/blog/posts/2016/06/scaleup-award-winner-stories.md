@@ -1,28 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Sun, 12 June 2016 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2016-06-12/scaleup-award-winner-stories.png
-
-# Title
+# title
 StackWorld ScaleUp Award Winner Stories
 
-# Intro
+# description
+StackWorld is San Francisco's Largest DevOps + Scalability Technology Conference where 1,200+ tech companies scale their technology stack from Clouds to DevOps Tools to Back-End Coding Languages
+
+# image
+https://www.mitocgroup.com/images/blog/2016-06-12/scaleup-award-winner-stories.png
+
+# publicationDate
+Sun, 12 June 2016 12:20:55 -0400
 
 ---
 

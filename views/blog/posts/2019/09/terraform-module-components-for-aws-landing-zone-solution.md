@@ -1,29 +1,17 @@
-# Featured
-3
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Fri, 13 Septembre 2019 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2019-09-13/code.png
-
-# Title
+# title
 Terraform Module Components for AWS Landing Zone Solution
 
-# Intro
+# description
 The core innovation in terraform module for AWS Landing Zone solution is the immutable nature of components. Let's dive deeper into what a component is and how does it work.
+
+# image
+https://www.mitocgroup.com/images/blog/2019-09-13/code.png
+
+# publicationDate
+Fri, 13 September 2019 12:20:55 -0400
+
+# featured
+3
 
 ---
 
@@ -62,7 +50,7 @@ That is why terraform module for AWS Landing Zone is designed to be dynamic, the
 
 ### The Structure of Landing Zone Components
 
-When looking at each component defined in `landing_zone_components` map, the first issue that jumps into our sight is YAML format instead of HCL (Why? More on this later…) But what's more important at this point is the emerging repeatable pattern. For example, [landing\_zone\_vpc](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) looks something like this:
+When looking at each component defined in `landing_zone_components` map, the first issue that jumps into our sight is YAML format instead of HCL (Why? More on this later...) But what's more important at this point is the emerging repeatable pattern. For example, [landing\_zone\_vpc](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) looks something like this:
 
 ```
 component:

@@ -1,29 +1,14 @@
-# Featured
-0
-
-# Author
-Eugene Istrati
-
-# AboutAuthor
-Proud Father. Lucky Husband. Open Source Contributor. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
-
-# Avatar
-eistrati.png
-
-# TwitterUsername
-eistrati
-
-# PublicationDate
-Wed, 16 December 2015 12:20:55 -0400
-
-# Thumbnail
-/images/blog/2015-12-16/interview.png
-
-# Title
+# title
 Interview: Creators of The DEEP Framework
 
-# Intro
-Learn About The DEEP Framework Right From Its Creators
+# description
+Today, we'll hear from the creators of the DEEP Framework about its origins, what it's great at, and how to start using it. The big driver for the Mitoc Group behind going serverless was to reduce ongoing maintenance. What better way to maintain fewer servers by not having them?
+
+# image
+https://www.mitocgroup.com/images/blog/2015-12-16/interview.png
+
+# publicationDate
+Wed, 16 December 2015 12:20:55 -0400
 
 ---
 
