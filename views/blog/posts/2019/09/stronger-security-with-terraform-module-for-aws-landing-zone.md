@@ -39,7 +39,7 @@ The AWS Landing Zone solution includes an initial security baseline that can be 
     <div class="center img-description">AWS Landing Zone / Terraform Module Components</div>
 </div>
 
-Last week we covered in great length of details [Terraform Module Components for AWS Landing Zone Solution](https://www.mitocgroup.com/blog/terraform-module-components-for-aws-landing-zone-solution). We `used landing_zone_vpc` component as a reference to describe what a component is and how does it work. This week we would like to dive deeper into security focused components. Specifically:
+Last week we covered in great length of details [Terraform Module Components for AWS Landing Zone Solution](https://www.mitocgroup.com/blog/terraform-module-components-for-aws-landing-zone-solution). We used `landing_zone_vpc` component as a reference to describe what a component is and how does it work. This week we would like to dive deeper into security focused components. Specifically:
 
 - [landing\_zone\_vpc](https://github.com/MitocGroup/terraform-aws-landing-zone/tree/master/components/landing_zone_vpc)
 - [landing\_zone\_subnet](https://github.com/MitocGroup/terraform-aws-landing-zone/tree/master/components/landing_zone_subnet)
