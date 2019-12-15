@@ -1,10 +1,6 @@
 component:
   name: 's3_bucket'
   template:
-    terraform:
-      backend:
-        s3:
-          key: 'terraform/mitocgroup/www/s3_bucket/terraform.tfstate'
     data:
       aws_iam_policy_document:
         default_assume_s3_policy:
@@ -15,6 +11,9 @@ component:
                 identifiers: ['*']
               actions: ['s3:GetObject']
               resources: ['arn:aws:s3:::${var.s3_bucket_name}/*']
+      template_file:
+        s3_routing_rules:
+          template: '${file("${path.module}/s3_routing_rules.json")}'
     resource:
       aws_s3_bucket:
         s3_bucket:
@@ -35,6 +34,7 @@ component:
           website:
             index_document: 'index.html'
             error_document: '/404.html'
+            routing_rules: '${data.template_file.s3_routing_rules.rendered}'
           tags:
             Description: 'Managed by TerraHub'
             ThubCode: '${local.project["code"]}'
