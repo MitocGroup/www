@@ -5,7 +5,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/my-architecture-aws-control-tower-vs-aws-landing-zone"
   }
 },{
@@ -15,7 +15,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/stronger-security-with-terraform-module-for-aws-landing-zone"
   }
 },{
@@ -25,7 +25,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/terraform-module-components-for-aws-landing-zone-solution"
   }
 },{
@@ -35,7 +35,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/my-architecture-private-equity-platform-on-aws-cloud"
   }
 },{
@@ -45,7 +45,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/my-architecture-apache-kafka-by-confluent-on-aws-cloud"
   }
 },{
@@ -55,7 +55,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/three-success-stories-of-aws-landing-zone-technology-overview"
   }
 },{
@@ -65,7 +65,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/three-success-stories-of-aws-landing-zone-business-overview"
   }
 },{
@@ -75,7 +75,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/introducing-programmatic-aws-landing-zone-as-terraform-module"
   }
 },{
@@ -85,7 +85,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/aws-lambda-to-redshift-connection-using-iam-authentication-and-nat-gateway"
   }
 },{
@@ -95,7 +95,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/you-get-what-you-get-and-you-dont-get-upset"
   }
 },{
@@ -105,7 +105,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/aws-re-invent-2017-serverless-track-srv326-chalk-talk"
   }
 },{
@@ -115,7 +115,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/mitoc-group-inc-granted-aws-advanced-technology-partner-status"
   }
 },{
@@ -125,7 +125,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda"
   }
 },{
@@ -135,7 +135,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/blue-green-deployments-for-serverless-powered-applications-on-aws"
   }
 },{
@@ -145,7 +145,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/scaleup-award-winner-stories"
   }
 },{
@@ -155,7 +155,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/are-you-ready-for-stackworld-2016"
   }
 },{
@@ -165,7 +165,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework"
   }
 },{
@@ -175,7 +175,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team"
   }
 },{
@@ -185,7 +185,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework"
   }
 },{
@@ -195,7 +195,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/interview-creators-of-the-deep-framework"
   }
 },{
@@ -205,7 +205,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/best-re-invent-ever"
   }
 },{
@@ -215,7 +215,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/press-release-digital-enterprise-end-to-end-platform"
   }
 },{
@@ -225,7 +225,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/how-to-create-serverless-environments-on-aws"
   }
 },{
@@ -235,7 +235,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/how-do-you-get-invited-to-speak-at-aws-re-invent"
   }
 },{
@@ -245,7 +245,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/very-exciting-and-looking-forward-to-aws-re-invent-2015"
   }
 },{
@@ -255,7 +255,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/deep-management-s-continuous-integration-with-travis-ci-and-coveralls"
   }
 },{
@@ -265,7 +265,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/welcome-to-deep-management-dam-as-a-service-and-dam-as-a-platform"
   }
 },{
@@ -275,7 +275,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/mitoc-group-inc-accepted-as-aws-technology-partner"
   }
 },{
@@ -285,7 +285,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/our-first-story-the-beginning-of-the-journey"
   }
 },{
@@ -295,7 +295,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/author/mitocgroup"
   }
 },{
@@ -305,7 +305,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/author/eistrati"
   }
 },{
@@ -315,7 +315,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog/author/irca.popov"
   }
 },{
@@ -325,7 +325,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog"
   }
 },{
@@ -335,7 +335,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog"
   }
 },{
@@ -345,7 +345,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog"
   }
 },{
@@ -355,7 +355,7 @@
   },
   "Redirect": {
     "Protocol": "https",
-    "HostName": "www-dev.mitocgroup.com",
+    "HostName": "www.mitocgroup.com",
     "ReplaceKeyPrefixWith": "blog"
   }
 }]
