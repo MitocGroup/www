@@ -16,62 +16,60 @@
 ] %}
 
 {% block content %}
-  
-  <div class="hide-mobile">
-    <div class="space-top header flex-column gray-block">
-      <div class="header__bg green mobile-edge">
-        <div class="bg bg-green flex-column">
-          <div class="container text-styles">
-            <div class="flex-row img-down">
-              <div class="flex-item-9 flex-column text-color-white">
-                <p>Partners Program</p>
-                <h1>Let's Grow Together</h1>
-                <h5 class="text-24 marginTop36 paddingBottom20">
-                  Our partners build technology and software that bring more businesses online,
-                  enable new types of businesses, and help them work more effectively.
-                </h5>
-                <div>
-                  <button class="btn btn-white become-partner marginTop36">Become a Partner
-                  </button>
-                </div>
+<div class="hide-mobile">
+  <div class="space-top header flex-column gray-block">
+    <div class="header__bg green mobile-edge">
+      <div class="bg bg-green flex-column">
+        <div class="container text-styles">
+          <div class="flex-row img-down">
+            <div class="flex-item-9 flex-column text-color-white">
+              <p>Partners Program</p>
+              <h1>Let's Grow Together</h1>
+              <h5 class="text-24 marginTop36 paddingBottom20">
+                Our partners build technology and software that bring more businesses online,
+                enable new types of businesses, and help them work more effectively.
+              </h5>
+              <div>
+                <button class="btn btn-white become-partner marginTop36">Become a Partner
+                </button>
               </div>
-              <div class="flex-item-3">
-                <img class="partner-img lazyload" data-src="{{ asset('@images/v2/illustration/become-partner.svg') }}"
-                    alt="Partner"/>
-              </div>
+            </div>
+            <div class="flex-item-3">
+              <img class="partner-img lazyload" data-src="{{ asset('@images/v2/illustration/become-partner.svg') }}"
+                  alt="Partner"/>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="gray-block up80 down80">
-      <div class="paddingBottom20 min500">
-        <img class="lazyload" data-src="{{ asset('@images/v2/illustration/partners-green.svg') }}" alt="Partners">
+  </div>
+  <div class="gray-block up80 down80">
+    <div class="paddingBottom20 min500">
+      <img class="lazyload" data-src="{{ asset('@images/v2/illustration/partners-green.svg') }}" alt="Partners">
+    </div>
+    <div class="container">
+      <div class="text-styles center">
+        <h3 class="text-color-green">it always seems impossible until it's done.</h3>
+        <h2>Our Partners Are The Backbone Of Our Business</h2>
       </div>
-      <div class="container">
-        <div class="text-styles center">
-          <h3 class="text-color-green">it always seems impossible until it's done.</h3>
-          <h2>Our Partners Are The Backbone Of Our Business</h2>
-        </div>
-        <div class="partners white-block">
-          <div class="marginTop36 flex">
-            {% for partner in partners %}
-              <div class="{{ partner.class }}">
-                <a href={{ partner.href }}>
-                  <div class="info-block flex-column">
-                    <img class="lazyload" data-src="{{ asset( partner.img ) }}" alt={{ partner.title }}/>
-                    <h3 class="paddingBottom20">{{ partner.title }}</h3>
-                    <p class="paddingBottom20">{{ partner.description }}</p>
-                    <a class="read-more marginTop-auto" href={{ partner.href }}>Learn More <i
-                      class="mdi mdi-chevron-right"></i></a>
-                  </div>
-                </a>
-              </div>
-            {% endfor %}
-          </div>
+      <div class="partners white-block">
+        <div class="marginTop36 flex">
+          {% for partner in partners %}
+            <div class="{{ partner.class }}">
+              <a href={{ partner.href }}>
+                <div class="info-block flex-column">
+                  <img class="lazyload" data-src="{{ asset( partner.img ) }}" alt={{ partner.title }}/>
+                  <h3 class="paddingBottom20">{{ partner.title }}</h3>
+                  <p class="paddingBottom20">{{ partner.description }}</p>
+                  <a class="read-more marginTop-auto" href={{ partner.href }}>Learn More <i
+                    class="mdi mdi-chevron-right"></i></a>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>
   </div>
-
+</div>
 {% endblock %}

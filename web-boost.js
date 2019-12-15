@@ -1,9 +1,29 @@
 'use strict';
 
+const fs = require('fs');
+const nrVisiblePosts = 6;
+const postsContent = fs.readFileSync('./static/json/posts.json');
+const postsListObject = JSON.parse(postsContent);
+
+const authors = {
+  eistrati: {
+    author: 'Eugene Istrati',
+    bio: 'Proud Father. Lucky Husband. Open Source Contributor.' +
+      ' DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.',
+    avatar: 'https://www.mitocgroup.com/images/blog/author/eistrati.png',
+    twitter: 'https://twitter.com/eistrati',
+    twitterIntent: 'https://twitter.com/intent/user?screen_name=eistrati'
+  }
+};
+
 const defaultVariables = {
   title: 'Mitoc Group',
-  description: 'Mitoc Group is a technology company focusing on automation using cloud native services. Our track record includes helping private equity portfolio companies migrate to public clouds, as well as establish devops and dataops processes using cloud native services and industry best practices. We deliver automations and business results in weeks instead of months.',
-  author: 'https://twitter.com/@eistrati',
+  description:
+    'Mitoc Group is a technology company focusing on automation using cloud native services.' +
+    ' Our track record includes helping private equity portfolio companies migrate to public clouds,' +
+    ' as well as establish devops and dataops processes using cloud native services and industry' +
+    ' best practices. We deliver automations and business results in weeks instead of months.',
+  authors: authors,
   publisher: 'MitocGroup.com',
   company: 'Mitoc Group Inc.',
   address: '2 University Plaza Suite 100',
@@ -16,9 +36,9 @@ const defaultVariables = {
   url: 'https://www.mitocgroup.com',
   image: 'https://www.mitocgroup.com/images/head.png',
   logo: 'https://www.mitocgroup.com/images/v2/logos/mitoc.svg',
+  // fb_app_id: '',
   fb_type: 'website',
   fb_brand: 'MitocGroup',
-  // fb_app_id: '',
   tw_type: 'summary',
   tw_handle: '@MitocGroup',
   image_tw: 'https://www.mitocgroup.com/images/cover-tw.png',
@@ -31,10 +51,12 @@ const commonScripts = [
   'js/libs/jquery-popup.min.js',
   'js/libs/lazysizes.min.js',
   'js/modal-effects.js',
-  'js/main.js'
+  'js/main.js',
+  'js/mailchimp.js'
 ];
 
 const commonStyles = [
+  'styles/libs/font-awesome.min.css',
   'styles/libs/materialdesignicons.min.css',
   'styles/variables.scss',
   'styles/fonts.scss',
@@ -75,15 +97,28 @@ const aboutAssets = {
   'css/about.min.css': [...commonStyles, 'styles/about.scss']
 };
 
+const contactAssets = {
+  'js/contact.min.js': commonScripts,
+  'css/contact.min.css': [...commonStyles, 'styles/contact.scss']
+};
+
 const blogAssets = {
   'js/blog.min.js': [...commonScripts, 'js/libs/highlight.pack.min.js', 'js/blog.js'],
   'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
 };
 
-const contactAssets = {
-  'js/contact.min.js': commonScripts,
-  'css/contact.min.css': [...commonStyles, 'styles/contact.scss']
-};
+let posts = {};
+posts = Object.keys(postsListObject)
+  .sort((a, b) => {
+    return -(new Date(postsListObject[a].publicationDate) - new Date(postsListObject[b].publicationDate));
+  })
+  .reduce((prev, curr) => {
+    const event = new Date(postsListObject[curr].publicationDate);
+    const options = { month: 'short', day: 'numeric', year: 'numeric' };
+    prev[curr] = postsListObject[curr];
+    prev[curr].publicationDate = event.toLocaleDateString('en-EN', options);
+    return prev;
+  }, {});
 
 let routes = {
   '/': {
@@ -94,6 +129,32 @@ let routes = {
       href: defaultVariables.url
     },
     assets: indexAssets
+  },
+  '/404/': {
+    view: '404.twig',
+    vars: {
+      ...defaultVariables,
+      title: '404 Page Not Found | ' + defaultVariables.title
+    },
+    assets: commonAssets
+  },
+  '/terms/': {
+    view: 'terms.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Terms and Conditions | ' + defaultVariables.title,
+      href: defaultVariables.url + '/terms/'
+    },
+    assets: commonAssets
+  },
+  '/privacy/': {
+    view: 'privacy.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Privacy Policy | ' + defaultVariables.title,
+      href: defaultVariables.url + '/privacy/'
+    },
+    assets: commonAssets
   },
   '/services/': {
     view: 'services/index.twig',
@@ -275,15 +336,6 @@ let routes = {
     },
     assets: aboutAssets
   },
-  '/blog/': {
-    view: 'blog/index.twig',
-    vars: {
-      ...defaultVariables,
-      title: 'Blog Articles | ' + defaultVariables.title,
-      href: defaultVariables.url + '/blog/'
-    },
-    assets: blogAssets
-  },
   '/contact/': {
     view: 'contact.twig',
     vars: {
@@ -293,38 +345,46 @@ let routes = {
     },
     assets: contactAssets
   },
-  '/terms/': {
-    view: 'terms.twig',
+  '/blog/': {
+    view: 'blog/index.twig',
     vars: {
       ...defaultVariables,
-      title: 'Terms and Conditions | ' + defaultVariables.title,
-      href: defaultVariables.url + '/terms/'
+      title: 'Blog Articles | ' + defaultVariables.title,
+      description:
+        'Mitoc Group is a technology company focusing on automation using cloud native services.' +
+        ' Our engineers are proudly sharing here our thoughts and our experience, therefore' +
+        ' please enjoy them responsibly.',
+      href: defaultVariables.url + '/blog/',
+      image: '/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: posts,
+      nrVisiblePosts
     },
-    assets: commonAssets
-  },
-  '/privacy/': {
-    view: 'privacy.twig',
-    vars: {
-      ...defaultVariables,
-      title: 'Privacy Policy | ' + defaultVariables.title,
-      href: defaultVariables.url + '/privacy/'
-    },
-    assets: commonAssets
-  },
-  '/404/': {
-    view: '404.twig',
-    vars: {
-      ...defaultVariables,
-      title: '404 Page Not Found | ' + defaultVariables.title
-    },
-    assets: commonAssets
+    assets: blogAssets
   }
 };
+
+Object.keys(posts).forEach(key => {
+  let postPath = `/blog/${key}/`;
+
+  posts[key]['image_fb'] = posts[key]['image'];
+  posts[key]['image_tw'] = posts[key]['image'];
+
+  routes[postPath] = {
+    view: 'blog/post.twig',
+    vars: {
+      ...defaultVariables,
+      ...posts[key],
+      posts
+    }
+  };
+});
 
 module.exports = {
   server: {
     port: 8000,
-    ignorePatterns: ['.idea', '.git', 'bin', 'backend', 'build']
+    ignorePatterns: ['.idea', '.git', 'bin', 'backend', 'build', 'node_modules']
   },
   routes: routes
 };

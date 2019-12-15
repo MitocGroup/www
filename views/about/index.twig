@@ -1,296 +1,296 @@
 {% extends '../about.twig' %}
 
 {% block body %}
-  <div class="wrapper">
-    <div class="hide-mobile">
-      <div class="space-top header flex-column gray-block">
-        <div class="header__bg green">
-          <div class="bg bg-green contact flex-column">
-            <div class="container text-styles">
-              <div class="flex-column text-color-white center">
-                <h1 class="paddingBottom20">Our History</h1>
-                <h5 class="text-24">
-                  Founded in 2014 by industry experts, Mitoc Group emerged as a <a class="text-color-white text-italic-semibold" href="../../about/team/">team of
-                    serverless believers</a> from the beginning. Our journey started in the
-                  same moment with one of the most innovative and bold move from cloud
-                  computing leader Amazon Web Service to launch in beta a new service called AWS Lambda.
-                </h5>
-              </div>
+<div class="wrapper">
+  <div class="hide-mobile">
+    <div class="space-top header flex-column gray-block">
+      <div class="header__bg green">
+        <div class="bg bg-green contact flex-column">
+          <div class="container text-styles">
+            <div class="flex-column text-color-white center">
+              <h1 class="paddingBottom20">Our History</h1>
+              <h5 class="text-24">
+                Founded in 2014 by industry experts, Mitoc Group emerged as a <a class="text-color-white text-italic-semibold" href="../../about/team/">team of
+                  serverless believers</a> from the beginning. Our journey started in the
+                same moment with one of the most innovative and bold move from cloud
+                computing leader Amazon Web Service to launch in beta a new service called AWS Lambda.
+              </h5>
             </div>
           </div>
         </div>
       </div>
-      <div class="gray-block">
-        <div class="container">
-          <div class="block-img marginTop-150">
-            <div class="flex-row display-grid">
-              <div class="flex-item-5">
-                <img src="{{ asset('@images/v2/png/about-png.png') }}"/>
+    </div>
+    <div class="gray-block">
+      <div class="container">
+        <div class="block-img marginTop-150">
+          <div class="flex-row display-grid">
+            <div class="flex-item-5">
+              <img src="{{ asset('@images/v2/png/about-png.png') }}"/>
+            </div>
+            <div class="flex-item-7 what-is flex-column gradient-left-right white services">
+              <div class="text-color-dark text-italic text-left">
+              <span>
+                There is no compression algorithm for experience.
+                You can't learn certain lessons without <span class="text-bold">going through the curve</span>.
+              </span>
+                <p class="text-color-green text28 text-italic-semibold marginTop36">Andy Jassy</p>
               </div>
-              <div class="flex-item-7 what-is flex-column gradient-left-right white services">
-                <div class="text-color-dark text-italic text-left">
-                <span>
-                  There is no compression algorithm for experience.
-                  You can't learn certain lessons without <span class="text-bold">going through the curve</span>.
-                </span>
-                  <p class="text-color-green text28 text-italic-semibold marginTop36">Andy Jassy</p>
+            </div>
+          </div>
+        </div>
+        <div class="widthBlock80 up80 down80 text-light text28 center">
+          Very few at that point were dreaming of a compute service that embeds the best
+          of virtualization and containerization. We had the privilege to live it through
+          from <span class="text-bold">"oh wow, nice shiny toy"</span> to <span class="text-bold">"oh boy,everybody is using it"</span>.
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="up80 down80 white-block aws-block">
+        <div class="container">
+          <div class="text-styles center">
+            <h3 class="text-color-green">quality is not an act. it is a habit.</h3>
+            <h2>Achievements and Recognitions</h2>
+          </div>
+          <div class="flex-row marginTop36">
+            <div class="flex-item-4">
+              <a href="/blog/mitoc-group-inc-granted-aws-advanced-technology-partner-status" rel="noopener">
+                <div class="block-effect">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-advanced.svg') }}" alt="Amazon Web Services"/>
+                </div>
+              </a>
+            </div>
+            <div class="flex-item-4">
+              <a href="/blog/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda" rel="noopener">
+                <div class="block-effect">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-service.svg') }}" alt="Amazon Web Services"/>
+                </div>
+              </a>
+            </div>
+            <div class="flex-item-4">
+              <a href="/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team" rel="noopener">
+                <div class="block-effect">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-lambda.svg') }}" alt="Amazon Web Services"/>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="flex-row space up80 about">
+            <div class="flex-item-6 block-img pic-up small-img flex-column">
+              <div class="flex-row display-grid">
+                <div class="flex-item-5">
+                  <img src="{{ asset('@images/v2/png/about2-png.png') }}">
+                </div>
+                <div class="flex-item-7 what-is flex-column gradient-left-right green other-side">
+                  <div class="text-color-white text-italic text-left">
+                   <span class="text24 paddingBottom20">
+                     "When something is important enough, you do it even if the odds are not in your favor"
+                   </span>
+                    <div>Elon Musk</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="widthBlock80 up80 down80 text-light text28 center">
-            Very few at that point were dreaming of a compute service that embeds the best
-            of virtualization and containerization. We had the privilege to live it through
-            from <span class="text-bold">"oh wow, nice shiny toy"</span> to <span class="text-bold">"oh boy,everybody is using it"</span>.
+            <div class="flex-item-6 flex-column padding-left43">
+              <div class="text-italic partner-network text-left text-34">
+                We are also proud of our contributions to the open source community through projects like
+                <a href="https://github.com/MitocGroup/deep-framework" class="link-text text-34" target="_blank" rel="noreferrer">Digital
+                  Enterprise End-to-end Platform</a>
+                and
+                <a href="https://github.com/TerraHubCorp/terrahub" class="link-text text-34" target="_blank" rel="noreferrer">DevOps Hub for
+                  Terraform Automation</a>.
+              </div>
+              <div class="marginTop-auto">
+                <button class="btn btn-green become-partner">Become a Partner</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <section>
-        <div class="up80 down80 white-block aws-block">
+    <section>
+      <div class="gray-block">
+        <div class="up80 down80">
           <div class="container">
             <div class="text-styles center">
-              <h3 class="text-color-green">quality is not an act. it is a habit.</h3>
-              <h2>Achievements and Recognitions</h2>
-            </div>
-            <div class="flex-row marginTop36">
-              <div class="flex-item-4">
-                <a href="https://blog.mitocgroup.com/mitoc-group-inc-granted-aws-advanced-technology-partner-status-6550e452ed1b">
-                  <div class="block-effect">
-                    <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-advanced.svg') }}" alt="Amazon Web Services"/>
-                  </div>
-                </a>
+              <h2 class="paddingBottom20">Conferences and Industry Events</h2>
+              <div class="text-24 widthBlock80">
+                We are frequent presenters and speakers at different industry conferences and technology
+                events around the world
               </div>
-              <div class="flex-item-4">
-                <a href="https://blog.mitocgroup.com/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda-19331fe3d4f0">
-                  <div class="block-effect">
-                    <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-service.svg') }}" alt="Amazon Web Services"/>
-                  </div>
-                </a>
-              </div>
-              <div class="flex-item-4">
-                <a href="https://blog.mitocgroup.com/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team-a7d3d5632cf8">
-                  <div class="block-effect">
-                    <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-lambda.svg') }}" alt="Amazon Web Services"/>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="flex-row space up80 about">
-              <div class="flex-item-6 block-img pic-up small-img flex-column">
-                <div class="flex-row display-grid">
-                  <div class="flex-item-5">
-                    <img src="{{ asset('@images/v2/png/about2-png.png') }}">
-                  </div>
-                  <div class="flex-item-7 what-is flex-column gradient-left-right green other-side">
-                    <div class="text-color-white text-italic text-left">
-                     <span class="text24 paddingBottom20">
-                       "When something is important enough, you do it even if the odds are not in your favor"
-                     </span>
-                      <div>Elon Musk</div>
+              <div class="tab effect-1 marginTop36">
+                <!-- tab-title -->
+                <input type="radio" id="tab-1" name="tab" checked="checked">
+                <span href="#tab-item-1">2019</span>
+
+                <input type="radio" id="tab-2" name="tab">
+                <span href="#tab-item-2">2017</span>
+
+                <input type="radio" id="tab-3" name="tab">
+                <span href="#tab-item-3">2016</span>
+
+                <input type="radio" id="tab-4" name="tab">
+                <span href="#tab-item-4">2015</span>
+
+                <!-- tab-content -->
+                <div class="tab-content">
+                  <section id="tab-item-1">
+                    <div class="events marginTop36">
+                      <div class="flex-row block-space">
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/hashi-corp-2019.png') }}" alt="HashiCorp All-Day HashiTalks 2019" />
+                          <span class="post-date">Feb 21, 2019</span>
+                          <h4 class="post-title">HashiCorp All-Day HashiTalks, Virtual Event</h4>
+                          <a href="https://www.hashicorp.com/resources/terraform-serverless-best-practices-lessons-learned" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/tickets_v22-min.jpg') }}" alt="DevOps Pro Europe Vilnius 2019" />
+                          <span class="post-date">Mar 21, 2019</span>
+                          <h4 class="post-title">DevOps Pro Europe, Vilnius</h4>
+                          <a href="https://devopspro.lt/eugene-istrati/" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/ip-expo-2019.png') }}" alt="IP Expo Digital Transformation Manchester 2019" />
+                          <span class="post-date">Apr 3, 2019</span>
+                          <h4 class="post-title">IP Expo, Digital Transformation, Manchester</h4>
+                          <a href="https://www.ipexpomanchester.com/manchester/en/node/session-7-8" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/devops-conference-cluj-napoca-2019.png') }}" alt="DevTalks Cluj, DevOps Conference, Cluj-Napoca 2019" />
+                          <span class="post-date">May 16, 2019</span>
+                          <h4 class="post-title">DevTalks Cluj, DevOps Conference, Cluj-Napoca</h4>
+                          <a href="https://www.devtalks.ro/cluj/speakers/" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </section>
+                  <section id="tab-item-2">
+                    <div class="events marginTop36">
+                      <div class="flex-row block-space">
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/serverlessconf-austin-2017.jpg') }}" alt="ServerlessConf Austin 2017" />
+                          <span class="post-date">Apr 26, 2017</span>
+                          <h4 class="post-title">ServerlessConf, Austin</h4>
+                          <a href="https://austin.serverlessconf.io/" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/techxlr8-tech-week-london-2017.jpg') }}" alt="TechXLR8 Tech Week London 2017" />
+                          <span class="post-date">Jun 12, 2017</span>
+                          <h4 class="post-title">TechXLR8 Tech Week, London</h4>
+                          <a href="https://techxlr82017.mapyourshow.com/7_0/sessions/session-grid.cfm?grid-eventsby=Day&grid-eventdate=2017-06-15&grid-groupby=Track&grid-trackEventType=29" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/open-camps-2017.jpg') }}" alt="Open Camps New York City 2017" />
+                          <span class="post-date">Nov 11, 2017</span>
+                          <h4 class="post-title">Open Camps, New York City</h4>
+                          <a href="http://www.opencamps.org/2017/presentations/how-to-approach-continuous-integration-for-serverless-applications" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-reinvent-2017.jpg') }}" alt="AWS re:Invent Las Vegas 2017" />
+                          <span class="post-date">Nov 27, 2017</span>
+                          <h4 class="post-title">AWS re:Invent, Las Vegas</h4>
+                          <a href="/blog/aws-re-invent-2017-serverless-track-srv326-chalk-talk" class="read-more" rel="noopener">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="tab-item-3">
+                    <div class="events marginTop36">
+                      <div class="flex-row block-space">
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/open-camps-2016.jpg') }}" alt="Open Camps New York City 2016" />
+                          <span class="post-date">Jul 8, 2016</span>
+                          <h4 class="post-title">Open Camps, New York City</h4>
+                          <a href="https://2016.nyc.wordcamp.org/session/microservices-architecture-for-content-management-systems-using-aws-lambda-and-more/" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/nodejs-interactive-europe-2016.jpg') }}" alt="Nodejs Interactive Europe Amsterdam 2016" />
+                          <span class="post-date">Sep 15, 2016</span>
+                          <h4 class="post-title">Node.js Interactive Europe, Amsterdam</h4>
+                          <a href="https://eventmobi.com/nieu16/agenda/176233/928560" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/serverlessconf-london-2016.jpg') }}" alt="ServerlessConf London 2016" />
+                          <span class="post-date">Oct 26, 2016</span>
+                          <h4 class="post-title">ServerlessConf, London</h4>
+                          <a href="http://london.serverlessconf.io" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="tab-item-4">
+                    <div class="events marginTop36">
+                      <div class="flex-row block-space">
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-reinvent-2015.jpg') }}" alt="AWS re:Invent Las Vegas 2015" />
+                          <span class="post-date">Oct 6, 2015</span>
+                          <h4 class="post-title">AWS re:Invent, Las Vegas</h4>
+                          <a href="/blog/very-exciting-and-looking-forward-to-aws-re-invent-2015" class="read-more" rel="noopener">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4 blog-block text-left">
+                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-nyc-meetup-2015.jpg') }}" alt="AWS NYC Meetup 2015" />
+                          <span class="post-date">Dec 1, 2015</span>
+                          <h4 class="post-title">AWS Meetup, New York City</h4>
+                          <a href="https://www.meetup.com/AWSnewyork/events/226419743" class="read-more" target="_blank" rel="noreferrer">
+                            Read More
+                            <i class="mdi mdi-chevron-right"></i>
+                          </a>
+                        </div>
+                        <div class="flex-item-4"></div>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               </div>
-              <div class="flex-item-6 flex-column padding-left43">
-                <div class="text-italic partner-network text-left text-34">
-                  We are also proud of our contributions to the open source community through projects like
-                  <a href="https://github.com/MitocGroup/deep-framework" class="link-text text-34" target="_blank" rel="noreferrer">Digital
-                    Enterprise End-to-end Platform</a>
-                  and
-                  <a href="https://github.com/TerraHubCorp/terrahub" class="link-text text-34" target="_blank" rel="noreferrer">DevOps Hub for
-                    Terraform Automation</a>.
-                </div>
-                <div class="marginTop-auto">
-                  <button class="btn btn-green become-partner">Become a Partner</button>
-                </div>
-              </div>
+            </div>
+            <div class="top_button center">
+              <a href="/blog/" rel="noopener">
+                <button class="btn btn-green-border">Read More On The Blog</button>
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <div class="gray-block">
-          <div class="up80 down80">
-            <div class="container">
-              <div class="text-styles center">
-                <h2 class="paddingBottom20">Conferences and Industry Events</h2>
-                <div class="text-24 widthBlock80">
-                  We are frequent presenters and speakers at different industry conferences and technology
-                  events around the world
-                </div>
-                <div class="tab effect-1 marginTop36">
-                  <!-- tab-title -->
-                  <input type="radio" id="tab-1" name="tab" checked="checked">
-                  <span href="#tab-item-1">2019</span>
-
-                  <input type="radio" id="tab-2" name="tab">
-                  <span href="#tab-item-2">2017</span>
-
-                  <input type="radio" id="tab-3" name="tab">
-                  <span href="#tab-item-3">2016</span>
-
-                  <input type="radio" id="tab-4" name="tab">
-                  <span href="#tab-item-4">2015</span>
-
-                  <!-- tab-content -->
-                  <div class="tab-content">
-                    <section id="tab-item-1">
-                      <div class="events marginTop36">
-                        <div class="flex-row block-space">
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/hashi-corp-2019.png') }}" alt="HashiCorp All-Day HashiTalks 2019" />
-                            <span class="post-date">Feb 21, 2019</span>
-                            <h4 class="post-title">HashiCorp All-Day HashiTalks, Virtual Event</h4>
-                            <a href="https://www.hashicorp.com/resources/terraform-serverless-best-practices-lessons-learned" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/tickets_v22-min.jpg') }}" alt="DevOps Pro Europe Vilnius 2019" />
-                            <span class="post-date">Mar 21, 2019</span>
-                            <h4 class="post-title">DevOps Pro Europe, Vilnius</h4>
-                            <a href="https://devopspro.lt/eugene-istrati/" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/ip-expo-2019.png') }}" alt="IP Expo Digital Transformation Manchester 2019" />
-                            <span class="post-date">Apr 3, 2019</span>
-                            <h4 class="post-title">IP Expo, Digital Transformation, Manchester</h4>
-                            <a href="https://www.ipexpomanchester.com/manchester/en/node/session-7-8" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/devops-conference-cluj-napoca-2019.png') }}" alt="DevTalks Cluj, DevOps Conference, Cluj-Napoca 2019" />
-                            <span class="post-date">May 16, 2019</span>
-                            <h4 class="post-title">DevTalks Cluj, DevOps Conference, Cluj-Napoca</h4>
-                            <a href="https://www.devtalks.ro/cluj/speakers/" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <section id="tab-item-2">
-                      <div class="events marginTop36">
-                        <div class="flex-row block-space">
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/serverlessconf-austin-2017.jpg') }}" alt="ServerlessConf Austin 2017" />
-                            <span class="post-date">Apr 26, 2017</span>
-                            <h4 class="post-title">ServerlessConf, Austin</h4>
-                            <a href="https://austin.serverlessconf.io/" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/techxlr8-tech-week-london-2017.jpg') }}" alt="TechXLR8 Tech Week London 2017" />
-                            <span class="post-date">Jun 12, 2017</span>
-                            <h4 class="post-title">TechXLR8 Tech Week, London</h4>
-                            <a href="https://techxlr82017.mapyourshow.com/7_0/sessions/session-grid.cfm?grid-eventsby=Day&grid-eventdate=2017-06-15&grid-groupby=Track&grid-trackEventType=29" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/open-camps-2017.jpg') }}" alt="Open Camps New York City 2017" />
-                            <span class="post-date">Nov 11, 2017</span>
-                            <h4 class="post-title">Open Camps, New York City</h4>
-                            <a href="http://www.opencamps.org/2017/presentations/how-to-approach-continuous-integration-for-serverless-applications" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-reinvent-2017.jpg') }}" alt="AWS re:Invent Las Vegas 2017" />
-                            <span class="post-date">Nov 27, 2017</span>
-                            <h4 class="post-title">AWS re:Invent, Las Vegas</h4>
-                            <a href="https://blog.mitocgroup.com/aws-re-invent-2017-serverless-track-srv326-chalk-talk-92bd01ef8151" class="read-more" target="_blank" rel="noopener">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <section id="tab-item-3">
-                      <div class="events marginTop36">
-                        <div class="flex-row block-space">
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/open-camps-2016.jpg') }}" alt="Open Camps New York City 2016" />
-                            <span class="post-date">Jul 8, 2016</span>
-                            <h4 class="post-title">Open Camps, New York City</h4>
-                            <a href="https://2016.nyc.wordcamp.org/session/microservices-architecture-for-content-management-systems-using-aws-lambda-and-more/" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/nodejs-interactive-europe-2016.jpg') }}" alt="Nodejs Interactive Europe Amsterdam 2016" />
-                            <span class="post-date">Sep 15, 2016</span>
-                            <h4 class="post-title">Node.js Interactive Europe, Amsterdam</h4>
-                            <a href="https://eventmobi.com/nieu16/agenda/176233/928560" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/serverlessconf-london-2016.jpg') }}" alt="ServerlessConf London 2016" />
-                            <span class="post-date">Oct 26, 2016</span>
-                            <h4 class="post-title">ServerlessConf, London</h4>
-                            <a href="http://london.serverlessconf.io" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <section id="tab-item-4">
-                      <div class="events marginTop36">
-                        <div class="flex-row block-space">
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-reinvent-2015.jpg') }}" alt="AWS re:Invent Las Vegas 2015" />
-                            <span class="post-date">Oct 6, 2015</span>
-                            <h4 class="post-title">AWS re:Invent, Las Vegas</h4>
-                            <a href="https://blog.mitocgroup.com/very-exciting-and-looking-forward-to-aws-re-invent-2015-e063dca1e063" class="read-more" target="_blank" rel="noopener">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4 blog-block text-left">
-                            <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-nyc-meetup-2015.jpg') }}" alt="AWS NYC Meetup 2015" />
-                            <span class="post-date">Dec 1, 2015</span>
-                            <h4 class="post-title">AWS Meetup, New York City</h4>
-                            <a href="https://www.meetup.com/AWSnewyork/events/226419743" class="read-more" target="_blank" rel="noreferrer">
-                              Read More
-                              <i class="mdi mdi-chevron-right"></i>
-                            </a>
-                          </div>
-                          <div class="flex-item-4"></div>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </div>
-              <div class="top_button center">
-                <a href="https://blog.mitocgroup.com">
-                  <button class="btn btn-green-border">Read More On The Blog</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
   </div>
+</div>
 {% endblock %}

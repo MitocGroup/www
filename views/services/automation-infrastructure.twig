@@ -1,279 +1,277 @@
 {% extends '../services.twig' %}
 
 {% block content %}
-
-  <div class="hide-mobile">
-    <div class="space-top header flex-column gray-block">
-      <div class="header__bg green mobile-edge">
-        <div class="bg bg-green flex-column">
-          <div class="container text-styles">
-            <div class="flex-row">
-              <div class="flex-item-3">
-                <img class="cloud-img" src="{{ asset('@images/v2/services/automation-infrastructure.svg') }}"
-                     alt="Automation of Infrastructure"/>
-              </div>
-              <div class="flex-item-9 flex-column text-color-white">
-                <p>Cloud Services</p>
-                <h1>Automation of Infrastructure</h1>
-                <h5 class="text-24 marginTop36">
-                  We help customers automatic infrastructure build, deployment and management.
-                </h5>
-              </div>
+<div class="hide-mobile">
+  <div class="space-top header flex-column gray-block">
+    <div class="header__bg green mobile-edge">
+      <div class="bg bg-green flex-column">
+        <div class="container text-styles">
+          <div class="flex-row">
+            <div class="flex-item-3">
+              <img class="cloud-img" src="{{ asset('@images/v2/services/automation-infrastructure.svg') }}"
+                   alt="Automation of Infrastructure"/>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="gray-block up80 down80 automation-cloud">
-      <div class="paddingBottom20 min500 services">
-        <img src="{{ asset('@images/v2/services/automation-infrastructure.svg') }}" alt="Automation of Infrastructure"/>
-      </div>
-      <div class="container gray-line">
-        <div class="flex-row">
-          <div class="flex-item-3">
-            <h2 class="text-36-SemiBold">
-              IT can use either scripts or declarative definitions, rather than manual process.
-            </h2>
-          </div>
-          <div class="flex-item-9 padding-left43">
-            <h4 class="text28 text-color-green paddingBottom20">Provisioning and Managing computer data centers.</h4>
-            <p>
-              Automation of Infrastructure, also known as Infrastructure as Code (IaC),
-              is the process of provisioning and managing computer data centers
-              through machine-readable definition files, rather than physical hardware configuration
-              or interactive configuration tools.
-            </p>
-            <p>
-              The IT infrastructure meant by this comprises both physical equipment such as
-              bare-metal servers as well as virtual machines and associated configuration resources.
-              The definitions may be in a version control system. It can use either scripts or
-              declarative definitions, rather than manual processes, but the term is more
-              often used to promote declarative approaches.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="gray-block up80 down80 automation-cloud">
-      <div class="container">
-        <div class="flex-row">
-          <div class="flex-item-3">
-            <h2 class="text-36-SemiBold">
-              IaC supports IaaS, but should not be confused with it.
-            </h2>
-          </div>
-          <div class="flex-item-9 padding-left43">
-            <h4 class="text28 text-color-green paddingBottom20">Infrastructure as Code for Cloud Services</h4>
-            <p>
-              Infrastructure as code IaC approaches are regularly associated and promoted
-              for cloud computing, which is sometimes marketed as Infrastructure as a Service (IaaS).
-              IaC supports IaaS, but should not be confused with it.
-            </p>
-            <p>
-              There are many tools that fulfill infrastructure automation capabilities
-              and utilize Infrastructure as Code. Broadly speaking, any framework,
-              or tool that performs changes or configures infrastructure declaratively or
-              imperatively based on a programmatic approach can be considered IaC
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="services-blocks">
-      <div class="green-block-bg bg-transparent up80 paddingBottom250">
-        <div class="container">
-          <div class="text-styles center text-color-white">
-            <h3>proven track record of using</h3>
-            <h2>Infrastructure as Code</h2>
-          </div>
-          <div class="flex-row block-space marginTop61">
-            <div class="flex-item-4 cols">
-              <div class="col-bg flex-column">
-                <div class="header-cols">
-                  <div class="up-title">
-                    <img src="{{ asset('@images/v2/services/mini-terraform.svg') }}" alt="Terraform Logo"/>
-                    <span>Terraform</span>
-                  </div>
-                </div>
-                <div class="content-cols scroll">
-                  Terraform is an infrastructure as code software by HashiCorp.
-                  It allows users to define a datacenter infrastructure in a high-level configuration language,
-                  from which it can create an execution plan to build the infrastructure in a service provider such as AWS.
-                </div>
-              </div>
-            </div>
-            <div class="flex-item-4 cols">
-              <div class="col-bg flex-column">
-                  <div class="header-cols">
-                    <div class="up-title">
-                      <img  src="{{ asset('@images/v2/services/mini-cloud.svg') }}" alt="CloudFormation Logo"/>
-                      <span>CloudFormation</span>
-                    </div>
-                  </div>
-                <div class="content-cols scroll">
-                  AWS CloudFormation gives developers and systems administrators an easy way to create and manage
-                  a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion.
-                </div>
-              </div>
-            </div>
-            <div class="flex-item-4 cols">
-              <div class="col-bg flex-column">
-                <div class="header-cols">
-                  <div class="up-title">
-                    <div>
-                      <img  src="{{ asset('@images/v2/services/deployment-manager.svg') }}" alt="Deployment Manager Logo"/>
-                    </div>
-                    <span>Deployment Manager</span>
-                  </div>
-                </div>
-                <div class="content-cols scroll">
-                  Google Cloud Deployment Manager allows you to specify all the resources needed for your application
-                  in a declarative format using yaml. You can also use Python or Jinja2 templates to parameterize
-                  the configuration and allow reuse of common deployment paradigms such as a load balanced, auto-scaled
-                  instance group.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex-row block-space">
-            <div class="flex-item-4 cols">
-              <div class="col-bg flex-column">
-                <div class="header-cols">
-                  <div class="up-title">
-                    <img  src="{{ asset('@images/v2/services/chef.svg') }}" alt="Chef Logo"/>
-                    <span>Chef</span>
-                  </div>
-                </div>
-                <div class="content-cols scroll">
-                  Chef is both the name of a company and the name of a configuration management tool written
-                  in Ruby and Erlang. It uses a pure-Ruby, domain-specific language (DSL) for writing system
-                  configuration "recipes". Chef is used to streamline the task of configuring and maintaining a company's servers, and can integrate with cloud-based platforms such as AWS or GCP to automatically provision and configure new machines.
-                </div>
-              </div>
-            </div>
-            <div class="flex-item-4 cols">
-              <div class="col-bg flex-column">
-                <div class="header-cols">
-                  <div class="up-title">
-                    <img  src="{{ asset('@images/v2/services/ansible.svg') }}" alt="Ansible Logo"/>
-                    <span>Ansible</span>
-                  </div>
-                </div>
-                <div class="content-cols scroll">
-                  Ansible is an open-source automation engine that automates software provisioning,
-                  configuration management, and application deployment.
-                </div>
-              </div>
-            </div>
-            <div class="flex-item-4 cols">
-              <div class="col-bg flex-column">
-                <div class="header-cols">
-                  <div class="up-title">
-                    <img  src="{{ asset('@images/v2/services/saltstack.svg') }}" alt="SaltStack Logo"/>
-                    <span>SaltStack</span>
-                  </div>
-                </div>
-                <div class="content-cols scroll">
-                  Salt (sometimes referred to as the SaltStack Platform) is a Python-based open-source
-                  configuration management software and remote execution engine. Supporting the
-                  "Infrastructure as Code" approach to deployment and cloud management,
-                  it competes primarily with Puppet, Chef, and Ansible.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="center">
-            <button class="btn btn-white-border start-project marginTop36">Start a Project</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="white-block-bg marginTop-200 width1320 paddingTop36 paddingBottom36">
-      <div class="container">
-        <div class="left-green-line text-24 text-color-green">
-          Infrastructure as code can be a key attribute of enabling best practices in DevOps – Developers
-          become more involved in defining configuration and operation teams get involved earlier in the
-          development process.
-        </div>
-        <div class="column paddingTop36">
-          <p>
-            Tools that utilize IaC bring visibility to the state and configuration of servers
-            and ultimately provide the visibility to users within the enterprise,
-            aiming to bring teams together to maximize their efforts.
-          </p>
-          <p>
-            Automation in general aims to take the confusion and error-prone aspect
-            of manual processes and make it more efficient, and productive.
-            Allowing for better software and applications to be created with flexibility,
-            less downtime, and an overall cost effective way for the company.
-            IaC is intended to reduce the complexity that kills efficiency out of manual configuration.
-          </p>
-          <p>
-            Automation and collaboration are considered central points in DevOps;
-            Infrastructure automation tools are often included as components of a DevOps toolchain.
-          </p>
-        </div>
-        <img class="full-img paddingTop36" src="{{ asset('@images/v2/png/infrastructure.png') }}" alt="Automation of Infrastructure"/>
-      </div>
-    </div>
-
-    <div class="gray-block up80 down80">
-      <div class="container">
-        <div class="text-styles center">
-          <h3 class="text-color-green">good, better, best. never let it rest.</h3>
-          <h2 class="block-half">Private Equity Customers Find Better Business Results Through Cloud Services</h2>
-        </div>
-        <div class="flex-row pictures-block marginTop36 ">
-          <div class="flex-item-4 cols">
-            <div class="services flex-column">
-              <a href="../../services/">
-                <div class="hover-effect">
-                  <img src="{{ asset('@images/v2/services/cloud-computing.svg') }}" alt="Cloud Services"/>
-                </div>
-                <h3>Cloud Services</h3>
-                <p>A simple way to access servers, storage, databases and a broad set of application
-                  services over the internet.
-                </p>
-              </a>
-              <a class="read-more" href="../../services/">Learn More <i class="mdi mdi-chevron-right"></i></a>
-            </div>
-          </div>
-          <div class="flex-item-4 cols">
-            <div class="services flex-column">
-              <a href="../../services/automation-data/">
-                <div class="hover-effect">
-                  <img class="pictures" src="{{ asset('@images/v2/services/automation-data.svg') }}"
-                      alt="Automation of Data"/>
-                </div>
-                <h3>Automation of Data</h3>
-                <p>We help customers automate data governance, data pipelines, data storage and
-                  compute.</p>
-              </a>
-              <a class="read-more" href="../../services/automation-data/">Learn More <i
-                class="mdi mdi-chevron-right"></i></a>
-            </div>
-          </div>
-          <div class="flex-item-4 cols">
-            <div class="services flex-column">
-              <a href="../../services/automation-serverless/">
-                <div class="hover-effect">
-                  <img class="pictures" src="{{ asset('@images/v2/services/automation-serverless.svg') }}"
-                      alt="Automation of Application Layer"/>
-                </div>
-                <h3>Automation of Applications - Serverless</h3>
-                <p>We help customers automate serverless applications management through continuous
-                  integration and continuous deployment.</p>
-              </a>
-              <a class="read-more" href="../../services/automation-serverless/">Learn More <i
-                class="mdi mdi-chevron-right"></i></a>
+            <div class="flex-item-9 flex-column text-color-white">
+              <p>Cloud Services</p>
+              <h1>Automation of Infrastructure</h1>
+              <h5 class="text-24 marginTop36">
+                We help customers automatic infrastructure build, deployment and management.
+              </h5>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
+  <div class="gray-block up80 down80 automation-cloud">
+    <div class="paddingBottom20 min500 services">
+      <img src="{{ asset('@images/v2/services/automation-infrastructure.svg') }}" alt="Automation of Infrastructure"/>
+    </div>
+    <div class="container gray-line">
+      <div class="flex-row">
+        <div class="flex-item-3">
+          <h2 class="text-36-SemiBold">
+            IT can use either scripts or declarative definitions, rather than manual process.
+          </h2>
+        </div>
+        <div class="flex-item-9 padding-left43">
+          <h4 class="text28 text-color-green paddingBottom20">Provisioning and Managing computer data centers.</h4>
+          <p>
+            Automation of Infrastructure, also known as Infrastructure as Code (IaC),
+            is the process of provisioning and managing computer data centers
+            through machine-readable definition files, rather than physical hardware configuration
+            or interactive configuration tools.
+          </p>
+          <p>
+            The IT infrastructure meant by this comprises both physical equipment such as
+            bare-metal servers as well as virtual machines and associated configuration resources.
+            The definitions may be in a version control system. It can use either scripts or
+            declarative definitions, rather than manual processes, but the term is more
+            often used to promote declarative approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gray-block up80 down80 automation-cloud">
+    <div class="container">
+      <div class="flex-row">
+        <div class="flex-item-3">
+          <h2 class="text-36-SemiBold">
+            IaC supports IaaS, but should not be confused with it.
+          </h2>
+        </div>
+        <div class="flex-item-9 padding-left43">
+          <h4 class="text28 text-color-green paddingBottom20">Infrastructure as Code for Cloud Services</h4>
+          <p>
+            Infrastructure as code IaC approaches are regularly associated and promoted
+            for cloud computing, which is sometimes marketed as Infrastructure as a Service (IaaS).
+            IaC supports IaaS, but should not be confused with it.
+          </p>
+          <p>
+            There are many tools that fulfill infrastructure automation capabilities
+            and utilize Infrastructure as Code. Broadly speaking, any framework,
+            or tool that performs changes or configures infrastructure declaratively or
+            imperatively based on a programmatic approach can be considered IaC
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="services-blocks">
+    <div class="green-block-bg bg-transparent up80 paddingBottom250">
+      <div class="container">
+        <div class="text-styles center text-color-white">
+          <h3>proven track record of using</h3>
+          <h2>Infrastructure as Code</h2>
+        </div>
+        <div class="flex-row block-space marginTop61">
+          <div class="flex-item-4 cols">
+            <div class="col-bg flex-column">
+              <div class="header-cols">
+                <div class="up-title">
+                  <img src="{{ asset('@images/v2/services/mini-terraform.svg') }}" alt="Terraform Logo"/>
+                  <span>Terraform</span>
+                </div>
+              </div>
+              <div class="content-cols scroll">
+                Terraform is an infrastructure as code software by HashiCorp.
+                It allows users to define a datacenter infrastructure in a high-level configuration language,
+                from which it can create an execution plan to build the infrastructure in a service provider such as AWS.
+              </div>
+            </div>
+          </div>
+          <div class="flex-item-4 cols">
+            <div class="col-bg flex-column">
+                <div class="header-cols">
+                  <div class="up-title">
+                    <img  src="{{ asset('@images/v2/services/mini-cloud.svg') }}" alt="CloudFormation Logo"/>
+                    <span>CloudFormation</span>
+                  </div>
+                </div>
+              <div class="content-cols scroll">
+                AWS CloudFormation gives developers and systems administrators an easy way to create and manage
+                a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion.
+              </div>
+            </div>
+          </div>
+          <div class="flex-item-4 cols">
+            <div class="col-bg flex-column">
+              <div class="header-cols">
+                <div class="up-title">
+                  <div>
+                    <img  src="{{ asset('@images/v2/services/deployment-manager.svg') }}" alt="Deployment Manager Logo"/>
+                  </div>
+                  <span>Deployment Manager</span>
+                </div>
+              </div>
+              <div class="content-cols scroll">
+                Google Cloud Deployment Manager allows you to specify all the resources needed for your application
+                in a declarative format using yaml. You can also use Python or Jinja2 templates to parameterize
+                the configuration and allow reuse of common deployment paradigms such as a load balanced, auto-scaled
+                instance group.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-row block-space">
+          <div class="flex-item-4 cols">
+            <div class="col-bg flex-column">
+              <div class="header-cols">
+                <div class="up-title">
+                  <img  src="{{ asset('@images/v2/services/chef.svg') }}" alt="Chef Logo"/>
+                  <span>Chef</span>
+                </div>
+              </div>
+              <div class="content-cols scroll">
+                Chef is both the name of a company and the name of a configuration management tool written
+                in Ruby and Erlang. It uses a pure-Ruby, domain-specific language (DSL) for writing system
+                configuration "recipes". Chef is used to streamline the task of configuring and maintaining a company's servers, and can integrate with cloud-based platforms such as AWS or GCP to automatically provision and configure new machines.
+              </div>
+            </div>
+          </div>
+          <div class="flex-item-4 cols">
+            <div class="col-bg flex-column">
+              <div class="header-cols">
+                <div class="up-title">
+                  <img  src="{{ asset('@images/v2/services/ansible.svg') }}" alt="Ansible Logo"/>
+                  <span>Ansible</span>
+                </div>
+              </div>
+              <div class="content-cols scroll">
+                Ansible is an open-source automation engine that automates software provisioning,
+                configuration management, and application deployment.
+              </div>
+            </div>
+          </div>
+          <div class="flex-item-4 cols">
+            <div class="col-bg flex-column">
+              <div class="header-cols">
+                <div class="up-title">
+                  <img  src="{{ asset('@images/v2/services/saltstack.svg') }}" alt="SaltStack Logo"/>
+                  <span>SaltStack</span>
+                </div>
+              </div>
+              <div class="content-cols scroll">
+                Salt (sometimes referred to as the SaltStack Platform) is a Python-based open-source
+                configuration management software and remote execution engine. Supporting the
+                "Infrastructure as Code" approach to deployment and cloud management,
+                it competes primarily with Puppet, Chef, and Ansible.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center">
+          <button class="btn btn-white-border start-project marginTop36">Start a Project</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="white-block-bg marginTop-200 width1320 paddingTop36 paddingBottom36">
+    <div class="container">
+      <div class="left-green-line text-24 text-color-green">
+        Infrastructure as code can be a key attribute of enabling best practices in DevOps – Developers
+        become more involved in defining configuration and operation teams get involved earlier in the
+        development process.
+      </div>
+      <div class="column paddingTop36">
+        <p>
+          Tools that utilize IaC bring visibility to the state and configuration of servers
+          and ultimately provide the visibility to users within the enterprise,
+          aiming to bring teams together to maximize their efforts.
+        </p>
+        <p>
+          Automation in general aims to take the confusion and error-prone aspect
+          of manual processes and make it more efficient, and productive.
+          Allowing for better software and applications to be created with flexibility,
+          less downtime, and an overall cost effective way for the company.
+          IaC is intended to reduce the complexity that kills efficiency out of manual configuration.
+        </p>
+        <p>
+          Automation and collaboration are considered central points in DevOps;
+          Infrastructure automation tools are often included as components of a DevOps toolchain.
+        </p>
+      </div>
+      <img class="full-img paddingTop36" src="{{ asset('@images/v2/png/infrastructure.png') }}" alt="Automation of Infrastructure"/>
+    </div>
+  </div>
+
+  <div class="gray-block up80 down80">
+    <div class="container">
+      <div class="text-styles center">
+        <h3 class="text-color-green">good, better, best. never let it rest.</h3>
+        <h2 class="block-half">Private Equity Customers Find Better Business Results Through Cloud Services</h2>
+      </div>
+      <div class="flex-row pictures-block marginTop36 ">
+        <div class="flex-item-4 cols">
+          <div class="services flex-column">
+            <a href="../../services/">
+              <div class="hover-effect">
+                <img src="{{ asset('@images/v2/services/cloud-computing.svg') }}" alt="Cloud Services"/>
+              </div>
+              <h3>Cloud Services</h3>
+              <p>A simple way to access servers, storage, databases and a broad set of application
+                services over the internet.
+              </p>
+            </a>
+            <a class="read-more" href="../../services/">Learn More <i class="mdi mdi-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="flex-item-4 cols">
+          <div class="services flex-column">
+            <a href="../../services/automation-data/">
+              <div class="hover-effect">
+                <img class="pictures" src="{{ asset('@images/v2/services/automation-data.svg') }}"
+                    alt="Automation of Data"/>
+              </div>
+              <h3>Automation of Data</h3>
+              <p>We help customers automate data governance, data pipelines, data storage and
+                compute.</p>
+            </a>
+            <a class="read-more" href="../../services/automation-data/">Learn More <i
+              class="mdi mdi-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="flex-item-4 cols">
+          <div class="services flex-column">
+            <a href="../../services/automation-serverless/">
+              <div class="hover-effect">
+                <img class="pictures" src="{{ asset('@images/v2/services/automation-serverless.svg') }}"
+                    alt="Automation of Application Layer"/>
+              </div>
+              <h3>Automation of Applications - Serverless</h3>
+              <p>We help customers automate serverless applications management through continuous
+                integration and continuous deployment.</p>
+            </a>
+            <a class="read-more" href="../../services/automation-serverless/">Learn More <i
+              class="mdi mdi-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

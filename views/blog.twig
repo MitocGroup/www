@@ -1,15 +1,16 @@
 {% extends 'layout.twig' %}
 
 {% block css %}
-  <link rel="stylesheet" href="{{ asset('@css/blog.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('@css/blog.min.css') }}"/>
 {% endblock %}
 
 {% block body %}
-  <div class="wrapper">
+<div class="up80">
     {% block content %}{% endblock %}
-  </div>
+</div>
 {% endblock %}
 
+
 {% block js %}
-  <script async src="{{ asset('@js/blog.min.js') }}"></script>
+<script async src="{{ asset('@js/blog.min.js') }}"></script>
 {% endblock %}

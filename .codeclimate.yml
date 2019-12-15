@@ -1,6 +1,9 @@
 engines:
   csslint:
     enabled: true
+    exclude_patterns:
+      - 'assets/js/libs/'
+      - 'assets/styles/libs/'
   duplication:
     enabled: true
     config:
@@ -17,7 +20,7 @@ ratings:
     - '**.css'
     - '**.scss'
     - '**.es6'
-exclude_paths:
+exclude_patterns:
   - '**/bin'
   - '**/.idea'
   - '**.min.js'

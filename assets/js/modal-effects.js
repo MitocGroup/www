@@ -44,7 +44,7 @@ $(function() {
     <img src="/images/v2/illustration/ok.svg" alt="Thank You"/>
       <p class="text-color-green">Thank you for message!</p>
       <p id="mc-message"></p>
-        <a href="https://blog.mitocgroup.com"">
+        <a href="/blog/" rel="noopener">
          <button class="btn btn-green marginTop36">Read Our Blog</button>
         </a>
   </div>
@@ -107,7 +107,7 @@ $(function() {
       <p class="text-color-green">Thank you for message!</p>
       <p id="mc-message"></p>
       <div>
-        <a href="https://blog.mitocgroup.com"">
+        <a href="/blog/" rel="noopener">
            <button class="btn btn-green marginTop36">Read Our Blog</button>
          </a>
       </div>  
