@@ -43,41 +43,41 @@
 
   confirmationMessage();
 
-  /**
-   * Render Medium feed (on home page only)
-   */
-  function renderMediumFeed() {
-    if ($content.length === 0) {
-      return;
-    }
+  // /**
+  //  * Render Medium feed (on home page only)
+  //  */
+  // function renderMediumFeed() {
+  //   if ($content.length === 0) {
+  //     return;
+  //   }
 
-    $.getJSON('/json/medium-feed.json').done(data => {
-      let html = '';
+  //   $.getJSON('/json/medium-feed.json').done(data => {
+  //     let html = '';
 
-      data.forEach((post, index) => {
-        post.image.replace('images/v2/medium/', '');
-        html += `<div class="flex-item-4">
-           <div class="blog-content flex-column">
-           <div class="img-block">
-             <a href="${post.url}" class="blog-element" alt="${post.title}" target="_blank" rel="noopener">
-               <img class="img-responsive lazyload" data-src="/images/v2/medium/${post.image}" alt="${post.title}" />
-             </a>
-           </div>
-              <span class="post-date">${post.publishedAt}</span>
-              <h4 class="post-title"><a href="${post.url}" target="_blank" rel="noopener">${post.title}</a></h4>
-              <a href="${post.url}" class="read-more" target="_blank" rel="noopener">
-                Read More <i class="mdi mdi-chevron-right"></i>
-              </a>
-           </div> 
-        </div>`;
-      });
-      $content.html(html);
-    }).fail(() => {
-      $content.text('Cannot fetch Medium feed');
-    });
-  }
+  //     data.forEach((post, index) => {
+  //       post.image.replace('images/v2/medium/', '');
+  //       html += `<div class="flex-item-4">
+  //          <div class="blog-content flex-column">
+  //          <div class="img-block">
+  //            <a href="${post.url}" class="blog-element" alt="${post.title}" target="_blank" rel="noopener">
+  //              <img class="img-responsive lazyload" data-src="/images/v2/medium/${post.image}" alt="${post.title}" />
+  //            </a>
+  //          </div>
+  //             <span class="post-date">${post.publishedAt}</span>
+  //             <h4 class="post-title"><a href="${post.url}" target="_blank" rel="noopener">${post.title}</a></h4>
+  //             <a href="${post.url}" class="read-more" target="_blank" rel="noopener">
+  //               Read More <i class="mdi mdi-chevron-right"></i>
+  //             </a>
+  //          </div> 
+  //       </div>`;
+  //     });
+  //     $content.html(html);
+  //   }).fail(() => {
+  //     $content.text('Cannot fetch Medium feed');
+  //   });
+  // }
 
-  renderMediumFeed();
+  // // renderMediumFeed();
 
   let $filterBtns = $('.filter-btn');
   let $parent = $('#parent').children('div');

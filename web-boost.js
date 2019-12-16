@@ -3,7 +3,7 @@
 const fs = require('fs');
 const nrVisiblePosts = 6;
 const postsContent = fs.readFileSync('./static/json/posts.json');
-const postsListObject = JSON.parse(postsContent);
+const posts = JSON.parse(postsContent);
 
 const authors = {
   eistrati: {
@@ -13,6 +13,22 @@ const authors = {
     avatar: 'https://www.mitocgroup.com/images/blog/author/eistrati.png',
     twitter: 'https://twitter.com/eistrati',
     twitterIntent: 'https://twitter.com/intent/user?screen_name=eistrati'
+  },
+  ircapopov: {
+    author: 'Irina Popov',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor' +
+      ' incididunt ut labore et dolore magna aliqua. Platea dictumst vestibulum rhoncus est pellentesque elit.',
+    avatar: '/images/blog/author/nan.png',
+    twitter: '#',
+    twitterIntent: '#'
+  },
+  mitocgroup: {
+    author: 'Mitoc Group',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor' +
+      ' incididunt ut labore et dolore magna aliqua. Platea dictumst vestibulum rhoncus est pellentesque elit.',
+    avatar: '/images/blog/author/mitoc.png',
+    twitter: 'https://twitter.com/mitocgroup',
+    twitterIntent: 'https://twitter.com/intent/user?screen_name=mitocgroup'
   }
 };
 
@@ -107,18 +123,24 @@ const blogAssets = {
   'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
 };
 
-let posts = {};
-posts = Object.keys(postsListObject)
-  .sort((a, b) => {
-    return -(new Date(postsListObject[a].publicationDate) - new Date(postsListObject[b].publicationDate));
-  })
-  .reduce((prev, curr) => {
-    const event = new Date(postsListObject[curr].publicationDate);
-    const options = { month: 'short', day: 'numeric', year: 'numeric' };
-    prev[curr] = postsListObject[curr];
-    prev[curr].publicationDate = event.toLocaleDateString('en-EN', options);
-    return prev;
-  }, {});
+function firstN(obj, n) {
+  return Object.keys(obj)
+    .slice(0, n)
+    .reduce(function(memo, current) {
+      memo[current] = obj[current]
+      return memo;
+    }, {})
+}
+
+const latestBlogPosts = firstN(posts, 3);
+let years = [];
+
+Object.keys(posts).forEach(key => {
+  const event = new Date(posts[key].publicationDate);
+  years.push(event.getFullYear());
+});
+
+const distinctYears = [...new Set(years)];
 
 let routes = {
   '/': {
@@ -126,7 +148,8 @@ let routes = {
     vars: {
       ...defaultVariables,
       title: defaultVariables.title + ' | Cloud Native Automation in Private Equity',
-      href: defaultVariables.url
+      href: defaultVariables.url,
+      latestBlogPosts
     },
     assets: indexAssets
   },
@@ -362,12 +385,69 @@ let routes = {
       nrVisiblePosts
     },
     assets: blogAssets
+  },
+  '/author/eistrati/': {
+    view: 'blog/author.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'eistrati — Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/author/eistrati/',
+      image: '/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: posts,
+      author: 'eistrati'
+    },
+    assets: blogAssets
+  },
+  '/author/mitocgroup/': {
+    view: 'blog/author.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'mitocgroup — Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/author/mitocgroup/',
+      image: '/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: {},
+      author: 'mitocgroup'
+    },
+    assets: blogAssets
+  },
+  '/author/irca.popov/': {
+    view: 'blog/author.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'irca.popov — Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/author/irca.popov/',
+      image: '/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: {},
+      author: 'ircapopov'
+    },
+    assets: blogAssets
+  },
+  '/archive/': {
+    view: 'blog/archive.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Archive Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/archive/',
+      image: '/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: posts,
+      author: 'eistrati',
+      years: distinctYears
+    },
+    assets: blogAssets
   }
 };
 
 Object.keys(posts).forEach(key => {
   let postPath = `/blog/${key}/`;
-
+  
   posts[key]['image_fb'] = posts[key]['image'];
   posts[key]['image_tw'] = posts[key]['image'];
 
@@ -380,6 +460,20 @@ Object.keys(posts).forEach(key => {
     }
   };
 });
+
+distinctYears.forEach(year => {
+  let postPath = `/archive/${year}/`;
+
+  routes[postPath] = {
+    view: 'blog/year-archive.twig',
+    vars: {
+      ...defaultVariables,
+      postsListObject: posts,
+      distinctYears,
+      year
+    }
+  };
+})
 
 module.exports = {
   server: {

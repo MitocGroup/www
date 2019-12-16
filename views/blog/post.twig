@@ -81,15 +81,14 @@
         </div>
     </footer>
 
-    <!--
+<!--     
     <div class="last-blogs container">
         <div class="flex-row">
             <div class="flex-column">
                 <h3 class="center">Newest Posts</h3>
                 <a class="btn-border-green btn" href="/blog/">Read more</a>
             </div>
-            {% set i = 0 %}
-            {% for key, value in posts if i < 3 %}
+            {% for key, value in  recomendedPosts %}
                 <div class="flex-item-3">
                     <div class="blog-post">
                         <a href="/blog/{{ key }}/">
@@ -104,7 +103,6 @@
                         </div>
                     </div>
                 </div>
-                {% set i = i + 1 %}
             {% endfor %}
         </div>
     </div>

@@ -1,0 +1,51 @@
+{% extends '../blog.twig' %}
+
+{% block content %}
+  
+<header class="container u-maxWidth740 archive-page">
+    <div class="header-post display-flex">
+        <div class="about">
+            <p>Archive of stories published</p>
+            <hr class="line-gray">
+            <div class="flex">
+                <a href="{{ href }}" class="archive">All <i class="mdi mdi-chevron-right"></i></a>
+                <div class="flex years-row">
+                {% for year in years %}
+                  <a href="/archive/{{ year }}/" class="archive">{{ year }}</a>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <div class="mob-hidden">
+      <div class="blog-container">
+          <div class="blogs firefox">
+              {% if postsListObject|length > 0 %}
+                    {% for key, value in postsListObject %}
+                        <div class="flex-column flex-item-6 internal-article">
+                            <a href="/blog/{{ key }}/">
+                            <img src="{{ asset( value.image ) }}" alt="{{ value.title }}"/>
+                            </a>
+                            <p class="gray-blog">{{ value.publicationDate }} {{ value.minRead }}</p>
+                            <a href="/blog/{{ key }}/">
+                                <h2>{{ value.title }}</h2>
+                            </a>
+                            <p class="blog-post overflow-ellipsis">{{ value.description }}</p>
+                            <div class="learn-more-b">
+                                <a href="/blog/{{ key }}/" class="learn-more">Learn more
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                {% endfor %}    
+                {% else %}   
+                <div class="none-found">
+                    <h2>Sorry, this author doesn't have any posts...</h2>
+                </div>  
+                {% endif %}     
+          </div>
+      </div>
+    </div>
+{% endblock %}

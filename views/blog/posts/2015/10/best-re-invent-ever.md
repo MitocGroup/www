@@ -25,19 +25,19 @@ We have presented ["Microservices Architecture for Digital Platforms with AWS La
 
 But don't take our word for granted and look at some customers tweets:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Enjoying the thoughtful, informative and friendly style of <a href="https://twitter.com/eistrati?ref_src=twsrc%5Etfw">@eistrati</a> <a href="https://twitter.com/hashtag/reInvent?src=hash&amp;ref_src=twsrc%5Etfw">#reInvent</a></p>&mdash; Michael Warrilow (@micwar) <a href="https://twitter.com/micwar/status/651884475396288512?ref_src=twsrc%5Etfw">October 7, 2015</a></blockquote>
+<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Enjoying the thoughtful, informative and friendly style of <a href="https://twitter.com/eistrati?ref_src=twsrc%5Etfw">@eistrati</a> <a href="https://twitter.com/hashtag/reInvent?src=hash&amp;ref_src=twsrc%5Etfw">#reInvent</a></p>&mdash; Michael Warrilow (@micwar) <a href="https://twitter.com/micwar/status/651884475396288512?ref_src=twsrc%5Etfw">October 7, 2015</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <div class="padd25px">
     <div class="center img-description">Enjoying the thoughtful, informative and friendly style of @eistrati</div>
 </div>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Nice serverless app demo: Angular UI served from S3; Microservices with API gateway, Lambda, and Cognito. <a href="https://twitter.com/hashtag/reinvent?src=hash&amp;ref_src=twsrc%5Etfw">#reinvent</a> <a href="https://twitter.com/hashtag/ifm?src=hash&amp;ref_src=twsrc%5Etfw">#ifm</a> <a href="https://twitter.com/eistrati?ref_src=twsrc%5Etfw">@eistrati</a></p>&mdash; Luke Thompson (@luketn) <a href="https://twitter.com/luketn/status/651885406015746048?ref_src=twsrc%5Etfw">October 7, 2015</a></blockquote>
+<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Nice serverless app demo: Angular UI served from S3; Microservices with API gateway, Lambda, and Cognito. <a href="https://twitter.com/hashtag/reinvent?src=hash&amp;ref_src=twsrc%5Etfw">#reinvent</a> <a href="https://twitter.com/hashtag/ifm?src=hash&amp;ref_src=twsrc%5Etfw">#ifm</a> <a href="https://twitter.com/eistrati?ref_src=twsrc%5Etfw">@eistrati</a></p>&mdash; Luke Thompson (@luketn) <a href="https://twitter.com/luketn/status/651885406015746048?ref_src=twsrc%5Etfw">October 7, 2015</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <div class="padd25px">
     <div class="center img-description">Nice serverless app demo: Angular UI served from S3; Microservices with API gateway, Lambda, and Cognito</div>
 </div>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;microservices are game changers&quot; <a href="https://twitter.com/eistrati?ref_src=twsrc%5Etfw">@eistrati</a> , Mitoc Group , <a href="https://twitter.com/hashtag/reInvent?src=hash&amp;ref_src=twsrc%5Etfw">#reInvent</a></p>&mdash; Michael Warrilow (@micwarg) <a href="https://twitter.com/micwarg/status/651886347624579073?ref_src=twsrc%5Etfw">October 7, 2015</a></blockquote>
+<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">&quot;microservices are game changers&quot; <a href="https://twitter.com/eistrati?ref_src=twsrc%5Etfw">@eistrati</a> , Mitoc Group , <a href="https://twitter.com/hashtag/reInvent?src=hash&amp;ref_src=twsrc%5Etfw">#reInvent</a></p>&mdash; Michael Warrilow (@micwarg) <a href="https://twitter.com/micwarg/status/651886347624579073?ref_src=twsrc%5Etfw">October 7, 2015</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <div class="padd25px">
     <div class="center img-description">Microservices are game changers</div>
