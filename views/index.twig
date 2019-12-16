@@ -224,13 +224,13 @@
             <div class="flex-item-4">
                 <div class="blog-content flex-column">
                 <div class="img-block">
-                  <a href="/blog/{{ key }}/" class="blog-element" alt="{{ value.title }}" target="_blank" rel="noopener">
+                  <a href="/blog/{{ key }}/" class="blog-element" alt="{{ value.title }}" rel="noopener">
                     <img class="img-responsive lazyload" data-src="{{ asset( value.image ) }}" alt="{{ value.title }}" />
                   </a>
                 </div>
                   <span class="post-date">{{ value.publicationDate }}</span>
-                  <h4 class="post-title"><a href="/blog/{{ key }}/" target="_blank" rel="noopener">{{ value.title }}</a></h4>
-                  <a href="/blog/{{ key }}/" class="read-more" target="_blank" rel="noopener">
+                  <h4 class="post-title"><a href="/blog/{{ key }}/" rel="noopener">{{ value.title }}</a></h4>
+                  <a href="/blog/{{ key }}/" class="read-more" rel="noopener">
                     Read More <i class="mdi mdi-chevron-right"></i>
                   </a>
                 </div> 
