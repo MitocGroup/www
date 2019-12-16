@@ -296,7 +296,7 @@
   "Redirect": {
     "Protocol": "https",
     "HostName": "www.mitocgroup.com",
-    "ReplaceKeyPrefixWith": "blog/mitocgroup/"
+    "ReplaceKeyPrefixWith": "author/mitocgroup/"
   }
 },{
   "Condition": {
@@ -306,7 +306,7 @@
   "Redirect": {
     "Protocol": "https",
     "HostName": "www.mitocgroup.com",
-    "ReplaceKeyPrefixWith": "blog/eistrati/"
+    "ReplaceKeyPrefixWith": "author/eistrati/"
   }
 },{
   "Condition": {
@@ -316,7 +316,7 @@
   "Redirect": {
     "Protocol": "https",
     "HostName": "www.mitocgroup.com",
-    "ReplaceKeyPrefixWith": "blog/irca.popov/"
+    "ReplaceKeyPrefixWith": "author/irca.popov/"
   }
 },{
   "Condition": {
@@ -332,16 +332,6 @@
   "Condition": {
     "HttpErrorCodeReturnedEquals": "404",
     "KeyPrefixEquals": "trending"
-  },
-  "Redirect": {
-    "Protocol": "https",
-    "HostName": "www.mitocgroup.com",
-    "ReplaceKeyPrefixWith": "blog/"
-  }
-},{
-  "Condition": {
-    "HttpErrorCodeReturnedEquals": "404",
-    "KeyPrefixEquals": "archive"
   },
   "Redirect": {
     "Protocol": "https",
