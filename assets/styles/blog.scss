@@ -585,6 +585,120 @@
   }
 }
 
+.internal-article {
+  margin: 20px auto;
+  word-break: break-word;
+  width: 100%;
+  background: white;
+  padding: 30px 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-arround;
+  flex: 0 0 55%;
+  max-width: 55%;
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid rgba(26,40,88,0.1)
+  }
+  .overflow-ellipsis {
+    color: rgba(0, 0, 0, 0.7) !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .learn-more-b {
+    margin-top: 0px;
+  }
+}
+
+.ml-20 {
+  margin-left: 20%;
+}
+
+.author-page {
+  .header-post {
+    width: 70%;
+    margin: auto;
+    padding: 50px 0px;
+    .avatar-blog {
+      height: 100px;
+      width: 100px;
+      margin-left: 35px;
+      img {
+        height: 110px;
+      }
+    }
+    .about {
+      margin-left: -50px;
+    }
+    .author-name {
+      font-size: 22px !important;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.archive-page {
+  .about {
+    width: 100%;
+    .line-gray {
+      max-width: 100%;
+      opacity: 0.54;
+    }
+  }
+  .years-row {
+    a {
+      font-size: 16px;
+      padding-left: 10px;
+      margin-top: 2px;
+    }
+    a:hover {
+      text-decoration: underline;
+      opacity: 0.5;
+    }
+  }
+}
+
+.years-row-bottom {
+  justify-content: space-between;
+  padding-bottom: 25px;
+  width: 70%;
+  margin: auto;
+  a {
+    opacity: 0.54;
+    cursor: pointer;
+  }
+  a:hover {
+    opacity: 0.84;
+  }
+  .end {
+    margin-left: auto;
+  }
+}
+
+.line-gray {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 1px solid lightgray;
+  opacity: 0.2;
+}
+
+.none-found {
+  margin: 100px auto;
+  text-align: center;
+  h2 {
+    color: lightgray !important;
+  }
+}
+
 @-moz-document url-prefix() {
   .blogs {
     &.firefox {

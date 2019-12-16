@@ -42,6 +42,13 @@
   }
 }
 
+@media (min-width: 768px) {
+  .extra-large {
+    width: 100vw;
+    transform: translateX(calc((40em - 100vw)/2));
+  }
+}
+
 @media (max-width: 1270px) {
   .services-blocks {
     .cols {
@@ -224,6 +231,11 @@
       margin-left: 0;
       width: 100%;
     }
+  }
+  .table {
+    width: auto !important;
+  overflow-x: auto;
+  white-space: normal;
   }
 }
 
