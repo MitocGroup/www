@@ -296,7 +296,7 @@
   "Redirect": {
     "Protocol": "https",
     "HostName": "www.mitocgroup.com",
-    "ReplaceKeyPrefixWith": "blog/author/mitocgroup/"
+    "ReplaceKeyPrefixWith": "blog/mitocgroup/"
   }
 },{
   "Condition": {
@@ -306,7 +306,7 @@
   "Redirect": {
     "Protocol": "https",
     "HostName": "www.mitocgroup.com",
-    "ReplaceKeyPrefixWith": "blog/author/eistrati/"
+    "ReplaceKeyPrefixWith": "blog/eistrati/"
   }
 },{
   "Condition": {
@@ -316,7 +316,7 @@
   "Redirect": {
     "Protocol": "https",
     "HostName": "www.mitocgroup.com",
-    "ReplaceKeyPrefixWith": "blog/author/irca.popov/"
+    "ReplaceKeyPrefixWith": "blog/irca.popov/"
   }
 },{
   "Condition": {
