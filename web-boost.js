@@ -123,13 +123,13 @@ const blogAssets = {
   'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
 };
 
-function firstN(obj, n) {
+function firstN (obj, n) {
   return Object.keys(obj)
     .slice(0, n)
-    .reduce(function(memo, current) {
-      memo[current] = obj[current]
+    .reduce((memo, current) => {
+      memo[current] = obj[current];
       return memo;
-    }, {})
+    }, {});
 }
 
 const latestBlogPosts = firstN(posts, 3);
@@ -447,7 +447,6 @@ let routes = {
 
 Object.keys(posts).forEach(key => {
   let postPath = `/blog/${key}/`;
-  
   posts[key]['image_fb'] = posts[key]['image'];
   posts[key]['image_tw'] = posts[key]['image'];
 
@@ -473,7 +472,7 @@ distinctYears.forEach(year => {
       year
     }
   };
-})
+});
 
 module.exports = {
   server: {

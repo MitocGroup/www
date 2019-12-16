@@ -2,7 +2,6 @@
   'use strict';
 
   let $win = $(win);
-  let $content = $('#jsonContent');
 
   $('.mdi-menu').on('click', function() {
     $(this).toggleClass('open').toggleClass('mdi-menu').toggleClass('mdi-close');
