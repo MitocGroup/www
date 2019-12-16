@@ -65,8 +65,7 @@ To get started, simply include `main.tf` into your terraform codebase:
 module "landing_zone" {
   source     = "MitocGroup/landing-zone/aws"
   root_path  = "${path.module}"
-  account_id = "${var.account_id}"
-  region     = "${var.region}"
+  landing_zone_providers  = "${var.landing_zone_providers}"
   landing_zone_components = "${var.landing_zone_components}"
 }
 ```
@@ -76,8 +75,12 @@ module "landing_zone" {
 To simplify and make it easier to understand, we included default values in `terraform.tfvars`:
 
 ```
-account_id = "123456789012"
-region = "us-east-1"
+landing_zone_providers = {
+  default = {
+    account_id = "123456789012"
+    region     = "us-east-1"
+  }
+}
 landing_zone_components = {
   landing_zone_pipeline_s3_bucket = "s3://terraform-aws-landing-zone/mycompany/landing_zone_pipeline_s3_bucket/default.tfvars"
   [...]

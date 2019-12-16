@@ -146,11 +146,11 @@ When executing `terraform init` and `terraform apply` on `landing_zone module`, 
 For example, above mentioned component [landing\_zone\_vpc](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/components/landing_zone_vpc/.terrahub.yml) defined as `.yml` file will be converted into the following set of `.tf` files:
 
 ```
-$ ls ~/.terrahub/cache/jit/landing_zone_vpc_eef16dcf/
+$ ls ~/.terrahub/cache/hcl/landing_zone_vpc_eef16dcf/
 README.md    default.tfvars    locals.tf    main.tf        output.tf    provider.tf    terraform.tf    variable.tf
 ```
 
->_NOTE: In order to debug JIT converted files from YAML format into HCL go to **~/.terrahub/cache/jit/** folder and explore corresponding component(s). If specific component is missing, execute `terrahub run -i [component_name]` in order to generate corresponding `[component_name]_[hash]` folder and `.tf` files._
+>_NOTE: In order to debug JIT converted files from YAML format into HCL go to **~/.terrahub/cache/hcl/** folder and explore corresponding component(s). If specific component is missing, execute `terrahub run -i [component_name]` in order to generate corresponding `[component_name]_[hash]` folder and `.tf` files._
 
 ### Putting Everything Together
 
