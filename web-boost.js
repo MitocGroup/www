@@ -279,6 +279,15 @@ let routes = {
     },
     assets: commonAssets
   },
+  '/case-studies/broadcasting-company/': {
+    view: 'case-studies/broadcasting-conglomerate.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Major Broadcasting Conglomerate | Case Studies | ' + defaultVariables.title,
+      href: defaultVariables.url + '/case-studies/broadcasting-company/'
+    },
+    assets: commonAssets
+  },
   '/case-studies/insurance-company/': {
     view: 'case-studies/insurance-company.twig',
     vars: {
