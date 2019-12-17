@@ -53,7 +53,7 @@ The architecture of every web application we build or transform, including the o
   </a>
 </div>
 
-The todo app is written in AngularJS and deployed on Amazon S3, behind Amazon CloudFront (the front-end tier). The tasks management is processed by AWS Lambda, optionally behind Amazon API Gateway (the back-end tier). The tasks metadata is stored in Amazon DynamoDB (the data tier). The transformed todo app, along with instructions on how to install and deploy this web application, is described in [this blog post](https://www.mitocgroup.com/blog/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework) and the code is available on Github:
+The todo app is written in AngularJS and deployed on Amazon S3, behind Amazon CloudFront (the front-end tier). The tasks management is processed by AWS Lambda, optionally behind Amazon API Gateway (the back-end tier). The tasks metadata is stored in Amazon DynamoDB (the data tier). The transformed todo app, along with instructions on how to install and deploy this web application, is described in [this blog post](https://www.mitocgroup.com/blog/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework/) and the code is available on Github:
 
 <div class="external-article">
   <a href="https://github.com/MitocGroup/deep-microservices-todo-app">

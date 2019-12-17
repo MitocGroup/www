@@ -33,7 +33,7 @@ The AWS Landing Zone solution also deploys an AWS Account Vending Machine (AVM) 
 
 ### Why Is AWS Landing Zone Solution So Successful?
 
-In order to dive deep and understand how [Terraform Module for AWS Landing Zone](https://www.mitocgroup.com/blog/introducing-programmatic-aws-landing-zone-as-terraform-module) helps, we decided to put on our customers hats and tell customers stories through their experiences. For simplicity and respect for their privacy, we will not be disclosing their names and we will not be providing any private information.
+In order to dive deep and understand how [Terraform Module for AWS Landing Zone](https://www.mitocgroup.com/blog/introducing-programmatic-aws-landing-zone-as-terraform-module/) helps, we decided to put on our customers hats and tell customers stories through their experiences. For simplicity and respect for their privacy, we will not be disclosing their names and we will not be providing any private information.
 
 #### Customer #1
 
