@@ -316,7 +316,7 @@
   "Redirect": {
     "Protocol": "https",
     "HostName": "www.mitocgroup.com",
-    "ReplaceKeyPrefixWith": "author/irca.popov/"
+    "ReplaceKeyPrefixWith": "author/ircapopov/"
   }
 },{
   "Condition": {

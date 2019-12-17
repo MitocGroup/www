@@ -429,12 +429,12 @@ let routes = {
     },
     assets: blogAssets
   },
-  '/author/irca.popov/': {
+  '/author/ircapopov/': {
     view: 'blog/author.twig',
     vars: {
       ...defaultVariables,
       title: 'Irca Popov | Blog Articles | ' + defaultVariables.title,
-      href: defaultVariables.url + '/author/irca.popov/',
+      href: defaultVariables.url + '/author/ircapopov/',
       image: 'https://www.mitocgroup.com/images/blog/2018-08-12/dashboard.png',
       publisher: 'https://www.facebook.com/MitocGroup',
       timestamp: '2018-04-01T12:34:56.789Z',
