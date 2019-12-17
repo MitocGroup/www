@@ -11,16 +11,16 @@ const authors = {
     bio: 'Proud Father. Lucky Husband. Open Source Contributor.' +
       ' DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.',
     avatar: 'https://www.mitocgroup.com/images/blog/author/eistrati.png',
-    twitter: 'https://twitter.com/eistrati',
-    twitterIntent: 'https://twitter.com/intent/user?screen_name=eistrati'
+    profile: 'https://www.mitocgroup.com/author/eistrati/',
+    twitter: 'https://twitter.com/intent/user?screen_name=eistrati'
   },
-  ircapopov: {
+  irca20: {
     author: 'Irina Popov',
     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor' +
       ' incididunt ut labore et dolore magna aliqua. Platea dictumst vestibulum rhoncus est pellentesque elit.',
-    avatar: 'https://www.mitocgroup.com/images/blog/author/ircapopov.png',
-    twitter: 'https://twitter.com/irca20',
-    twitterIntent: 'https://twitter.com/intent/user?screen_name=irca20'
+    avatar: 'https://www.mitocgroup.com/images/blog/author/irca20.png',
+    profile: 'https://www.mitocgroup.com/author/irca20/',
+    twitter: 'https://twitter.com/intent/user?screen_name=irca20'
   },
   mitocgroup: {
     author: 'Mitoc Group',
@@ -28,8 +28,8 @@ const authors = {
       ' with proven track record helping clients migrate to the cloud, as well as' +
       ' establish devops and dataops processes',
     avatar: 'https://www.mitocgroup.com/images/blog/author/mitoc.png',
-    twitter: 'https://twitter.com/mitocgroup',
-    twitterIntent: 'https://twitter.com/intent/user?screen_name=mitocgroup'
+    profile: 'https://www.mitocgroup.com/author/mitocgroup/',
+    twitter: 'https://twitter.com/intent/user?screen_name=mitocgroup'
   }
 };
 
@@ -429,17 +429,17 @@ let routes = {
     },
     assets: blogAssets
   },
-  '/author/ircapopov/': {
+  '/author/irca20/': {
     view: 'blog/author.twig',
     vars: {
       ...defaultVariables,
       title: 'Irca Popov | Blog Articles | ' + defaultVariables.title,
-      href: defaultVariables.url + '/author/ircapopov/',
+      href: defaultVariables.url + '/author/irca20/',
       image: 'https://www.mitocgroup.com/images/blog/2018-08-12/dashboard.png',
       publisher: 'https://www.facebook.com/MitocGroup',
       timestamp: '2018-04-01T12:34:56.789Z',
       postsListObject: {},
-      author: 'ircapopov'
+      author: 'irca20'
     },
     assets: blogAssets
   },
