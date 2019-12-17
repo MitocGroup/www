@@ -436,14 +436,14 @@
 
 .extended-table {
   .table {
-    width: 200% !important;
+    width: 100em !important;
   }
 }
 
 .table {
   margin: 25px auto;
-  word-break: break-word;
-  width: 100%;
+  word-break: normal;
+  // width: 100%;
   padding: 6px;
   background: white;
   border: 1px solid #ccc;

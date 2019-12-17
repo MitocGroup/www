@@ -442,6 +442,7 @@ Speaking of performance, we find AWS Lambda mature enough to power large-scale w
 
 Using the benchmarking tool, we ran multiple scenarios on the same function from todo app:
 
+<div class="horizontalScrollTable" data-markdown="1">
 Function Size (MB) | Memory Size (MB) | Max Memory Used (MB) | Avg Front-end (ms) | Avg Back-end (ms) | Total Calls (#) | Total Billed (ms) | Total Billed ($/1B)*
 -------------------|------------------|----------------------|--------------------|-------------------|-----------------|---------------------|---------------------
 1.1  | 128 | 34-35 | 375.50 | 193.67 | 10  | 2,400  | 4,992
@@ -456,6 +457,7 @@ Function Size (MB) | Memory Size (MB) | Max Memory Used (MB) | Avg Front-end (ms
 55.8 | 128 | 83-87 | 416.10 | 220.91 | 100 | 26,900 | 55,952
 55.8 | 256 | 50-71 | 377.69 | 194.22 | 100 | 25,600 | 106,752
 55.8 | 512 | 57-81 | 353.46 | 174.65 | 100 | 23,300 | 194,322
+</div>
 
 <div class="padd25px">
   <div class="center img-description">Key performance indicators that helps decide how to fine tune the web application (* 1B = 1 Billion)</div>
