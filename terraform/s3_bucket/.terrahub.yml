@@ -66,7 +66,7 @@ build:
       THUB_S3_PATH: 's3://www-dev.mitocgroup.com'
       THUB_ROBOTS: '../../robots.txt'
       THUB_BUILD_PATH: '../../build'
-      THUB_SOURCE_PATH: '../../assets ../../static/fonts ../../static/images ../../views'
+      THUB_SOURCE_PATH: '../../assets ../../static/fonts ../../static/images ../../views ../../*.js'
       THUB_BUILD_OK: 'false'
       THUB_MAX_AGE: '600'
   phases:
