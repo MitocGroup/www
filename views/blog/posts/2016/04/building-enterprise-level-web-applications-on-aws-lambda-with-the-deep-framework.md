@@ -417,7 +417,7 @@ We have been continuously benchmarking AWS Lambda for various use cases in our m
 
 Particularly, for todo app, we have performed various benchmarking analysis on AWS Lambda by tweaking different components in a specific function (e.g. function size, memory size, billable cost, etc.). Next, we would like to share results with you:
 
-<div class="horizontalScrollTable" data-markdown="1">
+<div class="horizontalScrollTable extended-table" data-markdown="1">
 Req No | Function Size (MB) | Memory Size (MB) | Max Memory Used (MB) | Start time | Stop time | Front-end Call (ms) | Back-end Call (ms) | Billed Time (ms) | Billed Time ($)
 -------|--------------------|------------------|----------------------|------------|-----------|---------------------|-------------------|------------------|----------------
 1 | 1.1 | 128 | 34 | 20:15.8 | 20:16.2 | 359 | 200.47 | 300 | 0.000000624

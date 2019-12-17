@@ -434,10 +434,16 @@
   }
 }
 
+.extended-table {
+  .table {
+    width: 200% !important;
+  }
+}
+
 .table {
   margin: 25px auto;
   word-break: break-word;
-  width: 200%;
+  width: 100%;
   padding: 6px;
   background: white;
   border: 1px solid #ccc;
