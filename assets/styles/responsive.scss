@@ -761,6 +761,14 @@
 }
 
 @media (max-width: 750px) {
+  .months-header{
+    display: flex;
+    flex-direction: column;
+    .months-columns {
+      margin-top: 10px;
+      margin-left: -5px;
+    }
+  }
   .blogs {
     a {
       color: $main-color;

@@ -135,10 +135,33 @@ function firstN (obj, n) {
 
 const latestBlogPosts = firstN(posts, 3);
 let years = [];
+let monthsOfTheYear = {};
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+  ];
 
 Object.keys(posts).forEach(key => {
-  const event = new Date(posts[key].publicationDate);
-  years.push(event.getFullYear());
+  const year = new Date(posts[key].publicationDate).getFullYear();
+  const month = new Date(posts[key].publicationDate).toLocaleString('en-EN', { month: 'long' }).toLowerCase();
+
+  years.push(year);
+  if (!monthsOfTheYear.hasOwnProperty(year)) {
+    monthsOfTheYear[year] = [];
+  }
+  if (!monthsOfTheYear[year].includes(month)) {
+    monthsOfTheYear[year].push(month);
+  }
 });
 
 const distinctYears = [...new Set(years)];
@@ -485,14 +508,33 @@ Object.keys(posts).forEach(key => {
 });
 
 distinctYears.forEach(year => {
-  let postPath = `/archive/${year}/`;
+  let yearPath = `/archive/${year}/`;
 
-  routes[postPath] = {
+  monthsOfTheYear[year].forEach(month => {
+    let monthPath = `/archive/${year}/${month}/`;
+
+    routes[monthPath] = {
+      view: 'blog/archive-year.twig',
+      vars: {
+        ...defaultVariables,
+        postsListObject: posts,
+        monthsOfTheYear,
+        monthIndex: monthsOfTheYear[year].indexOf(month),
+        months,
+        year,
+        month
+      }
+    };
+  });
+
+  routes[yearPath] = {
     view: 'blog/archive-year.twig',
     vars: {
       ...defaultVariables,
       postsListObject: posts,
       distinctYears,
+      monthsOfTheYear,
+      months,
       year
     }
   };

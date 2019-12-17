@@ -7,29 +7,50 @@
         <div class="about">
             <p>Archive of stories published</p>
             <hr class="line-gray">
-            <div class="flex">
-                <a href="/archive/" class="archive">All <i class="mdi mdi-chevron-right"></i></a>
-                <div class="flex years-row">
-                  <a href="/archive/{{ year }}/" class="archive" disabled>{{ year }}</a>
+            <div class="months-header flex flex-row">
+                <div class="flex flex-row">
+                    <a href="/archive/" class="archive flex">All <i class="mdi mdi-chevron-right"></i></a>
+                    <div class="flex years-row">
+                    <a href="/archive/{{ year }}/" class="archive flex" disabled>{{ year }} <i class="mdi mdi-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="months-columns">
+                    {% for month in months %}
+                        {% if month|lower in monthsOfTheYear[year] %}
+                            <a href="/archive/{{ year }}/{{ month|lower }}/">{{ month }}</a>
+                        {% else %}
+                            <p>{{ month }}</p>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-{% set yearPosts = {} %}
-{% for key, item in postsListObject %}
-  {% if item.publicationDate|date("Y") == year %}
-      {% set temp = item|merge({href: key ~ '/'}) %}
-      {% set yearPosts = yearPosts|merge({(key):temp}) %}
-  {% endif %}
-{% endfor %}
+{% set postsToShow = {} %}
+
+{% if month is empty %}
+    {% for key, item in postsListObject %}
+    {% if item.publicationDate|date("Y") == year %}
+        {% set temp = item|merge({href: key ~ '/'}) %}
+        {% set postsToShow = postsToShow|merge({(key):temp}) %}
+    {% endif %}
+    {% endfor %}
+{% else %}
+    {% for key, item in postsListObject %}
+    {% if item.publicationDate|date("F")|lower == month and item.publicationDate|date("Y") == year %}
+        {% set temp = item|merge({href: key ~ '/'}) %}
+        {% set postsToShow = postsToShow|merge({(key):temp}) %}
+    {% endif %}
+    {% endfor %}
+{% endif %}
 
   <div class="mob-hidden">
       <div class="blog-container">
           <div class="blogs firefox">
-              {% if yearPosts|length > 0 %}
-                    {% for key, value in yearPosts %}
+              {% if postsToShow|length > 0 %}
+                    {% for key, value in postsToShow %}
                         <div class="flex-column flex-item-6 internal-article">
                             <a href="/blog/{{ key }}/">
                             <img src="{{ asset( value.image ) }}" alt="{{ value.title }}"/>
@@ -54,12 +75,21 @@
           </div>
           <hr class="line-gray">
           <div class="flex years-row-bottom">
-            {% if year != 2015 %}
-              <a href="/archive/{{ year - 1}}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ year - 1 }}</a>
-            {% endif %}
-            {% if year != 2019 %}
-              <a href="/archive/{{ year + 1}}/" class="archive end">{{ year + 1 }} <i class="mdi mdi-chevron-right"></i></a>
-            {% endif %}
+                {% if month is empty %}
+                    {% if year != 2015 %}
+                        <a href="/archive/{{ year - 1}}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ year - 1 }}</a>
+                    {% endif %}
+                    {% if year != 2019 %}
+                        <a href="/archive/{{ year + 1}}/" class="archive end">{{ year + 1 }} <i class="mdi mdi-chevron-right"></i></a>
+                    {% endif %}
+                {% else %}
+                    {% if monthIndex + 1 < monthsOfTheYear|length %}
+                        <a href="/archive/{{ year }}/{{ monthsOfTheYear[year][monthIndex + 1] }}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ monthsOfTheYear[year][monthIndex + 1]|capitalize }}</a>
+                    {% endif %}
+                    {% if monthIndex - 1 >= 0 %}
+                        <a href="/archive/{{ year }}/{{ monthsOfTheYear[year][monthIndex - 1] }}/" class="archive end">{{ monthsOfTheYear[year][monthIndex - 1]|capitalize }}<i class="mdi mdi-chevron-right"></i></a>
+                    {% endif %}
+                {% endif %}
             </div>
       </div>
     </div>
