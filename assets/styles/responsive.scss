@@ -268,7 +268,7 @@
   }
 }
 @media (max-width: 992px) {
-  .last-blogs {
+  .recomended-blogs {
     .flex-row {
         .flex-column {
             flex: 0 0 50%;
@@ -1084,7 +1084,7 @@
         }
       }
     }
-    .last-blogs {
+    .recomended-blogs {
       .flex-row {
           text-align: left;
           .flex-item-3 {
@@ -1704,7 +1704,7 @@
       }
     }
   }
-  .last-blogs {
+  .recomended-blogs {
     .flex-row {
         .flex-item-3 {
             flex: 0 0 100%;
@@ -1714,6 +1714,14 @@
                 margin-bottom: 0;
             }
         }
+    }
+    .recomended-blog-header {
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center;
+      * {
+        margin-top: 10px;
+      }
     }
   }
 }
