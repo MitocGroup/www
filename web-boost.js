@@ -506,6 +506,7 @@ distinctYears.forEach(year => {
         ...defaultVariables,
         postsListObject: posts,
         monthsOfTheYear,
+        distinctYears,
         monthIndex: monthsOfTheYear[year].indexOf(month),
         months,
         year,
