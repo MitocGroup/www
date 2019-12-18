@@ -769,6 +769,11 @@
       margin-left: -5px;
     }
   }
+  .post {
+    em a {
+      word-break: break-all;
+    }
+  }
   .blogs {
     a {
       color: $main-color;

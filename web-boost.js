@@ -1,9 +1,13 @@
 'use strict';
 
 const fs = require('fs');
+const firstN = (obj, n) => Object.keys(obj).slice(0, n).reduce((memo, current) => { memo[current] = obj[current]; return memo; }, {});
+
 const nrVisiblePosts = 6;
-const postsContent = fs.readFileSync('./static/json/posts.json');
-const posts = JSON.parse(postsContent);
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+const posts = JSON.parse(fs.readFileSync('./static/json/posts.json'));
+const postsKeys = Object.keys(posts);
 
 const authors = {
   eistrati: {
@@ -40,7 +44,7 @@ const defaultVariables = {
     ' Our track record includes helping private equity portfolio companies migrate to public clouds,' +
     ' as well as establish devops and dataops processes using cloud native services and industry' +
     ' best practices. We deliver automations and business results in weeks instead of months.',
-  authors: authors,
+  authors,
   publisher: 'MitocGroup.com',
   company: 'Mitoc Group Inc.',
   address: '2 University Plaza Suite 100',
@@ -124,34 +128,13 @@ const blogAssets = {
   'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
 };
 
-function firstN (obj, n) {
-  return Object.keys(obj)
-    .slice(0, n)
-    .reduce((memo, current) => {
-      memo[current] = obj[current];
-      return memo;
-    }, {});
-}
-
-const latestBlogPosts = firstN(posts, 3);
-let years = [];
 let monthsOfTheYear = {};
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-  ];
+const years = [];
+const allPostsNameArr = [];
+const latestBlogPosts = firstN(posts, 3);
 
-Object.keys(posts).forEach(key => {
+
+postsKeys.forEach(key => {
   const year = new Date(posts[key].publicationDate).getFullYear();
   const month = new Date(posts[key].publicationDate).toLocaleString('en-EN', { month: 'long' }).toLowerCase();
 
@@ -162,6 +145,7 @@ Object.keys(posts).forEach(key => {
   if (!monthsOfTheYear[year].includes(month)) {
     monthsOfTheYear[year].push(month);
   }
+  allPostsNameArr.push(key);
 });
 
 const distinctYears = [...new Set(years)];
@@ -492,8 +476,22 @@ let routes = {
   }
 };
 
-Object.keys(posts).forEach(key => {
-  let postPath = `/blog/${key}/`;
+postsKeys.forEach(key => {
+  const postPath = `/blog/${key}/`;
+  const index = allPostsNameArr.indexOf(key);
+  let recomendedPosts;
+
+  if (index === 0) {
+    recomendedPosts = firstN(posts, 4);
+    delete recomendedPosts[allPostsNameArr[index]];
+  }
+  else if (index === allPostsNameArr.length - 1) {
+    recomendedPosts = [posts[allPostsNameArr[index - 2]], posts[allPostsNameArr[index - 1]], posts[allPostsNameArr[0]]];
+  }
+  else {
+    recomendedPosts = [posts[allPostsNameArr[index - 2]], posts[allPostsNameArr[index - 1]], posts[allPostsNameArr[index + 1]]];
+  }
+
   posts[key]['image_fb'] = posts[key]['image'];
   posts[key]['image_tw'] = posts[key]['image'];
 
@@ -502,16 +500,17 @@ Object.keys(posts).forEach(key => {
     vars: {
       ...defaultVariables,
       ...posts[key],
+      recomendedPosts,
       posts
     }
   };
 });
 
 distinctYears.forEach(year => {
-  let yearPath = `/archive/${year}/`;
+  const yearPath = `/archive/${year}/`;
 
   monthsOfTheYear[year].forEach(month => {
-    let monthPath = `/archive/${year}/${month}/`;
+    const monthPath = `/archive/${year}/${month}/`;
 
     routes[monthPath] = {
       view: 'blog/archive-year.twig',
@@ -545,5 +544,5 @@ module.exports = {
     port: 8000,
     ignorePatterns: ['.idea', '.git', 'bin', 'backend', 'build', 'node_modules']
   },
-  routes: routes
+  routes
 };
