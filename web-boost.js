@@ -133,7 +133,6 @@ const years = [];
 const allPostsNameArr = [];
 const latestBlogPosts = firstN(posts, 3);
 
-
 postsKeys.forEach(key => {
   const year = new Date(posts[key].publicationDate).getFullYear();
   const month = new Date(posts[key].publicationDate).toLocaleString('en-EN', { month: 'long' }).toLowerCase();
@@ -484,11 +483,9 @@ postsKeys.forEach(key => {
   if (index === 0) {
     recomendedPosts = firstN(posts, 4);
     delete recomendedPosts[allPostsNameArr[index]];
-  }
-  else if (index === allPostsNameArr.length - 1) {
+  } else if (index === allPostsNameArr.length - 1) {
     recomendedPosts = [posts[allPostsNameArr[index - 2]], posts[allPostsNameArr[index - 1]], posts[allPostsNameArr[0]]];
-  }
-  else {
+  } else {
     recomendedPosts = [posts[allPostsNameArr[index - 2]], posts[allPostsNameArr[index - 1]], posts[allPostsNameArr[index + 1]]];
   }
 
