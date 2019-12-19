@@ -469,15 +469,20 @@ let routes = {
 postsKeys.forEach(key => {
   const postPath = `/blog/${key}/`;
   const index = allPostsNameArr.indexOf(key);
-  let recomendedPosts;
+  let recomendedPosts = {};
 
   if (index === 0 || index === 1) {
-    recomendedPosts = firstN(posts, 4);
-    delete recomendedPosts[allPostsNameArr[index]];
-  } else if (index === allPostsNameArr.length - 1) {
-    recomendedPosts = [posts[allPostsNameArr[index - 2]], posts[allPostsNameArr[index - 1]], posts[allPostsNameArr[0]]];
+    const auxIndex = (index === 0) ? 1 : 0;
+
+    recomendedPosts[allPostsNameArr[auxIndex]] = posts[allPostsNameArr[auxIndex]];
+    recomendedPosts[allPostsNameArr[2]] = posts[allPostsNameArr[2]];
+    recomendedPosts[allPostsNameArr[3]] = posts[allPostsNameArr[3]];
   } else {
-    recomendedPosts = [posts[allPostsNameArr[index - 2]], posts[allPostsNameArr[index - 1]], posts[allPostsNameArr[index + 1]]];
+    const auxIndex = (index === allPostsNameArr.length - 1) ? 0 : index + 1;
+
+    recomendedPosts[allPostsNameArr[index - 2]] = (posts[allPostsNameArr[index - 2]]);
+    recomendedPosts[allPostsNameArr[index - 1]] = (posts[allPostsNameArr[index - 1]]);
+    recomendedPosts[allPostsNameArr[auxIndex]] = (posts[allPostsNameArr[auxIndex]]);
   }
 
   posts[key]['image_fb'] = posts[key]['image'];

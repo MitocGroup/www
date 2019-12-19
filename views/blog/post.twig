@@ -90,7 +90,7 @@
             {% for key, value in  recomendedPosts %}
                 <div class="flex-item-3">
                     <div class="blog-post">
-                        <a href="{{ key.href }}">
+                        <a href="/blog/{{ key }}/">
                             <img src="{{ asset( value.image ) }}" alt="Our Blog" class="recomended-blog-img"/>
                         </a>
                         <a href="/blog/{{ key }}/">
