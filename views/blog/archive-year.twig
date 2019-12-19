@@ -11,15 +11,15 @@
                 <div class="flex flex-row">
                     <a href="/archive/" class="archive flex">All <i class="mdi mdi-chevron-right"></i></a>
                     <div class="flex years-row">
-                    <a href="/archive/{{ year }}/" class="archive flex" disabled>{{ year }} <i class="mdi mdi-chevron-right"></i></a>
+                    <a href="/archive/{{ year }}/" class="archive flex {% if month is empty %} color-main-color {% endif %}" disabled>{{ year }} </a><i class="mdi mdi-chevron-right"></i>
                     </div>
                 </div>
                 <div class="months-columns">
-                    {% for month in months %}
-                        {% if month|lower in monthsOfTheYear[year] %}
-                            <a href="/archive/{{ year }}/{{ month|lower }}/">{{ month }}</a>
+                    {% for monthFor in months %}
+                        {% if monthFor|lower in monthsOfTheYear[year] %}
+                            <a href="/archive/{{ year }}/{{ monthFor|lower }}/" {% if month is not empty and month == monthFor|lower %} class="color-main-color" {% endif %}>{{ monthFor }}</a>
                         {% else %}
-                            <p>{{ month }}</p>
+                            <p>{{ monthFor }}</p>
                         {% endif %}
                     {% endfor %}
                 </div>

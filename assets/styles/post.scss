@@ -380,9 +380,19 @@
   }
   .btn-all-posts {
     font-size: 14px;
-    color: #146B2F;
-    border: 1px solid #146B2F;
+    color: white;
     border-radius: 10px;
+    transition: 0.8s;
+    background-image: -moz-linear-gradient(to right, #28B655 0%, #75DB4F 51%, #28B655 100%);
+    background-image: -webkit-linear-gradient(to right, #28B655 0%, #75DB4F 51%, #28B655 100%);
+    background-image: -o-linear-gradient(to right, #28B655 0%, #75DB4F 51%, #28B655 100%);
+    background-image: linear-gradient(to right, #28B655 0%, #75DB4F 51%, #28B655 100%);
+    &:hover,
+    &:focus {
+      box-shadow: inset 11em 0 0 0 $main-color;
+      color: white;
+
+    }
   }
   .flex-row {
     justify-content: space-around;
@@ -517,4 +527,8 @@
   width: 100%;
   object-fit: cover;
   height: 200px;
+}
+
+.color-main-color {
+  color: $main-color !important;
 }
