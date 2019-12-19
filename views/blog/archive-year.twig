@@ -11,15 +11,15 @@
                 <div class="flex flex-row">
                     <a href="/archive/" class="archive flex">All <i class="mdi mdi-chevron-right"></i></a>
                     <div class="flex years-row">
-                    <a href="/archive/{{ year }}/" class="archive flex" disabled>{{ year }} <i class="mdi mdi-chevron-right"></i></a>
+                    <a href="/archive/{{ year }}/" class="archive flex {% if month is empty %} color-main-color {% endif %}" disabled>{{ year }} </a><i class="mdi mdi-chevron-right"></i>
                     </div>
                 </div>
                 <div class="months-columns">
-                    {% for month in months %}
-                        {% if month|lower in monthsOfTheYear[year] %}
-                            <a href="/archive/{{ year }}/{{ month|lower }}/">{{ month }}</a>
+                    {% for monthFor in months %}
+                        {% if monthFor|lower in monthsOfTheYear[year] %}
+                            <a href="/archive/{{ year }}/{{ monthFor|lower }}/" {% if month is not empty and month == monthFor|lower %} class="color-main-color" {% endif %}>{{ monthFor }}</a>
                         {% else %}
-                            <p>{{ month }}</p>
+                            <p>{{ monthFor }}</p>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -76,18 +76,22 @@
           <hr class="line-gray">
           <div class="flex years-row-bottom">
                 {% if month is empty %}
-                    {% if year != 2015 %}
+                    {% if year != distinctYears[distinctYears|length - 1] %}
                         <a href="/archive/{{ year - 1}}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ year - 1 }}</a>
                     {% endif %}
-                    {% if year != 2019 %}
+                    {% if year != distinctYears[0] %}
                         <a href="/archive/{{ year + 1}}/" class="archive end">{{ year + 1 }} <i class="mdi mdi-chevron-right"></i></a>
                     {% endif %}
                 {% else %}
-                    {% if monthIndex + 1 < monthsOfTheYear|length %}
+                    {% if monthIndex + 1 < monthsOfTheYear[year]|length %}
                         <a href="/archive/{{ year }}/{{ monthsOfTheYear[year][monthIndex + 1] }}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ monthsOfTheYear[year][monthIndex + 1]|capitalize }}</a>
+                    {% elseif year != distinctYears[distinctYears|length - 1] %}
+                        <a href="/archive/{{ year - 1}}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ year - 1 }}</a>
                     {% endif %}
                     {% if monthIndex - 1 >= 0 %}
                         <a href="/archive/{{ year }}/{{ monthsOfTheYear[year][monthIndex - 1] }}/" class="archive end">{{ monthsOfTheYear[year][monthIndex - 1]|capitalize }}<i class="mdi mdi-chevron-right"></i></a>
+                    {% elseif year != distinctYears[0] %}
+                        <a href="/archive/{{ year + 1}}/" class="archive end">{{ year + 1 }}<i class="mdi mdi-chevron-right"></i></a>
                     {% endif %}
                 {% endif %}
             </div>

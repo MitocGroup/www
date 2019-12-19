@@ -471,7 +471,7 @@ postsKeys.forEach(key => {
   const index = allPostsNameArr.indexOf(key);
   let recomendedPosts;
 
-  if (index === 0) {
+  if (index === 0 || index === 1) {
     recomendedPosts = firstN(posts, 4);
     delete recomendedPosts[allPostsNameArr[index]];
   } else if (index === allPostsNameArr.length - 1) {
@@ -506,6 +506,7 @@ distinctYears.forEach(year => {
         ...defaultVariables,
         postsListObject: posts,
         monthsOfTheYear,
+        distinctYears,
         monthIndex: monthsOfTheYear[year].indexOf(month),
         months,
         year,

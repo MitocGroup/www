@@ -81,15 +81,18 @@
         </div>
     </footer>
   
-    <div class="last-blogs container">
-        <div class="flex-row mt-30 mb-30">
-            <div class="flex-column">
-                <h3 class="center">Recomended Posts</h3>
-                <a class="btn-border-green btn" href="/blog/">Read more</a>
-            </div>
+    <div class="recomended-blogs container flex-column mt-30 mb-30">
+        <div class="mt-30 recomended-blog-header">
+                <h3>Recomended Posts </h3>
+                <a class="btn btn-all-posts" href="/archive/"><span>See All Posts</span></a>
+        </div>
+        <div class="flex-row">
             {% for key, value in  recomendedPosts %}
                 <div class="flex-item-3">
                     <div class="blog-post">
+                        <a href="{{ key.href }}">
+                            <img src="{{ asset( value.image ) }}" alt="Our Blog" class="recomended-blog-img"/>
+                        </a>
                         <a href="/blog/{{ key }}/">
                             <h5>{{ value.title }}</h5>
                             <p class="description">{{ value.description }}</p>
