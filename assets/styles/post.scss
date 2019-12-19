@@ -254,6 +254,7 @@
 
 .post {
   margin-bottom: 30px;
+  overflow-wrap: break-word;
   h1 {
     --x-height-multiplier: 0.342;
     --baseline-multiplier: 0.22;
@@ -536,4 +537,14 @@
 
 .color-main-color {
   color: $main-color !important;
+}
+
+@-moz-document url-prefix() {
+  .recomended-blogs {
+    .btn-all-posts {
+      span {
+        padding: 1px 10px 0px 10px;
+      }
+    }
+  }
 }
