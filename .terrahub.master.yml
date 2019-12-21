@@ -1,2 +1,2 @@
 terraform:
-  varFile: ['default.tfvars', 'workspace/master.tfvars']
+  varFile: ['default.tfvars', 'master.tfvars']

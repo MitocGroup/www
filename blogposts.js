@@ -64,4 +64,16 @@ posts.forEach((directory) => {
   }
 });
 
-fs.writeFileSync('./static/json/posts.json', JSON.stringify(postsObj) + '\n');
+let sortedPostObj = Object.keys(postsObj)
+  .sort((a, b) => {
+    return -(new Date(postsObj[a].publicationDate) - new Date(postsObj[b].publicationDate));
+  })
+  .reduce((prev, curr) => {
+    const event = new Date(postsObj[curr].publicationDate);
+    const options = { month: 'short', day: 'numeric', year: 'numeric' };
+    prev[curr] = postsObj[curr];
+    prev[curr].publicationDate = event.toLocaleDateString('en-EN', options);
+    return prev;
+  }, {});
+
+fs.writeFileSync('./static/json/posts.json', JSON.stringify(sortedPostObj) + '\n');

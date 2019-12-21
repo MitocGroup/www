@@ -179,21 +179,21 @@
 
       <div class="flex-row marginTop36">
         <div class="flex-item-4">
-          <a href="/blog/mitoc-group-inc-granted-aws-advanced-technology-partner-status" rel="noopener">
+          <a href="/blog/mitoc-group-inc-granted-aws-advanced-technology-partner-status/" rel="noopener">
             <div class="block-effect">
               <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-advanced.svg') }}" alt="Amazon Web Services"/>
             </div>
           </a>
         </div>
         <div class="flex-item-4">
-          <a href="/blog/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda" rel="noopener">
+          <a href="/blog/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda/" rel="noopener">
             <div class="block-effect">
               <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-service.svg') }}" alt="Amazon Web Services"/>
             </div>
           </a>
         </div>
         <div class="flex-item-4">
-          <a href="/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team" rel="noopener">
+          <a href="/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team/" rel="noopener">
             <div class="block-effect">
               <img class="lazyload" data-src="{{ asset('@images/v2/partners/aws-partner-lambda.svg') }}" alt="Amazon Web Services"/>
             </div>
@@ -219,7 +219,26 @@
       </div>
       <header class="section-heading"></header>
       <div id="blogContent" class="section-content marginTop36">
-        <div id="jsonContent" class="flex-row"></div>
+        <div id="jsonContent" class="flex-row">
+          {% for key, value in latestBlogPosts %}
+            <div class="flex-item-4">
+                <div class="blog-content flex-column">
+                <div class="img-block">
+                  <a href="/blog/{{ key }}/" class="blog-element" alt="{{ value.title }}" rel="noopener">
+                    <img class="img-responsive lazyload" data-src="{{ asset( value.image ) }}" alt="{{ value.title }}" />
+                  </a>
+                </div>
+                  <span class="post-date">{{ value.publicationDate }}</span>
+                  <h4 class="post-title"><a href="/blog/{{ key }}/" rel="noopener">{{ value.title }}</a></h4>
+                  <a href="/blog/{{ key }}/" class="read-more" rel="noopener">
+                    Read More <i class="mdi mdi-chevron-right"></i>
+                  </a>
+                </div> 
+              </div>
+          {% endfor %}
+        </div>
+
+        </div>
       </div>
       <div class="top_button center marginTop36">
         <a href="/blog/" rel="noopener">

@@ -15,7 +15,7 @@ Thu, 20 October 2016 12:20:55 -0400
 ---
 
 <div class="img-post-left">
-    <img src="/images/blog/2016-11-29/partner-network.jpeg" alt="lambda edge" />
+    <img src="/images/blog/2016-10-20/lambda-edge.png" alt="lambda edge" />
     <div class="center img-description">Source:
         <a href="https://devopscube.com/wp-content/uploads/2016/12/lamda@edge.png" rel="noreferrer">https://devopscube.com/wp-content/uploads/2016/12/lamda@edge.png</a>
     </div>
@@ -33,12 +33,12 @@ The key points to keep in mind as we move forward:
 
 ### Serverless Architecture on AWS
 
-Before we dive into the details of the blue-green deployment process for serverless powered applications, it's vital to point out the architecture of a typical web application that uses serverless computing from AWS (as shown in the picture below, as well as described in [this blogpost](https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework)).
+Before we dive into the details of the blue-green deployment process for serverless powered applications, it's vital to point out the architecture of a typical web application that uses serverless computing from AWS (as shown in the picture below, as well as described in [this blogpost](https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework/)).
 
 <div class="img-post-left">
     <img src="https://miro.medium.com/max/3968/1*obn8oKjcqkJJUIZ2bB59xg.png" alt="lambda-deep-framework" />
     <div class="center img-description">
-        <a href="https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework" rel="noreferrer">https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework</a>
+        <a href="https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework/" rel="noreferrer">https://www.mitocgroup.com/blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework/</a>
     </div>
 </div>
 
@@ -156,9 +156,15 @@ What are the down sizes (pre-requisites) of the blue-green deployments v2?
 
 Unfortunately, there is no silver bullet that would work perfectly for any serverless powered applications on AWS. As with any software, it's up to us (developers or devops engineers) to decide the right process that fits specific use case. We just wanted to share two different approaches that empowered us to provide high quality at scale without compromising on resources and costs (which, by the way, are ridiculously low, but that's another blogpost).
 
+
+<blockquote class="tw-align-center twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Proud to announce that <a href="https://twitter.com/hashtag/AWSLambda?src=hash&amp;ref_src=twsrc%5Etfw">#AWSLambda</a> team decided to feature <a href="https://twitter.com/MitocGroup?ref_src=twsrc%5Etfw">@MitocGroup</a> as framework partners. Thank you, <a href="https://twitter.com/awscloud?ref_src=twsrc%5Etfw">@awscloud</a> ! <a href="https://t.co/VzGkMefIZD">https://t.co/VzGkMefIZD</a></p>&mdash; Mitoc Group (@MitocGroup) <a href="https://twitter.com/MitocGroup/status/699731557846802432?ref_src=twsrc%5Etfw">February 16, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <div class="center img-description">
-        <a href="https://www.mitocgroup.com/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team">
-        https://www.mitocgroup.com/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <a href="https://www.mitocgroup.com/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team/">
+        https://www.mitocgroup.com/blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team/</a>
 </div>
 
 Last, but not the least, [Mitoc Group](https://www.mitocgroup.com/) is a technology company that focuses on innovative enterprise solutions. Share your thoughts and your experience on [LinkedIn](https://linkedin.com/company/mitoc-group), [Twitter](https://twitter.com/mitocgroup) or [Facebook](https://facebook.com/mitocgroup).

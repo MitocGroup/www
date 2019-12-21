@@ -1,0 +1,61 @@
+{% extends '../blog.twig' %}
+
+{% block content %}
+  
+<header class="container u-maxWidth740 author-page">
+    <div class="header-post display-flex">
+        <div class="about">
+            <div class="flex">
+                <a href="https://twitter.com/{{ author }}" class="author-name">{{ authors[author]['author'] }}</a>
+                <a href="{{ authors[author]['twitter'] }}" class="btn-follow">
+                    <span>Follow</span>
+                </a>
+            </div>
+            <p>{{ authors[author]['bio'] }}</p>
+        </div>
+        <div class="avatar-blog">
+            <img src="{{ authors[author]['avatar'] }}" alt="{{ authors[author]['author'] }}" />
+        </div>
+    </div>
+</header>
+<hr class="line-gray">
+  
+<!-- {% set authorPosts = {} %}
+  {% for key, item in postsListObject %}
+    {% if item.featured %}
+        {% set temp = item|merge({href: key ~ '/'}) %}
+        {% set authorPosts = authorPosts|merge({(item.featured):temp}) %}
+    {% endif %}
+  {% endfor %} -->
+
+  <div class="mob-hidden">
+      <div class="blog-container">
+          <div class="blogs firefox">
+              {% if postsListObject|length > 0 %}
+                <h1 class="ml-20">Authors Posts</h1>
+                    {% for key, value in postsListObject %}
+                        <div class="flex-column flex-item-6 internal-article">
+                            <a href="/blog/{{ key }}/">
+                            <img src="{{ asset( value.image ) }}" alt="{{ value.title }}"/>
+                            </a>
+                            <p class="gray-blog">{{ value.publicationDate }} {{ value.minRead }}</p>
+                            <a href="/blog/{{ key }}/">
+                                <h2>{{ value.title }}</h2>
+                            </a>
+                            <p class="blog-post overflow-ellipsis">{{ value.description }}</p>
+                            <div class="learn-more-b">
+                                <a href="/blog/{{ key }}/" class="learn-more">Learn more
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                {% endfor %}    
+                {% else %}   
+                <div class="none-found">
+                    <h2>Sorry, this author doesn't have any posts...</h2>
+                </div>  
+                {% endif %}     
+          </div>
+      </div>
+    </div>
+{% endblock %}

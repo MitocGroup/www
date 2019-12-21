@@ -57,6 +57,7 @@ Last week we covered in great length of details [Terraform Module Components for
 ### Landing Zone VPC
 
 AWS provides security capabilities and services to increase privacy and control network access. For example, Amazon VPC is offering by design built-in network firewalls that isolate AWS resources from both outside world and other inside networks.
+
 [Landing Zone VPC component](https://github.com/MitocGroup/terraform-aws-landing-zone/tree/master/components/landing_zone_vpc) allows customers to customize these network boundaries beyond default settings. Implemented as terraform component, this piece of infrastructure as code empowers users to import existing VPCs (therefore no downtime), as well as create new VPCs that can easily replace current networks or work as an extension to existing networks.
 
 ### Landing Zone Subnet

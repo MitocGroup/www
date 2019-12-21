@@ -14,7 +14,7 @@ Sun, 4 August 2019 12:20:55 -0400
 
 In this short article we would like to share what we were able to achieve in a very short period of time. Our intention is to help others if they come across something similar. Unfortunately, we can't give proper credits to everybody who made this reference architecture possible. Nevertheless, when the time comes, we'll gladly update this article with well deserved recognition.
 
-<div class="padd25px">
+<div class="padd25px extra-large">
     <img src="/images/blog/2019-08-04/kafka-arch.png" alt="partner aws" />
     <div class="center img-description">My Architecture: Apache Kafka by Confluent on AWS Cloud</div>
 </div>

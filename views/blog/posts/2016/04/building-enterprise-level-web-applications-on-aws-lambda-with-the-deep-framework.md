@@ -53,7 +53,7 @@ The architecture of every web application we build or transform, including the o
   </a>
 </div>
 
-The todo app is written in AngularJS and deployed on Amazon S3, behind Amazon CloudFront (the front-end tier). The tasks management is processed by AWS Lambda, optionally behind Amazon API Gateway (the back-end tier). The tasks metadata is stored in Amazon DynamoDB (the data tier). The transformed todo app, along with instructions on how to install and deploy this web application, is described in [this blog post](https://www.mitocgroup.com/blog/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework) and the code is available on Github:
+The todo app is written in AngularJS and deployed on Amazon S3, behind Amazon CloudFront (the front-end tier). The tasks management is processed by AWS Lambda, optionally behind Amazon API Gateway (the back-end tier). The tasks metadata is stored in Amazon DynamoDB (the data tier). The transformed todo app, along with instructions on how to install and deploy this web application, is described in [this blog post](https://www.mitocgroup.com/blog/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework/) and the code is available on Github:
 
 <div class="external-article">
   <a href="https://github.com/MitocGroup/deep-microservices-todo-app">
@@ -417,7 +417,7 @@ We have been continuously benchmarking AWS Lambda for various use cases in our m
 
 Particularly, for todo app, we have performed various benchmarking analysis on AWS Lambda by tweaking different components in a specific function (e.g. function size, memory size, billable cost, etc.). Next, we would like to share results with you:
 
-<div class="horizontalScrollTable" data-markdown="1">
+<div class="horizontalScrollTable extended-table" data-markdown="1">
 Req No | Function Size (MB) | Memory Size (MB) | Max Memory Used (MB) | Start time | Stop time | Front-end Call (ms) | Back-end Call (ms) | Billed Time (ms) | Billed Time ($)
 -------|--------------------|------------------|----------------------|------------|-----------|---------------------|-------------------|------------------|----------------
 1 | 1.1 | 128 | 34 | 20:15.8 | 20:16.2 | 359 | 200.47 | 300 | 0.000000624
@@ -442,6 +442,7 @@ Speaking of performance, we find AWS Lambda mature enough to power large-scale w
 
 Using the benchmarking tool, we ran multiple scenarios on the same function from todo app:
 
+<div class="horizontalScrollTable" data-markdown="1">
 Function Size (MB) | Memory Size (MB) | Max Memory Used (MB) | Avg Front-end (ms) | Avg Back-end (ms) | Total Calls (#) | Total Billed (ms) | Total Billed ($/1B)*
 -------------------|------------------|----------------------|--------------------|-------------------|-----------------|---------------------|---------------------
 1.1  | 128 | 34-35 | 375.50 | 193.67 | 10  | 2,400  | 4,992
@@ -456,6 +457,7 @@ Function Size (MB) | Memory Size (MB) | Max Memory Used (MB) | Avg Front-end (ms
 55.8 | 128 | 83-87 | 416.10 | 220.91 | 100 | 26,900 | 55,952
 55.8 | 256 | 50-71 | 377.69 | 194.22 | 100 | 25,600 | 106,752
 55.8 | 512 | 57-81 | 353.46 | 174.65 | 100 | 23,300 | 194,322
+</div>
 
 <div class="padd25px">
   <div class="center img-description">Key performance indicators that helps decide how to fine tune the web application (* 1B = 1 Billion)</div>
