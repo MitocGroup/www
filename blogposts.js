@@ -3,6 +3,21 @@
 const fs = require('fs');
 const markdowneyjr = require('markdowneyjr');
 const showdown = require('showdown');
+const btoa = require('btoa');
+const domain = 'cdn.mitocgroup.com';
+
+function getQuery(bucket, key, width) {
+  return `{
+    "bucket": "${bucket}",
+    "key": "${key}",
+    "edits": {
+      "resize": {
+        "width": ${width},
+        "fit": "outside"
+      }
+    }
+  }`;
+}
 
 const classMap = {
   ol: 'graf graf-ol-li graf-grap',
@@ -31,6 +46,33 @@ const blogPostsFolder = './views/blog/posts/';
 const regex = /.md$/;
 let postsObj, mainData;
 
+const imgOptimization = function(str) {
+  let arr = [],
+    re = /<img.*?src=[\'"](.*?)[\'"].*?>/g,
+    item;
+
+  while (item = re.exec(str)) {
+    arr.push(item[1]);
+  }
+  let newContent = str;
+  arr.forEach(item => {
+    const ImagesSmartphonePortrait = `https://${domain}/${btoa(getQuery(domain, item, 320).toString())}`;
+    const ImagesSmartphoneLandscape = `https://${domain}/${btoa(getQuery(domain, item, 480).toString())}`;
+    const ImagesTabletPortrait = `https://${domain}/${btoa(getQuery(domain, item, 700).toString())}`;
+    const ImagesTabletLandscape = `https://${domain}/${btoa(getQuery(domain, item, 960).toString())}`;
+    const newSrc = `${ImagesSmartphonePortrait} 320w,
+    ${ImagesSmartphoneLandscape} 480w,
+    ${ImagesTabletPortrait} 700w,
+    ${ImagesTabletLandscape} 920w`
+    const sizes = 'sizes=\"(min-width: 1366px) 1024px, 100vw\"'
+    const regEx = new RegExp(`src=[\'"](?:\s*)${ item }(?:\s*)[\'"]`, 'gi');
+
+    newContent = newContent.split(regEx).join(`srcset=\"${ newSrc }\" ${ sizes } `);
+    
+  });
+  return newContent;
+}
+
 const posts = fs.readdirSync(blogPostsFolder);
 posts.forEach((directory) => {
   if (fs.statSync(`${blogPostsFolder}/${directory}`).isDirectory()) {
@@ -42,8 +84,8 @@ posts.forEach((directory) => {
           if (regex.test(post)) {
             let fileContent = fs.readFileSync(`${blogPostsFolder}/${directory}/${month}/${post}`).toString();
             const dict = fileContent.substr(0, fileContent.indexOf('---'));
-            const content = fileContent.substr(fileContent.indexOf('---') + 3);
-
+            let content = fileContent.substr(fileContent.indexOf('---') + 3);
+            content = imgOptimization(content);
             mainData = markdowneyjr(dict, {});
 
             let wordCount = (content + mainData.description).replace(/[^\w ]/g, '').split(/\s+/).length;
