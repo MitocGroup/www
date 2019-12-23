@@ -1,9 +1,13 @@
 'use strict';
 
 const fs = require('fs');
+const firstN = (obj, n) => Object.keys(obj).slice(0, n).reduce((memo, current) => { memo[current] = obj[current]; return memo; }, {});
+
 const nrVisiblePosts = 6;
-const postsContent = fs.readFileSync('./static/json/posts.json');
-const postsListObject = JSON.parse(postsContent);
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+const posts = JSON.parse(fs.readFileSync('./static/json/posts.json'));
+const postsKeys = Object.keys(posts);
 
 const authors = {
   eistrati: {
@@ -11,8 +15,25 @@ const authors = {
     bio: 'Proud Father. Lucky Husband. Open Source Contributor.' +
       ' DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.',
     avatar: 'https://www.mitocgroup.com/images/blog/author/eistrati.png',
-    twitter: 'https://twitter.com/eistrati',
-    twitterIntent: 'https://twitter.com/intent/user?screen_name=eistrati'
+    profile: 'https://www.mitocgroup.com/author/eistrati/',
+    twitter: 'https://twitter.com/intent/user?screen_name=eistrati'
+  },
+  irca20: {
+    author: 'Irina Popov',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor' +
+      ' incididunt ut labore et dolore magna aliqua. Platea dictumst vestibulum rhoncus est pellentesque elit.',
+    avatar: 'https://www.mitocgroup.com/images/blog/author/irca20.png',
+    profile: 'https://www.mitocgroup.com/author/irca20/',
+    twitter: 'https://twitter.com/intent/user?screen_name=irca20'
+  },
+  mitocgroup: {
+    author: 'Mitoc Group',
+    bio: 'technology company focusing on automation using cloud native services' +
+      ' with proven track record helping clients migrate to the cloud, as well as' +
+      ' establish devops and dataops processes',
+    avatar: 'https://www.mitocgroup.com/images/blog/author/mitoc.png',
+    profile: 'https://www.mitocgroup.com/author/mitocgroup/',
+    twitter: 'https://twitter.com/intent/user?screen_name=mitocgroup'
   }
 };
 
@@ -23,7 +44,7 @@ const defaultVariables = {
     ' Our track record includes helping private equity portfolio companies migrate to public clouds,' +
     ' as well as establish devops and dataops processes using cloud native services and industry' +
     ' best practices. We deliver automations and business results in weeks instead of months.',
-  authors: authors,
+  authors,
   publisher: 'MitocGroup.com',
   company: 'Mitoc Group Inc.',
   address: '2 University Plaza Suite 100',
@@ -107,18 +128,26 @@ const blogAssets = {
   'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
 };
 
-let posts = {};
-posts = Object.keys(postsListObject)
-  .sort((a, b) => {
-    return -(new Date(postsListObject[a].publicationDate) - new Date(postsListObject[b].publicationDate));
-  })
-  .reduce((prev, curr) => {
-    const event = new Date(postsListObject[curr].publicationDate);
-    const options = { month: 'short', day: 'numeric', year: 'numeric' };
-    prev[curr] = postsListObject[curr];
-    prev[curr].publicationDate = event.toLocaleDateString('en-EN', options);
-    return prev;
-  }, {});
+let monthsOfTheYear = {};
+const years = [];
+const allPostsNameArr = [];
+const latestBlogPosts = firstN(posts, 3);
+
+postsKeys.forEach(key => {
+  const year = new Date(posts[key].publicationDate).getFullYear();
+  const month = new Date(posts[key].publicationDate).toLocaleString('en-EN', { month: 'long' }).toLowerCase();
+
+  years.push(year);
+  if (!monthsOfTheYear.hasOwnProperty(year)) {
+    monthsOfTheYear[year] = [];
+  }
+  if (!monthsOfTheYear[year].includes(month)) {
+    monthsOfTheYear[year].push(month);
+  }
+  allPostsNameArr.push(key);
+});
+
+const distinctYears = [...new Set(years)];
 
 let routes = {
   '/': {
@@ -126,7 +155,8 @@ let routes = {
     vars: {
       ...defaultVariables,
       title: defaultVariables.title + ' | Cloud Native Automation in Private Equity',
-      href: defaultVariables.url
+      href: defaultVariables.url,
+      latestBlogPosts
     },
     assets: indexAssets
   },
@@ -362,11 +392,98 @@ let routes = {
       nrVisiblePosts
     },
     assets: blogAssets
+  },
+  '/author/': {
+    view: 'blog/author.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Eugene Istrati | Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/author/eistrati/',
+      image: 'https://www.mitocgroup.com/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: posts,
+      author: 'eistrati'
+    },
+    assets: blogAssets
+  },
+  '/author/eistrati/': {
+    view: 'blog/author.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Eugene Istrati | Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/author/eistrati/',
+      image: 'https://www.mitocgroup.com/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: posts,
+      author: 'eistrati'
+    },
+    assets: blogAssets
+  },
+  '/author/mitocgroup/': {
+    view: 'blog/author.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Mitoc Group | Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/author/mitocgroup/',
+      image: 'https://www.mitocgroup.com/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: {},
+      author: 'mitocgroup'
+    },
+    assets: blogAssets
+  },
+  '/author/irca20/': {
+    view: 'blog/author.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Irca Popov | Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/author/irca20/',
+      image: 'https://www.mitocgroup.com/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: {},
+      author: 'irca20'
+    },
+    assets: blogAssets
+  },
+  '/archive/': {
+    view: 'blog/archive.twig',
+    vars: {
+      ...defaultVariables,
+      title: 'Archive Blog Articles | ' + defaultVariables.title,
+      href: defaultVariables.url + '/archive/',
+      image: '/images/blog/2018-08-12/dashboard.png',
+      publisher: 'https://www.facebook.com/MitocGroup',
+      timestamp: '2018-04-01T12:34:56.789Z',
+      postsListObject: posts,
+      author: 'eistrati',
+      years: distinctYears
+    },
+    assets: blogAssets
   }
 };
 
-Object.keys(posts).forEach(key => {
-  let postPath = `/blog/${key}/`;
+postsKeys.forEach(key => {
+  const postPath = `/blog/${key}/`;
+  const index = allPostsNameArr.indexOf(key);
+  let recomendedPosts = {};
+
+  if (index === 0 || index === 1) {
+    const auxIndex = (index === 0) ? 1 : 0;
+
+    recomendedPosts[allPostsNameArr[auxIndex]] = posts[allPostsNameArr[auxIndex]];
+    recomendedPosts[allPostsNameArr[2]] = posts[allPostsNameArr[2]];
+    recomendedPosts[allPostsNameArr[3]] = posts[allPostsNameArr[3]];
+  } else {
+    const auxIndex = (index === allPostsNameArr.length - 1) ? 0 : index + 1;
+
+    recomendedPosts[allPostsNameArr[index - 2]] = (posts[allPostsNameArr[index - 2]]);
+    recomendedPosts[allPostsNameArr[index - 1]] = (posts[allPostsNameArr[index - 1]]);
+    recomendedPosts[allPostsNameArr[auxIndex]] = (posts[allPostsNameArr[auxIndex]]);
+  }
 
   posts[key]['image_fb'] = posts[key]['image'];
   posts[key]['image_tw'] = posts[key]['image'];
@@ -376,7 +493,42 @@ Object.keys(posts).forEach(key => {
     vars: {
       ...defaultVariables,
       ...posts[key],
+      recomendedPosts,
       posts
+    }
+  };
+});
+
+distinctYears.forEach(year => {
+  const yearPath = `/archive/${year}/`;
+
+  monthsOfTheYear[year].forEach(month => {
+    const monthPath = `/archive/${year}/${month}/`;
+
+    routes[monthPath] = {
+      view: 'blog/archive-year.twig',
+      vars: {
+        ...defaultVariables,
+        postsListObject: posts,
+        monthsOfTheYear,
+        distinctYears,
+        monthIndex: monthsOfTheYear[year].indexOf(month),
+        months,
+        year,
+        month
+      }
+    };
+  });
+
+  routes[yearPath] = {
+    view: 'blog/archive-year.twig',
+    vars: {
+      ...defaultVariables,
+      postsListObject: posts,
+      distinctYears,
+      monthsOfTheYear,
+      months,
+      year
     }
   };
 });
@@ -386,5 +538,5 @@ module.exports = {
     port: 8000,
     ignorePatterns: ['.idea', '.git', 'bin', 'backend', 'build', 'node_modules']
   },
-  routes: routes
+  routes
 };

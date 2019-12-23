@@ -1,0 +1,101 @@
+{% extends '../blog.twig' %}
+
+{% block content %}
+  
+<header class="container u-maxWidth740 archive-page">
+    <div class="header-post display-flex">
+        <div class="about">
+            <p>Archive of stories published</p>
+            <hr class="line-gray">
+            <div class="months-header flex flex-row">
+                <div class="flex flex-row">
+                    <a href="/archive/" class="archive flex">All <i class="mdi mdi-chevron-right"></i></a>
+                    <div class="flex years-row">
+                    <a href="/archive/{{ year }}/" class="archive flex {% if month is empty %} color-main-color {% endif %}" disabled>{{ year }} </a><i class="mdi mdi-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="months-columns">
+                    {% for monthFor in months %}
+                        {% if monthFor|lower in monthsOfTheYear[year] %}
+                            <a href="/archive/{{ year }}/{{ monthFor|lower }}/" {% if month is not empty and month == monthFor|lower %} class="color-main-color" {% endif %}>{{ monthFor }}</a>
+                        {% else %}
+                            <p>{{ monthFor }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% set postsToShow = {} %}
+
+{% if month is empty %}
+    {% for key, item in postsListObject %}
+    {% if item.publicationDate|date("Y") == year %}
+        {% set temp = item|merge({href: key ~ '/'}) %}
+        {% set postsToShow = postsToShow|merge({(key):temp}) %}
+    {% endif %}
+    {% endfor %}
+{% else %}
+    {% for key, item in postsListObject %}
+    {% if item.publicationDate|date("F")|lower == month and item.publicationDate|date("Y") == year %}
+        {% set temp = item|merge({href: key ~ '/'}) %}
+        {% set postsToShow = postsToShow|merge({(key):temp}) %}
+    {% endif %}
+    {% endfor %}
+{% endif %}
+
+  <div class="mob-hidden">
+      <div class="blog-container">
+          <div class="blogs firefox">
+              {% if postsToShow|length > 0 %}
+                    {% for key, value in postsToShow %}
+                        <div class="flex-column flex-item-6 internal-article">
+                            <a href="/blog/{{ key }}/">
+                            <img src="{{ asset( value.image ) }}" alt="{{ value.title }}"/>
+                            </a>
+                            <p class="gray-blog">{{ value.publicationDate }} {{ value.minRead }}</p>
+                            <a href="/blog/{{ key }}/">
+                                <h2>{{ value.title }}</h2>
+                            </a>
+                            <p class="blog-post overflow-ellipsis">{{ value.description }}</p>
+                            <div class="learn-more-b">
+                                <a href="/blog/{{ key }}/" class="learn-more">Learn more
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                {% endfor %}    
+                {% else %}   
+                <div class="none-found">
+                    <h2>Sorry, this year doesn't have any posts...</h2>
+                </div>  
+                {% endif %}     
+          </div>
+          <hr class="line-gray">
+          <div class="flex years-row-bottom">
+                {% if month is empty %}
+                    {% if year != distinctYears[distinctYears|length - 1] %}
+                        <a href="/archive/{{ year - 1}}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ year - 1 }}</a>
+                    {% endif %}
+                    {% if year != distinctYears[0] %}
+                        <a href="/archive/{{ year + 1}}/" class="archive end">{{ year + 1 }} <i class="mdi mdi-chevron-right"></i></a>
+                    {% endif %}
+                {% else %}
+                    {% if monthIndex + 1 < monthsOfTheYear[year]|length %}
+                        <a href="/archive/{{ year }}/{{ monthsOfTheYear[year][monthIndex + 1] }}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ monthsOfTheYear[year][monthIndex + 1]|capitalize }}</a>
+                    {% elseif year != distinctYears[distinctYears|length - 1] %}
+                        <a href="/archive/{{ year - 1}}/" class="archive"><i class="mdi mdi-chevron-left"></i>{{ year - 1 }}</a>
+                    {% endif %}
+                    {% if monthIndex - 1 >= 0 %}
+                        <a href="/archive/{{ year }}/{{ monthsOfTheYear[year][monthIndex - 1] }}/" class="archive end">{{ monthsOfTheYear[year][monthIndex - 1]|capitalize }}<i class="mdi mdi-chevron-right"></i></a>
+                    {% elseif year != distinctYears[0] %}
+                        <a href="/archive/{{ year + 1}}/" class="archive end">{{ year + 1 }}<i class="mdi mdi-chevron-right"></i></a>
+                    {% endif %}
+                {% endif %}
+            </div>
+      </div>
+    </div>
+
+{% endblock %}

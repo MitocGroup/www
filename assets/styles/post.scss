@@ -254,6 +254,7 @@
 
 .post {
   margin-bottom: 30px;
+  overflow-wrap: break-word;
   h1 {
     --x-height-multiplier: 0.342;
     --baseline-multiplier: 0.22;
@@ -361,21 +362,48 @@
   font-family: 'CharterItalic', sans-serif;
 }
 
-.last-blogs {
+.recomended-blogs {
   margin-top: -75px;
   font-family: 'Eox2-Regular', sans-serif;
+  .recomended-blog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    h3 {
+      font-family: 'Eox2-Regular', sans-serif;
+      color: $dark-green;
+      font-weight: 500;
+      font-size: 1.17em;
+      margin-top: 0px;
+    }
+  }
+  .btn-all-posts {
+    font-size: 14px;
+    padding: 2px;
+    border-radius: 10px;
+    transition: 0.8s;
+    background-image: -moz-linear-gradient(to right, #28B655 0%, #75DB4F 51%, #28B655 100%);
+    background-image: -webkit-linear-gradient(to right, #28B655 0%, #75DB4F 51%, #28B655 100%);
+    background-image: -o-linear-gradient(to right, #28B655 0%, #75DB4F 51%, #28B655 100%);
+    background-image: linear-gradient(to right, #28B655 0%, #75DB4F 51%, #28B655 100%);
+    span {
+      background-color: white;
+      width: 95%;
+      border-radius: 7px;
+      padding: 1px 10px 2px 10px;
+      color: $main-color;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: inset 11em 0 0 0 $main-color;
+    }
+  }
   .flex-row {
     justify-content: space-around;
-    padding: 30px 0;
-    .flex-column {
-      align-items: center;
-      h3 {
-        font-family: 'Eox2-Regular', sans-serif;
-        color: $dark-green;
-        font-weight: 500;
-        font-size: 1.17em;
-      }
-    }
+    padding: 30px 0px 0px 0px;
+    align-items: center;
     .learn-more {
       font-size: 15px;
     }
@@ -421,6 +449,7 @@
           -webkit-line-clamp: 3;
           height: auto;
           color: $dark-green;
+          padding-top: 10px;
         }
         .learn-more-b {
           .gray-blog {
@@ -434,10 +463,16 @@
   }
 }
 
+.extended-table {
+  .table {
+    width: 100em !important;
+  }
+}
+
 .table {
   margin: 25px auto;
-  word-break: break-word;
-  width: 100%;
+  word-break: normal;
+  // width: 100%;
   padding: 6px;
   background: white;
   border: 1px solid #ccc;
@@ -492,4 +527,24 @@
   width: auto !important;
   margin: auto;
   display: block;
+}
+
+.recomended-blog-img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.color-main-color {
+  color: $main-color !important;
+}
+
+@-moz-document url-prefix() {
+  .recomended-blogs {
+    .btn-all-posts {
+      span {
+        padding: 1px 10px 0px 10px;
+      }
+    }
+  }
 }

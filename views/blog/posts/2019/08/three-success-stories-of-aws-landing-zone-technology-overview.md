@@ -71,10 +71,10 @@ VERY IMPORTANT: You can define lots of providers and include tons of components,
 
 The following components are pretty common across our customers:
 
-- AWS Organization (referenced [here](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/terraform.tfvars#L22:L26))
+- AWS Organization (referenced [here](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/terraform.remote.tfvars#L33:L38))
 - AWS Service Catalog
 - AWS IAM, including Identity Providers; excluding AWS SSO
-- Amazon VPC, including Subnets, Routes, Gateways, NACLs, Security Groups, Peering or Direct Connect (referenced [here](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/terraform.tfvars#L27:L40))
+- Amazon VPC, including Subnets, Routes, Gateways, NACLs, Security Groups, Peering or Direct Connect (referenced [here](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/terraform.remote.tfvars#L76:L79))
 
 As you can see from above mentioned references, the demo `.tfvars` files are stored in `s3://terraform-aws-landing-zone/mycompany/[component_name]/default.tfvars` (publicly available). The goal is to provide reusable structure of immutable configurations that can consistently provision / deploy terraform resources (to be read: AWS resources) across multiple terraform providers (to be read: AWS accounts and/or AWS regions) without any need to make changes to landing zone components. Only `.tfvars` are changed over time.
 

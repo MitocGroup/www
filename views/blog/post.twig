@@ -9,8 +9,8 @@
         </div>
         <div class="about">
             <div class="flex">
-                <a href="{{ authors[author]['twitter'] }}">{{ authors[author]['author'] }}</a>
-                <a href="{{ authors[author]['twitterIntent'] }}" class="btn-follow">
+                <a href="{{ authors[author]['profile'] }}">{{ authors[author]['author'] }}</a>
+                <a href="{{ authors[author]['twitter'] }}" class="btn-follow">
                     <span>Follow</span>
                 </a>
             </div>
@@ -39,7 +39,7 @@
 
                     <div class="displayTable u-verticalAlignMiddle u-paddingLeft-15 u-paddingTop-15">
                         <div class="title-post u-paddingBotton-4">
-                            <a href="{{ authors[author]['twitter'] }}">{{ authors[author]['author'] }}</a>
+                            <a href="{{ authors[author]['profile'] }}">{{ authors[author]['author'] }}</a>
                         </div>
                         <p class="p-footer u-paddingBotton-4">
                             {{ authors[author]['bio'] }}
@@ -47,7 +47,7 @@
                     </div>
                     <!--
                     <div class="displayTable u-verticalAlignTop">
-                        <a href="{{ authors[author]['twitterIntent'] }}" class="btn-follow u-paddingLeft-15">
+                        <a href="{{ authors[author]['twitter'] }}" class="btn-follow u-paddingLeft-15">
                             <span>Follow</span>
                         </a>
                     </div>
@@ -80,18 +80,19 @@
             </div>
         </div>
     </footer>
-
-    <!--
-    <div class="last-blogs container">
+  
+    <div class="recomended-blogs container flex-column mt-30 mb-30">
+        <div class="mt-30 recomended-blog-header">
+                <h3>Recomended Posts </h3>
+                <a class="btn btn-all-posts" href="/blog/"><span>See All Posts</span></a>
+        </div>
         <div class="flex-row">
-            <div class="flex-column">
-                <h3 class="center">Newest Posts</h3>
-                <a class="btn-border-green btn" href="/blog/">Read more</a>
-            </div>
-            {% set i = 0 %}
-            {% for key, value in posts if i < 3 %}
+            {% for key, value in  recomendedPosts %}
                 <div class="flex-item-3">
                     <div class="blog-post">
+                        <a href="/blog/{{ key }}/">
+                            <img src="{{ asset( value.image ) }}" alt="Our Blog" class="recomended-blog-img"/>
+                        </a>
                         <a href="/blog/{{ key }}/">
                             <h5>{{ value.title }}</h5>
                             <p class="description">{{ value.description }}</p>
@@ -104,11 +105,9 @@
                         </div>
                     </div>
                 </div>
-                {% set i = i + 1 %}
             {% endfor %}
         </div>
     </div>
-    -->
 </div>
 
 

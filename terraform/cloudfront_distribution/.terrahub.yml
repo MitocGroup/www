@@ -2,10 +2,6 @@ component:
   name: 'cloudfront_distribution'
   dependsOn: ['s3_bucket']
   template:
-    terraform:
-      backend:
-        s3:
-          key: 'terraform/mitocgroup/www/cloudfront_distribution/terraform.tfstate'
     resource:
       aws_cloudfront_distribution:
         cloudfront_distribution:
