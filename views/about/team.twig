@@ -1,343 +1,293 @@
-{% extends '../layout.twig' %}
-
-{% block css %}
-    <link rel="stylesheet" href="{{ asset('@css/team.min.css') }}" />
-{% endblock %}
+{% extends '../about.twig' %}
 
 {% block body %}
-    <div class="wrapper">
-        <div class="hide-mobile">
-            <div class="space-top header flex-column gray-block">
-                <div class="header__bg green">
-                    <div class="bg bg-green contact flex-column">
-                        <div class="container text-styles">
-                            <div class="flex-column text-color-white center">
-                                <h3 class="text-color-green">Mitoc Group</h3>
-                                <h2 class="paddingBottom20">Leadership Team</h2>
-                                <div class="text-24 widthBlock80">
-                                    Our mission is to enable businesses and developers to provide high-value products and services
-                                    in a constantly changing digital world.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="wrapper">
+  <div class="hide-mobile">
+    <div class="space-top header flex-column gray-block">
+      <div class="header__bg green">
+        <div class="bg bg-green contact flex-column">
+          <div class="container text-styles">
+            <div class="flex-column text-color-white center">
+              <h3 class="text-color-green">Mitoc Group</h3>
+              <h2 class="paddingBottom20">Leadership Team</h2>
+              <div class="text-24 widthBlock80">
+                  Our mission is to enable businesses and developers to provide high-value products and services
+                  in a constantly changing digital world.
+              </div>
             </div>
-
-            <section class="gray-block marginTop-250 team">
-                <div class="container">
-                    <div class="up80 down80">
-                        <div class="green-block-team marginTop36 white-block">
-                            <div class="flex-row">
-                                <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
-                                    <div class="info-blocks block-effect">
-                                        <img class="lazyload" data-src="{{ asset('@images/v2/team/eugene.png') }}" itemprop="image" alt="Eugene Istrati" />
-                                        <div class="hover-effect">
-                                            <div class="info dots">
-                                                <div class="display-flex">
-                                                    <h4 itemprop="name">Eugene Istrati</h4>
-                                                    <div class="partner">
-                                                        <a href="https://www.linkedin.com/in/eistrati/" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-linkedin"></i></a>
-                                                        <a href="https://twitter.com/eistrati" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-twitter"></i></a>
-                                                    </div>
-                                                </div>
-                                                <p itemprop="description" class="team-show-more">
-                                                    Eugene Istrati has spent almost two decades as a technologist in a variety of industries, including digital media, cloud computing, and reputation marketing. He is a visionary and goal-oriented technology leader, with demonstrated experience in planning, developing and implementing cutting edge information solutions to address business opportunities.
-                                                </p>
-                                                <div class="hidden hidden-block" itemprop="description">
-                                                    <p>
-                                                        Before co-founding Mitoc Group, Eugene worked as Director of Engineering at Hearst Corporation. He helped iconic publisher to redefine and transform their business in the digital world. Prior, Mr. Istrati worked as Program Manager at Amazon Web Services, helping businesses and developers accelerate their cloud computing journeys on AWS cloud.
-                                                    </p>
-                                                    <p>
-                                                        Eugene blogs occasionally and speaks at industry conferences, technology meetups and other similar events. He has presented at ServerlessConf 2017 and AWS re:Invent 2017 on his favorite topic – serverless computing.
-                                                    </p>
-                                                    <p>
-                                                        He graduated from University of Oradea, Romania with a dual Bachelor of Science degree in Mathematics and Computer Science and a Master of Science degree in Computer Science and Engineering. His masters degree was later assessed and validated by University of Columbia, New York.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="text-left paddingBottom20 paddingTop20">
-                                                <button class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></button>
-                                                <button class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
-                                    <div class="info-blocks block-effect">
-                                        <img class="lazyload" data-src="{{ asset('@images/v2/team/diana.png') }}"  itemprop="image" alt="Diana Ursu" />
-                                        <div class="hover-effect">
-                                            <div class="info dots">
-                                                <div class="display-flex">
-                                                    <h4 itemprop="name">Diana Ursu</h4>
-                                                    <div class="partner">
-                                                        <a href="https://www.linkedin.com/in/dursu/" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-linkedin"></i></a>
-                                                        <a href="https://twitter.com/dianaursu" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-twitter"></i></a>
-                                                    </div>
-                                                </div>
-                                                <p itemprop="description" class="team-show-more">
-                                                    Diana Ursu is an ambitious and confident leader, who work effectively in a fast-moving organization. She spent over fifteen years helping companies in many business aspects, including management and control, as well as development and marketing, by asking the right questions and finding the optimal paths to profit.
-                                                </p>
-                                                <div class="hidden hidden-block" itemprop="description">
-                                                    <p>
-                                                        Diana has the ability to commit to a bigger cause and possesses values like common sense, people and relationship skills, curiosity and critical thinking, tolerance and risk taking, admiration and respect for entrepreneurship.
-                                                    </p>
-                                                    <p>
-                                                        Before co-founding Mitoc Group, Mrs. Ursu worked as Global Business Development at Michael C. Fina in New York. She contributed to company's expansion into Europe, China and Latin America, generating over $10M in new opportunities. Prior, Diana held various positions across Business Development, Industrial Management, Commercial Planning and Marketing for multi billion dollar corporation, Tenaris.
-                                                    </p>
-                                                    <p>
-                                                        Diana holds a Bachelor Degree in Finance from Aurel Vlaicu University, Romania.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="text-left paddingBottom20 paddingTop20">
-                                                <button class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></button>
-                                                <button class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
-                                    <div class="info-blocks block-effect">
-                                        <img class="lazyload" data-src="{{ asset('@images/v2/team/vlad.png') }}" itemprop="image" alt="Vladimir Ursu" />
-                                        <div class="hover-effect">
-                                            <div class="info dots">
-                                                <div class="display-flex">
-                                                    <h4 itemprop="name">Vladimir Ursu</h4>
-                                                    <div class="partner">
-                                                        <a href="http://www.linkedin.com/in/vursu" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-linkedin"></i></a>
-                                                        <a href="https://twitter.com/vladimir_ursu" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-twitter"></i></a>
-                                                    </div>
-                                                </div>
-                                                <p itemprop="description" class="team-show-more">
-                                                    Vladimir Ursu has started the entrepreneurial life early in high school working in industries like Finance, Digital Media, Cloud Computing. He is visionary goal oriented with 10+ years experience in entrepreneurship, planning, crisis management, quality assurance, finance, human resources.
-                                                </p>
-                                                <div class="hidden hidden-block" itemprop="description">
-                                                    <p>
-                                                        Vladimir is passionate resolving project challenges and creating the process to meet the deadlines. Also, Vladimir is passioned in helping people/teams upgrade their professional level and keep them motivated using couching technics. In future trying himself in public speaking.
-                                                    </p>
-                                                    <p>
-                                                        Before co-founding Mitoc Group, Vladimir founded several companies from which is PyCoding and 404 Moldova. Worked as Quality Assurance Team Lead, Operations Manager, Project Manager for respectable companies like Thomson Reuters and TD Ameritrade. He had helped to deliver several challenging projects in finance.
-                                                    </p>
-                                                    <p>
-                                                        He graduated State University from Moldova with Bachelor of Science degree in Economics - Banks and Stock Exchange.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="text-left paddingBottom20 paddingTop20">
-                                                <button class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></button>
-                                                <button class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="up80 down80">
-                    <div class="container">
-                        <div class="text-styles center ">
-                            <h2 class="paddingBottom20">Our Advisory Team</h2>
-                            <div class="text-24 widthBlock80">
-                                We are lucky and proud to be endorsed by <span class="text-color-green">amazing people</span>,
-                                <span class="text-color-green">true professionals</span> and <span
-                                    class="text-color-green">real friends</span> of our business
-                            </div>
-                            <div class="green-block-team marginTop61 gray-light-block">
-                                <div class="flex-row center-block">
-                                    <div class="flex-item-3 shadow-block">
-                                        <div class="info-blocks block-effect atm-block">
-                                            <img class="lazyload" data-src="{{ asset('@images/v2/team/chris.png') }}" itemscope="image" alt="Chris Resch"/>
-                                            <div class="hover-effect">
-                                                <div class="info dots">
-                                                    <div class="display-flex">
-                                                        <h4 itemscope="name">Chris Resch</h4>
-                                                        <div class="partner">
-                                                            <a href="hhttps://www.linkedin.com/in/chrisresch/" target="_blank" rel="noreferrer" itemscope="url"><i
-                                                                    class="icon-linkedin"></i></a>
-                                                            <a href="https://twitter.com/chrisresch" target="_blank" rel="noreferrer" itemscope="url"><i
-                                                                    class="icon-twitter"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <p itemscope="description" class="team-show-more">
-                                                        As EVP of Cloud Solutions Sales, Chris leads Sales, Solution Architecture, Delivery, and
-                                                        Specialty Practices, ensuring that 2nd Watch clients receive maximum value from their cloud
-                                                        investment.
-                                                    </p>
-                                                    <div class="hidden hidden-block" itemscope="description">
-                                                        <p>
-                                                            Most recently, Chris was Practice Manager at Amazon Web Services, where he helped build
-                                                            the NY Metro practice and led the Global Media practice for Professional Services. During
-                                                            his tenure at Amazon Web Services, Chris received several awards and accolades, including
-                                                            "AWS Professional Services Person of the Year".
-                                                        </p>
-                                                        <p>
-                                                            Chris began his career at Hearst Corporation, where he held various leadership positions
-                                                            at Hearst Magazines and Hearst Business Media. While at Hearst, Resch was responsible for
-                                                            technology strategy, sourcing and evaluating investment opportunities, and was a member of
-                                                            the startup team that developed a cloud-based drug library management solution for
-                                                            intravenous medications.
-                                                        </p>
-                                                        <p>
-                                                            Chris holds a BBA in Business Computer Information Systems from Hofstra University, where
-                                                            he also played Division I lacrosse.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="text-left paddingBottom20 paddingTop20">
-                                                    <a class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></a>
-                                                    <a class="read-more team-less-more hidden">Show Less
-                                                        <i class="mdi mdi-chevron-up"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex-item-3 shadow-block">
-                                        <div class="info-blocks block-effect atm-block">
-                                            <img class="lazyload" data-src="{{ asset('@images/v2/team/sergiu.png') }}" itemscope="image" alt="Sergiu Cecoltan"/>
-                                            <div class="hover-effect">
-                                                <div class="info dots">
-                                                    <div class="display-flex">
-                                                        <h4 itemscope="name">Sergiu Cecoltan</h4>
-                                                        <div class="partner">
-                                                            <a href="https://www.linkedin.com/in/sergiu-cecoltan-a32b834/" target="_blank" rel="noreferrer"
-                                                               itemscope="url"><i class="icon-linkedin"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <p itemscope="description" class="team-show-more">
-                                                        Sergiu Cecoltan is Vice President, Corporate Development at Mastercard. In his role Sergiu
-                                                        is responsible for structuring and execution of acquisitions, divestitures, equity
-                                                        investments and joint venture transactions.
-                                                    </p>
-                                                    <div class="hidden hidden-block" itemscope="description">
-                                                        <p>
-                                                            Prior to joining MasterCard, Sergiu spent more than six years at Bank of America Merrill
-                                                            Lynch in its technology investment banking group. While at BAML, Sergiu executed various M&amp;A
-                                                            and capital raising transactions for a number of technology companies.
-                                                        </p>
-                                                        <p>
-                                                            Sergiu holds a Bachelor's Degree in Engineering and Physics from the State University of
-                                                            Moldova and a Master's Degree in Business Administration with Distinction from Harvard
-                                                            Business School.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="text-left paddingBottom20 paddingTop20">
-                                                    <a class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></a>
-                                                    <a class="read-more team-less-more hidden">Show Less <i
-                                                            class="mdi mdi-chevron-up"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex-item-3 shadow-block">
-                                        <div class="info-blocks block-effect atm-block">
-                                            <img class="img-style lazyload" data-src="{{ asset('@images/v2/team/stela.png') }}" itemscope="image"
-                                                 alt="Stela Lupusor"/>
-                                            <div class="hover-effect">
-                                                <div class="info dots">
-                                                    <div class="display-flex">
-                                                        <h4 itemscope="name">Stela Lupusor</h4>
-                                                        <div class="partner">
-                                                            <a href="https://www.linkedin.com/in/slupushor/" target="_blank" rel="noreferrer" itemscope="url"><i
-                                                                    class="icon-linkedin"></i></a>
-                                                            <a href="https://twitter.com/slupusho" target="_blank" rel="noreferrer" itemprop="url"><i
-                                                                    class="icon-twitter"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <p itemscope="description" class="team-show-more">
-                                                        Stela Lupushor is a renowned change agent with the mission to humanize the workplace and who
-                                                        has been working with leading organizations to redefine their work environment for over 20
-                                                        years.
-                                                    </p>
-                                                    <div class="hidden hidden-block" itemscope="description">
-                                                        <p>
-                                                            Stela is the founder of Reframe.Work Inc., a consulting firm advising organizations on how
-                                                            to future-proof their work environment in light of demographic shifts, disruptive
-                                                            technology, value chain disintermediation and human behavior evolution. She also serves as
-                                                            the Program Director, Strategic Workforce Planning Council at The Conference Board,
-                                                            facilitating conversations with the leaders of workforce planning at Fortune 500
-                                                            corporations on building global workforce strategies to deliver business performance.
-                                                        </p>
-                                                        <p>
-                                                            She is the co-founder of the Strategic HR Analytics Meet-up group bringing together over
-                                                            900 members in the NYC area to evolve the people analytics field. She is also the Founder,
-                                                            Chairperson of the Board of Directors of Amazing.Community - a non-profit organization
-                                                            with the goal to equip aging women with skills and support so they can stay in the
-                                                            workforce.
-                                                        </p>
-                                                        <p>
-                                                            Previously Stela led the People Analytics functions at Fidelity Investments and TIAA, led
-                                                            the HR Strategy and Social Analytics function at IBM where she built their "future of
-                                                            work" strategy, and also held various management consulting roles advising the clients of
-                                                            Price Waterhouse, PricewaterhouseCoopers and IBM with human capital and digital
-                                                            transformations.
-                                                        </p>
-                                                        <p>
-                                                            Stela holds a degree in Mathematics and Computer Science, speaks three languages, has a
-                                                            patent pending for a social sentiment analysis tool, has published articles and papers,
-                                                            and is a sought-after speaker on the topics of People Analytics and the Future of Work.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="text-left paddingBottom20 paddingTop20">
-                                                    <a class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></a>
-                                                    <a class="read-more team-less-more hidden">Show Less <i
-                                                            class="mdi mdi-chevron-up"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex-item-3 shadow-block">
-                                        <div class="info-blocks block-effect atm-block">
-                                            <img class="lazyload" data-src="{{ asset('@images/v2/team/anatol.png') }}" itemscope="image" alt="Anatol Vizitiu"/>
-                                            <div class="hover-effect">
-                                                <div class="info dots">
-                                                    <div class="display-flex">
-                                                        <h4 itemscope="name">Anatol Vizitiu</h4>
-                                                        <div class="partner">
-                                                            <a href="https://www.linkedin.com/in/anatol-vizitiu-1673972/" target="_blank" rel="noreferrer"
-                                                               itemscope="url"><i class="icon-linkedin"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <p itemscope="description" class="team-show-more">
-                                                        Anatol Vizitiu is a Managing Director in Morgan Stanley's Global Capital Markets Department
-                                                        in New York City. He develops and executes risk management strategies with Fortune 100
-                                                        companies in Healthcare, Transportation and Media &amp; Communications sectors.
-                                                    </p>
-                                                    <div class="hidden hidden-block" itemscope="description">
-                                                        <p>
-                                                            Prior to Morgan Stanley, Anatol was a management consultant with Price Waterhouse working
-                                                            on information technology projects in Moldova, Ukraine and Russia.
-                                                        </p>
-                                                        <p>
-                                                            Anatol earned a graduate degree with concentration in Finance from the MIT Sloan School of
-                                                            Management and an undergraduate degree in Applied Mathematics and Computer Science from
-                                                            Moldova State University.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="text-left paddingBottom20 paddingTop20">
-                                                    <a class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></a>
-                                                    <a class="read-more team-less-more hidden">Show Less <i
-                                                            class="mdi mdi-chevron-up"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          </div>
         </div>
+      </div>
     </div>
-{% endblock %}
 
-{% block js %}
-    <script  async src="{{ asset('@js/team.min.js') }}"></script>
+    <section class="gray-block marginTop-250 team">
+      <div class="container">
+        <div class="up80 down80">
+          <div class="green-block-team marginTop36 white-block">
+            <div class="flex-row">
+
+              <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
+                <div class="info-blocks block-effect">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/team/eugene.png') }}" itemprop="image" alt="Eugene Istrati" />
+                  <div class="hover-effect">
+                    <div class="info dots">
+                      <div class="display-flex">
+                        <h4 itemprop="name">Eugene Istrati</h4>
+                        <div class="partner">
+                          <a href="https://www.linkedin.com/in/eistrati/" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-linkedin"></i></a>
+                          <a href="https://twitter.com/eistrati" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-twitter"></i></a>
+                        </div>
+                      </div>
+                      <p itemprop="description" class="team-show-more">
+                        Eugene Istrati has spent almost two decades as a technologist in a variety of industries, including digital media, cloud computing, and reputation marketing. He is a visionary and goal-oriented technology leader, with demonstrated experience in planning, developing and implementing cutting edge information solutions to address business opportunities.
+                      </p>
+                      <div class="hidden hidden-block" itemprop="description">
+                        <p>
+                          Before co-founding Mitoc Group, Eugene worked as Director of Engineering at Hearst Corporation. He helped iconic publisher to redefine and transform their business in the digital world. Prior, Mr. Istrati worked as Program Manager at Amazon Web Services, helping businesses and developers accelerate their cloud computing journeys on AWS cloud.
+                        </p>
+                        <p>
+                          Eugene blogs occasionally and speaks at industry conferences, technology meetups and other similar events. He has presented at ServerlessConf 2017 and AWS re:Invent 2017 on his favorite topic – serverless computing.
+                        </p>
+                        <p>
+                          He graduated from University of Oradea, Romania with a dual Bachelor of Science degree in Mathematics and Computer Science and a Master of Science degree in Computer Science and Engineering. His masters degree was later assessed and validated by University of Columbia, New York.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="text-left paddingBottom20 paddingTop20">
+                      <button class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></button>
+                      <button class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
+                <div class="info-blocks block-effect">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/team/diana.png') }}"  itemprop="image" alt="Diana Ursu" />
+                  <div class="hover-effect">
+                    <div class="info dots">
+                      <div class="display-flex">
+                        <h4 itemprop="name">Diana Ursu</h4>
+                        <div class="partner">
+                          <a href="https://www.linkedin.com/in/dursu/" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-linkedin"></i></a>
+                          <a href="https://twitter.com/dianaursu" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-twitter"></i></a>
+                        </div>
+                      </div>
+                      <p itemprop="description" class="team-show-more">
+                        Diana Ursu is an ambitious and confident leader, who work effectively in a fast-moving organization. She spent over fifteen years helping companies in many business aspects, including management and control, as well as development and marketing, by asking the right questions and finding the optimal paths to profit.
+                      </p>
+                      <div class="hidden hidden-block" itemprop="description">
+                        <p>
+                          Diana has the ability to commit to a bigger cause and possesses values like common sense, people and relationship skills, curiosity and critical thinking, tolerance and risk taking, admiration and respect for entrepreneurship.
+                        </p>
+                        <p>
+                          Before co-founding Mitoc Group, Mrs. Ursu worked as Global Business Development at Michael C. Fina in New York. She contributed to company's expansion into Europe, China and Latin America, generating over $10M in new opportunities. Prior, Diana held various positions across Business Development, Industrial Management, Commercial Planning and Marketing for multi billion dollar corporation, Tenaris.
+                        </p>
+                        <p>
+                          Diana holds a Bachelor Degree in Finance from Aurel Vlaicu University, Romania.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="text-left paddingBottom20 paddingTop20">
+                      <button class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></button>
+                      <button class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
+                <div class="info-blocks block-effect">
+                  <img class="lazyload" data-src="{{ asset('@images/v2/team/vlad.png') }}" itemprop="image" alt="Vladimir Ursu" />
+                  <div class="hover-effect">
+                    <div class="info dots">
+                      <div class="display-flex">
+                        <h4 itemprop="name">Vladimir Ursu</h4>
+                        <div class="partner">
+                          <a href="http://www.linkedin.com/in/vursu" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-linkedin"></i></a>
+                          <a href="https://twitter.com/vladimir_ursu" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-twitter"></i></a>
+                        </div>
+                      </div>
+                      <p itemprop="description" class="team-show-more">
+                        Vladimir Ursu has started the entrepreneurial life early in high school working in industries like Finance, Digital Media, Cloud Computing. He is visionary goal oriented with 10+ years experience in entrepreneurship, planning, crisis management, quality assurance, finance, human resources.
+                      </p>
+                      <div class="hidden hidden-block" itemprop="description">
+                        <p>
+                          Vladimir is passionate resolving project challenges and creating the process to meet the deadlines. Also, Vladimir is passioned in helping people/teams upgrade their professional level and keep them motivated using couching technics. In future trying himself in public speaking.
+                        </p>
+                        <p>
+                          Before co-founding Mitoc Group, Vladimir founded several companies from which is PyCoding and 404 Moldova. Worked as Quality Assurance Team Lead, Operations Manager, Project Manager for respectable companies like Thomson Reuters and TD Ameritrade. He had helped to deliver several challenging projects in finance.
+                        </p>
+                        <p>
+                          He graduated State University from Moldova with Bachelor of Science degree in Economics - Banks and Stock Exchange.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="text-left paddingBottom20 paddingTop20">
+                      <button class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></button>
+                      <button class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="up80 down80">
+        <div class="container">
+          <div class="text-styles center ">
+            <h2 class="paddingBottom20">Our Advisory Team</h2>
+            <div class="text-24 widthBlock80">
+              We are lucky and proud to be endorsed by <span class="text-color-green">amazing people</span>,
+              <span class="text-color-green">true professionals</span> and <span class="text-color-green">real
+              friends</span> of our business
+            </div>
+            <div class="green-block-team marginTop61 gray-light-block">
+              <div class="flex-row center-block">
+                <div class="flex-item-3 shadow-block">
+                  <div class="info-blocks block-effect atm-block">
+                    <img class="lazyload" data-src="{{ asset('@images/v2/team/chris.png') }}" itemscope="image" alt="Chris Resch"/>
+                    <div class="hover-effect">
+                      <div class="info dots">
+                        <div class="display-flex">
+                          <h4 itemscope="name">Chris Resch</h4>
+                          <div class="partner">
+                            <a href="hhttps://www.linkedin.com/in/chrisresch/" target="_blank" rel="noreferrer" itemscope="url"><i class="icon-linkedin"></i></a>
+                            <a href="https://twitter.com/chrisresch" target="_blank" rel="noreferrer" itemscope="url"><i class="icon-twitter"></i></a>
+                          </div>
+                        </div>
+                        <p itemscope="description" class="team-show-more">
+                          As EVP of Cloud Solutions Sales, Chris leads Sales, Solution Architecture, Delivery, and Specialty Practices, ensuring that 2nd Watch clients receive maximum value from their cloud investment.
+                        </p>
+                        <div class="hidden hidden-block" itemscope="description">
+                          <p>
+                            Most recently, Chris was Practice Manager at Amazon Web Services, where he helped build the NY Metro practice and led the Global Media practice for Professional Services. During his tenure at Amazon Web Services, Chris received several awards and accolades, including "AWS Professional Services Person of the Year".
+                          </p>
+                          <p>
+                            Chris began his career at Hearst Corporation, where he held various leadership positions at Hearst Magazines and Hearst Business Media. While at Hearst, Resch was responsible for technology strategy, sourcing and evaluating investment opportunities, and was a member of the startup team that developed a cloud-based drug library management solution for intravenous medications.
+                          </p>
+                          <p>
+                            Chris holds a BBA in Business Computer Information Systems from Hofstra University, where he also played Division I lacrosse.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="text-left paddingBottom20 paddingTop20">
+                        <a class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></a>
+                        <a class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-item-3 shadow-block">
+                  <div class="info-blocks block-effect atm-block">
+                    <img class="lazyload" data-src="{{ asset('@images/v2/team/sergiu.png') }}" itemscope="image" alt="Sergiu Cecoltan"/>
+                    <div class="hover-effect">
+                      <div class="info dots">
+                        <div class="display-flex">
+                          <h4 itemscope="name">Sergiu Cecoltan</h4>
+                          <div class="partner">
+                            <a href="https://www.linkedin.com/in/sergiu-cecoltan-a32b834/" target="_blank" rel="noreferrer" itemscope="url"><i class="icon-linkedin"></i></a>
+                          </div>
+                        </div>
+                        <p itemscope="description" class="team-show-more">
+                          Sergiu Cecoltan is Vice President, Corporate Development at Mastercard. In his role Sergiu is responsible for structuring and execution of acquisitions, divestitures, equity investments and joint venture transactions.
+                        </p>
+                        <div class="hidden hidden-block" itemscope="description">
+                          <p>
+                            Prior to joining MasterCard, Sergiu spent more than six years at Bank of America Merrill Lynch in its technology investment banking group. While at BAML, Sergiu executed various M&amp;A and capital raising transactions for a number of technology companies.
+                          </p>
+                          <p>
+                            Sergiu holds a Bachelor's Degree in Engineering and Physics from the State University of Moldova and a Master's Degree in Business Administration with Distinction from Harvard Business School.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="text-left paddingBottom20 paddingTop20">
+                        <a class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></a>
+                        <a class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-item-3 shadow-block">
+                  <div class="info-blocks block-effect atm-block">
+                    <img class="img-style lazyload" data-src="{{ asset('@images/v2/team/stela.png') }}" itemscope="image" alt="Stela Lupusor"/>
+                    <div class="hover-effect">
+                      <div class="info dots">
+                        <div class="display-flex">
+                          <h4 itemscope="name">Stela Lupusor</h4>
+                          <div class="partner">
+                            <a href="https://www.linkedin.com/in/slupushor/" target="_blank" rel="noreferrer" itemscope="url"><i class="icon-linkedin"></i></a>
+                            <a href="https://twitter.com/slupusho" target="_blank" rel="noreferrer" itemprop="url"><i class="icon-twitter"></i></a>
+                          </div>
+                        </div>
+                        <p itemscope="description" class="team-show-more">
+                          Stela Lupushor is a renowned change agent with the mission to humanize the workplace and who has been working with leading organizations to redefine their work environment for over 20 years.
+                        </p>
+                        <div class="hidden hidden-block" itemscope="description">
+                          <p>
+                            Stela is the founder of Reframe.Work Inc., a consulting firm advising organizations on how to future-proof their work environment in light of demographic shifts, disruptive technology, value chain disintermediation and human behavior evolution. She also serves as the Program Director, Strategic Workforce Planning Council at The Conference Board, facilitating conversations with the leaders of workforce planning at Fortune 500 corporations on building global workforce strategies to deliver business performance.
+                          </p>
+                          <p>
+                            She is the co-founder of the Strategic HR Analytics Meet-up group bringing together over 900 members in the NYC area to evolve the people analytics field. She is also the Founder, Chairperson of the Board of Directors of Amazing.Community - a non-profit organization with the goal to equip aging women with skills and support so they can stay in the workforce.
+                          </p>
+                          <p>
+                            Previously Stela led the People Analytics functions at Fidelity Investments and TIAA, led the HR Strategy and Social Analytics function at IBM where she built their "future of work" strategy, and also held various management consulting roles advising the clients of Price Waterhouse, PricewaterhouseCoopers and IBM with human capital and digital transformations.
+                          </p>
+                          <p>
+                            Stela holds a degree in Mathematics and Computer Science, speaks three languages, has a patent pending for a social sentiment analysis tool, has published articles and papers, and is a sought-after speaker on the topics of People Analytics and the Future of Work.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="text-left paddingBottom20 paddingTop20">
+                        <a class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></a>
+                        <a class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-item-3 shadow-block">
+                  <div class="info-blocks block-effect atm-block">
+                    <img class="lazyload" data-src="{{ asset('@images/v2/team/anatol.png') }}" itemscope="image" alt="Anatol Vizitiu"/>
+                    <div class="hover-effect">
+                      <div class="info dots">
+                        <div class="display-flex">
+                          <h4 itemscope="name">Anatol Vizitiu</h4>
+                          <div class="partner">
+                            <a href="https://www.linkedin.com/in/anatol-vizitiu-1673972/" target="_blank" rel="noreferrer" itemscope="url"><i class="icon-linkedin"></i></a>
+                          </div>
+                        </div>
+                        <p itemscope="description" class="team-show-more">
+                          Anatol Vizitiu is a Managing Director in Morgan Stanley's Global Capital Markets Department in New York City. He develops and executes risk management strategies with Fortune 100 companies in Healthcare, Transportation and Media &amp; Communications sectors.
+                        </p>
+                        <div class="hidden hidden-block" itemscope="description">
+                          <p>
+                            Prior to Morgan Stanley, Anatol was a management consultant with Price Waterhouse working on information technology projects in Moldova, Ukraine and Russia.
+                          </p>
+                          <p>
+                            Anatol earned a graduate degree with concentration in Finance from the MIT Sloan School of Management and an undergraduate degree in Applied Mathematics and Computer Science from Moldova State University.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="text-left paddingBottom20 paddingTop20">
+                        <a class="read-more team-show-more">Show More <i class="mdi mdi-chevron-down"></i></a>
+                        <a class="read-more team-less-more hidden">Show Less <i class="mdi mdi-chevron-up"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 {% endblock %}

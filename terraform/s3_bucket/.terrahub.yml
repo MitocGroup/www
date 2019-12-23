@@ -1,0 +1,87 @@
+component:
+  name: 's3_bucket'
+  template:
+    data:
+      aws_iam_policy_document:
+        default_assume_s3_policy:
+          statement:
+            - sid: 'bucket_policy_site_main'
+              principals:
+                type: 'AWS'
+                identifiers: ['*']
+              actions: ['s3:GetObject']
+              resources: ['arn:aws:s3:::${var.s3_bucket_name}/*']
+      template_file:
+        s3_routing_rules:
+          template: '${file("${path.module}/s3_routing_rules.json")}'
+    resource:
+      aws_s3_bucket:
+        s3_bucket:
+          bucket: '${var.s3_bucket_name}'
+          region: '${var.s3_bucket_region}'
+          acl: 'public-read'
+          force_destroy: 'true'
+          policy: '${data.aws_iam_policy_document.default_assume_s3_policy.json}'
+          cors_rule:
+            allowed_headers: ['*']
+            allowed_methods: ['HEAD', 'GET', 'PUT', 'POST', 'DELETE']
+            allowed_origins: ['*']
+            expose_headers: ['ETag']
+            max_age_seconds: '0'
+          versioning:
+            enabled: 'false'
+            mfa_delete: 'false'
+          website:
+            index_document: 'index.html'
+            error_document: '/404.html'
+            routing_rules: '${data.template_file.s3_routing_rules.rendered}'
+          tags:
+            Description: 'Managed by TerraHub'
+            ThubCode: '${local.project["code"]}'
+            ThubEnv: '${terraform.workspace}'
+            ThubName: 's3_bucket'
+    tfvars:
+      s3_bucket_name: 'www-dev.mitocgroup.com'
+      s3_bucket_region: 'us-east-1'
+    output:
+      id:
+        value: '${aws_s3_bucket.s3_bucket.id}'
+      arn:
+        value: '${aws_s3_bucket.s3_bucket.arn}'
+      bucket_domain_name:
+        value: '${aws_s3_bucket.s3_bucket.bucket_domain_name}'
+      hosted_zone_id:
+        value: '${aws_s3_bucket.s3_bucket.hosted_zone_id}'
+      region:
+        value: '${aws_s3_bucket.s3_bucket.region}'
+      website_endpoint:
+        value: '${aws_s3_bucket.s3_bucket.website_endpoint}'
+      website_domain:
+        value: '${aws_s3_bucket.s3_bucket.website_domain}'
+build:
+  env:
+    variables:
+      THUB_ENV: 'dev'
+      THUB_INDEX_FILE: 'index.txt'
+      THUB_S3_PATH: 's3://www-dev.mitocgroup.com'
+      THUB_ROBOTS: '../../robots.txt'
+      THUB_BUILD_PATH: '../../build'
+      THUB_SOURCE_PATH: '../../assets ../../static/fonts ../../static/images ../../views ../../*.js'
+      THUB_BUILD_OK: 'false'
+      THUB_MAX_AGE: '600'
+  phases:
+    pre_build:
+      commands:
+        - 'echo "BUILD: Running pre_build step"'
+        - './scripts/download.sh $THUB_INDEX_FILE $THUB_S3_PATH/$THUB_INDEX_FILE'
+        - './scripts/compare.sh $THUB_INDEX_FILE $THUB_SOURCE_PATH'
+    build:
+      commands:
+        - 'echo "BUILD: Running build step"'
+        - '../../bin/compile.sh'
+    post_build:
+      commands:
+        - 'echo "BUILD: Running post_build step"'
+        - './scripts/shasum.sh $THUB_BUILD_PATH/$THUB_INDEX_FILE'
+        - './scripts/upload.sh $THUB_BUILD_PATH $THUB_S3_PATH --cache-control max-age=$THUB_MAX_AGE'
+        - 'rm -f .terrahub_build.env $THUB_INDEX_FILE'

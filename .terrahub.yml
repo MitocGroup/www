@@ -1,11 +1,8 @@
-## project config
 project:
   name: 'MitocGroup_Website'
   code: 'eee23249'
-  include: ['.terrahub']
-  exclude: ['**/node_modules/**','**/.terraform/**','**/.git/**']
-
-## terrahub template
+  include: ['terraform']
+  exclude: ['.git', '.terraform', 'node_modules']
 template:
   locals:
     region: 'us-east-1'
@@ -13,14 +10,14 @@ template:
   terraform:
     backend:
       s3:
-        bucket: 'data-lake-mitocgroup-us-east-1'
         region: 'us-east-1'
+        bucket: 'data-lake-mitocgroup-us-east-1'
+        key: 'terraform/mitocgroup/www/${tfvar.terrahub["component"]["name"]}/terraform.tfstate'
         workspace_key_prefix: 'terraform_workspaces'
   provider:
     aws:
       region: '${local.region}'
       allowed_account_ids: ['${local.account_id}']
-
-## terraform config
 terraform:
   varFile: ['default.tfvars']
+  version: 0.11.13

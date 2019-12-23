@@ -1,141 +1,141 @@
 {% extends 'layout.twig' %}
 
 {% block css %}
-  <link rel="stylesheet" href="{{ asset('@css/contact.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('@css/contact.min.css') }}" />
 {% endblock %}
 
 {% block body %}
-  <div class="wrapper">
-    <div class="hide-mobile">
-      <div class="space-top header flex-column gray-block">
-        <div class="header__bg green">
-          <div class="bg bg-green contact flex-column">
-            <div class="container text-styles">
-              <div class="flex-column text-color-white center">
-                <p>contact us</p>
-                <h1>Get In Touch</h1>
-                <h5 class="text-24 marginTop36 widthBlock80">
-                  Have a question? Send us a note using the form below and someone
-                  from the Mitoc Group team will be in touch soon.
-                </h5>
-              </div>
+<div class="wrapper">
+  <div class="hide-mobile">
+    <div class="space-top header flex-column gray-block">
+      <div class="header__bg green">
+        <div class="bg bg-green contact flex-column">
+          <div class="container text-styles">
+            <div class="flex-column text-color-white center">
+              <p>contact us</p>
+              <h1>Get In Touch</h1>
+              <h5 class="text-24 marginTop36 widthBlock80">
+                Have a question? Send us a note using the form below and someone
+                from the Mitoc Group team will be in touch soon.
+              </h5>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="gray-block maps">
-        <div class="container">
-          <div class="widthBlock80 marginTop-150">
-            <div class="tabs">
-              <div class="tab-2">
-                <label for="tab2-1">USA Office</label>
-                <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
-                <div class="image-tab">
-                 <img class="lazyload" data-src="{{ asset('@images/v2/contact/usa.png') }}" />
-                  <div class="adress">
-                    <div class="block-info flex-column">
-                      <a class="location" href="https://goo.gl/oY87jd" target="_blank" rel="noreferrer">
-                        <i class="icon-map-marker"></i><span>2 University Plaza<br/>Hackensack NJ 07601</span>
-                      </a>
-                      <a class="phone" href="tel:+18018108186"><i class="icon-phone"></i><span>(+1) 801 810 8186</span></a>
-                      <a class="email" href="mailto:hello@mitocgroup.com"><i class="icon-email"></i><span>hello@mitocgroup.com</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-2">
-                <label for="tab2-2">Eastern Europe Office</label>
-                <input id="tab2-2" name="tabs-two" type="radio">
-                <div class="image-tab">
-                  <img class="lazyload" data-src="{{ asset('@images/v2/contact/europe.png') }}" />
-                  <div class="adress">
-                    <div class="block-info flex-column">
-                      <a class="location" href="https://goo.gl/VDatVm" target="_blank" rel="noreferrer">
-                        <i class="icon-map-marker"></i><span>23 Dacia Blvd<br/>Chisinau Moldova</span>
-                      </a>
-                      <a class="phone" href="tel:+37322808272"><i class="icon-phone"></i><span>(+373) 22 808 272</span></a>
-                      <a class="email" href="mailto:moldova@mitocgroup.com"><i class="icon-email"></i><span>moldova@mitocgroup.com</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-             <div class="up80 down80">
-               <div class="text-styles center">
-                 <h3 class="text-color-green">write us a message</h3>
-                 <h2 class="widthBlock80">Our Team Is Happy To Answer All Of Your Questions</h2>
-               </div>
-               <form id="contact-us-form" class="widthBlock80 form-styles marginTop36">
-                 <div class="flex-row block-space">
-                   <div class="flex-item-6">
-                     <div class="group mc-form-group-FNAME ">
-                       <input type="text" name="FNAME" class="input" required>
-                       <span class="highlight"></span>
-                       <span class="bar"></span>
-                       <label>Full Name</label>
-                       <div class="mc-error"></div>
-                     </div>
-                   </div>
-                   <div class="flex-item-6">
-                     <div class="flex-item-12">
-                       <div class="group mc-form-group-EMAIL">
-                         <input type="text" name="EMAIL" class="input" required>
-                         <span class="highlight"></span>
-                         <span class="bar"></span>
-                         <label>Email</label>
-                         <div class="mc-error"></div>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-
-                 <div class="flex-row block-space">
-                   <div class="flex-item-6">
-                     <div class="group mc-form-group-PHONE">
-                       <input type="email" name="PHONE" class="input" required>
-                       <span class="highlight"></span>
-                       <span class="bar"></span>
-                       <label>Phone Number</label>
-                       <div class="mc-error"></div>
-                     </div>
-                   </div>
-                   <div class="flex-item-6">
-                     <div class="group mc-form-group-COMPANY">
-                       <input type="text" name="COMPANY" class="input" required>
-                       <span class="highlight"></span>
-                       <span class="bar"></span>
-                       <label>Company</label>
-                       <div class="mc-error"></div>
-                     </div>
-                   </div>
-                 </div>
-
-                 <div class="flex-row">
-                   <div class="flex-item-12">
-                     <div class="group mc-form-group-MESSAGE">
-                       <input type="text" name="MESSAGE" class="input" required>
-                       <span class="highlight"></span>
-                       <span class="bar"></span>
-                       <label>Message</label>
-                       <div class="mc-error"></div>
-                     </div>
-                   </div>
-                 </div>
-                 <div class="flex-row">
-                   <div class="flex-item-12" id="mc-general-error"></div>
-                 </div>
-                 <div class="display-flex">
-                   <button class="btn btn-green" type="button" id="submit-contact-form">Send Message</button>
-                 </div>
-               </form>
-             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="gray-block maps">
+      <div class="container">
+        <div class="widthBlock80 marginTop-150">
+          <div class="tabs">
+            <div class="tab-2">
+              <label for="tab2-1">United States of America</label>
+              <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+              <div class="image-tab">
+               <img class="lazyload" data-src="{{ asset('@images/v2/contact/usa.png') }}" />
+                <div class="adress">
+                  <div class="block-info flex-column">
+                    <a class="location" href="https://goo.gl/maps/sKJsTaR2wnWxJ6HX6" target="_blank" rel="noreferrer">
+                      <i class="icon-map-marker"></i><span>2 University Plaza<br/>Hackensack NJ 07601</span>
+                    </a>
+                    <a class="phone" href="tel:+18018108186"><i class="icon-phone"></i><span>(+1) 801 810 8186</span></a>
+                    <a class="email" href="mailto:hello@mitocgroup.com"><i class="icon-email"></i><span>hello@mitocgroup.com</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-2">
+              <label for="tab2-2">European Union</label>
+              <input id="tab2-2" name="tabs-two" type="radio">
+              <div class="image-tab">
+                <img class="lazyload" data-src="{{ asset('@images/v2/contact/europe.png') }}" />
+                <div class="adress">
+                  <div class="block-info flex-column">
+                    <a class="location" href="https://goo.gl/maps/uSa4n8xPwudbFgMv5" target="_blank" rel="noreferrer">
+                      <i class="icon-map-marker"></i><span>Sakala tn 7-2<br/>Tallinn Estonia</span>
+                    </a>
+                    <a class="phone" href="tel:+3726706700"><i class="icon-phone"></i><span>(+372) 670 6700</span></a>
+                    <a class="email" href="mailto:estonia@mitocgroup.com"><i class="icon-email"></i><span>estonia@mitocgroup.com</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="up80 down80">
+             <div class="text-styles center">
+               <h3 class="text-color-green">write us a message</h3>
+               <h2 class="widthBlock80">Our Team Is Happy To Answer All Of Your Questions</h2>
+             </div>
+             <form id="contact-us-form" class="widthBlock80 form-styles marginTop36">
+               <div class="flex-row block-space">
+                 <div class="flex-item-6">
+                   <div class="group mc-form-group-FNAME ">
+                     <input type="text" name="FNAME" class="input" required>
+                     <span class="highlight"></span>
+                     <span class="bar"></span>
+                     <label>Full Name</label>
+                     <div class="mc-error"></div>
+                   </div>
+                 </div>
+                 <div class="flex-item-6">
+                   <div class="flex-item-12">
+                     <div class="group mc-form-group-EMAIL">
+                       <input type="text" name="EMAIL" class="input" required>
+                       <span class="highlight"></span>
+                       <span class="bar"></span>
+                       <label>Email</label>
+                       <div class="mc-error"></div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class="flex-row block-space">
+                 <div class="flex-item-6">
+                   <div class="group mc-form-group-PHONE">
+                     <input type="email" name="PHONE" class="input" required>
+                     <span class="highlight"></span>
+                     <span class="bar"></span>
+                     <label>Phone Number</label>
+                     <div class="mc-error"></div>
+                   </div>
+                 </div>
+                 <div class="flex-item-6">
+                   <div class="group mc-form-group-COMPANY">
+                     <input type="text" name="COMPANY" class="input" required>
+                     <span class="highlight"></span>
+                     <span class="bar"></span>
+                     <label>Company</label>
+                     <div class="mc-error"></div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class="flex-row">
+                 <div class="flex-item-12">
+                   <div class="group mc-form-group-MESSAGE">
+                     <input type="text" name="MESSAGE" class="input" required>
+                     <span class="highlight"></span>
+                     <span class="bar"></span>
+                     <label>Message</label>
+                     <div class="mc-error"></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="flex-row">
+                 <div class="flex-item-12" id="mc-general-error"></div>
+               </div>
+               <div class="display-flex">
+                 <button class="btn btn-green" type="button" id="submit-contact-form">Send Message</button>
+               </div>
+             </form>
+           </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 {% endblock %}
 
 {% block js %}
-  <script async src="{{ asset('@js/contact.min.js') }}"></script>
+<script async src="{{ asset('@js/contact.min.js') }}"></script>
 {% endblock %}

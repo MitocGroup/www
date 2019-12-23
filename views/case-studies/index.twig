@@ -12,58 +12,56 @@
 ] %}
 
 {% block content %}
-
-  <div class="hide-mobile">
-    <div class="space-top header flex-column gray-block">
-      <div class="header__bg green mobile-edge">
-        <div class="bg bg-green flex-column">
-          <div class="container text-styles">
-            <div class="flex-row img-down">
-              <div class="flex-item-9 flex-column text-color-white">
-                <p>Case Studies</p>
-                <h1>Our Track Record of Cloud Native Solutions</h1>
-                <h5 class="text-24 marginTop36 paddingBottom20">
-                  Customers and partners are migrating and building awesome, innovative and cutting edge cloud solutions together with Mitoc Group.
-                </h5>
-              </div>
-              <div class="flex-item-3">
-                <img class="partner-img lazyload" data-src="{{ asset('@images/v2/case-studies/case-study.svg') }}" alt="Case Studies" />
-              </div>
+<div class="hide-mobile">
+  <div class="space-top header flex-column gray-block">
+    <div class="header__bg green mobile-edge">
+      <div class="bg bg-green flex-column">
+        <div class="container text-styles">
+          <div class="flex-row img-down">
+            <div class="flex-item-9 flex-column text-color-white">
+              <p>Case Studies</p>
+              <h1>Successful Track Record in Private Equity Sector</h1>
+              <h5 class="text-24 marginTop36 paddingBottom20">
+                Private equity portfolio companies are migrating and building awesome, innovative and cutting edge cloud native solutions together with Mitoc Group.
+              </h5>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="gray-block up80 down80">
-      <div class="paddingBottom20 min500">
-        <img src="{{ asset('@images/v2/case-studies/case-study.svg') }}" alt="Case Studies" />
-      </div>
-      <div class="container">
-        <div class="text-styles center">
-          <h3 class="text-color-green">it always seems impossible until it's done.</h3>
-          <h2>From Startups to Largest Enterprises</h2>
-        </div>
-        <div class="case-study white-block">
-          <div class="marginTop36 flex-row">
-            {% for iter in case_studies %}
-            <div class="{{ iter.class }}">
-              <a href={{ iter.href }}>
-                <div class="flex-column case-study-main">
-                  <img class="fullscreen-img lazyload" data-src="{{ asset( iter.img ) }}" alt={{ iter.title }} />
-                  <div class="space">
-                    <h3 class="paddingBottom20">{{ iter.title }}</h3>
-                    <p class="paddingBottom20">{{ iter.description }}</p>
-                    <a href="{{ iter.href }}" class="read-more marginTop-auto">View
-                      Case Study <i class="mdi mdi-chevron-right"></i></a>
-                  </div>
-                </div>
-              </a>
+            <div class="flex-item-3">
+              <img class="partner-img lazyload" data-src="{{ asset('@images/v2/case-studies/case-study.svg') }}" alt="Case Studies" />
             </div>
-            {% endfor %}
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  <div class="gray-block up80 down80">
+    <div class="paddingBottom20 min500">
+      <img src="{{ asset('@images/v2/case-studies/case-study.svg') }}" alt="Case Studies" />
+    </div>
+    <div class="container">
+      <div class="text-styles center">
+        <h3 class="text-color-green">it always seems impossible until it's done.</h3>
+        <h2>Cloud Services in Action</h2>
+      </div>
+      <div class="case-study white-block">
+        <div class="marginTop36 flex-row">
+          {% for iter in case_studies %}
+          <div class="{{ iter.class }}">
+            <a href={{ iter.href }}>
+              <div class="flex-column case-study-main">
+                <img class="fullscreen-img lazyload" data-src="{{ asset( iter.img ) }}" alt={{ iter.title }} />
+                <div class="space">
+                  <h3 class="paddingBottom20">{{ iter.title }}</h3>
+                  <p class="paddingBottom20">{{ iter.description }}</p>
+                  <a href="{{ iter.href }}" class="read-more marginTop-auto">View
+                    Case Study <i class="mdi mdi-chevron-right"></i></a>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

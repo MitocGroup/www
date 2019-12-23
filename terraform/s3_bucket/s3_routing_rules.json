@@ -1,0 +1,351 @@
+[{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "my-architecture-aws-control-tower-vs-aws-landing-zone-13c29332c499"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/my-architecture-aws-control-tower-vs-aws-landing-zone/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "stronger-security-with-terraform-module-for-aws-landing-zone-cbdb4e4df3d2"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/stronger-security-with-terraform-module-for-aws-landing-zone/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "terraform-module-components-for-aws-landing-zone-solution-c74267a0e70c"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/terraform-module-components-for-aws-landing-zone-solution/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "my-architecture-private-equity-platform-on-aws-cloud-9c4430b339a5"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/my-architecture-private-equity-platform-on-aws-cloud/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "my-architecture-apache-kafka-by-confluent-on-aws-cloud-ee5303c49f2f"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/my-architecture-apache-kafka-by-confluent-on-aws-cloud/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "three-success-stories-of-aws-landing-zone-technology-overview-609cb840a90"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/three-success-stories-of-aws-landing-zone-technology-overview/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "three-success-stories-of-aws-landing-zone-business-overview-9fe23d44714d"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/three-success-stories-of-aws-landing-zone-business-overview/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "introducing-programmatic-aws-landing-zone-as-terraform-module-3e566ee6e73f"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/introducing-programmatic-aws-landing-zone-as-terraform-module/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "aws-lambda-to-redshift-connection-using-iam-authentication-and-nat-gateway-b40c6002082b"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/aws-lambda-to-redshift-connection-using-iam-authentication-and-nat-gateway/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "you-get-what-you-get-and-you-dont-get-upset-e12e0cdfb247"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/you-get-what-you-get-and-you-dont-get-upset/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "aws-re-invent-2017-serverless-track-srv326-chalk-talk-92bd01ef8151"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/aws-re-invent-2017-serverless-track-srv326-chalk-talk/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "mitoc-group-inc-granted-aws-advanced-technology-partner-status-6550e452ed1b"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/mitoc-group-inc-granted-aws-advanced-technology-partner-status/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda-19331fe3d4f0"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/mitoc-group-inc-achieves-aws-service-delivery-partner-status-for-aws-lambda/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "blue-green-deployments-for-serverless-powered-applications-on-aws-22a08447aa72"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/blue-green-deployments-for-serverless-powered-applications-on-aws/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "scaleup-award-winner-stories-a913277d7de3"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/scaleup-award-winner-stories/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "are-you-ready-for-stackworld-2016-e01734f95a93"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/are-you-ready-for-stackworld-2016/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework-dd81719b0dff"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/building-enterprise-level-web-applications-on-aws-lambda-with-the-deep-framework/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team-a7d3d5632cf8"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/mitoc-group-featured-as-frameworks-partner-by-aws-lambda-team/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework-e04c912d08f0"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/building-scalable-web-apps-with-aws-lambda-and-home-grown-serverless-web-framework/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "interview-creators-of-the-deep-framework-8c2d42ecd243"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/interview-creators-of-the-deep-framework/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "best-re-invent-ever-448ac73f6a4e"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/best-re-invent-ever/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "press-release-digital-enterprise-end-to-end-platform-c3a4d151c39d"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/press-release-digital-enterprise-end-to-end-platform/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "how-to-create-serverless-environments-on-aws-8485ae039765"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/how-to-create-serverless-environments-on-aws/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "how-do-you-get-invited-to-speak-at-aws-re-invent-711457a41fb8"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/how-do-you-get-invited-to-speak-at-aws-re-invent/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "very-exciting-and-looking-forward-to-aws-re-invent-2015-e063dca1e063"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/very-exciting-and-looking-forward-to-aws-re-invent-2015/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "deep-management-s-continuous-integration-with-travis-ci-and-coveralls-1cfcfcb3c284"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/deep-management-s-continuous-integration-with-travis-ci-and-coveralls/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "welcome-to-deep-management-dam-as-a-service-and-dam-as-a-platform-a98d74aa75a7"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/welcome-to-deep-management-dam-as-a-service-and-dam-as-a-platform/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "mitoc-group-inc-accepted-as-aws-technology-partner-86b6f936db52"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/mitoc-group-inc-accepted-as-aws-technology-partner/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "our-first-story-the-beginning-of-the-journey-25d5abe5804"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/our-first-story-the-beginning-of-the-journey/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "@MitocGroup"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "author/mitocgroup/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "@eistrati"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "author/eistrati/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "@irca.popov"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "author/ircapopov/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "latest"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "trending"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/"
+  }
+},{
+  "Condition": {
+    "HttpErrorCodeReturnedEquals": "404",
+    "KeyPrefixEquals": "tagged"
+  },
+  "Redirect": {
+    "Protocol": "https",
+    "HostName": "www.mitocgroup.com",
+    "ReplaceKeyPrefixWith": "blog/"
+  }
+}]
