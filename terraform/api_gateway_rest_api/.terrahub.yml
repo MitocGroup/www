@@ -52,6 +52,7 @@ component:
             - null_resource.swagger
           count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
           name: var.api_gateway_name
+          binary_media_types: [ '*/*' ]
           body: >-
             file(element(data.null_data_source.swagger.*.outputs.path, count.index))
           description: Managed by TerraHub
