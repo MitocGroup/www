@@ -1,0 +1,88 @@
+component:
+  name: api_gateway_rest_api
+  dependsOn:
+    - iam_api_exec_access
+    - lambda_image_handler
+  template:
+    data:
+      null_data_source:
+        swagger:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          depends_on:
+            - null_resource.swagger
+          inputs:
+            path: format("%s/%s", local.component["path"], var.api_gateway_swagger_file_path)
+      template_file:
+        swagger:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          template: >-
+            file(format("%s/%s", local.component["path"], var.api_gateway_swagger_file_tpl_path))
+          vars:
+            host: var.api_gateway_host
+            title: var.api_gateway_name
+            iam_api_exec_access_role_arn: >-
+              element(data.terraform_remote_state.iam_api_exec_access.outputs.arn,
+              count.index),
+            lambda_image_handler_uri: >-
+              element(data.terraform_remote_state.lambda_image_handler.outputs.invoke_arn,
+              count.index)
+    resource:
+      null_resource:
+        swagger:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          triggers:
+            timestamp: timestamp()
+            shasum: filebase64sha512(format("%s/%s", local.component["path"], var.api_gateway_swagger_file_tpl_path))
+          provisioner:
+            - local-exec:
+                command: >-
+                  format("echo '%s' > %s",
+                    element(data.template_file.swagger.*.rendered, count.index),
+                    format("%s/%s", local.component["path"], var.api_gateway_swagger_file_base_path)
+                  )
+            - local-exec:
+                command: >-
+                  format("npm install --production --prefix ./scripts && node ./scripts/generateSwaggerFiles.js %s",
+                    format("%s/%s", local.component["path"],
+                    var.api_gateway_swagger_file_base_path)
+                  )
+      aws_api_gateway_rest_api:
+        api_gateway_rest_api:
+          depends_on:
+            - null_resource.swagger
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          name: var.api_gateway_name
+          body: >-
+            file(element(data.null_data_source.swagger.*.outputs.path, count.index))
+          description: Managed by TerraHub
+    dynamic:
+      data:
+        terraform_remote_state:
+          - component: '*'
+            name: '*'
+    tfvars:
+      api_gateway_name: MitocGroupDevApieee23249
+      api_gateway_host: api-dev.mitocgroup.com
+      api_gateway_description: Managed by TerraHub
+      api_gateway_swagger_file_base_path: swagger.yml
+      api_gateway_swagger_file_path: api-swagger.json
+      api_gateway_swagger_file_tpl_path: swagger.yml.tpl
+    output:
+      id:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.id
+      thub_id:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.id
+      created_date:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.created_date
+      name:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.name
+      execution_arn:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.execution_arn
+hook:
+  apply:
+    after:
+      - >-
+        aws s3 mv api-swagger.json
+        s3://data-lake-mitocgroup-us-east-1/deploy/mitocgroup/www/dev/api_gateway_rest_api/swagger.json
+      - aws s3 mv swagger.yml
+        s3://data-lake-mitocgroup-us-east-1/deploy/mitocgroup/www/dev/api_gateway_rest_api/swagger.yml

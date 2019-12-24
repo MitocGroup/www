@@ -1,23 +1,30 @@
 project:
-  name: 'MitocGroup_Website'
-  code: 'eee23249'
-  include: ['terraform']
-  exclude: ['.git', '.terraform', 'node_modules']
+  name: MitocGroup_Website
+  code: eee23249
+  include:
+    - terraform
+  exclude:
+    - .git
+    - .terraform
+    - node_modules
 template:
   locals:
-    region: 'us-east-1'
-    account_id: '123456789012'
+    region: us-east-1
+    account_id: 123456789012
   terraform:
     backend:
       s3:
-        region: 'us-east-1'
-        bucket: 'data-lake-mitocgroup-us-east-1'
+        region: us-east-1
+        bucket: data-lake-mitocgroup-us-east-1
         key: 'terraform/mitocgroup/www/${tfvar.terrahub["component"]["name"]}/terraform.tfstate'
-        workspace_key_prefix: 'terraform_workspaces'
+        workspace_key_prefix: terraform_workspaces
   provider:
     aws:
-      region: '${local.region}'
-      allowed_account_ids: ['${local.account_id}']
+      region: local.region
+      version: '~> 2.43'
+      allowed_account_ids:
+        - local.account_id
 terraform:
-  varFile: ['default.tfvars']
-  version: 0.11.13
+  varFile:
+    - default.tfvars
+  version: 0.12.18

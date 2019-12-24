@@ -1,11 +1,11 @@
 component:
   template:
     tfvars:
-      remote_state_key: 'terraform_workspaces/master/terraform/mitocgroup/www/s3_bucket/terraform.tfstate'
-      aliases: ['www.mitocgroup.com']
-      comment: 'www.mitocgroup.com'
-      origin_id: 'S3-Website-www.mitocgroup.com.s3-website-us-east-2.amazonaws.com'
-      origin_name: 'www.mitocgroup.com.s3-website-us-east-2.amazonaws.com'
+      aliases:
+        - www.mitocgroup.com
+      comment: www.mitocgroup.com
+      origin_id: S3-Website-www.mitocgroup.com.s3-website-us-east-2.amazonaws.com
+      origin_name: www.mitocgroup.com.s3-website-us-east-2.amazonaws.com
 build:
   env:
     variables:

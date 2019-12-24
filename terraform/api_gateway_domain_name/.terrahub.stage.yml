@@ -1,0 +1,4 @@
+component:
+  template:
+    tfvars:
+      api_gateway_domain_name: api-stage.mitocgroup.com

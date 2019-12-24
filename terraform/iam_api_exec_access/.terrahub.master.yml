@@ -1,0 +1,6 @@
+component:
+  template:
+    tfvars:
+      iam_role_policy_resources_01: '*MitocGroupMaster*'
+      iam_role_name: MitocGroupMasterApiExecAccesseee23249
+      iam_role_policy_name: MitocGroupMasterApiExecAccessCustomeee23249

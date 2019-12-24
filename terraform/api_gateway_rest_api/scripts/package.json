@@ -1,0 +1,10 @@
+{
+  "name": "generate-swagger",
+  "version": "0.0.1",
+  "description": "Generates swagger.yml files",
+  "dependencies": {
+    "js-yaml": "^3.12.1"
+  },
+  "scripts": {},
+  "private": true
+}
