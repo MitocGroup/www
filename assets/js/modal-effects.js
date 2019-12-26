@@ -1,10 +1,11 @@
+/* eslint-disable no-tabs */
 $(function() {
   'use strict';
 
-  let $body = $('body');
-  let $inputViewport = $('.viewport-control');
+  const $body = $('body');
+  const $inputViewport = $('.viewport-control');
 
-  let startProjectContent = `<div class="md-content popup flex-row">
+  const startProjectContent = `<div class="md-content popup flex-row">
   <div class="flex-item-6 start">
     <a class="cancel-modal-btn"><i class="mdi mdi-close"></i></a>
     <div class="flex-column text-styles confirm-mc">
@@ -52,7 +53,7 @@ $(function() {
   <div class="flex-item-6 popup-bg-start"></div>
   </div>`;
 
-  let becomePartnerContent = `<div class="md-content popup flex-row">
+  const becomePartnerContent = `<div class="md-content popup flex-row">
     <div class="flex-item-6 popup-bg-become flex-column">
     <img src="/images/v2/logos/mitoc-white.svg" alt="MitocGroup Logo"/>
     </div>
@@ -116,161 +117,164 @@ $(function() {
   </div>`;
 
   function lockButton(target) {
-   $(target).attr('disabled', 'disabled');
-   $(target).css('cursor', 'not-allowed');
+    $(target).attr('disabled', 'disabled');
+    $(target).css('cursor', 'not-allowed');
   }
 
   function unlockButton(target) {
-   $(target).removeAttr('disabled');
-   $(target).css('cursor', 'default');
+    $(target).removeAttr('disabled');
+    $(target).css('cursor', 'default');
   }
 
   function comfirmMessage(okMsg) {
-   $('.confirm-mc').addClass('hidden');
-   $('body').find('.message').removeClass('hidden');
-   $('body').find('#mc-message').text(okMsg);
+    $('.confirm-mc').addClass('hidden');
+    $('body')
+      .find('.message')
+      .removeClass('hidden');
+    $('body')
+      .find('#mc-message')
+      .text(okMsg);
   }
 
   $('.become-partner').popup({
-   content: becomePartnerContent,
-   type: 'html',
-   preloaderContent: '',
-   beforeOpen: function(type) {
-    onPopupOpen();
-   },
-   afterOpen: function() {
-    $('html').css('overflow', 'hidden');
-    $('#become-partner-form').MailChimpForm({
-      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=7257663d85',
-      fields: 'EMAIL,FNAME,COMPANY',
-      submitSelector: '#submit-modal-form',
-      onFail: function(errMsg) {
-       let $genErr = $('#mc-general-error-partner');
-       lockButton('#submit-modal-form');
+    content: becomePartnerContent,
+    type: 'html',
+    preloaderContent: '',
+    beforeOpen: function(type) {
+      onPopupOpen();
+    },
+    afterOpen: function() {
+      $('html').css('overflow', 'hidden');
+      $('#become-partner-form').MailChimpForm({
+        url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=7257663d85',
+        fields: 'EMAIL,FNAME,COMPANY',
+        submitSelector: '#submit-modal-form',
+        onFail: function(errMsg) {
+          const $genErr = $('#mc-general-error-partner');
+          lockButton('#submit-modal-form');
 
-       $genErr.text(errMsg);
-       setTimeout(() => {
-        $genErr.text('');
-       }, 5000);
-      },
-      onOk: function(okMsg) {
-       comfirmMessage(okMsg);
-      }
-    });
-   },
-   beforeClose: function() {
-    onPopupClose();
-    $('html').css('overflow', 'scroll');
-   }
+          $genErr.text(errMsg);
+          setTimeout(() => {
+            $genErr.text('');
+          }, 5000);
+        },
+        onOk: function(okMsg) {
+          comfirmMessage(okMsg);
+        }
+      });
+    },
+    beforeClose: function() {
+      onPopupClose();
+      $('html').css('overflow', 'scroll');
+    }
   });
 
   $('.start-project').popup({
-   content: startProjectContent,
-   type: 'html',
-   preloaderContent: '',
-   beforeOpen: function(type) {
-    onPopupOpen();
-   },
-   afterOpen: function() {
-    $('html').css('overflow', 'hidden');
-    $('#start-project-form').MailChimpForm({
-      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=f6629ecf38',
-      fields: 'EMAIL,FNAME',
-      submitSelector: '#submit-modal-form',
-      onFail: function(errMsg) {
-       let $genErr = $('#mc-general-error-project');
-       lockButton('#submit-modal-form');
+    content: startProjectContent,
+    type: 'html',
+    preloaderContent: '',
+    beforeOpen: function(type) {
+      onPopupOpen();
+    },
+    afterOpen: function() {
+      $('html').css('overflow', 'hidden');
+      $('#start-project-form').MailChimpForm({
+        url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=f6629ecf38',
+        fields: 'EMAIL,FNAME',
+        submitSelector: '#submit-modal-form',
+        onFail: function(errMsg) {
+          const $genErr = $('#mc-general-error-project');
+          lockButton('#submit-modal-form');
 
-       $genErr.text(errMsg);
-       setTimeout(() => {
-        $genErr.text('');
-       }, 5000);
-      },
-      onOk: function(okMsg) {
-       comfirmMessage(okMsg);
-      }
-    });
-   },
-   beforeClose: function() {
-    onPopupClose();
-    $('html').css('overflow', 'scroll');
-   }
+          $genErr.text(errMsg);
+          setTimeout(() => {
+            $genErr.text('');
+          }, 5000);
+        },
+        onOk: function(okMsg) {
+          comfirmMessage(okMsg);
+        }
+      });
+    },
+    beforeClose: function() {
+      onPopupClose();
+      $('html').css('overflow', 'scroll');
+    }
   });
 
   $('.meet-team').click(function() {
-    window.location.href='/about/';
+    window.location.href = '/about/';
   });
 
   $('#contact-us-form').MailChimpForm({
-   url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=daffe46160',
-   fields: 'EMAIL,FNAME,COMPANY,PHONE,MESSAGE',
-   submitSelector: '#submit-contact-form',
-   onFail: function(errMsg) {
-    let $genErr = $('#mc-general-error');
+    url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=daffe46160',
+    fields: 'EMAIL,FNAME,COMPANY,PHONE,MESSAGE',
+    submitSelector: '#submit-contact-form',
+    onFail: function(errMsg) {
+      const $genErr = $('#mc-general-error');
 
-    lockButton('#submit-contact-form');
+      lockButton('#submit-contact-form');
 
-    $genErr.html(`<div class="error-mc">${errMsg}</div>`);
-    setTimeout(() => {
-      $genErr.html('');
-    }, 5000);
-   },
-   onOk: function(okMsg) {
-    window.location = `/confirm/contact-us/?mc-message=${okMsg}`;
-   }
+      $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+      setTimeout(() => {
+        $genErr.html('');
+      }, 5000);
+    },
+    onOk: function(okMsg) {
+      window.location = `/confirm/contact-us/?mc-message=${okMsg}`;
+    }
   });
 
   $body.on('keyup', $inputViewport, function(e) {
-   unlockButton('#submit-contact-form');
+    unlockButton('#submit-contact-form');
   });
 
   $body.on('keyup', '.input-popup', function(e) {
-   unlockButton('#submit-modal-form');
+    unlockButton('#submit-modal-form');
   });
 
   /**
-  * MailChimp input error listener
-  */
+   * MailChimp input error listener
+   */
   $inputViewport.on('mc:input:error', function() {
-   let $this = $(this);
-   if ($this.offset().top <= window.pageYOffset) {
-    $this.goTo('-80');
-   }
+    const $this = $(this);
+    if ($this.offset().top <= window.pageYOffset) {
+      $this.goTo('-80');
+    }
   });
 
   /**
-  * Cancel modal event listener
-  */
+   * Cancel modal event listener
+   */
   $body.on('click', '.cancel-modal-btn', function(e) {
-   e.preventDefault();
-   e.stopPropagation();
-   $('.popup_back').trigger('click');
+    e.preventDefault();
+    e.stopPropagation();
+    $('.popup_back').trigger('click');
   });
 
   /**
-  *Open Popup and hide body
-  */
+   *Open Popup and hide body
+   */
   function onPopupOpen() {
-   if ($(window).width() < 568) {
-    $('.wrapper').addClass('hidden');
-    $('footer').addClass('hidden');
-   } else {
-    $('.wrapper').show('');
-    $('footer').show('');
-   }
+    if ($(window).width() < 568) {
+      $('.wrapper').addClass('hidden');
+      $('footer').addClass('hidden');
+    } else {
+      $('.wrapper').show('');
+      $('footer').show('');
+    }
   }
 
   /**
-  *Close Popup and show body
-  */
+   *Close Popup and show body
+   */
   function onPopupClose() {
-   if ($(window).width() < 568) {
-    $('.wrapper').removeClass('hidden');
-    $('footer').removeClass('hidden');
-   } else {
-    $('.wrapper').show('');
-    $('footer').show('');
-   }
+    if ($(window).width() < 568) {
+      $('.wrapper').removeClass('hidden');
+      $('footer').removeClass('hidden');
+    } else {
+      $('.wrapper').show('');
+      $('footer').show('');
+    }
   }
-
 });

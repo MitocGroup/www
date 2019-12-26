@@ -83,7 +83,7 @@
   
     <div class="recomended-blogs container flex-column mt-30 mb-30">
         <div class="mt-30 recomended-blog-header">
-                <h3>Recomended Posts </h3>
+                <h3>Recommended Posts </h3>
                 <a class="btn btn-all-posts" href="/blog/"><span>See All Posts</span></a>
         </div>
         <div class="flex-row">
@@ -91,7 +91,7 @@
                 <div class="flex-item-3">
                     <div class="blog-post">
                         <a href="/blog/{{ key }}/">
-                            <img src="{{ asset( value.image ) }}" alt="Our Blog" class="recomended-blog-img"/>
+                            <img {{ value.image|slice(0, value.image|length - 17) }} alt="Our Blog" class="lazyload recomended-blog-img"/>
                         </a>
                         <a href="/blog/{{ key }}/">
                             <h5>{{ value.title }}</h5>

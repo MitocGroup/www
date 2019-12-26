@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 'use strict';
 
 const fs = require('fs');
@@ -128,7 +129,7 @@ const blogAssets = {
   'css/blog.min.css': [...commonStyles, 'styles/libs/github.min.css', 'styles/blog.scss', 'styles/post.scss']
 };
 
-let monthsOfTheYear = {};
+const monthsOfTheYear = {};
 const years = [];
 const allPostsNameArr = [];
 const latestBlogPosts = firstN(posts, 3);
@@ -149,7 +150,7 @@ postsKeys.forEach(key => {
 
 const distinctYears = [...new Set(years)];
 
-let routes = {
+const routes = {
   '/': {
     view: 'index.twig',
     vars: {
@@ -469,7 +470,7 @@ let routes = {
 postsKeys.forEach(key => {
   const postPath = `/blog/${key}/`;
   const index = allPostsNameArr.indexOf(key);
-  let recomendedPosts = {};
+  const recomendedPosts = {};
 
   if (index === 0 || index === 1) {
     const auxIndex = (index === 0) ? 1 : 0;
@@ -485,8 +486,8 @@ postsKeys.forEach(key => {
     recomendedPosts[allPostsNameArr[auxIndex]] = (posts[allPostsNameArr[auxIndex]]);
   }
 
-  posts[key]['image_fb'] = posts[key]['image'];
-  posts[key]['image_tw'] = posts[key]['image'];
+  posts[key].image_fb = posts[key].imgSrc;
+  posts[key].image_tw = posts[key].imgSrc;
 
   routes[postPath] = {
     view: 'blog/post.twig',

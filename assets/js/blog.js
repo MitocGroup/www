@@ -1,4 +1,5 @@
-jQuery(function ($) {
+/* eslint-disable no-undef */
+jQuery(function($) {
   'use strict';
 
   const showMore = $('#show-more');
@@ -6,18 +7,18 @@ jQuery(function ($) {
   const toBeVisiblePosts = 6;
 
   hljs.initHighlightingOnLoad();
-  $('pre code').each(function (i, block) {
+  $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
   });
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     if ($(hiddenBlock).length === 0) {
       showMore.attr('disabled', true);
     }
   });
 
-  showMore.on('click', function () {
-    $(hiddenBlock).each(function (index) {
+  showMore.on('click', function() {
+    $(hiddenBlock).each(function(index) {
       if (index === toBeVisiblePosts) return false;
 
       $(this).removeClass('hidden');
