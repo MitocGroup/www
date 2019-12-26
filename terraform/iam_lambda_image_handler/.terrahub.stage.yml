@@ -1,0 +1,5 @@
+component:
+  template:
+    tfvars:
+      iam_role_name: MitocGroupStageImageHandlerLambdaExeceee23249
+      iam_role_policy_name: MitocGroupStageImageHandlerLambdaExecCustomeee23249

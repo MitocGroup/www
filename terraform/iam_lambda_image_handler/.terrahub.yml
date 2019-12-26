@@ -1,0 +1,77 @@
+component:
+  name: iam_lambda_image_handler
+  template:
+    data:
+      aws_iam_policy_document:
+        iam_role_policy:
+          statement:
+            - actions: var.iam_role_policy_actions_01
+              effect: var.iam_role_policy_effect
+              resources:
+                - >-
+                  format("arn:aws:logs:%s:%s:log-group:/aws/lambda/*",
+                  local.region, local.account_id)
+            - actions: var.iam_role_policy_actions_02
+              effect: var.iam_role_policy_effect
+              resources: var.iam_role_policy_resources_02
+            - actions: var.iam_role_policy_actions_03
+              effect: var.iam_role_policy_effect
+              resources: var.iam_role_policy_resources_03
+        iam_trust_policy:
+          statement:
+            - actions: var.iam_trust_policy_actions
+              effect: var.iam_trust_policy_effect
+              principals:
+                - identifiers: var.iam_trust_policy_principals_identifiers
+                  type: var.iam_trust_policy_principals_type
+    resource:
+      aws_iam_role:
+        iam_lambda_image_handler:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          assume_role_policy: data.aws_iam_policy_document.iam_trust_policy.json
+          description: Managed by TerraHub
+          force_detach_policies: 'false'
+          name: var.iam_role_name
+          path: var.iam_role_path
+      aws_iam_role_policy:
+        iam_lambda_image_handler:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          name: var.iam_role_policy_name
+          policy: data.aws_iam_policy_document.iam_role_policy.json
+          role: 'element(aws_iam_role.iam_lambda_image_handler.*.id, count.index)'
+    output:
+      arn:
+        value: aws_iam_role.iam_lambda_image_handler.*.arn
+      create_date:
+        value: aws_iam_role.iam_lambda_image_handler.*.create_date
+      unique_id:
+        value: aws_iam_role.iam_lambda_image_handler.*.unique_id
+      name:
+        value: aws_iam_role.iam_lambda_image_handler.*.name
+      description:
+        value: aws_iam_role.iam_lambda_image_handler.*.description
+    tfvars:
+      iam_role_name: MitocGroupDevImageHandlerLambdaExeceee23249
+      iam_role_path: /
+      iam_role_policy_actions_01:
+        - 'logs:CreateLogGroup'
+        - 'logs:CreateLogStream'
+        - 'logs:PutLogEvents'
+      iam_role_policy_actions_02:
+        - 'rekognition:DetectFaces'
+      iam_role_policy_actions_03:
+        - 's3:GetObject'
+        - 's3:ListBucket'
+      iam_role_policy_effect: Allow
+      iam_role_policy_name: MitocGroupDevImageHandlerLambdaExecCustomeee23249
+      iam_role_policy_resources_02:
+        - '*'
+      iam_role_policy_resources_03:
+        - 'arn:aws:s3::::*.mitocgroup.com/*'
+        - 'arn:aws:s3::::*.mitocgroup.com'
+      iam_trust_policy_actions:
+        - 'sts:AssumeRole'
+      iam_trust_policy_effect: Allow
+      iam_trust_policy_principals_identifiers:
+        - lambda.amazonaws.com
+      iam_trust_policy_principals_type: Service
