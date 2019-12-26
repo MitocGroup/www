@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-cond-assign */
 'use strict';
 
 const fs = require('fs');
@@ -41,7 +43,7 @@ const bindings = Object.keys(classMap).map((key) => ({
 }));
 
 const converter = new showdown.Converter({
-  extensions: [ ...bindings ],
+  extensions: [...bindings],
   noHeaderId: true,
   tables: true,
   tasklists: true
@@ -51,8 +53,7 @@ const blogPostsFolder = './views/blog/posts/';
 const regex = /.md$/;
 let postsObj, mainData;
 
-const imgSrcSet = function (imageKey) {
-  console.log(imageKey);
+const imgSrcSet = function(imageKey) {
   const ImagesSmartphonePortrait = `https://${domain}/${btoa(getQuery(bucket, imageKey.substr(1), 320).toString())}`;
   const ImagesSmartphoneLandscape = `https://${domain}/${btoa(getQuery(bucket, imageKey.substr(1), 480).toString())}`;
   const ImagesTabletPortrait = `https://${domain}/${btoa(getQuery(bucket, imageKey.substr(1), 700).toString())}`;
@@ -64,15 +65,15 @@ const imgSrcSet = function (imageKey) {
   ${ImagesTabletPortrait} 700w,
   ${ImagesTabletLandscape} 920w,
   ${ImagesDesktop} 1700w`;
-  const sizes = 'sizes=\"(max-width: 400px) 480px, (max-width: 620px): 700px, (max-width: 900px) 960px, 100vw\"';
+  const sizes = ' sizes=\"(max-width: 400px) 480px, (max-width: 620px): 700px, (max-width: 900px) 960px, 100vw\" ';
   const imgClass = ' class=\"lazyload\" ';
 
-  return (`srcset=\"${ newSrc }\" ${ sizes } ${ imgClass }`);
-}
+  return (`srcset=\"${newSrc}\"${sizes}${imgClass}`);
+};
 
-const imgOptimization = function (str) {
+const imgOptimization = function(str) {
   let item;
-  let arr = [];
+  const arr = [];
   let newContent = str;
 
   while (item = imgKeyRegExp.exec(str)) {
@@ -94,22 +95,23 @@ posts.forEach((directory) => {
         const files = fs.readdirSync(`${blogPostsFolder}/${directory}/${month}`);
         files.forEach((post) => {
           if (regex.test(post)) {
-            let fileContent = fs.readFileSync(`${blogPostsFolder}/${directory}/${month}/${post}`).toString();
+            const fileContent = fs.readFileSync(`${blogPostsFolder}/${directory}/${month}/${post}`).toString();
             const dict = fileContent.substr(0, fileContent.indexOf('---'));
             let content = fileContent.substr(fileContent.indexOf('---') + 3);
             content = imgOptimization(content);
             mainData = markdowneyjr(dict, {});
-            mainData['image'] = imgSrcSet(mainData['image'].replace('https://' + mainDomain, ''));
+            mainData.imgSrc = mainData.image;
+            mainData.image = imgSrcSet(mainData.image.replace('https://' + mainDomain, ''));
 
-            let wordCount = (content + mainData.description).replace(/[^\w ]/g, '').split(/\s+/).length;
-            let readingTimeInMinutes = Math.floor(wordCount / 250) + 1;
-            let result = `~ ${readingTimeInMinutes} min read`;
+            const wordCount = (content + mainData.description).replace(/[^\w ]/g, '').split(/\s+/).length;
+            const readingTimeInMinutes = Math.floor(wordCount / 250) + 1;
+            const result = `~ ${readingTimeInMinutes} min read`;
             const object = {
               ...mainData,
               minRead: result,
               htmlCode: converter.makeHtml(content)
             };
-            const id = `${post}`.split('.md').find((it) => it !== null);            
+            const id = `${post}`.split('.md').find((it) => it !== null);
             postsObj = { ...postsObj, [id]: object };
           }
         });
@@ -118,7 +120,7 @@ posts.forEach((directory) => {
   }
 });
 
-let sortedPostObj = Object.keys(postsObj)
+const sortedPostObj = Object.keys(postsObj)
   .sort((a, b) => {
     return -(new Date(postsObj[a].publicationDate) - new Date(postsObj[b].publicationDate));
   })

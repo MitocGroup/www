@@ -3,7 +3,7 @@
 const YAML = require('js-yaml');
 const fs = require('fs');
 
-let doc = YAML.safeLoad(fs.readFileSync(process.argv[2], 'utf8'));
+const doc = YAML.safeLoad(fs.readFileSync(process.argv[2], 'utf8'));
 
 fs.writeFileSync('api-swagger.json', JSON.stringify(doc, null, 2), 'utf8');
 console.log('api-swagger.json is ready.');

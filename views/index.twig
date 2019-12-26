@@ -225,7 +225,7 @@
                 <div class="blog-content flex-column">
                 <div class="img-block">
                   <a href="/blog/{{ key }}/" class="blog-element" alt="{{ value.title }}" rel="noopener">
-                    <img class="img-responsive lazyload" data-src="{{ asset( value.image ) }}" alt="{{ value.title }}" />
+                    <img class="img-responsive lazyload" {{ value.image|slice(0, value.image|length - 17) }} alt="{{ value.title }}" />
                   </a>
                 </div>
                   <span class="post-date">{{ value.publicationDate }}</span>

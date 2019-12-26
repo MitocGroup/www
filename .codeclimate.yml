@@ -24,7 +24,9 @@ engines:
           mass_threshold: 350
   eslint:
     enabled: true
-    channel: stable
+    channel: eslint-6
+    config:
+      config: ./.eslintrc.json
   fixme:
     enabled: true
 ratings:

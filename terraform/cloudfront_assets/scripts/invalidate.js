@@ -90,10 +90,9 @@ getDistributions().then(distributions => {
   const filtered = [];
 
   distributions.map(distribution => {
-    if (distribution.domainName.includes(bucketName)
-      || distribution.alias.includes(bucketName)
-      || distribution.comment.includes(bucketName))
-    {
+    if (distribution.domainName.includes(bucketName) ||
+      distribution.alias.includes(bucketName) ||
+      distribution.comment.includes(bucketName)) {
       filtered.push(distribution);
     }
   });
