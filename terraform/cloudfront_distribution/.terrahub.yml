@@ -71,7 +71,7 @@ component:
             minimum_protocol_version: TLSv1.1_2016
           tags:
             Description: Managed by TerraHub
-            ThubCode: 'local.project["code"]'
+            ThubCode: ${local.project["code"]}
             ThubEnv: ${terraform.workspace}
             ThubName: cloudfront_distribution
     dynamic:

@@ -11,8 +11,7 @@ component:
     resource:
       aws_cloudfront_distribution:
         cloudfront_assets:
-          count: >-
-            contains(list("test", "stage", "master"), terraform.workspace) ? 0 : 1
+          count: 'contains(list("default"), terraform.workspace) ? 1 : 0'
           aliases: var.cloudfront_assets_aliases
           comment: var.cloudfront_assets_comment
           custom_error_response:
@@ -76,7 +75,7 @@ component:
             minimum_protocol_version: TLSv1.1_2016
           tags:
             Description: Managed by TerraHub
-            ThubCode: 'local.project["code"]'
+            ThubCode: ${local.project["code"]}
             ThubEnv: ${terraform.workspace}
             ThubName: cloudfront_assets
     dynamic:

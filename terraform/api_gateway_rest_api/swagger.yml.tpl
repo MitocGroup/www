@@ -1,9 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  version: "2019-12-23T15:39:32Z"
   title: "${title}"
   description: Managed by TerraHub
+  version: "2019-12-23T15:39:32Z"
 host: "${host}"
 basePath: "/v1"
 schemes:
