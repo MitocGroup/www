@@ -72,7 +72,7 @@ component:
           tags:
             Description: Managed by TerraHub
             ThubCode: 'local.project["code"]'
-            ThubEnv: terraform.workspace
+            ThubEnv: ${terraform.workspace}
             ThubName: cloudfront_distribution
     dynamic:
       data:
@@ -85,6 +85,7 @@ component:
       comment: www-dev.mitocgroup.com
       origin_id: S3-Website-www-dev.mitocgroup.com.s3-website-us-east-1.amazonaws.com
       origin_name: www-dev.mitocgroup.com.s3-website-us-east-1.amazonaws.com
+      acm_certificate_domain_name: mitocgroup.com
     output:
       id:
         value: aws_cloudfront_distribution.cloudfront_distribution.id

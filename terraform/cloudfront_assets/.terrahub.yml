@@ -77,7 +77,7 @@ component:
           tags:
             Description: Managed by TerraHub
             ThubCode: 'local.project["code"]'
-            ThubEnv: terraform.workspace
+            ThubEnv: ${terraform.workspace}
             ThubName: cloudfront_assets
     dynamic:
       data:
