@@ -4,8 +4,8 @@ component:
       aliases:
         - www.mitocgroup.com
       comment: www.mitocgroup.com
-      origin_id: S3-Website-www.mitocgroup.com.s3-website-us-east-2.amazonaws.com
-      origin_name: www.mitocgroup.com.s3-website-us-east-2.amazonaws.com
+      min_ttl: 86400
+      default_ttl: 31536000
 build:
   env:
     variables:

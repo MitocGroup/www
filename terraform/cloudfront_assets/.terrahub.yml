@@ -38,14 +38,11 @@ component:
             target_origin_id: >-
               element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,
               count.index)
-            viewer_protocol_policy: https-only
+            viewer_protocol_policy: redirect-to-https
             forwarded_values:
-              headers:
-                - Origin
               query_string: false
               cookies:
                 forward: none
-                whitelisted_names: []
           origin:
             origin_id: >-
               element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,

@@ -13,13 +13,13 @@ component:
           aliases: var.aliases
           comment: var.comment
           custom_error_response:
-            - error_caching_min_ttl: '300'
-              error_code: '404'
-              response_code: '404'
+            - error_caching_min_ttl: 300
+              error_code: 404
+              response_code: 404
               response_page_path: /404.html
           default_root_object: index.html
-          enabled: 'true'
-          is_ipv6_enabled: 'true'
+          enabled: true
+          is_ipv6_enabled: true
           http_version: http2
           price_class: PriceClass_All
           default_cache_behavior:
@@ -35,32 +35,32 @@ component:
               - GET
               - HEAD
               - OPTIONS
-            compress: 'true'
-            max_ttl: '31536000'
-            default_ttl: '86400'
-            min_ttl: '0'
-            target_origin_id: var.origin_id
+            compress: true
+            max_ttl: var.max_ttl
+            default_ttl: var.default_ttl
+            min_ttl: var.min_ttl
+            target_origin_id: format("%s-%s", "S3-Website", data.terraform_remote_state.s3_bucket.outputs.website_endpoint)
             viewer_protocol_policy: redirect-to-https
             forwarded_values:
               headers: []
-              query_string: 'false'
+              query_string: false
               cookies:
                 forward: none
                 whitelisted_names: []
           origin:
-            origin_id: var.origin_id
-            domain_name: var.origin_name
+            origin_id: format("%s-%s", "S3-Website", data.terraform_remote_state.s3_bucket.outputs.website_endpoint)
+            domain_name: data.terraform_remote_state.s3_bucket.outputs.website_endpoint
             origin_path: ''
             custom_origin_config:
-              http_port: '80'
-              https_port: '443'
+              http_port: 80
+              https_port: 443
               origin_protocol_policy: http-only
               origin_ssl_protocols:
                 - TLSv1
                 - TLSv1.1
                 - TLSv1.2
-              origin_keepalive_timeout: '5'
-              origin_read_timeout: '30'
+              origin_keepalive_timeout: 5
+              origin_read_timeout: 30
           restrictions:
             geo_restriction:
               restriction_type: none
@@ -83,9 +83,10 @@ component:
       aliases:
         - www-dev.mitocgroup.com
       comment: www-dev.mitocgroup.com
-      origin_id: S3-Website-www-dev.mitocgroup.com.s3-website-us-east-1.amazonaws.com
-      origin_name: www-dev.mitocgroup.com.s3-website-us-east-1.amazonaws.com
       acm_certificate_domain_name: mitocgroup.com
+      max_ttl: 31536000
+      min_ttl: 0
+      default_ttl: 86400
     output:
       id:
         value: aws_cloudfront_distribution.cloudfront_distribution.id
