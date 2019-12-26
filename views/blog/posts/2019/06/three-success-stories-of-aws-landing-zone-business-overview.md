@@ -5,7 +5,7 @@ Three Success Stories of AWS Landing Zone (Business Overview)
 After Introducing Terraform Module for AWS Landing Zone couple of days ago, let's dive deep into several use cases and see how this technical solution solves real business problems.
 
 # image
-https://www.mitocgroup.com/images/blog/2019-06-19/aws-lz.png
+https://www.mitocgroup.com/images/blog/2019-06-17/aws-arch.png
 
 # publicationDate
 Fri, 19 June 2019 12:20:55 -0400
@@ -21,7 +21,7 @@ AWS Landing Zone is a solution that helps customers more quickly set up a secure
 This solution can help save time by automating the set-up of an environment for running secure and scalable workloads while implementing an initial security baseline through the creation of core accounts and resources. It also provides a baseline environment to get started with a multi-account architecture, identity and access management, governance, data security, network design, and logging.
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-06-19/aws-lz.png" alt="partner aws" />
+    <img src="/images/blog/2019-06-17/aws-arch.png" alt="partner aws" />
     <div class="center img-description">AWS Landing Zone Architecture (source:
        <a href="https://aws.amazon.com/solutions/aws-landing-zone/" target="_blank">https://aws.amazon.com/solutions/aws-landing-zone/</a>)
     </div>
