@@ -127,7 +127,7 @@
                         <div class="width-block post-block">
                             <div class="image-block-post">
                                 <a href="/blog/{{ key }}/">
-                                <img {{ item.image }} alt="Our Blog"/>
+                                <img {{ item.image|slice(0, item.image|length - 112) }} sizes="(max-width: 700px) 35vw, 30vw" class="lazyload" alt="Our Blog"/>
                                 </a>
                             </div>
                             <p class="gray-blog">{{ item.publicationDate }} {{ item.minRead }}</p>
