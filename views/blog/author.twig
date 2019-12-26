@@ -36,7 +36,7 @@
                     {% for key, value in postsListObject %}
                         <div class="flex-column flex-item-6 internal-article">
                             <a href="/blog/{{ key }}/">
-                            <img src="{{ asset( value.image ) }}" alt="{{ value.title }}"/>
+                            <img {{ value.image }} alt="{{ value.title }}"/>
                             </a>
                             <p class="gray-blog">{{ value.publicationDate }} {{ value.minRead }}</p>
                             <a href="/blog/{{ key }}/">

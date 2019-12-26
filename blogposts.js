@@ -7,6 +7,9 @@ const markdowneyjr = require('markdowneyjr');
 
 const bucket = 'www-dev.mitocgroup.com';
 const domain = 'images.mitocgroup.com';
+const mainDomain = 'www.mitocgroup.com';
+const imgKeyRegExp = /<img.*?src=[\'"](.*?)[\'"].*?>/g;
+const imgSrcRegExp = (imgKey) => new RegExp(`src=[\'"](?:\s*)${imgKey}(?:\s*)[\'"]`, 'gi');
 
 function getQuery(bucket, key, width) {
   return `{
@@ -48,29 +51,36 @@ const blogPostsFolder = './views/blog/posts/';
 const regex = /.md$/;
 let postsObj, mainData;
 
-const imgOptimization = function (str) {
-  let arr = [];
-  let re = /<img.*?src=[\'"](.*?)[\'"].*?>/g;
-  let item;
+const imgSrcSet = function (imageKey) {
+  console.log(imageKey);
+  const ImagesSmartphonePortrait = `https://${domain}/${btoa(getQuery(bucket, imageKey.substr(1), 320).toString())}`;
+  const ImagesSmartphoneLandscape = `https://${domain}/${btoa(getQuery(bucket, imageKey.substr(1), 480).toString())}`;
+  const ImagesTabletPortrait = `https://${domain}/${btoa(getQuery(bucket, imageKey.substr(1), 700).toString())}`;
+  const ImagesTabletLandscape = `https://${domain}/${btoa(getQuery(bucket, imageKey.substr(1), 960).toString())}`;
+  const ImagesDesktop = `https://${domain}/${btoa(getQuery(bucket, imageKey.substr(1), 1700).toString())}`;
 
-  while (item = re.exec(str)) {
+  const newSrc = `${ImagesSmartphonePortrait} 320w,
+  ${ImagesSmartphoneLandscape} 480w,
+  ${ImagesTabletPortrait} 700w,
+  ${ImagesTabletLandscape} 920w,
+  ${ImagesDesktop} 1700w`;
+  const sizes = 'sizes=\"(max-width: 400px) 480px, (max-width: 620px): 700px, (max-width: 900px) 960px, 100vw\"';
+  const imgClass = ' class=\"lazyload\" ';
+
+  return (`srcset=\"${ newSrc }\" ${ sizes } ${ imgClass }`);
+}
+
+const imgOptimization = function (str) {
+  let item;
+  let arr = [];
+  let newContent = str;
+
+  while (item = imgKeyRegExp.exec(str)) {
     arr.push(item[1]);
   }
-  let newContent = str;
   arr.forEach(item => {
-    const ImagesSmartphonePortrait = `https://${domain}/${btoa(getQuery(bucket, item.substr(1), 320).toString())}`;
-    const ImagesSmartphoneLandscape = `https://${domain}/${btoa(getQuery(bucket, item.substr(1), 480).toString())}`;
-    const ImagesTabletPortrait = `https://${domain}/${btoa(getQuery(bucket, item.substr(1), 700).toString())}`;
-    const ImagesTabletLandscape = `https://${domain}/${btoa(getQuery(bucket, item.substr(1), 960).toString())}`;
-    const newSrc = `${ImagesSmartphonePortrait} 320w,
-    ${ImagesSmartphoneLandscape} 480w,
-    ${ImagesTabletPortrait} 700w,
-    ${ImagesTabletLandscape} 920w`;
-    const sizes = 'sizes=\"100vw\"';
-    const regEx = new RegExp(`src=[\'"](?:\s*)${item}(?:\s*)[\'"]`, 'gi');
-
-    newContent = newContent.split(regEx).join(`srcset=\"${ newSrc }\" ${ sizes } `);
-    
+    const regEx = imgSrcRegExp(item);
+    newContent = newContent.split(regEx).join(imgSrcSet(item));
   });
   return newContent;
 };
@@ -89,6 +99,7 @@ posts.forEach((directory) => {
             let content = fileContent.substr(fileContent.indexOf('---') + 3);
             content = imgOptimization(content);
             mainData = markdowneyjr(dict, {});
+            mainData['image'] = imgSrcSet(mainData['image'].replace('https://' + mainDomain, ''));
 
             let wordCount = (content + mainData.description).replace(/[^\w ]/g, '').split(/\s+/).length;
             let readingTimeInMinutes = Math.floor(wordCount / 250) + 1;
@@ -98,8 +109,7 @@ posts.forEach((directory) => {
               minRead: result,
               htmlCode: converter.makeHtml(content)
             };
-            const id = `${post}`.split('.md').find((it) => it !== null);
-
+            const id = `${post}`.split('.md').find((it) => it !== null);            
             postsObj = { ...postsObj, [id]: object };
           }
         });
