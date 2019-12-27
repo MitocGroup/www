@@ -1,0 +1,10 @@
+component:
+  template:
+    tfvars:
+      default_tags:
+        Description: Managed by TerraHub
+        Name: MitocGroupMasterLambdaImageHandlereee23249
+        ThubCode: eee23249
+        ThubEnv: master
+      lambda_function_name: MitocGroupMasterLambdaImageHandlereee23249
+      lambda_env_var_source_buckets: www.mitocgroup.com

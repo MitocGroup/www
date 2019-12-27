@@ -1,0 +1,13 @@
+component:
+  template:
+    tfvars:
+      api_gateway_name: MitocGroupMasterApieee23249
+      api_gateway_host: api.mitocgroup.com
+hook:
+  apply:
+    after:
+      - >-
+        aws s3 mv api-swagger.json
+        s3://data-lake-mitocgroup-us-east-1/deploy/mitocgroup/www/master/api_gateway_rest_api/swagger.json
+      - aws s3 mv swagger.yml
+        s3://data-lake-mitocgroup-us-east-1/deploy/mitocgroup/www/master/api_gateway_rest_api/swagger.yml

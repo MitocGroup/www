@@ -1,0 +1,131 @@
+component:
+  name: cloudfront_assets
+  dependsOn:
+    - s3_bucket
+    - api_gateway_rest_api
+  template:
+    data:
+      aws_acm_certificate:
+        acm_certificate:
+          domain: var.acm_certificate_domain_name
+    resource:
+      aws_cloudfront_distribution:
+        cloudfront_assets:
+          count: 'contains(list("default"), terraform.workspace) ? 1 : 0'
+          aliases: var.cloudfront_assets_aliases
+          comment: var.cloudfront_assets_comment
+          custom_error_response:
+            - error_caching_min_ttl: 300
+              error_code: 404
+              response_code: 404
+              response_page_path: /404.html
+          default_root_object: index.html
+          enabled: true
+          is_ipv6_enabled: true
+          http_version: http2
+          price_class: PriceClass_All
+          default_cache_behavior:
+            allowed_methods:
+              - GET
+              - HEAD
+            cached_methods:
+              - GET
+              - HEAD
+            compress: true
+            min_ttl: 86400
+            max_ttl: 31536000
+            default_ttl: 31536000
+            target_origin_id: >-
+              element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,
+              count.index)
+            viewer_protocol_policy: redirect-to-https
+            forwarded_values:
+              query_string: false
+              cookies:
+                forward: none
+          origin:
+            origin_id: >-
+              element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,
+              count.index)
+            domain_name: >-
+              format("%s.execute-api.%s.amazonaws.com",
+              element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,
+              count.index), local.region)
+            origin_path: /v1/image/handler
+            custom_origin_config:
+              http_port: 80
+              https_port: 443
+              origin_protocol_policy: https-only
+              origin_ssl_protocols:
+                - TLSv1
+                - TLSv1.1
+                - TLSv1.2
+              origin_keepalive_timeout: 5
+              origin_read_timeout: 30
+          restrictions:
+            geo_restriction:
+              restriction_type: none
+              locations: []
+          viewer_certificate:
+            acm_certificate_arn: data.aws_acm_certificate.acm_certificate.arn
+            ssl_support_method: sni-only
+            minimum_protocol_version: TLSv1.1_2016
+          tags:
+            Description: Managed by TerraHub
+            ThubCode: ${local.project["code"]}
+            ThubEnv: ${terraform.workspace}
+            ThubName: cloudfront_assets
+    dynamic:
+      data:
+        terraform_remote_state:
+          - component: api_gateway_rest_api
+            name: api_gateway_rest_api
+    output:
+      id:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.id
+      arn:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.arn
+      status:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.status
+      domain_name:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.domain_name
+      etag:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.etag
+      hosted_zone_id:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.hosted_zone_id
+      last_modified_time:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.last_modified_time
+      in_progress_validation_batches:
+        value: >-
+          aws_cloudfront_distribution.cloudfront_assets.*.in_progress_validation_batches
+      caller_reference:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.caller_reference
+      active_trusted_signers:
+        value: aws_cloudfront_distribution.cloudfront_assets.*.active_trusted_signers
+    tfvars:
+      acm_certificate_domain_name: mitocgroup.com
+      cloudfront_assets_aliases:
+        - images.mitocgroup.com
+      cloudfront_assets_comment: images.mitocgroup.com
+
+build:
+  env:
+    variables:
+      THUB_S3_BUCKET_NAME: images.mitocgroup.com
+  phases:
+    pre_build:
+      commands:
+        - echo 'BUILD: Running pre_build step'
+      finally:
+        - echo 'BUILD: pre_build step successful'
+    build:
+      commands:
+        - echo 'BUILD: Running build step'
+        - node ./scripts/invalidate.js
+      finally:
+        - echo 'BUILD: build step successful'
+    post_build:
+      commands:
+        - echo 'BUILD: Running post_build step'
+      finally:
+        - echo 'BUILD: post_build step successful'

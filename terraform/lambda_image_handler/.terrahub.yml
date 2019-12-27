@@ -1,0 +1,69 @@
+component:
+  name: lambda_image_handler
+  dependsOn:
+    - iam_lambda_image_handler
+  template:
+    resource:
+      aws_lambda_function:
+        lambda_image_handler:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          description: var.lambda_description
+          environment:
+            - variables: |-
+                merge(var.default_vars, map(
+                  "CORS_ENABLED", "Yes",
+                  "CORS_ORIGIN", "*",
+                  "REWRITE_MATCH_PATTERN", "",
+                  "REWRITE_SUBSTITUTION", "",
+                  "SOURCE_BUCKETS", terraform.workspace == "default" ? "www-dev.mitocgroup.com" : "www.mitocgroup.com",
+                  "SEND_ANONYMOUS_DATA", "No",
+                  "THUB_ENV", terraform.workspace == "default" ? "dev" : terraform.workspace
+                ))
+          function_name: var.lambda_function_name
+          handler: var.lambda_handler
+          memory_size: var.lambda_memory_size
+          publish: var.lambda_publish
+          role: element(data.terraform_remote_state.iam_lambda_image_handler.outputs.arn, count.index)
+          runtime: var.lambda_runtime
+          s3_bucket: var.lambda_s3_bucket
+          s3_key: 'format("%s/%s.zip", var.lambda_s3_key, var.lambda_runtime)'
+          source_code_hash: base64sha256(var.lambda_function_name)
+          tags: var.default_tags
+          timeout: var.lambda_timeout
+          tracing_config:
+            - mode: var.lambda_xray_enabled
+    dynamic:
+      data:
+        terraform_remote_state:
+          - component: '*'
+            name: '*'
+    output:
+      arn:
+        value: aws_lambda_function.lambda_image_handler.*.arn
+      qualified_arn:
+        value: aws_lambda_function.lambda_image_handler.*.qualified_arn
+      invoke_arn:
+        value: aws_lambda_function.lambda_image_handler.*.invoke_arn
+      version:
+        value: aws_lambda_function.lambda_image_handler.*.version
+      last_modified:
+        value: aws_lambda_function.lambda_image_handler.*.last_modified
+    tfvars:
+      default_tags:
+        Description: Managed by TerraHub
+        Name: MitocGroupDevLambdaImageHandlereee23249
+        ThubCode: eee23249
+        ThubEnv: default
+      default_vars:
+        SENTRY: ''
+      lambda_env_var_source_buckets: www-dev.mitocgroup.com
+      lambda_description: Managed by TerraHub
+      lambda_function_name: MitocGroupDevLambdaImageHandlereee23249
+      lambda_handler: index.handler
+      lambda_memory_size: 1536
+      lambda_publish: false
+      lambda_runtime: nodejs12.x
+      lambda_s3_bucket: data-lake-mitocgroup-us-east-1
+      lambda_s3_key: deploy/mitocgroup/www/dev/lambda_image_handler
+      lambda_timeout: 300
+      lambda_xray_enabled: PassThrough

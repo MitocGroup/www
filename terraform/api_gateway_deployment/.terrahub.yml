@@ -1,0 +1,39 @@
+component:
+  name: api_gateway_deployment
+  dependsOn:
+    - api_gateway_rest_api
+  mapping:
+    - ../api_gateway_rest_api
+  template:
+    resource:
+      aws_api_gateway_deployment:
+        api_gateway_deployment:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          description: var.api_gateway_deployment_description
+          rest_api_id: >-
+            element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,
+            count.index)
+          stage_description: >-
+            format("%s %s", var.api_gateway_deployment_stage_description,
+            timestamp())
+          stage_name: var.api_gateway_deployment_stage_name
+    dynamic:
+      data:
+        terraform_remote_state:
+          - component: api_gateway_rest_api
+            name: api_gateway_rest_api
+    output:
+      id:
+        value: aws_api_gateway_deployment.api_gateway_deployment.*.id
+      stage_name:
+        value: aws_api_gateway_deployment.api_gateway_deployment.*.stage_name
+      invoke_url:
+        value: aws_api_gateway_deployment.api_gateway_deployment.*.invoke_url
+      execution_arn:
+        value: aws_api_gateway_deployment.api_gateway_deployment.*.execution_arn
+      created_date:
+        value: aws_api_gateway_deployment.api_gateway_deployment.*.created_date
+    tfvars:
+      api_gateway_deployment_stage_name: v1
+      api_gateway_deployment_stage_description: Deployed at
+      api_gateway_deployment_description: Managed by TerraHub
