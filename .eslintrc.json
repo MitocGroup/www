@@ -1,7 +1,7 @@
 {
   "extends": "standard",
   "parserOptions": {
-    "ecmaVersion": 8
+    "ecmaVersion": 9
   },
   "globals": {
     "$": true,
@@ -11,6 +11,7 @@
     "test": true
   },
   "rules": {
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "space-before-function-paren": ["error", "never"]
   }
 }

@@ -1,95 +1,115 @@
 component:
-  name: 'cloudfront_distribution'
-  dependsOn: ['s3_bucket']
+  name: cloudfront_distribution
+  dependsOn:
+    - s3_bucket
   template:
+    data:
+      aws_acm_certificate:
+        acm_certificate:
+          domain: var.acm_certificate_domain_name
     resource:
       aws_cloudfront_distribution:
         cloudfront_distribution:
-          aliases: '${var.aliases}'
-          comment: '${var.comment}'
-          ordered_cache_behavior: []
+          aliases: var.aliases
+          comment: var.comment
           custom_error_response:
-            - error_caching_min_ttl: '300'
-              error_code: '404'
-              response_code: '404'
-              response_page_path: '/404.html'
-          default_root_object: 'index.html'
-          enabled: 'true'
-          is_ipv6_enabled: 'true'
-          http_version: 'http2'
-          price_class: 'PriceClass_All'
+            - error_caching_min_ttl: 300
+              error_code: 404
+              response_code: 404
+              response_page_path: /404.html
+          default_root_object: index.html
+          enabled: true
+          is_ipv6_enabled: true
+          http_version: http2
+          price_class: PriceClass_All
           default_cache_behavior:
-            allowed_methods: ['DELETE', 'GET', 'HEAD', 'OPTIONS', 'PATCH', 'POST', 'PUT']
-            cached_methods: ['GET', 'HEAD', 'OPTIONS']
-            compress: 'true'
-            max_ttl: '31536000'
-            default_ttl: '86400'
-            min_ttl: '0'
-            target_origin_id: '${var.origin_id}'
-            viewer_protocol_policy: 'redirect-to-https'
+            allowed_methods:
+              - DELETE
+              - GET
+              - HEAD
+              - OPTIONS
+              - PATCH
+              - POST
+              - PUT
+            cached_methods:
+              - GET
+              - HEAD
+              - OPTIONS
+            compress: true
+            max_ttl: var.max_ttl
+            default_ttl: var.default_ttl
+            min_ttl: var.min_ttl
+            target_origin_id: format("%s-%s", "S3-Website", data.terraform_remote_state.s3_bucket.outputs.website_endpoint)
+            viewer_protocol_policy: redirect-to-https
             forwarded_values:
               headers: []
-              query_string: 'false'
+              query_string: false
               cookies:
-                forward: 'none'
+                forward: none
                 whitelisted_names: []
           origin:
-            origin_id: '${var.origin_id}'
-            domain_name: '${var.origin_name}'
+            origin_id: format("%s-%s", "S3-Website", data.terraform_remote_state.s3_bucket.outputs.website_endpoint)
+            domain_name: data.terraform_remote_state.s3_bucket.outputs.website_endpoint
             origin_path: ''
             custom_origin_config:
-              http_port: '80'
-              https_port: '443'
-              origin_protocol_policy: 'http-only'
-              origin_ssl_protocols: ['TLSv1', 'TLSv1.1', 'TLSv1.2']
-              origin_keepalive_timeout: '5'
-              origin_read_timeout: '30'
+              http_port: 80
+              https_port: 443
+              origin_protocol_policy: http-only
+              origin_ssl_protocols:
+                - TLSv1
+                - TLSv1.1
+                - TLSv1.2
+              origin_keepalive_timeout: 5
+              origin_read_timeout: 30
           restrictions:
             geo_restriction:
-              restriction_type: 'none'
+              restriction_type: none
               locations: []
           viewer_certificate:
-            acm_certificate_arn: 'arn:aws:acm:${local.region}:${local.account_id}:certificate/${var.acm_certificate_id}'
-            ssl_support_method: 'sni-only'
-            minimum_protocol_version: 'TLSv1.1_2016'
+            acm_certificate_arn: data.aws_acm_certificate.acm_certificate.arn
+            ssl_support_method: sni-only
+            minimum_protocol_version: TLSv1.1_2016
           tags:
-            Description: 'Managed by TerraHub'
-            ThubCode: '${local.project["code"]}'
-            ThubEnv: '${terraform.workspace}'
-            ThubName: 'cloudfront_distribution'
+            Description: Managed by TerraHub
+            ThubCode: ${local.project["code"]}
+            ThubEnv: ${terraform.workspace}
+            ThubName: cloudfront_distribution
     dynamic:
       data:
         terraform_remote_state:
           - component: s3_bucket
             name: s3_bucket
     tfvars:
-      remote_state_key: 'terraform/mitocgroup/www/s3_bucket/terraform.tfstate'
-      aliases: ['www-dev.mitocgroup.com']
-      comment: 'www-dev.mitocgroup.com'
-      origin_id: 'S3-Website-www-dev.mitocgroup.com.s3-website-us-east-1.amazonaws.com'
-      origin_name: 'www-dev.mitocgroup.com.s3-website-us-east-1.amazonaws.com'
-      acm_certificate_id: '5de00f26-7e09-40e2-bb2b-08fb4fd0b66d'
+      aliases:
+        - www-dev.mitocgroup.com
+      comment: www-dev.mitocgroup.com
+      acm_certificate_domain_name: mitocgroup.com
+      max_ttl: 31536000
+      min_ttl: 0
+      default_ttl: 86400
     output:
       id:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.id}'
+        value: aws_cloudfront_distribution.cloudfront_distribution.id
       arn:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.arn}'
+        value: aws_cloudfront_distribution.cloudfront_distribution.arn
       status:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.status}'
+        value: aws_cloudfront_distribution.cloudfront_distribution.status
       domain_name:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.domain_name}'
+        value: aws_cloudfront_distribution.cloudfront_distribution.domain_name
       etag:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.etag}'
+        value: aws_cloudfront_distribution.cloudfront_distribution.etag
       hosted_zone_id:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.hosted_zone_id}'
+        value: aws_cloudfront_distribution.cloudfront_distribution.hosted_zone_id
       last_modified_time:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.last_modified_time}'
+        value: aws_cloudfront_distribution.cloudfront_distribution.last_modified_time
       in_progress_validation_batches:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.in_progress_validation_batches}'
+        value: >-
+          aws_cloudfront_distribution.cloudfront_distribution.in_progress_validation_batches
       caller_reference:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.caller_reference}'
+        value: aws_cloudfront_distribution.cloudfront_distribution.caller_reference
       active_trusted_signers:
-        value: '${aws_cloudfront_distribution.cloudfront_distribution.active_trusted_signers}'
+        value: >-
+          aws_cloudfront_distribution.cloudfront_distribution.active_trusted_signers
 build:
   env:
     variables:

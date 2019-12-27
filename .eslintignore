@@ -1,0 +1,10 @@
+assets/js/libs/*
+assets/styles/libs/*
+static/admin/*
+static/css/*
+static/fonts/*
+static/js/*
+
+**/node_modules/**
+**/build/**
+**/tests/**

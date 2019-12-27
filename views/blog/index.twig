@@ -38,7 +38,7 @@
               {% if featured[1] %}
                     <div class="flex-item-6 first-b flex-column">
                         <a href="{{ featured[1].href }}">
-                        <img src="{{ asset( featured[1].image ) }}" alt="Our Blog"/>
+                        <img {{ featured[1].image }} alt="Our Blog"/>
                         </a>
                         <p class="gray-blog">{{ featured[1].publicationDate }} {{ featured[1].minRead }}</p>
                         <a href="{{ featured[1].href }}">
@@ -58,7 +58,7 @@
                       <div class="flex-row">
                           <div class="flex-item-6">
                               <a href="{{ featured[i].href }}">
-                              <img src="{{ asset( featured[i].image ) }}" alt="Our Blog"/>
+                              <img {{ featured[i].image }} alt="Our Blog"/>
                               </a>
                           </div>
                           <div class="flex-item-6">
@@ -127,7 +127,7 @@
                         <div class="width-block post-block">
                             <div class="image-block-post">
                                 <a href="/blog/{{ key }}/">
-                                <img src="{{ asset( item.image ) }}" alt="Our Blog"/>
+                                <img {{ item.image|slice(0, item.image|length - 112) }} sizes="(max-width: 700px) 35vw, 30vw" class="lazyload" alt="Our Blog"/>
                                 </a>
                             </div>
                             <p class="gray-blog">{{ item.publicationDate }} {{ item.minRead }}</p>
