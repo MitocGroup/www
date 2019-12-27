@@ -1,0 +1,52 @@
+component:
+  name: api_gateway_rest_api
+  dependsOn:
+    - iam_api_exec_access
+    - lambda_image_handler
+  template:
+    data:
+      template_file:
+        swagger:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          template: >-
+            file(format("%s/%s", local.component["path"], var.api_gateway_swagger_file_tpl_path))
+          vars:
+            host: var.api_gateway_host
+            title: var.api_gateway_name
+            iam_api_exec_access_role_arn: >-
+              element(data.terraform_remote_state.iam_api_exec_access.outputs.arn,
+              count.index),
+            lambda_image_handler_uri: >-
+              element(data.terraform_remote_state.lambda_image_handler.outputs.invoke_arn,
+              count.index)
+    resource:
+      aws_api_gateway_rest_api:
+        api_gateway_rest_api:
+          count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
+          name: var.api_gateway_name
+          binary_media_types: [ '*/*' ]
+          body: element(data.template_file.swagger.*.rendered, count.index)
+          description: Managed by TerraHub
+    dynamic:
+      data:
+        terraform_remote_state:
+          - component: '*'
+            name: '*'
+    tfvars:
+      api_gateway_name: MitocGroupDevApieee23249
+      api_gateway_host: api-dev.mitocgroup.com
+      api_gateway_description: Managed by TerraHub
+      api_gateway_swagger_file_base_path: swagger.yml
+      api_gateway_swagger_file_path: api-swagger.json
+      api_gateway_swagger_file_tpl_path: swagger.yml.tpl
+    output:
+      id:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.id
+      thub_id:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.id
+      created_date:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.created_date
+      name:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.name
+      execution_arn:
+        value: aws_api_gateway_rest_api.api_gateway_rest_api.*.execution_arn

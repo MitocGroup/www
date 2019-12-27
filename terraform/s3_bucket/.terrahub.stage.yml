@@ -1,5 +1,7 @@
 component:
   template:
+    locals:
+      region: us-west-1
     tfvars:
       s3_bucket_name: 'www-stage.mitocgroup.com'
       s3_bucket_region: 'us-west-1'

@@ -1,11 +1,11 @@
-jQuery(function ($) {
+jQuery(function($) {
   'use strict';
 
   const inputForm = $('.input');
   const $subscribeForm = $('#subscribe-form-blog');
   const subscriptionBtn = $('#submit-blog-subscribe');
 
-  $subscribeForm.on('submit', function (e) {
+  $subscribeForm.on('submit', function(e) {
     e.preventDefault();
     $(subscriptionBtn).trigger('click');
   });
@@ -15,16 +15,16 @@ jQuery(function ($) {
     fields: '0:EMAIL',
     inputSelector: '.input',
     submitSelector: '#submit-blog-subscribe',
-    onFail: function (errMsg) {
-      let genErr = $('#mc-general');
+    onFail: function(errMsg) {
+      const genErr = $('#mc-general');
       genErr.html(`<div class="error-mc">${errMsg}</div>`);
       setTimeout(() => {
         genErr.html('');
       }, 5000);
     },
-    onOk: function (okMsg) {
+    onOk: function(okMsg) {
       $('#hide-mc').hide();
-      let genMc = $('#mc-message');
+      const genMc = $('#mc-message');
       genMc.html(`<div class="success">${okMsg}</div>`);
     }
   });
@@ -32,14 +32,14 @@ jQuery(function ($) {
   /**
    * mc:input:error event handler
    */
-  inputForm.on('mc:input:error', function () {
+  inputForm.on('mc:input:error', function() {
     $(this).addClass('error');
   });
 
   /**
    * mc:input:error event handler
    */
-  inputForm.on('mc:input:ok', function () {
+  inputForm.on('mc:input:ok', function() {
     $(this).removeClass('error');
   });
 });

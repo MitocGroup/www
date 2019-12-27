@@ -1,10 +1,14 @@
+/* eslint-disable no-unused-vars */
 (function($, win) {
   'use strict';
 
-  let $win = $(win);
+  const $win = $(win);
 
   $('.mdi-menu').on('click', function() {
-    $(this).toggleClass('open').toggleClass('mdi-menu').toggleClass('mdi-close');
+    $(this)
+      .toggleClass('open')
+      .toggleClass('mdi-menu')
+      .toggleClass('mdi-close');
 
     if ($('.mdi-close').hasClass('open')) {
       $('html').css('overflow', 'hidden');
@@ -18,13 +22,16 @@
   });
 
   $('.anchor').click(function() {
-    $('html, body').animate({
-      scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
+    $('html, body').animate(
+      {
+        scrollTop: $($(this).attr('href')).offset().top
+      },
+      500
+    );
     return false;
   });
 
-  $('#mce-error-response, #mce-success-response').on('click',function() {
+  $('#mce-error-response, #mce-success-response').on('click', function() {
     $('#mce-error-response, #mce-success-response').fadeOut('fast');
   });
 
@@ -32,9 +39,9 @@
    * Parse confirmation message and append it to the page
    */
   function confirmationMessage() {
-    let location = document.location.toString();
+    const location = document.location.toString();
     if (location.toString().indexOf('?mc-message=') > 0) {
-      let message = (location.split('?mc-message='))[1];
+      const message = location.split('?mc-message=')[1];
 
       $('#mc-message').text(decodeURI(message || ''));
     }
@@ -42,14 +49,14 @@
 
   confirmationMessage();
 
-  let $filterBtns = $('.filter-btn');
-  let $parent = $('#parent').children('div');
+  const $filterBtns = $('.filter-btn');
+  const $parent = $('#parent').children('div');
 
   $filterBtns.on('click', function() {
     if (this.id === 'all') {
       $parent.fadeIn(450);
     } else {
-      let $el = $(`.${this.id}`).fadeIn(450);
+      const $el = $(`.${this.id}`).fadeIn(450);
       $parent.not($el).hide();
     }
 
@@ -58,14 +65,14 @@
   });
 
   $win.on('scroll', function() {
-    let $whiteCol = $('.white-color');
-    let $navBarFix = $('.navbar-fix');
+    const $whiteCol = $('.white-color');
+    const $navBarFix = $('.navbar-fix');
 
     if ($win.scrollTop() > 30) {
       $navBarFix.addClass('color-nav');
       $whiteCol.removeClass('gray-color');
     } else {
-      $navBarFix.removeClass("color-nav");
+      $navBarFix.removeClass('color-nav');
       $whiteCol.addClass('gray-color');
     }
   });
@@ -77,21 +84,25 @@
    * @returns {$}
    */
   $.fn.goTo = function(offsetAdj, time) {
-    let realOffset = $(this).offset().top;
-    let animationTime = time || 'fast';
-    let additionalOffset = offsetAdj || '+0';
+    const realOffset = $(this).offset().top;
+    const animationTime = time || 'fast';
+    const additionalOffset = offsetAdj || '+0';
 
-    $('html, body').animate({
-      scrollTop: eval(realOffset + additionalOffset) + 'px'
-    }, animationTime);
+    $('html, body').animate(
+      {
+        // eslint-disable-next-line no-eval
+        scrollTop: eval(realOffset + additionalOffset) + 'px'
+      },
+      animationTime
+    );
 
     return this;
   };
-  
+
   $('.team-show-more, .team-less-more').on('click', function(e) {
     e.preventDefault();
-    let $parentBlock = $(this).parents('.shadow-block');
-    let $hiddenBlock = $parentBlock.find('.hidden-block');
+    const $parentBlock = $(this).parents('.shadow-block');
+    const $hiddenBlock = $parentBlock.find('.hidden-block');
 
     $parentBlock.find('.team-less-more').toggleClass('hidden');
     $parentBlock.find('.team-show-more').toggleClass('hidden');
@@ -100,7 +111,7 @@
     if (!$hiddenBlock.hasClass('hidden')) {
       $parentBlock.goTo('-80', 500);
     }
-    
+
     $hiddenBlock.toggleClass('hidden');
     $parentBlock.find('.info').toggleClass('dots');
   });
@@ -111,18 +122,17 @@
       $('html').css('overflow-y', 'scroll');
     }
   });
-
 })(jQuery, window);
 
 function goBack() {
-  window.history.back()
+  window.history.back();
 }
 
 const lazy = () => {
-  document.addEventListener('lazyloaded', (e) => {
+  document.addEventListener('lazyloaded', e => {
     e.target.parentNode.classList.add('image-loaded');
     e.target.parentNode.classList.remove('loading');
   });
-}
+};
 
 lazy();

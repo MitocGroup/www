@@ -5,7 +5,7 @@ Three Success Stories of AWS Landing Zone (Technology Overview)
 After introducing Terraform Module for AWS Landing Zone and providing Business Overview of Our Experience with AWS Landing Zone, let's dive deeper into the technical overview.
 
 # image
-https://www.mitocgroup.com/images/blog/2019-08-01/aws-lz-arch.png
+https://www.mitocgroup.com/images/blog/2019-06-17/aws-arch.png
 
 # publicationDate
 Thu, 1 August 2019 12:20:55 -0400
@@ -15,7 +15,7 @@ Thu, 1 August 2019 12:20:55 -0400
 In this article, we will be covering the technical aspects of implementations and critical details that helped deploy and manage consistent multi-account strategy using AWS best practices. We will start with reference architecture (see picture below) for AWS Landing Zone solution and dive deeper into each customer's customization that make their solutions both unique and reusable.
 
 <div class="padd25px">
-    <img src="/images/blog/2019-08-01/aws-lz-arch.png" alt="partner aws" />
+    <img src="/images/blog/2019-06-17/aws-arch.png" alt="partner aws" />
     <div class="center img-description">
       AWS Landing Zone Architecture (source:
       <a href="https://aws.amazon.com/solutions/aws-landing-zone">https://aws.amazon.com/solutions/aws-landing-zone</a>)
