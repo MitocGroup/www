@@ -548,3 +548,15 @@
     }
   }
 }
+
+.comment-div {
+  margin: 30px;
+  .wp-comment-stars {
+    display: none !important;
+  }
+  .wpac {
+    .wp-comment-rating.wp-comment-up {
+      color: #5cb85c !important;
+    }
+  }
+}
