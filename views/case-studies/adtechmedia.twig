@@ -75,7 +75,10 @@
                             </div>
                         </div>
                         <div class="flex-item-6 flex-column">
-                            <img class="fullscreen-img" src="{{ asset('@images/v2/case-studies/adtechmedia.png') }}">
+                            <img class="fullscreen-img"
+                                {{ images['/images/v2/case-studies/adtechmedia.png'] }}
+                                sizes="(max-width: 500px) 100w, ((min-width: 500px) and (max-width: 800px)) 50vw, 25vw"
+                                alt="AdTechMedia Working Schemma" />
                         </div>
                     </div>
                 </div>
@@ -88,7 +91,9 @@
                    <div class="widthBlock80">
                        <div class="flex-row block-space">
                            <div class="flex-item-6 flex-column atm-img">
-                               <img class="fullscreen-img big-img marginTop-200" src="{{ asset('@images/v2/case-studies/monetization.png') }}">
+                               <img class="fullscreen-img big-img marginTop-200"
+                                    src="{{ asset('@images/v2/case-studies/monetization.png') }}"
+                                    alt="AdTechMedia simplifies content creators way to revenue" />
                            </div>
                            <div class="flex-item-6">
                                <div class="text-20 checked-atm">
@@ -132,8 +137,9 @@
                         <div class="flex-row block-space marginTop36">
                             <div class="flex-item-6 flex-column">
                                 <img class="fullscreen-img marginLeft-43"
-                                     src="{{ asset('@images/v2/case-studies/devices.png') }}"
-                                     alt="Case Study">
+                                    {{ images['/images/v2/case-studies/devices.png'] }}
+                                    sizes="(max-width: 500px) 100w, ((min-width: 500px) and (max-width: 800px)) 50vw, 25vw"
+                                    alt="Case Study AdTechMedia">
                             </div>
                             <div class="flex-item-6 text-20">
                                 The success of our business is directly dependent on how fast and how easy

@@ -25,7 +25,11 @@
         <div class="block-img marginTop-150">
           <div class="flex-row display-grid">
             <div class="flex-item-5">
-              <img src="{{ asset('@images/v2/png/about-png.png') }}"/>
+              <img
+                {{ images['/images/v2/png/about-png.png'] }}
+                sizes="(max-width: 500px) 100vw,
+                  ((min-width: 500px) and (max-width: 750px)) 50vw, 33vw"
+                alt="going through the curve - Andy Jassy"/>
             </div>
             <div class="flex-item-7 what-is flex-column gradient-left-right white services">
               <div class="text-color-dark text-italic text-left">
@@ -80,7 +84,10 @@
             <div class="flex-item-6 block-img pic-up small-img flex-column">
               <div class="flex-row display-grid">
                 <div class="flex-item-5">
-                  <img src="{{ asset('@images/v2/png/about2-png.png') }}">
+                  <img
+                    {{ images['/images/v2/png/about2-png.png'] }}
+                    sizes="(min-width: 600px) 50vw, 100vw"
+                    alt="At the end of the world">
                 </div>
                 <div class="flex-item-7 what-is flex-column gradient-left-right green other-side">
                   <div class="text-color-white text-italic text-left">

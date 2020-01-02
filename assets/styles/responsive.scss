@@ -17,6 +17,11 @@
   .blog-container {
     width: 950px;
   }
+  .block-img {
+    .maxH-200 {
+      max-height: 200px !important;
+    } 
+  }
 }
 
 @media (min-width: 1270px) {

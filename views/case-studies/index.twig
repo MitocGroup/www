@@ -1,14 +1,14 @@
 {% extends '../case-studies.twig' %}
 
 {% set case_studies = [
-  { 'class': 'flex-item-4 hover-shadow', 'href': '/case-studies/terrahub/', 'img': '@images/v2/png/terrahub.png', 'title': 'TerraHub', 'description': 'We are providing incremental value by automating the management at scale of large amount of cloud services and cloud resources that run in customers\' private networks built on top of public clouds...' },
-  { 'class': 'flex-item-4 hover-shadow', 'href': '/case-studies/insurance-company/', 'img': '@images/v2/png/insurance-png.png', 'title': 'Major Insurance Company', 'description': 'Major insurance company has been offering complex risks management and sustainable financial strength for decades...' },
-  { 'class': 'flex-item-4 hover-shadow', 'href': '/case-studies/analytics-company/', 'img': '@images/v2/png/analytics-company.png', 'title': 'Major Content Analytics Company', 'description': 'Major content analytics company, owned by leading private equity firm and formerly the intellectual property and science business unit of a major mass media and information...' },
-  { 'class': 'flex-item-4 hover-shadow', 'href': '/case-studies/broadcasting-conglomerate/', 'img': '@images/v2/png/case-study1-png.png', 'title': 'Major Broadcasting Conglomerate', 'description': 'Major broadcasting conglomerate embarked on an amazing journey to transform and innovate their businesses in the cloud...' },
-  { 'class': 'flex-item-4 hover-shadow', 'href': '/case-studies/entertainment-company/', 'img': '@images/v2/png/entertainment-company.png', 'title': 'Major Media &amp; Entertainment Company', 'description': 'Major media and entertainment company is on an amazing journey to move their infrastructure footprint into AWS cloud...' },
-  { 'class': 'flex-item-4 hover-shadow', 'href': '/case-studies/publishing-conglomerate/', 'img': '@images/v2/png/publishing-conglomerate.png', 'title': 'Major Publishing Conglomerate', 'description': 'Major publishing conglomerate continues a legacy of innovation for more than a dozen of decades — and a love of what\'s next...' },
-  { 'class': 'flex-item-4 hover-shadow', 'href': '/case-studies/adtechmedia/', 'img': '@images/v2/png/adtechmedia.png', 'title': 'AdTechMedia', 'description': 'AdTechMedia is on a mission to build the world\'s most simple content monetization product.  Imagine you are a publisher, a journalist or a blogger, and your core business is to create content that people love...' },
-  { 'class': 'flex-item-4 hover-shadow', 'href': '/case-studies/manning/', 'img': '@images/v2/png/manning.png', 'title': 'Manning Publications', 'description': 'Manning is an independent publisher of computer books for software developers, engineers, architects, system administrators, managers and all who are professionally involved with the computer business...' }
+  { 'href': '/case-studies/terrahub/', 'img-key': '@images/v2/png/terrahub.png', 'title': 'TerraHub', 'description': 'We are providing incremental value by automating the management at scale of large amount of cloud services and cloud resources that run in customers\' private networks built on top of public clouds...' },
+  { 'href': '/case-studies/insurance-company/', 'img-key': '@images/v2/png/insurance-png.png', 'title': 'Major Insurance Company', 'description': 'Major insurance company has been offering complex risks management and sustainable financial strength for decades...' },
+  { 'href': '/case-studies/analytics-company/', 'img-key': '@images/v2/png/analytics-company.png', 'title': 'Major Content Analytics Company', 'description': 'Major content analytics company, owned by leading private equity firm and formerly the intellectual property and science business unit of a major mass media and information...' },
+  { 'href': '/case-studies/broadcasting-conglomerate/', 'img-key': '@images/v2/png/case-study1-png.png', 'title': 'Major Broadcasting Conglomerate', 'description': 'Major broadcasting conglomerate embarked on an amazing journey to transform and innovate their businesses in the cloud...' },
+  { 'href': '/case-studies/entertainment-company/', 'img-key': '@images/v2/png/entertainment-company.png', 'title': 'Major Media &amp; Entertainment Company', 'description': 'Major media and entertainment company is on an amazing journey to move their infrastructure footprint into AWS cloud...' },
+  { 'href': '/case-studies/publishing-conglomerate/', 'img-key': '@images/v2/png/publishing-conglomerate.png', 'title': 'Major Publishing Conglomerate', 'description': 'Major publishing conglomerate continues a legacy of innovation for more than a dozen of decades — and a love of what\'s next...' },
+  { 'href': '/case-studies/adtechmedia/', 'img-key': '@images/v2/png/adtechmedia.png', 'title': 'AdTechMedia', 'description': 'AdTechMedia is on a mission to build the world\'s most simple content monetization product.  Imagine you are a publisher, a journalist or a blogger, and your core business is to create content that people love...' },
+  { 'href': '/case-studies/manning/', 'img-key': '@images/v2/png/manning.png', 'title': 'Manning Publications', 'description': 'Manning is an independent publisher of computer books for software developers, engineers, architects, system administrators, managers and all who are professionally involved with the computer business...' }
 ] %}
 
 {% block content %}
@@ -44,11 +44,15 @@
       </div>
       <div class="case-study white-block">
         <div class="marginTop36 flex-row">
-          {% for iter in case_studies %}
-          <div class="{{ iter.class }}">
+          {% for key, iter in case_studies %}
+          <div class="flex-item-4 hover-shadow">
             <a href={{ iter.href }}>
               <div class="flex-column case-study-main">
-                <img class="fullscreen-img lazyload" data-src="{{ asset( iter.img ) }}" alt={{ iter.title }} />
+                <img class="fullscreen-img lazyload" {{ caseStudiesImg[key] }}
+                  sizes="(max-width: 500px) 100vw,
+                    ((min-width: 500px) and (max-width: 750px)) 50vw,
+                    (max-width: 800px) 33vw, 26vw"
+                  alt={{ iter.title }} />
                 <div class="space">
                   <h3 class="paddingBottom20">{{ iter.title }}</h3>
                   <p class="paddingBottom20">{{ iter.description }}</p>

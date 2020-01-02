@@ -38,7 +38,9 @@
       <div class="block-img down80">
         <div class="flex-row display-grid">
           <div class="flex-item-5">
-            <img src="{{ asset('@images/v2/png/data-png.png') }}"/>
+            <img {{ images['/images/v2/png/data-png.png'] }} 
+              sizes="(max-width: 600px) 100vw, 33vw"
+              alt="Data Automation Code"/>
           </div>
           <div class="flex-item-7 what-is flex-column gradient-left-right green services">
             <div class="text-color-dark text-italic text-left">
