@@ -89,7 +89,34 @@ const imgKeysSrcSet = {
   '/images/v2/png/entertainment-company.png': '',
   '/images/v2/png/publishing-conglomerate.png': '',
   '/images/v2/png/about-png.png': '',
-  '/images/v2/png/about2-png.png': ''
+  '/images/v2/png/about2-png.png': '',
+
+  // About page events images
+
+  '/images/v2/events/hashi-corp-2019.png': '',
+  '/images/v2/events/tickets_v22-min.jpg': '',
+  '/images/v2/events/ip-expo-2019.png': '',
+  '/images/v2/events/devops-conference-cluj-napoca-2019.png': '',
+  'images/v2/events/serverlessconf-austin-2017.jpg': '',
+  '/images/v2/events/techxlr8-tech-week-london-2017.jpg': '',
+  '/images/v2/events/open-camps-2017.jpg': '',
+  '/images/v2/events/aws-reinvent-2017.jpg': '',
+  '/images/v2/events/open-camps-2016.jpg': '',
+  '/images/v2/events/nodejs-interactive-europe-2016.jpg': '',
+  '/images/v2/events/serverlessconf-london-2016.jpg': '',
+  '/images/v2/events/aws-reinvent-2015.jpg': '',
+  '/images/v2/events/aws-nyc-meetup-2015.jpg': '',
+  '/images/v2/events/serverlessconf-austin-2017.jpg': '',
+
+  // About Our Team Images
+
+  '/images/v2/team/eugene.png': '',
+  '/images/v2/team/diana.png': '',
+  '/images/v2/team/vlad.png': '',
+  '/images/v2/team/chris.png': '',
+  '/images/v2/team/sergiu.png': '',
+  '/images/v2/team/stela.png': '',
+  '/images/v2/team/anatol.png': ''
 };
 
 function getOptimizesImg() {

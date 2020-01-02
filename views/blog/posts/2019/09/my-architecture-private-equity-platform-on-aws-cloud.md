@@ -16,7 +16,7 @@ Tue, 10 September 2019 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2019-09-10/private-equity-platform.png" alt="partner aws" />
+    <img src="/images/blog/2019-09-10/private-equity-platform.png" alt="Private Equity Platform on AWS" />
     <div class="center img-description">Private Equity Platform on AWS Cloud</div>
 </div>
 
@@ -44,7 +44,7 @@ This leading private equity platform allows PE companies to manage:
 ### Reference Architecture on AWS Cloud
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-09-10/reference-arch.png" alt="partner aws" />
+    <img src="/images/blog/2019-09-10/reference-arch.png" alt="Reference Architecture on AWS Cloud" />
     <div class="center img-description">Reference Architecture on AWS Cloud</div>
 </div>
 
