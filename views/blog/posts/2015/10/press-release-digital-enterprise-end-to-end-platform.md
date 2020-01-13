@@ -15,7 +15,7 @@ Thu, 8 October 2015 12:20:55 -0400
 Today, during the AWS re:Invent breakout session [ARC201 — Microservices Architecture for Digital Platforms with AWS Lambda, Amazon CloudFront and Amazon DynamoDB](https://www.portal.reinvent.awsevents.com/connect/sessionDetail.ww?SESSION_ID=1646&tclass=popup), Mitoc Group Inc is announcing the Platform-as-a-Service offering on AWS called Digital Enterprise End-to-end Platform (also known as DEEP).
 
 <div class="padd25px">
-    <img src="/images/blog/2015-10-08/platform.png" alt="partner aws" />
+    <img src="/images/blog/2015-10-08/platform.png" alt="Digital enterprise end-to-end platform" />
     <div class="center img-description">Digital Enterprise End-to-end Platform</div>
 </div>
 

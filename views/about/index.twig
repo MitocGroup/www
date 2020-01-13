@@ -25,7 +25,11 @@
         <div class="block-img marginTop-150">
           <div class="flex-row display-grid">
             <div class="flex-item-5">
-              <img src="{{ asset('@images/v2/png/about-png.png') }}"/>
+              <img
+                {{ images['/images/v2/png/about-png.png'] }}
+                sizes="(max-width: 500px) 100vw,
+                  ((min-width: 500px) and (max-width: 750px)) 50vw, 33vw"
+                alt="going through the curve - Andy Jassy"/>
             </div>
             <div class="flex-item-7 what-is flex-column gradient-left-right white services">
               <div class="text-color-dark text-italic text-left">
@@ -80,7 +84,10 @@
             <div class="flex-item-6 block-img pic-up small-img flex-column">
               <div class="flex-row display-grid">
                 <div class="flex-item-5">
-                  <img src="{{ asset('@images/v2/png/about2-png.png') }}">
+                  <img
+                    {{ images['/images/v2/png/about2-png.png'] }}
+                    sizes="(min-width: 600px) 50vw, 100vw"
+                    alt="At the end of the world">
                 </div>
                 <div class="flex-item-7 what-is flex-column gradient-left-right green other-side">
                   <div class="text-color-white text-italic text-left">
@@ -140,7 +147,10 @@
                     <div class="events marginTop36">
                       <div class="flex-row block-space">
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/hashi-corp-2019.png') }}" alt="HashiCorp All-Day HashiTalks 2019" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/hashi-corp-2019.png'] }} 
+                            sizes="33vw"
+                            alt="HashiCorp All-Day HashiTalks 2019" />
                           <span class="post-date">Feb 21, 2019</span>
                           <h4 class="post-title">HashiCorp All-Day HashiTalks, Virtual Event</h4>
                           <a href="https://www.hashicorp.com/resources/terraform-serverless-best-practices-lessons-learned" class="read-more" target="_blank" rel="noreferrer">
@@ -149,7 +159,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/tickets_v22-min.jpg') }}" alt="DevOps Pro Europe Vilnius 2019" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/tickets_v22-min.jpg'] }} 
+                            sizes="33vw"
+                            alt="DevOps Pro Europe Vilnius 2019" />
                           <span class="post-date">Mar 21, 2019</span>
                           <h4 class="post-title">DevOps Pro Europe, Vilnius</h4>
                           <a href="https://devopspro.lt/eugene-istrati/" class="read-more" target="_blank" rel="noreferrer">
@@ -158,7 +171,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/ip-expo-2019.png') }}" alt="IP Expo Digital Transformation Manchester 2019" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/ip-expo-2019.png'] }} 
+                            sizes="33vw"
+                            alt="IP Expo Digital Transformation Manchester 2019" />
                           <span class="post-date">Apr 3, 2019</span>
                           <h4 class="post-title">IP Expo, Digital Transformation, Manchester</h4>
                           <a href="https://www.ipexpomanchester.com/manchester/en/node/session-7-8" class="read-more" target="_blank" rel="noreferrer">
@@ -167,7 +183,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/devops-conference-cluj-napoca-2019.png') }}" alt="DevTalks Cluj, DevOps Conference, Cluj-Napoca 2019" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/devops-conference-cluj-napoca-2019.png'] }} 
+                            sizes="33vw"
+                            alt="DevTalks Cluj, DevOps Conference, Cluj-Napoca 2019" />
                           <span class="post-date">May 16, 2019</span>
                           <h4 class="post-title">DevTalks Cluj, DevOps Conference, Cluj-Napoca</h4>
                           <a href="https://www.devtalks.ro/cluj/speakers/" class="read-more" target="_blank" rel="noreferrer">
@@ -182,7 +201,10 @@
                     <div class="events marginTop36">
                       <div class="flex-row block-space">
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/serverlessconf-austin-2017.jpg') }}" alt="ServerlessConf Austin 2017" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/serverlessconf-austin-2017.jpg'] }} 
+                            sizes="33vw"
+                            alt="ServerlessConf Austin 2017" />
                           <span class="post-date">Apr 26, 2017</span>
                           <h4 class="post-title">ServerlessConf, Austin</h4>
                           <a href="https://austin.serverlessconf.io/" class="read-more" target="_blank" rel="noreferrer">
@@ -191,7 +213,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/techxlr8-tech-week-london-2017.jpg') }}" alt="TechXLR8 Tech Week London 2017" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/techxlr8-tech-week-london-2017.jpg'] }} 
+                            sizes="33vw"
+                            alt="TechXLR8 Tech Week London 2017" />
                           <span class="post-date">Jun 12, 2017</span>
                           <h4 class="post-title">TechXLR8 Tech Week, London</h4>
                           <a href="https://techxlr82017.mapyourshow.com/7_0/sessions/session-grid.cfm?grid-eventsby=Day&grid-eventdate=2017-06-15&grid-groupby=Track&grid-trackEventType=29" class="read-more" target="_blank" rel="noreferrer">
@@ -200,7 +225,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/open-camps-2017.jpg') }}" alt="Open Camps New York City 2017" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/open-camps-2017.jpg'] }} 
+                            sizes="33vw"
+                            alt="Open Camps New York City 2017" />
                           <span class="post-date">Nov 11, 2017</span>
                           <h4 class="post-title">Open Camps, New York City</h4>
                           <a href="http://www.opencamps.org/2017/presentations/how-to-approach-continuous-integration-for-serverless-applications" class="read-more" target="_blank" rel="noreferrer">
@@ -209,7 +237,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-reinvent-2017.jpg') }}" alt="AWS re:Invent Las Vegas 2017" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/aws-reinvent-2017.jpg'] }} 
+                            sizes="33vw"
+                            alt="AWS re:Invent Las Vegas 2017" />
                           <span class="post-date">Nov 27, 2017</span>
                           <h4 class="post-title">AWS re:Invent, Las Vegas</h4>
                           <a href="/blog/aws-re-invent-2017-serverless-track-srv326-chalk-talk/" class="read-more" rel="noopener">
@@ -224,7 +255,10 @@
                     <div class="events marginTop36">
                       <div class="flex-row block-space">
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/open-camps-2016.jpg') }}" alt="Open Camps New York City 2016" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/open-camps-2016.jpg'] }} 
+                            sizes="33vw"
+                            alt="Open Camps New York City 2016" />
                           <span class="post-date">Jul 8, 2016</span>
                           <h4 class="post-title">Open Camps, New York City</h4>
                           <a href="https://2016.nyc.wordcamp.org/session/microservices-architecture-for-content-management-systems-using-aws-lambda-and-more/" class="read-more" target="_blank" rel="noreferrer">
@@ -233,7 +267,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/nodejs-interactive-europe-2016.jpg') }}" alt="Nodejs Interactive Europe Amsterdam 2016" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/nodejs-interactive-europe-2016.jpg'] }} 
+                            sizes="33vw"
+                            alt="Nodejs Interactive Europe Amsterdam 2016" />
                           <span class="post-date">Sep 15, 2016</span>
                           <h4 class="post-title">Node.js Interactive Europe, Amsterdam</h4>
                           <a href="https://eventmobi.com/nieu16/agenda/176233/928560" class="read-more" target="_blank" rel="noreferrer">
@@ -242,7 +279,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/serverlessconf-london-2016.jpg') }}" alt="ServerlessConf London 2016" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/serverlessconf-london-2016.jpg'] }} 
+                            sizes="33vw"
+                            alt="ServerlessConf London 2016" />
                           <span class="post-date">Oct 26, 2016</span>
                           <h4 class="post-title">ServerlessConf, London</h4>
                           <a href="http://london.serverlessconf.io" class="read-more" target="_blank" rel="noreferrer">
@@ -257,7 +297,10 @@
                     <div class="events marginTop36">
                       <div class="flex-row block-space">
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-reinvent-2015.jpg') }}" alt="AWS re:Invent Las Vegas 2015" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/aws-reinvent-2015.jpg'] }} 
+                            sizes="33vw"
+                            alt="AWS re:Invent Las Vegas 2015" />
                           <span class="post-date">Oct 6, 2015</span>
                           <h4 class="post-title">AWS re:Invent, Las Vegas</h4>
                           <a href="/blog/very-exciting-and-looking-forward-to-aws-re-invent-2015/" class="read-more" rel="noopener">
@@ -266,7 +309,10 @@
                           </a>
                         </div>
                         <div class="flex-item-4 blog-block text-left">
-                          <img class="img-block lazyload" data-src="{{ asset('@images/v2/events/aws-nyc-meetup-2015.jpg') }}" alt="AWS NYC Meetup 2015" />
+                          <img class="img-block lazyload"
+                            {{ images['/images/v2/events/aws-nyc-meetup-2015.jpg'] }} 
+                            sizes="33vw"
+                            alt="AWS NYC Meetup 2015" />
                           <span class="post-date">Dec 1, 2015</span>
                           <h4 class="post-title">AWS Meetup, New York City</h4>
                           <a href="https://www.meetup.com/AWSnewyork/events/226419743" class="read-more" target="_blank" rel="noreferrer">

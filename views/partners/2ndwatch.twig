@@ -45,7 +45,9 @@
           </div>
 
           <div class="flex-item-5">
-            <img src="{{ asset('@images/v2/png/2ndwatch.png') }}" alt="Image"/>
+            <img {{ images['/images/v2/png/2ndwatch.png'] }} 
+              sizes="(max-width: 600px) 100vw, 33vw"
+              alt="2nd Watch Team"/>
           </div>
         </div>
       </div>

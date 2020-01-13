@@ -58,7 +58,11 @@
                         </div>
                     </div>
                     <div class="flex-item-5">
-                        <img src="{{ asset('@images/v2/png/analytics-company.png') }}" alt="Case Study"/>
+                        <img 
+                            {{ images['/images/v2/png/analytics-company.png'] }}
+                            sizes="(max-width: 500px) 100vw,
+                                ((min-width: 500px) and (max-width: 750px)) 50vw, 33vw"
+                            alt="Case Study Content Analytics Company"/>
                     </div>
                 </div>
             </div>

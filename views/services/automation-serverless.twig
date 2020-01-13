@@ -9,7 +9,7 @@
           <div class="flex-row">
             <div class="flex-item-3">
               <img class="cloud-img" src="{{ asset('@images/v2/services/automation-serverless.svg') }}"
-                   alt="Automation of Applications - Serverless"/>
+                alt="Automation of Applications - Serverless"/>
             </div>
             <div class="flex-item-9 flex-column text-color-white">
               <p>Cloud Services</p>
@@ -42,7 +42,9 @@
       <div class="block-img pic-up">
         <div class="flex-row display-grid">
           <div class="flex-item-5">
-            <img src="{{ asset('@images/v2/png/serverless.png') }}"/>
+            <img {{ images['/images/v2/png/serverless.png'] }}
+              sizes="100vw"
+              alt="Automation Serverless Code"/>
           </div>
           <div class="flex-item-7 what-is flex-column gradient-left-right green">
             <div class="text-color-dark text-italic text-left">
@@ -65,7 +67,10 @@
           since the last build.
         </div>
       </div>
-      <img class="full-img down80" src="{{ asset('@images/v2/png/serverless-png.png') }}"/>
+      <img class="full-img down80" 
+        {{ images['/images/v2/png/serverless-png.png'] }}
+        sizes="100vw"
+        alt="CNCF Serverless interactive display"/>
     </div>
   </div>
 
@@ -95,10 +100,13 @@
             It aims at building, testing, and releasing software faster and more frequently.
           </p>
         </div>
-        <div class="flex-item-7 block-img pic-up small-img">
+        <div class="flex-item-7 block-img pic-up">
           <div class="flex-row display-grid">
             <div class="flex-item-5">
-              <img src="{{ asset('@images/v2/png/serverless_1.png') }}"/>
+              <img class="maxH-200"
+                {{ images['/images/v2/png/serverless_1.png'] }}
+                sizes="(min-width: 600px) 50vw, 100vw"
+                alt="Developer Team"/>
             </div>
             <div class="flex-item-7 what-is flex-column gradient-left-right green">
               <div class="text-color-dark text-italic text-left">

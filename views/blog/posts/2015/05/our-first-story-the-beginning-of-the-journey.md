@@ -13,7 +13,7 @@ Fri, 29 May 2015 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2015-05-29/startup.jpeg" alt="Startup" />
+    <img src="/images/blog/2015-05-29/startup.jpeg" alt="Startup sign" />
     <div class="center img-description">Source: gonature.es</div>
 </div>
 

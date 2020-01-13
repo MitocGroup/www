@@ -2,10 +2,12 @@
 'use strict';
 
 const fs = require('fs');
+const { caseStudiesImg, getImages } = require('./imghandler');
 const firstN = (obj, n) => Object.keys(obj).slice(0, n).reduce((memo, current) => { memo[current] = obj[current]; return memo; }, {});
 
 const nrVisiblePosts = 6;
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const optimizedImg = getImages();
 
 const posts = JSON.parse(fs.readFileSync('./static/json/posts.json'));
 const postsKeys = Object.keys(posts);
@@ -64,7 +66,8 @@ const defaultVariables = {
   tw_type: 'summary',
   tw_handle: '@MitocGroup',
   image_tw: 'https://www.mitocgroup.com/images/cover-tw.png',
-  image_fb: 'https://www.mitocgroup.com/images/cover-fb.png'
+  image_fb: 'https://www.mitocgroup.com/images/cover-fb.png',
+  images: optimizedImg
 };
 
 const commonScripts = [
@@ -273,7 +276,8 @@ const routes = {
     vars: {
       ...defaultVariables,
       title: 'Case Studies | ' + defaultVariables.title,
-      href: defaultVariables.url + '/case-studies/'
+      href: defaultVariables.url + '/case-studies/',
+      caseStudiesImg: caseStudiesImg()
     },
     assets: commonAssets
   },
