@@ -4,6 +4,25 @@
 
   const $win = $(win);
 
+  $.fn.fixedMenu = function() {
+    const scrollPos = $win.scrollTop();
+    const $whiteCol = $('.white-color');
+    const $navBarFix = $('.navbar-fix');
+
+    if (scrollPos > 30) {
+      $navBarFix.addClass('color-nav');
+      $whiteCol.removeClass('gray-color');
+    } else {
+      $navBarFix.removeClass('color-nav');
+      $whiteCol.addClass('gray-color');
+    }
+    return this;
+  };
+
+  $(document).ready(function() {
+    $win.fixedMenu();
+  });
+
   $('.mdi-menu').on('click', function() {
     $(this)
       .toggleClass('open')
@@ -65,16 +84,7 @@
   });
 
   $win.on('scroll', function() {
-    const $whiteCol = $('.white-color');
-    const $navBarFix = $('.navbar-fix');
-
-    if ($win.scrollTop() > 30) {
-      $navBarFix.addClass('color-nav');
-      $whiteCol.removeClass('gray-color');
-    } else {
-      $navBarFix.removeClass('color-nav');
-      $whiteCol.addClass('gray-color');
-    }
+    $win.fixedMenu();
   });
 
   /**
@@ -129,7 +139,7 @@ function goBack() {
 }
 
 const lazy = () => {
-  document.addEventListener('lazyloaded', e => {
+  document.addEventListener('lazyloaded', (e) => {
     e.target.parentNode.classList.add('image-loaded');
     e.target.parentNode.classList.remove('loading');
   });
