@@ -23,23 +23,6 @@
     $win.fixedMenu();
   });
 
-  // $('.mdi-menu').on('click', function() {
-  //   $(this)
-  //     .toggleClass('open')
-  //     .toggleClass('mdi-menu')
-  //     .toggleClass('mdi-close');
-
-  //   if ($('.mdi-close').hasClass('open')) {
-  //     $('html').css('overflow', 'hidden');
-  //     $('.navbar-fix').addClass('color-nav-responsive');
-  //     $('.hide-mobile, footer').addClass('hidden');
-  //   } else {
-  //     $('html').css('overflow', 'scroll');
-  //     $('.navbar-fix').removeClass('color-nav-responsive');
-  //     $('.hide-mobile, footer').removeClass('hidden');
-  //   }
-  // });
-
   const $menu = $('#menu-toggle');
 
   $menu.click(function() {
