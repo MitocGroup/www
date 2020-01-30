@@ -219,6 +219,9 @@
 }
 
 @media (max-width: 992px) {
+  #menu-toggle {
+    display: block;
+  }
   .navbar-fix {
     .nav-bar {
       ul {
