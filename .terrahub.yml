@@ -10,7 +10,7 @@ project:
 template:
   locals:
     region: us-east-1
-    account_id: 492198229272
+    account_id: 123456789000
   terraform:
     backend:
       s3:
