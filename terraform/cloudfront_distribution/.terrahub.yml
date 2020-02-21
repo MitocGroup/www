@@ -12,7 +12,7 @@ component:
         cloudfront_distribution:
           aliases: var.aliases
           comment: var.comment
-          custom_error_response:
+          custom_error_response!:
             - error_caching_min_ttl: 300
               error_code: 404
               response_code: 404
@@ -22,7 +22,7 @@ component:
           is_ipv6_enabled: true
           http_version: http2
           price_class: PriceClass_All
-          default_cache_behavior:
+          default_cache_behavior!:
             allowed_methods:
               - DELETE
               - GET
@@ -41,17 +41,17 @@ component:
             min_ttl: var.min_ttl
             target_origin_id: format("%s-%s", "S3-Website", data.terraform_remote_state.s3_bucket.outputs.website_endpoint)
             viewer_protocol_policy: redirect-to-https
-            forwarded_values:
+            forwarded_values!:
               headers: []
               query_string: false
-              cookies:
+              cookies!:
                 forward: none
                 whitelisted_names: []
-          origin:
+          origin!:
             origin_id: format("%s-%s", "S3-Website", data.terraform_remote_state.s3_bucket.outputs.website_endpoint)
             domain_name: data.terraform_remote_state.s3_bucket.outputs.website_endpoint
             origin_path: ''
-            custom_origin_config:
+            custom_origin_config!:
               http_port: 80
               https_port: 443
               origin_protocol_policy: http-only
@@ -61,11 +61,11 @@ component:
                 - TLSv1.2
               origin_keepalive_timeout: 5
               origin_read_timeout: 30
-          restrictions:
-            geo_restriction:
+          restrictions!:
+            geo_restriction!:
               restriction_type: none
               locations: []
-          viewer_certificate:
+          viewer_certificate!:
             acm_certificate_arn: data.aws_acm_certificate.acm_certificate.arn
             ssl_support_method: sni-only
             minimum_protocol_version: TLSv1.1_2016

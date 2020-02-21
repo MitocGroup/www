@@ -14,7 +14,7 @@ component:
           count: 'contains(list("default"), terraform.workspace) ? 1 : 0'
           aliases: var.cloudfront_assets_aliases
           comment: var.cloudfront_assets_comment
-          custom_error_response:
+          custom_error_response!:
             - error_caching_min_ttl: 300
               error_code: 404
               response_code: 404
@@ -24,7 +24,7 @@ component:
           is_ipv6_enabled: true
           http_version: http2
           price_class: PriceClass_All
-          default_cache_behavior:
+          default_cache_behavior!:
             allowed_methods:
               - GET
               - HEAD
@@ -39,11 +39,11 @@ component:
               element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,
               count.index)
             viewer_protocol_policy: redirect-to-https
-            forwarded_values:
+            forwarded_values!:
               query_string: false
-              cookies:
+              cookies!:
                 forward: none
-          origin:
+          origin!:
             origin_id: >-
               element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,
               count.index)
@@ -52,7 +52,7 @@ component:
               element(data.terraform_remote_state.api_gateway_rest_api.outputs.thub_id,
               count.index), local.region)
             origin_path: /v1/image/handler
-            custom_origin_config:
+            custom_origin_config!:
               http_port: 80
               https_port: 443
               origin_protocol_policy: https-only
@@ -62,11 +62,11 @@ component:
                 - TLSv1.2
               origin_keepalive_timeout: 5
               origin_read_timeout: 30
-          restrictions:
-            geo_restriction:
+          restrictions!:
+            geo_restriction!:
               restriction_type: none
               locations: []
-          viewer_certificate:
+          viewer_certificate!:
             acm_certificate_arn: data.aws_acm_certificate.acm_certificate.arn
             ssl_support_method: sni-only
             minimum_protocol_version: TLSv1.1_2016

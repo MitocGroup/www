@@ -2,33 +2,23 @@ component:
   name: iam_lambda_image_handler
   template:
     data:
-      aws_iam_policy_document:
+      template_file:
         iam_role_policy:
-          statement:
-            - actions: var.iam_role_policy_actions_01
-              effect: var.iam_role_policy_effect
-              resources:
-                - >-
-                  format("arn:aws:logs:%s:%s:log-group:/aws/lambda/*",
-                  local.region, local.account_id)
-            - actions: var.iam_role_policy_actions_02
-              effect: var.iam_role_policy_effect
-              resources: var.iam_role_policy_resources_02
-            - actions: var.iam_role_policy_actions_03
-              effect: var.iam_role_policy_effect
-              resources: var.iam_role_policy_resources_03
+          template: >-
+            file(format("%s/%s", local.component["path"],
+            var.iam_role_policy_template_path))
+          vars:
+            region: local.region
+            account_id: local.account_id
         iam_trust_policy:
-          statement:
-            - actions: var.iam_trust_policy_actions
-              effect: var.iam_trust_policy_effect
-              principals:
-                - identifiers: var.iam_trust_policy_principals_identifiers
-                  type: var.iam_trust_policy_principals_type
+          template: >-
+            file(format("%s/%s", local.component["path"],
+            var.iam_trust_policy_template_path))
     resource:
       aws_iam_role:
         iam_lambda_image_handler:
           count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
-          assume_role_policy: data.aws_iam_policy_document.iam_trust_policy.json
+          assume_role_policy: data.template_file.iam_trust_policy.rendered
           description: Managed by TerraHub
           force_detach_policies: 'false'
           name: var.iam_role_name
@@ -37,7 +27,7 @@ component:
         iam_lambda_image_handler:
           count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
           name: var.iam_role_policy_name
-          policy: data.aws_iam_policy_document.iam_role_policy.json
+          policy: data.template_file.iam_role_policy.rendered
           role: 'element(aws_iam_role.iam_lambda_image_handler.*.id, count.index)'
     output:
       arn:
@@ -52,26 +42,8 @@ component:
         value: aws_iam_role.iam_lambda_image_handler.*.description
     tfvars:
       iam_role_name: MitocGroupDevImageHandlerLambdaExeceee23249
-      iam_role_path: /
-      iam_role_policy_actions_01:
-        - 'logs:CreateLogGroup'
-        - 'logs:CreateLogStream'
-        - 'logs:PutLogEvents'
-      iam_role_policy_actions_02:
-        - 'rekognition:DetectFaces'
-      iam_role_policy_actions_03:
-        - 's3:GetObject'
-        - 's3:ListBucket'
-      iam_role_policy_effect: Allow
       iam_role_policy_name: MitocGroupDevImageHandlerLambdaExecCustomeee23249
-      iam_role_policy_resources_02:
-        - '*'
-      iam_role_policy_resources_03:
-        - 'arn:aws:s3::::*.mitocgroup.com/*'
-        - 'arn:aws:s3::::*.mitocgroup.com'
-      iam_trust_policy_actions:
-        - 'sts:AssumeRole'
-      iam_trust_policy_effect: Allow
-      iam_trust_policy_principals_identifiers:
-        - lambda.amazonaws.com
-      iam_trust_policy_principals_type: Service
+      iam_role_path: /
+      iam_role_force_detach_policies: false
+      iam_role_policy_template_path: ./policies/lambda_image_handler_role_policy.json.tpl
+      iam_trust_policy_template_path: ./policies/lambda_image_handler_trust_policy.json.tpl
