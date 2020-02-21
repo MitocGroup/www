@@ -718,6 +718,9 @@ i {
     background-color: transparent;
   }
   .mdi-menu, .mdi-close {
+    &:before {
+      content: "" !important;
+    }
     cursor: pointer;
     font-size: 32px;
     display: none;
@@ -2204,3 +2207,102 @@ div {
   }
 }
 
+// Menu button
+
+#menu-toggle {
+  display: none;
+  float: right;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  // top: 5px;
+  cursor: pointer;
+  #hamburger {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      span {
+          width: 30px;
+          height: 3px;
+          position: relative;
+          top: 0;
+          left: -5px;
+          margin: 5px;
+          display: block;
+          background: $main-color;
+          border-radius: 2px;
+          &:nth-child(1) {
+              transition-delay: .5s;
+          }
+          &:nth-child(2) {
+              transition-delay: .625s;
+          }
+          &:nth-child(3) {
+              transition-delay: .75s;
+          }
+      }
+  }
+  #cross {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      span {
+          &:nth-child(1) {
+              height: 0%;
+              width: 3px;
+              position: absolute;
+              top: 10%;
+              left: 13px;
+              transition-delay: 0s;
+          }
+          &:nth-child(2) {
+              width: 0%;
+              height: 3px;
+              position: absolute;
+              left: 10%;
+              top: 13px;
+              transition-delay: .25s;
+          }
+      }
+  }
+}
+
+#menu-toggle.open {
+  top: 16px;
+  #hamburger {
+      span {
+          width: 0%;
+          &:nth-child(1) {
+              transition-delay: 0s;
+          }
+          &:nth-child(2) {
+              transition-delay: .125s;
+          }
+          &:nth-child(3) {
+              transition-delay: .25s;
+          }
+      }
+  }
+  #cross {
+      span {
+          display: block;
+          background: $white-color;
+          border-radius: 2px;
+      }
+      span {
+          &:nth-child(1) {
+              height: 80%;
+              transition-delay: .625s;
+          }
+      }
+      span {
+          &:nth-child(2) {
+              width: 80%;
+              transition-delay: .375s;
+          }
+      }
+  }
+}

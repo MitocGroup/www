@@ -10,7 +10,7 @@ project:
 template:
   locals:
     region: us-east-1
-    account_id: 123456789012
+    account_id: 123456789000
   terraform:
     backend:
       s3:
@@ -21,10 +21,9 @@ template:
   provider:
     aws:
       region: local.region
-      version: '~> 2.43'
       allowed_account_ids:
         - local.account_id
 terraform:
   varFile:
     - default.tfvars
-  version: 0.12.19
+  version: 0.12.21
