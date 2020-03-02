@@ -13,7 +13,7 @@ Tue, 20 August 2019 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2019-08-20/terraform.png" alt="partner aws" />
+    <img src="/images/blog/2019-08-20/terraform.png" alt="Terraform Module Registry" />
     <div class="center img-description">
        <a href="https://registry.terraform.io/modules/MitocGroup/landing-zone/aws" target="_blank">https://registry.terraform.io/modules/MitocGroup/landing-zone/aws</a>
     </div>

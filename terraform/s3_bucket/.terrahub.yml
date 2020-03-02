@@ -4,9 +4,9 @@ component:
     data:
       aws_iam_policy_document:
         default_assume_s3_policy:
-          statement:
+          statement!:
             - sid: bucket_policy_site_main
-              principals:
+              principals!:
                 type: AWS
                 identifiers:
                   - '*'
@@ -25,7 +25,7 @@ component:
           acl: public-read
           force_destroy: 'true'
           policy: data.aws_iam_policy_document.default_assume_s3_policy.json
-          cors_rule:
+          cors_rule!:
             allowed_headers:
               - '*'
             allowed_methods:
@@ -39,10 +39,10 @@ component:
             expose_headers:
               - ETag
             max_age_seconds: '0'
-          versioning:
+          versioning!:
             enabled: 'false'
             mfa_delete: 'false'
-          website:
+          website!:
             index_document: index.html
             error_document: /404.html
             # routing_rules: data.template_file.s3_routing_rules.rendered

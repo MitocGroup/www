@@ -16,7 +16,7 @@ Wed, 18 September 2019 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2019-09-18/terraform-module.png" alt="partner aws" />
+    <img src="/images/blog/2019-09-18/terraform-module.png" alt="AWS Landing Zone / Terraform Module Components" />
     <div class="center img-description">AWS Landing Zone / Terraform Module Components</div>
 </div>
 
@@ -35,7 +35,7 @@ The AWS Landing Zone solution includes an initial security baseline that can be 
 ### Landing Zone Security Components
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-09-18/terraform-module-2.png" alt="partner aws" />
+    <img src="/images/blog/2019-09-18/terraform-module-2.png" alt="AWS Landing Zone / Terraform Module Components" />
     <div class="center img-description">AWS Landing Zone / Terraform Module Components</div>
 </div>
 
@@ -50,7 +50,7 @@ Last week we covered in great length of details [Terraform Module Components for
 - [landing\_zone\_sso](https://github.com/MitocGroup/terraform-aws-landing-zone/tree/master/components/landing_zone_sso)
 
 <div class="padd25px">
-    <img src="/images/blog/2019-09-18/service-mapped.png" alt="partner aws" />
+    <img src="/images/blog/2019-09-18/service-mapped.png" alt="Landing Zone Security Components" />
     <div class="center img-description">AWS Services Mapped to Landing Zone Security Components</div>
 </div>
 

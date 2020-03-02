@@ -21,7 +21,7 @@ AWS Landing Zone is a solution that helps customers more quickly set up a secure
 This solution can help save time by automating the set-up of an environment for running secure and scalable workloads while implementing an initial security baseline through the creation of core accounts and resources. It also provides a baseline environment to get started with a multi-account architecture, identity and access management, governance, data security, network design, and logging.
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-06-17/aws-arch.png" alt="partner aws" />
+    <img src="/images/blog/2019-06-17/aws-arch.png" alt="AWS Landing Zone" />
     <div class="center img-description">AWS Landing Zone Architecture (source:
        <a href="https://aws.amazon.com/solutions/aws-landing-zone/" target="_blank">https://aws.amazon.com/solutions/aws-landing-zone/</a>)
     </div>

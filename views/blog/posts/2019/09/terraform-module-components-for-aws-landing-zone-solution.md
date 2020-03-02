@@ -18,7 +18,7 @@ Fri, 13 September 2019 12:20:55 -0400
 To make sure that everybody has the same understanding about [Terraform Module for AWS Landing Zone](https://github.com/MitocGroup/terraform-aws-landing-zone#how-does-this-module-work) solution, here below is how [this module](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/main.tf) looks like at the time of writing:
 
 <div class="padd25px">
-    <img src="/images/blog/2019-09-13/code.png" alt="partner aws" />
+    <img src="/images/blog/2019-09-13/code.png" alt="Landing Zone Module code" />
 </div>
 
 And if we take a look at [terraform.tfvars](https://github.com/MitocGroup/terraform-aws-landing-zone/blob/master/terraform.tfvars), we should see something like this:

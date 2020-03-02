@@ -13,7 +13,7 @@ Mon, 5 October 2015 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2015-10-05/without-servers.png" alt="partner aws" />
+    <img src="/images/blog/2015-10-05/without-servers.png" alt="Serverless Microservice Architecture" />
     <div class="center img-description">Microservices without the Servers:
       <a href="https://aws.amazon.com/blogs/compute/microservices-without-the-servers/">https://aws.amazon.com/blogs/compute/microservices-without-the-servers/</a>
     </div>

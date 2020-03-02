@@ -13,7 +13,7 @@ Mon, 12 October 2015 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2015-10-12/reinvent.jpeg" alt="partner aws" />
+    <img src="/images/blog/2015-10-12/reinvent.jpeg" alt="Aws Reinvent" />
     <div class="center img-description">Best re:Invent Ever!</div>
 </div>
 
