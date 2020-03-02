@@ -13,7 +13,7 @@ Mon, 23 April 2018 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2018-04-23/example.png" alt="partner aws" />
+    <img src="/images/blog/2018-04-23/example.png" alt="etail Data Warehouse ETL" />
 </div>
 
 Although the use case I worked on is not exactly the one from the picture above, I wanted to share my story because I don't want others waste their time with it. Recently I was required to implement a solution that involves connecting AWS Lambda to Amazon Redshift. If Amazon VPC is not in scope, feel free to stop reading here and ignore the rest of this article.

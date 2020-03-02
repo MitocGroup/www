@@ -8,7 +8,7 @@ component:
         lambda_image_handler:
           count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
           description: var.lambda_description
-          environment:
+          environment!:
             - variables: |-
                 merge(var.default_vars, map(
                   "CORS_ENABLED", "Yes",
@@ -30,7 +30,7 @@ component:
           source_code_hash: base64sha256(var.lambda_function_name)
           tags: var.default_tags
           timeout: var.lambda_timeout
-          tracing_config:
+          tracing_config!:
             - mode: var.lambda_xray_enabled
     dynamic:
       data:

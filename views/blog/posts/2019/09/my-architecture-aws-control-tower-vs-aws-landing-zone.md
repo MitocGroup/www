@@ -16,7 +16,7 @@ Fri, 20 September 2019 12:20:55 -0400
 ---
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-09-20/aws-reinforce.png" alt="partner aws" />
+    <img src="/images/blog/2019-09-20/aws-reinforce.png" alt="Multiaccount AWS Environments" />
     <div class="center img-description">Source:
        <a href="https://www.slideshare.net/AmazonWebServices/using-aws-control-tower-to-govern-multiaccount-aws-environments-at-scale-grc313r-aws-reinforce-2019" target="_blank">https://www.slideshare.net/AmazonWebServices/using-aws-control-tower-to-govern-multiaccount-aws-environments-at-scale-grc313r-aws-reinforce-2019</a>
     </div>
@@ -27,7 +27,7 @@ Fri, 20 September 2019 12:20:55 -0400
 [Quote](https://aws.amazon.com/controltower/faqs/#General) : AWS Control Tower is a service that offers the easiest way to set up and govern a new, secure, multi-account AWS environment. It establishes a landing zone that is based on best-practices blueprints, and enables governance using guardrails you can choose from a pre-packaged list. The landing zone is a well-architected, multi-account baseline that follows AWS best practices. Guardrails implement governance rules for security, compliance, and operations.
 
 <div class="img-post-left">
-    <img src="/images/blog/2019-09-20/automating-lz.png" alt="aws" />
+    <img src="/images/blog/2019-09-20/automating-lz.png" alt="AWS Landing Zone Deployment" />
     <div class="center img-description">Source:
        <a href="https://aws.amazon.com/blogs/apn/automating-your-aws-landing-zone-deployment-to-speed-up-large-scale-migrations" target="_blank">https://aws.amazon.com/blogs/apn/automating-your-aws-landing-zone-deployment-to-speed-up-large-scale-migrations</a>
     </div>

@@ -2,31 +2,24 @@ component:
   name: iam_api_exec_access
   template:
     data:
-      aws_iam_policy_document:
+      template_file:
         iam_role_policy:
-          statement:
-            - actions: var.iam_role_policy_actions_01
-              effect: var.iam_role_policy_effect
-              resources:
-                - >-
-                  format("arn:aws:lambda:%s:%s:function:%s", local.region,
-                  local.account_id, var.iam_role_policy_resources_01)
-            - actions: var.iam_role_policy_actions_02
-              effect: var.iam_role_policy_effect
-              resources:
-                - 'format("arn:aws:logs:*:%s:*", local.account_id)'
+          template: >-
+            file(format("%s/%s", local.component["path"],
+            var.iam_role_policy_template_path))
+          vars:
+            region: local.region
+            account_id: local.account_id
+            iam_role_policy_resources_01: var.iam_role_policy_resources_01
         iam_trust_policy:
-          statement:
-            - actions: var.iam_trust_policy_actions
-              effect: var.iam_trust_policy_effect
-              principals:
-                - identifiers: var.iam_trust_policy_principals_identifiers
-                  type: var.iam_trust_policy_principals_type
+          template: >-
+            file(format("%s/%s", local.component["path"],
+            var.iam_trust_policy_template_path))
     resource:
       aws_iam_role:
         iam_api_exec_access:
           count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
-          assume_role_policy: data.aws_iam_policy_document.iam_trust_policy.json
+          assume_role_policy: data.template_file.iam_trust_policy.rendered
           description: var.iam_role_description
           force_detach_policies: var.iam_role_force_detach_policies
           name: var.iam_role_name
@@ -35,7 +28,7 @@ component:
         iam_api_exec_access:
           count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
           name: var.iam_role_policy_name
-          policy: data.aws_iam_policy_document.iam_role_policy.json
+          policy: data.template_file.iam_role_policy.rendered
           role: 'element(aws_iam_role.iam_api_exec_access.*.id, count.index)'
     output:
       arn:
@@ -49,26 +42,11 @@ component:
       description:
         value: aws_iam_role.iam_api_exec_access.*.description
     tfvars:
-      iam_role_description: Managed by TerraHub
-      iam_role_force_detach_policies: false
       iam_role_name: MitocGroupDevApiExecAccesseee23249
-      iam_role_path: /
-      iam_role_policy_actions_01:
-        - 'lambda:InvokeFunction'
-      iam_role_policy_actions_02:
-        - 'logs:CreateLogGroup'
-        - 'logs:CreateLogStream'
-        - 'logs:DescribeLogGroups'
-        - 'logs:DescribeLogStreams'
-        - 'logs:PutLogEvents'
-        - 'logs:GetLogEvents'
-        - 'logs:FilterLogEvents'
-      iam_role_policy_effect: Allow
       iam_role_policy_name: MitocGroupDevApiExecAccessCustomeee23249
+      iam_role_description: Managed by TerraHub
+      iam_role_path: /
+      iam_role_force_detach_policies: false
       iam_role_policy_resources_01: '*MitocGroupDev*'
-      iam_trust_policy_actions:
-        - 'sts:AssumeRole'
-      iam_trust_policy_effect: Allow
-      iam_trust_policy_principals_identifiers:
-        - apigateway.amazonaws.com
-      iam_trust_policy_principals_type: Service
+      iam_role_policy_template_path: ./policies/api_exec_access_role_policy.json.tpl
+      iam_trust_policy_template_path: ./policies/api_exec_access_trust_policy.json.tpl

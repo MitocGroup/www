@@ -13,7 +13,7 @@ Thu, 14 April 2016 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2016-04-14/code.png" alt="Speakers" />
+    <img src="/images/blog/2016-04-14/code.png" alt="Microservice that retrives tasks" />
 </div>
 
 ### Overview

@@ -7,7 +7,7 @@
       <div class="header__bg green">
         <div class="bg bg-green contact flex-column">
           <div class="container text-styles">
-            <div class="flex-column text-color-white center">
+            <div class="flex-column text-color-white center mt-n60">
               <h3 class="text-color-green">Mitoc Group</h3>
               <h2 class="paddingBottom20">Leadership Team</h2>
               <div class="text-24 widthBlock80">
@@ -28,7 +28,11 @@
 
               <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
                 <div class="info-blocks block-effect">
-                  <img class="lazyload" data-src="{{ asset('@images/v2/team/eugene.png') }}" itemprop="image" alt="Eugene Istrati" />
+                  <img class="lazyload" 
+                    {{ images['/images/v2/team/eugene.png'] }} 
+                    sizes="(max-width: 750px) 100vw, 33vw"
+                    {# data-src="{{ asset('@images/v2/team/eugene.png') }}" #}
+                    itemprop="image" alt="Eugene Istrati" />
                   <div class="hover-effect">
                     <div class="info dots">
                       <div class="display-flex">
@@ -63,7 +67,11 @@
 
               <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
                 <div class="info-blocks block-effect">
-                  <img class="lazyload" data-src="{{ asset('@images/v2/team/diana.png') }}"  itemprop="image" alt="Diana Ursu" />
+                  <img class="lazyload"
+                    {{ images['/images/v2/team/diana.png'] }} 
+                    sizes="(max-width: 750px) 100vw, 33vw"
+                    {# data-src="{{ asset('@images/v2/team/diana.png') }}" #}
+                    itemprop="image" alt="Diana Ursu" />
                   <div class="hover-effect">
                     <div class="info dots">
                       <div class="display-flex">
@@ -98,7 +106,11 @@
 
               <div class="flex-item-4 shadow-block" itemscope itemtype="http://schema.org/Person">
                 <div class="info-blocks block-effect">
-                  <img class="lazyload" data-src="{{ asset('@images/v2/team/vlad.png') }}" itemprop="image" alt="Vladimir Ursu" />
+                  <img class="lazyload"
+                    {{ images['/images/v2/team/vlad.png'] }} 
+                    sizes="(max-width: 750px) 100vw, 33vw"
+                    {# data-src="{{ asset('@images/v2/team/vlad.png') }}" #}
+                    itemprop="image" alt="Vladimir Ursu" />
                   <div class="hover-effect">
                     <div class="info dots">
                       <div class="display-flex">
@@ -150,7 +162,13 @@
               <div class="flex-row center-block">
                 <div class="flex-item-3 shadow-block">
                   <div class="info-blocks block-effect atm-block">
-                    <img class="lazyload" data-src="{{ asset('@images/v2/team/chris.png') }}" itemscope="image" alt="Chris Resch"/>
+                    <img class="lazyload"
+                      {{ images['/images/v2/team/chris.png'] }} 
+                      sizes="(max-width: 500px) 100vw,
+                        ((min-width: 500px) and (max-width: 1020px) 50vw),
+                        26vw"
+                      {# data-src="{{ asset('@images/v2/team/chris.png') }}" #}
+                      itemscope="image" alt="Chris Resch"/>
                     <div class="hover-effect">
                       <div class="info dots">
                         <div class="display-flex">
@@ -185,7 +203,13 @@
 
                 <div class="flex-item-3 shadow-block">
                   <div class="info-blocks block-effect atm-block">
-                    <img class="lazyload" data-src="{{ asset('@images/v2/team/sergiu.png') }}" itemscope="image" alt="Sergiu Cecoltan"/>
+                    <img class="lazyload"
+                      {{ images['/images/v2/team/sergiu.png'] }} 
+                      sizes="(max-width: 500px) 100vw,
+                        ((min-width: 500px) and (max-width: 1020px) 50vw),
+                        26vw"
+                      {# data-src="{{ asset('@images/v2/team/sergiu.png') }}" #}
+                      itemscope="image" alt="Sergiu Cecoltan"/>
                     <div class="hover-effect">
                       <div class="info dots">
                         <div class="display-flex">
@@ -216,7 +240,13 @@
 
                 <div class="flex-item-3 shadow-block">
                   <div class="info-blocks block-effect atm-block">
-                    <img class="img-style lazyload" data-src="{{ asset('@images/v2/team/stela.png') }}" itemscope="image" alt="Stela Lupusor"/>
+                    <img class="img-style lazyload"
+                      {{ images['/images/v2/team/stela.png'] }} 
+                      sizes="(max-width: 500px) 100vw,
+                        ((min-width: 500px) and (max-width: 1020px) 50vw),
+                        26vw"
+                      {# data-src="{{ asset('@images/v2/team/stela.png') }}" #}
+                      itemscope="image" alt="Stela Lupusor"/>
                     <div class="hover-effect">
                       <div class="info dots">
                         <div class="display-flex">
@@ -254,7 +284,13 @@
 
                 <div class="flex-item-3 shadow-block">
                   <div class="info-blocks block-effect atm-block">
-                    <img class="lazyload" data-src="{{ asset('@images/v2/team/anatol.png') }}" itemscope="image" alt="Anatol Vizitiu"/>
+                    <img class="lazyload"
+                      {{ images['/images/v2/team/anatol.png'] }} 
+                      sizes="(max-width: 500px) 100vw,
+                        ((min-width: 500px) and (max-width: 1020px) 50vw),
+                        26vw"
+                      {# data-src="{{ asset('@images/v2/team/anatol.png') }}" #}
+                      itemscope="image" alt="Anatol Vizitiu"/>
                     <div class="hover-effect">
                       <div class="info dots">
                         <div class="display-flex">

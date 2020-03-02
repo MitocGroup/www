@@ -17,6 +17,11 @@
   .blog-container {
     width: 950px;
   }
+  .block-img {
+    .maxH-200 {
+      max-height: 200px !important;
+    } 
+  }
 }
 
 @media (min-width: 1270px) {
@@ -214,6 +219,9 @@
 }
 
 @media (max-width: 992px) {
+  #menu-toggle {
+    display: block;
+  }
   .navbar-fix {
     .nav-bar {
       ul {
@@ -768,6 +776,9 @@
       margin-top: 10px;
       margin-left: -5px;
     }
+  }
+  .mt-n60 {
+    margin-top: -60px !important;
   }
   .post {
     em a {

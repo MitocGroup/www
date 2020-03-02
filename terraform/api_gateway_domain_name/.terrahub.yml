@@ -14,7 +14,7 @@ component:
         api_gateway_domain_name:
           count: 'contains(list("test"), terraform.workspace) ? 0 : 1'
           domain_name: var.api_gateway_domain_name
-          endpoint_configuration:
+          endpoint_configuration!:
             - types: var.api_gateway_domain_name_endpoint_type
           regional_certificate_arn: data.aws_acm_certificate.acm_certificate.arn
     output:

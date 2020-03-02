@@ -45,7 +45,9 @@
             </div>
           </div>
           <div class="flex-item-5">
-            <img src="{{ asset('@images/v2/png/aws-png.png') }}" alt="Amazon Web Services"/>
+            <img {{ images['/images/v2/png/aws-png.png'] }}
+              sizes="(max-width: 600px) 100vw, 33vw"
+              alt="Amazon Web Services"/>
           </div>
         </div>
       </div>
@@ -125,7 +127,10 @@
           </div>
         </div>
       </div>
-      <img class="fullscreen-img lazyload" data-src="{{ asset('@images/v2/png/aws-architecture.png') }}" alt="DEEP Framework Architecture"/>
+      <img class="fullscreen-img lazyload" 
+        {{ images['/images/v2/png/aws-architecture.png'] }}
+        sizes="100vw"
+        alt="DEEP Framework Architecture"/>
       <div class="display-flex marginTop36 read-watch">
         <div class="widthBlock30">
           <h4 class="text-36-SemiBold">Mitoc Group is the creator of DEEP Framework</h4>
