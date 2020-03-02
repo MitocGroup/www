@@ -13,7 +13,7 @@ Fri, 12 February 2016 12:20:55 -0400
 ---
 
 <div class="img-post-left">
-    <img src="/images/blog/2016-02-12/coder.png" alt="partner aws" />
+    <img src="/images/blog/2016-02-12/coder.png" alt="coder mitocgroup" />
     <div class="center img-description">Development of Enterprise Software @ Mitoc Group</div>
 </div>
 

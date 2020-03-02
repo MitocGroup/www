@@ -32,7 +32,10 @@
           that are contained in Google's data centers around the world.
         </div>
       <div class="small-images widthBlock80">
-        <img class="main-img lazyload" data-src="{{ asset('@images/v2/illustration/google-map.png') }}" alt="Google Map">
+        <img class="main-img lazyload" 
+          {{ images['/images/v2/illustration/google-map.png'] }}
+          sizes="80vw"
+          alt="Google Map">
         <div class="flex-row marginTop-94">
           <div class="flex-item-3 flex-column">
             <div>
@@ -80,7 +83,9 @@
             </div>
 
             <div class="flex-item-5">
-              <img src="{{ asset('@images/v2/png/google-png.png') }}" alt="Google Cloud Platform"/>
+              <img {{ images['/images/v2/png/google-png.png'] }} 
+                sizes="(max-width: 600px) 90vw, 27vw"
+                alt="Google Cloud Platform"/>
             </div>
           </div>
         </div>

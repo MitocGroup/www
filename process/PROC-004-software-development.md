@@ -108,6 +108,16 @@ Increment.
 -   Code is pushed to Production Environment from Stage environment/branch only
 -   Health Check/ Smoke Testing is performed by QA in Production environment after Release
 
+### Suggested Naming Convention
+
+-   git: `master`, purpose: `production` or `live` environment
+-   git: `stage`, purpose: `staging` or `pre-production` environment
+-   git: `test`, purpose: `testing` or `quality-assuarence` environment
+-   git: `dev`, purpose: `development` or `sandbox` environment
+-   git: `feature/x`, purpose: `feature` development
+-   git: `bugfix/x`, purpose: `bug fixing` development
+-   git: `hotfix/x`, purpose: `hot fixing` development, for MAJOR and CRITICAL bugs
+
 ## RELEASES
 
 1)  Production release

@@ -23,7 +23,7 @@ AWS re:Invent is the Amazon Web Services annual user conference. The event featu
 This year, Amazon Web Services is organizing the biggest conference ever. Check out this inforgraphic put together by Cloudability Team:
 
 <div class="padd25px">
-    <img src="/images/blog/2015-09-27/banner.png" alt="partner aws" />
+    <img src="/images/blog/2015-09-27/banner.png" alt="Aws ReInvent 2012 - 2015" />
 </div>
 
 ### Invitation to Speak at AWS re:Invent

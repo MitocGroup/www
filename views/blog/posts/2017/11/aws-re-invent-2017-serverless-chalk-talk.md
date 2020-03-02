@@ -13,7 +13,7 @@ Fri, 24 November 2017 12:20:55 -0400
 ---
 
 <div class="padd25px">
-    <img src="/images/blog/2017-11-24/awsReInvent.png" alt="partner aws" />
+    <img src="/images/blog/2017-11-24/awsReInvent.png" alt="AWS ReInvent" />
     <div class="center img-description">
        <a href="https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=SRV326&searchType=session" target="_blank">https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=SRV326&searchType=session</a>
     </div>
