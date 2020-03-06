@@ -26,4 +26,4 @@ template:
 terraform:
   varFile:
     - default.tfvars
-  version: 0.12.21
+  version: 0.12.23
